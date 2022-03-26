@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="font_bold.TTF">
+            <string>SegoeUI-Semibold</string>
+        </array>
+        <array key="font_regular.TTF">
+            <string>SegoeUI</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="addMedicationTableCell" rowHeight="59" id="KGk-i7-Jjw" customClass="addMedicationTableCell" customModule="E4_Patient" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="59"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="59"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d0V-GW-VXy">
+                        <rect key="frame" x="11" y="2" width="298" height="55"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vitamin C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eGv-RS-q6n">
+                                <rect key="frame" x="70" y="18" width="69" height="19"/>
+                                <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="16"/>
+                                <color key="textColor" name="Blue"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Medication" translatesAutoresizingMaskIntoConstraints="NO" id="vkC-qp-Iuc">
+                                <rect key="frame" x="13" y="10" width="48" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="Tkj-Ah-BxR"/>
+                                    <constraint firstAttribute="width" constant="48" id="ZIJ-9s-FVa"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap - 250mg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YFo-aj-bKL">
+                                <rect key="frame" x="195.5" y="18" width="90.5" height="19"/>
+                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="vkC-qp-Iuc" firstAttribute="leading" secondItem="d0V-GW-VXy" secondAttribute="leading" constant="13" id="7eb-Wh-mnJ"/>
+                            <constraint firstItem="eGv-RS-q6n" firstAttribute="centerY" secondItem="vkC-qp-Iuc" secondAttribute="centerY" id="JYi-rz-8dt"/>
+                            <constraint firstItem="eGv-RS-q6n" firstAttribute="leading" secondItem="vkC-qp-Iuc" secondAttribute="trailing" constant="9" id="RzY-Oi-cVI"/>
+                            <constraint firstItem="YFo-aj-bKL" firstAttribute="centerY" secondItem="vkC-qp-Iuc" secondAttribute="centerY" id="XYS-cc-Zjz"/>
+                            <constraint firstItem="vkC-qp-Iuc" firstAttribute="centerY" secondItem="d0V-GW-VXy" secondAttribute="centerY" id="aGW-Dm-eSt"/>
+                            <constraint firstAttribute="trailing" secondItem="YFo-aj-bKL" secondAttribute="trailing" constant="12" id="cwK-py-T1N"/>
+                            <constraint firstAttribute="height" constant="55" id="elI-GF-QYT"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="d0V-GW-VXy" secondAttribute="trailing" constant="11" id="KoR-Uc-yDb"/>
+                    <constraint firstItem="d0V-GW-VXy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="11" id="UkX-sf-Dz1"/>
+                    <constraint firstItem="d0V-GW-VXy" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ixh-1j-MCg"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="cellView" destination="d0V-GW-VXy" id="BrO-V0-d4d"/>
+                <outlet property="doseLbl" destination="YFo-aj-bKL" id="s64-KM-8Wo"/>
+                <outlet property="medicineImage" destination="vkC-qp-Iuc" id="baN-oq-oLE"/>
+                <outlet property="nameLbl" destination="eGv-RS-q6n" id="zbA-BZ-Jwo"/>
+            </connections>
+            <point key="canvasLocation" x="-136.23188405797103" y="92.745535714285708"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Medication" width="90" height="142"/>
+        <namedColor name="Blue">
+            <color red="0.071000002324581146" green="0.46700000762939453" blue="0.81999999284744263" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

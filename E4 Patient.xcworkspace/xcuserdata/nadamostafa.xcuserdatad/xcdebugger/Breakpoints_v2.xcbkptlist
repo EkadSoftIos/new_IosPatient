@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "8B3CD555-FEAA-4B13-83DD-DD57E9AF8136"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "367132F9-8FCA-49D7-A099-61C860DB0F67"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Controller/MorePath/MyFavoriteVC/MyFavoriteNetwork.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "callRemoveFromFavApi()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3DEF9480-E61F-47B7-B864-BA530BBBB0C5"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Controller/MorePath/MyFavoriteVC/MyFavoriteNetwork.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "callRemoveFromFavApi()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3DEF9480-E61F-47B7-B864-BA530BBBB0C5 - 55e4c2fafe3c29d7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "E4_Patient.MyFavoriteVC.callRemoveFromFavApi() -&gt; ()"
+                  moduleName = "E4 Patient"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Applications/EkadSoft/new_IosPatient-master-2%202%202%202/Controller/MorePath/MyFavoriteVC/MyFavoriteNetwork.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "61">
+               </Location>
+               <Location
+                  uuid = "3DEF9480-E61F-47B7-B864-BA530BBBB0C5 - 3f97fbf1b2ffff4c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;E4_Patient.RegisterModel, Swift.Error&gt;) -&gt; () in E4_Patient.MyFavoriteVC.callRemoveFromFavApi() -&gt; ()"
+                  moduleName = "E4 Patient"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Applications/EkadSoft/new_IosPatient-master-2%202%202%202/Controller/MorePath/MyFavoriteVC/MyFavoriteNetwork.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "171">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "45AD0B2B-3BE8-4A51-8848-169A1F15F1A2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Controller/MorePath/MyFavoriteVC/MyFavoriteNetwork.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "callRemoveFromFavApi()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "55E4E910-1394-47EF-8014-536A4681F1E3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Controller/DoctorProfileVC/DoctorProfileVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "viewWillAppear(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "56FCAE32-DB90-48EC-B4B9-E775DB0CA3CA"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Controller/DoctorProfileVC/DoctorProfileVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
+            landmarkName = "setDoctorData()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A607C341-5DA9-4FA9-B9F3-5887D94E10AC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Controller/AppointmentScenes/AppointmentDetailsTwoVC/AppointmentDetailsTwoVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "AppointmentDetailsTwoVC"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "A607C341-5DA9-4FA9-B9F3-5887D94E10AC - fffe8ffe68ffe174"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "E4_Patient.AppointmentDetailsTwoVC.commentedUserDesLBL.getter : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "E4 Patient"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Applications/EkadSoft/new_IosPatient-master-2%202%202%202/Controller/AppointmentScenes/AppointmentDetailsTwoVC/AppointmentDetailsTwoVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "A607C341-5DA9-4FA9-B9F3-5887D94E10AC - 8588c3a290da4508"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "E4_Patient.AppointmentDetailsTwoVC.commentedUserDesLBL.setter : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "E4 Patient"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Applications/EkadSoft/new_IosPatient-master-2%202%202%202/Controller/AppointmentScenes/AppointmentDetailsTwoVC/AppointmentDetailsTwoVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "155">
+               </Location>
+               <Location
+                  uuid = "A607C341-5DA9-4FA9-B9F3-5887D94E10AC - 9d04dd72ec3e408e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "E4_Patient.AppointmentDetailsTwoVC.commentedUserDesLBL.modify : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "E4 Patient"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Applications/EkadSoft/new_IosPatient-master-2%202%202%202/Controller/AppointmentScenes/AppointmentDetailsTwoVC/AppointmentDetailsTwoVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  uuid = "A607C341-5DA9-4FA9-B9F3-5887D94E10AC - 329dbd3d4ec38777"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "E4_Patient.AppointmentDetailsTwoVC.commentedUserDesLBL.modify : Swift.Optional&lt;__C.UILabel&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "E4 Patient"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Applications/EkadSoft/new_IosPatient-master-2%202%202%202/Controller/AppointmentScenes/AppointmentDetailsTwoVC/AppointmentDetailsTwoVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "36">
+               </Location>
+               <Location
+                  uuid = "A607C341-5DA9-4FA9-B9F3-5887D94E10AC - 323eeb18c640022e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "E4_Patient.AppointmentDetailsTwoVC.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; E4_Patient.AppointmentDetailsTwoVC"
+                  moduleName = "E4 Patient"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Applications/EkadSoft/new_IosPatient-master-2%202%202%202/Controller/AppointmentScenes/AppointmentDetailsTwoVC/AppointmentDetailsTwoVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "3758">
+               </Location>
+               <Location
+                  uuid = "A607C341-5DA9-4FA9-B9F3-5887D94E10AC - c86b3f6c6dbd8366"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "E4_Patient.AppointmentDetailsTwoVC.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;E4_Patient.AppointmentDetailsTwoVC&gt;"
+                  moduleName = "E4 Patient"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Applications/EkadSoft/new_IosPatient-master-2%202%202%202/Controller/AppointmentScenes/AppointmentDetailsTwoVC/AppointmentDetailsTwoVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "3702">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "27F6A704-6DD1-405D-A3BF-761D4C023856"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Controller/AppointmentScenes/AppointmentDetailsCancelVC/AppointmentDetailsCancelVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "appointmentDetailsResponse"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3EF7EA9C-D7BD-4E54-9B9F-20E053625022"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Controller/AppointmentScenes/AppointmentDetailsCancelVC/AppointmentDetailsCancelVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "viewWillAppear(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BAEF40D8-BA89-4D4D-93BB-5D938457FBDF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Controller/AppointmentScenes/AppointmentDetailsCancelVC/AppointmentDetailsCancelNetwork.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "callApi(bookingID:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "BAEF40D8-BA89-4D4D-93BB-5D938457FBDF - 3c1c7d6d196f3f22"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "E4_Patient.AppointmentDetailsCancelVC.callApi(bookingID: Swift.Int) -&gt; ()"
+                  moduleName = "E4 Patient"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Applications/EkadSoft/new_IosPatient-master-2%202%202%202/Controller/AppointmentScenes/AppointmentDetailsCancelVC/AppointmentDetailsCancelNetwork.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "77">
+               </Location>
+               <Location
+                  uuid = "BAEF40D8-BA89-4D4D-93BB-5D938457FBDF - 8c38c68f2c1d1ff4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;E4_Patient.AppointmentDetailsBase, Swift.Error&gt;) -&gt; () in E4_Patient.AppointmentDetailsCancelVC.callApi(bookingID: Swift.Int) -&gt; ()"
+                  moduleName = "E4 Patient"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Applications/EkadSoft/new_IosPatient-master-2%202%202%202/Controller/AppointmentScenes/AppointmentDetailsCancelVC/AppointmentDetailsCancelNetwork.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "177">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4894F549-0F0D-4A39-95F3-14F867CCC253"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Controller/AppointmentScenes/AppointmentDetailsCancelVC/AppointmentDetailsCancelNetwork.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "callApi(bookingID:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D24EE07A-B473-4BCF-95B8-B1D7480A9ABB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Controller/DoctorProfileVC/DoctorProfileViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "250"
+            endingLineNumber = "250"
+            landmarkName = "bookingVideoCall(sender:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0E8F49B4-BE2E-48E2-9C5C-6963B1D500A3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Controller/TabbarScene/AppointmentVC/AppointmentVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0F1F393D-958E-4D3F-9050-06FD7E5394CB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Controller/HomePath/AllSearchVC/AllSearchVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "147"
+            endingLineNumber = "147"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "01BC3C0D-9699-49D5-AED9-CB99E98AF25A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Controller/LoginVC/loginNetwork.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "callApi()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "01BC3C0D-9699-49D5-AED9-CB99E98AF25A - 264fd67b60371297"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "E4_Patient.LoginVC.callApi() -&gt; ()"
+                  moduleName = "E4 Patient"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Applications/EkadSoft/new_IosPatient-master-2%202%202%202/Controller/LoginVC/loginNetwork.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "2493">
+               </Location>
+               <Location
+                  uuid = "01BC3C0D-9699-49D5-AED9-CB99E98AF25A - 537439ea9b597f06"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;E4_Patient.User, Swift.Error&gt;) -&gt; () in E4_Patient.LoginVC.callApi() -&gt; ()"
+                  moduleName = "E4 Patient"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Applications/EkadSoft/new_IosPatient-master-2%202%202%202/Controller/LoginVC/loginNetwork.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "205">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E0C7F61D-0E65-4615-9AB6-7912D0A4ACEA"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Controller/LoginVC/loginNetwork.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "callApi()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

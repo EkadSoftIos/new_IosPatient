@@ -1,0 +1,80 @@
+PODS:
+  - Alamofire (4.9.1)
+  - Cosmos (22.1.0)
+  - DLRadioButton (1.4.12)
+  - FSCalendar (2.8.2)
+  - FSPagerView (0.8.3)
+  - ImagePicker (3.2.0)
+  - iOSDropDown (0.3.4)
+  - IQKeyboardManager (6.5.6)
+  - Kingfisher (5.15.7):
+    - Kingfisher/Core (= 5.15.7)
+  - Kingfisher/Core (5.15.7)
+  - QuickLayout (3.0.0)
+  - RangeSeekSlider (1.8.0)
+  - SKCountryPicker (1.2.9)
+  - SwiftEntryKit (1.2.7):
+    - QuickLayout (= 3.0.0)
+  - SwiftMessages (8.0.3):
+    - SwiftMessages/App (= 8.0.3)
+  - SwiftMessages/App (8.0.3)
+  - TransitionButton (0.5.3)
+  - "UIView+Shake (1.4.0)"
+
+DEPENDENCIES:
+  - Alamofire (~> 4.0)
+  - Cosmos
+  - DLRadioButton
+  - FSCalendar
+  - FSPagerView
+  - ImagePicker
+  - iOSDropDown
+  - IQKeyboardManager
+  - Kingfisher
+  - RangeSeekSlider
+  - SKCountryPicker
+  - SwiftEntryKit
+  - SwiftMessages
+  - TransitionButton
+  - "UIView+Shake"
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - Cosmos
+    - DLRadioButton
+    - FSCalendar
+    - FSPagerView
+    - ImagePicker
+    - iOSDropDown
+    - IQKeyboardManager
+    - Kingfisher
+    - QuickLayout
+    - RangeSeekSlider
+    - SKCountryPicker
+    - SwiftEntryKit
+    - SwiftMessages
+    - TransitionButton
+    - "UIView+Shake"
+
+SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  Cosmos: 2795b36ad4bbea1af3050d6d65576ed63875f86a
+  DLRadioButton: d7c4e225ed0e8013cef7be61455230c7557ad7c1
+  FSCalendar: e6a2eb9c571bf0719ed797ef807e08426753c241
+  FSPagerView: 670405b2f18e2a87fa37f20b00de783e562c25a8
+  ImagePicker: 1d950bbb2422548ed58791b4ec7f42fe42920511
+  iOSDropDown: c10a761f9a00c3f1cc9d3bce43ae504628e2f692
+  IQKeyboardManager: 2a6e97afdafc7becf0cb17a9a8d795e3a980717f
+  Kingfisher: 6e1a13523fcb1c86924ce53affe4ac957e544d59
+  QuickLayout: 07b45a72b10083fee3f095990cfed1c1e7b27f0a
+  RangeSeekSlider: 650b11fa1edcb92e1e0ede797669d98622570fb5
+  SKCountryPicker: 7ad1e7dfb482cfb26855e33c2d70dbf1eaf218fe
+  SwiftEntryKit: 537c92699d6034efb1ef9c32b11e0b37c97aa589
+  SwiftMessages: 063ec9ffea3ffa7d17ba595157a9ec78e4fe045f
+  TransitionButton: 36283346e17c64775a1b3bc3a7a72940a367de1f
+  "UIView+Shake": 055ad67721de1f74d29c0a1d464697e505dfc62f
+
+PODFILE CHECKSUM: 74c1b6150d2f02310929fdb9b0a855dc5aecb376
+
+COCOAPODS: 1.10.1

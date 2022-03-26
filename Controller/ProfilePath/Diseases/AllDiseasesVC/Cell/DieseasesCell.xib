@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Segoe_UI.ttf">
+            <string>SegoeUI</string>
+        </array>
+        <array key="seguisb.ttf">
+            <string>SegoeUI-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DieseasesCell" rowHeight="142" id="KGk-i7-Jjw" customClass="DieseasesCell" customModule="E4_Patient" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="142"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="142"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hcy-lt-TsK">
+                        <rect key="frame" x="21" y="13.5" width="278" height="115"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Diseases" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nal-1i-dQA">
+                                <rect key="frame" x="12" y="13" width="61" height="17.5"/>
+                                <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="15"/>
+                                <color key="textColor" name="Blue"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vmz-Kx-Kg0">
+                                <rect key="frame" x="0.0" y="36.5" width="278" height="0.5"/>
+                                <color key="backgroundColor" white="0.71032750499999997" alpha="0.73465989220000005" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="0.5" id="FfD-De-wXN"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="UDZ-8y-0pN">
+                                <rect key="frame" x="8" y="45" width="262" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It is a long established fact that a reader " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1sX-b6-D7J">
+                                        <rect key="frame" x="0.0" y="0.0" width="218.5" height="14.5"/>
+                                        <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="12"/>
+                                        <color key="textColor" name="darkGray"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aug 20, 2020" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z4u-dG-KUW">
+                                        <rect key="frame" x="0.0" y="22.5" width="71.5" height="15"/>
+                                        <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="12"/>
+                                        <color key="textColor" name="darkGray"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By Dr. Ahmed Ali" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q73-aR-Ved">
+                                        <rect key="frame" x="0.0" y="45.5" width="90.5" height="14.5"/>
+                                        <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="12"/>
+                                        <color key="textColor" name="darkGray"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="tyJ-im-TWL"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="648-p1-dXU">
+                                <rect key="frame" x="222" y="12" width="48" height="20"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CMV-gt-QjZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="20" id="uXy-Eg-PC5"/>
+                                        </constraints>
+                                        <state key="normal" image="ic_edit"/>
+                                        <connections>
+                                            <action selector="edit_CLick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="zXI-oL-591"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EjT-zv-T8p">
+                                        <rect key="frame" x="28" y="0.0" width="20" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="20" id="yJX-x4-358"/>
+                                        </constraints>
+                                        <state key="normal" image="ic_delet"/>
+                                        <connections>
+                                            <action selector="delete_Click:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Dwg-p5-lfN"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="449-pt-DT5"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nal-1i-dQA" firstAttribute="leading" secondItem="Hcy-lt-TsK" secondAttribute="leading" constant="12" id="1hH-KO-kbl"/>
+                            <constraint firstItem="nal-1i-dQA" firstAttribute="top" secondItem="Hcy-lt-TsK" secondAttribute="top" constant="13" id="4Ne-bw-rmo"/>
+                            <constraint firstItem="UDZ-8y-0pN" firstAttribute="top" secondItem="vmz-Kx-Kg0" secondAttribute="bottom" constant="8" id="Hut-FT-fu1"/>
+                            <constraint firstAttribute="trailing" secondItem="UDZ-8y-0pN" secondAttribute="trailing" constant="8" id="STv-7L-B9g"/>
+                            <constraint firstItem="vmz-Kx-Kg0" firstAttribute="top" secondItem="nal-1i-dQA" secondAttribute="bottom" constant="6" id="VJr-6K-oUg"/>
+                            <constraint firstItem="vmz-Kx-Kg0" firstAttribute="leading" secondItem="Hcy-lt-TsK" secondAttribute="leading" id="c91-GB-rAH"/>
+                            <constraint firstItem="648-p1-dXU" firstAttribute="centerY" secondItem="nal-1i-dQA" secondAttribute="centerY" id="e0r-7m-lbG"/>
+                            <constraint firstAttribute="height" constant="115" id="eZG-wP-ZVZ"/>
+                            <constraint firstAttribute="trailing" secondItem="648-p1-dXU" secondAttribute="trailing" constant="8" id="ijm-8N-0PG"/>
+                            <constraint firstAttribute="trailing" secondItem="vmz-Kx-Kg0" secondAttribute="trailing" id="kyl-yc-khb"/>
+                            <constraint firstItem="UDZ-8y-0pN" firstAttribute="leading" secondItem="Hcy-lt-TsK" secondAttribute="leading" constant="8" id="nm7-Wh-CaL"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="Hcy-lt-TsK" secondAttribute="trailing" constant="21" id="8b1-Hy-LGd"/>
+                    <constraint firstItem="Hcy-lt-TsK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="21" id="IVj-7i-btn"/>
+                    <constraint firstItem="Hcy-lt-TsK" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="eEE-uQ-Rud"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="cellView" destination="Hcy-lt-TsK" id="rF4-UJ-O8b"/>
+                <outlet property="deleteBtn" destination="EjT-zv-T8p" id="CxT-xv-ZSz"/>
+                <outlet property="detailsOneLbl" destination="1sX-b6-D7J" id="q3f-Vw-F7p"/>
+                <outlet property="detailsThreLbl" destination="Q73-aR-Ved" id="C76-bM-KPB"/>
+                <outlet property="detailsTwoLbl" destination="z4u-dG-KUW" id="jly-ux-O70"/>
+                <outlet property="editBtn" destination="CMV-gt-QjZ" id="Sk1-fL-zYS"/>
+                <outlet property="titleLBl" destination="nal-1i-dQA" id="fgl-Y2-yTB"/>
+            </connections>
+            <point key="canvasLocation" x="57.971014492753625" y="120.53571428571428"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ic_delet" width="22.5" height="22.5"/>
+        <image name="ic_edit" width="20" height="20"/>
+        <namedColor name="Blue">
+            <color red="0.071000002324581146" green="0.46700000762939453" blue="0.81999999284744263" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="darkGray">
+            <color red="0.41999998688697815" green="0.41999998688697815" blue="0.41999998688697815" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

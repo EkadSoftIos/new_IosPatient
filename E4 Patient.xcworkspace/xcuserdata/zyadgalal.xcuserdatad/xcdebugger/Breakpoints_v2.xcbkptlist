@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "DE83F234-2E6F-47FC-B42B-7C9588456046"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5C591064-B217-44B6-9CF7-73649F6228F2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Controller/ProfilePath/Address/AddAdreesVC/AddAddressVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "170"
+            endingLineNumber = "170"
+            landmarkName = "callAPI()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "5C591064-B217-44B6-9CF7-73649F6228F2 - 2042221d112aaa12"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;E4_Patient.RegisterModel, Swift.Error&gt;) -&gt; () in E4_Patient.AddAddressVC.callAPI() -&gt; ()"
+                  moduleName = "E4 Patient"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zyadgalal/Desktop/My%20Projects/e4patient/E4%20Patient/Controller/ProfilePath/Address/AddAdreesVC/AddAddressVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "170"
+                  endingLineNumber = "170"
+                  offsetFromSymbolStart = "382">
+               </Location>
+               <Location
+                  uuid = "5C591064-B217-44B6-9CF7-73649F6228F2 - 2042221d112aaa12"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;E4_Patient.RegisterModel, Swift.Error&gt;) -&gt; () in E4_Patient.AddAddressVC.callAPI() -&gt; ()"
+                  moduleName = "E4 Patient"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zyadgalal/Desktop/My%20Projects/e4patient/E4%20Patient/Controller/ProfilePath/Address/AddAdreesVC/AddAddressVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "170"
+                  endingLineNumber = "170"
+                  offsetFromSymbolStart = "408">
+               </Location>
+               <Location
+                  uuid = "5C591064-B217-44B6-9CF7-73649F6228F2 - 2042221d112aaa12"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;E4_Patient.RegisterModel, Swift.Error&gt;) -&gt; () in E4_Patient.AddAddressVC.callAPI() -&gt; ()"
+                  moduleName = "E4 Patient"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zyadgalal/Desktop/My%20Projects/e4patient/E4%20Patient/Controller/ProfilePath/Address/AddAdreesVC/AddAddressVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "170"
+                  endingLineNumber = "170"
+                  offsetFromSymbolStart = "1933">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

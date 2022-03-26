@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoCell" id="gTV-IL-0wX" customClass="PhotoCell" customModule="E4_Patient" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="136" height="120"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="136" height="120"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screen Shot 2021-05-09 at 4.59.15 AM" translatesAutoresizingMaskIntoConstraints="NO" id="Wh0-Hl-khE">
+                        <rect key="frame" x="4" y="4" width="128" height="112"/>
+                    </imageView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="Wh0-Hl-khE" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="4" id="C50-Qh-sux"/>
+                <constraint firstAttribute="bottom" secondItem="Wh0-Hl-khE" secondAttribute="bottom" constant="4" id="FhM-Wz-2Xg"/>
+                <constraint firstItem="Wh0-Hl-khE" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="4" id="Ktv-YJ-zNW"/>
+                <constraint firstAttribute="trailing" secondItem="Wh0-Hl-khE" secondAttribute="trailing" constant="4" id="sYt-O3-8rg"/>
+            </constraints>
+            <size key="customSize" width="136" height="120"/>
+            <connections>
+                <outlet property="clinicImage" destination="Wh0-Hl-khE" id="AlN-Ve-WJ4"/>
+            </connections>
+            <point key="canvasLocation" x="-136.23188405797103" y="109.82142857142857"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Screen Shot 2021-05-09 at 4.59.15 AM" width="234" height="174"/>
+    </resources>
+</document>
