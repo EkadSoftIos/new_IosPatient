@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="font_bold.TTF">
+            <string>SegoeUI-Semibold</string>
+        </array>
+        <array key="font_regular.TTF">
+            <string>SegoeUI</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AppointmentCell" rowHeight="186" id="KGk-i7-Jjw" customClass="AppointmentCell" customModule="E4clinic" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="355" height="186"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="355" height="186"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wmA-oE-PK5">
+                        <rect key="frame" x="8" y="8" width="339" height="170"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_user_contact" translatesAutoresizingMaskIntoConstraints="NO" id="W0k-oA-fXO">
+                                <rect key="frame" x="5" y="5" width="47" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="UPm-cS-LCA"/>
+                                    <constraint firstAttribute="height" constant="50" id="YjH-PD-kBX"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Doctor Ahmed Karim" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="foM-gv-xUS">
+                                <rect key="frame" x="63" y="14" width="163" height="23"/>
+                                <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="jbz-au-WJH">
+                                <rect key="frame" x="60" y="60.5" width="204" height="57"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="NJp-dN-fDh">
+                                        <rect key="frame" x="0.0" y="0.0" width="149.5" height="15"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_clinic" translatesAutoresizingMaskIntoConstraints="NO" id="wiV-0L-Avu">
+                                                <rect key="frame" x="0.0" y="0.0" width="15" height="15"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="15" id="4Ht-Y2-Uv0"/>
+                                                    <constraint firstAttribute="height" constant="15" id="KNI-fm-5FL"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clinic Consultation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zsf-j8-azk">
+                                                <rect key="frame" x="23" y="0.0" width="126.5" height="15"/>
+                                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="15"/>
+                                                <color key="textColor" name="Blue"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="T9U-nu-KBx">
+                                        <rect key="frame" x="0.0" y="21" width="185.5" height="15"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_Medicine Reminder" translatesAutoresizingMaskIntoConstraints="NO" id="KWC-Yc-pO6">
+                                                <rect key="frame" x="0.0" y="0.0" width="15" height="15"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="15" id="LLU-ME-3g5"/>
+                                                    <constraint firstAttribute="height" constant="15" id="mnr-dX-FKu"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="09:30 PM - 10:00 PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cUQ-D8-b80">
+                                                <rect key="frame" x="23" y="0.0" width="162.5" height="15"/>
+                                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="17"/>
+                                                <color key="textColor" name="darkGray"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="tmg-PP-QJY">
+                                        <rect key="frame" x="0.0" y="42" width="140.5" height="15"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="walletunactive" translatesAutoresizingMaskIntoConstraints="NO" id="dhu-o4-jay">
+                                                <rect key="frame" x="0.0" y="0.0" width="15" height="15"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="15" id="Lq0-YJ-Kvb"/>
+                                                    <constraint firstAttribute="height" constant="15" id="gEF-ZU-EKx"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unpaid 50 EGP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PuO-zI-jqL">
+                                                <rect key="frame" x="23" y="0.0" width="117.5" height="15"/>
+                                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="17"/>
+                                                <color key="textColor" name="Blue"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="204" id="nxZ-XT-1Pv"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kav-KY-uYU">
+                                <rect key="frame" x="303" y="14" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="qJp-vf-zlC"/>
+                                    <constraint firstAttribute="width" constant="20" id="rlO-Yd-DcK"/>
+                                </constraints>
+                                <state key="normal" image="ic_more details"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B7J-Ig-2BT">
+                                <rect key="frame" x="243" y="42" width="88" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="88" id="aq8-G9-dIc"/>
+                                    <constraint firstAttribute="height" constant="23" id="xgT-eC-rvq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="14"/>
+                                <color key="textColor" name="green"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ypl-s6-SCp">
+                                <rect key="frame" x="243" y="135" width="80" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="0ST-XC-nbr"/>
+                                    <constraint firstAttribute="height" constant="30" id="nMK-8B-yci"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="17"/>
+                                <state key="normal" title="Cancel"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" name="Blue"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QMN-NX-2LQ">
+                                <rect key="frame" x="100" y="135" width="140" height="30"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="42O-JK-AfX"/>
+                                    <constraint firstAttribute="height" constant="30" id="rOM-TB-a5G"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="17"/>
+                                <state key="normal" title="Starting Video">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" name="Blue"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GdD-vg-QSu">
+                                <rect key="frame" x="266" y="72" width="65" height="12"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="12" id="eHl-zP-DTP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="10"/>
+                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="GdD-vg-QSu" firstAttribute="trailing" secondItem="B7J-Ig-2BT" secondAttribute="trailing" id="0EP-ml-7MC"/>
+                            <constraint firstItem="foM-gv-xUS" firstAttribute="top" secondItem="wmA-oE-PK5" secondAttribute="top" constant="14" id="0kN-6g-R4k"/>
+                            <constraint firstItem="jbz-au-WJH" firstAttribute="leading" secondItem="wmA-oE-PK5" secondAttribute="leading" constant="60" id="3XK-hC-uTl"/>
+                            <constraint firstItem="B7J-Ig-2BT" firstAttribute="top" secondItem="Kav-KY-uYU" secondAttribute="bottom" constant="8" id="3bO-Kp-br8"/>
+                            <constraint firstItem="foM-gv-xUS" firstAttribute="leading" secondItem="W0k-oA-fXO" secondAttribute="trailing" constant="8" id="9Jc-4H-grA"/>
+                            <constraint firstItem="Kav-KY-uYU" firstAttribute="top" secondItem="wmA-oE-PK5" secondAttribute="top" constant="14" id="EAk-O0-xHB"/>
+                            <constraint firstItem="W0k-oA-fXO" firstAttribute="top" secondItem="wmA-oE-PK5" secondAttribute="top" constant="5" id="FBT-RK-EXQ"/>
+                            <constraint firstItem="Ypl-s6-SCp" firstAttribute="leading" secondItem="QMN-NX-2LQ" secondAttribute="trailing" constant="3" id="GZE-Bs-xQ3"/>
+                            <constraint firstAttribute="bottom" secondItem="Ypl-s6-SCp" secondAttribute="bottom" constant="5" id="H4d-Iw-Uk1"/>
+                            <constraint firstItem="GdD-vg-QSu" firstAttribute="top" secondItem="B7J-Ig-2BT" secondAttribute="bottom" constant="7" id="RWV-eM-vkp"/>
+                            <constraint firstItem="W0k-oA-fXO" firstAttribute="leading" secondItem="wmA-oE-PK5" secondAttribute="leading" constant="5" id="USr-eu-lez"/>
+                            <constraint firstAttribute="trailing" secondItem="Ypl-s6-SCp" secondAttribute="trailing" constant="16" id="W0a-0o-VCi"/>
+                            <constraint firstItem="jbz-au-WJH" firstAttribute="top" secondItem="foM-gv-xUS" secondAttribute="bottom" constant="8" id="hc2-Tw-hS9"/>
+                            <constraint firstAttribute="trailing" secondItem="B7J-Ig-2BT" secondAttribute="trailing" constant="8" id="jIg-Wc-Yor"/>
+                            <constraint firstAttribute="trailing" secondItem="Kav-KY-uYU" secondAttribute="trailing" constant="16" id="uE5-Jg-9js"/>
+                            <constraint firstItem="QMN-NX-2LQ" firstAttribute="centerY" secondItem="Ypl-s6-SCp" secondAttribute="centerY" id="xVY-WF-ws8"/>
+                            <constraint firstItem="GdD-vg-QSu" firstAttribute="leading" secondItem="jbz-au-WJH" secondAttribute="trailing" constant="2" id="zCv-j2-Uly"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="wmA-oE-PK5" secondAttribute="trailing" constant="8" id="8SD-gb-77S"/>
+                    <constraint firstItem="wmA-oE-PK5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="Dp0-fM-Ia7"/>
+                    <constraint firstItem="wmA-oE-PK5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="MBe-cS-32u"/>
+                    <constraint firstAttribute="bottom" secondItem="wmA-oE-PK5" secondAttribute="bottom" constant="8" id="Xng-Es-ihk"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="cancelBTN" destination="Ypl-s6-SCp" id="hGa-in-7xJ"/>
+                <outlet property="cellView" destination="wmA-oE-PK5" id="XBT-Rx-5rX"/>
+                <outlet property="clinicIMG" destination="wiV-0L-Avu" id="cUA-8q-6xC"/>
+                <outlet property="clinicNameLBL" destination="zsf-j8-azk" id="D4R-N0-WHw"/>
+                <outlet property="doctorIMG" destination="W0k-oA-fXO" id="b3R-WQ-9Xj"/>
+                <outlet property="doctorTitleNameLBL" destination="foM-gv-xUS" id="NG8-5N-D6P"/>
+                <outlet property="overBookingLBL" destination="GdD-vg-QSu" id="zq5-cJ-puV"/>
+                <outlet property="startVideoBTN" destination="QMN-NX-2LQ" id="zGF-S6-luC"/>
+                <outlet property="startVideoConstraint" destination="42O-JK-AfX" id="ggB-eW-F1K"/>
+                <outlet property="statusNameLBL" destination="B7J-Ig-2BT" id="BF8-pX-GUg"/>
+                <outlet property="timeLBL" destination="cUQ-D8-b80" id="2Zq-rh-Qke"/>
+                <outlet property="unPaidLBL" destination="PuO-zI-jqL" id="fmr-g0-cO2"/>
+            </connections>
+            <point key="canvasLocation" x="-176.08695652173915" y="145.98214285714286"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ic_Medicine Reminder" width="17.5" height="17.5"/>
+        <image name="ic_clinic" width="15" height="15"/>
+        <image name="ic_more details" width="18" height="18"/>
+        <image name="ic_user_contact" width="40" height="40"/>
+        <image name="walletunactive" width="16" height="15.5"/>
+        <namedColor name="AccentColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </namedColor>
+        <namedColor name="Blue">
+            <color red="0.071000002324581146" green="0.46700000762939453" blue="0.81999999284744263" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="darkGray">
+            <color red="0.41999998688697815" green="0.41999998688697815" blue="0.41999998688697815" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="green">
+            <color red="0.10999999940395355" green="0.84700000286102295" blue="0.082000002264976501" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

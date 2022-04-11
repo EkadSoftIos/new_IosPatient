@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AllEmergencyContactsVC" customModule="E4_Patient" customModuleProvider="target">
+            <connections>
+                <outlet property="EmergencyTableView" destination="k1d-X0-zgw" id="AJt-0l-DY9"/>
+                <outlet property="addView" destination="b6A-Tn-M3d" id="vnn-aE-qGY"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="k1d-X0-zgw">
+                    <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b6A-Tn-M3d">
+                    <rect key="frame" x="324" y="772" width="70" height="70"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_btn" translatesAutoresizingMaskIntoConstraints="NO" id="Ury-tp-QFJ">
+                            <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OTN-2h-Ser">
+                            <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                            <connections>
+                                <action selector="add_Click:" destination="-1" eventType="touchUpInside" id="lFw-5m-vRj"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="Ury-tp-QFJ" secondAttribute="bottom" id="2aw-cd-3iT"/>
+                        <constraint firstAttribute="trailing" secondItem="OTN-2h-Ser" secondAttribute="trailing" id="5Ut-pe-8zg"/>
+                        <constraint firstAttribute="height" constant="70" id="7eY-mn-hLt"/>
+                        <constraint firstItem="Ury-tp-QFJ" firstAttribute="top" secondItem="b6A-Tn-M3d" secondAttribute="top" id="9h8-GG-G3d"/>
+                        <constraint firstAttribute="bottom" secondItem="OTN-2h-Ser" secondAttribute="bottom" id="QL5-3a-uTn"/>
+                        <constraint firstItem="OTN-2h-Ser" firstAttribute="top" secondItem="b6A-Tn-M3d" secondAttribute="top" id="Wny-bN-Ztq"/>
+                        <constraint firstItem="OTN-2h-Ser" firstAttribute="leading" secondItem="b6A-Tn-M3d" secondAttribute="leading" id="ZJ1-4z-egz"/>
+                        <constraint firstItem="Ury-tp-QFJ" firstAttribute="leading" secondItem="b6A-Tn-M3d" secondAttribute="leading" id="bKQ-PU-zif"/>
+                        <constraint firstAttribute="trailing" secondItem="Ury-tp-QFJ" secondAttribute="trailing" id="m1j-3l-VsO"/>
+                        <constraint firstAttribute="width" constant="70" id="qSN-dI-1wx"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="b6A-Tn-M3d" secondAttribute="bottom" constant="20" id="2nK-Hi-UeQ"/>
+                <constraint firstAttribute="trailing" secondItem="k1d-X0-zgw" secondAttribute="trailing" id="6DM-pG-Jg2"/>
+                <constraint firstItem="k1d-X0-zgw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="bvn-AA-hyq"/>
+                <constraint firstAttribute="bottom" secondItem="k1d-X0-zgw" secondAttribute="bottom" id="onK-QF-JiL"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="b6A-Tn-M3d" secondAttribute="trailing" constant="20" id="wAX-cY-vcg"/>
+                <constraint firstItem="k1d-X0-zgw" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="zaw-5v-mWb"/>
+            </constraints>
+            <point key="canvasLocation" x="58" y="88"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_btn" width="68" height="68"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

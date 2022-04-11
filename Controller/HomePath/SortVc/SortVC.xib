@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="font_bold.TTF">
+            <string>SegoeUI-Semibold</string>
+        </array>
+        <array key="font_regular.TTF">
+            <string>SegoeUI</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SortVC" customModule="E4_Patient" customModuleProvider="target">
+            <connections>
+                <outlet property="priceHighToLowBtn" destination="7qH-8o-9BX" id="HaF-m3-f5x"/>
+                <outlet property="priceLowToHighBtn" destination="qul-FT-AZC" id="VFe-y2-rA6"/>
+                <outlet property="professionalTitleBtn" destination="xD6-os-ojV" id="vsn-Su-Il1"/>
+                <outlet property="sortView" destination="8Fr-u4-3ax" id="dgn-az-agU"/>
+                <outlet property="topratedBtn" destination="xKU-UK-dAz" id="Qq4-fa-ydG"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Fr-u4-3ax">
+                    <rect key="frame" x="32" y="298" width="350" height="300"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sorting By" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5zJ-oC-qL4">
+                            <rect key="frame" x="134.5" y="16" width="81" height="23"/>
+                            <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="17"/>
+                            <color key="textColor" name="Blue"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ofh-ST-EAv">
+                            <rect key="frame" x="304" y="16" width="30" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="30" id="gZh-dj-5an"/>
+                                <constraint firstAttribute="height" constant="30" id="iIt-hu-O4b"/>
+                            </constraints>
+                            <state key="normal" image="ic_close"/>
+                            <connections>
+                                <action selector="dissmiss_Click:" destination="-1" eventType="touchUpInside" id="bbI-9E-gGj"/>
+                            </connections>
+                        </button>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="wFF-y6-ZnQ">
+                            <rect key="frame" x="24" y="63" width="302" height="135"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xKU-UK-dAz" customClass="DLRadioButton">
+                                    <rect key="frame" x="0.0" y="0.0" width="250" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="250" id="W9P-ZO-xDA"/>
+                                        <constraint firstAttribute="height" constant="30" id="hBr-Jm-KKH"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="17"/>
+                                    <state key="normal" title="TopRated">
+                                        <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                            <color key="value" red="0.070588235289999995" green="0.46666666670000001" blue="0.81960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="iconStrokeWidth">
+                                            <real key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="indicatorColor">
+                                            <color key="value" red="0.070588235289999995" green="0.46666666670000001" blue="0.81960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="iconSquare" value="NO"/>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="topRatedBtnPressed:" destination="-1" eventType="touchUpInside" id="nAo-9q-79a"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qul-FT-AZC" customClass="DLRadioButton">
+                                    <rect key="frame" x="0.0" y="35" width="250" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="8kR-Rv-lLd"/>
+                                        <constraint firstAttribute="width" constant="250" id="eR0-YL-x4i"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="17"/>
+                                    <state key="normal" title="PriceLowToHigh">
+                                        <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                            <color key="value" red="0.070588235289999995" green="0.46666666670000001" blue="0.81960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="iconStrokeWidth">
+                                            <real key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="indicatorColor">
+                                            <color key="value" red="0.070588235289999995" green="0.46666666670000001" blue="0.81960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="iconSquare" value="NO"/>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="priceLowToHighBtnPressed:" destination="-1" eventType="touchUpInside" id="OYw-IZ-d8N"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7qH-8o-9BX" customClass="DLRadioButton">
+                                    <rect key="frame" x="0.0" y="70" width="250" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="250" id="Lr8-ib-U7i"/>
+                                        <constraint firstAttribute="height" constant="30" id="yyX-9s-jts"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="17"/>
+                                    <state key="normal" title="PriceHighToLow">
+                                        <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                            <color key="value" red="0.070588235289999995" green="0.46666666670000001" blue="0.81960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="iconStrokeWidth">
+                                            <real key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="indicatorColor">
+                                            <color key="value" red="0.070588235289999995" green="0.46666666670000001" blue="0.81960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="iconSquare" value="NO"/>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="priceHighToLowBtnPressed:" destination="-1" eventType="touchUpInside" id="S1Y-7d-ovR"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xD6-os-ojV" customClass="DLRadioButton">
+                                    <rect key="frame" x="0.0" y="105" width="250" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="01s-jX-jff"/>
+                                        <constraint firstAttribute="width" constant="250" id="dvS-52-rda"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="17"/>
+                                    <state key="normal" title="ProfessionalTitle">
+                                        <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                            <color key="value" red="0.070588235289999995" green="0.46666666670000001" blue="0.81960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="iconStrokeWidth">
+                                            <real key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="indicatorColor">
+                                            <color key="value" red="0.070588235289999995" green="0.46666666670000001" blue="0.81960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="iconSquare" value="NO"/>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="professionalTitleBtnPressed:" destination="-1" eventType="touchUpInside" id="xdb-Vp-dBs"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="hFQ-ob-C0Y">
+                            <rect key="frame" x="19" y="236" width="312" height="48"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4nQ-QW-HuZ">
+                                    <rect key="frame" x="0.0" y="0.0" width="150" height="48"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="48" id="c9f-XJ-ozF"/>
+                                        <constraint firstAttribute="width" constant="150" id="qfK-ba-5XM"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="17"/>
+                                    <state key="normal" title="Reset">
+                                        <color key="titleColor" name="Blue"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                            <real key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                            <color key="value" name="Blue"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="reset_Click:" destination="-1" eventType="touchUpInside" id="Dj1-cm-gfJ"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aKA-2O-cO5">
+                                    <rect key="frame" x="162" y="0.0" width="150" height="48"/>
+                                    <color key="backgroundColor" name="Blue"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="48" id="3sX-Ad-rXI"/>
+                                        <constraint firstAttribute="width" constant="150" id="kaF-xJ-Sef"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="17"/>
+                                    <state key="normal" title="Search">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="search_Click:" destination="-1" eventType="touchUpInside" id="jWH-TM-H4c"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="hFQ-ob-C0Y" firstAttribute="centerX" secondItem="8Fr-u4-3ax" secondAttribute="centerX" id="4vy-LI-sk4"/>
+                        <constraint firstAttribute="trailing" secondItem="Ofh-ST-EAv" secondAttribute="trailing" constant="16" id="Enb-qQ-1Gj"/>
+                        <constraint firstAttribute="trailing" secondItem="wFF-y6-ZnQ" secondAttribute="trailing" constant="24" id="FRx-or-KPc"/>
+                        <constraint firstItem="wFF-y6-ZnQ" firstAttribute="top" secondItem="5zJ-oC-qL4" secondAttribute="bottom" constant="24" id="Jzp-eC-Isp"/>
+                        <constraint firstAttribute="width" constant="350" id="MBv-mV-eVh"/>
+                        <constraint firstAttribute="height" constant="300" id="SId-vX-FK3"/>
+                        <constraint firstAttribute="bottom" secondItem="hFQ-ob-C0Y" secondAttribute="bottom" constant="16" id="TrV-Y3-fGf"/>
+                        <constraint firstItem="wFF-y6-ZnQ" firstAttribute="leading" secondItem="8Fr-u4-3ax" secondAttribute="leading" constant="24" id="ZpL-BN-oSe"/>
+                        <constraint firstItem="5zJ-oC-qL4" firstAttribute="centerX" secondItem="8Fr-u4-3ax" secondAttribute="centerX" id="fqw-7E-bQ8"/>
+                        <constraint firstItem="5zJ-oC-qL4" firstAttribute="top" secondItem="8Fr-u4-3ax" secondAttribute="top" constant="16" id="lpr-8X-hVa"/>
+                        <constraint firstItem="Ofh-ST-EAv" firstAttribute="top" secondItem="8Fr-u4-3ax" secondAttribute="top" constant="16" id="wP9-ay-PEh"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="8Fr-u4-3ax" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="3h8-LD-Bab"/>
+                <constraint firstItem="8Fr-u4-3ax" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="eGZ-iF-fYF"/>
+            </constraints>
+            <point key="canvasLocation" x="-132" y="68"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_close" width="20" height="20"/>
+        <namedColor name="Blue">
+            <color red="0.071000002324581146" green="0.46700000762939453" blue="0.81999999284744263" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

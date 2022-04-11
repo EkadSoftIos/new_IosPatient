@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="font_bold.TTF">
+            <string>SegoeUI-Semibold</string>
+        </array>
+        <array key="font_regular.TTF">
+            <string>SegoeUI</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ConsultationsLogFillterVC" customModule="E4_Patient" customModuleProvider="target">
+            <connections>
+                <outlet property="allBtn" destination="iVC-Wj-J96" id="XXG-CS-eZk"/>
+                <outlet property="clinicConsultationBtn" destination="z9b-2a-DfN" id="qfG-U7-inc"/>
+                <outlet property="collapsedImage" destination="wrT-Z2-icg" id="aTf-p7-cRg"/>
+                <outlet property="collapsedServiseImage" destination="Unt-Ie-QIo" id="S7a-p6-vAY"/>
+                <outlet property="contentServiceStack" destination="LcP-Xr-alz" id="Fdx-u5-2mT"/>
+                <outlet property="contentStackView" destination="hrK-fO-7SK" id="geU-by-4go"/>
+                <outlet property="dateHeight" destination="2i8-Od-dJE" id="rbc-wL-MSo"/>
+                <outlet property="dateView" destination="yww-Ds-NA6" id="Ckb-7o-G9k"/>
+                <outlet property="fromBG" destination="Ejx-g1-Ndv" id="qeF-GX-eDn"/>
+                <outlet property="fromDateBtn" destination="Vs0-e2-sdM" id="tNM-JG-ukl"/>
+                <outlet property="fromTF" destination="9Wp-sz-FuE" id="Ia0-Ul-xEJ"/>
+                <outlet property="homeVisitBtn" destination="cOT-jU-xpO" id="xTm-Gc-EO2"/>
+                <outlet property="immadiateVideoCallBtn" destination="jUU-tk-0Uj" id="Rro-hD-l78"/>
+                <outlet property="separateView" destination="SY4-FL-zQL" id="QW9-M7-bQU"/>
+                <outlet property="separatorServiceView" destination="6ec-MQ-86o" id="92o-6F-50W"/>
+                <outlet property="serviceHeightConst" destination="QOB-HR-C2f" id="JLd-NA-Qsy"/>
+                <outlet property="serviseView" destination="xVe-yC-mSJ" id="Gi0-YJ-5Cb"/>
+                <outlet property="sevenDaysBTn" destination="c5v-ut-t86" id="Lhe-r2-Egk"/>
+                <outlet property="thirtyDaysBtn" destination="aGP-0u-1T0" id="fug-O1-JHu"/>
+                <outlet property="toBG" destination="bm6-dz-gsp" id="E32-Ij-2zB"/>
+                <outlet property="toTF" destination="gpz-sh-1dX" id="Fdh-BK-GTF"/>
+                <outlet property="videoCallConsultationsBtn" destination="bUi-J6-rdH" id="YY7-iy-Q1C"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yww-Ds-NA6">
+                    <rect key="frame" x="20" y="68" width="374" height="200"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SEP-e5-Vtv">
+                            <rect key="frame" x="23" y="9" width="36" height="20"/>
+                            <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="17"/>
+                            <color key="textColor" name="Blue"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SY4-FL-zQL">
+                            <rect key="frame" x="0.0" y="33" width="374" height="1"/>
+                            <color key="backgroundColor" name="textView"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="zgb-NZ-Uuq"/>
+                            </constraints>
+                        </view>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="hrK-fO-7SK">
+                            <rect key="frame" x="24" y="42" width="250" height="141"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c5v-ut-t86" customClass="DLRadioButton">
+                                    <rect key="frame" x="0.0" y="0.0" width="250" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="Gfp-Ai-jrq"/>
+                                        <constraint firstAttribute="width" constant="250" id="zbi-tH-yhc"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="17"/>
+                                    <state key="normal" title="Last 7 days">
+                                        <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                            <color key="value" red="0.070588235289999995" green="0.46666666670000001" blue="0.81960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="iconStrokeWidth">
+                                            <real key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="indicatorColor">
+                                            <color key="value" red="0.070588235289999995" green="0.46666666670000001" blue="0.81960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="iconSquare" value="YES"/>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="sevenDaysBtnPressed:" destination="-1" eventType="touchUpInside" id="fGg-bM-l0g"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aGP-0u-1T0" customClass="DLRadioButton">
+                                    <rect key="frame" x="0.0" y="37" width="250" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="250" id="1Cw-ta-PfE"/>
+                                        <constraint firstAttribute="height" constant="30" id="S5g-ZO-uvt"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="17"/>
+                                    <state key="normal" title="Last 30 days">
+                                        <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                            <color key="value" red="0.070588235289999995" green="0.46666666670000001" blue="0.81960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="iconStrokeWidth">
+                                            <real key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="indicatorColor">
+                                            <color key="value" red="0.070588235289999995" green="0.46666666670000001" blue="0.81960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="iconSquare" value="YES"/>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="thirtyDaysBtnPressed:" destination="-1" eventType="touchUpInside" id="1xU-gl-Y6H"/>
+                                    </connections>
+                                </button>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="xM0-Ac-BpB">
+                                    <rect key="frame" x="0.0" y="74" width="250" height="30"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vs0-e2-sdM" customClass="DLRadioButton">
+                                            <rect key="frame" x="0.0" y="0.0" width="125" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="wSh-vF-klS"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="17"/>
+                                            <state key="normal" title="From">
+                                                <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                                    <color key="value" red="0.070588235289999995" green="0.46666666670000001" blue="0.81960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="iconStrokeWidth">
+                                                    <real key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="indicatorColor">
+                                                    <color key="value" red="0.070588235289999995" green="0.46666666670000001" blue="0.81960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="iconSquare" value="YES"/>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="fromDateBtnPressed:" destination="-1" eventType="touchUpInside" id="YOW-lP-kxK"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="El2-Bc-YKA">
+                                            <rect key="frame" x="125" y="0.0" width="125" height="30"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="RQI-tr-6D1">
+                                    <rect key="frame" x="0.0" y="111" width="250" height="30"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ejx-g1-Ndv">
+                                            <rect key="frame" x="0.0" y="0.0" width="122.5" height="30"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Wp-sz-FuE">
+                                                    <rect key="frame" x="24" y="0.0" width="98.5" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_calender" translatesAutoresizingMaskIntoConstraints="NO" id="aSl-rZ-iS2">
+                                                    <rect key="frame" x="8" y="9" width="12" height="12"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="12" id="Q5v-I6-k0P"/>
+                                                        <constraint firstAttribute="width" constant="12" id="nUx-M1-Ogs"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            <constraints>
+                                                <constraint firstItem="9Wp-sz-FuE" firstAttribute="top" secondItem="Ejx-g1-Ndv" secondAttribute="top" id="5Q3-yJ-bHu"/>
+                                                <constraint firstAttribute="height" constant="30" id="Cjh-GD-pZt"/>
+                                                <constraint firstItem="aSl-rZ-iS2" firstAttribute="leading" secondItem="Ejx-g1-Ndv" secondAttribute="leading" constant="8" id="FbG-md-Ya0"/>
+                                                <constraint firstAttribute="trailing" secondItem="9Wp-sz-FuE" secondAttribute="trailing" id="Geu-zW-DWG"/>
+                                                <constraint firstAttribute="bottom" secondItem="9Wp-sz-FuE" secondAttribute="bottom" id="nHf-qV-kPK"/>
+                                                <constraint firstItem="9Wp-sz-FuE" firstAttribute="leading" secondItem="aSl-rZ-iS2" secondAttribute="trailing" constant="4" id="v9Q-TG-0bj"/>
+                                                <constraint firstItem="aSl-rZ-iS2" firstAttribute="centerY" secondItem="Ejx-g1-Ndv" secondAttribute="centerY" id="xxl-Zc-iNc"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bm6-dz-gsp">
+                                            <rect key="frame" x="127.5" y="0.0" width="122.5" height="30"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gpz-sh-1dX">
+                                                    <rect key="frame" x="24" y="0.0" width="98.5" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_calender" translatesAutoresizingMaskIntoConstraints="NO" id="p94-Nt-giA">
+                                                    <rect key="frame" x="8" y="9" width="12" height="12"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="12" id="XOE-2H-AVD"/>
+                                                        <constraint firstAttribute="width" constant="12" id="wl8-Om-XvJ"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            <constraints>
+                                                <constraint firstItem="gpz-sh-1dX" firstAttribute="leading" secondItem="p94-Nt-giA" secondAttribute="trailing" constant="4" id="0tM-dx-kPR"/>
+                                                <constraint firstItem="p94-Nt-giA" firstAttribute="centerY" secondItem="bm6-dz-gsp" secondAttribute="centerY" id="EBb-3k-GHN"/>
+                                                <constraint firstItem="p94-Nt-giA" firstAttribute="leading" secondItem="bm6-dz-gsp" secondAttribute="leading" constant="8" id="buH-MH-90h"/>
+                                                <constraint firstAttribute="trailing" secondItem="gpz-sh-1dX" secondAttribute="trailing" id="jA2-oI-NGc"/>
+                                                <constraint firstAttribute="bottom" secondItem="gpz-sh-1dX" secondAttribute="bottom" id="ola-nV-5jn"/>
+                                                <constraint firstAttribute="height" constant="30" id="rpg-dN-8dY"/>
+                                                <constraint firstItem="gpz-sh-1dX" firstAttribute="top" secondItem="bm6-dz-gsp" secondAttribute="top" id="sbe-Gp-Iwi"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                        </stackView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="enp-iw-6Xn">
+                            <rect key="frame" x="0.0" y="0.0" width="374" height="33"/>
+                            <connections>
+                                <action selector="collapsedDateBtn:" destination="-1" eventType="touchUpInside" id="vqg-UJ-w8q"/>
+                            </connections>
+                        </button>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_next-1" translatesAutoresizingMaskIntoConstraints="NO" id="wrT-Z2-icg">
+                            <rect key="frame" x="346" y="13" width="12" height="12"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="12" id="PGx-xC-1Rn"/>
+                                <constraint firstAttribute="width" constant="12" id="c1Y-oN-tdV"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="2i8-Od-dJE"/>
+                        <constraint firstItem="hrK-fO-7SK" firstAttribute="top" secondItem="SY4-FL-zQL" secondAttribute="bottom" constant="8" id="Ctl-QD-JcQ"/>
+                        <constraint firstItem="wrT-Z2-icg" firstAttribute="centerY" secondItem="SEP-e5-Vtv" secondAttribute="centerY" id="Eiq-yv-f6J"/>
+                        <constraint firstItem="enp-iw-6Xn" firstAttribute="leading" secondItem="yww-Ds-NA6" secondAttribute="leading" id="H5S-V0-atx"/>
+                        <constraint firstItem="enp-iw-6Xn" firstAttribute="top" secondItem="yww-Ds-NA6" secondAttribute="top" id="I98-Di-5FT"/>
+                        <constraint firstItem="SY4-FL-zQL" firstAttribute="leading" secondItem="yww-Ds-NA6" secondAttribute="leading" id="KEr-c4-2BC"/>
+                        <constraint firstAttribute="trailing" secondItem="enp-iw-6Xn" secondAttribute="trailing" id="QIt-ZR-kgp"/>
+                        <constraint firstItem="hrK-fO-7SK" firstAttribute="leading" secondItem="yww-Ds-NA6" secondAttribute="leading" constant="24" id="RsE-Wd-Qab"/>
+                        <constraint firstItem="SEP-e5-Vtv" firstAttribute="leading" secondItem="yww-Ds-NA6" secondAttribute="leading" constant="23" id="Tf6-4y-8Wp"/>
+                        <constraint firstItem="SEP-e5-Vtv" firstAttribute="top" secondItem="yww-Ds-NA6" secondAttribute="top" constant="9" id="WDM-Ky-XnZ"/>
+                        <constraint firstItem="SY4-FL-zQL" firstAttribute="top" secondItem="enp-iw-6Xn" secondAttribute="bottom" id="Ztf-EW-W4e"/>
+                        <constraint firstAttribute="trailing" secondItem="SY4-FL-zQL" secondAttribute="trailing" id="dlA-El-gxo"/>
+                        <constraint firstAttribute="trailing" secondItem="wrT-Z2-icg" secondAttribute="trailing" constant="16" id="lN1-4v-QUT"/>
+                        <constraint firstItem="SY4-FL-zQL" firstAttribute="top" secondItem="SEP-e5-Vtv" secondAttribute="bottom" constant="4" id="vSm-zZ-KIP"/>
+                    </constraints>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="48" translatesAutoresizingMaskIntoConstraints="NO" id="ZcU-wt-eaO">
+                    <rect key="frame" x="33" y="588" width="348" height="48"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cdw-hS-eMu">
+                            <rect key="frame" x="0.0" y="0.0" width="150" height="48"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="150" id="L4F-bF-yDX"/>
+                                <constraint firstAttribute="height" constant="48" id="Ybr-bu-4vH"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="17"/>
+                            <state key="normal" title="Reset">
+                                <color key="titleColor" name="Blue"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" name="Blue"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="reset_Click:" destination="-1" eventType="touchUpInside" id="GL3-cJ-V6T"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ac-T0-79A">
+                            <rect key="frame" x="198" y="0.0" width="150" height="48"/>
+                            <color key="backgroundColor" name="Blue"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="48" id="2Tb-l3-jOa"/>
+                                <constraint firstAttribute="width" constant="150" id="qpG-QH-ysj"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="17"/>
+                            <state key="normal" title="Search">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="search_Click:" destination="-1" eventType="touchUpInside" id="IZU-xe-ugf"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xVe-yC-mSJ">
+                    <rect key="frame" x="20" y="288" width="374" height="250"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="select service type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MAG-bJ-ae1">
+                            <rect key="frame" x="23" y="9" width="141.5" height="20"/>
+                            <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="17"/>
+                            <color key="textColor" name="Blue"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6ec-MQ-86o">
+                            <rect key="frame" x="0.0" y="33" width="374" height="1"/>
+                            <color key="backgroundColor" name="textView"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="Wmk-bn-gWw"/>
+                            </constraints>
+                        </view>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="LcP-Xr-alz">
+                            <rect key="frame" x="24" y="42" width="250" height="178"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iVC-Wj-J96" customClass="DLRadioButton">
+                                    <rect key="frame" x="0.0" y="0.0" width="250" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="19t-bh-h5J"/>
+                                        <constraint firstAttribute="width" constant="250" id="ZDL-vr-7Hr"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="17"/>
+                                    <state key="normal" title="All">
+                                        <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                            <color key="value" red="0.070588235289999995" green="0.46666666670000001" blue="0.81960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="iconStrokeWidth">
+                                            <real key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="indicatorColor">
+                                            <color key="value" red="0.070588235289999995" green="0.46666666670000001" blue="0.81960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="iconSquare" value="YES"/>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="allBtnPressed:" destination="-1" eventType="touchUpInside" id="vAl-AB-ur9"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z9b-2a-DfN" customClass="DLRadioButton">
+                                    <rect key="frame" x="0.0" y="37" width="250" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="Aer-y2-AeW"/>
+                                        <constraint firstAttribute="width" constant="250" id="O86-Py-6Ii"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="17"/>
+                                    <state key="normal" title="Clinic Consultation">
+                                        <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                            <color key="value" red="0.070588235289999995" green="0.46666666670000001" blue="0.81960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="iconStrokeWidth">
+                                            <real key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="indicatorColor">
+                                            <color key="value" red="0.070588235289999995" green="0.46666666670000001" blue="0.81960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="iconSquare" value="YES"/>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="clinicConsultationsBtnPressed:" destination="-1" eventType="touchUpInside" id="V5b-Lk-ih0"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bUi-J6-rdH" customClass="DLRadioButton">
+                                    <rect key="frame" x="0.0" y="74" width="250" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="8E4-Th-SsT"/>
+                                        <constraint firstAttribute="width" constant="250" id="zQ4-GC-b4E"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="17"/>
+                                    <state key="normal" title="Video call consultations">
+                                        <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                            <color key="value" red="0.070588235289999995" green="0.46666666670000001" blue="0.81960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="iconStrokeWidth">
+                                            <real key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="indicatorColor">
+                                            <color key="value" red="0.070588235289999995" green="0.46666666670000001" blue="0.81960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="iconSquare" value="YES"/>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="videoCallConsultationBtnPressed:" destination="-1" eventType="touchUpInside" id="Kza-pA-LaG"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cOT-jU-xpO" customClass="DLRadioButton">
+                                    <rect key="frame" x="0.0" y="111" width="250" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="DAk-z0-TV5"/>
+                                        <constraint firstAttribute="width" constant="250" id="bmc-gb-24j"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="17"/>
+                                    <state key="normal" title="Home visit">
+                                        <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                            <color key="value" red="0.070588235289999995" green="0.46666666670000001" blue="0.81960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="iconStrokeWidth">
+                                            <real key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="indicatorColor">
+                                            <color key="value" red="0.070588235289999995" green="0.46666666670000001" blue="0.81960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="iconSquare" value="YES"/>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="homeVisitBtnPressed:" destination="-1" eventType="touchUpInside" id="DXE-7N-ccr"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jUU-tk-0Uj" customClass="DLRadioButton">
+                                    <rect key="frame" x="0.0" y="148" width="250" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="250" id="WJF-xs-tIF"/>
+                                        <constraint firstAttribute="height" constant="30" id="WoK-bG-eAJ"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="17"/>
+                                    <state key="normal" title="Immediate video call">
+                                        <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                            <color key="value" red="0.070588235289999995" green="0.46666666670000001" blue="0.81960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="iconStrokeWidth">
+                                            <real key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="indicatorColor">
+                                            <color key="value" red="0.070588235289999995" green="0.46666666670000001" blue="0.81960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="iconSquare" value="YES"/>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="immadiateVideoCallBtnPressed:" destination="-1" eventType="touchUpInside" id="ko1-fJ-vto"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ayj-nZ-lPn">
+                            <rect key="frame" x="0.0" y="0.0" width="374" height="33"/>
+                            <connections>
+                                <action selector="collapsedServiceBtn:" destination="-1" eventType="touchUpInside" id="Ku1-3n-9mk"/>
+                            </connections>
+                        </button>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_next-1" translatesAutoresizingMaskIntoConstraints="NO" id="Unt-Ie-QIo">
+                            <rect key="frame" x="346" y="13" width="12" height="12"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="12" id="5po-h5-Y3x"/>
+                                <constraint firstAttribute="width" constant="12" id="vox-iX-hWL"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="6ec-MQ-86o" firstAttribute="top" secondItem="MAG-bJ-ae1" secondAttribute="bottom" constant="4" id="3dA-dy-h3g"/>
+                        <constraint firstItem="LcP-Xr-alz" firstAttribute="leading" secondItem="xVe-yC-mSJ" secondAttribute="leading" constant="24" id="8YV-wZ-t2p"/>
+                        <constraint firstItem="Unt-Ie-QIo" firstAttribute="centerY" secondItem="MAG-bJ-ae1" secondAttribute="centerY" id="CWQ-HQ-T1T"/>
+                        <constraint firstItem="ayj-nZ-lPn" firstAttribute="leading" secondItem="xVe-yC-mSJ" secondAttribute="leading" id="HW1-ZB-waV"/>
+                        <constraint firstItem="MAG-bJ-ae1" firstAttribute="top" secondItem="xVe-yC-mSJ" secondAttribute="top" constant="9" id="Ma3-GK-lQk"/>
+                        <constraint firstAttribute="height" constant="250" id="QOB-HR-C2f"/>
+                        <constraint firstItem="6ec-MQ-86o" firstAttribute="leading" secondItem="xVe-yC-mSJ" secondAttribute="leading" id="Qia-OK-duS"/>
+                        <constraint firstAttribute="trailing" secondItem="ayj-nZ-lPn" secondAttribute="trailing" id="Tdp-Lr-a75"/>
+                        <constraint firstItem="MAG-bJ-ae1" firstAttribute="leading" secondItem="xVe-yC-mSJ" secondAttribute="leading" constant="23" id="VYc-wH-PMz"/>
+                        <constraint firstItem="ayj-nZ-lPn" firstAttribute="top" secondItem="xVe-yC-mSJ" secondAttribute="top" id="Wnt-G1-nbl"/>
+                        <constraint firstItem="LcP-Xr-alz" firstAttribute="top" secondItem="6ec-MQ-86o" secondAttribute="bottom" constant="8" id="ba4-lV-tdP"/>
+                        <constraint firstAttribute="trailing" secondItem="Unt-Ie-QIo" secondAttribute="trailing" constant="16" id="hWw-KY-Dce"/>
+                        <constraint firstAttribute="trailing" secondItem="6ec-MQ-86o" secondAttribute="trailing" id="r0d-64-dMC"/>
+                        <constraint firstItem="6ec-MQ-86o" firstAttribute="top" secondItem="ayj-nZ-lPn" secondAttribute="bottom" id="vEv-NB-8ac"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="yww-Ds-NA6" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="24" id="Ibi-m3-uue"/>
+                <constraint firstItem="ZcU-wt-eaO" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Qwa-wJ-QE0"/>
+                <constraint firstItem="yww-Ds-NA6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Sms-q2-CWt"/>
+                <constraint firstItem="xVe-yC-mSJ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="XrH-gN-4aa"/>
+                <constraint firstAttribute="trailing" secondItem="xVe-yC-mSJ" secondAttribute="trailing" constant="20" id="ah2-Lr-TmU"/>
+                <constraint firstItem="xVe-yC-mSJ" firstAttribute="top" secondItem="yww-Ds-NA6" secondAttribute="bottom" constant="20" id="cQ9-en-HT7"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="yww-Ds-NA6" secondAttribute="trailing" constant="20" id="ckS-eE-bzY"/>
+                <constraint firstItem="ZcU-wt-eaO" firstAttribute="top" secondItem="xVe-yC-mSJ" secondAttribute="bottom" constant="50" id="u11-x1-ljh"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="73.913043478260875" y="67.633928571428569"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_calender" width="12.5" height="12.5"/>
+        <image name="ic_next-1" width="11.5" height="6.5"/>
+        <namedColor name="Blue">
+            <color red="0.071000002324581146" green="0.46700000762939453" blue="0.81999999284744263" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="textView">
+            <color red="0.77300000190734863" green="0.76899999380111694" blue="0.76899999380111694" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

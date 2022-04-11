@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="seguisb.ttf">
+            <string>SegoeUI-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MedicalServicesCell" id="gTV-IL-0wX" customClass="MedicalServicesCell" customModule="E4_Patient" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="192" height="106"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="192" height="106"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fRx-ut-iTr">
+                        <rect key="frame" x="51" y="13" width="90" height="80"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aCb-k6-a0q">
+                                <rect key="frame" x="24" y="12" width="42" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="3bk-7u-LgA"/>
+                                    <constraint firstAttribute="width" constant="42" id="gxt-NR-PeW"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H2e-Ea-DN2">
+                                <rect key="frame" x="4" y="47" width="82" height="21.5"/>
+                                <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="80" id="33c-U3-V9M"/>
+                            <constraint firstAttribute="trailing" secondItem="H2e-Ea-DN2" secondAttribute="trailing" constant="4" id="XiA-US-wwC"/>
+                            <constraint firstItem="H2e-Ea-DN2" firstAttribute="top" secondItem="aCb-k6-a0q" secondAttribute="bottom" constant="8" id="aGn-R2-jhr"/>
+                            <constraint firstItem="aCb-k6-a0q" firstAttribute="centerX" secondItem="fRx-ut-iTr" secondAttribute="centerX" id="emc-P1-jpZ"/>
+                            <constraint firstItem="aCb-k6-a0q" firstAttribute="top" secondItem="fRx-ut-iTr" secondAttribute="top" constant="12" id="f44-hK-TjE"/>
+                            <constraint firstItem="H2e-Ea-DN2" firstAttribute="leading" secondItem="fRx-ut-iTr" secondAttribute="leading" constant="4" id="jNy-Hv-zkA"/>
+                            <constraint firstAttribute="width" constant="90" id="vDb-uf-EaW"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="fRx-ut-iTr" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="BpP-PA-2Id"/>
+                <constraint firstItem="fRx-ut-iTr" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="Ldn-K0-56i"/>
+            </constraints>
+            <size key="customSize" width="192" height="106"/>
+            <connections>
+                <outlet property="mainView" destination="fRx-ut-iTr" id="H8Y-0U-iVX"/>
+                <outlet property="serviseImage" destination="aCb-k6-a0q" id="xYW-OD-XoM"/>
+                <outlet property="serviseNameLbl" destination="H2e-Ea-DN2" id="iV8-TM-ybX"/>
+            </connections>
+            <point key="canvasLocation" x="-36.231884057971016" y="106.47321428571428"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

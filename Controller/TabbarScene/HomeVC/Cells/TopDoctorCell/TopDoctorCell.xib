@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="font_bold.TTF">
+            <string>SegoeUI-Semibold</string>
+        </array>
+        <array key="font_regular.TTF">
+            <string>SegoeUI</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TopDoctorCell" id="gTV-IL-0wX" customClass="TopDoctorCell" customModule="E4clinic" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="258" height="105"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="258" height="105"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SDQ-AT-leT">
+                        <rect key="frame" x="4" y="7.5" width="246" height="90"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_user_contact" translatesAutoresizingMaskIntoConstraints="NO" id="r4A-wr-egv">
+                                <rect key="frame" x="10" y="8" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="DLe-uW-hZT"/>
+                                    <constraint firstAttribute="height" constant="50" id="L1J-cB-vvw"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="17"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dr. Ahmed Karim" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="naD-GG-g74">
+                                <rect key="frame" x="68" y="8" width="106.5" height="16.5"/>
+                                <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="14"/>
+                                <color key="textColor" name="Blue"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dentistry" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6as-TH-Bmf">
+                                <rect key="frame" x="68" y="26.5" width="56" height="16.5"/>
+                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="14"/>
+                                <color key="textColor" name="Gray"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="sDg-nI-ZKZ">
+                                <rect key="frame" x="16" y="66" width="41" height="14"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4.9" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bsH-jp-xjo">
+                                        <rect key="frame" x="0.0" y="0.0" width="20" height="14"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="20" id="Je2-P8-FvG"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="14"/>
+                                        <color key="textColor" name="Blue"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Star" translatesAutoresizingMaskIntoConstraints="NO" id="qQz-ky-xPE">
+                                        <rect key="frame" x="21" y="0.0" width="20" height="14"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="20" id="GEn-vT-Bmc"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="qQz-ky-xPE" firstAttribute="top" secondItem="sDg-nI-ZKZ" secondAttribute="top" id="DoC-j5-FUT"/>
+                                    <constraint firstAttribute="trailing" secondItem="qQz-ky-xPE" secondAttribute="trailing" id="OiG-rS-N3V"/>
+                                    <constraint firstAttribute="bottom" secondItem="qQz-ky-xPE" secondAttribute="bottom" id="RAT-RO-BFJ"/>
+                                    <constraint firstAttribute="height" constant="14" id="lQb-uY-QYf"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="kxN-rd-NLW">
+                                <rect key="frame" x="92.5" y="66" width="61" height="14"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50 K" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ylJ-wp-gHu">
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="14"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="XMz-ok-pZD"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="14"/>
+                                        <color key="textColor" name="Blue"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eye" translatesAutoresizingMaskIntoConstraints="NO" id="XKP-0r-CmW">
+                                        <rect key="frame" x="31" y="0.0" width="30" height="14"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="14" id="6qK-Kj-OK8"/>
+                                    <constraint firstItem="XKP-0r-CmW" firstAttribute="top" secondItem="kxN-rd-NLW" secondAttribute="top" id="DQK-CB-EGK"/>
+                                    <constraint firstAttribute="bottom" secondItem="XKP-0r-CmW" secondAttribute="bottom" id="w32-xL-ghm"/>
+                                    <constraint firstAttribute="trailing" secondItem="XKP-0r-CmW" secondAttribute="trailing" id="zCc-c0-etc"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="au4-ft-plc">
+                                <rect key="frame" x="189" y="66" width="41" height="14"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5 K" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tVI-VE-9XO">
+                                        <rect key="frame" x="0.0" y="0.0" width="20" height="14"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="20" id="deA-kE-1uj"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="14"/>
+                                        <color key="textColor" name="Blue"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_patient" translatesAutoresizingMaskIntoConstraints="NO" id="wbF-m2-sdT">
+                                        <rect key="frame" x="21" y="0.0" width="20" height="14"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="20" id="y65-30-hcF"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="14" id="4VE-Xg-Zoe"/>
+                                    <constraint firstAttribute="trailing" secondItem="wbF-m2-sdT" secondAttribute="trailing" id="QDa-TH-nUY"/>
+                                    <constraint firstAttribute="bottom" secondItem="wbF-m2-sdT" secondAttribute="bottom" id="WI7-TZ-Bx1"/>
+                                    <constraint firstItem="wbF-m2-sdT" firstAttribute="top" secondItem="au4-ft-plc" secondAttribute="top" id="tFq-7b-ji4"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="au4-ft-plc" secondAttribute="trailing" constant="16" id="2wq-fv-Lqu"/>
+                            <constraint firstItem="naD-GG-g74" firstAttribute="leading" secondItem="r4A-wr-egv" secondAttribute="trailing" constant="8" id="5SX-5Z-8vC"/>
+                            <constraint firstAttribute="bottom" secondItem="kxN-rd-NLW" secondAttribute="bottom" constant="10" id="BM8-tV-AxT"/>
+                            <constraint firstAttribute="bottom" secondItem="sDg-nI-ZKZ" secondAttribute="bottom" constant="10" id="HVR-6L-cYk"/>
+                            <constraint firstAttribute="bottom" secondItem="au4-ft-plc" secondAttribute="bottom" constant="10" id="HZ6-aD-ndT"/>
+                            <constraint firstItem="sDg-nI-ZKZ" firstAttribute="leading" secondItem="SDQ-AT-leT" secondAttribute="leading" constant="16" id="Q0C-rf-LaK"/>
+                            <constraint firstItem="r4A-wr-egv" firstAttribute="top" secondItem="SDQ-AT-leT" secondAttribute="top" constant="8" id="QmO-xE-FFh"/>
+                            <constraint firstAttribute="height" constant="90" id="aH1-4Y-pFO"/>
+                            <constraint firstItem="naD-GG-g74" firstAttribute="top" secondItem="SDQ-AT-leT" secondAttribute="top" constant="8" id="aae-bU-bb4"/>
+                            <constraint firstItem="6as-TH-Bmf" firstAttribute="top" secondItem="naD-GG-g74" secondAttribute="bottom" constant="2" id="fUg-9I-S3u"/>
+                            <constraint firstItem="kxN-rd-NLW" firstAttribute="centerX" secondItem="SDQ-AT-leT" secondAttribute="centerX" id="sZD-Lb-nbI"/>
+                            <constraint firstItem="6as-TH-Bmf" firstAttribute="leading" secondItem="r4A-wr-egv" secondAttribute="trailing" constant="8" id="xJy-6y-IW0"/>
+                            <constraint firstItem="r4A-wr-egv" firstAttribute="leading" secondItem="SDQ-AT-leT" secondAttribute="leading" constant="10" id="zMp-W2-3Ph"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="SDQ-AT-leT" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="DGb-dM-I6x"/>
+                <constraint firstAttribute="trailing" secondItem="SDQ-AT-leT" secondAttribute="trailing" constant="8" id="Pce-pq-8SY"/>
+                <constraint firstItem="SDQ-AT-leT" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="4" id="li7-2L-tyw"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="258" height="105"/>
+            <connections>
+                <outlet property="doctorImage" destination="r4A-wr-egv" id="5dG-5w-aOm"/>
+                <outlet property="doctorNameLbl" destination="naD-GG-g74" id="UdU-O6-2MV"/>
+                <outlet property="friendLbl" destination="tVI-VE-9XO" id="QRq-uE-M2C"/>
+                <outlet property="mainView" destination="SDQ-AT-leT" id="AI9-t2-yzM"/>
+                <outlet property="rateLbl" destination="bsH-jp-xjo" id="YY5-KL-rQg"/>
+                <outlet property="specializationLbl" destination="6as-TH-Bmf" id="0bU-s4-IWw"/>
+                <outlet property="viewCountLbl" destination="ylJ-wp-gHu" id="xM3-TF-foh"/>
+            </connections>
+            <point key="canvasLocation" x="18.840579710144929" y="105.46875"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Star" width="11" height="11"/>
+        <image name="eye" width="14.5" height="9"/>
+        <image name="ic_patient" width="11.5" height="11.5"/>
+        <image name="ic_user_contact" width="40" height="40"/>
+        <namedColor name="Blue">
+            <color red="0.071000002324581146" green="0.46700000762939453" blue="0.81999999284744263" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Gray">
+            <color red="0.55299997329711914" green="0.54500001668930054" blue="0.54500001668930054" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

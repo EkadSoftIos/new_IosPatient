@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="font_bold.TTF">
+            <string>SegoeUI-Semibold</string>
+        </array>
+        <array key="font_regular.TTF">
+            <string>SegoeUI</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BookingDetailsVC" customModule="E4clinic" customModuleProvider="target">
+            <connections>
+                <outlet property="cashImage" destination="Ecl-lw-H0T" id="jgC-b3-66p"/>
+                <outlet property="cashView" destination="Dou-Sh-mRG" id="6tz-sc-zq9"/>
+                <outlet property="clinicAddress" destination="dRm-5A-tuv" id="Hvv-4g-yCi"/>
+                <outlet property="clinicDate" destination="XxD-a1-pfH" id="QMJ-rn-LH1"/>
+                <outlet property="clinicName" destination="Xzo-NL-Qby" id="08s-3f-4oe"/>
+                <outlet property="consultationName" destination="p10-Zd-nye" id="TpX-je-JNW"/>
+                <outlet property="dataView" destination="wRm-WN-pYX" id="Ati-T6-n1z"/>
+                <outlet property="doctorNameImage" destination="3ku-cj-JgW" id="t0m-Ac-uAg"/>
+                <outlet property="doctorNameLbl" destination="uEe-SJ-rR1" id="0HU-wy-9mW"/>
+                <outlet property="fromToTime" destination="hZN-DW-cXc" id="ixC-M4-kfa"/>
+                <outlet property="totalFeesLbl" destination="4h5-TA-SDe" id="yUn-0H-ur9"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="walletBalance" destination="5Gb-xB-HiG" id="vA8-29-ef1"/>
+                <outlet property="walletImg" destination="bnd-Gc-cfv" id="LVu-ra-8iF"/>
+                <outlet property="walletView" destination="Lae-M8-ZeL" id="ywv-5n-PfU"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BcE-xO-vjM">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MuH-lL-Nfs">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="800"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wRm-WN-pYX">
+                                    <rect key="frame" x="20" y="20" width="374" height="350"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="FVz-aQ-cLs">
+                                            <rect key="frame" x="24" y="24" width="166" height="15"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_clinic" translatesAutoresizingMaskIntoConstraints="NO" id="93M-uL-UhD">
+                                                    <rect key="frame" x="0.0" y="0.0" width="15" height="15"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="15" id="4Rh-I2-bFp"/>
+                                                        <constraint firstAttribute="width" constant="15" id="nGm-yE-hwI"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clinic Consultation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p10-Zd-nye">
+                                                    <rect key="frame" x="23" y="0.0" width="143" height="15"/>
+                                                    <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="17"/>
+                                                    <color key="textColor" name="Blue"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Appointment " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DkB-az-DMh">
+                                            <rect key="frame" x="24" y="47" width="326" height="20"/>
+                                            <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="17"/>
+                                            <color key="textColor" name="Blue"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="I3O-Yj-kFC">
+                                            <rect key="frame" x="24" y="75" width="200.5" height="15"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_calender-1" translatesAutoresizingMaskIntoConstraints="NO" id="qjX-Gd-1WA">
+                                                    <rect key="frame" x="0.0" y="0.0" width="15" height="15"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="15" id="a28-fc-0PE"/>
+                                                        <constraint firstAttribute="width" constant="15" id="uME-78-2hB"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monday  Sep 11,  2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XxD-a1-pfH">
+                                                    <rect key="frame" x="23" y="0.0" width="177.5" height="15"/>
+                                                    <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="17"/>
+                                                    <color key="textColor" name="darkGray"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="eaK-86-wBg">
+                                            <rect key="frame" x="24" y="98" width="185.5" height="15"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_Medicine Reminder" translatesAutoresizingMaskIntoConstraints="NO" id="U7C-ci-eKs">
+                                                    <rect key="frame" x="0.0" y="0.0" width="15" height="15"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="15" id="Ilk-YO-m7f"/>
+                                                        <constraint firstAttribute="width" constant="15" id="WR3-8B-Kaq"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="09:30 PM - 10:00 PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hZN-DW-cXc">
+                                                    <rect key="frame" x="23" y="0.0" width="162.5" height="15"/>
+                                                    <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="17"/>
+                                                    <color key="textColor" name="darkGray"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="4DU-R3-WQc">
+                                            <rect key="frame" x="24" y="121" width="192.5" height="15"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_clinic" translatesAutoresizingMaskIntoConstraints="NO" id="QSS-r0-llU">
+                                                    <rect key="frame" x="0.0" y="0.0" width="15" height="15"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="15" id="ExX-Fk-dyL"/>
+                                                        <constraint firstAttribute="width" constant="15" id="Hgf-jj-TQG"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="El-Shouroq (Nasr City)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xzo-NL-Qby">
+                                                    <rect key="frame" x="23" y="0.0" width="169.5" height="15"/>
+                                                    <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="17"/>
+                                                    <color key="textColor" name="Blue"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_location" translatesAutoresizingMaskIntoConstraints="NO" id="dtd-Bq-Lnp">
+                                            <rect key="frame" x="24" y="144" width="20" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="20" id="VhS-2r-dSN"/>
+                                                <constraint firstAttribute="height" constant="20" id="e9x-44-thV"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dRm-5A-tuv">
+                                            <rect key="frame" x="52" y="144" width="282" height="37.5"/>
+                                            <string key="text">43 Nakhla moteey st , triumph square , 
+infront of emam ali mosque Nasr City</string>
+                                            <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="16"/>
+                                            <color key="textColor" name="Gray"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Upu-Sb-oCQ">
+                                            <rect key="frame" x="24" y="189.5" width="172.5" height="15"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="walletunactive" translatesAutoresizingMaskIntoConstraints="NO" id="u4l-Cq-yhs">
+                                                    <rect key="frame" x="0.0" y="0.0" width="15" height="15"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="15" id="PDA-qb-Iqi"/>
+                                                        <constraint firstAttribute="width" constant="15" id="cYa-rS-w2A"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Fees 230 EGP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4h5-TA-SDe">
+                                                    <rect key="frame" x="23" y="0.0" width="149.5" height="15"/>
+                                                    <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="17"/>
+                                                    <color key="textColor" name="Blue"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="With Doctor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eeh-hp-lYv">
+                                            <rect key="frame" x="243" y="212.5" width="91" height="20"/>
+                                            <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="17"/>
+                                            <color key="textColor" name="Blue"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="DbV-q6-Dnv">
+                                            <rect key="frame" x="172" y="248.5" width="162" height="25"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_user_contact" translatesAutoresizingMaskIntoConstraints="NO" id="3ku-cj-JgW">
+                                                    <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="25" id="D0E-Cg-EZB"/>
+                                                        <constraint firstAttribute="height" constant="25" id="tPh-SC-9Vw"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dr. Ahmed Karim" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uEe-SJ-rR1">
+                                                    <rect key="frame" x="33" y="0.0" width="129" height="20"/>
+                                                    <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <constraints>
+                                        <constraint firstItem="Upu-Sb-oCQ" firstAttribute="top" secondItem="dRm-5A-tuv" secondAttribute="bottom" constant="8" id="616-Te-OlB"/>
+                                        <constraint firstItem="eeh-hp-lYv" firstAttribute="top" secondItem="Upu-Sb-oCQ" secondAttribute="bottom" constant="8" id="A0W-oA-rag"/>
+                                        <constraint firstAttribute="trailing" secondItem="dRm-5A-tuv" secondAttribute="trailing" constant="40" id="Ahm-EM-Ptu"/>
+                                        <constraint firstItem="dtd-Bq-Lnp" firstAttribute="top" secondItem="4DU-R3-WQc" secondAttribute="bottom" constant="8" id="EFD-wC-a10"/>
+                                        <constraint firstItem="Upu-Sb-oCQ" firstAttribute="leading" secondItem="wRm-WN-pYX" secondAttribute="leading" constant="24" id="HEb-w5-h2W"/>
+                                        <constraint firstItem="4DU-R3-WQc" firstAttribute="top" secondItem="eaK-86-wBg" secondAttribute="bottom" constant="8" id="PqQ-YE-Bl0"/>
+                                        <constraint firstAttribute="trailing" secondItem="DkB-az-DMh" secondAttribute="trailing" constant="24" id="Saj-zQ-zhR"/>
+                                        <constraint firstItem="4DU-R3-WQc" firstAttribute="leading" secondItem="wRm-WN-pYX" secondAttribute="leading" constant="24" id="ViT-jh-c5A"/>
+                                        <constraint firstItem="DkB-az-DMh" firstAttribute="top" secondItem="FVz-aQ-cLs" secondAttribute="bottom" constant="8" id="XBR-jY-PAB"/>
+                                        <constraint firstItem="dRm-5A-tuv" firstAttribute="top" secondItem="4DU-R3-WQc" secondAttribute="bottom" constant="8" id="YXI-97-HnZ"/>
+                                        <constraint firstItem="I3O-Yj-kFC" firstAttribute="top" secondItem="DkB-az-DMh" secondAttribute="bottom" constant="8" id="Yv3-fK-EGn"/>
+                                        <constraint firstAttribute="trailing" secondItem="DbV-q6-Dnv" secondAttribute="trailing" constant="40" id="bGf-IN-5Fy"/>
+                                        <constraint firstItem="dtd-Bq-Lnp" firstAttribute="leading" secondItem="wRm-WN-pYX" secondAttribute="leading" constant="24" id="doh-Pi-fLU"/>
+                                        <constraint firstItem="FVz-aQ-cLs" firstAttribute="leading" secondItem="wRm-WN-pYX" secondAttribute="leading" constant="24" id="g8R-2J-DK7"/>
+                                        <constraint firstItem="eaK-86-wBg" firstAttribute="top" secondItem="I3O-Yj-kFC" secondAttribute="bottom" constant="8" id="hL2-wq-TH5"/>
+                                        <constraint firstItem="DbV-q6-Dnv" firstAttribute="top" secondItem="eeh-hp-lYv" secondAttribute="bottom" constant="16" id="jco-XQ-eIy"/>
+                                        <constraint firstAttribute="height" constant="350" id="ms2-aI-rhY"/>
+                                        <constraint firstItem="DkB-az-DMh" firstAttribute="leading" secondItem="wRm-WN-pYX" secondAttribute="leading" constant="24" id="myv-o0-fJg"/>
+                                        <constraint firstItem="dRm-5A-tuv" firstAttribute="leading" secondItem="dtd-Bq-Lnp" secondAttribute="trailing" constant="8" id="mzw-Be-Xuz"/>
+                                        <constraint firstItem="FVz-aQ-cLs" firstAttribute="top" secondItem="wRm-WN-pYX" secondAttribute="top" constant="24" id="rcC-QY-2JV"/>
+                                        <constraint firstItem="I3O-Yj-kFC" firstAttribute="leading" secondItem="wRm-WN-pYX" secondAttribute="leading" constant="24" id="wFj-vf-I4U"/>
+                                        <constraint firstItem="eaK-86-wBg" firstAttribute="leading" secondItem="wRm-WN-pYX" secondAttribute="leading" constant="24" id="wfc-q9-m8O"/>
+                                        <constraint firstAttribute="trailing" secondItem="eeh-hp-lYv" secondAttribute="trailing" constant="40" id="zXo-4B-v96"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lae-M8-ZeL">
+                                    <rect key="frame" x="20" y="394" width="374" height="150"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_radiobtn_unactive" translatesAutoresizingMaskIntoConstraints="NO" id="bnd-Gc-cfv">
+                                            <rect key="frame" x="28" y="28" width="20" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="20" id="2qp-ap-9pU"/>
+                                                <constraint firstAttribute="width" constant="20" id="axq-zd-nde"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wallet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CYa-ps-r23">
+                                            <rect key="frame" x="64" y="28" width="46.5" height="20"/>
+                                            <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Balance 2000,00 EGP in your wallet" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Gb-xB-HiG">
+                                            <rect key="frame" x="24" y="56" width="326" height="20"/>
+                                            <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We will withdraw total fees from your wallet" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mSx-c1-MVE">
+                                            <rect key="frame" x="24" y="84" width="326" height="40"/>
+                                            <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="17"/>
+                                            <color key="textColor" red="0.84700000289999999" green="0.082000002259999996" blue="0.17299999299999999" alpha="0.92177127709999995" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OC6-9h-aEw">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="150"/>
+                                            <connections>
+                                                <action selector="walletBtnPressed:" destination="-1" eventType="touchUpInside" id="YIR-P3-ZyL"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="5Gb-xB-HiG" secondAttribute="trailing" constant="24" id="1EE-9v-bqM"/>
+                                        <constraint firstItem="5Gb-xB-HiG" firstAttribute="leading" secondItem="Lae-M8-ZeL" secondAttribute="leading" constant="24" id="3Ke-0u-aw1"/>
+                                        <constraint firstAttribute="trailing" secondItem="OC6-9h-aEw" secondAttribute="trailing" id="3d8-0P-0kb"/>
+                                        <constraint firstAttribute="bottom" secondItem="OC6-9h-aEw" secondAttribute="bottom" id="4FV-H6-JGw"/>
+                                        <constraint firstAttribute="height" constant="150" id="4fh-SE-Enn"/>
+                                        <constraint firstAttribute="trailing" secondItem="mSx-c1-MVE" secondAttribute="trailing" constant="24" id="4pO-J2-uO5"/>
+                                        <constraint firstItem="CYa-ps-r23" firstAttribute="leading" secondItem="bnd-Gc-cfv" secondAttribute="trailing" constant="16" id="Bho-GZ-Iro"/>
+                                        <constraint firstItem="mSx-c1-MVE" firstAttribute="leading" secondItem="Lae-M8-ZeL" secondAttribute="leading" constant="24" id="CQp-Zr-lIq"/>
+                                        <constraint firstItem="5Gb-xB-HiG" firstAttribute="top" secondItem="CYa-ps-r23" secondAttribute="bottom" constant="8" id="IL6-PM-Mz7"/>
+                                        <constraint firstItem="CYa-ps-r23" firstAttribute="top" secondItem="Lae-M8-ZeL" secondAttribute="top" constant="28" id="Qdg-5m-VJh"/>
+                                        <constraint firstItem="bnd-Gc-cfv" firstAttribute="top" secondItem="Lae-M8-ZeL" secondAttribute="top" constant="28" id="cTH-sr-EtN"/>
+                                        <constraint firstItem="OC6-9h-aEw" firstAttribute="top" secondItem="Lae-M8-ZeL" secondAttribute="top" id="cZF-81-gU9"/>
+                                        <constraint firstItem="bnd-Gc-cfv" firstAttribute="leading" secondItem="Lae-M8-ZeL" secondAttribute="leading" constant="28" id="m6j-oK-28J"/>
+                                        <constraint firstItem="OC6-9h-aEw" firstAttribute="leading" secondItem="Lae-M8-ZeL" secondAttribute="leading" id="mu1-nH-1Ix"/>
+                                        <constraint firstItem="mSx-c1-MVE" firstAttribute="top" secondItem="5Gb-xB-HiG" secondAttribute="bottom" constant="8" id="o5H-5r-Zpy"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dou-Sh-mRG">
+                                    <rect key="frame" x="20" y="568" width="374" height="90"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_radiobtn_unactive" translatesAutoresizingMaskIntoConstraints="NO" id="Ecl-lw-H0T">
+                                            <rect key="frame" x="28" y="28" width="20" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="20" id="GL7-B3-cmh"/>
+                                                <constraint firstAttribute="height" constant="20" id="rjz-Ht-Ooq"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cash" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x18-i3-d9H">
+                                            <rect key="frame" x="64" y="28" width="39.5" height="20"/>
+                                            <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You will pay service fees on Clinic" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xsw-oz-fRW">
+                                            <rect key="frame" x="24" y="56" width="326" height="20"/>
+                                            <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cQm-Vf-hoi">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="90"/>
+                                            <connections>
+                                                <action selector="cashBtnPressed:" destination="-1" eventType="touchUpInside" id="lzQ-tJ-XfS"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <constraints>
+                                        <constraint firstItem="Xsw-oz-fRW" firstAttribute="leading" secondItem="Dou-Sh-mRG" secondAttribute="leading" constant="24" id="9Yy-xp-DBk"/>
+                                        <constraint firstItem="cQm-Vf-hoi" firstAttribute="leading" secondItem="Dou-Sh-mRG" secondAttribute="leading" id="CEy-ho-1I5"/>
+                                        <constraint firstAttribute="bottom" secondItem="cQm-Vf-hoi" secondAttribute="bottom" id="Gmw-br-NyJ"/>
+                                        <constraint firstAttribute="trailing" secondItem="Xsw-oz-fRW" secondAttribute="trailing" constant="24" id="TXQ-0B-TWv"/>
+                                        <constraint firstItem="x18-i3-d9H" firstAttribute="leading" secondItem="Ecl-lw-H0T" secondAttribute="trailing" constant="16" id="YJM-eS-C6q"/>
+                                        <constraint firstItem="Ecl-lw-H0T" firstAttribute="leading" secondItem="Dou-Sh-mRG" secondAttribute="leading" constant="28" id="ZSp-Cw-gEl"/>
+                                        <constraint firstAttribute="trailing" secondItem="cQm-Vf-hoi" secondAttribute="trailing" id="fag-9z-xjf"/>
+                                        <constraint firstItem="Ecl-lw-H0T" firstAttribute="top" secondItem="Dou-Sh-mRG" secondAttribute="top" constant="28" id="fmA-xe-yvz"/>
+                                        <constraint firstAttribute="height" constant="90" id="hHQ-ll-llx"/>
+                                        <constraint firstItem="Xsw-oz-fRW" firstAttribute="top" secondItem="x18-i3-d9H" secondAttribute="bottom" constant="8" id="nyR-GC-hIZ"/>
+                                        <constraint firstItem="x18-i3-d9H" firstAttribute="top" secondItem="Dou-Sh-mRG" secondAttribute="top" constant="28" id="oo7-au-z8q"/>
+                                        <constraint firstItem="cQm-Vf-hoi" firstAttribute="top" secondItem="Dou-Sh-mRG" secondAttribute="top" id="r8z-bo-AUD"/>
+                                    </constraints>
+                                </view>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WbG-dt-1xx">
+                                    <rect key="frame" x="122" y="718" width="170" height="40"/>
+                                    <color key="backgroundColor" name="Blue"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="170" id="B6V-Yc-Pap"/>
+                                        <constraint firstAttribute="height" constant="40" id="gbU-Hs-OQU"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="17"/>
+                                    <state key="normal" title="Confirm Booking">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="6"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="confirm_Click:" destination="-1" eventType="touchUpInside" id="PT3-Yp-H6z"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstItem="Lae-M8-ZeL" firstAttribute="top" secondItem="wRm-WN-pYX" secondAttribute="bottom" constant="24" id="4yZ-3e-fh2"/>
+                                <constraint firstAttribute="trailing" secondItem="wRm-WN-pYX" secondAttribute="trailing" constant="20" id="5nq-K8-hiK"/>
+                                <constraint firstItem="Dou-Sh-mRG" firstAttribute="top" secondItem="Lae-M8-ZeL" secondAttribute="bottom" constant="24" id="A8M-VA-5oQ"/>
+                                <constraint firstItem="Dou-Sh-mRG" firstAttribute="leading" secondItem="MuH-lL-Nfs" secondAttribute="leading" constant="20" id="BFS-ML-Ty8"/>
+                                <constraint firstItem="WbG-dt-1xx" firstAttribute="top" secondItem="Dou-Sh-mRG" secondAttribute="bottom" constant="60" id="IEh-Ra-j0A"/>
+                                <constraint firstItem="wRm-WN-pYX" firstAttribute="leading" secondItem="MuH-lL-Nfs" secondAttribute="leading" constant="20" id="Iz5-dS-kMq"/>
+                                <constraint firstItem="WbG-dt-1xx" firstAttribute="centerX" secondItem="MuH-lL-Nfs" secondAttribute="centerX" id="NBG-PZ-hRx"/>
+                                <constraint firstItem="Lae-M8-ZeL" firstAttribute="leading" secondItem="MuH-lL-Nfs" secondAttribute="leading" constant="20" id="Qc1-3p-9gn"/>
+                                <constraint firstAttribute="trailing" secondItem="Lae-M8-ZeL" secondAttribute="trailing" constant="20" id="R1v-y8-1Oo"/>
+                                <constraint firstAttribute="height" constant="800" id="faf-WS-cXB"/>
+                                <constraint firstAttribute="trailing" secondItem="Dou-Sh-mRG" secondAttribute="trailing" constant="20" id="hJE-cs-YPB"/>
+                                <constraint firstItem="wRm-WN-pYX" firstAttribute="top" secondItem="MuH-lL-Nfs" secondAttribute="top" constant="20" id="oB3-q8-wK8"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="MuH-lL-Nfs" firstAttribute="top" secondItem="BcE-xO-vjM" secondAttribute="top" id="03y-re-XMW"/>
+                        <constraint firstAttribute="trailing" secondItem="MuH-lL-Nfs" secondAttribute="trailing" id="NXt-Um-BK7"/>
+                        <constraint firstItem="MuH-lL-Nfs" firstAttribute="leading" secondItem="BcE-xO-vjM" secondAttribute="leading" id="hYg-tZ-XyH"/>
+                        <constraint firstItem="MuH-lL-Nfs" firstAttribute="centerX" secondItem="BcE-xO-vjM" secondAttribute="centerX" id="lwA-mY-I8H"/>
+                        <constraint firstAttribute="bottom" secondItem="MuH-lL-Nfs" secondAttribute="bottom" id="qKE-DF-vA0"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="BcE-xO-vjM" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="D1X-wj-0Cs"/>
+                <constraint firstItem="BcE-xO-vjM" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Omh-pF-NgH"/>
+                <constraint firstItem="BcE-xO-vjM" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="VGN-n0-YKp"/>
+                <constraint firstItem="BcE-xO-vjM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="qVi-Eu-ONZ"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="-200.00000000000003" y="67.633928571428569"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_Medicine Reminder" width="17.5" height="17.5"/>
+        <image name="ic_calender-1" width="11.5" height="12"/>
+        <image name="ic_clinic" width="15" height="15"/>
+        <image name="ic_location" width="9.5" height="13.5"/>
+        <image name="ic_radiobtn_unactive" width="10" height="10"/>
+        <image name="ic_user_contact" width="40" height="40"/>
+        <image name="walletunactive" width="16" height="15.5"/>
+        <namedColor name="Blue">
+            <color red="0.071000002324581146" green="0.46700000762939453" blue="0.81999999284744263" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Gray">
+            <color red="0.55299997329711914" green="0.54500001668930054" blue="0.54500001668930054" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="darkGray">
+            <color red="0.41999998688697815" green="0.41999998688697815" blue="0.41999998688697815" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

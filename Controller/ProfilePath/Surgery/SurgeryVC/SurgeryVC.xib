@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SurgeryVC" customModule="E4_Patient" customModuleProvider="target">
+            <connections>
+                <outlet property="addView" destination="0IB-nM-lA5" id="vdj-S7-JTd"/>
+                <outlet property="sugaryTable" destination="2pU-C0-7DS" id="fSj-41-lmX"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2pU-C0-7DS">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0IB-nM-lA5">
+                    <rect key="frame" x="324" y="772" width="70" height="70"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_btn" translatesAutoresizingMaskIntoConstraints="NO" id="pSh-el-w9i">
+                            <rect key="frame" x="0.0" y="2" width="70" height="68"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fNY-90-2SR">
+                            <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                            <connections>
+                                <action selector="add_CLick:" destination="-1" eventType="touchUpInside" id="RDg-2G-tCT"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="fNY-90-2SR" secondAttribute="trailing" id="44a-nK-Ldt"/>
+                        <constraint firstAttribute="trailing" secondItem="pSh-el-w9i" secondAttribute="trailing" id="79k-rZ-QRh"/>
+                        <constraint firstAttribute="height" constant="70" id="Pqt-nD-G9g"/>
+                        <constraint firstAttribute="bottom" secondItem="pSh-el-w9i" secondAttribute="bottom" id="Xbw-Qh-Q7k"/>
+                        <constraint firstItem="pSh-el-w9i" firstAttribute="leading" secondItem="0IB-nM-lA5" secondAttribute="leading" id="aEQ-F6-ddh"/>
+                        <constraint firstAttribute="bottom" secondItem="fNY-90-2SR" secondAttribute="bottom" id="fBu-oK-Ju0"/>
+                        <constraint firstItem="fNY-90-2SR" firstAttribute="leading" secondItem="0IB-nM-lA5" secondAttribute="leading" id="jw3-JV-6bb"/>
+                        <constraint firstItem="fNY-90-2SR" firstAttribute="top" secondItem="0IB-nM-lA5" secondAttribute="top" id="rdc-y3-NOy"/>
+                        <constraint firstAttribute="width" constant="70" id="ypU-Jf-Tbv"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="2pU-C0-7DS" secondAttribute="trailing" id="83c-zD-1Fg"/>
+                <constraint firstItem="2pU-C0-7DS" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="KTH-pB-aOS"/>
+                <constraint firstItem="2pU-C0-7DS" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="V6P-8l-VrD"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="0IB-nM-lA5" secondAttribute="bottom" constant="20" id="hkJ-1h-fER"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="0IB-nM-lA5" secondAttribute="trailing" constant="20" id="t6m-pq-HmF"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="2pU-C0-7DS" secondAttribute="bottom" id="vk2-pG-hWz"/>
+            </constraints>
+            <point key="canvasLocation" x="84" y="88"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_btn" width="68" height="68"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AddressCell" id="gTV-IL-0wX" customClass="AddressCell" customModule="E4_Patient" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="302" height="116"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="302" height="116"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WAL-4x-inr">
+                        <rect key="frame" x="20" y="4" width="262" height="104"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_radiobtn_active" translatesAutoresizingMaskIntoConstraints="NO" id="Lev-FU-QOn">
+                                <rect key="frame" x="20" y="20" width="10" height="10"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="2ln-Af-1ys"/>
+                                    <constraint firstAttribute="width" constant="10" id="ozm-88-UcP"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exist Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c8z-aK-MnT">
+                                <rect key="frame" x="42" y="15.5" width="98" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="0.070588235289999995" green="0.46666666670000001" blue="0.81960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Land mark ...." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PuI-uF-IIq">
+                                <rect key="frame" x="42" y="47" width="118" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="0.070588235289999995" green="0.46666666670000001" blue="0.81960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GYZ-qY-74A">
+                                <rect key="frame" x="180" y="66" width="70" height="30"/>
+                                <color key="backgroundColor" red="0.070588235289999995" green="0.46666666670000001" blue="0.81960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="QR4-cR-qxb"/>
+                                    <constraint firstAttribute="width" constant="70" id="ezb-N6-Z9V"/>
+                                </constraints>
+                                <state key="normal" title="Change">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="GYZ-qY-74A" secondAttribute="trailing" constant="12" id="1Bx-7e-Qts"/>
+                            <constraint firstAttribute="bottom" secondItem="GYZ-qY-74A" secondAttribute="bottom" constant="8" id="1EV-Eo-RYZ"/>
+                            <constraint firstItem="GYZ-qY-74A" firstAttribute="leading" secondItem="PuI-uF-IIq" secondAttribute="trailing" constant="20" id="2iR-El-pcv"/>
+                            <constraint firstItem="PuI-uF-IIq" firstAttribute="leading" secondItem="c8z-aK-MnT" secondAttribute="leading" id="Hll-eB-HgG"/>
+                            <constraint firstItem="c8z-aK-MnT" firstAttribute="leading" secondItem="Lev-FU-QOn" secondAttribute="trailing" constant="12" id="KNM-Hc-piA"/>
+                            <constraint firstItem="PuI-uF-IIq" firstAttribute="top" secondItem="c8z-aK-MnT" secondAttribute="bottom" constant="12" id="dw3-5F-NbX"/>
+                            <constraint firstItem="Lev-FU-QOn" firstAttribute="leading" secondItem="WAL-4x-inr" secondAttribute="leading" constant="20" id="fgI-45-cix"/>
+                            <constraint firstItem="Lev-FU-QOn" firstAttribute="top" secondItem="WAL-4x-inr" secondAttribute="top" constant="20" id="hkW-Gs-81m"/>
+                            <constraint firstItem="c8z-aK-MnT" firstAttribute="centerY" secondItem="Lev-FU-QOn" secondAttribute="centerY" id="zag-al-FaZ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="WAL-4x-inr" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="4" id="76B-XL-Ioh"/>
+                <constraint firstAttribute="bottom" secondItem="WAL-4x-inr" secondAttribute="bottom" constant="8" id="Fq1-fi-sSS"/>
+                <constraint firstItem="WAL-4x-inr" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="Nfn-F6-toU"/>
+                <constraint firstAttribute="trailing" secondItem="WAL-4x-inr" secondAttribute="trailing" constant="20" id="SwK-8p-reF"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="302" height="116"/>
+            <connections>
+                <outlet property="addressLbl" destination="PuI-uF-IIq" id="8H3-rN-HEH"/>
+                <outlet property="bgView" destination="WAL-4x-inr" id="5TK-Sx-uNz"/>
+                <outlet property="changeBtn" destination="GYZ-qY-74A" id="6C0-7F-VnH"/>
+            </connections>
+            <point key="canvasLocation" x="111.59420289855073" y="121.875"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="ic_radiobtn_active" width="10" height="10"/>
+    </resources>
+</document>

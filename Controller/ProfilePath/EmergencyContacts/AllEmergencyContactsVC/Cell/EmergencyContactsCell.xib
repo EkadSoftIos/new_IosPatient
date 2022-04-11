@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Segoe_UI.ttf">
+            <string>SegoeUI</string>
+        </array>
+        <array key="seguisb.ttf">
+            <string>SegoeUI-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="EmergencyCell" rowHeight="182" id="KGk-i7-Jjw" customClass="EmergencyContactsCell" customModule="E4_Patient" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="182"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="182"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wKC-ex-1CQ">
+                        <rect key="frame" x="21" y="33.5" width="278" height="115"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Emergency" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bsu-gu-G0f">
+                                <rect key="frame" x="12" y="13" width="75.5" height="17.5"/>
+                                <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="15"/>
+                                <color key="textColor" name="Blue"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hfI-fc-nJk">
+                                <rect key="frame" x="0.0" y="36.5" width="278" height="0.5"/>
+                                <color key="backgroundColor" white="0.71032750499999997" alpha="0.73465989220000005" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="0.5" id="YkS-Sm-ldb"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="vMN-zr-xmu">
+                                <rect key="frame" x="8" y="45" width="167.5" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ahmed Hossam" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ek2-ft-b0M">
+                                        <rect key="frame" x="0.0" y="0.0" width="86" height="14.5"/>
+                                        <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="12"/>
+                                        <color key="textColor" name="darkGray"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brother" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RVt-Ct-phy">
+                                        <rect key="frame" x="0.0" y="22.5" width="40" height="15"/>
+                                        <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="12"/>
+                                        <color key="textColor" name="darkGray"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Downtown Tanta" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3uT-LZ-8nA">
+                                        <rect key="frame" x="0.0" y="45.5" width="90" height="14.5"/>
+                                        <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="12"/>
+                                        <color key="textColor" name="darkGray"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Rr5-My-tQ2"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="wfH-kp-cGp">
+                                <rect key="frame" x="222" y="12" width="48" height="20"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RwM-z7-1Jv">
+                                        <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="20" id="PHb-nI-7rG"/>
+                                        </constraints>
+                                        <state key="normal" image="ic_edit"/>
+                                        <connections>
+                                            <action selector="edit_Click:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="YDE-D4-nN3"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YDa-VA-ymr">
+                                        <rect key="frame" x="28" y="0.0" width="20" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="20" id="Hk5-ZZ-xXF"/>
+                                        </constraints>
+                                        <state key="normal" image="ic_delet"/>
+                                        <connections>
+                                            <action selector="delete_Click:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="XQe-Le-gak"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="xh6-79-2eV"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="002 1020 500 6987" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hep-OA-x4f">
+                                <rect key="frame" x="183.5" y="45" width="86.5" height="12"/>
+                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="10"/>
+                                <color key="textColor" name="Gray"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vMN-zr-xmu" firstAttribute="leading" secondItem="wKC-ex-1CQ" secondAttribute="leading" constant="8" id="9op-pf-fQr"/>
+                            <constraint firstItem="hfI-fc-nJk" firstAttribute="top" secondItem="Bsu-gu-G0f" secondAttribute="bottom" constant="6" id="DtU-k2-twY"/>
+                            <constraint firstAttribute="trailing" secondItem="wfH-kp-cGp" secondAttribute="trailing" constant="8" id="LN2-Ux-IoZ"/>
+                            <constraint firstItem="Hep-OA-x4f" firstAttribute="leading" secondItem="vMN-zr-xmu" secondAttribute="trailing" constant="8" id="Nxj-0t-fz9"/>
+                            <constraint firstItem="Bsu-gu-G0f" firstAttribute="leading" secondItem="wKC-ex-1CQ" secondAttribute="leading" constant="12" id="PEO-oj-0t1"/>
+                            <constraint firstItem="Hep-OA-x4f" firstAttribute="top" secondItem="hfI-fc-nJk" secondAttribute="bottom" constant="8" id="RCo-8F-jGT"/>
+                            <constraint firstItem="Bsu-gu-G0f" firstAttribute="top" secondItem="wKC-ex-1CQ" secondAttribute="top" constant="13" id="Rip-qB-711"/>
+                            <constraint firstAttribute="trailing" secondItem="hfI-fc-nJk" secondAttribute="trailing" id="WE5-bD-Vxw"/>
+                            <constraint firstAttribute="height" constant="115" id="YD4-bh-ETA"/>
+                            <constraint firstAttribute="trailing" secondItem="Hep-OA-x4f" secondAttribute="trailing" constant="8" id="ct7-Lj-abe"/>
+                            <constraint firstItem="vMN-zr-xmu" firstAttribute="top" secondItem="hfI-fc-nJk" secondAttribute="bottom" constant="8" id="mXW-hc-87F"/>
+                            <constraint firstItem="hfI-fc-nJk" firstAttribute="leading" secondItem="wKC-ex-1CQ" secondAttribute="leading" id="oOZ-wp-uAI"/>
+                            <constraint firstItem="wfH-kp-cGp" firstAttribute="centerY" secondItem="Bsu-gu-G0f" secondAttribute="centerY" id="qED-MH-fk7"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="wKC-ex-1CQ" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="a8X-ju-Yeq"/>
+                    <constraint firstAttribute="trailing" secondItem="wKC-ex-1CQ" secondAttribute="trailing" constant="21" id="iwU-DU-kzo"/>
+                    <constraint firstItem="wKC-ex-1CQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="21" id="prw-eb-UA9"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="cellView" destination="wKC-ex-1CQ" id="sGq-nU-ovc"/>
+                <outlet property="delteBtn" destination="YDa-VA-ymr" id="slV-fj-vNE"/>
+                <outlet property="editBtn" destination="RwM-z7-1Jv" id="PYJ-VD-qcU"/>
+                <outlet property="locationLbl" destination="3uT-LZ-8nA" id="g2k-vC-qY5"/>
+                <outlet property="nameLbl" destination="ek2-ft-b0M" id="3bs-uF-vJM"/>
+                <outlet property="phonrLbl" destination="Hep-OA-x4f" id="HSG-CD-l3J"/>
+                <outlet property="relationLbl" destination="RVt-Ct-phy" id="sc4-Dp-VMx"/>
+            </connections>
+            <point key="canvasLocation" x="58" y="98"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ic_delet" width="22.5" height="22.5"/>
+        <image name="ic_edit" width="20" height="20"/>
+        <namedColor name="Blue">
+            <color red="0.071000002324581146" green="0.46700000762939453" blue="0.81999999284744263" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Gray">
+            <color red="0.55299997329711914" green="0.54500001668930054" blue="0.54500001668930054" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="darkGray">
+            <color red="0.41999998688697815" green="0.41999998688697815" blue="0.41999998688697815" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

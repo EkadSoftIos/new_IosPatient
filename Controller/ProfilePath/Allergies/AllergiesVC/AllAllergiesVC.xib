@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AllAllergiesVC" customModule="E4_Patient" customModuleProvider="target">
+            <connections>
+                <outlet property="addView" destination="Qpf-f8-Z2Z" id="4m1-70-L6M"/>
+                <outlet property="allergiesTableView" destination="9cY-jP-1AE" id="dv2-3U-biT"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9cY-jP-1AE">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qpf-f8-Z2Z">
+                    <rect key="frame" x="324" y="772" width="70" height="70"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_btn" translatesAutoresizingMaskIntoConstraints="NO" id="ci1-P8-bqu">
+                            <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fmm-ra-tNZ">
+                            <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                            <connections>
+                                <action selector="add_click:" destination="-1" eventType="touchUpInside" id="mJa-3z-Gzo"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="fmm-ra-tNZ" firstAttribute="top" secondItem="Qpf-f8-Z2Z" secondAttribute="top" id="0JI-yj-3Ww"/>
+                        <constraint firstAttribute="bottom" secondItem="ci1-P8-bqu" secondAttribute="bottom" id="4ei-q6-FJp"/>
+                        <constraint firstItem="fmm-ra-tNZ" firstAttribute="leading" secondItem="Qpf-f8-Z2Z" secondAttribute="leading" id="7zN-lf-Zas"/>
+                        <constraint firstItem="ci1-P8-bqu" firstAttribute="leading" secondItem="Qpf-f8-Z2Z" secondAttribute="leading" id="IQA-6S-tu5"/>
+                        <constraint firstAttribute="bottom" secondItem="fmm-ra-tNZ" secondAttribute="bottom" id="Inx-16-Qqi"/>
+                        <constraint firstAttribute="height" constant="70" id="KJF-Cn-DV7"/>
+                        <constraint firstAttribute="width" constant="70" id="Nql-TJ-Qrx"/>
+                        <constraint firstItem="ci1-P8-bqu" firstAttribute="top" secondItem="Qpf-f8-Z2Z" secondAttribute="top" id="X4y-zw-reu"/>
+                        <constraint firstAttribute="trailing" secondItem="ci1-P8-bqu" secondAttribute="trailing" id="j5p-ip-lZD"/>
+                        <constraint firstAttribute="trailing" secondItem="fmm-ra-tNZ" secondAttribute="trailing" id="nWM-ug-LY1"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="9cY-jP-1AE" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="6pT-gT-sNp"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="9cY-jP-1AE" secondAttribute="bottom" id="Fhi-jq-29a"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Qpf-f8-Z2Z" secondAttribute="bottom" constant="20" id="QUf-92-PhK"/>
+                <constraint firstAttribute="trailing" secondItem="Qpf-f8-Z2Z" secondAttribute="trailing" constant="20" id="TtU-iz-N1w"/>
+                <constraint firstAttribute="trailing" secondItem="9cY-jP-1AE" secondAttribute="trailing" id="c5v-OV-aqz"/>
+                <constraint firstItem="9cY-jP-1AE" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="gNe-UL-NGt"/>
+            </constraints>
+            <point key="canvasLocation" x="-100" y="88"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_btn" width="68" height="68"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
