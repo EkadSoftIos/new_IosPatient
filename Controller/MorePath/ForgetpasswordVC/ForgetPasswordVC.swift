@@ -39,15 +39,40 @@ class ForgetPasswordVC: UIViewController {
         let passwordTest = NSPredicate(format: "SELF MATCHES %@", "^(?=.*[a-z])[A-Za-z\\d$@$#!%*?&]{8,}")
         return passwordTest.evaluate(with: password)
     }
+    @IBAction func ShowCurrentPass_Click(_ sender: Any) {
+        if  passwordTxt.isSecureTextEntry == false {
+            passwordTxt.isSecureTextEntry = true
+        }else{
+            passwordTxt.isSecureTextEntry = false
+        }
+        
+    }
+    @IBAction func ShowNewPass_Click(_ sender: Any) {
+        if  newPasswordTxt.isSecureTextEntry == false {
+            newPasswordTxt.isSecureTextEntry = true
+        }else{
+            newPasswordTxt.isSecureTextEntry = false
+        }
+        
+    }
+    @IBAction func ShowConfirmPass_Click(_ sender: Any) {
+        if  confirmNewPasswordTxt.isSecureTextEntry == false {
+            confirmNewPasswordTxt.isSecureTextEntry = true
+        }else{
+            confirmNewPasswordTxt.isSecureTextEntry = false
+        }
+        
+    }
     func callAPI(){
         let parameters: [String: Any] = [
             "oldPassword": passwordTxt.text ?? "",
             "NewPassword": newPasswordTxt.text ?? "",
             "NewPasswordConfirm": confirmNewPasswordTxt.text ?? "",
-            "id": Model?.message?.patientID ?? 0
+            "id": Model?.message?.patientID ?? 0,
+            "Type":2
         ]
         
-            NetworkClient.performRequest(_type: SuccessModel.self, router: .addNewAddress(params: parameters)) {[weak self] (result) in
+            NetworkClient.performRequest(_type: SuccessModel.self, router: .changePassword(params: parameters)) {[weak self] (result) in
                 guard let self = self else {return}
                 switch result{
                 

@@ -25,7 +25,7 @@ struct AppointmentDetailsMessage: Codable {
     let blodGroupnameLocalized: String?
     let bookingNo, doctorFk, patientOrRepFk, serviceType: Int?
     let businessProviderBranchFk: Int?
-    let patientAddressFk, medicalServiceFk: String?
+    let patientAddressFk, medicalServiceFk: Int?
     let consultationServiceFk: Int?
     let consultationServiceLocalized, medicalServiceLocalized, bookingDate, startTime: String?
     let endTime, bookingReason: String?

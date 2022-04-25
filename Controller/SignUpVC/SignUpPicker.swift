@@ -9,29 +9,16 @@ import UIKit
 extension SignUpVC: UIPickerViewDataSource, UIPickerViewDelegate {
     //MARK:-date picker
     func showDatePicker(){
-//        datePicker.datePickerMode = .date
-//        let toolbar = UIToolbar();
-//        toolbar.sizeToFit()
-//        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(donedatePicker));
-//        let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
-//        let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelDatePicker));
-//        toolbar.setItems([doneButton,spaceButton,cancelButton], animated: false)
-//        dateTxt.inputAccessoryView = toolbar
-//        dateTxt.inputView = datePicker
         let datePickerView = UIDatePicker()
         datePickerView.datePickerMode = .date
         dateTxt.inputView = datePickerView
         datePickerView.addTarget(self, action: #selector(handleDatePicker(sender:)), for: .valueChanged)
-
     }
     @objc func handleDatePicker(sender: UIDatePicker) {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
         let date = dateFormatter.string(from: sender.date)
         dateTxt.text = date
-//        self.view.endEditing(true)
-//        dateFrom = date
-//        self.delegate?.sendDate(fDate: dateFrom ?? "", tDate: dateTo ?? "")
     }
     @objc func donedatePicker(){
         let formatter = DateFormatter()
@@ -43,10 +30,6 @@ extension SignUpVC: UIPickerViewDataSource, UIPickerViewDelegate {
         self.view.endEditing(true)
     }
     func uploadImage(){
-//        imageInstance.presentImagePicker()
-//        imageInstance.imageSelected = {[weak self] selectedImage in
-//            guard let self = self else {return}
-//            self.profileImage.image = selectedImage
         self.userImage.append(UploadDataa(data: (self.profileImage.image?.jpegData(compressionQuality: 0.1)!)!, Key: "personal_image"))
             AlamofireMultiPart.PostMultiWithModel(model: SuccessModelImage.self,
                                                   url: "\(Constants.baseURL)Common/FormDataUpload",

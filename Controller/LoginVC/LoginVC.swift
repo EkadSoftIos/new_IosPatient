@@ -55,6 +55,9 @@ class LoginVC: UIViewController {
     @IBAction func register_Click(_ sender: Any) {
             registerClick()
         }
+    @IBAction func ForgetPass_Click(_ sender: Any) {
+            forgetPassClick()
+        }
     @IBAction func ShowPass_Click(_ sender: Any) {
         if passwordTxt.isSecureTextEntry == false {
             passwordTxt.isSecureTextEntry = true

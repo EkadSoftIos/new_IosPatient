@@ -11,8 +11,8 @@ extension EditProfileVC{
     func validationinput(){
         if fNameTxt.text!.isEmpty || lNameTxt.text!.isEmpty || phoneTxt.text!.isEmpty || emailTxt.text!.isEmpty || genderTxt.text!.isEmpty || dateTxt.text!.isEmpty{
             self.showMessage(title: "", sub: "all data required", type: .error, layout: .messageView)
-        }else if identityTxt.text!.count < 16 || identityTxt.text!.count > 16{
-            self.showMessage(title: "", sub: "Identification must be 16 number".localized, type: .error, layout: .messageView)
+        }else if !identityTxt.text!.isEmpty && identityTxt.text!.count < 14 || identityTxt.text!.count > 14{
+            self.showMessage(title: "", sub: "Identification must be 14 number".localized, type: .error, layout: .messageView)
         }else if isEmailValid(emailTxt.text ?? "") == false{
             self.showMessage(title: "", sub: "enter valid email".localized, type: .error, layout: .cardView)
         }else if birthDate?.timeIntervalSinceNow.sign == .plus {
@@ -48,7 +48,7 @@ extension EditProfileVC{
         }
     }
     func callApi(){
-        let parameters: [String: Any] = [
+        var parameters: [String: Any] = [
             "PatientId": model?.message?.patientID ?? 0,
             "PatientFirstName": fNameTxt.text ?? "",
             "PatientLastName": lNameTxt.text ?? "",
@@ -57,15 +57,22 @@ extension EditProfileVC{
             "PatientMobile": phoneTxt.text ?? "",
             "PatientBirthDate": dateTxt.text ?? "",
             "PatientGender": genderType ?? 1,
-            "PatientWeight": weightTxt.text ?? "",
-            "PatientHeight": heightTxt.text ?? "",
-            "BlodGroupFk": BlodID,
             "AttachedIdPath": attachmentImagePath,
             "PatientProfileImage": profileImagePath,
-            "Countryid": model?.message?.countryid ?? 0,
-            "PatientIdentification": identityTxt.text ?? ""
-            
+            "Countryid": model?.message?.countryid ?? 0
             ]
+        if weightTxt.text != "" {
+            parameters["PatientWeight"] = weightTxt.text ?? ""
+        }
+        if heightTxt.text != "" {
+            parameters["PatientHeight"] = heightTxt.text ?? ""
+        }
+        if BlodID != 0 {
+            parameters["BlodGroupFk"] = BlodID
+        }
+        if identityTxt.text != "" {
+            parameters["PatientIdentification"] = identityTxt.text
+        }
         NetworkClient.performRequest(_type: SuccessModel.self, router: .editProfile(params: parameters)) { (result) in
             self.saveBtn.stopAnimation()
             switch result{

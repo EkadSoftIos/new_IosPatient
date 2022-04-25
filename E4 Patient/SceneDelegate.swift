@@ -27,7 +27,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
        }
     func setRoot(){
         let token = UserDefaults.standard.object(forKey: "token")
-        if let token = token as? String {
+        if token != nil{
            let vc = TabbarManager()
             //let vc = LoginVC()
             window?.rootViewController = vc

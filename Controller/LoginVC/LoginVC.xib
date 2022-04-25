@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -17,7 +18,7 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginVC" customModule="E4_Patient" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginVC" customModule="E4clinic" customModuleProvider="target">
             <connections>
                 <outlet property="agreeBtn" destination="TsG-ig-w0n" id="Y8H-iC-cfg"/>
                 <outlet property="countryImage" destination="9Pm-QN-icy" id="zDF-83-Txs"/>
@@ -93,14 +94,14 @@
                                                 <constraint firstAttribute="width" constant="12" id="lhy-ck-mPG"/>
                                             </constraints>
                                         </imageView>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aDZ-aL-cTU">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aDZ-aL-cTU">
                                             <rect key="frame" x="0.0" y="0.0" width="77" height="25"/>
                                             <connections>
                                                 <action selector="chooseCountry_Click:" destination="-1" eventType="touchUpInside" id="co5-qs-O7T"/>
                                             </connections>
                                         </button>
                                     </subviews>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
                                         <constraint firstItem="aDZ-aL-cTU" firstAttribute="top" secondItem="cc5-qu-BA7" secondAttribute="top" id="0mn-PR-wSA"/>
                                         <constraint firstItem="aDZ-aL-cTU" firstAttribute="leading" secondItem="cc5-qu-BA7" secondAttribute="leading" id="42t-jv-3XR"/>
@@ -166,7 +167,7 @@
                                         <action selector="ShowPass_Click:" destination="-1" eventType="touchUpInside" id="R2b-IO-P7U"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BpZ-8q-mAy">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BpZ-8q-mAy">
                                     <rect key="frame" x="193" y="365" width="135" height="16"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="16" id="O8P-KL-33g"/>
@@ -175,8 +176,11 @@
                                     <state key="normal" title="Forget Password ?">
                                         <color key="titleColor" name="Gray"/>
                                     </state>
+                                    <connections>
+                                        <action selector="ForgetPass_Click:" destination="-1" eventType="touchUpInside" id="ijk-fo-jcl"/>
+                                    </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zpn-jv-XK0" customClass="TransitionButton" customModule="TransitionButton">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zpn-jv-XK0" customClass="TransitionButton" customModule="TransitionButton">
                                     <rect key="frame" x="76" y="419" width="200" height="40"/>
                                     <color key="backgroundColor" name="Blue"/>
                                     <constraints>
@@ -240,7 +244,7 @@ Login with</string>
                                             <color key="textColor" name="Gray"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xQP-hi-n1K">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xQP-hi-n1K">
                                             <rect key="frame" x="190" y="0.0" width="58" height="31"/>
                                             <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="16"/>
                                             <state key="normal" title="Sign Up"/>
@@ -256,7 +260,7 @@ Login with</string>
                                     <color key="textColor" red="0.070588235289999995" green="0.46666666670000001" blue="0.81960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TsG-ig-w0n">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TsG-ig-w0n">
                                     <rect key="frame" x="52" y="641" width="12" height="12"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
@@ -268,7 +272,7 @@ Login with</string>
                                     </connections>
                                 </button>
                             </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
                                 <constraint firstItem="cc5-qu-BA7" firstAttribute="top" secondItem="cLp-9R-Aq3" secondAttribute="bottom" constant="8" id="0nv-3y-UUW"/>
                                 <constraint firstItem="mPC-4S-uq2" firstAttribute="centerX" secondItem="3pK-Nn-EUk" secondAttribute="centerX" id="31J-zU-Y8H"/>
@@ -318,17 +322,22 @@ Login with</string>
                     </constraints>
                 </scrollView>
             </subviews>
-            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="Rqg-0I-f5X" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="21" id="6hF-Ws-n0r"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Rqg-0I-f5X" secondAttribute="trailing" constant="21" id="8CD-ke-YVq"/>
                 <constraint firstItem="Rqg-0I-f5X" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="38" id="FMs-LE-VeH"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Rqg-0I-f5X" secondAttribute="bottom" constant="38" id="boj-8L-ybR"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="53.623188405797109" y="92.410714285714278"/>
         </view>
     </objects>
+    <designables>
+        <designable name="zpn-jv-XK0">
+            <size key="intrinsicContentSize" width="38" height="30"/>
+        </designable>
+    </designables>
     <resources>
         <image name="FaceBook" width="40.5" height="40.5"/>
         <image name="Flag" width="21" height="14"/>
@@ -345,5 +354,8 @@ Login with</string>
         <namedColor name="darkGray">
             <color red="0.41999998688697815" green="0.41999998688697815" blue="0.41999998688697815" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

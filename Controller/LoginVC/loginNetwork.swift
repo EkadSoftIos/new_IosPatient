@@ -67,5 +67,10 @@ extension LoginVC{
         vc.modalTransitionStyle = .crossDissolve
         self.show(vc, sender: nil)
     }
-   
+    func forgetPassClick(){
+        let vc = ForgetPassVC()
+        vc.modalPresentationStyle = .fullScreen
+        vc.modalTransitionStyle = .crossDissolve
+        self.show(vc, sender: nil)
+    }
 }

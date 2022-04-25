@@ -7,8 +7,8 @@
 
 import Foundation
 struct SuccessModel: Codable {
-    let successtate: Int
-    let errormessage, message: String
+    let successtate: Int?
+    let errormessage, message: String?
 }
 struct SuccessModelImage: Codable {
     let successtate: Int?

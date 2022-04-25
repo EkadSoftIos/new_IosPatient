@@ -9,7 +9,11 @@ import UIKit
 
 class MoreVC: UIViewController {
     @IBOutlet var moreTableView: UITableView!
-    let moreArr = [("My Profile".localized,AppImages.profile),("My Wallet",AppImages.myWallet),("My Favorite ",AppImages.myFavorite),("My Cart",AppImages.myCart),("My Order ",AppImages.myOrder),("Medicine Reminder ",AppImages.MmdicinemReminder),("Appointment History",AppImages.appointmentHistory),("Consultations Log",AppImages.consultationsLog),("Reports",AppImages.Reports),("Profile Permission",AppImages.ProfilePermission),("Emergency Number",AppImages.EmergencyNumber),("Change Password",AppImages.ChangePassword),("Help & Support",AppImages.HelpSupport),("Privacy Policy & Terms of use",AppImages.HelpSupport),("Contact Us",AppImages.HelpSupport),("FAQ",AppImages.HelpSupport),("Language",AppImages.Language),("Log Out",AppImages.LogOut)]
+//    let moreArr = [("My Profile".localized,AppImages.profile),("My Wallet",AppImages.myWallet),("My Favorite ",AppImages.myFavorite),("My Cart",AppImages.myCart),("My Order ",AppImages.myOrder),("Medicine Reminder ",AppImages.MmdicinemReminder),("Appointment History",AppImages.appointmentHistory),("Consultations Log",AppImages.consultationsLog),("Reports",AppImages.Reports),("Profile Permission",AppImages.ProfilePermission),("Emergency Number",AppImages.EmergencyNumber),("Change Password",AppImages.ChangePassword),("Help & Support",AppImages.HelpSupport),("Privacy Policy & Terms of use",AppImages.HelpSupport),("Contact Us",AppImages.HelpSupport),("FAQ",AppImages.HelpSupport),("Language",AppImages.Language),("Log Out",AppImages.LogOut)]
+    
+    let moreArr = [("My Profile".localized,AppImages.profile),("My Wallet",AppImages.myWallet),("My Favourite ",AppImages.myFavorite),("Medicine Reminder ",AppImages.MmdicinemReminder),("Blog",AppImages.myCart),("Appointment History",AppImages.appointmentHistory),("Consultations Log",AppImages.consultationsLog),("Reports",AppImages.Reports),("Orders ",AppImages.myOrder),("Profile Permission",AppImages.ProfilePermission),("Emergency Number",AppImages.EmergencyNumber),("Change Password",AppImages.ChangePassword),("Help & Support",AppImages.HelpSupport),("Language",AppImages.Language),("Log Out",AppImages.LogOut)]
+    
+    
     var userData: UserDataModel?
     var adressModel: GetFullCitiesModel?
     override func viewWillAppear(_ animated: Bool) {
@@ -26,6 +30,8 @@ class MoreVC: UIViewController {
     }
     func setupTableView(){
         moreTableView.register(MoreCell.nib, forCellReuseIdentifier: "moreCell")
+        moreTableView.register(HelpSupportCell.nib, forCellReuseIdentifier: "HelpSupportCell")
+
         moreTableView.delegate = self
         moreTableView.dataSource = self
     }

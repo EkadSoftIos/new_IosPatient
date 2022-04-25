@@ -53,7 +53,7 @@ struct ConsultationDetailsData : Codable {
     let blodGroupname_Localized : String?
     let serviceType : Int?
     let businessProviderBranchFk : Int?
-    let patientAddressFk : String?
+    let patientAddressFk : Int?
     let medicalServiceFk : String?
     let consultationServiceFk : Int?
     let bookingDate : String?
@@ -176,7 +176,7 @@ struct ConsultationDetailsData : Codable {
         blodGroupname_Localized = try values.decodeIfPresent(String.self, forKey: .blodGroupname_Localized)
         serviceType = try values.decodeIfPresent(Int.self, forKey: .serviceType)
         businessProviderBranchFk = try values.decodeIfPresent(Int.self, forKey: .businessProviderBranchFk)
-        patientAddressFk = try values.decodeIfPresent(String.self, forKey: .patientAddressFk)
+        patientAddressFk = try values.decodeIfPresent(Int.self, forKey: .patientAddressFk)
         medicalServiceFk = try values.decodeIfPresent(String.self, forKey: .medicalServiceFk)
         consultationServiceFk = try values.decodeIfPresent(Int.self, forKey: .consultationServiceFk)
         bookingDate = try values.decodeIfPresent(String.self, forKey: .bookingDate)

@@ -11,6 +11,7 @@ import Alamofire
 
 enum APIRouter : URLRequestConvertible{
     case login(params: [String: Any])
+    case logout(params: [String: Any])
     case profile
     case GetAdress
     case register(params: [String: Any])
@@ -20,6 +21,7 @@ enum APIRouter : URLRequestConvertible{
     case deleteDieses(Id: Int)
     case addDieseas(params: [String: Any])
     case codeVerfication(params: [String: Any])
+    case forgetPass(params: [String: Any])
     case resendCode(params: [String: Any])
     case getAllCountries
     case addNewAddress(params: [String: Any])
@@ -65,7 +67,6 @@ enum APIRouter : URLRequestConvertible{
     case addBooking(parameters: [String: Any])
     case consultationLog(parameters: [String: Any])
     case consultationDetails(id: Int)
-    
     case AppointmentHistory(params: [String: Any])
     case AppointmentReview(params: [String: Any])
     case GetFavouriteDoctor
@@ -98,15 +99,15 @@ enum APIRouter : URLRequestConvertible{
             return .post
         case .branchAvailableTime:
             return .post
-        case.walletBalance:
+        case .walletBalance:
             return .get
-        case.doctorreviews:
+        case .doctorreviews:
             return .get
-        case.addBooking:
+        case .addBooking:
             return .post
-        case.consultationLog:
+        case .consultationLog:
             return .post
-        case.consultationDetails:
+        case .consultationDetails:
             return .get
         case .AppointmentHistory(_):
             return .post
@@ -114,15 +115,17 @@ enum APIRouter : URLRequestConvertible{
             return .get
         case .AppointmentReview(_):
             return .post
-
         case .AddFavouriteDoctor(_):
             return .get
-            
         case .RemoveFavouriteDoctor(_):
             return .get
         case .AppointmentsDetailsCancel(_):
             return .get
         case.cancelAppointment:
+            return .post
+        case .logout(_):
+            return .post
+        case .forgetPass:
             return .post
         }
     }
@@ -228,15 +231,15 @@ enum APIRouter : URLRequestConvertible{
             return "\(Constants.baseURL)Patient/Get_Full_doctor_id?Id=\(id)"
         case .branchAvailableTime:
             return "\(Constants.baseURL)Patient/getBranchAvalibleTime"
-        case.walletBalance:
+        case .walletBalance:
             return "\(Constants.baseURL)Patient/getWaletBalance"
-        case.doctorreviews(id: let id):
+        case .doctorreviews(id: let id):
             return "\(Constants.baseURL)Patient/getDoctorReviews?Doctor_id=\(id)"
-        case.addBooking:
+        case .addBooking:
             return "\(Constants.baseURL)Patient/AddBooking"
-        case.consultationLog:
+        case .consultationLog:
             return "\(Constants.baseURL)Patient/BookingSearch"
-        case.consultationDetails(id: let id):
+        case .consultationDetails(id: let id):
             return "\(Constants.baseURL)Patient/BookingSummery?Booking_id=\(id)"
         case .AppointmentHistory(_):
             return "\(Constants.baseURL)Patient/BookingSearch"
@@ -252,9 +255,13 @@ enum APIRouter : URLRequestConvertible{
         case .AppointmentsDetailsCancel(let bookingid):
             let url = "\(Constants.baseURL)\("Patient/GetBookingOrPlanDetails?BookingID=")\(bookingid)\("&type=1")"
             return url
-        case.cancelAppointment:
+        case .cancelAppointment:
             return "\(Constants.baseURL)Patient/CancelBooking_by_patient"
 
+        case .logout(_):
+            return "\(Constants.baseURL)Common/Logout"
+        case .forgetPass:
+           return "\(Constants.baseURL)Common/ForgetPassword"
         }
     }
     var parameters : Parameters?{
@@ -315,15 +322,15 @@ enum APIRouter : URLRequestConvertible{
             return nil
         case .branchAvailableTime(parameters: let para):
             return para
-        case.walletBalance:
+        case .walletBalance:
             return nil
-        case.doctorreviews:
+        case .doctorreviews:
             return nil
-        case.addBooking(parameters: let para):
+        case .addBooking(parameters: let para):
             return para
-        case.consultationLog(parameters: let para):
+        case .consultationLog(parameters: let para):
             return para
-        case.consultationDetails:
+        case .consultationDetails:
             return nil
         case .AppointmentHistory(let params):
             return params
@@ -331,15 +338,18 @@ enum APIRouter : URLRequestConvertible{
             return nil
         case .AppointmentReview(let params):
             return params
-
         case .AddFavouriteDoctor(_):
             return nil
         case .RemoveFavouriteDoctor(_):
             return nil
         case .AppointmentsDetailsCancel(_):
             return nil
-        case.cancelAppointment(params: let para):
+        case .cancelAppointment(params: let para):
             return para
+        case .logout(let params):
+            return params
+        case .forgetPass(params: let params):
+            return params
         }
     }
     var apiToken : String {

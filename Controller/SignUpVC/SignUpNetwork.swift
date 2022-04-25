@@ -21,20 +21,25 @@ extension SignUpVC{
         self.pickerView.reloadAllComponents()
     }
     func validationinput(){
-        if phoneTxt.text!.isEmpty || lastNameTxt.text!.isEmpty || fNameTxt.text!.isEmpty || passwordTxt.text!.isEmpty || genderTxt.text!.isEmpty || dateTxt.text!.isEmpty  {
-            self.showMessage(title: "", sub: "all data are required".localized, type: .error, layout: .messageView)
-        }else if isEmailValid(emailTxt.text!) == false{
-
-        }else if passwordTxt.text!.count < 8{
-            self.showMessage(title: "", sub: "password must  be atleast 8 numbers".localized, type: .error, layout: .messageView)
-        }else if isPasswordValid(passwordTxt.text!) == false{
-            self.showMessage(title: "", sub: "Password must contain letters and numbers", type: .error, layout: .messageView)
-        }else if passwordTxt.text != confPasswordTxt.text{
-            self.showMessage(title: "", sub: "Password don't match", type: .error, layout: .messageView)
+        if agree == false {
+            self.showMessage(title: "", sub: "You should agree on terms and conditions.", type: .error, layout: .messageView)
         }else{
-            self.createAccountBtn.startAnimation()
-            callApi()
+            if phoneTxt.text!.isEmpty || lastNameTxt.text!.isEmpty || fNameTxt.text!.isEmpty || passwordTxt.text!.isEmpty || genderTxt.text!.isEmpty || dateTxt.text!.isEmpty  {
+                self.showMessage(title: "", sub: "all data are required".localized, type: .error, layout: .messageView)
+            }else if isEmailValid(emailTxt.text!) == false{
+
+            }else if passwordTxt.text!.count < 8{
+                self.showMessage(title: "", sub: "password must  be atleast 8 numbers".localized, type: .error, layout: .messageView)
+            }else if isPasswordValid(passwordTxt.text!) == false{
+                self.showMessage(title: "", sub: "Password must contain letters and numbers", type: .error, layout: .messageView)
+            }else if passwordTxt.text != confPasswordTxt.text{
+                self.showMessage(title: "", sub: "Password don't match", type: .error, layout: .messageView)
+            }else{
+                self.createAccountBtn.startAnimation()
+                callApi()
+            }
         }
+        
     }
     func isPasswordValid(_ password : String) -> Bool{
         let passwordTest = NSPredicate(format: "SELF MATCHES %@", "^(?=.*[a-z])[A-Za-z\\d$@$#!%*?&]{8,}")
