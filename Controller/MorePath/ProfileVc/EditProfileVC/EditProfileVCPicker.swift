@@ -118,7 +118,11 @@ extension EditProfileVC: UIImagePickerControllerDelegate, UINavigationController
     //MARK:- imagePickerController
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let images = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
-            self.profileImage.image = images
+            if UserDefaults.standard.bool(forKey: "isProfileImage") {
+               self.profileImage.image = images
+            }else{
+                self.attachImage.image = images
+            }
             guard let file = images.jpegData(compressionQuality: 0.2) else { return  }
             
             uploadImage(file: file)
@@ -128,25 +132,47 @@ extension EditProfileVC: UIImagePickerControllerDelegate, UINavigationController
         picker.dismiss(animated: true, completion: nil)
     }
     func uploadImage(file: Data){
-        isProfileImage = true
-        imageInstance.presentImagePicker()
-//        imageInstance.imageSelected = {[weak self] selectedImage in
-//            guard let self = self else {return}
-            
-        self.userImage.append(UploadDataa(data: (self.profileImage.image?.jpegData(compressionQuality: 0.1)!)!, Key: "PatientProfileImage"))
-//            self.profileImage.image = selectedImage
+        if UserDefaults.standard.bool(forKey: "isProfileImage") {
+            isProfileImage = true
+            imageInstance.presentImagePicker()
+    //        imageInstance.imageSelected = {[weak self] selectedImage in
+    //            guard let self = self else {return}
+                
+            self.userImage.append(UploadDataa(data: (self.profileImage.image?.jpegData(compressionQuality: 0.1)!)!, Key: "PatientProfileImage"))
+    //            self.profileImage.image = selectedImage
 
-            if let token = self.token as? String {
+                if let token = self.token as? String {
+                    self.headers["Authorization"] = "Bearer \(token)"
+                }
+                showUniversalLoadingView(true)
+                AlamofireMultiPart.PostMultiWithModel(model: SuccessModelImage.self,
+                                                      url: "\(Constants.baseURL)Common/FormDataUpload",
+                                                      Images: self.userImage ,
+                                                      header: self.headers,
+                                                      parameters: nil,
+                                                      completion: self.ProfileImageNetwork)
+
+        } else {
+            isProfileImage = false
+            imageInstance.presentImagePicker()
+//            attachimageInstance.imageSelected = {[weak self] selectedImage in
+//                guard let self = self else {return}
+//                self.attachImage.image = selectedImage
+            self.attachImagePath.append(UploadDataa(data: (self.attachImage.image?.jpegData(compressionQuality: 0.1)!)!, Key: "attachedIdPath"))
+                if let token = self.token as? String {
                 self.headers["Authorization"] = "Bearer \(token)"
+
+                }
+                AlamofireMultiPart.PostMultiWithModel(model: SuccessModelImage.self,
+                                                      url: "\(Constants.baseURL)Common/FormDataUpload",
+                                                      Images: self.attachImagePath ,
+                                                      header: self.headers,
+                                                      parameters: nil,
+                                                      completion: self.ProfileImageNetwork)
             }
-            showUniversalLoadingView(true)
-            AlamofireMultiPart.PostMultiWithModel(model: SuccessModelImage.self,
-                                                  url: "\(Constants.baseURL)Common/FormDataUpload",
-                                                  Images: self.userImage ,
-                                                  header: self.headers,
-                                                  parameters: nil,
-                                                  completion: self.ProfileImageNetwork)
         }
+        
+        
     
     //MARK: Choose Photo Actions
     

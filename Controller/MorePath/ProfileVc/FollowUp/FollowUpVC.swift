@@ -75,9 +75,10 @@ extension FollowUpVC: UITableViewDelegate, UITableViewDataSource {
     func convertDateFormat(inputDate: String) -> String {
          let olDateFormatter = DateFormatter()
          olDateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
-        let oldDate = olDateFormatter.date(from: inputDate) ?? Date()
+         let oldDate = olDateFormatter.date(from: inputDate) ?? Date()
          let convertDateFormatter = DateFormatter()
-         convertDateFormatter.dateFormat = "MMM dd , yyyy"
+         convertDateFormatter.dateFormat = "MMM dd yyyy"
+        convertDateFormatter.locale = Locale(identifier: "en_US_POSIX")
          return convertDateFormatter.string(from: oldDate)
     }
 }

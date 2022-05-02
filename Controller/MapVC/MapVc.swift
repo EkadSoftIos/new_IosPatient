@@ -33,6 +33,7 @@ class MapVc: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate,UIText
         getCurrentLocation()
     }
     override func viewWillAppear(_ animated: Bool) {
+        self.searchTxt.becomeFirstResponder()
     }
     func getCurrentLocation(){
         locationHelper.requestLocationAuthorization()
@@ -47,7 +48,7 @@ class MapVc: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate,UIText
     func centerMapOnLocation(_ location: CLLocation, mapView: MKMapView) {
         let regionRadius: CLLocationDistance = 1000
         let coordinateRegion = MKCoordinateRegion(center: location.coordinate,
-                                                  latitudinalMeters: regionRadius * 2.0, longitudinalMeters: regionRadius * 2.0)
+                                                  latitudinalMeters: regionRadius * 0.01, longitudinalMeters: regionRadius * 0.01)
         mapView.setRegion(coordinateRegion, animated: true)
     }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -81,8 +82,8 @@ class MapVc: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate,UIText
     func setRegionToMap(lat : Double , long : Double){
         let coordinate = CLLocationCoordinate2D(latitude: lat, longitude: long)
         let region = MKCoordinateRegion(center: coordinate,
-                                        span: MKCoordinateSpan(latitudeDelta: 0.2,
-                                                               longitudeDelta: 0.2))
+                                        span: MKCoordinateSpan(latitudeDelta: 0.01,
+                                                               longitudeDelta: 0.01))
         self.deliveryLocation = coordinate
         getAddressFromLatLon(pdblLatitude: self.deliveryLocation!.latitude, withLongitude: self.deliveryLocation!.longitude)
         self.mapview.setRegion(region, animated: true)
@@ -157,6 +158,7 @@ class MapVc: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate,UIText
                                                 }
                                                 
                                                 print(addressString)
+                                                self.searchTxt.text = addressString
                                                 self.nameLocation = addressString
                                             }else{
                                             }

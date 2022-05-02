@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -89,16 +90,16 @@
                                             </userDefinedRuntimeAttributes>
                                         </imageView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="pqc-xD-JeM">
-                                            <rect key="frame" x="92" y="31" width="262" height="46"/>
+                                            <rect key="frame" x="92" y="29.5" width="262" height="49"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1JW-J0-9Cn">
-                                                    <rect key="frame" x="0.0" y="0.0" width="262" height="20"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="262" height="23"/>
                                                     <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="17"/>
                                                     <color key="textColor" name="Blue"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Consultant in Pediatric Dentistry" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2cn-C0-HKh">
-                                                    <rect key="frame" x="0.0" y="29" width="262" height="17"/>
+                                                    <rect key="frame" x="0.0" y="32" width="262" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" name="Gray"/>
                                                     <nil key="highlightedColor"/>
@@ -106,32 +107,32 @@
                                             </subviews>
                                         </stackView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="See all Reviews " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cc9-XJ-mA1">
-                                            <rect key="frame" x="50" y="99" width="124" height="20"/>
+                                            <rect key="frame" x="50" y="99" width="121" height="23"/>
                                             <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="17"/>
                                             <color key="textColor" name="Blue"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Doctor Can Do" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="03T-I4-KJk">
-                                            <rect key="frame" x="210" y="99" width="114" height="20"/>
+                                            <rect key="frame" x="210" y="99" width="114" height="23"/>
                                             <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="17"/>
                                             <color key="textColor" name="Blue"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4.9" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xAe-Bg-1dI">
-                                            <rect key="frame" x="70" y="135" width="24" height="20"/>
+                                            <rect key="frame" x="70" y="136.5" width="22.5" height="23"/>
                                             <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="17"/>
                                             <color key="textColor" name="Blue"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Star" translatesAutoresizingMaskIntoConstraints="NO" id="8Jm-Y3-0ZZ">
-                                            <rect key="frame" x="102" y="135" width="20" height="20"/>
+                                            <rect key="frame" x="100.5" y="138" width="20" height="20"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="20" id="IzQ-fy-iNa"/>
                                                 <constraint firstAttribute="height" constant="20" id="fpH-T0-Cfb"/>
                                             </constraints>
                                         </imageView>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="FO7-pO-mU9">
-                                            <rect key="frame" x="215" y="135" width="104" height="20"/>
+                                            <rect key="frame" x="215" y="138" width="104" height="20"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_clinic_visit" translatesAutoresizingMaskIntoConstraints="NO" id="IUz-Vz-dNl">
                                                     <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
@@ -164,7 +165,7 @@
                                             </subviews>
                                         </stackView>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="2lM-Uv-btg">
-                                            <rect key="frame" x="40" y="179" width="81" height="14"/>
+                                            <rect key="frame" x="40" y="182" width="81" height="14"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="500K" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vcj-xS-Bel">
                                                     <rect key="frame" x="0.0" y="0.0" width="40" height="14"/>
@@ -190,7 +191,7 @@
                                             </constraints>
                                         </stackView>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="V2l-Y3-UkN">
-                                            <rect key="frame" x="146.5" y="179" width="81" height="14"/>
+                                            <rect key="frame" x="146.5" y="182" width="81" height="14"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="532K" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N8f-OY-Ch5">
                                                     <rect key="frame" x="0.0" y="0.0" width="40" height="14"/>
@@ -213,7 +214,7 @@
                                             </constraints>
                                         </stackView>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="oOD-Xl-qHY">
-                                            <rect key="frame" x="253" y="179" width="81" height="14"/>
+                                            <rect key="frame" x="253" y="182" width="81" height="14"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="200K" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jwf-RT-QDM">
                                                     <rect key="frame" x="0.0" y="0.0" width="40" height="14"/>
@@ -249,19 +250,19 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Immediate Video Call" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FZS-2B-mVI">
-                                                    <rect key="frame" x="44" y="7.5" width="132" height="15.5"/>
+                                                    <rect key="frame" x="44" y="6.5" width="132" height="17.5"/>
                                                     <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="13"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QwQ-kK-NsK">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QwQ-kK-NsK">
                                                     <rect key="frame" x="0.0" y="0.0" width="180" height="30"/>
                                                     <connections>
                                                         <action selector="vedio_Click:" destination="-1" eventType="touchUpInside" id="bGb-HN-tsl"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
-                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="FZS-2B-mVI" secondAttribute="trailing" constant="4" id="37B-mN-Dyd"/>
                                                 <constraint firstAttribute="trailing" secondItem="QwQ-kK-NsK" secondAttribute="trailing" id="3OR-tk-d99"/>
@@ -298,7 +299,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ask Doctor" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OCY-yI-sDk">
-                                                    <rect key="frame" x="32" y="6.5" width="75" height="17.5"/>
+                                                    <rect key="frame" x="32" y="5" width="73" height="20"/>
                                                     <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="15"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -319,8 +320,8 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </view>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qkk-ES-3yB">
-                                            <rect key="frame" x="62" y="99" width="100" height="50"/>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qkk-ES-3yB">
+                                            <rect key="frame" x="60.5" y="99" width="100" height="50"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="50" id="MxA-r2-TXW"/>
                                                 <constraint firstAttribute="width" constant="100" id="lqc-9p-snZ"/>
@@ -341,7 +342,7 @@
                                             </connections>
                                         </button>
                                     </subviews>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
                                         <constraint firstItem="Qkk-ES-3yB" firstAttribute="top" secondItem="612-5Z-tiI" secondAttribute="bottom" constant="15" id="1G1-jx-Djl"/>
                                         <constraint firstItem="cc9-XJ-mA1" firstAttribute="top" secondItem="612-5Z-tiI" secondAttribute="bottom" constant="15" id="41n-C6-vWw"/>
@@ -404,7 +405,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TaC-vp-i3n">
-                                            <rect key="frame" x="94" y="44" width="264" height="16.5"/>
+                                            <rect key="frame" x="94" y="44" width="264" height="19"/>
                                             <string key="text">Fellowship in Advanced Aesthetics and Restorative
 Dentistry, Department of Surgical and Diagnostic 
 Sciences, University - 2019</string>
@@ -412,7 +413,7 @@ Sciences, University - 2019</string>
                                             <color key="textColor" name="Gray"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TUU-ni-4r5">
+                                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TUU-ni-4r5">
                                             <rect key="frame" x="326" y="60" width="48" height="30"/>
                                             <state key="normal" title="more...">
                                                 <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -422,7 +423,7 @@ Sciences, University - 2019</string>
                                             </connections>
                                         </button>
                                     </subviews>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
                                         <constraint firstAttribute="bottom" secondItem="TUU-ni-4r5" secondAttribute="bottom" id="48H-8S-cxh"/>
                                         <constraint firstItem="j9n-d7-mtx" firstAttribute="top" secondItem="uTy-1O-UAl" secondAttribute="top" constant="12" id="4eZ-8z-Gp7"/>
@@ -468,7 +469,7 @@ Sciences, University - 2019</string>
                                             <color key="textColor" name="Blue"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5bF-NF-BSp">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5bF-NF-BSp">
                                             <rect key="frame" x="298" y="75" width="60" height="25"/>
                                             <color key="backgroundColor" name="Blue"/>
                                             <constraints>
@@ -507,7 +508,7 @@ Sciences, University - 2019</string>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
                                         <constraint firstItem="5PE-K0-Pc4" firstAttribute="leading" secondItem="Oqq-Tl-xu5" secondAttribute="trailing" constant="16" id="1sr-SZ-d57"/>
                                         <constraint firstItem="cuP-CR-5xo" firstAttribute="top" secondItem="xBM-a5-w3s" secondAttribute="bottom" id="5nM-G1-VcD"/>
@@ -551,7 +552,7 @@ Sciences, University - 2019</string>
                                             </userDefinedRuntimeAttributes>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="El-Shouroq (New Cairo)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EGK-5b-YY1">
-                                            <rect key="frame" x="94" y="12" width="210" height="24"/>
+                                            <rect key="frame" x="94" y="12" width="214" height="24"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="24" id="cS3-sE-uJi"/>
                                             </constraints>
@@ -559,7 +560,7 @@ Sciences, University - 2019</string>
                                             <color key="textColor" name="Blue"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kQF-db-0aT">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kQF-db-0aT">
                                             <rect key="frame" x="298" y="75" width="60" height="25"/>
                                             <color key="backgroundColor" name="Blue"/>
                                             <constraints>
@@ -586,31 +587,31 @@ Sciences, University - 2019</string>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fees 200 EGP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xsg-CK-VpR">
-                                            <rect key="frame" x="122" y="52" width="109" height="20"/>
+                                            <rect key="frame" x="122" y="52" width="100" height="23"/>
                                             <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="17"/>
                                             <color key="textColor" name="Blue"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Available Tomorrow From 05:00PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aVM-78-CEx">
-                                            <rect key="frame" x="30" y="81" width="260" height="19"/>
+                                            <rect key="frame" x="30" y="78.5" width="260" height="21.5"/>
                                             <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="16"/>
                                             <color key="textColor" red="0.84700000289999999" green="0.082000002259999996" blue="0.17299999299999999" alpha="0.92177127709999995" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nk6-Fj-dHY">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nk6-Fj-dHY">
                                             <rect key="frame" x="338" y="20" width="20" height="20"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="20" id="9GL-a5-0NC"/>
                                                 <constraint firstAttribute="width" constant="20" id="LKU-NJ-JLW"/>
                                             </constraints>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DWA-3q-Fqg">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DWA-3q-Fqg">
                                             <rect key="frame" x="8" y="0.0" width="282" height="108"/>
                                             <connections>
                                                 <action selector="branchInfo_Click:" destination="-1" eventType="touchUpInside" id="yRI-tI-VpT"/>
                                             </connections>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aVb-bO-TVT">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aVb-bO-TVT">
                                             <rect key="frame" x="298" y="44" width="60" height="25"/>
                                             <color key="backgroundColor" name="Blue"/>
                                             <constraints>
@@ -631,7 +632,7 @@ Sciences, University - 2019</string>
                                             </connections>
                                         </button>
                                     </subviews>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
                                         <constraint firstAttribute="bottom" secondItem="aVM-78-CEx" secondAttribute="bottom" constant="8" id="00z-hF-of3"/>
                                         <constraint firstItem="EGK-5b-YY1" firstAttribute="top" secondItem="5tT-fr-zKv" secondAttribute="top" constant="12" id="47H-yT-96O"/>
@@ -680,7 +681,7 @@ Sciences, University - 2019</string>
                                             </userDefinedRuntimeAttributes>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home Visit " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zxs-nA-8Uo">
-                                            <rect key="frame" x="94" y="12" width="102" height="24"/>
+                                            <rect key="frame" x="94" y="12" width="105.5" height="24"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="24" id="gzV-fz-PRi"/>
                                             </constraints>
@@ -688,7 +689,7 @@ Sciences, University - 2019</string>
                                             <color key="textColor" name="Blue"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yRi-Rg-PIk">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yRi-Rg-PIk">
                                             <rect key="frame" x="288" y="75" width="70" height="25"/>
                                             <color key="backgroundColor" name="Blue"/>
                                             <constraints>
@@ -716,31 +717,31 @@ Sciences, University - 2019</string>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fees 150 EGP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lUR-wN-0IK">
-                                            <rect key="frame" x="122" y="52" width="109" height="20"/>
+                                            <rect key="frame" x="122" y="52" width="100" height="23"/>
                                             <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="17"/>
                                             <color key="textColor" name="Blue"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Available Appointments" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rfr-27-ShM">
-                                            <rect key="frame" x="30" y="80" width="250" height="20"/>
+                                            <rect key="frame" x="30" y="77" width="250" height="23"/>
                                             <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="17"/>
                                             <color key="textColor" red="0.84700000289999999" green="0.082000002259999996" blue="0.17299999299999999" alpha="0.92177127709999995" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oms-Bx-iym">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oms-Bx-iym">
                                             <rect key="frame" x="338" y="20" width="20" height="20"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="20" id="Kix-2f-v4Q"/>
                                                 <constraint firstAttribute="width" constant="20" id="TD0-jm-kwX"/>
                                             </constraints>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zuT-nT-a6C">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zuT-nT-a6C">
                                             <rect key="frame" x="8" y="0.0" width="272" height="108"/>
                                             <connections>
                                                 <action selector="showHomeVisit_click:" destination="-1" eventType="touchUpInside" id="1u9-wB-vlH"/>
                                             </connections>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HCZ-BH-9sn">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HCZ-BH-9sn">
                                             <rect key="frame" x="293" y="44" width="60" height="25"/>
                                             <color key="backgroundColor" name="Blue"/>
                                             <constraints>
@@ -758,7 +759,7 @@ Sciences, University - 2019</string>
                                             </userDefinedRuntimeAttributes>
                                         </button>
                                     </subviews>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
                                         <constraint firstItem="zuT-nT-a6C" firstAttribute="leading" secondItem="LSu-zc-0hM" secondAttribute="leading" constant="8" id="1A5-Hd-U2S"/>
                                         <constraint firstItem="zuT-nT-a6C" firstAttribute="top" secondItem="LSu-zc-0hM" secondAttribute="top" id="3GO-n2-2kh"/>
@@ -807,7 +808,7 @@ Sciences, University - 2019</string>
                                             </userDefinedRuntimeAttributes>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Video Call Consultations" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0By-5F-NC9">
-                                            <rect key="frame" x="94" y="12" width="224.5" height="24"/>
+                                            <rect key="frame" x="94" y="12" width="224" height="24"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="24" id="7qh-RV-fKT"/>
                                             </constraints>
@@ -815,7 +816,7 @@ Sciences, University - 2019</string>
                                             <color key="textColor" name="Blue"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N61-rI-Yop">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N61-rI-Yop">
                                             <rect key="frame" x="298" y="75" width="60" height="25"/>
                                             <color key="backgroundColor" name="Blue"/>
                                             <constraints>
@@ -842,25 +843,25 @@ Sciences, University - 2019</string>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fees 150 EGP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bGE-qB-vIV">
-                                            <rect key="frame" x="122" y="52" width="109" height="20"/>
+                                            <rect key="frame" x="122" y="52" width="100" height="23"/>
                                             <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="17"/>
                                             <color key="textColor" name="Blue"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Frist Available on Sunday 20 Oct" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Me-We-7G0">
-                                            <rect key="frame" x="16" y="80" width="274" height="20"/>
+                                            <rect key="frame" x="16" y="77" width="274" height="23"/>
                                             <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="17"/>
                                             <color key="textColor" red="0.84700000289999999" green="0.082000002259999996" blue="0.17299999299999999" alpha="0.92177127709999995" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dph-z3-yAK">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dph-z3-yAK">
                                             <rect key="frame" x="338" y="20" width="20" height="20"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="20" id="dXj-u6-amE"/>
                                                 <constraint firstAttribute="width" constant="20" id="x0B-91-NIP"/>
                                             </constraints>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8So-kS-Hfg">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8So-kS-Hfg">
                                             <rect key="frame" x="298" y="44" width="60" height="25"/>
                                             <color key="backgroundColor" name="Blue"/>
                                             <constraints>
@@ -878,7 +879,7 @@ Sciences, University - 2019</string>
                                             </userDefinedRuntimeAttributes>
                                         </button>
                                     </subviews>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
                                         <constraint firstItem="N61-rI-Yop" firstAttribute="top" secondItem="8So-kS-Hfg" secondAttribute="bottom" constant="6" id="28V-zI-xz7"/>
                                         <constraint firstItem="0By-5F-NC9" firstAttribute="leading" secondItem="9hi-0D-GhM" secondAttribute="trailing" constant="16" id="7Br-cv-RkT"/>
@@ -901,7 +902,7 @@ Sciences, University - 2019</string>
                                     </constraints>
                                 </view>
                             </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="1000" id="2cj-Dz-xke"/>
                                 <constraint firstItem="uTy-1O-UAl" firstAttribute="leading" secondItem="1Ua-2P-Igf" secondAttribute="leading" constant="20" id="HlT-4K-nKN"/>
@@ -934,14 +935,14 @@ Sciences, University - 2019</string>
                     </constraints>
                 </scrollView>
             </subviews>
-            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="Lii-Fp-uGw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="I8E-AS-gmY"/>
                 <constraint firstAttribute="bottom" secondItem="Lii-Fp-uGw" secondAttribute="bottom" id="P4o-Du-jtb"/>
                 <constraint firstItem="Lii-Fp-uGw" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="WoQ-Jf-YlJ"/>
                 <constraint firstItem="Lii-Fp-uGw" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="jIt-VD-wTz"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="-30.434782608695656" y="91.741071428571431"/>
         </view>
     </objects>
@@ -972,5 +973,8 @@ Sciences, University - 2019</string>
         <namedColor name="textView">
             <color red="0.77300000190734863" green="0.76899999380111694" blue="0.76899999380111694" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

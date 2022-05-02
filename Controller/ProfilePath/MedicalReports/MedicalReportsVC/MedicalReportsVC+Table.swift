@@ -23,6 +23,7 @@ extension MedicalReportsVC: UITableViewDelegate, UITableViewDataSource {
         cell.detailsTwoLbl.text = "- By  \(data?.doctorName ?? "")"
         cell.deleteHandelr = {
             self.callApiDelete(Id: data?.patientMedicalReportID ?? 0)
+//            self.model?.message?.tblPatientMedicalReport?.remove(at: indexPath.row)
             self.model?.message?.tblPatientMedicalReport?.remove(at: indexPath.row)
             self.medicalTable.deleteRows(at: [indexPath], with: .automatic)
         }

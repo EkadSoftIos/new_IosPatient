@@ -21,7 +21,9 @@ class MapVcc: UIViewController ,MKMapViewDelegate,CLLocationManagerDelegate,UITe
         super.viewDidLoad()
         self.navigationItem.title = "Add Address".localized
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        self.view.endEditing(true)
+    }
     func getCurrentLocation(){
         
         locationHelper.requestLocationAuthorization()
@@ -36,7 +38,7 @@ class MapVcc: UIViewController ,MKMapViewDelegate,CLLocationManagerDelegate,UITe
     func centerMapOnLocation(_ location: CLLocation, mapView: MKMapView) {
         let regionRadius: CLLocationDistance = 1000
         let coordinateRegion = MKCoordinateRegion(center: location.coordinate,
-                                                  latitudinalMeters: regionRadius * 2.0, longitudinalMeters: regionRadius * 2.0)
+                                                  latitudinalMeters: regionRadius * 0.5, longitudinalMeters: regionRadius * 0.5)
         mapView.setRegion(coordinateRegion, animated: true)
     }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -206,7 +208,7 @@ class MapVcc: UIViewController ,MKMapViewDelegate,CLLocationManagerDelegate,UITe
                     }
 
                     print(addressString)
-                    
+                    self.searchTxt.text = addressString
                     self.locationName = addressString
                 }else{
                     self.locationName = ""

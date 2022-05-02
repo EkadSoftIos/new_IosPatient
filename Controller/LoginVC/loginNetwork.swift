@@ -9,10 +9,10 @@ import Foundation
 import UIKit
 extension LoginVC{
     func validationinput(){
-        if agree == false {
-            self.showMessage(title: "", sub: "You should agree on terms and conditions.", type: .error, layout: .messageView)
-            return
-        }
+//        if agree == false {
+//            self.showMessage(title: "", sub: "You should agree on terms and conditions.", type: .error, layout: .messageView)
+//            return
+//        }
         if phoneTxt.text!.isEmpty || passwordTxt.text!.isEmpty {
             self.showMessage(title: "", sub: "phone and passworrd are required".localized, type: .error, layout: .messageView)
         }else{

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -236,17 +236,17 @@ Login with</string>
                                     </variation>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="mPC-4S-uq2">
-                                    <rect key="frame" x="52" y="602" width="248" height="31"/>
+                                    <rect key="frame" x="72" y="602" width="208.5" height="29"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ti9-cZ-viM">
-                                            <rect key="frame" x="0.0" y="0.0" width="186" height="31"/>
-                                            <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="17"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="153.5" height="29"/>
+                                            <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="14"/>
                                             <color key="textColor" name="Gray"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xQP-hi-n1K">
-                                            <rect key="frame" x="190" y="0.0" width="58" height="31"/>
-                                            <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="16"/>
+                                            <rect key="frame" x="157.5" y="0.0" width="51" height="29"/>
+                                            <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="14"/>
                                             <state key="normal" title="Sign Up"/>
                                             <connections>
                                                 <action selector="register_Click:" destination="-1" eventType="touchUpInside" id="SG7-l7-Q4j"/>
@@ -255,13 +255,13 @@ Login with</string>
                                     </subviews>
                                 </stackView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Agree on terms and conditions." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eym-4a-vIy">
-                                    <rect key="frame" x="68" y="639" width="196.5" height="16.5"/>
+                                    <rect key="frame" x="69" y="644.5" width="199.5" height="19"/>
                                     <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="14"/>
                                     <color key="textColor" red="0.070588235289999995" green="0.46666666670000001" blue="0.81960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TsG-ig-w0n">
-                                    <rect key="frame" x="52" y="641" width="12" height="12"/>
+                                    <rect key="frame" x="53" y="648" width="12" height="12"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="12" id="MZV-iC-lD3"/>
@@ -310,6 +310,12 @@ Login with</string>
                                 <constraint firstItem="4b8-WF-q5Z" firstAttribute="top" secondItem="3pK-Nn-EUk" secondAttribute="top" constant="110" id="x3q-JZ-lo8"/>
                                 <constraint firstItem="HvM-ga-OEu" firstAttribute="top" secondItem="zpn-jv-XK0" secondAttribute="bottom" constant="27" id="xkA-o7-Vd7"/>
                             </constraints>
+                            <variation key="default">
+                                <mask key="subviews">
+                                    <exclude reference="Eym-4a-vIy"/>
+                                    <exclude reference="TsG-ig-w0n"/>
+                                </mask>
+                            </variation>
                         </view>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

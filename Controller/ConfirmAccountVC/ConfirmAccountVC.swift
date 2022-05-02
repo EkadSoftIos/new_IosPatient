@@ -14,8 +14,8 @@ class ConfirmAccountVC: UIViewController {
     @IBOutlet var code2Txt: UITextField!
     @IBOutlet var code3Txt: UITextField!
     @IBOutlet var code4Txt: UITextField!
-    @IBOutlet var code5Txt: UITextField!
-    @IBOutlet var code6Txt: UITextField!
+//    @IBOutlet var code5Txt: UITextField!
+//    @IBOutlet var code6Txt: UITextField!
     @IBOutlet weak var confirmAccountButton: TransitionButton!
     @IBOutlet weak var resendButton: UIButton!
     @IBOutlet var confirmAccountLbl: UILabel!
@@ -26,22 +26,23 @@ class ConfirmAccountVC: UIViewController {
         super.viewDidLoad()
         mainView.ShadowView(view: mainView, radius: 20, opacity: 0.4, shadowRadius: 4, color: UIColor.black.cgColor)
         setUpText()
-        confirmAccountLbl.text = "We've sent you a 6 digit confirm code to your Mobile \(phone ?? "") Please enter it below"
+        confirmAccountLbl.text = "We've sent you a 4 digits confirm code to your Email \(email ?? "") Please enter it below"
     }
     func setUpText(){
         code1Txt.delegate = self
         code2Txt.delegate = self
         code3Txt.delegate = self
         code4Txt.delegate = self
-        code5Txt.delegate = self
-        code6Txt.delegate = self
+//        code5Txt.delegate = self
+//        code6Txt.delegate = self
     }
     @IBAction func goHome_CLick(_ sender: Any) {
         validateCode()
         
     }
     func validateCode (){
-        if code1Txt.text!.isEmpty || code2Txt.text!.isEmpty || code3Txt.text!.isEmpty || code4Txt.text!.isEmpty || code5Txt.text!.isEmpty || code6Txt.text!.isEmpty {
+//        if code1Txt.text!.isEmpty || code2Txt.text!.isEmpty || code3Txt.text!.isEmpty || code4Txt.text!.isEmpty || code5Txt.text!.isEmpty || code6Txt.text!.isEmpty {
+            if code1Txt.text!.isEmpty || code2Txt.text!.isEmpty || code3Txt.text!.isEmpty || code4Txt.text!.isEmpty {
             self.showMessage(title: "", sub: "enter valid code".localized, type: .error, layout: .messageView)
         }else{
             self.confirmAccountButton.startAnimation()
@@ -49,12 +50,12 @@ class ConfirmAccountVC: UIViewController {
         }
     }
     func callAPI(){
-        if codeMessage == "\(code1Txt.text!)\(code2Txt.text!)\(code3Txt.text!)\(code4Txt.text!)\(code5Txt.text!)\(code6Txt.text!)" {
-            
+//        if codeMessage == "\(code1Txt.text!)\(code2Txt.text!)\(code3Txt.text!)\(code4Txt.text!)\(code5Txt.text!)\(code6Txt.text!)" {
+        if codeMessage == "\(code1Txt.text!)\(code2Txt.text!)\(code3Txt.text!)\(code4Txt.text!)" {
             let parameters: [String: Any] = [
                 
                 "email": email ?? "",
-                "code":"\(code1Txt.text!)\(code2Txt.text!)\(code3Txt.text!)\(code4Txt.text!)\(code5Txt.text!)\(code6Txt.text!)"
+                "code":"\(code1Txt.text!)\(code2Txt.text!)\(code3Txt.text!)\(code4Txt.text!)"
             ]
             NetworkClient.performRequest(_type: SuccessModel.self, router: .codeVerfication(params: parameters)) {[weak self] (result) in
                 guard let self = self else {return}

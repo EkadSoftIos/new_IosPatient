@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -19,7 +20,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MedicationCell" rowHeight="144" id="KGk-i7-Jjw" customClass="MedicationCell" customModule="E4_Patient" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MedicationCell" rowHeight="144" id="KGk-i7-Jjw" customClass="MedicationCell" customModule="E4clinic" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="341" height="144"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
@@ -37,34 +38,34 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vitamin C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ndF-9J-Mml">
-                                <rect key="frame" x="17" y="64" width="52" height="14"/>
+                                <rect key="frame" x="17" y="64" width="53" height="16"/>
                                 <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="12"/>
                                 <color key="textColor" name="Blue"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap - 250mg" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wTW-1h-IaJ">
-                                <rect key="frame" x="17" y="80" width="56.5" height="12"/>
+                                <rect key="frame" x="17" y="82" width="55.5" height="13.5"/>
                                 <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="10"/>
                                 <color key="textColor" name="darkGray"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="7PL-IK-Gfu">
-                                <rect key="frame" x="77" y="12" width="154.5" height="44"/>
+                                <rect key="frame" x="77" y="12" width="147" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 times daily, Before Meals" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rvu-1e-96h">
-                                        <rect key="frame" x="0.0" y="0.0" width="154.5" height="14"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="147" height="16"/>
                                         <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="12"/>
                                         <color key="textColor" name="darkGray"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Every 2 days" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LlI-XE-4gV">
-                                        <rect key="frame" x="0.0" y="15" width="154.5" height="14"/>
+                                        <rect key="frame" x="0.0" y="17" width="147" height="16"/>
                                         <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="11"/>
                                         <color key="textColor" name="darkGray"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sep 11, 2020 - Sep 20, 2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GyH-d7-hze">
-                                        <rect key="frame" x="0.0" y="30" width="154.5" height="14"/>
+                                        <rect key="frame" x="0.0" y="34" width="147" height="16"/>
                                         <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="12"/>
                                         <color key="textColor" name="darkGray"/>
                                         <nil key="highlightedColor"/>
@@ -74,7 +75,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="0ZM-aU-fvn">
                                 <rect key="frame" x="205" y="80" width="84" height="30"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1BS-cU-kX3">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1BS-cU-kX3">
                                         <rect key="frame" x="0.0" y="0.0" width="84" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="84" id="482-3l-ZPz"/>
@@ -118,24 +119,18 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="aOs-Xq-Pj7">
-                                <rect key="frame" x="275" y="12" width="20" height="20"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="aOs-Xq-Pj7">
+                                <rect key="frame" x="242" y="12" width="53" height="20"/>
                                 <subviews>
-                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kpd-5I-1z8">
-                                        <rect key="frame" x="-20" y="0.0" width="20" height="20"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="20" id="muE-p8-M2L"/>
-                                        </constraints>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kpd-5I-1z8">
+                                        <rect key="frame" x="0.0" y="0.0" width="22.5" height="20"/>
                                         <state key="normal" image="ic_edit"/>
                                         <connections>
                                             <action selector="edit_Click:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="CTv-M2-UcB"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bd6-ld-r7k" customClass="TransitionButton" customModule="TransitionButton">
-                                        <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="20" id="i91-s6-CN2"/>
-                                        </constraints>
+                                        <rect key="frame" x="30.5" y="0.0" width="22.5" height="20"/>
                                         <state key="normal" image="ic_delet"/>
                                         <connections>
                                             <action selector="delete_CLick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="9pn-83-6aE"/>
@@ -147,7 +142,7 @@
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="aOs-Xq-Pj7" firstAttribute="top" secondItem="Bt5-bZ-ECM" secondAttribute="top" constant="12" id="Ex0-eP-B1C"/>
                             <constraint firstAttribute="bottom" secondItem="0ZM-aU-fvn" secondAttribute="bottom" constant="10" id="FJH-hW-5WV"/>
@@ -186,6 +181,11 @@
             <point key="canvasLocation" x="73.188405797101453" y="102.45535714285714"/>
         </tableViewCell>
     </objects>
+    <designables>
+        <designable name="Bd6-ld-r7k">
+            <size key="intrinsicContentSize" width="22.5" height="22.5"/>
+        </designable>
+    </designables>
     <resources>
         <image name="Medication" width="90" height="142"/>
         <image name="ic_cart_white" width="9" height="9"/>
@@ -197,5 +197,8 @@
         <namedColor name="darkGray">
             <color red="0.41999998688697815" green="0.41999998688697815" blue="0.41999998688697815" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

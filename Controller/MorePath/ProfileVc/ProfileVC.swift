@@ -53,8 +53,8 @@ class ProfileVC: UIViewController {
         let oldDate = olDateFormatter.date(from: inputDate) ?? Date()
 
          let convertDateFormatter = DateFormatter()
-         convertDateFormatter.dateFormat = "MMM dd , yyyy"
-
+         convertDateFormatter.dateFormat = "MMMM dd yyyy"
+        convertDateFormatter.locale = Locale(identifier: "en_US_POSIX")
          return convertDateFormatter.string(from: oldDate)
     }
     override func viewWillDisappear(_ animated: Bool) {

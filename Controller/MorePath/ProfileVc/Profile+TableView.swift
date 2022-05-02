@@ -298,7 +298,7 @@ extension ProfileVC: UITableViewDelegate, UITableViewDataSource {
         
         cell.doctorNameLbl.text = userData?.message?.visitSummery?[indexPath.row].doctorName ?? ""
         cell.descLbl.text = userData?.message?.visitSummery?[indexPath.row].summeryOrReport ?? ""
-//        cell.dateLbl.text = self.GetFormatedDate(date_string: userData?.message?.visitSummery?[indexPath.row].date ?? "", dateFormat: "yyyy-MM-dd'T'HH:mm:ss")
+//  cell.dateLbl.text = self.GetFormatedDate(date_string:     userData?.message?.visitSummery?[indexPath.row].date ?? "", dateFormat: "yyyy-MM-dd'T'HH:mm:ss")
         cell.dateLbl.text = convertDateFormat(inputDate: userData?.message?.visitSummery?[indexPath.row].date ?? "")
         if userData?.message?.visitSummery?[indexPath.row].bookingSummaryFiles?.count ?? 0 != 0 {
             cell.attachmentBtn.isHidden = false

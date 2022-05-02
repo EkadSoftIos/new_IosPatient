@@ -31,14 +31,14 @@ extension ConfirmAccountVC: UITextFieldDelegate {
             {
                 code4Txt.becomeFirstResponder()
             }
-            if(textField == code4Txt)
-            {
-                code5Txt.becomeFirstResponder()
-            }
-            if(textField == code5Txt)
-            {
-                code6Txt.becomeFirstResponder()
-            }
+//            if(textField == code4Txt)
+//            {
+//                code5Txt.becomeFirstResponder()
+//            }
+//            if(textField == code5Txt)
+//            {
+//                code6Txt.becomeFirstResponder()
+//            }
 
             textField.text = string
             return false
@@ -57,14 +57,14 @@ extension ConfirmAccountVC: UITextFieldDelegate {
             {
                 code3Txt.becomeFirstResponder()
             }
-            if(textField == code5Txt)
-            {
-                code4Txt.becomeFirstResponder()
-            }
-            if(textField == code6Txt)
-            {
-                code5Txt.becomeFirstResponder()
-            }
+//            if(textField == code5Txt)
+//            {
+//                code4Txt.becomeFirstResponder()
+//            }
+//            if(textField == code6Txt)
+//            {
+//                code5Txt.becomeFirstResponder()
+//            }
             textField.text = ""
             return false
         }

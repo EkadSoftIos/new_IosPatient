@@ -24,6 +24,20 @@ target 'E4 Patient' do
    pod 'DLRadioButton'
    pod 'iOSDropDown'
 #   pod 'ImagePicker'
+
+pod 'Firebase/Auth'
+pod 'Firebase/Firestore'
+pod 'Firebase/Analytics'
+
+pod 'FacebookSDK'
+pod 'FacebookSDK/LoginKit'
+pod 'FacebookSDK/ShareKit'
+pod 'FacebookSDK/PlacesKit'
+pod 'FBSDKMessengerShareKit'
+pod 'FacebookCore'
+pod 'FacebookLogin'
+pod 'FacebookShare'
+
   target 'E4 PatientTests' do
     inherit! :search_paths
     # Pods for testing

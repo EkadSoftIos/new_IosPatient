@@ -166,7 +166,7 @@ class AddDieseasesVC: UIViewController,UITextViewDelegate, UISearchBarDelegate {
     }
     func textViewDidEndEditing(_ textView: UITextView) {
         if textView.text.isEmpty {
-            textView.text = "notes"
+            textView.text = "Notes"
             textView.textColor = UIColor.lightGray
         }
     }

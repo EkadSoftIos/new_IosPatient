@@ -20,15 +20,31 @@ extension AllMedicationVC: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MedicationCell") as! MedicationCell
         cell.selectionStyle = .none
         let medicationData = model?.message?.tblPatientMedicine?[indexPath.row]
-        cell.detailsOneLbl.text = medicationData?.medicinAboutLocalized
-        cell.dateLbl.text = medicationData?.whenTake
+        
+        cell.repeatLbl.text = "\(medicationData?.medicinAboutLocalized ?? "")"
+        cell.detailsOneLbl.text = "\(medicationData?.durationValue ?? 0)\("times")\(medicationData?.durationTypetNameLocalized ?? "")\(",")\(medicationData?.whenTake ?? "")"
+
+        cell.dateLbl.text = "\(medicationData?.dateFrom ?? "")\("-")\(medicationData?.dateTo ?? "")"
         cell.nameLbl.text = medicationData?.medicationName
-        cell.quantityLbl.text = medicationData?.medicineStrenght
+        cell.quantityLbl.text = "\(medicationData?.medicineForm ?? "")\("-")\(medicationData?.medicineStrenght ?? "")"
 //        cell.repeatLbl.text = medicationData?.durationTypetNameLocalized ?? ""
         let image = "\(Constants.baseURLImage)\(medicationData?.medicineImagePath ?? "")"
         cell.medImage.kf.setImage(with: URL(string: image),placeholder: UIImage(named: "BarLogo"))
+//        if medicationData?.createdByDoctorFk != nil {
+//            cell.deleteBtn.isHidden = true
+//            cell.editBtn.isHidden = true
+//        }else{
+//            cell.deleteBtn.isHidden = false
+//            cell.editBtn.isHidden = false
+//        }
+        if medicationData?.prescriptionFk ?? 0 > 0 {
+            cell.editBtn.isHidden = true
+        }else{
+            cell.editBtn.isHidden = false
+        }
         cell.deleteHandelr = {
-            self.callApiDelete(Id: medicationData?.patientMedicineID ?? 0)
+            self.deleteCell(Id: medicationData?.patientMedicineID ?? 0)
+//            self.callApiDelete(Id: medicationData?.patientMedicineID ?? 0)
             self.model?.message?.tblPatientMedicine?.remove(at: indexPath.row)
             self.medicationTableView.deleteRows(at: [indexPath], with: .automatic)
         }
@@ -62,6 +78,12 @@ extension AllMedicationVC: UITableViewDelegate, UITableViewDataSource {
 extension AllMedicationVC: addmedication{
     func Data(isAdded: Bool, isupdate: Bool) {
         callApiAdd()
+    }
+    func deleteCell(Id: Int){
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "DeletePopUp")
+//      vc.cellId = Id
+        self.present(vc, animated: true, completion: nil)
     }
     
 }

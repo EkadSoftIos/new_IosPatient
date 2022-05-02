@@ -562,12 +562,12 @@
         <!--Log OutVC-->
         <scene sceneID="Xhr-8L-LsG">
             <objects>
-                <viewController storyboardIdentifier="LogOutVC" id="lKK-Yv-NKt" customClass="LogOutVC" customModule="E4Doctor" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LogOutVC" id="lKK-Yv-NKt" customClass="LogOutVC" customModule="E4clinic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Inx-7g-T5g">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bNy-iZ-BLx" customClass="CardView" customModule="E4Doctor" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bNy-iZ-BLx" customClass="CardView" customModule="E4clinic" customModuleProvider="target">
                                 <rect key="frame" x="19" y="181.5" width="337.5" height="304"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_logout" translatesAutoresizingMaskIntoConstraints="NO" id="amw-iS-j7d">
@@ -597,7 +597,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="yxm-g0-IUj">
                                         <rect key="frame" x="33.5" y="240" width="270" height="40"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VDq-wq-U1l" customClass="RoundedButton" customModule="E4Doctor" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VDq-wq-U1l" customClass="RoundedButton" customModule="E4clinic" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="123" height="40"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -618,7 +618,7 @@
                                                     <action selector="didTappedCancel:" destination="lKK-Yv-NKt" eventType="touchUpInside" id="3P8-pd-Fbc"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NC5-gd-idI" customClass="RoundedButton" customModule="E4Doctor" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NC5-gd-idI" customClass="RoundedButton" customModule="E4clinic" customModuleProvider="target">
                                                 <rect key="frame" x="147" y="0.0" width="123" height="40"/>
                                                 <color key="backgroundColor" name="mainColor"/>
                                                 <constraints>
@@ -669,10 +669,115 @@
             </objects>
             <point key="canvasLocation" x="5040.579710144928" y="180.80357142857142"/>
         </scene>
+        <!--Delete Pop Up-->
+        <scene sceneID="GKb-Od-J2m">
+            <objects>
+                <viewController storyboardIdentifier="DeletePopUp" id="DLV-bc-KiO" customClass="DeletePopUp" customModule="E4clinic" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bwG-gU-s1Q">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rTh-1K-eB2" customClass="CardView" customModule="E4clinic" customModuleProvider="target">
+                                <rect key="frame" x="19" y="218" width="337.5" height="231.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_delet" translatesAutoresizingMaskIntoConstraints="NO" id="f06-Un-Wpq">
+                                        <rect key="frame" x="138.5" y="32" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="P5U-83-wKv"/>
+                                            <constraint firstAttribute="width" constant="60" id="Y5I-q7-U4k"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="mJX-f5-iMP">
+                                        <rect key="frame" x="42" y="124" width="253" height="19.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you sure want to delete ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fjq-Ix-NLX">
+                                                <rect key="frame" x="17" y="0.0" width="219" height="19.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="ZqH-Ot-rK7">
+                                        <rect key="frame" x="33.5" y="167.5" width="270" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iuf-iB-0xw" customClass="RoundedButton" customModule="E4clinic" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="123" height="40"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="wLa-90-Mlb"/>
+                                                </constraints>
+                                                <state key="normal" title="Cancel">
+                                                    <color key="titleColor" name="mainColor"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="0.5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="didTappedCancel:" destination="DLV-bc-KiO" eventType="touchUpInside" id="qlT-zp-rRa"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cp5-tA-pqU" customClass="RoundedButton" customModule="E4clinic" customModuleProvider="target">
+                                                <rect key="frame" x="147" y="0.0" width="123" height="40"/>
+                                                <color key="backgroundColor" name="mainColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="7hH-t6-Phy"/>
+                                                </constraints>
+                                                <state key="normal" title="Delete">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="0.0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="didTappedLogout:" destination="DLV-bc-KiO" eventType="touchUpInside" id="KGK-NM-kks"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="mJX-f5-iMP" firstAttribute="top" secondItem="f06-Un-Wpq" secondAttribute="bottom" constant="32" id="9pc-38-RlN"/>
+                                    <constraint firstItem="mJX-f5-iMP" firstAttribute="centerX" secondItem="rTh-1K-eB2" secondAttribute="centerX" id="Noy-Fc-VuG"/>
+                                    <constraint firstItem="ZqH-Ot-rK7" firstAttribute="width" secondItem="rTh-1K-eB2" secondAttribute="width" multiplier="0.8" id="cgg-3M-YXg"/>
+                                    <constraint firstItem="ZqH-Ot-rK7" firstAttribute="top" secondItem="mJX-f5-iMP" secondAttribute="bottom" constant="24" id="eSs-R3-OBy"/>
+                                    <constraint firstItem="ZqH-Ot-rK7" firstAttribute="centerX" secondItem="rTh-1K-eB2" secondAttribute="centerX" id="iCB-FY-cVR"/>
+                                    <constraint firstItem="mJX-f5-iMP" firstAttribute="width" secondItem="rTh-1K-eB2" secondAttribute="width" multiplier="0.75" id="ibq-jc-oNT"/>
+                                    <constraint firstAttribute="bottom" secondItem="ZqH-Ot-rK7" secondAttribute="bottom" constant="24" id="jVL-a3-paz"/>
+                                    <constraint firstItem="f06-Un-Wpq" firstAttribute="top" secondItem="rTh-1K-eB2" secondAttribute="top" constant="32" id="qhw-QF-AhS"/>
+                                    <constraint firstItem="f06-Un-Wpq" firstAttribute="centerX" secondItem="rTh-1K-eB2" secondAttribute="centerX" id="y1s-5x-yWd"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xMz-t6-IGV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rTh-1K-eB2" firstAttribute="width" secondItem="bwG-gU-s1Q" secondAttribute="width" multiplier="0.9" id="Gcw-7i-QyE"/>
+                            <constraint firstItem="rTh-1K-eB2" firstAttribute="centerY" secondItem="xMz-t6-IGV" secondAttribute="centerY" id="HWM-hg-8Gp"/>
+                            <constraint firstItem="rTh-1K-eB2" firstAttribute="centerX" secondItem="xMz-t6-IGV" secondAttribute="centerX" id="dlK-uP-pjp"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mdo-fa-2j6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5040.579710144928" y="180.80357142857142"/>
+        </scene>
     </scenes>
     <resources>
         <image name="ic_back" width="20" height="15"/>
         <image name="ic_close" width="20" height="20"/>
+        <image name="ic_delet" width="22.5" height="22.5"/>
         <image name="ic_filter" width="15" height="15.5"/>
         <image name="ic_logout" width="18" height="18"/>
         <image name="ic_profile_unactive" width="13.5" height="16"/>

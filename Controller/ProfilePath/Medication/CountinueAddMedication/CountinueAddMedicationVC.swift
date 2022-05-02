@@ -144,7 +144,7 @@ class CountinueAddMedicationVC: UIViewController,UITextFieldDelegate,UITextViewD
         if isUpdate == true{
             searchBar.text = updateData?.doctorName
             durationTxt.text = updateData?.durationTypetNameLocalized
-            whenTxt.text = updateData?.whenMedicationTakenName
+            whenTxt.text = updateData?.whenMedicationTakenNameLocalized
             whenId = updateData?.whenMedicationTakenFk ?? 0
             duratiionId = updateData?.durationType ?? 0
             self.navigationItem.title = updateData?.medicationName
@@ -157,7 +157,7 @@ class CountinueAddMedicationVC: UIViewController,UITextFieldDelegate,UITextViewD
             instractionsTxt.text  = updateData?.notes
             let image = "\(Constants.baseURLImage)\(updateData?.medicineImagePath ?? "")"
             MedicationImage.kf.setImage(with: URL(string: image),placeholder: UIImage(named: "BarLogo"))
-            FrequencyTxt.text = "\(updateData?.DurationValue ?? 0)"
+            FrequencyTxt.text = "\(updateData?.durationValue ?? 0)"
             print("gggg: \(updateData)")
             if updateData?.notes != ""{
                 instractionsTxt.textColor = .black

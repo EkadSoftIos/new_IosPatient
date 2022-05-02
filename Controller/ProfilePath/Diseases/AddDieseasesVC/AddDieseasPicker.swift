@@ -11,16 +11,31 @@ extension AddDieseasesVC: UIPickerViewDataSource, UIPickerViewDelegate {
     //MARK:-date picker
     func showDatePicker(){
         //Formate Date
-        datePicker.datePickerMode = .date
-        //ToolBar
-        let toolbar = UIToolbar();
-        toolbar.sizeToFit()
-        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(donedatePicker));
-        let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
-        let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelDatePicker));
-        toolbar.setItems([doneButton,spaceButton,cancelButton], animated: false)
-        diagnosedTxt.inputAccessoryView = toolbar
-        diagnosedTxt.inputView = datePicker
+//        datePicker.datePickerMode = .date
+//        //ToolBar
+//        let toolbar = UIToolbar();
+//        toolbar.sizeToFit()
+//        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(donedatePicker));
+//        let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
+//        let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelDatePicker));
+//        toolbar.setItems([doneButton,spaceButton,cancelButton], animated: false)
+//        diagnosedTxt.inputAccessoryView = toolbar
+//        diagnosedTxt.inputView = datePicker
+        
+        let datePickerView = UIDatePicker()
+        datePickerView.datePickerMode = .date
+        diagnosedTxt.inputView = datePickerView
+        datePickerView.addTarget(self, action: #selector(handleDatePicker(sender:)), for: .valueChanged)
+
+    }
+    @objc func handleDatePicker(sender: UIDatePicker) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let date = dateFormatter.string(from: sender.date)
+        diagnosedTxt.text = date
+//        self.view.endEditing(true)
+//        dateFrom = date
+//        self.delegate?.sendDate(fDate: dateFrom ?? "", tDate: dateTo ?? "")
     }
     @objc func donedatePicker(){
         let formatter = DateFormatter()

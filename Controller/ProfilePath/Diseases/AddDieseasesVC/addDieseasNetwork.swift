@@ -8,8 +8,8 @@
 import UIKit
 extension AddDieseasesVC{
     func validationinput(){
-        if dieseasNameTxt.text!.isEmpty || diagnosedTxt.text!.isEmpty || statusTxt.text!.isEmpty {
-            self.showMessage(title: "", sub: "all data required", type: .error, layout: .messageView)
+        if dieseasNameTxt.text!.isEmpty || diagnosedTxt.text!.isEmpty || statusTxt.text!.isEmpty || searchBar.text!.isEmpty {
+            self.showMessage(title: "", sub: "all data with * required", type: .error, layout: .messageView)
         }else if dianosedDate?.timeIntervalSinceNow.sign == .plus {
             self.showMessage(title: "", sub: "selected date must be in past".localized, type: .error, layout: .messageView)
         }else{

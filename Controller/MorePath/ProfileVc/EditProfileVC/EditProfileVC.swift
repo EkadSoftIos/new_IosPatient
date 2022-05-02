@@ -107,26 +107,30 @@ class EditProfileVC: UIViewController,UITextFieldDelegate {
         self.pickerView.reloadAllComponents()
     }
     @IBAction func addAtachmentTxt(_ sender: Any) {
-        isProfileImage = false
-        attachimageInstance.presentImagePicker()
-        attachimageInstance.imageSelected = {[weak self] selectedImage in
-            guard let self = self else {return}
-            self.attachImage.image = selectedImage
-            self.attachImagePath.append(UploadDataa(data: selectedImage.jpegData(compressionQuality: 0.1)!, Key: "attachedIdPath"))
-            if let token = self.token as? String {
-            self.headers["Authorization"] = "Bearer \(token)"
-                
-            }
-            AlamofireMultiPart.PostMultiWithModel(model: SuccessModelImage.self,
-                                                  url: "\(Constants.baseURL)Common/FormDataUpload",
-                                                  Images: self.attachImagePath ,
-                                                  header: self.headers,
-                                                  parameters: nil,
-                                                  completion: self.ProfileImageNetwork)
-        }
+        UserDefaults.standard.set(false, forKey: "isProfileImage")
+        choosePhoto()
+        
+//        isProfileImage = false
+//        attachimageInstance.presentImagePicker()
+//        attachimageInstance.imageSelected = {[weak self] selectedImage in
+//            guard let self = self else {return}
+//            self.attachImage.image = selectedImage
+//            self.attachImagePath.append(UploadDataa(data: selectedImage.jpegData(compressionQuality: 0.1)!, Key: "attachedIdPath"))
+//            if let token = self.token as? String {
+//            self.headers["Authorization"] = "Bearer \(token)"
+//
+//            }
+//            AlamofireMultiPart.PostMultiWithModel(model: SuccessModelImage.self,
+//                                                  url: "\(Constants.baseURL)Common/FormDataUpload",
+//                                                  Images: self.attachImagePath ,
+//                                                  header: self.headers,
+//                                                  parameters: nil,
+//                                                  completion: self.ProfileImageNetwork)
+//        }
     }
     
     @IBAction func chooseImage_CLick(_ sender: Any){
+        UserDefaults.standard.set(true, forKey: "isProfileImage")
         choosePhoto()
     }
     

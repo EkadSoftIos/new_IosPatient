@@ -78,6 +78,7 @@
 		6102527A28074C730085B200 /* HelpSupportCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6102527828074C730085B200 /* HelpSupportCell.swift */; };
 		6102527B28074C730085B200 /* HelpSupportCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6102527928074C730085B200 /* HelpSupportCell.xib */; };
 		6102527D2807F5AF0085B200 /* LogoutModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6102527C2807F5AF0085B200 /* LogoutModel.swift */; };
+		6133911828117E7C0033AC19 /* DeletePopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6133911728117E7C0033AC19 /* DeletePopUp.swift */; };
 		613C8BC126ECA1BA00FA4A83 /* AppointmentDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613C8BC026ECA1BA00FA4A83 /* AppointmentDetailsModel.swift */; };
 		613C8BC326ECA69000FA4A83 /* AppointmentDetailsCancelNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613C8BC226ECA69000FA4A83 /* AppointmentDetailsCancelNetwork.swift */; };
 		613C8BC526ECAF4000FA4A83 /* AppointmentDetailsCancelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613C8BC426ECAF4000FA4A83 /* AppointmentDetailsCancelModel.swift */; };
@@ -538,6 +539,7 @@
 		6102527828074C730085B200 /* HelpSupportCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpSupportCell.swift; sourceTree = "<group>"; };
 		6102527928074C730085B200 /* HelpSupportCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HelpSupportCell.xib; sourceTree = "<group>"; };
 		6102527C2807F5AF0085B200 /* LogoutModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogoutModel.swift; sourceTree = "<group>"; };
+		6133911728117E7C0033AC19 /* DeletePopUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeletePopUp.swift; sourceTree = "<group>"; };
 		613C8BC026ECA1BA00FA4A83 /* AppointmentDetailsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmentDetailsModel.swift; sourceTree = "<group>"; };
 		613C8BC226ECA69000FA4A83 /* AppointmentDetailsCancelNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmentDetailsCancelNetwork.swift; sourceTree = "<group>"; };
 		613C8BC426ECAF4000FA4A83 /* AppointmentDetailsCancelModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmentDetailsCancelModel.swift; sourceTree = "<group>"; };
@@ -557,6 +559,7 @@
 		6183F35827F3AE3A0040836F /*  E4ClinicPatient-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = " E4ClinicPatient-Bridging-Header.h"; sourceTree = "<group>"; };
 		619182ED26F65B4600B6A796 /* Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Animation.h; sourceTree = "<group>"; };
 		619182EE26F65B4600B6A796 /* Animation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Animation.m; sourceTree = "<group>"; };
+		61980655281C01E0009CC5CB /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		61EE6218280A942E0096009D /* ForgetPassVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForgetPassVC.xib; sourceTree = "<group>"; };
 		61EE621A280A942E0096009D /* ForgetPassVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgetPassVC.swift; sourceTree = "<group>"; };
 		61EE621E280AA7520096009D /* ForgotPasswordModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordModel.swift; sourceTree = "<group>"; };
@@ -1249,6 +1252,7 @@
 		C10E8E2325B33B03004FFCBF = {
 			isa = PBXGroup;
 			children = (
+				61980655281C01E0009CC5CB /* GoogleService-Info.plist */,
 				6183F35827F3AE3A0040836F /*  E4ClinicPatient-Bridging-Header.h */,
 				C1F8D81925DF301400863B5D /* Network */,
 				C10E8F5225B3A670004FFCBF /* Model */,
@@ -2467,6 +2471,7 @@
 		C1AFAAF925B6C233005879A4 /* AllMedicationVC */ = {
 			isa = PBXGroup;
 			children = (
+				6133911728117E7C0033AC19 /* DeletePopUp.swift */,
 				C1AFAB0425B6C27B005879A4 /* Cell */,
 				C1AFAAFA25B6C247005879A4 /* AllMedicationVC.swift */,
 				C1AFAAFB25B6C247005879A4 /* AllMedicationVC.xib */,
@@ -3117,6 +3122,7 @@
 				01E6F07226C65B5F00859BC0 /* MedicalServicesModel.swift in Sources */,
 				C1820EC325B528CD00396AAE /* ProfileCell.swift in Sources */,
 				C13A456725F3DBA3004F2D33 /* AllMedicationNetwork.swift in Sources */,
+				6133911828117E7C0033AC19 /* DeletePopUp.swift in Sources */,
 				C1977DBB25FC2271004AD914 /* MapVc.swift in Sources */,
 				C13A457725F42BF0004F2D33 /* MedicalReportsNetwork.swift in Sources */,
 				C186EB8F2647C76C00E92B8F /* MyFavoriteCell.swift in Sources */,

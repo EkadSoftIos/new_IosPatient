@@ -139,7 +139,7 @@ class DoctorProfileVC: UIViewController, BaseViewProtocol {
         } else {
             acadimicQualificationConst.constant = 0
         }
-        if (doctorProfileData?.tblEmployeeAcademicQualification?.count ?? 0) > 1 {
+        if (doctorProfileData?.tblEmployeeAcademicQualification?.count ?? 0) >= 1 {
             moreAcadimcBtn.isHidden = false
         } else {
             moreAcadimcBtn.isHidden = true

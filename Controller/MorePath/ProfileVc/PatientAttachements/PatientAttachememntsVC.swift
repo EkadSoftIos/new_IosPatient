@@ -50,9 +50,14 @@ class PatientAttachememntsVC: UIViewController {
          let olDateFormatter = DateFormatter()
          olDateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
         let oldDate = olDateFormatter.date(from: inputDate) ?? Date()
-         let convertDateFormatter = DateFormatter()
-         convertDateFormatter.dateFormat = "MMM dd , yyyy"
-         return convertDateFormatter.string(from: oldDate)
+         let newDateFormatter = DateFormatter()
+        newDateFormatter.dateFormat = "MMMM dd yyyy"
+        newDateFormatter.locale = Locale(identifier: "en_US_POSIX")
+        let newOne = newDateFormatter.date(from: "\(oldDate)") ?? Date()
+        let dateString = newDateFormatter.string(from: newOne)
+//        let enDateString = dateString.trimmingCharacters(in: CharacterSet(charactersIn: "01234567890.-:").inverted)
+
+         return dateString
     }
 
 }

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -18,7 +18,7 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ConfirmAccountVC" customModule="E4_Patient" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ConfirmAccountVC" customModule="E4clinic" customModuleProvider="target">
             <connections>
                 <outlet property="code1Txt" destination="c1M-oi-Lbx" id="Wa0-bP-J8h"/>
                 <outlet property="code2Txt" destination="8wn-Si-6L4" id="vgC-Oj-k4K"/>
@@ -42,13 +42,13 @@
                     <rect key="frame" x="21" y="82" width="372" height="742"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm Account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcc-eH-Xb7">
-                            <rect key="frame" x="93" y="124" width="186" height="33.5"/>
+                            <rect key="frame" x="91.5" y="124" width="189" height="29.5"/>
                             <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="25"/>
                             <color key="textColor" name="Blue"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mVm-fO-fzw">
-                            <rect key="frame" x="50" y="197.5" width="272" height="85.5"/>
+                            <rect key="frame" x="50" y="193.5" width="272" height="75"/>
                             <string key="text">We've sent you a 6 digit confirm code to
 your Mobile ****53
 Please enter it below</string>
@@ -57,35 +57,37 @@ Please enter it below</string>
                             <nil key="highlightedColor"/>
                         </label>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Csj-U4-1pY">
-                            <rect key="frame" x="40" y="313" width="292" height="70"/>
+                            <rect key="frame" x="40" y="298.5" width="292" height="70"/>
                             <subviews>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c1M-oi-Lbx">
-                                    <rect key="frame" x="0.0" y="0.0" width="40.5" height="70"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="65.5" height="70"/>
                                     <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="15"/>
                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                 </textField>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8wn-Si-6L4">
-                                    <rect key="frame" x="50.5" y="0.0" width="40" height="70"/>
+                                    <rect key="frame" x="75.5" y="0.0" width="65.5" height="70"/>
                                     <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="15"/>
                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                 </textField>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pWL-h9-o56">
-                                    <rect key="frame" x="100.5" y="0.0" width="40.5" height="70"/>
+                                    <rect key="frame" x="151" y="0.0" width="65.5" height="70"/>
                                     <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="15"/>
                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                 </textField>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IMM-Uo-nGL">
-                                    <rect key="frame" x="151" y="0.0" width="40.5" height="70"/>
+                                    <rect key="frame" x="226.5" y="0.0" width="65.5" height="70"/>
                                     <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="15"/>
                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                 </textField>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xvG-Kg-2aT">
-                                    <rect key="frame" x="201.5" y="0.0" width="40" height="70"/>
+                                    <rect key="frame" x="241.5" y="0.0" width="50.5" height="70"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="15"/>
                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                 </textField>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VeE-5u-VdJ">
                                     <rect key="frame" x="251.5" y="0.0" width="40.5" height="70"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="15"/>
                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                 </textField>
@@ -93,9 +95,15 @@ Please enter it below</string>
                             <constraints>
                                 <constraint firstAttribute="height" constant="70" id="Klh-la-s0J"/>
                             </constraints>
+                            <variation key="default">
+                                <mask key="subviews">
+                                    <exclude reference="xvG-Kg-2aT"/>
+                                    <exclude reference="VeE-5u-VdJ"/>
+                                </mask>
+                            </variation>
                         </stackView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o1T-V9-ggh" customClass="TransitionButton" customModule="TransitionButton">
-                            <rect key="frame" x="61" y="428" width="250" height="40"/>
+                            <rect key="frame" x="61" y="413.5" width="250" height="40"/>
                             <color key="backgroundColor" name="Blue"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="QTk-qd-H7m"/>
@@ -115,16 +123,16 @@ Please enter it below</string>
                             </connections>
                         </button>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Ccj-hc-wOf">
-                            <rect key="frame" x="113.5" y="482" width="145" height="66"/>
+                            <rect key="frame" x="112.5" y="467.5" width="147" height="60.5"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't receive a code?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jTa-lt-I5T">
-                                    <rect key="frame" x="0.0" y="0.0" width="145" height="20"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="147" height="17.5"/>
                                     <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="15"/>
                                     <color key="textColor" name="darkGray"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ezg-Zo-stA">
-                                    <rect key="frame" x="46" y="32" width="53" height="34"/>
+                                    <rect key="frame" x="46" y="29.5" width="55" height="31"/>
                                     <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="16"/>
                                     <state key="normal" title="Resend"/>
                                     <connections>
@@ -164,7 +172,7 @@ Please enter it below</string>
     </objects>
     <designables>
         <designable name="o1T-V9-ggh">
-            <size key="intrinsicContentSize" width="116" height="32"/>
+            <size key="intrinsicContentSize" width="114" height="30"/>
         </designable>
     </designables>
     <resources>

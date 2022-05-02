@@ -155,6 +155,18 @@ class AddAddressVC: UIViewController, UITextViewDelegate {
         countryPickerView.reloadComponent(0)
         areaPickerView.reloadComponent(0)
         citiesPickerView.reloadComponent(0)
+        countryId = model?.message?[0].countryID ?? 0
+        countryTextField.text = model?.message?[0].countryNameEn ?? ""
+        if !countryTextField.text!.isEmpty {
+        CityId = model?.message?[selectedCountryIndex ?? 0].lookupCity?[0].cityID ?? 0
+        cityTextField.text = model?.message?[selectedCountryIndex ?? 0].lookupCity?[0].cityNameEn ?? ""
+        }
+        if !cityTextField.text!.isEmpty {
+            if model?.message?[selectedCountryIndex ?? 0].lookupCity?[selectedCityIndex ?? 0].lookupArea?.count != 0{
+            AreaID = model?.message?[selectedCountryIndex ?? 0].lookupCity?[selectedCityIndex ?? 0].lookupArea?[0].areaID ?? 0
+            areaTextField.text = model?.message?[selectedCountryIndex ?? 0].lookupCity?[selectedCityIndex ?? 0].lookupArea?[0].areaNameEn ?? ""
+            }
+        }
     }
     
     func setUpPickerView(){
@@ -197,15 +209,19 @@ class AddAddressVC: UIViewController, UITextViewDelegate {
         self.view.endEditing(true)
     }
     func validate() {
-        if addressTypeTextField.text!.isEmpty
-        || countryTextField.text!.isEmpty ||
-        cityTextField.text!.isEmpty ||
-        areaTextField.text!.isEmpty ||
-        streetNameTextField.text!.isEmpty ||
-        buildingTextField.text!.isEmpty ||
-        floorTextField.text!.isEmpty ||
-        landmarkTextView.text.isEmpty  {
-            self.showMessage(title: "", sub: "all data required".localized, type: .error, layout: .messageView)
+//        if addressTypeTextField.text!.isEmpty
+//        || countryTextField.text!.isEmpty ||
+//        cityTextField.text!.isEmpty ||
+//        areaTextField.text!.isEmpty ||
+//        streetNameTextField.text!.isEmpty ||
+//        buildingTextField.text!.isEmpty ||
+//        floorTextField.text!.isEmpty ||
+//        landmarkTextView.text.isEmpty  {
+            if addressTypeTextField.text!.isEmpty
+            || countryTextField.text!.isEmpty ||
+            streetNameTextField.text!.isEmpty ||
+            locationTextField.text == ""  {
+            self.showMessage(title: "", sub: "all data with * required".localized, type: .error, layout: .messageView)
         }
         else {
             self.saveButton.startAnimation()
@@ -241,6 +257,7 @@ class AddAddressVC: UIViewController, UITextViewDelegate {
                         self.saveButton.stopAnimation()
                         Vibration.success.vibrate()
                         self.Delegete?.Data(isAdded: true)
+//                        self.showMessage(title: "", sub: "Your Address added successfully".localized, type: .success, layout: .messageView)
                         self.navigationController?.popViewController(animated: true)
                     }else{
                         self.showMessage(title: "", sub: model.errormessage, type: .error, layout: .messageView)
