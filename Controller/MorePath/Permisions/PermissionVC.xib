@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -23,21 +24,38 @@
                 <outlet property="allBasicBtn" destination="i8f-rN-Gwn" id="yAT-XF-Ws2"/>
                 <outlet property="allPersonalBtn" destination="h3b-1j-one" id="9cD-yK-a8t"/>
                 <outlet property="allergiesImage" destination="BTC-m6-jM4" id="2fE-sv-FlP"/>
+                <outlet property="allerqiesLBL" destination="d0I-e7-ejP" id="lJx-ct-xpX"/>
+                <outlet property="allowAllDoctorLBL" destination="Xce-jp-EFA" id="1ed-hs-rAY"/>
                 <outlet property="allowDoctorImage" destination="kLq-xj-pRc" id="Tt9-e9-Nc7"/>
+                <outlet property="allowForLBL" destination="WBn-V3-49O" id="F4K-sU-r9C"/>
+                <outlet property="basicProfLBL" destination="s9G-Ck-tii" id="4Mb-74-7mv"/>
                 <outlet property="chooseDoctorImage" destination="i7p-EC-j3k" id="yZA-GR-dpH"/>
                 <outlet property="chooseDoctorsView" destination="3B1-IN-QSX" id="PEl-lD-Dzb"/>
+                <outlet property="chooseSomeLBL" destination="02m-SL-p6E" id="dPz-ZD-LzG"/>
                 <outlet property="chooseViewHEight" destination="sxb-MG-cFl" id="nSf-XS-tmy"/>
                 <outlet property="diesesImage" destination="oeA-3A-rfF" id="pDF-Eg-VtR"/>
+                <outlet property="diseasesLBL" destination="kt3-Nm-OIJ" id="nlT-DF-kh8"/>
+                <outlet property="emergencyContactLBL" destination="XZu-8i-MtA" id="mXv-F8-bwp"/>
                 <outlet property="emergencyImage" destination="ZSL-i1-KF5" id="cD3-kC-WHi"/>
+                <outlet property="entityLBL" destination="494-DI-5Gh" id="skY-Vv-WEr"/>
                 <outlet property="entityTxt" destination="26e-zm-iEH" id="N2z-aR-g3K"/>
+                <outlet property="familyHistoryLBL" destination="ImK-az-6O8" id="ci7-p1-lWI"/>
                 <outlet property="familyImage" destination="RHd-0e-ikl" id="keg-3o-bD3"/>
+                <outlet property="filterProviderByLBL" destination="hrt-Du-MNK" id="mxH-H3-l97"/>
+                <outlet property="healthCareProvLBL" destination="OrW-ee-80U" id="RKN-g1-Ijs"/>
                 <outlet property="healthCareTxt" destination="DN0-Vz-dJe" id="yhm-GD-BRP"/>
+                <outlet property="healthProfLBL" destination="bP6-sR-Wjv" id="xDj-BO-ZXd"/>
+                <outlet property="mainSpecLBL" destination="QuN-ha-zLp" id="Lo4-vu-rY8"/>
                 <outlet property="mainSpecialityTxt" destination="NKB-OB-uoD" id="Dp7-DJ-eVJ"/>
                 <outlet property="mainView" destination="ISY-hI-KlQ" id="J1t-DY-v1F"/>
+                <outlet property="medicalReportsLBL" destination="Inc-q0-Htx" id="YV0-tH-cUy"/>
+                <outlet property="medicationLBL" destination="rpx-0e-09d" id="gfY-vN-63c"/>
                 <outlet property="medicationsImage" destination="SHr-mu-yah" id="OTT-Ai-YJG"/>
                 <outlet property="savebtn" destination="a07-1C-aDc" id="7TN-CS-VsH"/>
+                <outlet property="socialHistoryLBL" destination="6Yf-4F-gc3" id="bnC-hL-Bmx"/>
                 <outlet property="socialImage" destination="6FL-IC-Qtw" id="u7g-bY-PNV"/>
                 <outlet property="surgeryImage" destination="l2B-xG-a3u" id="g9Z-nS-RfF"/>
+                <outlet property="surgeyLBL" destination="kH0-be-1tf" id="7VL-lu-gdd"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -80,20 +98,20 @@
                                                                 <constraint firstAttribute="width" constant="10" id="tw2-xz-lDA"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alow All Doctors" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xce-jp-EFA">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Allow All Doctors" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xce-jp-EFA">
                                                             <rect key="frame" x="14" y="2" width="292" height="16.5"/>
                                                             <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="14"/>
                                                             <color key="textColor" name="darkGray"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X1b-K9-EOW">
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X1b-K9-EOW">
                                                             <rect key="frame" x="0.0" y="0.0" width="306" height="20"/>
                                                             <connections>
                                                                 <action selector="allowDoctors_CLick:" destination="-1" eventType="touchUpInside" id="dsv-0r-g9A"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
                                                         <constraint firstItem="X1b-K9-EOW" firstAttribute="top" secondItem="yLX-SJ-sM8" secondAttribute="top" id="5K6-ry-Ccl"/>
                                                         <constraint firstItem="kLq-xj-pRc" firstAttribute="centerY" secondItem="yLX-SJ-sM8" secondAttribute="centerY" id="9VC-MD-xiK"/>
@@ -123,14 +141,14 @@
                                                             <color key="textColor" name="darkGray"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vkc-wc-ZXq">
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vkc-wc-ZXq">
                                                             <rect key="frame" x="0.0" y="0.0" width="306" height="20"/>
                                                             <connections>
                                                                 <action selector="chooseDoctors_CLick:" destination="-1" eventType="touchUpInside" id="1e7-Cy-rHT"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="bottom" secondItem="Vkc-wc-ZXq" secondAttribute="bottom" id="2Eb-l7-GTW"/>
                                                         <constraint firstItem="i7p-EC-j3k" firstAttribute="leading" secondItem="RrJ-J1-UcC" secondAttribute="leading" id="AtB-aO-FSq"/>
@@ -232,7 +250,7 @@
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
-                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             <constraints>
                                                 <constraint firstItem="hrt-Du-MNK" firstAttribute="leading" secondItem="3B1-IN-QSX" secondAttribute="leading" constant="20" id="2iS-ne-kyE"/>
                                                 <constraint firstItem="qSZ-70-HQo" firstAttribute="centerY" secondItem="26e-zm-iEH" secondAttribute="centerY" id="2nE-Sv-Fr6"/>
@@ -268,7 +286,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h3b-1j-one">
-                                            <rect key="frame" x="296" y="369.5" width="40" height="24"/>
+                                            <rect key="frame" x="308" y="375" width="28" height="13"/>
                                             <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="11"/>
                                             <state key="normal" title=" All" image="ic_check_unactive-1">
                                                 <color key="titleColor" name="darkGray"/>
@@ -296,14 +314,14 @@
                                                             <color key="textColor" name="darkGray"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CaX-Ot-BoD">
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CaX-Ot-BoD">
                                                             <rect key="frame" x="0.0" y="0.0" width="324" height="20"/>
                                                             <connections>
                                                                 <action selector="medReports_CLick:" destination="-1" eventType="touchUpInside" id="gGC-Pf-bsa"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
                                                         <constraint firstItem="CaX-Ot-BoD" firstAttribute="leading" secondItem="hIq-kj-Shp" secondAttribute="leading" id="26o-qI-1zr"/>
                                                         <constraint firstItem="tcE-8M-aU7" firstAttribute="leading" secondItem="hIq-kj-Shp" secondAttribute="leading" id="3Q2-ZB-toq"/>
@@ -333,14 +351,14 @@
                                                             <color key="textColor" name="darkGray"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WpT-xv-zkj">
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WpT-xv-zkj">
                                                             <rect key="frame" x="0.0" y="0.0" width="324" height="20"/>
                                                             <connections>
                                                                 <action selector="emergency_CLick:" destination="-1" eventType="touchUpInside" id="RqH-Wd-UEa"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="trailing" secondItem="XZu-8i-MtA" secondAttribute="trailing" id="7Ns-BF-71Z"/>
                                                         <constraint firstAttribute="trailing" secondItem="WpT-xv-zkj" secondAttribute="trailing" id="AqY-1X-1Ku"/>
@@ -360,7 +378,7 @@
                                             </constraints>
                                         </stackView>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i8f-rN-Gwn">
-                                            <rect key="frame" x="296" y="452" width="40" height="24"/>
+                                            <rect key="frame" x="308" y="457.5" width="28" height="13"/>
                                             <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="11"/>
                                             <state key="normal" title=" All" image="ic_check_unactive-1">
                                                 <color key="titleColor" name="darkGray"/>
@@ -394,14 +412,14 @@
                                                             <color key="textColor" name="darkGray"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1hl-ef-a2x">
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1hl-ef-a2x">
                                                             <rect key="frame" x="0.0" y="0.0" width="326" height="20"/>
                                                             <connections>
                                                                 <action selector="dieseses_Click:" destination="-1" eventType="touchUpInside" id="XNY-Bb-qoX"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="trailing" secondItem="kt3-Nm-OIJ" secondAttribute="trailing" id="0EN-1a-tA9"/>
                                                         <constraint firstItem="1hl-ef-a2x" firstAttribute="leading" secondItem="tgO-Cm-2Ec" secondAttribute="leading" id="0Px-JY-6TF"/>
@@ -431,14 +449,14 @@
                                                             <color key="textColor" name="darkGray"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x0a-Co-mWf">
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x0a-Co-mWf">
                                                             <rect key="frame" x="0.0" y="0.0" width="326" height="20"/>
                                                             <connections>
                                                                 <action selector="medications_Click:" destination="-1" eventType="touchUpInside" id="t7j-3f-Xv7"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
                                                         <constraint firstItem="SHr-mu-yah" firstAttribute="leading" secondItem="EsE-Dd-rLw" secondAttribute="leading" id="07F-he-98O"/>
                                                         <constraint firstAttribute="trailing" secondItem="rpx-0e-09d" secondAttribute="trailing" id="0Wb-87-ts7"/>
@@ -468,14 +486,14 @@
                                                             <color key="textColor" name="darkGray"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oax-78-0Dh">
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oax-78-0Dh">
                                                             <rect key="frame" x="0.0" y="0.0" width="324" height="20"/>
                                                             <connections>
                                                                 <action selector="allergies_Click:" destination="-1" eventType="touchUpInside" id="Gzc-xg-MpJ"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
                                                         <constraint firstItem="BTC-m6-jM4" firstAttribute="leading" secondItem="Sfq-Kk-oYi" secondAttribute="leading" id="2WU-vs-e3b"/>
                                                         <constraint firstAttribute="height" constant="20" id="LhV-Hi-6xZ"/>
@@ -505,14 +523,14 @@
                                                             <color key="textColor" name="darkGray"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tNg-hZ-ADy">
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tNg-hZ-ADy">
                                                             <rect key="frame" x="0.0" y="0.0" width="326" height="20"/>
                                                             <connections>
                                                                 <action selector="social_CLick:" destination="-1" eventType="touchUpInside" id="KW8-ZY-Lhm"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="trailing" secondItem="6Yf-4F-gc3" secondAttribute="trailing" id="3hy-Wu-T6D"/>
                                                         <constraint firstItem="6Yf-4F-gc3" firstAttribute="leading" secondItem="6FL-IC-Qtw" secondAttribute="trailing" constant="4" id="5TR-Gb-bPk"/>
@@ -542,14 +560,14 @@
                                                             <color key="textColor" name="darkGray"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xaM-iT-omR">
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xaM-iT-omR">
                                                             <rect key="frame" x="0.0" y="0.0" width="324" height="20"/>
                                                             <connections>
                                                                 <action selector="familyHistory_CLick:" destination="-1" eventType="touchUpInside" id="qHT-Ug-0tD"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
                                                         <constraint firstItem="ImK-az-6O8" firstAttribute="centerY" secondItem="e7A-NB-JzX" secondAttribute="centerY" id="8ex-K1-j4e"/>
                                                         <constraint firstItem="xaM-iT-omR" firstAttribute="top" secondItem="e7A-NB-JzX" secondAttribute="top" id="APF-tC-XDl"/>
@@ -579,14 +597,14 @@
                                                             <color key="textColor" name="darkGray"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cXn-BK-yNW">
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cXn-BK-yNW">
                                                             <rect key="frame" x="0.0" y="0.0" width="326" height="20"/>
                                                             <connections>
                                                                 <action selector="surgery_Click:" destination="-1" eventType="touchUpInside" id="GOb-PA-1Z2"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="trailing" secondItem="kH0-be-1tf" secondAttribute="trailing" id="0a3-pP-GbC"/>
                                                         <constraint firstItem="cXn-BK-yNW" firstAttribute="top" secondItem="XJK-Bi-dtL" secondAttribute="top" id="3q5-Os-QWj"/>
@@ -607,7 +625,7 @@
                                             </constraints>
                                         </stackView>
                                     </subviews>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
                                         <constraint firstItem="s9G-Ck-tii" firstAttribute="leading" secondItem="Zcp-Wm-gRu" secondAttribute="leading" constant="12" id="1rS-pY-A07"/>
                                         <constraint firstItem="3B1-IN-QSX" firstAttribute="top" secondItem="dDj-kS-sm1" secondAttribute="bottom" constant="12" id="5Xf-xg-Kh9"/>
@@ -645,7 +663,7 @@
                             </constraints>
                         </scrollView>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstItem="a5H-th-u2a" firstAttribute="leading" secondItem="ISY-hI-KlQ" secondAttribute="leading" id="23g-eq-Nag"/>
                         <constraint firstItem="a5H-th-u2a" firstAttribute="top" secondItem="ISY-hI-KlQ" secondAttribute="top" constant="8" id="53A-hL-AKG"/>
@@ -653,7 +671,7 @@
                         <constraint firstAttribute="trailing" secondItem="a5H-th-u2a" secondAttribute="trailing" id="rro-Ok-EPh"/>
                     </constraints>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a07-1C-aDc" customClass="TransitionButton" customModule="TransitionButton">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a07-1C-aDc" customClass="TransitionButton" customModule="TransitionButton">
                     <rect key="frame" x="127" y="790" width="160" height="35"/>
                     <color key="backgroundColor" name="Blue"/>
                     <constraints>
@@ -674,7 +692,8 @@
                     </connections>
                 </button>
             </subviews>
-            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ISY-hI-KlQ" secondAttribute="trailing" constant="21" id="C3b-UX-X7c"/>
                 <constraint firstItem="ISY-hI-KlQ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="24" id="IeX-jR-wN6"/>
@@ -683,10 +702,14 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="a07-1C-aDc" secondAttribute="bottom" constant="37" id="o1e-zA-yc7"/>
                 <constraint firstItem="ISY-hI-KlQ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="21" id="umS-ga-EDG"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="57.971014492753625" y="68.973214285714278"/>
         </view>
     </objects>
+    <designables>
+        <designable name="a07-1C-aDc">
+            <size key="intrinsicContentSize" width="32" height="32"/>
+        </designable>
+    </designables>
     <resources>
         <image name="dropdowen" width="12" height="14"/>
         <image name="ic_check_unactive-1" width="12" height="12"/>
@@ -698,5 +721,8 @@
         <namedColor name="darkGray">
             <color red="0.41999998688697815" green="0.41999998688697815" blue="0.41999998688697815" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

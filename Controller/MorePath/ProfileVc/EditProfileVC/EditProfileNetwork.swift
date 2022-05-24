@@ -10,7 +10,7 @@ extension EditProfileVC{
     
     func validationinput(){
         if fNameTxt.text!.isEmpty || lNameTxt.text!.isEmpty || phoneTxt.text!.isEmpty || emailTxt.text!.isEmpty || genderTxt.text!.isEmpty || dateTxt.text!.isEmpty{
-            self.showMessage(title: "", sub: "all data required", type: .error, layout: .messageView)
+            self.showMessage(title: "", sub: "all data with * required", type: .error, layout: .messageView)
         }else if !identityTxt.text!.isEmpty && identityTxt.text!.count < 14 || identityTxt.text!.count > 14{
             self.showMessage(title: "", sub: "Identification must be 14 number".localized, type: .error, layout: .messageView)
         }else if isEmailValid(emailTxt.text ?? "") == false{
@@ -48,13 +48,16 @@ extension EditProfileVC{
         }
     }
     func callApi(){
+        let prefix = "+2"
+                guard phoneTxt.text!.hasPrefix(prefix) else { return }
+                let phoneWithoutPref  = String(phoneTxt.text!.dropFirst(prefix.count).trimmingCharacters(in: .whitespacesAndNewlines))
         var parameters: [String: Any] = [
             "PatientId": model?.message?.patientID ?? 0,
             "PatientFirstName": fNameTxt.text ?? "",
             "PatientLastName": lNameTxt.text ?? "",
             "PatientEmail": emailTxt.text ?? "",
             "PatientMobileCode": "+20",
-            "PatientMobile": phoneTxt.text ?? "",
+            "PatientMobile": phoneWithoutPref,
             "PatientBirthDate": dateTxt.text ?? "",
             "PatientGender": genderType ?? 1,
             "AttachedIdPath": attachmentImagePath,

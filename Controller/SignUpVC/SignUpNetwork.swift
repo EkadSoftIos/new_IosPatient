@@ -21,12 +21,18 @@ extension SignUpVC{
         self.pickerView.reloadAllComponents()
     }
     func validationinput(){
+        let phoneString = phoneTxt.text ?? ""
+        let phoneArray = Array(phoneString)
+        
         if agree == false {
             self.showMessage(title: "", sub: "You should agree on terms and conditions.", type: .error, layout: .messageView)
         }else{
             if phoneTxt.text!.isEmpty || lastNameTxt.text!.isEmpty || fNameTxt.text!.isEmpty || passwordTxt.text!.isEmpty || genderTxt.text!.isEmpty || dateTxt.text!.isEmpty  {
                 self.showMessage(title: "", sub: "all data are required".localized, type: .error, layout: .messageView)
             }else if isEmailValid(emailTxt.text!) == false{
+                
+            }else if phoneArray.count > 15 {
+                self.showMessage(title: "", sub: "phone accept 15 number max".localized, type: .error, layout: .messageView)
 
             }else if passwordTxt.text!.count < 8{
                 self.showMessage(title: "", sub: "password must  be atleast 8 numbers".localized, type: .error, layout: .messageView)

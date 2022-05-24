@@ -64,11 +64,11 @@ open class TopView: UIView {
   }
 
   func configure() {
-    var buttons: [UIButton] = [flashButton]
+      let buttons: [UIButton] = [flashButton]
 
-    if configuration.canRotateCamera {
-      buttons.append(rotateCamera)
-    }
+//    if configuration.canRotateCamera {
+//      buttons.append(rotateCamera)
+//    }
 
     for button in buttons {
       button.layer.shadowColor = UIColor.black.cgColor

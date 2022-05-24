@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -16,7 +17,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeInfoVC" customModule="E4clinic" customModuleProvider="target">
             <connections>
+                <outlet property="doctorMedicalServiceLBL" destination="q6Q-nD-l5A" id="ZPu-tl-Ar0"/>
                 <outlet property="homeView" destination="vWt-RJ-cqd" id="GZk-kE-Y3g"/>
+                <outlet property="homeVisitLBL" destination="vAK-x1-8NB" id="adK-7r-40R"/>
                 <outlet property="serviseTableView" destination="rrj-nT-02h" id="hPg-qN-SUX"/>
                 <outlet property="serviseView" destination="pVX-d5-5Z3" id="v3j-Jl-af2"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -38,13 +41,13 @@
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home Visit " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vAK-x1-8NB">
-                            <rect key="frame" x="88" y="30" width="270" height="20"/>
+                            <rect key="frame" x="88" y="28.5" width="270" height="23"/>
                             <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="17"/>
                             <color key="textColor" name="Blue"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstItem="vAK-x1-8NB" firstAttribute="centerY" secondItem="vWt-RJ-cqd" secondAttribute="centerY" id="1IG-cQ-lda"/>
                         <constraint firstItem="kcT-6y-FTz" firstAttribute="centerY" secondItem="vWt-RJ-cqd" secondAttribute="centerY" id="531-VN-0ZL"/>
@@ -58,17 +61,17 @@
                     <rect key="frame" x="20" y="152" width="374" height="200"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Doctor Medical Service" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q6Q-nD-l5A">
-                            <rect key="frame" x="8" y="12" width="182" height="20"/>
+                            <rect key="frame" x="8" y="12" width="183" height="23"/>
                             <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="17"/>
                             <color key="textColor" name="Blue"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rrj-nT-02h">
-                            <rect key="frame" x="8" y="40" width="326" height="152"/>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <rect key="frame" x="8" y="43" width="326" height="149"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         </tableView>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="rrj-nT-02h" secondAttribute="bottom" constant="8" id="1Ki-wg-Hks"/>
                         <constraint firstAttribute="trailing" secondItem="rrj-nT-02h" secondAttribute="trailing" constant="40" id="JsO-S8-yXl"/>
@@ -87,7 +90,8 @@
                     </constraints>
                 </imageView>
             </subviews>
-            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="pVX-d5-5Z3" secondAttribute="trailing" constant="20" id="37Y-32-nK3"/>
                 <constraint firstItem="CS5-CT-tVl" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="6p8-DS-c5k"/>
@@ -98,7 +102,6 @@
                 <constraint firstItem="vWt-RJ-cqd" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="gdk-6M-StV"/>
                 <constraint firstItem="pVX-d5-5Z3" firstAttribute="top" secondItem="vWt-RJ-cqd" secondAttribute="bottom" constant="16" id="nth-EM-6s5"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="-42.028985507246382" y="67.633928571428569"/>
         </view>
     </objects>
@@ -108,5 +111,8 @@
         <namedColor name="Blue">
             <color red="0.071000002324581146" green="0.46700000762939453" blue="0.81999999284744263" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

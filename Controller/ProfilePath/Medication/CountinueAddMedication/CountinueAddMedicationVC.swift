@@ -27,8 +27,19 @@ class CountinueAddMedicationVC: UIViewController,UITextFieldDelegate,UITextViewD
     @IBOutlet var doctorsTableView: UITableView!
     @IBOutlet var doctorsView: UIView!
     @IBOutlet var doctorsViewHeight: NSLayoutConstraint!
-    
     @IBOutlet var searchBar: UISearchBar!
+    
+    
+    @IBOutlet weak var aboutLBL: UILabel!
+    @IBOutlet weak var dosageLBL: UILabel!
+    @IBOutlet weak var quantityLBL: UILabel!
+    @IBOutlet weak var whenLBL: UILabel!
+    @IBOutlet weak var durationLBL: UILabel!
+    @IBOutlet weak var dayLBL: UIStackView!
+    @IBOutlet weak var otherInstructionLBL: UILabel!
+    
+    @IBOutlet weak var givenLBL: UILabel!
+    
     let datePicker = UIDatePicker()
     var Medicationmodel: AllMedicineMessage?
     var updateData: TblPatientMedicine?
@@ -47,6 +58,22 @@ class CountinueAddMedicationVC: UIViewController,UITextFieldDelegate,UITextViewD
     let durationArr = [("Day".localized, 1, "duration_day"), ("Week".localized, 2 , "duration_week"), ("Month".localized, 3, "duration_month"), ("Year".localized, 4 , "duration_year")]
     var searchArr = [GetDoctorsMessage]()
     override func viewWillAppear(_ animated: Bool) {
+        setLocalization()
+    }
+    func setLocalization()
+    {
+        aboutLBL.text = "About".localized
+        dosageLBL.text = "Dosage".localized
+        quantityLBL.text = "Quantity *".localized
+        quantityTxt.placeholder = "Quantity".localized
+        whenLBL.text = "When *".localized
+        whenTxt.placeholder = "When".localized
+        durationLBL.text = "Duration".localized
+        FrequencyTxt.placeholder = "Duration".localized
+        durationTxt.placeholder = "Day".localized
+        otherInstructionLBL.text = "Other Instruction".localized
+        givenLBL.text = "Given by Doctor".localized
+        saveBtn.setTitle("Save".localized, for: .normal)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -87,7 +114,7 @@ class CountinueAddMedicationVC: UIViewController,UITextFieldDelegate,UITextViewD
             self.setDoctorsView()
         }else{
         searchArr = searchText.isEmpty ? doctorsModel?.message ?? []: doctorsModel?.message.filter { (item: (GetDoctorsMessage)) -> Bool in
-            return item.employeeName.range(of: searchText, options: .caseInsensitive, range: nil, locale: nil) != nil
+            return item.employeeName?.range(of: searchText, options: .caseInsensitive, range: nil, locale: nil) != nil
             
         } ?? []
             if searchArr.count != 0{

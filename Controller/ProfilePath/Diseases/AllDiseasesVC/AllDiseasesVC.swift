@@ -62,7 +62,7 @@ class AllDiseasesVC: UIViewController {
    }
 
 }
-extension AllDiseasesVC: AddDieseases{
+extension AllDiseasesVC: AddDieseases , DeleteDiseases{
     func Data(isAdded: Bool) {
         callApiAdd()
     }

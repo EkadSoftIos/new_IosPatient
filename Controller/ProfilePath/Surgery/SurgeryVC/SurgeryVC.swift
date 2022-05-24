@@ -36,23 +36,7 @@ class SurgeryVC: UIViewController {
         sugaryTable.delegate = self
         sugaryTable.dataSource = self
     }
-    func GetFormatedDate(date_string:String,dateFormat:String)-> String{
-
-       let dateFormatter = DateFormatter()
-       dateFormatter.locale = Locale(identifier: "en_US_POSIX")
-       dateFormatter.dateFormat = dateFormat
-
-       let dateFromInputString = dateFormatter.date(from: date_string)
-       dateFormatter.dateFormat = "yyyy-MM-dd"
-       if(dateFromInputString != nil){
-           return dateFormatter.string(from: dateFromInputString!)
-       }
-       else{
-           debugPrint("could not convert date")
-       
-           return ""
-       }
-   }
+    
 
     @IBAction func add_CLick(_ sender: Any) {
         let vc = AddSurgeryVC()
@@ -63,11 +47,10 @@ class SurgeryVC: UIViewController {
     
    
 }
-extension SurgeryVC: AddSurgery{
+extension SurgeryVC: AddSurgery , DeleteSurgey{
     func Data(isAdded: Bool) {
         if isAdded == true{
             callApiAdd()
-            
         }
     }
     

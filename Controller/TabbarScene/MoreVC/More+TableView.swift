@@ -13,10 +13,10 @@ extension MoreVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.row == 13 {
+        if indexPath.row == 12 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "HelpSupportCell") as! HelpSupportCell
             cell.slf = self
-//          cell.webPagesData = webPagesData
+          cell.webPagesData = webPagesData
             return cell
         } else {
         let cell = tableView.dequeueReusableCell(withIdentifier: "moreCell") as! MoreCell
@@ -102,7 +102,7 @@ extension MoreVC: UITableViewDelegate, UITableViewDataSource {
         tableView.deselectRow(at: indexPath, animated: true)
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.row == 13 {
+        if indexPath.row == 12 {
             return 210
         } else {
         return 50

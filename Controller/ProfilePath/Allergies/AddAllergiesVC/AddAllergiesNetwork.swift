@@ -9,7 +9,7 @@ import UIKit
 extension AddAllergiesVC{
     func validationinput(){
         if nameTxt.text!.isEmpty  {
-            self.showMessage(title: "", sub: "allergies required", type: .error, layout: .messageView
+            self.showMessage(title: "", sub: "Name required".localized, type: .error, layout: .messageView
             )
         }else{
             saveBtn.startAnimation()
@@ -17,17 +17,18 @@ extension AddAllergiesVC{
         }
     }
     func callApi(){
+        let patientId = UserDefaults.standard.string(forKey: "patientId")
 //        "PatientAllergiesId": 0,
         let parameters: [String: Any]
         if isUpdate == true {
             parameters  = [
                 "PatientAllergiesId": updateData?.patientAllergiesID ?? 0,
-                "PatientFk": updateData?.patientFk ?? 0,
+                "PatientFk":patientId ?? 0,
                 "AllergiesName": nameTxt.text ?? "",
                 "AllergiesTriggeredBy": triggeredTxt.text ?? "",
                 "AllergiesOccuered": howTxt.text ?? "",
                 "AllergiesFiristDiagonsed": firstTxt.text ?? "",
-                "MedicationIds": medicationID ?? 0,
+                "MedicationIds": medicationIDsString,
                 "Notes": addtionalTxt.text ?? "",
                 "CreateDate": "",
                 "IsActive": true,
@@ -35,12 +36,12 @@ extension AddAllergiesVC{
             ]
         }else{
             parameters  = [
-                "PatientFk": updateData?.patientFk ?? 0,
+                "PatientFk": patientId ?? 0,
                 "AllergiesName": nameTxt.text ?? "",
                 "AllergiesTriggeredBy": triggeredTxt.text ?? "",
                 "AllergiesOccuered": howTxt.text ?? "",
                 "AllergiesFiristDiagonsed": firstTxt.text ?? "",
-                "MedicationIds": medicationID ?? 0,
+                "MedicationIds": medicationIDsString,
                 "Notes": addtionalTxt.text ?? "",
                 "CreateDate": "",
                 "IsActive": true,
@@ -53,7 +54,12 @@ extension AddAllergiesVC{
             switch result{
             case .success(let model):
                 if model.successtate == 200{
-                    self.showMessage(title: "", sub: model.message, type: .success, layout: .messageView)
+                    if self.isUpdate == false {
+                        self.showMessage(title: "", sub: "New allergies have been added successfully".localized, type: .success, layout: .messageView)
+                    }else{
+                        self.showMessage(title: "", sub: "Allergies have been edited successfully".localized, type: .success, layout: .messageView)
+                    }
+                    
                     self.successLogin()
                     Vibration.success.vibrate()
                 }else{
@@ -79,12 +85,26 @@ extension AddAllergiesVC{
             case .success(let model) :
                 if model.successtate == 200 {
                     self.medicationModel = model
-                    self.updateRelationUI()
-                    for i in model.message ?? [] {
-                        if Int(self.updateData?.medicationIDS ?? "0") == i.medicationID{
-                            self.medicationTxt.text = i.medicationName
+                    let idString = self.updateData?.medicationIDS
+                    let idArray = idString?.components(separatedBy: ",")
+//                    let id = Int(self.updateData?.medicationIDS ?? "0")
+                    for i in model.message ?? []{
+                        for x in idArray ?? [] {
+                            if Int(x) == i.medicationID {
+                                if self.medicationTxt.text == "" {
+                                    self.medicationTxt.text = i.medicationName
+                                }else{
+                                    self.medicationTxt.text = "\(self.medicationTxt.text ?? "")\(",")\(i.medicationName ?? "")"
+                                }
+                            }
                         }
+//                        if id == i.medicationID{
+//                        if idArray?.contains(i.medicationID){
+//                            self.medicationTxt.text = i.medicationName
+//                        }
+                        
                     }
+                    self.updateRelationUI()
                 }
                 else{
                     self.showAlertWith(msg: model.errormessage ?? "")

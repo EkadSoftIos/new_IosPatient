@@ -27,27 +27,6 @@ extension AllAdressVC{
     func setData(){
         self.adressTableView.reloadData()
     }
-    func callApiDelete(id: Int){
-        showUniversalLoadingView(true)
-        
-        let parameters: [String: Any] = [
-            "PatientAddressId": id
-          ]
-        NetworkClient.performRequest(_type: SuccessModel.self, router: .deleteAdress(params: parameters)) {[weak self] (result) in
-            guard let self = self else {return}
-            showUniversalLoadingView(false)
-            switch result{
-            case .success(let model):
-                if model.successtate == 200 {
-                    self.callApiAdd()
-                }
-                else{
-                    self.showAlertWith(msg: model.errormessage)
-                }
-            case .failure(let model):
-              print(model)
-            }
-        }
-    }
+
 
 }

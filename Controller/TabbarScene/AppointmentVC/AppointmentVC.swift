@@ -7,13 +7,15 @@
 
 import UIKit
 import FSCalendar
-class AppointmentVC: UIViewController,FSCalendarDelegate , UISearchBarDelegate {
+class AppointmentVC: BaseViewControll,FSCalendarDelegate , UISearchBarDelegate {
     @IBOutlet var fillterView: UIView!
     @IBOutlet var appointmentTableView: UITableView!
+    @IBOutlet var noAppImg: UIImageView!
+    @IBOutlet var noAppLBL: UILabel!
     @IBOutlet var calenderView: FSCalendar!
     @IBOutlet var calenderHeight: NSLayoutConstraint!
     @IBOutlet weak var searchBar: UISearchBar!
-
+    var isCalenderWeek: Bool = true
     var date = ""
     var isHistory: Bool = false
     var appointmentResponse: AppointmentHistoryModel?
@@ -29,6 +31,7 @@ class AppointmentVC: UIViewController,FSCalendarDelegate , UISearchBarDelegate {
         setupTableView()
         searchBar.delegate = self
         calenderView.delegate = self
+        
         self.calenderView.setScope(.week, animated: false)
         fillterView.ShadowView(view: fillterView, radius: 10, opacity: 2, shadowRadius: 2, color: UIColor.lightGray.cgColor)
         
@@ -44,7 +47,15 @@ class AppointmentVC: UIViewController,FSCalendarDelegate , UISearchBarDelegate {
         callApi(date: self.date)
        
     }
-    
+    @IBAction func downCalender_Click(_ sender: Any) {
+        if isCalenderWeek == true{
+            self.calenderView.setScope(.month, animated: false)
+            isCalenderWeek = false
+        }else{
+            self.calenderView.setScope(.week, animated: false)
+            isCalenderWeek = true
+        }
+    }
     func setupTableView(){
         appointmentTableView.register(AppointmentCell.nib, forCellReuseIdentifier: "AppointmentCell")
         appointmentTableView.delegate = self
@@ -54,10 +65,14 @@ class AppointmentVC: UIViewController,FSCalendarDelegate , UISearchBarDelegate {
     @IBAction func filter_Click(_ sender: Any) {
         if isHistory == false{
         let vc = AppointmentFillterVC()
+            vc.consultationServiceFk = consultationServiceFk
+            vc.AppointmentStatus = AppointmentStatus
             self.show(vc, sender: nil)
             
         }else{
             let vc = AppointmetHistoryFillterVC()
+            vc.consultationServiceFk = consultationServiceFk
+            vc.AppointmentStatus = AppointmentStatus
             self.show(vc, sender: nil)
         }
     }
@@ -274,7 +289,7 @@ extension AppointmentVC: UITableViewDelegate, UITableViewDataSource{
     }
 }
 
-extension AppointmentVC {
+extension AppointmentVC : BaseViewProtocol{
     
     func calendar(_ calendar: FSCalendar, boundingRectWillChange bounds: CGRect, animated: Bool) {
         self.calenderHeight.constant = bounds.height
@@ -288,6 +303,10 @@ extension AppointmentVC {
         
         let selectedDate = self.dateFormatter.string(from: date)
         let nowDate = self.dateFormatter.string(from: Date())
+        if selectedDate < nowDate {
+            self.showAlert(message: "You Must Select Date Higher Than Or Equal Today.")
+            return
+        }
         self.date = selectedDate
         callApi(date: self.date)
     }

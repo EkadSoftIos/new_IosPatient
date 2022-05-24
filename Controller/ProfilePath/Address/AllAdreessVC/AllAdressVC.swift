@@ -46,7 +46,7 @@ class AllAdressVC: UIViewController {
     }
     
 }
-extension AllAdressVC: DefultLocation{
+extension AllAdressVC: DefultLocation , DeleteLocation{
     func Data(isAdded: Bool) {
         callApiAdd()
     }

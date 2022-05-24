@@ -10,7 +10,7 @@ import UIKit
 class AllSearchVC: UIViewController, BaseViewProtocol, UISearchBarDelegate {
     
     var allSearchViewModel = AllSearchViewModel()
-    
+    var searchtext = ""
     var type = "All"
     var sortType: Int?
     
@@ -34,12 +34,17 @@ class AllSearchVC: UIViewController, BaseViewProtocol, UISearchBarDelegate {
     var cityId: Int?
     var areaId: Int?
     
+    @IBOutlet weak var cityViewConstraint: NSLayoutConstraint!
+//    @IBOutlet weak var filterViewConstraint: NSLayoutConstraint!
+//    @IBOutlet weak var sortViewConstraint: NSLayoutConstraint!
     @IBOutlet weak var mapView: UIView!
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet var cityView: UIView!
     @IBOutlet var fillterView: UIView!
     @IBOutlet var sortView: UIView!
     @IBOutlet var searchTableView: UITableView!
+    @IBOutlet var noDataView: UIView!
+    @IBOutlet var noDataLBL: UILabel!
     
 //    var model: HomeModel?
     var vw = UIView(frame: UIScreen.main.bounds)
@@ -63,6 +68,17 @@ class AllSearchVC: UIViewController, BaseViewProtocol, UISearchBarDelegate {
     override func viewWillAppear(_ animated: Bool) {
         self.navigationItem.title = "Search".localized
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: AppColor.Blue]
+        if consultationServiceId == 1 || consultationServiceId == 3{
+            cityViewConstraint.constant = 150
+//            filterViewConstraint.constant = 94
+//            sortViewConstraint.constant = 94
+        }else{
+            cityViewConstraint.constant = 0
+//            filterViewConstraint.constant = 170
+//            sortViewConstraint.constant = 170
+        }
+        self.searchBar.text = searchtext
+        
     }
     func initBinding() {
         allSearchViewModel.isLoading.addObserver { [weak self] (isLoading) in
@@ -76,7 +92,21 @@ class AllSearchVC: UIViewController, BaseViewProtocol, UISearchBarDelegate {
         allSearchViewModel.reloadDoctorSearchTB.addObserver { [weak self] (isReload) in
             guard let self = self else {return}
             if isReload {
-                DispatchQueue.main.async { self.searchTableView.reloadData()}
+                if self.searchBar.text == "" {
+                    self.noDataView.isHidden = true
+                    DispatchQueue.main.async { self.searchTableView.reloadData()}
+                }else{
+                    self.allSearchViewModel.filteredDoctorsearch = self.allSearchViewModel.filterDoctors.filter({ (doctor) -> Bool in
+                    guard let searchTxt = self.searchBar.text else {return false}
+                    return (doctor.doctorName!.lowercased().contains(searchTxt.lowercased()))
+                            })
+                    if self.allSearchViewModel.filteredDoctorsearch.count == 0 {
+                        self.noDataView.isHidden = false
+                    }else{
+                        self.noDataView.isHidden = true
+                    }
+                    self.searchTableView.reloadData()
+                }
             }
         }
         allSearchViewModel.showError.addObserver { [weak self] (value) in
@@ -90,23 +120,43 @@ class AllSearchVC: UIViewController, BaseViewProtocol, UISearchBarDelegate {
             if type == "All" {
                 if searchText.isEmpty {
                     self.allSearchViewModel.filteredDoctors = self.allSearchViewModel.doctorSearch
+                    if self.allSearchViewModel.filteredDoctors.count == 0 {
+                        noDataView.isHidden = false
+                    }else{
+                        noDataView.isHidden = true
+                    }
                     self.searchTableView.reloadData()
                 } else {
                     self.allSearchViewModel.filteredDoctors = self.allSearchViewModel.doctorSearch.filter({ (doctor) -> Bool in
                     guard let searchTxt = self.searchBar.text else {return false}
                     return (doctor.doctorName!.lowercased().contains(searchTxt.lowercased()))
                             })
+                    if self.allSearchViewModel.filteredDoctors.count == 0 {
+                        noDataView.isHidden = false
+                    }else{
+                        noDataView.isHidden = true
+                    }
                     self.searchTableView.reloadData()
                 }
             } else {
                 if searchText.isEmpty {
                     self.allSearchViewModel.filteredDoctorsearch = self.allSearchViewModel.filterDoctors
+                    if self.allSearchViewModel.filteredDoctorsearch.count == 0 {
+                        noDataView.isHidden = false
+                    }else{
+                        noDataView.isHidden = true
+                    }
                     self.searchTableView.reloadData()
                 } else {
                     self.allSearchViewModel.filteredDoctorsearch = self.allSearchViewModel.filterDoctors.filter({ (doctor) -> Bool in
                     guard let searchTxt = self.searchBar.text else {return false}
                     return (doctor.doctorName!.lowercased().contains(searchTxt.lowercased()))
                             })
+                    if self.allSearchViewModel.filteredDoctorsearch.count == 0 {
+                        noDataView.isHidden = false
+                    }else{
+                        noDataView.isHidden = true
+                    }
                     self.searchTableView.reloadData()
                 }
             }

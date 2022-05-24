@@ -50,7 +50,7 @@ extension UIViewController : UIGestureRecognizerDelegate{
     // MARK: - Transparent With Nav Bar
     func notTransparentNavBar() {
         self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.isTranslucent = false
+        self.navigationController?.navigationBar.isTranslucent = true
         
     }
     

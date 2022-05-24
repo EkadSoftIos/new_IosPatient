@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -15,6 +16,8 @@
                 <outlet property="calenderHeight" destination="VAC-En-X75" id="7iM-B7-klU"/>
                 <outlet property="calenderView" destination="3fI-D1-HYy" id="br0-H5-Nll"/>
                 <outlet property="fillterView" destination="onH-2j-pNg" id="NUH-IN-8iB"/>
+                <outlet property="noAppImg" destination="C7R-Li-fIi" id="jjC-Vg-vOX"/>
+                <outlet property="noAppLBL" destination="uNI-q2-Exo" id="Iuo-Mi-bwf"/>
                 <outlet property="searchBar" destination="ghb-c8-CB9" id="wjD-e3-d2p"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -40,14 +43,14 @@
                             <color key="textColor" name="Blue"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E56-N3-sRj">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E56-N3-sRj">
                             <rect key="frame" x="0.0" y="0.0" width="100" height="40"/>
                             <connections>
                                 <action selector="filter_Click:" destination="-1" eventType="touchUpInside" id="egW-gA-Uo6"/>
                             </connections>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstItem="71m-gp-Oqs" firstAttribute="centerY" secondItem="onH-2j-pNg" secondAttribute="centerY" id="0Gh-Wk-YEN"/>
                         <constraint firstItem="E56-N3-sRj" firstAttribute="leading" secondItem="onH-2j-pNg" secondAttribute="leading" id="1Sh-7G-A0n"/>
@@ -70,8 +73,8 @@
                     <textInputTraits key="textInputTraits"/>
                 </searchBar>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Yqm-bU-bIK">
-                    <rect key="frame" x="8" y="432" width="398" height="422"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <rect key="frame" x="8" y="469" width="398" height="385"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3fI-D1-HYy" customClass="FSCalendar">
                     <rect key="frame" x="20" y="116" width="374" height="300"/>
@@ -92,30 +95,71 @@
                         <outlet property="delegate" destination="-1" id="bP3-75-4Ho"/>
                     </connections>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wfu-bY-AfD">
+                    <rect key="frame" x="181.5" y="433" width="51" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="51" id="wCf-oK-R7Z"/>
+                        <constraint firstAttribute="height" constant="44" id="y4Y-ln-5Vp"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="dropdowen" title=" " subtitle=" "/>
+                    <connections>
+                        <action selector="downCalender_Click:" destination="-1" eventType="touchUpInside" id="OHi-X7-FBE"/>
+                    </connections>
+                </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noAppointments" translatesAutoresizingMaskIntoConstraints="NO" id="C7R-Li-fIi">
+                    <rect key="frame" x="87" y="469" width="240" height="128"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="240" id="j4d-5V-cve"/>
+                        <constraint firstAttribute="height" constant="128" id="wWs-0n-2fa"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have no appointements" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uNI-q2-Exo">
+                    <rect key="frame" x="50" y="618" width="314" height="24"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <color key="textColor" name="Gray"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
-            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="Yqm-bU-bIK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="27a-yf-dVb"/>
                 <constraint firstItem="ghb-c8-CB9" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="2f4-T0-dFF"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="onH-2j-pNg" secondAttribute="trailing" constant="16" id="3oL-y1-sR5"/>
+                <constraint firstItem="C7R-Li-fIi" firstAttribute="top" secondItem="Yqm-bU-bIK" secondAttribute="top" id="5BH-KK-Vg3"/>
+                <constraint firstItem="wfu-bY-AfD" firstAttribute="top" secondItem="3fI-D1-HYy" secondAttribute="bottom" constant="17" id="7jZ-jJ-t73"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="3fI-D1-HYy" secondAttribute="trailing" constant="20" id="9fh-Os-ryc"/>
+                <constraint firstItem="uNI-q2-Exo" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="CKk-wA-YCQ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Yqm-bU-bIK" secondAttribute="bottom" constant="8" id="Hz6-RQ-7Su"/>
+                <constraint firstItem="C7R-Li-fIi" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="87" id="JB2-03-AE2"/>
+                <constraint firstItem="wfu-bY-AfD" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="TOv-rM-QIK"/>
+                <constraint firstItem="Yqm-bU-bIK" firstAttribute="top" secondItem="wfu-bY-AfD" secondAttribute="bottom" constant="-8" id="Tz7-OS-2pm"/>
                 <constraint firstItem="ghb-c8-CB9" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="8" id="UaM-E1-K1b"/>
+                <constraint firstItem="uNI-q2-Exo" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="kxZ-vr-NQm"/>
                 <constraint firstItem="3fI-D1-HYy" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="mhZ-8y-jUk"/>
+                <constraint firstItem="uNI-q2-Exo" firstAttribute="top" secondItem="C7R-Li-fIi" secondAttribute="bottom" constant="21" id="ooR-EC-hry"/>
                 <constraint firstItem="3fI-D1-HYy" firstAttribute="top" secondItem="onH-2j-pNg" secondAttribute="bottom" constant="24" id="qfV-WK-qhp"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Yqm-bU-bIK" secondAttribute="trailing" constant="8" id="rvI-lc-OuB"/>
                 <constraint firstItem="onH-2j-pNg" firstAttribute="leading" secondItem="ghb-c8-CB9" secondAttribute="trailing" constant="16" id="uV9-zy-xmC"/>
-                <constraint firstItem="Yqm-bU-bIK" firstAttribute="top" secondItem="3fI-D1-HYy" secondAttribute="bottom" constant="16" id="zTl-As-Jkl"/>
+                <constraint firstItem="C7R-Li-fIi" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="zMg-eS-rZ2"/>
                 <constraint firstItem="onH-2j-pNg" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="8" id="zj4-g7-ZoS"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="-200.00000000000003" y="67.633928571428569"/>
         </view>
     </objects>
     <resources>
+        <image name="dropdowen" width="12" height="14"/>
         <image name="ic_filter" width="15" height="15.5"/>
+        <image name="noAppointments" width="117.5" height="115"/>
         <namedColor name="Blue">
             <color red="0.071000002324581146" green="0.46700000762939453" blue="0.81999999284744263" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="Gray">
+            <color red="0.55299997329711914" green="0.54500001668930054" blue="0.54500001668930054" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

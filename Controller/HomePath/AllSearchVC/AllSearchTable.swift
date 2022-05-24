@@ -30,10 +30,16 @@ extension AllSearchVC: UITableViewDelegate, UITableViewDataSource{
         cell.doctorImage?.kf.indicatorType = .activity
         cell.doctorImage?.kf.setImage(with: imgURL)
         Animation.roundView(cell.doctorImage)
-        cell.nameLbl.text = doctorModel?.doctorName
-        cell.detailsOneLbl.text = doctorModel?.specialityLocalized
-        cell.detailsTwoLbl.text = doctorModel?.fullProfisionalDetailsLocalized
-        cell.detailsThreeLbl.text = doctorModel?.mainAddress?.branchNameLocalized ?? ""
+        Animation.roundView(cell.statusView)
+        if doctorModel?.isOnline == true {
+            cell.statusView.backgroundColor = UIColor.green
+        }else{
+            cell.statusView.backgroundColor = UIColor.clear
+        }
+        cell.nameLbl.text = "\(doctorModel?.prefixTitleLocalized ?? "")\(".")\(doctorModel?.doctorName ?? "")"
+        cell.detailsTwoLbl.text = doctorModel?.specialityLocalized
+        cell.detailsOneLbl.text = doctorModel?.fullProfisionalDetailsLocalized
+        cell.detailsThreeLbl.text = "\(doctorModel?.mainAddress?.branchBuldingNo ?? "")\(" ")\(doctorModel?.mainAddress?.branchStreetLocalized ?? "")\(doctorModel?.mainAddress?.areaLocalized ?? "")"
         cell.rateLbl.text = String(doctorModel?.totalRate ?? 0)
         cell.doctorCanDo = doctorModel?.doctorCanDo ?? []
         

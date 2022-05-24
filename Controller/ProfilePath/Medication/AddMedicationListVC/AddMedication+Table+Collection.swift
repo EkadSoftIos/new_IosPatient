@@ -21,8 +21,8 @@ extension AddMedicationListVC: UITableViewDelegate , UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "addMedicationTableCell", for: indexPath) as! addMedicationTableCell
         cell.selectionStyle = .none
         let medicineData = model?.message?[indexPath.row]
-        cell.nameLbl.text = medicineData?.medicationName
-        cell.doseLbl.text = medicineData?.medicinDoseLocalized
+        cell.nameLbl.text = medicineData?.nameLocalized
+        cell.doseLbl.text = "\(medicineData?.medicineTypeNameLocalized ?? "")\(" - ")\(medicineData?.medicineStrenght ?? "")"
         let image = "\(Constants.baseURLImage)\(medicineData?.medicineImagePath  ?? "")"
         
         cell.medicineImage.kf.setImage(with: URL(string: image),placeholder: UIImage(named: "BarLogo"))
@@ -51,8 +51,8 @@ extension AddMedicationListVC: UICollectionViewDelegate , UICollectionViewDataSo
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AddMedicationCollectionCell", for: indexPath) as! AddMedicationCollectionCell
         let medicineData = model?.message?[indexPath.row]
-        cell.nameLbl.text = medicineData?.medicationName
-        cell.doseLbl.text = medicineData?.medicinDoseLocalized
+        cell.nameLbl.text = medicineData?.nameLocalized
+        cell.doseLbl.text = "\(medicineData?.medicineTypeNameLocalized ?? "")\(" - ")\(medicineData?.medicineStrenght ?? "")"
         let image = "\(Constants.baseURLImage)\(medicineData?.medicineImagePath ?? "")"
         cell.medicineImage.kf.setImage(with: URL(string: image),placeholder: UIImage(named: "BarLogo"))
         return cell

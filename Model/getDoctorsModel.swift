@@ -14,20 +14,18 @@ struct GetDoctorsModel: Codable {
 
 // MARK: - Message
 struct GetDoctorsMessage: Codable {
-    var businessProviderEmployeeID, businessProviderFk: Int
-    var employeeName: String
-    var prefixTitleLocalized: PrefixTitleLocalized?
+    let businessProviderEmployeeID, businessProviderFk: Int?
+    let employeeName: String?
+    let prefixTitleLocalized: String?
+    let loggedUserID: Int?
+    let  phone, email: String?
 
     enum CodingKeys: String, CodingKey {
         case businessProviderEmployeeID = "businessProviderEmployeeId"
         case businessProviderFk, employeeName
         case prefixTitleLocalized = "prefixTitle_Localized"
+        case loggedUserID = "loggedUserId"
+        case phone, email
     }
 }
 
-enum PrefixTitleLocalized: String, Codable {
-    case dr = "Dr"
-    case empty = ""
-    case prof = "Prof"
-    case أ = "أ"
-}

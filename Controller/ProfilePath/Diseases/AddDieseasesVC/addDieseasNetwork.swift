@@ -25,7 +25,8 @@ extension AddDieseasesVC{
             "PatientFk": model?.message?.patientID ?? 0,
             "DiseaseFk": dieseasID,
             "DiseaseStatusFk": statusID ?? 0,
-            "MedicationIds": medicationTxt.text ?? "",
+            "MedicationIds": medicationIDsString,
+//            "MedicationIds": medicationTxt.text ?? "",
             "DiagonsedDate": diagnosedTxt.text ?? "",
             "Notes": notesTxt.text ?? "",
             "DoctorName": searchBar.text ?? ""
@@ -84,11 +85,24 @@ extension AddDieseasesVC{
             case .success(let model) :
                 if model.successtate == 200 {
                     self.medicationModel = model
-                    let id = Int(self.updateData?.medicationIDS ?? "0")
+                    let idString = self.updateData?.medicationIDS
+                    let idArray = idString?.components(separatedBy: ",")
+//                    let id = Int(self.updateData?.medicationIDS ?? "0")
                     for i in model.message ?? []{
-                        if id == i.medicationID{
-                            self.medicationTxt.text = i.medicationName
+                        for x in idArray ?? [] {
+                            if Int(x) == i.medicationID {
+                                if self.medicationTxt.text == "" {
+                                    self.medicationTxt.text = i.medicationName
+                                }else{
+                                    self.medicationTxt.text = "\(self.medicationTxt.text ?? "")\(",")\(i.medicationName ?? "")"
+                                }
+                            }
                         }
+//                        if id == i.medicationID{
+//                        if idArray?.contains(i.medicationID){
+//                            self.medicationTxt.text = i.medicationName
+//                        }
+                        
                     }
                     self.updateRelationUI()
                 }

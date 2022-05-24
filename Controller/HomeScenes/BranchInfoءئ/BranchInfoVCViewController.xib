@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -20,10 +21,13 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BranchInfoVCViewController" customModule="E4clinic" customModuleProvider="target">
             <connections>
                 <outlet property="branchImg" destination="NF6-dt-XK0" id="kXo-RK-fBC"/>
+                <outlet property="branchInfoLBL" destination="66T-QR-Kg7" id="gVa-4w-uBr"/>
                 <outlet property="branchLocation" destination="xMQ-Z7-TYm" id="Nbt-Xw-wSf"/>
                 <outlet property="branchName" destination="eRw-Od-D7k" id="thN-OR-PvW"/>
                 <outlet property="branchRate" destination="2Jl-rg-Saz" id="vZR-h0-E1T"/>
+                <outlet property="clinicPhotoLBL" destination="XcL-4T-EKB" id="tyb-1o-Ind"/>
                 <outlet property="doctorMedTable" destination="AIv-yY-Rz3" id="2VH-gI-CXl"/>
+                <outlet property="doctorMedicalLBL" destination="uyh-ax-yW8" id="1O2-2A-bbI"/>
                 <outlet property="locationView" destination="ion-zj-JdU" id="mMg-zK-ZLA"/>
                 <outlet property="photoCollection" destination="UaI-yB-grd" id="PJs-sQ-h04"/>
                 <outlet property="photoView" destination="Ihu-Ui-VWQ" id="IYY-p7-Qcb"/>
@@ -41,7 +45,7 @@
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YEf-ee-6Sh">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="600"/>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="600" id="2YI-VB-vCt"/>
                             </constraints>
@@ -57,7 +61,7 @@
                                     </constraints>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="El-Shouroq (Nasr City)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eRw-Od-D7k">
-                                    <rect key="frame" x="92" y="12" width="169.5" height="21"/>
+                                    <rect key="frame" x="92" y="12" width="172" height="21"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="21" id="HO8-y3-Np1"/>
                                     </constraints>
@@ -66,7 +70,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xMQ-Z7-TYm">
-                                    <rect key="frame" x="92" y="45" width="270" height="43"/>
+                                    <rect key="frame" x="100" y="45" width="262" height="43"/>
                                     <string key="text">43 Nakhla moteey st , triumph square , infront of 
 emam ali mosque, Building no. 22, Nasr City</string>
                                     <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="15"/>
@@ -74,21 +78,32 @@ emam ali mosque, Building no. 22, Nasr City</string>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uXW-IT-78M">
-                                    <rect key="frame" x="295" y="8" width="67" height="30"/>
+                                    <rect key="frame" x="292" y="8" width="70" height="30"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4.9" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Jl-rg-Saz">
-                                            <rect key="frame" x="21.5" y="4.5" width="24.5" height="21"/>
+                                            <rect key="frame" x="24" y="4.5" width="44" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" name="Blue"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Star" translatesAutoresizingMaskIntoConstraints="NO" id="H1N-cm-qxw">
+                                            <rect key="frame" x="2" y="5" width="20" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="20" id="5P7-B2-NYj"/>
+                                                <constraint firstAttribute="height" constant="20" id="Zbe-67-6sB"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
                                         <constraint firstItem="2Jl-rg-Saz" firstAttribute="centerY" secondItem="uXW-IT-78M" secondAttribute="centerY" id="43K-sc-6TU"/>
-                                        <constraint firstAttribute="width" constant="67" id="6se-HE-nG0"/>
+                                        <constraint firstAttribute="width" constant="70" id="6se-HE-nG0"/>
                                         <constraint firstAttribute="height" constant="30" id="8nM-rL-qFY"/>
-                                        <constraint firstItem="2Jl-rg-Saz" firstAttribute="centerX" secondItem="uXW-IT-78M" secondAttribute="centerX" id="LWe-Vp-T7G"/>
+                                        <constraint firstAttribute="trailing" secondItem="2Jl-rg-Saz" secondAttribute="trailing" constant="2" id="8q9-ZP-yiK"/>
+                                        <constraint firstItem="H1N-cm-qxw" firstAttribute="leading" secondItem="uXW-IT-78M" secondAttribute="leading" constant="2" id="J0a-U4-Pjc"/>
+                                        <constraint firstItem="2Jl-rg-Saz" firstAttribute="top" secondItem="uXW-IT-78M" secondAttribute="top" constant="4.5" id="Vmg-zU-Ldx"/>
+                                        <constraint firstItem="2Jl-rg-Saz" firstAttribute="leading" secondItem="H1N-cm-qxw" secondAttribute="trailing" constant="2" id="jMU-AX-BDA"/>
+                                        <constraint firstItem="H1N-cm-qxw" firstAttribute="centerY" secondItem="uXW-IT-78M" secondAttribute="centerY" id="puV-aA-r2e"/>
                                     </constraints>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
@@ -102,14 +117,23 @@ emam ali mosque, Building no. 22, Nasr City</string>
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </view>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_location" translatesAutoresizingMaskIntoConstraints="NO" id="6TR-Hg-zXX">
+                                    <rect key="frame" x="75" y="56.5" width="20" height="20"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="20" id="fY6-88-dJj"/>
+                                        <constraint firstAttribute="height" constant="20" id="r19-WY-XkL"/>
+                                    </constraints>
+                                </imageView>
                             </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
+                                <constraint firstItem="6TR-Hg-zXX" firstAttribute="centerY" secondItem="xMQ-Z7-TYm" secondAttribute="centerY" id="6Ti-t1-pA6"/>
                                 <constraint firstItem="eRw-Od-D7k" firstAttribute="leading" secondItem="NF6-dt-XK0" secondAttribute="trailing" constant="12" id="6Zr-vP-Mdi"/>
                                 <constraint firstItem="eRw-Od-D7k" firstAttribute="top" secondItem="ion-zj-JdU" secondAttribute="top" constant="12" id="9vH-ij-H7M"/>
                                 <constraint firstAttribute="bottom" secondItem="xMQ-Z7-TYm" secondAttribute="bottom" constant="12" id="Dn8-k4-37v"/>
-                                <constraint firstItem="xMQ-Z7-TYm" firstAttribute="leading" secondItem="NF6-dt-XK0" secondAttribute="trailing" constant="12" id="GPy-cd-Hnq"/>
+                                <constraint firstItem="xMQ-Z7-TYm" firstAttribute="leading" secondItem="NF6-dt-XK0" secondAttribute="trailing" constant="20" id="GPy-cd-Hnq"/>
                                 <constraint firstAttribute="trailing" secondItem="xMQ-Z7-TYm" secondAttribute="trailing" constant="12" id="QcT-aQ-h0k"/>
+                                <constraint firstItem="xMQ-Z7-TYm" firstAttribute="leading" secondItem="6TR-Hg-zXX" secondAttribute="trailing" constant="5" id="SxP-bM-KmG"/>
                                 <constraint firstAttribute="trailing" secondItem="uXW-IT-78M" secondAttribute="trailing" constant="12" id="TSM-ci-CDp"/>
                                 <constraint firstItem="uXW-IT-78M" firstAttribute="top" secondItem="ion-zj-JdU" secondAttribute="top" constant="8" id="a3U-ha-f8R"/>
                                 <constraint firstItem="NF6-dt-XK0" firstAttribute="leading" secondItem="ion-zj-JdU" secondAttribute="leading" constant="20" id="e6u-gH-bX9"/>
@@ -117,22 +141,27 @@ emam ali mosque, Building no. 22, Nasr City</string>
                                 <constraint firstItem="NF6-dt-XK0" firstAttribute="top" secondItem="ion-zj-JdU" secondAttribute="top" constant="13" id="kSW-xm-bMF"/>
                                 <constraint firstAttribute="height" constant="100" id="v9s-fc-ofQ"/>
                             </constraints>
+                            <variation key="default">
+                                <mask key="subviews">
+                                    <exclude reference="uXW-IT-78M"/>
+                                </mask>
+                            </variation>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="66T-QR-Kg7">
                             <rect key="frame" x="20" y="140" width="374" height="200"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Doctor Medical Service" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uyh-ax-yW8">
-                                    <rect key="frame" x="8" y="12" width="182" height="20"/>
+                                    <rect key="frame" x="8" y="12" width="183" height="23"/>
                                     <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="17"/>
                                     <color key="textColor" name="Blue"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AIv-yY-Rz3">
-                                    <rect key="frame" x="8" y="40" width="326" height="152"/>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <rect key="frame" x="8" y="43" width="326" height="149"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 </tableView>
                             </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
                                 <constraint firstItem="uyh-ax-yW8" firstAttribute="top" secondItem="66T-QR-Kg7" secondAttribute="top" constant="12" id="EBZ-UX-V10"/>
                                 <constraint firstItem="uyh-ax-yW8" firstAttribute="leading" secondItem="66T-QR-Kg7" secondAttribute="leading" constant="8" id="Gun-2t-o6V"/>
@@ -147,14 +176,14 @@ emam ali mosque, Building no. 22, Nasr City</string>
                             <rect key="frame" x="20" y="360" width="374" height="200"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clinic Photo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XcL-4T-EKB">
-                                    <rect key="frame" x="8" y="12" width="93" height="20"/>
+                                    <rect key="frame" x="8" y="12" width="93" height="23"/>
                                     <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="17"/>
                                     <color key="textColor" name="Blue"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="UaI-yB-grd">
-                                    <rect key="frame" x="8" y="40" width="358" height="152"/>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <rect key="frame" x="8" y="43" width="358" height="149"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dAh-da-4KS">
                                         <size key="itemSize" width="128" height="128"/>
                                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -163,7 +192,7 @@ emam ali mosque, Building no. 22, Nasr City</string>
                                     </collectionViewFlowLayout>
                                 </collectionView>
                             </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
                                 <constraint firstItem="UaI-yB-grd" firstAttribute="leading" secondItem="Ihu-Ui-VWQ" secondAttribute="leading" constant="8" id="6mL-19-Fj5"/>
                                 <constraint firstAttribute="trailing" secondItem="UaI-yB-grd" secondAttribute="trailing" constant="8" id="LBc-QP-LFF"/>
@@ -193,24 +222,29 @@ emam ali mosque, Building no. 22, Nasr City</string>
                     </constraints>
                 </scrollView>
             </subviews>
-            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="AEk-C3-D8Y" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="DRG-nY-MRu"/>
                 <constraint firstItem="AEk-C3-D8Y" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="GnZ-Nf-QJC"/>
                 <constraint firstAttribute="bottom" secondItem="AEk-C3-D8Y" secondAttribute="bottom" id="JAe-aA-Dvc"/>
                 <constraint firstItem="AEk-C3-D8Y" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="ld3-OW-tEH"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="-200.00000000000003" y="87.723214285714278"/>
         </view>
     </objects>
     <resources>
+        <image name="Star" width="11" height="11"/>
         <image name="ic_defult address" width="54" height="69.5"/>
+        <image name="ic_location" width="9.5" height="13.5"/>
         <namedColor name="Blue">
             <color red="0.071000002324581146" green="0.46700000762939453" blue="0.81999999284744263" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="darkGray">
             <color red="0.41999998688697815" green="0.41999998688697815" blue="0.41999998688697815" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

@@ -21,10 +21,10 @@ extension AllMedicationVC: UITableViewDelegate, UITableViewDataSource {
         cell.selectionStyle = .none
         let medicationData = model?.message?.tblPatientMedicine?[indexPath.row]
         
-        cell.repeatLbl.text = "\(medicationData?.medicinAboutLocalized ?? "")"
-        cell.detailsOneLbl.text = "\(medicationData?.durationValue ?? 0)\("times")\(medicationData?.durationTypetNameLocalized ?? "")\(",")\(medicationData?.whenTake ?? "")"
+        cell.repeatLbl.text = "\(medicationData?.durationValue ?? 0)\(" ")\(medicationData?.durationTypetNameLocalized ?? "")"
+        cell.detailsOneLbl.text = "\(medicationData?.quantity ?? 0)\(" ")\(medicationData?.whenMedicationTakenNameLocalized ?? "")"
 
-        cell.dateLbl.text = "\(medicationData?.dateFrom ?? "")\("-")\(medicationData?.dateTo ?? "")"
+        cell.dateLbl.text = ""
         cell.nameLbl.text = medicationData?.medicationName
         cell.quantityLbl.text = "\(medicationData?.medicineForm ?? "")\("-")\(medicationData?.medicineStrenght ?? "")"
 //        cell.repeatLbl.text = medicationData?.durationTypetNameLocalized ?? ""

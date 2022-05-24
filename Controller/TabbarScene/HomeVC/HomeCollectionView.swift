@@ -60,8 +60,8 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
             cell.doctorImage?.kf.indicatorType = .activity
             cell.doctorImage?.kf.setImage(with: imgURL)
             Animation.roundView(cell.doctorImage)
-            cell.doctorNameLbl.text = "\(model?.prefixTitleLocalized ?? "")\(" ")\(model?.doctorName ?? "")"
-            cell.specializationLbl.text = model?.specialityLocalized
+            cell.doctorNameLbl.text = "\(model?.prefixTitleLocalized ?? "")\(".")\(" ")\(model?.doctorName ?? "")"
+            cell.specializationLbl.text = model?.fullProfisionalDetailsLocalized
             cell.viewCountLbl.text = String(model?.totalViews ?? 0)
             cell.rateLbl.text = String(model?.totalRate ?? 0)
             cell.friendLbl.text = String(model?.totalpatients ?? 0)

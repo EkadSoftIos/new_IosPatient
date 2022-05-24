@@ -24,6 +24,19 @@ class AddMedicalReportsVC: UIViewController, UITextViewDelegate,UISearchBarDeleg
     @IBOutlet var searchTable: UITableView!
     @IBOutlet var searchViewHeight: NSLayoutConstraint!
     @IBOutlet var mainViewHeight: NSLayoutConstraint!
+    
+    
+    @IBOutlet weak var nameLBL: UILabel!
+    @IBOutlet weak var dateLBL: UILabel!
+    @IBOutlet weak var resultLBL: UILabel!
+    @IBOutlet weak var noteLBL: UILabel!
+    @IBOutlet weak var addAttachBTN: UIButton!
+    @IBOutlet weak var poweredByLBL: UILabel!
+    @IBOutlet weak var testLBL: UILabel!
+    
+    
+    
+    
     var searchArr = [GetDoctorsMessage]()
     var selectedPDF = [UploadDataURL]()
     var model: UserDataModel?
@@ -38,6 +51,17 @@ class AddMedicalReportsVC: UIViewController, UITextViewDelegate,UISearchBarDeleg
     lazy var imageInstance = imagePickerHelper(viewController: self)
     var attachImage: String = ""
     override func viewWillAppear(_ animated: Bool) {
+        setLocalization()
+    }
+    func setLocalization(){
+        nameLBL.text = "Name *".localized;
+        dateLBL.text = "Date *".localized;
+        resultLBL.text = "Result *".localized;
+        addAttachBTN.setTitle("AddAttachments".localized, for: .normal)
+        noteLBL.text = "Notes *".localized
+        poweredByLBL.text = "PoweredBy".localized
+        testLBL.text = "Test / Radiology Centre".localized
+        saveBtn.setTitle("Save".localized, for: .normal)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,7 +101,7 @@ class AddMedicalReportsVC: UIViewController, UITextViewDelegate,UISearchBarDeleg
             self.setDoctorsView()
         }else{
         searchArr = searchText.isEmpty ? doctorsModel?.message ?? []: doctorsModel?.message.filter { (item: (GetDoctorsMessage)) -> Bool in
-            return item.employeeName.range(of: searchText, options: .caseInsensitive, range: nil, locale: nil) != nil
+            return item.employeeName?.range(of: searchText, options: .caseInsensitive, range: nil, locale: nil) != nil
             
         } ?? []
             if searchArr.count != 0{
@@ -91,9 +115,9 @@ class AddMedicalReportsVC: UIViewController, UITextViewDelegate,UISearchBarDeleg
         }
     }
     func SetupTextView(){
-        notesTxt.text = "notes"
+        notesTxt.text = "Notes".localized
         notesTxt.textColor = UIColor.lightGray
-        resultTxt.text = "result"
+        resultTxt.text = "Result".localized
         resultTxt.textColor = UIColor.lightGray
         notesTxt.delegate = self
         resultTxt.delegate = self
@@ -107,12 +131,12 @@ class AddMedicalReportsVC: UIViewController, UITextViewDelegate,UISearchBarDeleg
     func textViewDidEndEditing(_ textView: UITextView) {
         if textView == notesTxt{
             if textView.text.isEmpty {
-                textView.text = "notes"
+                textView.text = "Notes".localized
                 textView.textColor = UIColor.lightGray
             }
         }else if textView == resultTxt{
             if textView.text.isEmpty {
-                textView.text = "result"
+                textView.text = "Result".localized
                 textView.textColor = UIColor.lightGray
             }
         }

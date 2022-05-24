@@ -17,6 +17,7 @@ class MyFavoriteCell: UITableViewCell {
     @IBOutlet weak var feesLBL: UILabel!
     @IBOutlet weak var favBTN: UIButton!
     @IBOutlet weak var rateLBL: UILabel!
+    @IBOutlet var statusView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

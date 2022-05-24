@@ -44,7 +44,7 @@ class AllAllergiesVC: UIViewController {
         self.show(vc, sender: nil)
     }
 }
-extension AllAllergiesVC: addAllergies{
+extension AllAllergiesVC: addAllergies , DeleteAllergies{
     func Data(isAdded: Bool) {
         callApiAdd()
     }

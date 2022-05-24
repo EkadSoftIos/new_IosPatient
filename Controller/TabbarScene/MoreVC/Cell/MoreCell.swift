@@ -8,6 +8,7 @@
 import UIKit
 
 class MoreCell: UITableViewCell {
+    
     @IBOutlet var cellView: UIView!
     @IBOutlet var cellImage: UIImageView!
     @IBOutlet var cellTitle: UILabel!

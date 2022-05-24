@@ -20,6 +20,14 @@ class AddSurgeryVC: UIViewController,UITextViewDelegate, UISearchBarDelegate {
     @IBOutlet var notesTxt: UITextView!
     @IBOutlet var saveBtn: TransitionButton!
     @IBOutlet var mainViewHeight: NSLayoutConstraint!
+    
+    @IBOutlet weak var nameLBL: UILabel!
+    @IBOutlet weak var supportDeviceLBL: UILabel!
+    @IBOutlet weak var dateLBL: UILabel!
+    @IBOutlet weak var byLBL: UILabel!
+    @IBOutlet weak var notesLBL: UILabel!
+    
+    
     var Delegete: AddSurgery?
     var model: UserDataModel?
     var isUpdate: Bool?
@@ -28,6 +36,20 @@ class AddSurgeryVC: UIViewController,UITextViewDelegate, UISearchBarDelegate {
     var doctorsModel: GetDoctorsModel?
     let datePicker = UIDatePicker()
     override func viewWillAppear(_ animated: Bool) {
+        setLocalization()
+    }
+    func setLocalization(){
+        nameLBL.text = "Name".localized
+        supportDeviceLBL.text = "Implants/SupportDevices".localized
+        dateLBL.text = "Date".localized
+        byLBL.text = "By".localized
+        searchBar.placeholder = "SearchForDoctor".localized
+        notesLBL.text = "Notes".localized
+        saveBtn.setTitle("Save".localized, for: .normal)
+        nameTxt.placeholder = "Name".localized
+        implantsTxt.placeholder = "Implants/SupportDevices".localized
+        dateTxt.placeholder = "\("    ")\("Date".localized)"
+        
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +59,7 @@ class AddSurgeryVC: UIViewController,UITextViewDelegate, UISearchBarDelegate {
         searchBar.layer.borderColor = UIColor.lightGray.cgColor
         searchBar.compatibleSearchTextField.textColor = UIColor.black
         searchBar.compatibleSearchTextField.backgroundColor = UIColor.white
-        notesTxt.text = "notes"
+        notesTxt.text = "Notes".localized
         notesTxt.textColor = UIColor.lightGray
         notesTxt.delegate = self
         searchView.ShadowView(view: searchView, radius: 10, opacity: 0.4, shadowRadius: 4, color: UIColor.lightGray.cgColor)
@@ -69,7 +91,7 @@ class AddSurgeryVC: UIViewController,UITextViewDelegate, UISearchBarDelegate {
             self.setDoctorsView()
         }else{
         searchArr = searchText.isEmpty ? doctorsModel?.message ?? []: doctorsModel?.message.filter { (item: (GetDoctorsMessage)) -> Bool in
-            return item.employeeName.range(of: searchText, options: .caseInsensitive, range: nil, locale: nil) != nil
+            return item.employeeName?.range(of: searchText, options: .caseInsensitive, range: nil, locale: nil) != nil
             
         } ?? []
             if searchArr.count != 0{
@@ -90,7 +112,7 @@ class AddSurgeryVC: UIViewController,UITextViewDelegate, UISearchBarDelegate {
     }
     func textViewDidEndEditing(_ textView: UITextView) {
         if textView.text.isEmpty {
-            textView.text = "notes"
+            textView.text = "Notes".localized
             textView.textColor = UIColor.lightGray
         }
     }

@@ -17,23 +17,44 @@ extension AddSurgeryVC{
     }
 
     func callApi(){
-        let parameters: [String: Any]  = [
-            "PatientSurgeryId": SurgeryData?.patientSurgeryID ?? 0,
-            "PatientFk": model?.message?.patientID ?? 0,
-            "PatientSurgeryName": nameTxt.text ?? "",
-            "AddingData": implantsTxt.text ?? "",
-            "PatientSurgeryDate": dateTxt.text ?? "",
-            "DoctorName": searchBar.text ?? "",
-            "Notes": notesTxt.text ?? ""
-       ]
-     //   print(parameters)
+        var parameters = [String: Any]()
+        if isUpdate == false{
+             parameters = [
+    //            "PatientSurgeryId": SurgeryData?.patientSurgeryID ?? 0,
+                "PatientFk": UserDefaults.standard.integer(forKey: "patientId") ,
+                "PatientSurgeryName": nameTxt.text ?? "",
+                "AddingData": implantsTxt.text ?? "",
+                "PatientSurgeryDate": dateTxt.text ?? "",
+                "DoctorName": searchBar.text ?? "",
+                "Notes": notesTxt.text ?? ""
+           ]
+        }else {
+            parameters = [
+               "PatientSurgeryId": SurgeryData?.patientSurgeryID ?? 0,
+               "PatientFk": UserDefaults.standard.integer(forKey: "patientId"),
+               "PatientSurgeryName": nameTxt.text ?? "",
+               "AddingData": implantsTxt.text ?? "",
+               "PatientSurgeryDate": dateTxt.text ?? "",
+               "DoctorName": searchBar.text ?? "",
+               "Notes": notesTxt.text ?? ""
+          ]
+        }
+        
+        print(parameters)
         NetworkClient.performRequest(_type: SuccessModel.self, router: .addSurgery(params: parameters)) { (result) in
             self.saveBtn.stopAnimation()
             switch result{
             case .success(let model):
                 if model.successtate == 200{
                     self.Delegete?.Data(isAdded: true)
-                    self.showMessage(title: "", sub: model.message, type: .success, layout: .messageView)
+                    if self.isUpdate == false {
+                        self.showMessage(title: "", sub: "New surgery has been added successfully ".localized, type: .success, layout: .messageView)
+
+                    }else{
+                        self.showMessage(title: "", sub: "Surgery has been edited successfully".localized, type: .success, layout: .messageView)
+
+                    }
+//                    self.showMessage(title: "", sub: model.message, type: .success, layout: .messageView)
                     self.successLogin()
                     Vibration.success.vibrate()
                     print("params: \(parameters)")

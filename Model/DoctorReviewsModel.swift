@@ -17,8 +17,8 @@ struct DoctorReviewsData: Codable {
     let doctorName, prefixTitleLocalized: String?
     let specialityID: Int?
     let specialityLocalized, profileImage: String?
-    let totalRate: Double?
-    let totalDoctorRate, totalClinicRate, totalAssistantRate, totalpatients: Int?
+    let totalRate ,totalDoctorRate, totalClinicRate, totalAssistantRate: Double?
+    let totalpatients: Int?
     let patientReviewList: [PatientReviewList]?
 
     enum CodingKeys: String, CodingKey {

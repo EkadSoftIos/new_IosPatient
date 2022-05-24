@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -39,7 +40,7 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sponsored" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PXV-Sm-76S">
-                                <rect key="frame" x="8" y="70" width="71" height="16.5"/>
+                                <rect key="frame" x="8" y="70" width="71" height="19"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="71" id="gPA-e3-008"/>
@@ -49,28 +50,28 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Ikz-wy-rCj">
-                                <rect key="frame" x="95" y="16" width="200" height="92"/>
+                                <rect key="frame" x="95" y="16" width="200" height="104"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Doctor Ahmed Karim" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jzH-XY-yPU">
-                                        <rect key="frame" x="0.0" y="0.0" width="200" height="20"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="23"/>
                                         <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Consultant in Pediatric Dentistry..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Zn-PO-JeD">
-                                        <rect key="frame" x="0.0" y="24" width="200" height="20"/>
+                                        <rect key="frame" x="0.0" y="27" width="200" height="23"/>
                                         <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="16"/>
                                         <color key="textColor" name="Gray"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dentist Specialized in Pediatric Dentistry..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MiP-dU-GDV">
-                                        <rect key="frame" x="0.0" y="48" width="200" height="20"/>
+                                        <rect key="frame" x="0.0" y="54" width="200" height="23"/>
                                         <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="17"/>
                                         <color key="textColor" name="Gray"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="43 Nakhla moteey st , Nasr City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J7Z-G2-WVm">
-                                        <rect key="frame" x="0.0" y="72" width="200" height="20"/>
+                                        <rect key="frame" x="0.0" y="81" width="200" height="23"/>
                                         <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="16"/>
                                         <color key="textColor" name="Gray"/>
                                         <nil key="highlightedColor"/>
@@ -100,7 +101,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="3Ac-MM-wao"/>
                                     <constraint firstAttribute="width" constant="40" id="4gD-hx-5io"/>
@@ -123,13 +124,13 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Doctor Can Do" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SEx-Eo-F4A">
-                                <rect key="frame" x="45" y="124" width="94" height="16.5"/>
+                                <rect key="frame" x="45" y="136" width="92" height="19"/>
                                 <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="14"/>
                                 <color key="textColor" name="Blue"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Ypg-BI-F4I">
-                                <rect key="frame" x="154" y="126" width="97" height="13"/>
+                                <rect key="frame" x="152" y="139" width="97" height="13"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_clinic_visit_gray" translatesAutoresizingMaskIntoConstraints="NO" id="QMd-Ag-juY">
                                         <rect key="frame" x="0.0" y="0.0" width="13" height="13"/>
@@ -186,11 +187,21 @@
                                     <constraint firstItem="cAn-fl-0fo" firstAttribute="centerY" secondItem="Vjn-TR-zZy" secondAttribute="centerY" id="z0F-g2-PKB"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ziO-Oa-GKN">
+                                <rect key="frame" x="53" y="50" width="13" height="12"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="12" id="7jY-1P-yvN"/>
+                                    <constraint firstAttribute="width" constant="13" id="Khr-KJ-LYW"/>
+                                </constraints>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="ziO-Oa-GKN" firstAttribute="trailing" secondItem="9cb-Dp-oBR" secondAttribute="trailing" id="0z8-9o-p4R"/>
                             <constraint firstItem="PXV-Sm-76S" firstAttribute="top" secondItem="9cb-Dp-oBR" secondAttribute="bottom" constant="8" id="4yF-xd-0FD"/>
                             <constraint firstItem="SEx-Eo-F4A" firstAttribute="leading" secondItem="CLC-0m-dld" secondAttribute="leading" constant="45" id="66g-8g-yNd"/>
+                            <constraint firstItem="ziO-Oa-GKN" firstAttribute="bottom" secondItem="9cb-Dp-oBR" secondAttribute="bottom" id="8r1-oS-NgR"/>
                             <constraint firstItem="Ypg-BI-F4I" firstAttribute="centerY" secondItem="SEx-Eo-F4A" secondAttribute="centerY" id="HDj-Mn-OpP"/>
                             <constraint firstAttribute="bottom" secondItem="Vjn-TR-zZy" secondAttribute="bottom" constant="8" id="LJP-Bc-HMr"/>
                             <constraint firstItem="9cb-Dp-oBR" firstAttribute="leading" secondItem="CLC-0m-dld" secondAttribute="leading" constant="16" id="TwO-5S-Pjn"/>
@@ -214,8 +225,8 @@
                     <constraint firstAttribute="bottom" secondItem="CLC-0m-dld" secondAttribute="bottom" constant="4" id="xK5-I9-8qz"/>
                 </constraints>
             </tableViewCellContentView>
-            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="bookingView" destination="Vjn-TR-zZy" id="Y95-pV-xjT"/>
                 <outlet property="can1Imagee" destination="QMd-Ag-juY" id="JTw-M5-vTZ"/>
@@ -231,6 +242,7 @@
                 <outlet property="nameLbl" destination="jzH-XY-yPU" id="H8C-Ji-8id"/>
                 <outlet property="rateLbl" destination="2m7-Ok-s1Y" id="gX9-H7-CY4"/>
                 <outlet property="sponsoredLbl" destination="PXV-Sm-76S" id="n1N-WB-Er5"/>
+                <outlet property="statusView" destination="ziO-Oa-GKN" id="vgg-fQ-biR"/>
             </connections>
             <point key="canvasLocation" x="-13.768115942028986" y="138.95089285714286"/>
         </tableViewCell>
@@ -249,5 +261,8 @@
         <namedColor name="Gray">
             <color red="0.55299997329711914" green="0.54500001668930054" blue="0.54500001668930054" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

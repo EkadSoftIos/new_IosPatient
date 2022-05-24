@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PharmacyVC: UIViewController {
+class PharmacyVC: BaseViewControll {
 
     override func viewDidLoad() {
         super.viewDidLoad()

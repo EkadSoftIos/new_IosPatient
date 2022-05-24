@@ -79,11 +79,11 @@ extension DoctorProfileViewController: UITableViewDelegate, UITableViewDataSourc
                 return doctorProfileViewModel.doctorData?.tblEmployeeAcademicQualification?.count ?? 0
             }
         } else if section == 3 {
-            if doctorProfileViewModel.branchList.count > 1  {
-                return 1
-            } else {
+//            if doctorProfileViewModel.branchList.count > 1  {
+//                return 1
+//            } else {
                 return doctorProfileViewModel.branchList.count
-            }
+//            }
         } else if section == 4 {
             if doctorProfileViewModel.homeVisit.count > 1 {
                 return 1
@@ -108,6 +108,12 @@ extension DoctorProfileViewController: UITableViewDelegate, UITableViewDataSourc
             cell.doctorId = doctorProfileViewModel.doctorData?.businessProviderEmployeeId ?? 0
             
             let doctorProfileData = doctorProfileViewModel.doctorData
+            if doctorProfileData?.isOnline == true {
+                cell.statusView.backgroundColor = UIColor.green
+                Animation.roundView(cell.statusView)
+            }else{
+                cell.statusView.backgroundColor = UIColor.clear
+            }
             if doctorProfileData?.isFavourite == true {
                 cell.likeBtn.setImage(UIImage (named: "ic_fav"), for: .normal)
                 cell.likeBtn.tag = 1
@@ -123,7 +129,7 @@ extension DoctorProfileViewController: UITableViewDelegate, UITableViewDataSourc
             Animation.roundView(cell.doctorImg)
             cell.doctorDesc.text = doctorProfileData?.fullProfisionalDetails_Localized ?? ""
             cell.doctorName.text = (doctorProfileData?.prefixTitle_Localized ?? "") + " " + (doctorProfileData?.doctorName ?? "")
-            cell.rateLbl.text = doctorProfileData?.rate ?? "0"
+            cell.rateLbl.text = doctorProfileData?.rate_stars ?? "0"
             cell.viewersNumber.text = doctorProfileData?.viewersnumber ?? "0"
             cell.patientNumber.text = doctorProfileData?.totalpatient ?? "0"
             cell.totalAppointement.text = doctorProfileData?.totalappointment ?? "0"
@@ -132,8 +138,8 @@ extension DoctorProfileViewController: UITableViewDelegate, UITableViewDataSourc
         } else if indexPath.section == 1 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "AboutDoctorCell", for: indexPath) as! AboutDoctorCell
             cell.selectionStyle = .none
-            
-            cell.doctorDesc.text = doctorProfileViewModel.doctorData?.fullProfisionalDetails_Localized ?? ""
+            cell.doctorDesc.text = doctorProfileViewModel.doctorData?.employeeAbout_Localized ?? ""
+//            cell.doctorDesc.text = doctorProfileViewModel.doctorData?.fullProfisionalDetails_Localized ?? ""
             
             if  doctorDetails == false {
                 var txt = ""
@@ -178,11 +184,11 @@ extension DoctorProfileViewController: UITableViewDelegate, UITableViewDataSourc
             let cell = tableView.dequeueReusableCell(withIdentifier: "ClinicCell", for: indexPath) as! ClinicCell
             cell.selectionStyle = .none
             
-            if doctorProfileViewModel.branchList.count > 1  {
-                cell.moreBtn.isHidden = false
-            } else {
+//            if doctorProfileViewModel.branchList.count > 1  {
+//                cell.moreBtn.isHidden = false
+//            } else {
                 cell.moreBtn.isHidden = true
-            }
+//            }
             
             cell.moreBtn.addTarget(self, action: #selector(moreBranches), for: .touchUpInside)
             
@@ -190,7 +196,7 @@ extension DoctorProfileViewController: UITableViewDelegate, UITableViewDataSourc
             cell.bookingBtn.addTarget(self, action: #selector(bookingBranch(sender:)), for: .touchUpInside)
             cell.detailsImg.isHidden = false
             
-            let branchname = (doctorProfileViewModel.branchList[indexPath.row].entityName_Localized ?? "") + "("+(doctorProfileViewModel.branchList[indexPath.row].branchName_Localized ?? "") + ")"
+            let branchname = (doctorProfileViewModel.branchList[indexPath.row].entityName_Localized ?? "") + " " + "("+(doctorProfileViewModel.branchList[indexPath.row].branchName_Localized ?? "") + ")"
             cell.branchName.text = branchname
             let fees = String(doctorProfileViewModel.branchList[indexPath.row].consultationServiceFees ?? 0)
             cell.feesLbl.text = "Fees \(fees) EGP"

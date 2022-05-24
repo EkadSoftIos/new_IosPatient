@@ -52,11 +52,11 @@ class AppointmentDetailsCancelVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         self.navigationItem.title = "Appointment Details".localized
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: AppColor.Blue]
-        yourAppointmentLBL.text = "Your Appointment"
-        withDoctorLBL.text = "With Doctor"
-        appointmentReasonTitleLBL.text = "Appointment Reason"
-        appointmentCancelTitleLBL.text = "Appointment Cancel"
-        viewHistoryTitleLBL.text = "View History Appointment"
+        yourAppointmentLBL.text = "Your Appointment".localized
+        withDoctorLBL.text = "With Doctor".localized
+        appointmentReasonTitleLBL.text = "Appointment Reason".localized
+        appointmentCancelTitleLBL.text = "Appointment Cancel".localized
+        viewHistoryTitleLBL.text = "View History Appointment".localized
         callApi(bookingID: bookingID)
     }
     override func viewDidLoad() {

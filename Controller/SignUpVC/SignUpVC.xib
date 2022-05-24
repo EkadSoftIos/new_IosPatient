@@ -21,20 +21,34 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignUpVC" customModule="E4clinic" customModuleProvider="target">
             <connections>
+                <outlet property="accountInfoLBL" destination="gis-di-NXN" id="psU-Rj-ZVW"/>
                 <outlet property="agreeBtn" destination="9fD-KX-lOE" id="bpG-ZR-vYH"/>
+                <outlet property="alreadyHaveAccountLBL" destination="qXR-6N-zxJ" id="Pg3-60-r1U"/>
+                <outlet property="bySigningUpLBL" destination="tOf-mk-lwM" id="PP1-t8-yMb"/>
                 <outlet property="confPasswordTxt" destination="hgE-zR-4nK" id="aVz-U2-vh3"/>
+                <outlet property="confirmPassLBL" destination="iKb-hI-ckB" id="gK2-bA-Ysf"/>
                 <outlet property="counntryNameLbl" destination="SAC-ed-LUc" id="oq7-tG-bgk"/>
                 <outlet property="createAccountBtn" destination="G7C-Np-SXo" id="3UI-1v-deV"/>
+                <outlet property="dateOfBirthLBL" destination="ZPG-Uh-kJZ" id="GOW-rq-EBn"/>
                 <outlet property="dateTxt" destination="7vO-yV-Ix7" id="faf-pk-9xw"/>
+                <outlet property="emailLBL" destination="GV6-xb-WFC" id="JI3-e4-b0k"/>
                 <outlet property="emailTxt" destination="VWW-mc-ujc" id="rqB-3f-e3O"/>
                 <outlet property="fNameTxt" destination="YaM-WI-ZCd" id="ltK-Hk-rPI"/>
+                <outlet property="firstNameLBL" destination="9kM-Uf-kiK" id="bOI-mY-dG7"/>
                 <outlet property="flagImage" destination="W5J-Jp-tGU" id="iaw-bk-STH"/>
+                <outlet property="genderLBL" destination="L2s-nw-0ge" id="VxD-IH-rDr"/>
                 <outlet property="genderTxt" destination="V92-Tf-DeK" id="wJv-Fn-IZO"/>
+                <outlet property="lastNameLBL" destination="Oc4-lW-EZK" id="bYd-Dg-7jW"/>
                 <outlet property="lastNameTxt" destination="uhk-PM-d3j" id="4Rf-aO-kSk"/>
+                <outlet property="loginBTN" destination="PlF-cu-pjZ" id="Yl6-KW-y5E"/>
                 <outlet property="mainView" destination="c9H-dF-B6H" id="DcJ-qN-qwK"/>
+                <outlet property="mobileLBL" destination="WMR-Lf-sza" id="zlG-HZ-BAs"/>
+                <outlet property="passLBL" destination="ffW-jf-duy" id="MMu-Vz-hyw"/>
                 <outlet property="passwordTxt" destination="mjn-RY-4Vt" id="QiA-zQ-txx"/>
                 <outlet property="phoneTxt" destination="LHO-I3-VWF" id="APC-X3-uML"/>
                 <outlet property="profileImage" destination="HLo-9U-y8M" id="H03-Sn-b1T"/>
+                <outlet property="signUpTitleLBL" destination="Hcg-4p-Aqm" id="AFD-Cj-7HR"/>
+                <outlet property="termsBTN" destination="o2m-NC-vcD" id="D5G-tX-3Hn"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -556,21 +570,21 @@
                                             <rect key="frame" x="15" y="728" width="318" height="40"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By signing up you are agree to our" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tOf-mk-lwM">
-                                                    <rect key="frame" x="0.0" y="0.0" width="214" height="40"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="215" height="40"/>
                                                     <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="14"/>
                                                     <color key="textColor" name="darkGray"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rxl-ZB-P2J">
-                                                    <rect key="frame" x="216" y="0.0" width="102" height="40"/>
+                                                    <rect key="frame" x="217" y="0.0" width="101" height="40"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o2m-NC-vcD">
-                                                            <rect key="frame" x="5" y="4" width="92" height="32"/>
+                                                            <rect key="frame" x="5" y="4" width="91" height="32"/>
                                                             <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="15"/>
                                                             <state key="normal" title="Terms of use"/>
                                                         </button>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W25-Ps-A1n">
-                                                            <rect key="frame" x="5" y="39" width="92" height="1"/>
+                                                            <rect key="frame" x="5" y="39" width="91" height="1"/>
                                                             <color key="backgroundColor" red="0.062046542759999997" green="0.4188948274" blue="0.735506773" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="1" id="JG4-PW-QSs"/>

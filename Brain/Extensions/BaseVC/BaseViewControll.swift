@@ -18,10 +18,23 @@ class BaseViewControll: UIViewController, UIImagePickerControllerDelegate, UINav
     let screenSize = UIScreen.main.bounds
     let dimView = UIView()
     var imagePicker = UIImagePickerController()
-    
+    var notificationCount = 0
+    var notificationlabel: UILabel = {
+        let lb = UILabel(frame: CGRect(x: 5, y: -10, width: 25, height: 20))
+        lb.layer.borderColor = UIColor.clear.cgColor
+        lb.layer.borderWidth = 2
+        lb.layer.cornerRadius = lb.bounds.size.height / 2
+        lb.textAlignment = .center
+        lb.layer.masksToBounds = true
+        lb.font = UIFont(name: "SanFranciscoText-Light", size: 4)
+        lb.textColor = .white
+        lb.backgroundColor = .red
+        return lb
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.setupUI()
         // To make the navigation bar transparent
        
       
@@ -58,11 +71,50 @@ class BaseViewControll: UIViewController, UIImagePickerControllerDelegate, UINav
     override var preferredStatusBarStyle : UIStatusBarStyle {
         return .lightContent
     }
-    
-    
-    
+    fileprivate func setupUI() {
+       setUpBarButton()
+       setNvgIcons()
+    }
+    func setUpBarButton() {
+        let logoImage = UIImage.init(named: "BarLogo")
+        let logoImageView = UIImageView.init(image: logoImage)
+        logoImageView.frame = CGRect(x: 0.0, y: 0.0, width: 60, height: 25.0)
+        logoImageView.contentMode = .scaleAspectFit
+        let imageItem = UIBarButtonItem.init(customView: logoImageView)
+        navigationItem.leftBarButtonItem = imageItem
+    }
+    private func setNvgIcons(){
+        // button
+        let notificationButton = UIButton(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
+        notificationButton.setBackgroundImage(UIImage(named: "notification"), for: .normal)
+        notificationButton.addTarget(self, action: #selector(NotificationButtonTouched), for: .touchUpInside)
+        notificationlabel.text = String(notificationCount)
+        notificationButton.addSubview(notificationlabel)
+        let notificationBarButtomItem = UIBarButtonItem(customView: notificationButton)
+     
+        let negativeSpacer = UIBarButtonItem.init(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
+        negativeSpacer.width = 16
+        // Bar button item
+        }
+    func getNotificationCount() {
+        NetworkClient.performRequest(_type: NotificationCountModel.self, router: APIRouter.notificationCount) {[weak self] (result) in
+            guard let self = self else {return}
+            switch result {
+            case.success(let data):
+                self.notificationCount = data.message ?? 0
+                self.notificationlabel.text = String(self.notificationCount)
+            case.failure(let err):
+                print(err)
+            }
+        }
+    }
 
-    
+    @objc func NotificationButtonTouched() {
+     tabBarController?.tabBar.isHidden = true
+     let sb = UIStoryboard(name: "Main", bundle: nil)
+     let vc = sb.instantiateViewController(withIdentifier: "NotificationsVC") as! NotificationsVC
+     navigationController?.pushViewController(vc, animated: true)
+    }
     // To creat dim view when the side bar is open
     func createDimView(){
         dimView.frame = CGRect.init(x: 0, y: 0, width: screenSize.width, height: screenSize.height)

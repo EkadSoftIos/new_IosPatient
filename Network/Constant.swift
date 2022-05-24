@@ -16,7 +16,10 @@ struct Constants {
     static let baseURL = "https://e4clinicdevapi.ekadsoft.org/api/"
     static let baseURLImage = "https://e4clinicdevapi.ekadsoft.org/"
     
-    
+    static let languageSelected = "languageSelected"
+    static let appleLanguagesKey = "AppleLanguages"
+    static let launchedBefore = "launchedBefore"
+
     
 //////////
     

@@ -20,6 +20,7 @@ extension ReviewsVC: UITableViewDelegate, UITableViewDataSource{
         let imgURL = URL(string: "\(Constants.baseURLImage)\(patientImg)")
         cell.patientImg?.kf.indicatorType = .activity
         cell.patientImg?.kf.setImage(with: imgURL)
+        cell.rateDate.text = doctorReviewData?.patientReviewList?[indexPath.row].createDate ?? ""
         let fName = doctorReviewData?.patientReviewList?[indexPath.row].patient?.firstName ?? ""
         let lName = doctorReviewData?.patientReviewList?[indexPath.row].patient?.lastName ?? ""
         cell.patientName.text = fName + lName

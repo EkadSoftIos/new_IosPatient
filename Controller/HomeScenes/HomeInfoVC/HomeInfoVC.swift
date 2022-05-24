@@ -14,9 +14,18 @@ class HomeInfoVC: UIViewController {
     @IBOutlet var homeView: UIView!
     @IBOutlet var serviseView: UIView!
     @IBOutlet var serviseTableView: UITableView!
+    
+    @IBOutlet weak var doctorMedicalServiceLBL: UILabel!
+    @IBOutlet weak var homeVisitLBL: UILabel!
     override func viewWillAppear(_ animated: Bool) {
+        setLocalization()
         self.navigationItem.title = "Home Info".localized
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: AppColor.Blue]
+    }
+    func setLocalization(){
+        
+        homeVisitLBL.text = "HomeVisit".localized
+        doctorMedicalServiceLBL.text = "DoctorMedicalService".localized
     }
     override func viewDidLoad() {
         super.viewDidLoad()

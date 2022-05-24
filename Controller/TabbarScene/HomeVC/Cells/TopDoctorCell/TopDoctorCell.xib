@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -42,13 +43,13 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dr. Ahmed Karim" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="naD-GG-g74">
-                                <rect key="frame" x="68" y="8" width="106.5" height="16.5"/>
+                                <rect key="frame" x="68" y="8" width="170" height="19"/>
                                 <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="14"/>
                                 <color key="textColor" name="Blue"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dentistry" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6as-TH-Bmf">
-                                <rect key="frame" x="68" y="26.5" width="56" height="16.5"/>
+                                <rect key="frame" x="68" y="29" width="56" height="19"/>
                                 <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="14"/>
                                 <color key="textColor" name="Gray"/>
                                 <nil key="highlightedColor"/>
@@ -129,7 +130,7 @@
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="au4-ft-plc" secondAttribute="trailing" constant="16" id="2wq-fv-Lqu"/>
                             <constraint firstItem="naD-GG-g74" firstAttribute="leading" secondItem="r4A-wr-egv" secondAttribute="trailing" constant="8" id="5SX-5Z-8vC"/>
@@ -142,18 +143,19 @@
                             <constraint firstItem="naD-GG-g74" firstAttribute="top" secondItem="SDQ-AT-leT" secondAttribute="top" constant="8" id="aae-bU-bb4"/>
                             <constraint firstItem="6as-TH-Bmf" firstAttribute="top" secondItem="naD-GG-g74" secondAttribute="bottom" constant="2" id="fUg-9I-S3u"/>
                             <constraint firstItem="kxN-rd-NLW" firstAttribute="centerX" secondItem="SDQ-AT-leT" secondAttribute="centerX" id="sZD-Lb-nbI"/>
+                            <constraint firstAttribute="trailing" secondItem="naD-GG-g74" secondAttribute="trailing" constant="8" id="si6-b2-8qv"/>
                             <constraint firstItem="6as-TH-Bmf" firstAttribute="leading" secondItem="r4A-wr-egv" secondAttribute="trailing" constant="8" id="xJy-6y-IW0"/>
                             <constraint firstItem="r4A-wr-egv" firstAttribute="leading" secondItem="SDQ-AT-leT" secondAttribute="leading" constant="10" id="zMp-W2-3Ph"/>
                         </constraints>
                     </view>
                 </subviews>
             </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
                 <constraint firstItem="SDQ-AT-leT" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="DGb-dM-I6x"/>
                 <constraint firstAttribute="trailing" secondItem="SDQ-AT-leT" secondAttribute="trailing" constant="8" id="Pce-pq-8SY"/>
                 <constraint firstItem="SDQ-AT-leT" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="4" id="li7-2L-tyw"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="258" height="105"/>
             <connections>
                 <outlet property="doctorImage" destination="r4A-wr-egv" id="5dG-5w-aOm"/>
@@ -178,5 +180,8 @@
         <namedColor name="Gray">
             <color red="0.55299997329711914" green="0.54500001668930054" blue="0.54500001668930054" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

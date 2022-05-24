@@ -75,6 +75,16 @@ enum APIRouter : URLRequestConvertible{
     case AppointmentsDetailsCancel(bookingid: Int)
     case cancelAppointment(params: [String: Any])
     
+    case notificationList
+    case readAllNotifications
+    case deleteAllNotification
+    case deleteNotification(notificationId: Int)
+    case readNotification(notificationId: Int)
+    case notificationCount
+    case faq
+    case saveContactUs(params: [String: Any])
+    case getFullWebPages
+    
     var method : HTTPMethod {
         switch self {
         case .login(_):
@@ -127,6 +137,24 @@ enum APIRouter : URLRequestConvertible{
             return .post
         case .forgetPass:
             return .post
+        case .notificationList:
+            return .get
+        case .readAllNotifications:
+            return .get
+        case .deleteAllNotification:
+            return .get
+        case .deleteNotification(_):
+            return .get
+        case .readNotification(_):
+            return .get
+        case .notificationCount:
+            return .get
+        case.faq:
+            return .get
+        case.saveContactUs:
+            return .post
+        case.getFullWebPages:
+            return .get
         }
     }
     var path : String {
@@ -262,6 +290,26 @@ enum APIRouter : URLRequestConvertible{
             return "\(Constants.baseURL)Common/Logout"
         case .forgetPass:
            return "\(Constants.baseURL)Common/ForgetPassword"
+        case .notificationList:
+            return "\(Constants.baseURL)Patient/GetNotificationList"
+        case .readAllNotifications:
+            return "\(Constants.baseURL)Patient/MarkAsReadAllNotification"
+        case .deleteAllNotification:
+            return "\(Constants.baseURL)Patient/DeleteAllNotification"
+        case .deleteNotification(let notificationId):
+            let url = "\(Constants.baseURL)\("Patient/DeleteNotification?NotificationID=")\(notificationId)"
+            return url
+        case .readNotification(let notificationId):
+            let url = "\(Constants.baseURL)\("Patient/MarkAsReadNotification?NotificationID=")\(notificationId)"
+            return url
+        case .notificationCount:
+            return "\(Constants.baseURL)Patient/GetNotReadNotificationCount"
+        case.faq:
+            return "\(Constants.baseURL)Common/Gethelpsupport"
+        case.saveContactUs:
+            return "\(Constants.baseURL)Common/SaveContactUs"
+        case.getFullWebPages:
+            return "\(Constants.baseURL)Common/GetFullWebPages"
         }
     }
     var parameters : Parameters?{
@@ -350,6 +398,25 @@ enum APIRouter : URLRequestConvertible{
             return params
         case .forgetPass(params: let params):
             return params
+        case .notificationList:
+            return nil
+        case .readAllNotifications:
+            return nil
+        case .deleteAllNotification:
+            return nil
+        case .deleteNotification(_):
+            return nil
+        case .readNotification(_):
+            return nil
+            
+        case .notificationCount:
+            return nil
+        case.faq:
+            return nil
+        case.saveContactUs(params: let para):
+            return para
+        case.getFullWebPages:
+            return nil
         }
     }
     var apiToken : String {

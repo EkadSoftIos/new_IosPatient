@@ -25,8 +25,8 @@ class DoctorProfileHeaderCell: UITableViewCell {
                     sImg3.image = #imageLiteral(resourceName: "ic_home_visit")
                 case 4:
                     sImg4.image = #imageLiteral(resourceName: "f4")
-                case 5:
-                    sImg5.image = #imageLiteral(resourceName: "ic_help_call")
+//                case 5:
+//                    sImg5.image = #imageLiteral(resourceName: "ic_help_call")
                 default:
                     return
                 }
@@ -48,6 +48,7 @@ class DoctorProfileHeaderCell: UITableViewCell {
     @IBOutlet weak var doctorName: UILabel!
     @IBOutlet weak var doctorImg: UIImageView!
     @IBOutlet weak var bgView: UIView!
+    @IBOutlet weak var statusView: UIView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

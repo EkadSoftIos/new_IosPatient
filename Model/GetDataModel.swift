@@ -174,20 +174,20 @@ struct BookingSummaryFile: Codable {
 
    // MARK: - TblPatientDisease
    struct TblPatientDisease: Codable {
-       var patientDiseaseID, patientFk: Int?
-       var diseaseFk, diseaseStatusFk: Int?
-       var medicationIDS, diagonsedDate: String?
-       var notes: String?
-       var businessProviderEmployeeFk: Int?
-       var doctorName: String?
-       var createDate: String?
-       var isActive, deleted: Bool?
+       let patientDiseaseID, patientFk, diseaseFk, diseaseStatusFk: Int?
+       let medicationIDS, diagonsedDate, notes: String?
+       let businessProviderEmployeeFk: Int?
+       let doctorName, createDate: String?
+       let isActive, deleted: Bool?
+       let diseaseNamelocalized: String?
+       let createdByDoctorFk: Int?
+       let createdByDoctorName: String?
 
        enum CodingKeys: String, CodingKey {
            case patientDiseaseID = "patientDiseaseId"
            case patientFk, diseaseFk, diseaseStatusFk
            case medicationIDS = "medicationIds"
-           case diagonsedDate, notes, businessProviderEmployeeFk, doctorName, createDate, isActive, deleted
+           case diagonsedDate, notes, businessProviderEmployeeFk, doctorName, createDate, isActive, deleted, diseaseNamelocalized, createdByDoctorFk, createdByDoctorName
        }
    }
 

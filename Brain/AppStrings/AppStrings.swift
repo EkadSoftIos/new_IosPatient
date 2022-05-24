@@ -16,7 +16,7 @@ struct AppString {
     static let TabHome = "Home".localized
     static let Appointment = "Appointment".localized
     static let Pharmacy = "Pharmacy".localized
-    static let Blog = "Blog".localized
+    static let Club = "Club".localized
     static let More = "More".localized
 
     //electronic Service

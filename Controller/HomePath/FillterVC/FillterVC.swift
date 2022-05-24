@@ -95,6 +95,7 @@ class FillterVC: UIViewController, BaseViewProtocol {
     @IBOutlet weak var availabilityBtnView: UIView!
     @IBOutlet var AvailabilityView: UIView!
     @IBOutlet weak var bgConst: NSLayoutConstraint!
+    @IBOutlet weak var selectDateView: UIView!
     
     var mainSpecialityID: Int?
     var mainSpecialityIndex = 0
@@ -243,6 +244,7 @@ class FillterVC: UIViewController, BaseViewProtocol {
         selectedAvaikability()
     }
     func selectedAvaikability() {
+        selectDateView.isHidden = true
         expandedAvailability = !expandedAvailability
         if expandedAvailability {
             stackAvilabilityView.isHidden = false
@@ -260,14 +262,17 @@ class FillterVC: UIViewController, BaseViewProtocol {
         selected(btn: selectDayBtn)
         unSelected(btn: tommorrowBtn)
         unSelected(btn: todayBtn)
+        selectDateView.isHidden = false
     }
     @IBAction func tommorrowBtnPressed(_ sender: Any){
+        selectDateView.isHidden = true
         date = dateFormatter.string(from: NSDate().addingTimeInterval(24 * 60 * 60) as Date)
         selected(btn: tommorrowBtn)
         unSelected(btn: todayBtn)
         unSelected(btn: selectDayBtn)
     }
     @IBAction func todayBtnPressed(_ sender: Any) {
+        selectDateView.isHidden = true
         dateFormatter.timeZone = TimeZone.current
         date = dateFormatter.string(from: Date())
         

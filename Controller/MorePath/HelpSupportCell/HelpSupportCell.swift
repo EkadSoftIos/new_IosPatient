@@ -12,24 +12,24 @@ class HelpSupportCell: UITableViewCell {
     @IBOutlet var cellView: UIView!
 
     var slf: UIViewController!
-//    var webPagesData: [WebPagesData]? {
-//        didSet {
-//            if webPagesData?.count ?? 0 > 0 {
-//                for data in webPagesData! {
-//                    if data.id == 2 {
-//                        privacyData = data.content ?? ""
-//                    } else if data.id == 3 {
-//                        supportData = data.content ?? ""
-//                    } else if data.id == 5 {
-//                        faqData = data.content ?? ""
-//                    }
-//                }
-//            }
-//        }
-//    }
-//    var privacyData = ""
-//    var supportData = ""
-//    var faqData = ""
+    var webPagesData: [WebPagesData]? {
+        didSet {
+            if webPagesData?.count ?? 0 > 0 {
+                for data in webPagesData! {
+                    if data.id == 2 {
+                        privacyData = data.content ?? ""
+                    } else if data.id == 3 {
+                        supportData = data.content ?? ""
+                    } else if data.id == 5 {
+                        faqData = data.content ?? ""
+                    }
+                }
+            }
+        }
+    }
+    var privacyData = ""
+    var supportData = ""
+    var faqData = ""
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -54,13 +54,15 @@ class HelpSupportCell: UITableViewCell {
     
     @IBAction func didTappedConditions(_ sender: Any) {
         let sb = UIStoryboard(name: "Main", bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: "HelpAndSupportVC")
+        let vc = sb.instantiateViewController(withIdentifier: "HelpAndSupportVC") as! HelpAndSupportVC
+        vc.data = supportData
         slf.navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func didTappedPrivacyPolicy(_ sender: Any) {
         let sb = UIStoryboard(name: "Main", bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: "PrivacyPolicyVC")
+        let vc = sb.instantiateViewController(withIdentifier: "PrivacyPolicyVC") as! PrivacyPolicyVC
+        vc.data = privacyData
         slf.navigationController?.pushViewController(vc, animated: true)
     }
     static var nib : UINib {

@@ -16,7 +16,6 @@ class EditProfileVC: UIViewController,UITextFieldDelegate {
     @IBOutlet var lNameTxt: UITextField!
     @IBOutlet var phoneTxt: UITextField!
     @IBOutlet var emailTxt: UITextField!
-    @IBOutlet var gennderTxt: UITextField!
     @IBOutlet var weightTxt: UITextField!
     @IBOutlet var heightTxt: UITextField!
     @IBOutlet var bloodTxt: UITextField!
@@ -93,12 +92,9 @@ class EditProfileVC: UIViewController,UITextFieldDelegate {
         genderType = userData?.patientGender
     }
     func setUppicker(){
-//        if #available(iOS 14.0, *)
-//        {
-//            datePicker.preferredDatePickerStyle = .wheels
-//        }
         self.genderTxt.inputView = self.pickerView
         self.genderTxt.inputAccessoryView = self.pickerView.toolbar
+        self.genderTxt.textAlignment = .left
         self.bloodTxt.inputView = self.pickerView
         self.bloodTxt.inputAccessoryView = self.pickerView.toolbar
         self.pickerView.dataSource = self

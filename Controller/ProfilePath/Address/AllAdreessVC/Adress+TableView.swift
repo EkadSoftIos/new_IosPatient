@@ -21,7 +21,13 @@ extension AllAdressVC: UITableViewDelegate, UITableViewDataSource {
         cell.adressLbl.text = "\(addressModel?.countryNameLocalized ?? ""), \(addressModel?.cityNameLocalized ?? "")\n \(addressModel?.areaNameLocalized ?? ""), \(addressModel?.patientAddressName ?? "")\n \(addressModel?.landMark ?? "")"
         
         cell.deleteHandelr = {
-            self.callApiDelete(id: self.model?.message?.tblPatientAddress?[indexPath.row].patientAddressID ?? 0)
+//            self.callApiDelete(id: self.model?.message?.tblPatientAddress?[indexPath.row].patientAddressID ?? 0)
+            let vc = DeleteLocationVC()
+            vc.id = self.model?.message?.tblPatientAddress?[indexPath.row].patientAddressID ?? 0
+            vc.Delegete = self
+             vc.modalPresentationStyle = .overCurrentContext
+             vc.modalTransitionStyle = .crossDissolve
+             self.present(vc, animated: true, completion: nil)
         }
         cell.defultHandelr = {
             let vc = DefultLocationVC()

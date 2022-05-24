@@ -9,12 +9,17 @@ import Foundation
 import UIKit
 extension LoginVC{
     func validationinput(){
+        let phoneString = phoneTxt.text ?? ""
+        let phoneArray = Array(phoneString)
+        
 //        if agree == false {
 //            self.showMessage(title: "", sub: "You should agree on terms and conditions.", type: .error, layout: .messageView)
 //            return
 //        }
         if phoneTxt.text!.isEmpty || passwordTxt.text!.isEmpty {
             self.showMessage(title: "", sub: "phone and passworrd are required".localized, type: .error, layout: .messageView)
+        }else if phoneArray.count > 15 {
+            self.showMessage(title: "", sub: "phone accept 15 number max".localized, type: .error, layout: .messageView)
         }else{
             self.loginBtn.startAnimation()
             callApi()
@@ -22,11 +27,14 @@ extension LoginVC{
     }
     func callApi(){
         let deviceId = UIDevice.current.identifierForVendor!.uuidString
+        let prefix = "+2"
+                guard phoneTxt.text!.hasPrefix(prefix) else { return }
+                let phoneWithoutPref  = String(phoneTxt.text!.dropFirst(prefix.count).trimmingCharacters(in: .whitespacesAndNewlines))
         let parameters: [String: Any] = [
-            "Username": phoneTxt.text ?? "",
+            "Username": phoneWithoutPref,
             "Password": passwordTxt.text ?? "",
             "RememberMe": true,
-            "PatientMobileCode": "002",
+            "PatientMobileCode": self.digitalCountryCode,
             "Decvice_id": deviceId,
             "Device_type": 0,
             "Device_token": deviceId,

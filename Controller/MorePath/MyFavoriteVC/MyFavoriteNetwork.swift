@@ -39,6 +39,8 @@ extension MyFavoriteVC {
                 print(model)
                 if model.successtate == 200{
                     print("success home")
+                    self.showMessage(title: "", sub: "Doctor has been removed from favorites list".localized, type: .error, layout: .messageView)
+                    //
                     self.addedSuccess = model.message ?? ""
                 }else{
 

@@ -14,6 +14,7 @@ extension AddMedicationListVC{
             switch result{
             case .success(let model):
                 print("\(model)")
+                
                 self.model = model
                 self.successCallApi()
             case .failure(let model):

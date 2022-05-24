@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -69,23 +70,23 @@
                                             </userDefinedRuntimeAttributes>
                                         </imageView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="8Vh-9j-LXx">
-                                            <rect key="frame" x="89" y="23" width="7.5" height="50.5"/>
+                                            <rect key="frame" x="89" y="23" width="7.5" height="65"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eau-Bo-4Ma">
-                                                    <rect key="frame" x="0.0" y="0.0" width="7.5" height="17.5"/>
-                                                    <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="15"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="7.5" height="23"/>
+                                                    <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="17"/>
                                                     <color key="textColor" name="Blue"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Kq-ym-qec">
-                                                    <rect key="frame" x="0.0" y="18.5" width="7.5" height="15.5"/>
-                                                    <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="13"/>
+                                                    <rect key="frame" x="0.0" y="24" width="7.5" height="20"/>
+                                                    <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="15"/>
                                                     <color key="textColor" name="darkGray"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Coh-Xq-elw">
-                                                    <rect key="frame" x="0.0" y="35" width="7.5" height="15.5"/>
-                                                    <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="13"/>
+                                                    <rect key="frame" x="0.0" y="45" width="7.5" height="20"/>
+                                                    <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="15"/>
                                                     <color key="textColor" name="darkGray"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -103,29 +104,29 @@
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dml-JD-gPJ">
-                                            <rect key="frame" x="32" y="101" width="71.5" height="16.5"/>
+                                            <rect key="frame" x="32" y="101" width="73.5" height="19"/>
                                             <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="14"/>
                                             <color key="textColor" name="Blue"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jvz-Fw-9Zd">
-                                            <rect key="frame" x="314" y="101" width="22" height="16.5"/>
+                                            <rect key="frame" x="316" y="101" width="20" height="19"/>
                                             <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="14"/>
                                             <color key="textColor" name="Blue"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hpR-VJ-Pqg">
-                                            <rect key="frame" x="24" y="122.5" width="324" height="2"/>
+                                            <rect key="frame" x="24" y="125" width="324" height="4"/>
                                             <color key="tintColor" name="green"/>
                                         </progressView>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sWu-kq-2Zl">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sWu-kq-2Zl">
                                             <rect key="frame" x="25" y="91" width="322" height="51"/>
                                             <connections>
                                                 <action selector="profilePopUp_Click:" destination="-1" eventType="touchUpInside" id="rl6-j4-cSi"/>
                                             </connections>
                                         </button>
                                     </subviews>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="sWu-kq-2Zl" secondAttribute="trailing" constant="25" id="4be-ee-fDc"/>
                                         <constraint firstItem="UNq-bM-7Sh" firstAttribute="top" secondItem="WFP-Df-iqw" secondAttribute="top" constant="23" id="6eH-ZI-i8t"/>
@@ -157,26 +158,26 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="138" height="30"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_health_active" translatesAutoresizingMaskIntoConstraints="NO" id="R3h-KY-0Tx">
-                                                            <rect key="frame" x="3.5" y="5" width="20" height="20"/>
+                                                            <rect key="frame" x="2.5" y="5" width="20" height="20"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="20" id="A6h-uU-0wt"/>
                                                                 <constraint firstAttribute="width" constant="20" id="PQO-Q4-T7M"/>
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Visit summary" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a3i-uL-HkY">
-                                                            <rect key="frame" x="31.5" y="8" width="75.5" height="14"/>
+                                                            <rect key="frame" x="30.5" y="7" width="77.5" height="16"/>
                                                             <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="12"/>
                                                             <color key="textColor" name="darkGray"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qiV-GK-t5X">
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qiV-GK-t5X">
                                                             <rect key="frame" x="0.0" y="0.0" width="138" height="30"/>
                                                             <connections>
                                                                 <action selector="visitSummaryClick:" destination="-1" eventType="touchUpInside" id="YwA-hc-Yqi"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
                                                         <constraint firstItem="R3h-KY-0Tx" firstAttribute="centerY" secondItem="a3i-uL-HkY" secondAttribute="centerY" id="1Ha-tS-Bbt"/>
                                                         <constraint firstItem="qiV-GK-t5X" firstAttribute="top" secondItem="tth-4t-NA7" secondAttribute="top" id="63T-g7-CQm"/>
@@ -192,26 +193,26 @@
                                                     <rect key="frame" x="138" y="0.0" width="138" height="30"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_health_active" translatesAutoresizingMaskIntoConstraints="NO" id="JL4-2L-RLJ">
-                                                            <rect key="frame" x="1.5" y="5" width="20" height="20"/>
+                                                            <rect key="frame" x="0.5" y="5" width="20" height="20"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="20" id="mjE-nc-QkP"/>
                                                                 <constraint firstAttribute="height" constant="20" id="rcv-Mm-yE5"/>
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medical Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TkR-Du-zya">
-                                                            <rect key="frame" x="29.5" y="8" width="79.5" height="14"/>
+                                                            <rect key="frame" x="28.5" y="7" width="81.5" height="16"/>
                                                             <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="12"/>
                                                             <color key="textColor" name="darkGray"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vOc-0W-AFk">
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vOc-0W-AFk">
                                                             <rect key="frame" x="0.0" y="0.0" width="138" height="30"/>
                                                             <connections>
                                                                 <action selector="health_Click:" destination="-1" eventType="touchUpInside" id="bez-Zr-1ts"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
                                                         <constraint firstItem="TkR-Du-zya" firstAttribute="centerY" secondItem="B1S-kn-bxg" secondAttribute="centerY" id="67G-W6-YSa"/>
                                                         <constraint firstItem="TkR-Du-zya" firstAttribute="leading" secondItem="JL4-2L-RLJ" secondAttribute="trailing" constant="8" id="81i-54-NSI"/>
@@ -227,26 +228,26 @@
                                                     <rect key="frame" x="276" y="0.0" width="138" height="30"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="7R1-NO-G5E">
-                                                            <rect key="frame" x="10.5" y="5" width="20" height="20"/>
+                                                            <rect key="frame" x="9.5" y="5" width="20" height="20"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="20" id="GHR-VW-cJd"/>
                                                                 <constraint firstAttribute="height" constant="20" id="ePY-hf-FaY"/>
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Patient Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kBZ-RI-4TA">
-                                                            <rect key="frame" x="38.5" y="8" width="61.5" height="14"/>
+                                                            <rect key="frame" x="37.5" y="7" width="63.5" height="16"/>
                                                             <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="12"/>
                                                             <color key="textColor" name="Blue"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w7w-51-9BE">
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w7w-51-9BE">
                                                             <rect key="frame" x="0.0" y="0.0" width="138" height="30"/>
                                                             <connections>
                                                                 <action selector="patient_Click:" destination="-1" eventType="touchUpInside" id="DIk-fJ-G7y"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
                                                         <constraint firstItem="w7w-51-9BE" firstAttribute="top" secondItem="fj5-Qu-cVt" secondAttribute="top" id="1Nq-sb-9cr"/>
                                                         <constraint firstItem="w7w-51-9BE" firstAttribute="leading" secondItem="fj5-Qu-cVt" secondAttribute="leading" id="3Yk-tK-d6a"/>
@@ -262,7 +263,7 @@
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </stackView>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QgP-fo-BMb">
-                                            <rect key="frame" x="295" y="38" width="100" height="2"/>
+                                            <rect key="frame" x="19" y="38" width="100" height="2"/>
                                             <color key="backgroundColor" name="Blue"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="2" id="OEU-eM-JnD"/>
@@ -270,11 +271,11 @@
                                             </constraints>
                                         </view>
                                     </subviews>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
                                         <constraint firstItem="PjU-nD-xdD" firstAttribute="leading" secondItem="G8M-Pv-S1e" secondAttribute="leading" id="9UZ-8J-XhX"/>
                                         <constraint firstAttribute="height" constant="40" id="V4x-gV-FcV"/>
-                                        <constraint firstItem="QgP-fo-BMb" firstAttribute="centerX" secondItem="fj5-Qu-cVt" secondAttribute="centerX" id="iny-ew-iML"/>
+                                        <constraint firstItem="QgP-fo-BMb" firstAttribute="centerX" secondItem="qiV-GK-t5X" secondAttribute="centerX" id="iFK-Ux-ByH"/>
                                         <constraint firstItem="PjU-nD-xdD" firstAttribute="top" secondItem="G8M-Pv-S1e" secondAttribute="top" id="kxR-1W-IoN"/>
                                         <constraint firstAttribute="bottom" secondItem="PjU-nD-xdD" secondAttribute="bottom" constant="10" id="ltn-G6-Vqn"/>
                                         <constraint firstAttribute="trailing" secondItem="PjU-nD-xdD" secondAttribute="trailing" id="or5-oX-LrH"/>
@@ -283,10 +284,10 @@
                                 </view>
                                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3jK-OI-oOb">
                                     <rect key="frame" x="0.0" y="248" width="414" height="932"/>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 </tableView>
                             </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
                                 <constraint firstItem="G8M-Pv-S1e" firstAttribute="leading" secondItem="9Bo-Nr-qJJ" secondAttribute="leading" id="HiS-ep-zSP"/>
                                 <constraint firstAttribute="trailing" secondItem="WFP-Df-iqw" secondAttribute="trailing" constant="21" id="Jzz-Gs-aNX"/>
@@ -311,14 +312,14 @@
                     </constraints>
                 </scrollView>
             </subviews>
-            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="APm-85-BbT" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="18x-7w-p7H"/>
                 <constraint firstAttribute="bottom" secondItem="APm-85-BbT" secondAttribute="bottom" id="2kZ-f1-F2y"/>
                 <constraint firstItem="APm-85-BbT" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="42Z-v7-TxQ"/>
                 <constraint firstItem="APm-85-BbT" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="C7I-vc-3wR"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="-104.34782608695653" y="87.723214285714278"/>
         </view>
     </objects>
@@ -336,5 +337,8 @@
         <namedColor name="green">
             <color red="0.10999999940395355" green="0.84700000286102295" blue="0.082000002264976501" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

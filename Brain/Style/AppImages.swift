@@ -11,7 +11,7 @@ struct AppImages {
     
     static let Logo = UIImage(named: "AppLogo")
     static let BarLogo = UIImage(named: "BarLogo")
-    
+    static let notLogo = UIImage(named: "notification")
    
     //Tabbar
     static let Home = UIImage(named: "ic_home_unactive")

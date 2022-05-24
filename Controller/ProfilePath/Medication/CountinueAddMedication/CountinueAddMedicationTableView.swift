@@ -20,7 +20,7 @@ extension CountinueAddMedicationVC: UITableViewDelegate, UITableViewDataSource{
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         searchBar.text = searchArr[indexPath.row].employeeName
-        doctorId = searchArr[indexPath.row].businessProviderEmployeeID
+        doctorId = searchArr[indexPath.row].businessProviderEmployeeID ?? 0
         setDoctorsView()
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

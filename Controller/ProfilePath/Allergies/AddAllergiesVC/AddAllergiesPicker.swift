@@ -20,8 +20,8 @@ extension AddAllergiesVC: UIPickerViewDataSource, UIPickerViewDelegate {
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        medicationID = medicationModel?.message?[row].medicationID
-        medicationTxt.text = medicationModel?.message?[row].medicationName
+//        medicationID = medicationModel?.message?[row].medicationID
+//        medicationTxt.text = medicationModel?.message?[row].medicationName
     }
     //MARK:-date picker
     func showDatePicker(){
@@ -30,22 +30,34 @@ extension AddAllergiesVC: UIPickerViewDataSource, UIPickerViewDelegate {
 //            datePicker.preferredDatePickerStyle = .wheels
 //        }
         //Formate Date
-        datePicker.datePickerMode = .date
-        
-        //ToolBar
-        let toolbar = UIToolbar();
-        toolbar.sizeToFit()
-        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(donedatePicker));
-        let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
-        let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelDatePicker));
-        
-        toolbar.setItems([doneButton,spaceButton,cancelButton], animated: false)
-        
-        firstTxt.inputAccessoryView = toolbar
-        firstTxt.inputView = datePicker
-        
+//        datePicker.datePickerMode = .date
+//
+//        //ToolBar
+//        let toolbar = UIToolbar();
+//        toolbar.sizeToFit()
+//        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(donedatePicker));
+//        let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
+//        let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelDatePicker));
+//
+//        toolbar.setItems([doneButton,spaceButton,cancelButton], animated: false)
+//
+//        firstTxt.inputAccessoryView = toolbar
+//        firstTxt.inputView = datePicker
+        let datePickerView = UIDatePicker()
+        datePickerView.datePickerMode = .date
+        firstTxt.inputView = datePickerView
+        datePickerView.addTarget(self, action: #selector(handleDatePicker(sender:)), for: .valueChanged)
+
     }
-    
+    @objc func handleDatePicker(sender: UIDatePicker) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let date = dateFormatter.string(from: sender.date)
+        firstTxt.text = date
+//        self.view.endEditing(true)
+//        dateFrom = date
+//        self.delegate?.sendDate(fDate: dateFrom ?? "", tDate: dateTo ?? "")
+    }
     @objc func donedatePicker(){
         
         let formatter = DateFormatter()

@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -35,7 +36,9 @@
                 <outlet property="resetBTN" destination="Qg2-dV-mRh" id="dqh-ER-P8G"/>
                 <outlet property="searchBTN" destination="iSw-RN-jGD" id="u7e-55-VrK"/>
                 <outlet property="selectServiceLBL" destination="A2R-rl-PVs" id="EOc-xr-es6"/>
+                <outlet property="serviceTypeHeightConstraint" destination="scz-Ax-FZq" id="jwG-6r-hWp"/>
                 <outlet property="serviseView" destination="mS4-w1-5bk" id="mMu-ez-3cg"/>
+                <outlet property="statusHeightConstraint" destination="NNy-sR-kEg" id="XGO-A5-JSI"/>
                 <outlet property="statusView" destination="24Q-v6-gxO" id="8gK-4m-rh7"/>
                 <outlet property="videoIcon" destination="bEE-Cq-GXy" id="IAe-Y0-ZUi"/>
                 <outlet property="videoLBL" destination="fUk-9P-ggb" id="AvZ-4d-yzX"/>
@@ -51,23 +54,23 @@
                     <rect key="frame" x="20" y="64" width="374" height="190"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Service Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A2R-rl-PVs">
-                            <rect key="frame" x="23" y="9" width="149" height="20"/>
+                            <rect key="frame" x="23" y="9" width="147.5" height="23"/>
                             <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="17"/>
                             <color key="textColor" name="Blue"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QWt-fT-Klj">
-                            <rect key="frame" x="0.0" y="33" width="374" height="1"/>
+                            <rect key="frame" x="0.0" y="36" width="374" height="1"/>
                             <color key="backgroundColor" name="textView"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="1" id="QRa-Lz-o8e"/>
                             </constraints>
                         </view>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="9Hh-xb-AMs">
-                            <rect key="frame" x="24" y="42" width="214" height="138"/>
+                            <rect key="frame" x="24" y="45" width="210.5" height="138"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lye-YB-CCp">
-                                    <rect key="frame" x="0.0" y="0.0" width="214" height="22"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="210.5" height="22"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_radiobtn_unactive" translatesAutoresizingMaskIntoConstraints="NO" id="hCe-62-b3f">
                                             <rect key="frame" x="0.0" y="0.0" width="20" height="22"/>
@@ -76,7 +79,7 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h1b-Sh-SX1">
-                                            <rect key="frame" x="28" y="0.0" width="186" height="22"/>
+                                            <rect key="frame" x="28" y="0.0" width="182.5" height="22"/>
                                             <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="17"/>
                                             <color key="textColor" name="Gray"/>
                                             <nil key="highlightedColor"/>
@@ -87,7 +90,7 @@
                                     </constraints>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="vqm-LO-OmZ">
-                                    <rect key="frame" x="0.0" y="29" width="214" height="22"/>
+                                    <rect key="frame" x="0.0" y="29" width="210.5" height="22"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_radiobtn_unactive" translatesAutoresizingMaskIntoConstraints="NO" id="0Oc-ik-H7K">
                                             <rect key="frame" x="0.0" y="0.0" width="20" height="22"/>
@@ -96,7 +99,7 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clinic Consultation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F6b-Od-cbw">
-                                            <rect key="frame" x="28" y="0.0" width="186" height="22"/>
+                                            <rect key="frame" x="28" y="0.0" width="182.5" height="22"/>
                                             <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="17"/>
                                             <color key="textColor" name="Gray"/>
                                             <nil key="highlightedColor"/>
@@ -107,7 +110,7 @@
                                     </constraints>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="3XG-zN-SyK">
-                                    <rect key="frame" x="0.0" y="58" width="214" height="22"/>
+                                    <rect key="frame" x="0.0" y="58" width="210.5" height="22"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_radiobtn_unactive" translatesAutoresizingMaskIntoConstraints="NO" id="bEE-Cq-GXy">
                                             <rect key="frame" x="0.0" y="0.0" width="20" height="22"/>
@@ -116,7 +119,7 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Video Call Consultations" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fUk-9P-ggb">
-                                            <rect key="frame" x="28" y="0.0" width="186" height="22"/>
+                                            <rect key="frame" x="28" y="0.0" width="182.5" height="22"/>
                                             <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="17"/>
                                             <color key="textColor" name="Gray"/>
                                             <nil key="highlightedColor"/>
@@ -127,7 +130,7 @@
                                     </constraints>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="VBc-nO-AjF">
-                                    <rect key="frame" x="0.0" y="87" width="214" height="22"/>
+                                    <rect key="frame" x="0.0" y="87" width="210.5" height="22"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_radiobtn_unactive" translatesAutoresizingMaskIntoConstraints="NO" id="H91-HT-f53">
                                             <rect key="frame" x="0.0" y="0.0" width="20" height="22"/>
@@ -136,7 +139,7 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home Visit " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b2G-c2-2Um">
-                                            <rect key="frame" x="28" y="0.0" width="186" height="22"/>
+                                            <rect key="frame" x="28" y="0.0" width="182.5" height="22"/>
                                             <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="17"/>
                                             <color key="textColor" name="Gray"/>
                                             <nil key="highlightedColor"/>
@@ -147,7 +150,7 @@
                                     </constraints>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="VDV-4J-pRu">
-                                    <rect key="frame" x="0.0" y="116" width="214" height="22"/>
+                                    <rect key="frame" x="0.0" y="116" width="210.5" height="22"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_radiobtn_unactive" translatesAutoresizingMaskIntoConstraints="NO" id="A2O-So-wqJ">
                                             <rect key="frame" x="0.0" y="0.0" width="20" height="22"/>
@@ -156,7 +159,7 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Immediate Video Call" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hs7-8D-yTe">
-                                            <rect key="frame" x="28" y="0.0" width="186" height="22"/>
+                                            <rect key="frame" x="28" y="0.0" width="182.5" height="22"/>
                                             <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="17"/>
                                             <color key="textColor" name="Gray"/>
                                             <nil key="highlightedColor"/>
@@ -168,45 +171,48 @@
                                 </stackView>
                             </subviews>
                         </stackView>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gup-35-m3O">
-                            <rect key="frame" x="24" y="42" width="214" height="22"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gup-35-m3O">
+                            <rect key="frame" x="24" y="45" width="210.5" height="22"/>
                             <connections>
                                 <action selector="AllBtnSelected:" destination="-1" eventType="touchUpInside" id="7hb-p0-cte"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="639-f6-q1z">
-                            <rect key="frame" x="24" y="71" width="214" height="22"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="639-f6-q1z">
+                            <rect key="frame" x="24" y="74" width="210.5" height="22"/>
                             <connections>
                                 <action selector="clinicBTNSelected:" destination="-1" eventType="touchUpInside" id="lZY-Gv-vnq"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="icc-Se-sSJ">
-                            <rect key="frame" x="24" y="100" width="214" height="22"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="icc-Se-sSJ">
+                            <rect key="frame" x="24" y="103" width="210.5" height="22"/>
                             <connections>
                                 <action selector="videoBTNSelected:" destination="-1" eventType="touchUpInside" id="aeD-BD-jI7"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Np3-1v-HV1">
-                            <rect key="frame" x="24" y="129" width="214" height="22"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Np3-1v-HV1">
+                            <rect key="frame" x="24" y="132" width="210.5" height="22"/>
                             <connections>
                                 <action selector="homeBTNSelected:" destination="-1" eventType="touchUpInside" id="2nR-go-8m9"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ocF-mg-se8">
-                            <rect key="frame" x="24" y="158" width="214" height="22"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ocF-mg-se8">
+                            <rect key="frame" x="24" y="161" width="210.5" height="22"/>
                             <connections>
                                 <action selector="immediateBTNSelected:" destination="-1" eventType="touchUpInside" id="BGH-bn-71u"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bqa-dQ-mNm">
-                            <rect key="frame" x="338" y="8" width="20" height="28"/>
+                            <rect key="frame" x="338" y="8" width="20" height="22"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="20" id="nVA-mb-2EJ"/>
                             </constraints>
                             <state key="normal" image="dropdowen"/>
+                            <connections>
+                                <action selector="collapsedServiceBtn:" destination="-1" eventType="touchUpInside" id="33N-kn-uZ1"/>
+                            </connections>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstItem="9Hh-xb-AMs" firstAttribute="top" secondItem="QWt-fT-Klj" secondAttribute="bottom" constant="8" id="0ou-e2-miB"/>
                         <constraint firstItem="Gup-35-m3O" firstAttribute="top" secondItem="lye-YB-CCp" secondAttribute="top" id="1G5-9l-fHp"/>
@@ -244,23 +250,23 @@
                     <rect key="frame" x="20" y="278" width="374" height="120"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Appointment Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uDi-Bo-hAz">
-                            <rect key="frame" x="23" y="9" width="151.5" height="20"/>
+                            <rect key="frame" x="23" y="9" width="155" height="23"/>
                             <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="17"/>
                             <color key="textColor" name="Blue"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uoz-Qr-ePg">
-                            <rect key="frame" x="0.0" y="33" width="374" height="1"/>
+                            <rect key="frame" x="0.0" y="36" width="374" height="1"/>
                             <color key="backgroundColor" name="textView"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="1" id="HjC-y8-Jdl"/>
                             </constraints>
                         </view>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="LOV-Gi-uvK">
-                            <rect key="frame" x="24" y="42" width="174" height="51"/>
+                            <rect key="frame" x="24" y="45" width="169.5" height="51"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="UhR-58-y2h">
-                                    <rect key="frame" x="0.0" y="0.0" width="174" height="22"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="169.5" height="22"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_radiobtn_unactive" translatesAutoresizingMaskIntoConstraints="NO" id="XPj-m5-6yz">
                                             <rect key="frame" x="0.0" y="0.0" width="20" height="22"/>
@@ -269,7 +275,7 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Awaiting Response" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bzS-V1-nnV">
-                                            <rect key="frame" x="28" y="0.0" width="146" height="22"/>
+                                            <rect key="frame" x="28" y="0.0" width="141.5" height="22"/>
                                             <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="17"/>
                                             <color key="textColor" name="Gray"/>
                                             <nil key="highlightedColor"/>
@@ -280,7 +286,7 @@
                                     </constraints>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="EHA-bl-gEq">
-                                    <rect key="frame" x="0.0" y="29" width="174" height="22"/>
+                                    <rect key="frame" x="0.0" y="29" width="169.5" height="22"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_radiobtn_unactive" translatesAutoresizingMaskIntoConstraints="NO" id="9K9-xz-6Cn">
                                             <rect key="frame" x="0.0" y="0.0" width="20" height="22"/>
@@ -289,7 +295,7 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dFV-6H-VjL">
-                                            <rect key="frame" x="28" y="0.0" width="146" height="22"/>
+                                            <rect key="frame" x="28" y="0.0" width="141.5" height="22"/>
                                             <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="17"/>
                                             <color key="textColor" name="Gray"/>
                                             <nil key="highlightedColor"/>
@@ -302,26 +308,29 @@
                             </subviews>
                         </stackView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NLK-AU-qlw">
-                            <rect key="frame" x="338" y="8" width="20" height="28"/>
+                            <rect key="frame" x="338" y="8" width="20" height="22"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="20" id="FLa-d7-eSB"/>
                             </constraints>
                             <state key="normal" image="dropdowen"/>
+                            <connections>
+                                <action selector="collapsedStatusBtn:" destination="-1" eventType="touchUpInside" id="bNk-bM-ywP"/>
+                            </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="91R-Oh-391">
-                            <rect key="frame" x="24" y="42" width="174" height="22"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="91R-Oh-391">
+                            <rect key="frame" x="24" y="45" width="169.5" height="22"/>
                             <connections>
                                 <action selector="AwaitingBTNSelected:" destination="-1" eventType="touchUpInside" id="DMR-EB-Svg"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zft-cF-fHB">
-                            <rect key="frame" x="24" y="71" width="174" height="22"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zft-cF-fHB">
+                            <rect key="frame" x="24" y="74" width="169.5" height="22"/>
                             <connections>
                                 <action selector="confirmBTNSelected:" destination="-1" eventType="touchUpInside" id="7Ri-Aw-kDt"/>
                             </connections>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstItem="uoz-Qr-ePg" firstAttribute="leading" secondItem="24Q-v6-gxO" secondAttribute="leading" id="3bB-Y0-Ady"/>
                         <constraint firstItem="91R-Oh-391" firstAttribute="bottom" secondItem="UhR-58-y2h" secondAttribute="bottom" id="8Fk-A9-ze8"/>
@@ -346,7 +355,7 @@
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="48" translatesAutoresizingMaskIntoConstraints="NO" id="1ew-0d-q2l">
                     <rect key="frame" x="33" y="458" width="348" height="48"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qg2-dV-mRh">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qg2-dV-mRh">
                             <rect key="frame" x="0.0" y="0.0" width="150" height="48"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="150" id="MLI-X0-qUD"/>
@@ -371,7 +380,7 @@
                                 <action selector="reset_Click:" destination="-1" eventType="touchUpInside" id="euV-87-bcZ"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iSw-RN-jGD">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iSw-RN-jGD">
                             <rect key="frame" x="198" y="0.0" width="150" height="48"/>
                             <color key="backgroundColor" name="Blue"/>
                             <constraints>
@@ -394,7 +403,8 @@
                     </subviews>
                 </stackView>
             </subviews>
-            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="1ew-0d-q2l" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="4Z0-Ol-xtK"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="mS4-w1-5bk" secondAttribute="trailing" constant="20" id="Anw-IC-HQR"/>
@@ -405,7 +415,6 @@
                 <constraint firstItem="1ew-0d-q2l" firstAttribute="top" secondItem="24Q-v6-gxO" secondAttribute="bottom" constant="60" id="qE9-fI-38B"/>
                 <constraint firstItem="24Q-v6-gxO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="tVj-ec-hVJ"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="-23" y="68"/>
         </view>
     </objects>
@@ -421,5 +430,8 @@
         <namedColor name="textView">
             <color red="0.77300000190734863" green="0.76899999380111694" blue="0.76899999380111694" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

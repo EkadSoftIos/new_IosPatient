@@ -12,7 +12,12 @@ class MyFavoriteVC: UIViewController {
     var doctorID = 0
     var favModel : [FavouriteDoctorMessage]?{
         didSet{
-            myFavouriteTableView.reloadData()
+            if favModel?.count == 0 {
+                myFavouriteTableView.setEmptyView()
+            }else{
+                myFavouriteTableView.reloadData()
+            }
+            
         }
     }
     var addedSuccess = ""{
@@ -59,6 +64,12 @@ extension MyFavoriteVC: UITableViewDelegate, UITableViewDataSource{
         cell.locationLBL.numberOfLines = 3
         cell.locationLBL.sizeToFit()
         cell.rateLBL.text = "\(currentModel?.totalRate ?? 0)"
+        if currentModel?.isOnline ?? false {
+            cell.statusView.backgroundColor = UIColor.green
+        }else{
+            cell.statusView.backgroundColor = UIColor.clear
+        }
+        Animation.roundView(cell.statusView)
         cell.favBTN.tag = indexPath.row
         cell.favBTN.addTarget(self, action: #selector(removeFromFav(sender:)), for: .touchUpInside)
         return cell
@@ -68,7 +79,7 @@ extension MyFavoriteVC: UITableViewDelegate, UITableViewDataSource{
         callRemoveFromFavApi()
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 180
+        return 155
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //        let vc = DoctorProfileVC()

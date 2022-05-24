@@ -78,8 +78,8 @@ extension AddDieseasesVC: UIPickerViewDataSource, UIPickerViewDelegate {
             statusTxt.text = statusModel?.message[row].diseaseStatusNameEn
         }
         else{
-            medicationID = medicationModel?.message?[row].medicationID
-            medicationTxt.text = medicationModel?.message?[row].medicationName
+//            medicationID = medicationModel?.message?[row].medicationID
+//            medicationTxt.text = medicationModel?.message?[row].medicationName
         }
     }
 }

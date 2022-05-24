@@ -8,12 +8,16 @@
 import UIKit
 
 class HelpAndSupportVC: UIViewController {
+    
+    var data: String?
+    
+    @IBOutlet weak var SupportDataLbl: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.title = "Help & Support"
         
+        self.title = "Terms & Condition"
+        SupportDataLbl?.text = data?.html2String ?? ""
     }
 
 }

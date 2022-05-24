@@ -85,7 +85,9 @@ extension MoreDoctorsBranchVC: UITableViewDelegate, UITableViewDataSource {
             
             cell.selectionStyle = .none
             cell.moreBtn.isHidden = true
-            
+            cell.graduationName.text = acadimicList?[indexPath.row].graduationType_Localized ?? ""
+            cell.acadimicQualification.text = acadimicList?[indexPath.row].qualificationFromname_Localized ?? ""
+            cell.dateLbl.text = String(acadimicList?[indexPath.row].yearOfComplete ?? 0000)
             return cell
         }
     }

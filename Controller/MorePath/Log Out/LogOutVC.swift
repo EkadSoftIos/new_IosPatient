@@ -9,6 +9,12 @@ import UIKit
  
 class LogOutVC: UIViewController, LogOutViewProtocol {
     
+    @IBOutlet weak var titleLBL: UILabel!
+    @IBOutlet weak var detailsLBL: UILabel!
+    @IBOutlet weak var popUpImg: UIImageView!
+    @IBOutlet weak var cancelBTN: UIButton!
+    @IBOutlet weak var okBTN: UIButton!
+    var type = ""
     //MARK: - IBOutlets
     
     
@@ -25,6 +31,15 @@ class LogOutVC: UIViewController, LogOutViewProtocol {
         UIView.animate(withDuration: 0.2) {
             self.view.backgroundColor = UIColor.black.withAlphaComponent(0.7)
         }
+//        if type == "LogOut" {
+            titleLBL.text = "LogOut"
+            detailsLBL.text = "Are you sure want to Logout ?"
+            cancelBTN.setTitle("Cancel", for: .normal)
+            okBTN.setTitle("Logout", for: .normal)
+            popUpImg.image = UIImage (named: "ic_logout")
+//        }else if type == ""{
+//
+//        }
     }
     
     func showLoadingIndicator() {
@@ -51,8 +66,10 @@ class LogOutVC: UIViewController, LogOutViewProtocol {
     
     @IBAction
     func didTappedLogout(_ sender: UIButton) {
-        
-    callApi()
+//        if type == "LogOut" {
+            callApi()
+//        }
+   
 //        let view = presenter.goToLoginVC()
 //        self.present(view, animated: true, completion: nil)
     }

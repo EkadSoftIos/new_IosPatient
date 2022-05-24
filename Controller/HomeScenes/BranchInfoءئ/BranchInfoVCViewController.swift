@@ -20,9 +20,21 @@ class BranchInfoVCViewController: UIViewController {
     @IBOutlet var photoView: UIView!
     @IBOutlet var photoCollection: UICollectionView!
     @IBOutlet var doctorMedTable: UITableView!
+    
+    @IBOutlet weak var branchInfoLBL: UIView!
+    
+    @IBOutlet weak var doctorMedicalLBL: UILabel!
+    @IBOutlet weak var clinicPhotoLBL: UILabel!
+    
+    
     override func viewWillAppear(_ animated: Bool) {
+        setLocalization()
         self.navigationItem.title = "Branch Info".localized
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: AppColor.Blue]
+    }
+    func setLocalization(){
+        doctorMedicalLBL.text = "Doctor MedicalService".localized
+        clinicPhotoLBL.text = "Clinic Photo".localized
     }
     override func viewDidLoad() {
         super.viewDidLoad()

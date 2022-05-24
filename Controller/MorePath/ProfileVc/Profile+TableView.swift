@@ -84,16 +84,25 @@ extension ProfileVC: UITableViewDelegate, UITableViewDataSource {
             switch indexPath.row {
             case 0:
                 if userData?.message?.tblPatientAddress?.count != 0{
-                    let model = userData?.message?.tblPatientAddress?[0]
-                    cell.detailsoneLbl.text = model?.countryNameLocalized
-                    cell.detailsTwoLbl.text = model?.cityNameLocalized
-                    cell.detailsThreeLbl.text = model?.areaNameLocalized
-                    cell.countLbl.text = "+\(userData?.message?.tblPatientAddress?.count ?? 0)"
-                    cell.countLbl.isHidden = false
-                    cell.stackHeight.constant = 60
-                    cell.lineView.isHidden = false
-                    cell.stackView.isHidden = false
-                    cell.countView.isHidden = false
+                    let tblArray : [TblPatientAddress] = (userData?.message?.tblPatientAddress)!
+                    for item in tblArray{
+                        if item.isMain == true
+                        {
+                            cell.detailsoneLbl.text = "\(item.countryNameLocalized ?? ""), \(item.cityNameLocalized ?? "")"
+                            cell.detailsTwoLbl.text = "\(item.areaNameLocalized ?? ""), \(item.patientAddressName ?? "")"
+                            cell.detailsThreeLbl.text = "\(item.landMark ?? "")"
+                            cell.countLbl.text = "+\(userData?.message?.tblPatientAddress?.count ?? 0)"
+                            cell.countLbl.isHidden = false
+                            cell.stackHeight.constant = 60
+                            cell.lineView.isHidden = false
+                            cell.stackView.isHidden = false
+                            cell.countView.isHidden = false
+                        }
+                    }
+                    
+//                    let model = userData?.message?.tblPatientAddress?[0]
+                    //"\(addressModel?.countryNameLocalized ?? ""), \(addressModel?.cityNameLocalized ?? "")\n \(addressModel?.areaNameLocalized ?? ""), \(addressModel?.patientAddressName ?? "")\n \(addressModel?.landMark ?? "")"
+                    
                 }else{
                     cell.countLbl.isHidden = true
                     cell.stackHeight.constant = 0
@@ -109,7 +118,8 @@ extension ProfileVC: UITableViewDelegate, UITableViewDataSource {
                 cell.countView.isHidden = true
             case 2:
                 if userData?.message?.tblPatientContact?.count != 0{
-                    let model = userData?.message?.tblPatientContact?[0]
+                    let count  = userData?.message?.tblPatientContact?.count ?? 0
+                    let model = userData?.message?.tblPatientContact?[count-1]
                     cell.detailsoneLbl.text = model?.contactName
                     cell.detailsTwoLbl.text = model?.relationLocalizedName
                     cell.detailsThreeLbl.text = model?.contactAddress

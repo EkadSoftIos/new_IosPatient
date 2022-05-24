@@ -35,6 +35,7 @@ class ProfileVC: UIViewController {
     var userData: UserDataModel?
     override func viewWillAppear(_ animated: Bool) {
         callApi()
+        getSummaryClickData()
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,6 +46,7 @@ class ProfileVC: UIViewController {
         setupTableView()
         
     }
+    
     func convertDateFormat(inputDate: String) -> String {
 
          let olDateFormatter = DateFormatter()
@@ -59,7 +61,7 @@ class ProfileVC: UIViewController {
     }
     override func viewWillDisappear(_ animated: Bool) {
    }
-    @IBAction func visitSummaryClick(_ sender: Any) {
+    func getSummaryClickData(){
         UIView.animate(withDuration: 1) {
             self.scrollHeight.constant = CGFloat((self.userData?.message?.visitSummery?.count ?? 0) * 140) + 260
             self.buttomView.center.x = self.summaryView.center.x
@@ -73,6 +75,9 @@ class ProfileVC: UIViewController {
         }
         buttonType = 2 //->
         self.profileTableView.reloadData()
+    }
+    @IBAction func visitSummaryClick(_ sender: Any) {
+        getSummaryClickData()
     }
     @IBAction func editProfile_Click(_ sender: Any) {
         let vc = EditProfileVC()

@@ -28,7 +28,7 @@ extension CountinueAddMedicationVC{
         }
     }
     func ValidateionInput(){
-        if quantityTxt.text!.isEmpty || whenTxt.text!.isEmpty || durationTxt.text!.isEmpty ||  searchBar.text!.isEmpty{
+        if quantityTxt.text!.isEmpty || whenTxt.text!.isEmpty || durationTxt.text!.isEmpty || FrequencyTxt.text!.isEmpty || searchBar.text!.isEmpty{
             self.showMessage(title: "", sub: "all data required".localized, type: .error, layout: .cardView)
         }else{
             self.saveBtn.startAnimation()
@@ -87,8 +87,12 @@ extension CountinueAddMedicationVC{
         case .success(let model):
             if model.successtate == 200{
                 
+                if self.isUpdate == false {
+                    self.showMessage(title: "", sub: "New medication has been added successfully".localized, type: .success, layout: .messageView)
+                }else{
+                    self.showMessage(title: "", sub: "Medication has been edited successfully".localized, type: .success, layout: .messageView)
+                }
                 
-                self.showMessage(title: "", sub: model.message, type: .success, layout: .messageView)
                 self.successLogin()
                 print("params: \(parameters)")
             }else{

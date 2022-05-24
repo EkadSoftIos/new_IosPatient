@@ -21,7 +21,9 @@ class AddDieseasesVC: UIViewController,UITextViewDelegate, UISearchBarDelegate {
     @IBOutlet var searchBar: UISearchBar!
     @IBOutlet var doctorsViewHeight: NSLayoutConstraint!
     @IBOutlet var mainViewHeight: NSLayoutConstraint!
-    
+    let regularFont = UIFont.systemFont(ofSize: 16)
+    let boldFont = UIFont.boldSystemFont(ofSize: 16)
+
     var model: UserDataModel?
     var Delegete: AddDieseases?
     var isUpdate: Bool = false
@@ -30,7 +32,8 @@ class AddDieseasesVC: UIViewController,UITextViewDelegate, UISearchBarDelegate {
     let datePicker = UIDatePicker()
     var DieseasesModel: getDieseasesModel?
     var dieseasID: Int = 0
-    var medicationID: Int?
+    var medicationID = [String]()
+    var medicationIDsString = ""
     let medicationPickerView = UIPickerView()
     var medicationModel : getAllMedicineModel?
     let statusPickerView = UIPickerView()
@@ -49,7 +52,7 @@ class AddDieseasesVC: UIViewController,UITextViewDelegate, UISearchBarDelegate {
         searchBar.compatibleSearchTextField.backgroundColor = UIColor.white
         mainView.ShadowView(view: mainView, radius: 20, opacity: 0.4, shadowRadius: 4, color: UIColor.black.cgColor)
         doctorsView.ShadowView(view: doctorsView, radius: 10, opacity: 0.4, shadowRadius: 4, color: UIColor.lightGray.cgColor)
-        notesTxt.text = "notes"
+        notesTxt.text = "Notes"
         notesTxt.textColor = UIColor.lightGray
         notesTxt.delegate = self
         setData()
@@ -67,7 +70,7 @@ class AddDieseasesVC: UIViewController,UITextViewDelegate, UISearchBarDelegate {
             self.setDoctorsView()
         }else{
         searchArr = searchText.isEmpty ? doctorsModel?.message ?? []: doctorsModel?.message.filter { (item: (GetDoctorsMessage)) -> Bool in
-            return item.employeeName.range(of: searchText, options: .caseInsensitive, range: nil, locale: nil) != nil
+            return item.employeeName?.range(of: searchText, options: .caseInsensitive, range: nil, locale: nil) != nil
             
         } ?? []
             self.setDoctorsView(isShow: false, height: 550, ViewHeight: 150)
@@ -94,6 +97,68 @@ class AddDieseasesVC: UIViewController,UITextViewDelegate, UISearchBarDelegate {
         statusPickerView.delegate = self
         statusTxt.inputView = statusPickerView
         createDoneBtn(for: statusTxt)
+    }
+    @IBAction func openFruitsPickerAction(_ sender:UIButton) {
+        let blueColor = sender.backgroundColor
+        
+        let blueAppearance = YBTextPickerAppearanceManager.init(
+            pickerTitle         : "Select Medication",
+            titleFont           : boldFont,
+            titleTextColor      : .black,
+            titleBackground     : .clear,
+            searchBarFont       : regularFont,
+            searchBarPlaceholder: "Select Medication",
+            closeButtonTitle    : "Cancel",
+            closeButtonColor    : .darkGray,
+            closeButtonFont     : regularFont,
+            doneButtonTitle     : "Done",
+            doneButtonColor     : blueColor,
+            doneButtonFont      : boldFont,
+            checkMarkPosition   : .Right,
+            itemCheckedImage    : UIImage(named:"blue_ic_checked"),
+            itemUncheckedImage  : UIImage(),
+            itemColor           : .black,
+            itemFont            : regularFont
+        )
+        var nameArray : [String] = []
+        var idArray : [Int] = []
+        for i in medicationModel?.message ?? []{
+            nameArray.append(i.medicationName ?? "")
+            idArray.append(i.medicationID ?? 0)
+        }
+        let fruits = nameArray
+        let picker = YBTextPicker.init(with: fruits, appearance: blueAppearance,
+                                       onCompletion: { (selectedIndexes, selectedValues) in
+                                        if selectedValues.count > 0{
+                                            
+                                            var values = [String]()
+                                            for index in selectedIndexes{
+                                                values.append(fruits[index])
+                                                self.medicationID.append("\(idArray[index])")
+                                            }
+                                            
+//                                            self.btnFruitsPicker.setTitle(values.joined(separator: ", "), for: .normal)
+                                            self.medicationTxt.text = values.joined(separator: ",")
+                                            self.medicationIDsString = self.medicationID.joined(separator: ",")
+                                        }else{
+//                                            self.btnFruitsPicker.setTitle("Select Fruits", for: .normal)
+                                            self.medicationTxt.placeholder = "Select Fruits"
+                                        }
+        },
+                                       onCancel: {
+                                        print("Cancelled")
+        }
+        )
+        
+//        if let title = btnFruitsPicker.title(for: .normal){
+        if let title = self.medicationTxt.text {
+            if title.contains(","){
+                picker.preSelectedValues = title.components(separatedBy: ",")
+            }
+        }
+        picker.allowMultipleSelection = true
+        
+        picker.show(withAnimation: .Fade)
     }
     func createDoneBtn (for textField : UITextField)
     {
@@ -141,7 +206,7 @@ class AddDieseasesVC: UIViewController,UITextViewDelegate, UISearchBarDelegate {
             diagnosedTxt.text = self.GetFormatedDate(date_string: updateData?.diagonsedDate ?? "", dateFormat: "yyyy-MM-dd'T'HH:mm:ss")
             statusTxt.text = String(updateData?.diseaseStatusFk ?? 0)
             searchBar.text = updateData?.doctorName
-            medicationTxt.text = updateData?.medicationIDS
+//            medicationTxt.text = updateData?.medicationIDS
             notesTxt.text = updateData?.notes
             notesTxt.textColor = UIColor.black
             self.navigationItem.title = "Edit Diseases".localized

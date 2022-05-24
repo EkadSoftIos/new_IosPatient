@@ -12,9 +12,10 @@ class AcademicQualificationVC: UIViewController {
     var academicQualifications: [TblEmployeeAcademicQualification]?
     
     @IBOutlet var acadimicTableView: UITableView!
+    
     override func viewWillAppear(_ animated: Bool) {
         self.navigationItem.title = "Academic Qualification".localized
-        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: AppColor.Blue]
+//        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: AppColor.Blue]
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +32,7 @@ class AcademicQualificationVC: UIViewController {
 
 }
 extension AcademicQualificationVC: UITableViewDelegate, UITableViewDataSource{
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return academicQualifications?.count ?? 0
     }

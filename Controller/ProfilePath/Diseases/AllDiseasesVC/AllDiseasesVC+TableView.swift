@@ -18,13 +18,42 @@ extension AllDiseasesVC: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "DieseasesCell") as! DieseasesCell
         cell.selectionStyle = .none
         let dieses = model?.message?.tblPatientDisease?[indexPath.row]
-        cell.detailsOneLbl.text = dieses?.notes
-        cell.detailsTwoLbl.text =  self.GetFormatedDate(date_string: dieses?.createDate ?? "", dateFormat: "yyyy-MM-dd'T'HH:mm:ss.SS")
-        cell.detailsThreLbl.text = "By  \(dieses?.doctorName ?? "")"
+        cell.detailsOneLbl.text = dieses?.diseaseNamelocalized ?? ""
+        
+        var diseaseDate = ""
+        if let diseaseVisitDate = dieses?.createDate?.components(separatedBy: "T") {
+            diseaseDate = GetFormatedDate(date_string: diseaseVisitDate[0], dateFormat: "yyyy-MM-dd")
+        }
+        cell.detailsTwoLbl.text = "\("DiagnosedOn".localized)\(": ")\(diseaseDate)"
+        let range = (cell.detailsTwoLbl.text! as NSString).range(of: "DiagnosedOn".localized)
+        let mutableAttributedString = NSMutableAttributedString.init(string: cell.detailsTwoLbl.text ?? "")
+        mutableAttributedString.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor (named: "Blue")! , range: range)
+        cell.detailsTwoLbl.attributedText = mutableAttributedString
+        
+        cell.detailsThreLbl.text = "\("TratedByDr.".localized)\(": ")\(dieses?.doctorName ?? "")"
+        let range2 = (cell.detailsThreLbl.text! as NSString).range(of: "TratedByDr.".localized)
+        let mutableAttributedString2 = NSMutableAttributedString.init(string: cell.detailsThreLbl.text ?? "")
+        mutableAttributedString2.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor (named: "Blue")!, range: range2)
+        cell.detailsThreLbl.attributedText = mutableAttributedString2
+
+        
+        
+        
+        
+        
+//        cell.detailsTwoLbl.text =  self.GetFormatedDate(date_string: dieses?.createDate ?? "", dateFormat: "yyyy-MM-dd'T'HH:mm:ss.SS")
+//        cell.detailsThreLbl.text = "By  \(dieses?.doctorName ?? "")"
         cell.deleteHandelr = {
-            self.callApiDelete(Id: dieses?.patientDiseaseID ?? 0)
-            self.model?.message?.tblPatientDisease?.remove(at: indexPath.row)
-            self.dieseasesTableView.deleteRows(at: [indexPath], with: .automatic)
+//            self.callApiDelete(Id: dieses?.patientDiseaseID ?? 0)
+//            self.model?.message?.tblPatientDisease?.remove(at: indexPath.row)
+//            self.dieseasesTableView.deleteRows(at: [indexPath], with: .automatic)
+            let vc = DeleteDiseasesVC()
+            vc.id = dieses?.patientDiseaseID ?? 0
+            vc.Delegete = self
+             vc.modalPresentationStyle = .overCurrentContext
+             vc.modalTransitionStyle = .crossDissolve
+             self.present(vc, animated: true, completion: nil)
+
         }
         cell.editHandelr = {
             let vc = AddDieseasesVC()

@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -81,7 +82,7 @@
                                     <rect key="frame" x="20" y="20" width="374" height="300"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="GCn-5l-771">
-                                            <rect key="frame" x="24" y="24" width="166" height="15"/>
+                                            <rect key="frame" x="24" y="24" width="167.5" height="15"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_clinic" translatesAutoresizingMaskIntoConstraints="NO" id="4P6-9a-k4m">
                                                     <rect key="frame" x="0.0" y="0.0" width="15" height="15"/>
@@ -91,7 +92,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clinic Consultation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6pw-Iq-RHT">
-                                                    <rect key="frame" x="23" y="0.0" width="143" height="15"/>
+                                                    <rect key="frame" x="23" y="0.0" width="144.5" height="15"/>
                                                     <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="17"/>
                                                     <color key="textColor" name="Blue"/>
                                                     <nil key="highlightedColor"/>
@@ -99,13 +100,13 @@
                                             </subviews>
                                         </stackView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Appointment " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y9Y-5p-uX5">
-                                            <rect key="frame" x="24" y="47" width="326" height="20"/>
+                                            <rect key="frame" x="24" y="47" width="326" height="23"/>
                                             <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="17"/>
                                             <color key="textColor" name="Blue"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Rw9-b8-K73">
-                                            <rect key="frame" x="24" y="75" width="200.5" height="15"/>
+                                            <rect key="frame" x="24" y="78" width="195" height="15"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_calender-1" translatesAutoresizingMaskIntoConstraints="NO" id="nPn-GP-tDu">
                                                     <rect key="frame" x="0.0" y="0.0" width="15" height="15"/>
@@ -115,7 +116,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monday  Sep 11,  2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="as7-da-psh">
-                                                    <rect key="frame" x="23" y="0.0" width="177.5" height="15"/>
+                                                    <rect key="frame" x="23" y="0.0" width="172" height="15"/>
                                                     <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="17"/>
                                                     <color key="textColor" name="darkGray"/>
                                                     <nil key="highlightedColor"/>
@@ -123,7 +124,7 @@
                                             </subviews>
                                         </stackView>
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cO0-xg-mG5">
-                                            <rect key="frame" x="24" y="98" width="185.5" height="15"/>
+                                            <rect key="frame" x="24" y="101" width="179" height="15"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_Medicine Reminder" translatesAutoresizingMaskIntoConstraints="NO" id="5vn-lI-Odr">
                                                     <rect key="frame" x="0.0" y="0.0" width="15" height="15"/>
@@ -133,7 +134,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="09:30 PM - 10:00 PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Anu-hT-N9V">
-                                                    <rect key="frame" x="23" y="0.0" width="162.5" height="15"/>
+                                                    <rect key="frame" x="23" y="0.0" width="156" height="15"/>
                                                     <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="17"/>
                                                     <color key="textColor" name="darkGray"/>
                                                     <nil key="highlightedColor"/>
@@ -141,7 +142,7 @@
                                             </subviews>
                                         </stackView>
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="TTV-cl-I6Y">
-                                            <rect key="frame" x="24" y="121" width="192.5" height="15"/>
+                                            <rect key="frame" x="24" y="124" width="189.5" height="15"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_clinic" translatesAutoresizingMaskIntoConstraints="NO" id="NOh-yQ-xcr">
                                                     <rect key="frame" x="0.0" y="0.0" width="15" height="15"/>
@@ -151,7 +152,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="El-Shouroq (Nasr City)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jwV-GL-3lq">
-                                                    <rect key="frame" x="23" y="0.0" width="169.5" height="15"/>
+                                                    <rect key="frame" x="23" y="0.0" width="166.5" height="15"/>
                                                     <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="17"/>
                                                     <color key="textColor" name="Blue"/>
                                                     <nil key="highlightedColor"/>
@@ -159,14 +160,14 @@
                                             </subviews>
                                         </stackView>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_location" translatesAutoresizingMaskIntoConstraints="NO" id="7ji-Of-2s5">
-                                            <rect key="frame" x="24" y="144" width="20" height="20"/>
+                                            <rect key="frame" x="24" y="147" width="20" height="20"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="20" id="Z0W-hs-puj"/>
                                                 <constraint firstAttribute="height" constant="20" id="dm1-KF-mjl"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oMq-df-SBw">
-                                            <rect key="frame" x="52" y="144" width="282" height="37.5"/>
+                                            <rect key="frame" x="52" y="147" width="282" height="37.5"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="37.5" id="SZA-pT-5l2"/>
                                             </constraints>
@@ -177,7 +178,7 @@ infront of emam ali mosque Nasr City</string>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="18B-c3-uHb">
-                                            <rect key="frame" x="24" y="189.5" width="172.5" height="15"/>
+                                            <rect key="frame" x="24" y="192.5" width="163.5" height="15"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="walletunactive" translatesAutoresizingMaskIntoConstraints="NO" id="AxF-ZD-9MJ">
                                                     <rect key="frame" x="0.0" y="0.0" width="15" height="15"/>
@@ -187,7 +188,7 @@ infront of emam ali mosque Nasr City</string>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Fees 230 EGP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xvD-xC-eQB">
-                                                    <rect key="frame" x="23" y="0.0" width="149.5" height="15"/>
+                                                    <rect key="frame" x="23" y="0.0" width="140.5" height="15"/>
                                                     <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="17"/>
                                                     <color key="textColor" name="Blue"/>
                                                     <nil key="highlightedColor"/>
@@ -195,13 +196,13 @@ infront of emam ali mosque Nasr City</string>
                                             </subviews>
                                         </stackView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="With Doctor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ke3-LI-XdW">
-                                            <rect key="frame" x="243" y="212.5" width="91" height="20"/>
+                                            <rect key="frame" x="239.5" y="215.5" width="94.5" height="23"/>
                                             <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="17"/>
                                             <color key="textColor" name="Blue"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="3mH-79-Amd">
-                                            <rect key="frame" x="172" y="248.5" width="162" height="25"/>
+                                            <rect key="frame" x="172.5" y="254.5" width="161.5" height="25"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_user_contact" translatesAutoresizingMaskIntoConstraints="NO" id="Q10-ns-4ii">
                                                     <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
@@ -211,7 +212,7 @@ infront of emam ali mosque Nasr City</string>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dr. Ahmed Karim" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6he-vV-Y1h">
-                                                    <rect key="frame" x="33" y="0.0" width="129" height="20"/>
+                                                    <rect key="frame" x="33" y="0.0" width="128.5" height="23"/>
                                                     <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -227,11 +228,11 @@ infront of emam ali mosque Nasr City</string>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paid 230 EGP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LUo-ao-2lv">
                                             <rect key="frame" x="277.5" y="46" width="88.5" height="17"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <color key="textColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="textColor" systemColor="systemGreenColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
                                         <constraint firstItem="7ji-Of-2s5" firstAttribute="leading" secondItem="aFl-dZ-XD3" secondAttribute="leading" constant="24" id="12h-VL-fuU"/>
                                         <constraint firstAttribute="trailing" secondItem="oMq-df-SBw" secondAttribute="trailing" constant="40" id="7Nc-ZB-9p9"/>
@@ -274,25 +275,12 @@ infront of emam ali mosque Nasr City</string>
                                             <color key="textColor" name="Blue"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tog-n1-zaW">
-                                            <rect key="frame" x="24" y="40.5" width="326" height="97.5"/>
-                                            <string key="text">It look like readable English. Many desktop publishing packages 
-and web page editors now use Lorem Ipsum as their default model
-text, and a search for</string>
-                                            <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="16"/>
-                                            <color key="textColor" name="labelGray"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                     </subviews>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="aZM-E9-bvs" secondAttribute="trailing" constant="24" id="5es-DG-uv3"/>
                                         <constraint firstItem="aZM-E9-bvs" firstAttribute="leading" secondItem="4OZ-AN-Xwc" secondAttribute="leading" constant="24" id="8N0-Co-ncr"/>
-                                        <constraint firstAttribute="bottom" secondItem="Tog-n1-zaW" secondAttribute="bottom" constant="12" id="Oyh-b5-HHB"/>
                                         <constraint firstItem="aZM-E9-bvs" firstAttribute="top" secondItem="4OZ-AN-Xwc" secondAttribute="top" constant="12" id="WY2-yC-Exs"/>
-                                        <constraint firstAttribute="trailing" secondItem="Tog-n1-zaW" secondAttribute="trailing" constant="24" id="ZG7-fh-kfg"/>
-                                        <constraint firstItem="Tog-n1-zaW" firstAttribute="top" secondItem="aZM-E9-bvs" secondAttribute="bottom" constant="8" id="gC5-eu-nMc"/>
-                                        <constraint firstItem="Tog-n1-zaW" firstAttribute="leading" secondItem="4OZ-AN-Xwc" secondAttribute="leading" constant="24" id="kUK-NG-8UZ"/>
                                         <constraint firstAttribute="height" constant="150" id="teL-UK-Qgg"/>
                                     </constraints>
                                 </view>
@@ -306,14 +294,14 @@ text, and a search for</string>
                                                     <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3.1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WVq-JD-29J">
-                                                            <rect key="frame" x="31" y="4" width="38" height="31.5"/>
+                                                            <rect key="frame" x="32.5" y="4" width="35" height="36"/>
                                                             <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="27"/>
                                                             <color key="textColor" name="Blue"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9JM-Dh-I3G" customClass="CosmosView" customModule="Cosmos">
-                                                            <rect key="frame" x="20" y="43.5" width="60" height="15"/>
-                                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                            <rect key="frame" x="20" y="48" width="60" height="15"/>
+                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="15" id="Tg1-TL-o6C"/>
                                                                 <constraint firstAttribute="width" constant="60" id="To4-lG-1hv"/>
@@ -343,13 +331,13 @@ text, and a search for</string>
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Doctor Rating" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dkK-5B-R7Q">
-                                                            <rect key="frame" x="4" y="62.5" width="92" height="37.5"/>
+                                                            <rect key="frame" x="4" y="67" width="92" height="43"/>
                                                             <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="16"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="100" id="EQA-OQ-JFj"/>
                                                         <constraint firstItem="9JM-Dh-I3G" firstAttribute="centerX" secondItem="fRO-2c-HNB" secondAttribute="centerX" id="Qyx-0f-M9Z"/>
@@ -365,14 +353,14 @@ text, and a search for</string>
                                                     <rect key="frame" x="108" y="0.0" width="100" height="100"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3.1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bql-9e-f2I">
-                                                            <rect key="frame" x="31" y="4" width="38" height="31.5"/>
+                                                            <rect key="frame" x="32.5" y="4" width="35" height="36"/>
                                                             <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="27"/>
                                                             <color key="textColor" name="Blue"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9nh-gb-lYQ" customClass="CosmosView" customModule="Cosmos">
-                                                            <rect key="frame" x="20" y="43.5" width="60" height="15"/>
-                                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                            <rect key="frame" x="20" y="48" width="60" height="15"/>
+                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="15" id="1dO-y4-YHC"/>
                                                                 <constraint firstAttribute="width" constant="60" id="Vm7-qZ-MZC"/>
@@ -402,13 +390,13 @@ text, and a search for</string>
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Assistant Rating" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TXL-GD-RX3">
-                                                            <rect key="frame" x="4" y="62.5" width="92" height="37.5"/>
+                                                            <rect key="frame" x="4" y="67" width="92" height="43"/>
                                                             <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="16"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
                                                         <constraint firstItem="bql-9e-f2I" firstAttribute="top" secondItem="92b-O6-Wu9" secondAttribute="top" constant="4" id="HaO-Lv-Fta"/>
                                                         <constraint firstAttribute="width" constant="100" id="HsJ-WB-MBT"/>
@@ -425,14 +413,14 @@ text, and a search for</string>
                                                     <rect key="frame" x="216" y="0.0" width="100" height="100"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4.9" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pyT-dp-RiY">
-                                                            <rect key="frame" x="31" y="4" width="38" height="31.5"/>
+                                                            <rect key="frame" x="32.5" y="4" width="35" height="36"/>
                                                             <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="27"/>
                                                             <color key="textColor" name="Blue"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rma-El-ROD" customClass="CosmosView" customModule="Cosmos">
-                                                            <rect key="frame" x="20" y="43.5" width="60" height="15"/>
-                                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                            <rect key="frame" x="20" y="48" width="60" height="15"/>
+                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="15" id="Grg-Oc-Sne"/>
                                                                 <constraint firstAttribute="width" constant="60" id="Oai-hK-3Pw"/>
@@ -462,13 +450,13 @@ text, and a search for</string>
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clinic Rating" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cS0-kC-Wcf">
-                                                            <rect key="frame" x="4" y="62.5" width="92" height="19"/>
+                                                            <rect key="frame" x="4" y="67" width="92" height="21.5"/>
                                                             <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="16"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
                                                         <constraint firstItem="cS0-kC-Wcf" firstAttribute="leading" secondItem="L5v-me-VLa" secondAttribute="leading" constant="4" id="1Ov-ui-U8u"/>
                                                         <constraint firstItem="pyT-dp-RiY" firstAttribute="centerX" secondItem="L5v-me-VLa" secondAttribute="centerX" id="2Ts-B3-AWS"/>
@@ -494,19 +482,19 @@ text, and a search for</string>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CAt-Qk-Hxj">
-                                                    <rect key="frame" x="68" y="16" width="45.5" height="20"/>
+                                                    <rect key="frame" x="68" y="16" width="46.5" height="23"/>
                                                     <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="17"/>
                                                     <color key="textColor" name="Blue"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today, 06:00 PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XiG-yS-mlL">
-                                                    <rect key="frame" x="68" y="40" width="104.5" height="16.5"/>
+                                                    <rect key="frame" x="68" y="43" width="101" height="19"/>
                                                     <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="14"/>
                                                     <color key="textColor" name="Gray"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eR7-yQ-SYe">
-                                                    <rect key="frame" x="68" y="60.5" width="250" height="65.5"/>
+                                                    <rect key="frame" x="68" y="66" width="250" height="74.5"/>
                                                     <string key="text">Thank you doctor
 He is a good listener and he helped me to figure out 
 how to treat some diseases</string>
@@ -515,29 +503,29 @@ how to treat some diseases</string>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GUi-DF-dgI">
-                                                    <rect key="frame" x="24" y="134" width="278" height="70"/>
+                                                    <rect key="frame" x="24" y="148.5" width="278" height="55.5"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_user_contact" translatesAutoresizingMaskIntoConstraints="NO" id="VZQ-dJ-amO">
-                                                            <rect key="frame" x="16" y="15" width="40" height="40"/>
+                                                            <rect key="frame" x="16" y="8" width="40" height="40"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="40" id="CYJ-St-vFU"/>
                                                                 <constraint firstAttribute="height" constant="40" id="xgb-wf-cbn"/>
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dr. Ahmed Karim" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="45q-4Q-hfy">
-                                                            <rect key="frame" x="72" y="12" width="129" height="20"/>
+                                                            <rect key="frame" x="72" y="12" width="131.5" height="23"/>
                                                             <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today, 06:00 PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OsH-b2-45G">
-                                                            <rect key="frame" x="72" y="36" width="74.5" height="12"/>
+                                                            <rect key="frame" x="72" y="39" width="72" height="13.5"/>
                                                             <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="10"/>
                                                             <color key="textColor" name="Gray"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You are Welcome " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NxW-CW-5TI">
-                                                            <rect key="frame" x="72" y="52" width="200" height="19"/>
+                                                            <rect key="frame" x="72" y="56.5" width="200" height="21.5"/>
                                                             <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="16"/>
                                                             <color key="textColor" name="labelGray"/>
                                                             <nil key="highlightedColor"/>
@@ -602,7 +590,7 @@ how to treat some diseases</string>
                                             </connections>
                                         </button>
                                     </subviews>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
                                         <constraint firstItem="Jb8-Pf-Zib" firstAttribute="top" secondItem="X0o-fs-ipr" secondAttribute="top" constant="25" id="2Qq-o1-15g"/>
                                         <constraint firstAttribute="bottom" secondItem="FCg-dU-vyz" secondAttribute="bottom" constant="8" id="8Xa-mD-7wq"/>
@@ -619,7 +607,7 @@ how to treat some diseases</string>
                                     <rect key="frame" x="20" y="922" width="374" height="140"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="View History Appointment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RFe-Bt-ebk">
-                                            <rect key="frame" x="24" y="16" width="197.5" height="20.5"/>
+                                            <rect key="frame" x="24" y="16" width="205.5" height="20.5"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="20.5" id="E3L-jj-34v"/>
                                             </constraints>
@@ -633,7 +621,7 @@ how to treat some diseases</string>
                                             <color key="textColor" name="labelGray"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2pL-tB-yf5">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2pL-tB-yf5">
                                             <rect key="frame" x="280" y="102" width="80" height="30"/>
                                             <color key="backgroundColor" name="Blue"/>
                                             <constraints>
@@ -654,7 +642,7 @@ how to treat some diseases</string>
                                             </connections>
                                         </button>
                                     </subviews>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="2pL-tB-yf5" secondAttribute="trailing" constant="14" id="2jf-cs-IYU"/>
                                         <constraint firstItem="RFe-Bt-ebk" firstAttribute="leading" secondItem="LUz-xP-ObS" secondAttribute="leading" constant="24" id="CSn-9K-tBC"/>
@@ -667,21 +655,34 @@ how to treat some diseases</string>
                                         <constraint firstItem="RFe-Bt-ebk" firstAttribute="top" secondItem="LUz-xP-ObS" secondAttribute="top" constant="16" id="wG0-bo-7hV"/>
                                     </constraints>
                                 </view>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tog-n1-zaW">
+                                    <rect key="frame" x="-70" y="385.5" width="326" height="182"/>
+                                    <string key="text">It look like readable English. Many desktop publishing packages 
+and web page editors now use Lorem Ipsum as their default model
+text, and a search for</string>
+                                    <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="16"/>
+                                    <color key="textColor" name="labelGray"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                             </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
                                 <constraint firstAttribute="trailing" secondItem="4OZ-AN-Xwc" secondAttribute="trailing" constant="20" id="3ig-az-3Qo"/>
                                 <constraint firstAttribute="trailing" secondItem="LUz-xP-ObS" secondAttribute="trailing" constant="20" id="3kS-tR-1Dl"/>
                                 <constraint firstAttribute="trailing" secondItem="aFl-dZ-XD3" secondAttribute="trailing" constant="20" id="5Tu-l6-ux8"/>
                                 <constraint firstItem="4OZ-AN-Xwc" firstAttribute="leading" secondItem="EMT-AC-MiS" secondAttribute="leading" constant="20" id="CSZ-t4-Cd6"/>
                                 <constraint firstItem="aFl-dZ-XD3" firstAttribute="leading" secondItem="EMT-AC-MiS" secondAttribute="leading" constant="20" id="I7E-hp-Ogu"/>
+                                <constraint firstAttribute="trailing" secondItem="Tog-n1-zaW" secondAttribute="trailing" constant="158" id="OYC-0l-6uZ"/>
                                 <constraint firstItem="LUz-xP-ObS" firstAttribute="top" secondItem="X0o-fs-ipr" secondAttribute="bottom" constant="24" id="Oea-z3-p13"/>
+                                <constraint firstAttribute="bottom" secondItem="Tog-n1-zaW" secondAttribute="bottom" constant="633.5" id="SfA-yP-mV6"/>
                                 <constraint firstItem="4OZ-AN-Xwc" firstAttribute="top" secondItem="aFl-dZ-XD3" secondAttribute="bottom" constant="24" id="TXh-Xk-5na"/>
                                 <constraint firstAttribute="height" constant="1200" id="XGf-Ff-wFe"/>
                                 <constraint firstAttribute="trailing" secondItem="X0o-fs-ipr" secondAttribute="trailing" constant="20" id="anu-Hx-d0C"/>
                                 <constraint firstItem="aFl-dZ-XD3" firstAttribute="top" secondItem="EMT-AC-MiS" secondAttribute="top" constant="20" id="gkn-ja-RwE"/>
                                 <constraint firstItem="LUz-xP-ObS" firstAttribute="leading" secondItem="EMT-AC-MiS" secondAttribute="leading" constant="20" id="jL3-Tx-iGq"/>
                                 <constraint firstItem="X0o-fs-ipr" firstAttribute="leading" secondItem="EMT-AC-MiS" secondAttribute="leading" constant="20" id="jMY-QP-oWw"/>
+                                <constraint firstItem="Tog-n1-zaW" firstAttribute="top" secondItem="aZM-E9-bvs" secondAttribute="bottom" constant="8" id="jTH-SK-YKE"/>
+                                <constraint firstItem="Tog-n1-zaW" firstAttribute="leading" secondItem="EMT-AC-MiS" secondAttribute="leading" constant="-70" id="lWx-7L-1je"/>
                                 <constraint firstItem="X0o-fs-ipr" firstAttribute="top" secondItem="4OZ-AN-Xwc" secondAttribute="bottom" constant="24" id="zE6-Do-RxI"/>
                             </constraints>
                         </view>
@@ -695,14 +696,14 @@ how to treat some diseases</string>
                     </constraints>
                 </scrollView>
             </subviews>
-            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="PeM-Jz-osr" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="QXv-4L-h7a"/>
                 <constraint firstAttribute="bottom" secondItem="PeM-Jz-osr" secondAttribute="bottom" id="dr8-il-pOg"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="PeM-Jz-osr" secondAttribute="trailing" id="hiT-H1-BpG"/>
                 <constraint firstItem="PeM-Jz-osr" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="yjl-Yj-MZb"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="-55.072463768115945" y="67.633928571428569"/>
         </view>
     </objects>
@@ -726,5 +727,11 @@ how to treat some diseases</string>
         <namedColor name="labelGray">
             <color red="0.31000000238418579" green="0.31000000238418579" blue="0.31000000238418579" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

@@ -9,10 +9,10 @@ import Foundation
 extension AddMedicalReportsVC{
     //"PatientMedicalReportId": -78681696,
     func validationinput(){
-        if nameTxt.text!.isEmpty || dateTxt.text!.isEmpty {
-            self.showMessage(title: "", sub: "name and date required".localized, type: .error, layout: .messageView)
-        }else if attachImage == "" {
-            self.showMessage(title: "", sub: "attachment required".localized, type: .error, layout: .messageView)
+        if nameTxt.text!.isEmpty || dateTxt.text!.isEmpty || resultTxt.text.isEmpty || notesTxt.text.isEmpty {
+            self.showMessage(title: "", sub: "all data with * are required".localized, type: .error, layout: .messageView)
+//        }else if attachImage == "" {
+//            self.showMessage(title: "", sub: "attachment required".localized, type: .error, layout: .messageView)
         }
         else{
             saveBtn.startAnimation()
@@ -37,7 +37,12 @@ extension AddMedicalReportsVC{
             switch result{
             case .success(let model):
                 if model.successtate == 200{
-                    self.showMessage(title: "", sub: model.message, type: .success, layout: .messageView)
+                    if self.isUpdate == false {
+                        self.showMessage(title: "", sub: " New medical report has been added successfully".localized, type: .success, layout: .messageView)
+                    }else{
+                        self.showMessage(title: "", sub: "Medical report  has been edited successfully".localized, type: .success, layout: .messageView)
+                    }
+                   
                     self.successLogin()
                     Vibration.success.vibrate()
                     print("params: \(parameters)")

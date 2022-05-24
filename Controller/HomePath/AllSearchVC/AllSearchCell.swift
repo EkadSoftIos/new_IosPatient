@@ -45,6 +45,7 @@ class AllSearchCell: UITableViewCell {
     @IBOutlet var detailsTwoLbl: UILabel!
     @IBOutlet var detailsThreeLbl: UILabel!
     @IBOutlet weak var bookingView: UIView!
+    @IBOutlet weak var statusView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

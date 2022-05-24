@@ -15,17 +15,30 @@ extension MedicalReportsVC: UITableViewDelegate, UITableViewDataSource {
         }
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "AllAllergiesCell") as! AllAllergiesCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MedicalReportCell") as! MedicalReportCell
         cell.selectionStyle = .none
-        cell.titleLbl.text = "Medical Reports"
+        cell.titleLbl.text = "Medical Reports".localized
         let data = model?.message?.tblPatientMedicalReport?[indexPath.row]
         cell.detailsOneLBl.text = "- \(data?.medicalReportName ?? "")"
-        cell.detailsTwoLbl.text = "- By  \(data?.doctorName ?? "")"
+        var reportDate = ""
+        if let medicalReportDate = data?.medicalReportDate?.components(separatedBy: "T") {
+            reportDate = GetFormatedDate(date_string: medicalReportDate[0], dateFormat: "yyyy-MM-dd")
+        }
+        cell.detailsTwoLbl.text = reportDate
+        cell.detailsThreLbl.text = "- By  \(data?.doctorName ?? "")"
+        cell.detailsFourLbl.text = data?.medicalReportResult
         cell.deleteHandelr = {
-            self.callApiDelete(Id: data?.patientMedicalReportID ?? 0)
+//            self.callApiDelete(Id: data?.patientMedicalReportID ?? 0)
+////            self.model?.message?.tblPatientMedicalReport?.remove(at: indexPath.row)
 //            self.model?.message?.tblPatientMedicalReport?.remove(at: indexPath.row)
-            self.model?.message?.tblPatientMedicalReport?.remove(at: indexPath.row)
-            self.medicalTable.deleteRows(at: [indexPath], with: .automatic)
+//            self.medicalTable.deleteRows(at: [indexPath], with: .automatic)
+            let vc = DeleteMedicalReportVC()
+            vc.id = data?.patientMedicalReportID ?? 0
+            vc.Delegete = self
+             vc.modalPresentationStyle = .overCurrentContext
+             vc.modalTransitionStyle = .crossDissolve
+             self.present(vc, animated: true, completion: nil)
+
         }
         cell.editHandelr = {
             let vc = AddMedicalReportsVC()
@@ -46,7 +59,7 @@ extension MedicalReportsVC: UITableViewDelegate, UITableViewDataSource {
          self.show(vc, sender: nil)
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 120
+        return 180
     }
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         let rotationTransform = CATransform3DTranslate(CATransform3DIdentity, 0, -10, 0)
@@ -57,5 +70,20 @@ extension MedicalReportsVC: UITableViewDelegate, UITableViewDataSource {
             cell.alpha = 1
         }
     }
-   
+    func GetFormatedDate(date_string:String,dateFormat:String)-> String{
+
+       let dateFormatter = DateFormatter()
+       dateFormatter.locale = Locale(identifier: "en_US_POSIX")
+       dateFormatter.dateFormat = dateFormat
+
+       let dateFromInputString = dateFormatter.date(from: date_string)
+       dateFormatter.dateFormat = "dd-mm-yyyy"
+       if(dateFromInputString != nil){
+           return dateFormatter.string(from: dateFromInputString!)
+       }
+       else{
+           debugPrint("could not convert date")
+           return ""
+       }
+   }
 }

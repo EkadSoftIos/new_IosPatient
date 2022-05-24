@@ -19,7 +19,7 @@ extension SearchOeVc: UITableViewDelegate, UITableViewDataSource{
         cell.speImage?.kf.indicatorType = .activity
         cell.speImage?.kf.setImage(with: imgURL)
         cell.nameLbl.text = currentArray?[indexPath.row].nameLocalized
-        cell.douctorsNumberLbl.text = String(currentArray?[indexPath.row].numberOfDoctors ?? 0) + " Doctor".localized
+        cell.douctorsNumberLbl.text = String(currentArray?[indexPath.row].numberOfDoctors ?? 0)
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

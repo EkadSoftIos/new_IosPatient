@@ -25,6 +25,21 @@ class SignUpVC: UIViewController {
     @IBOutlet var counntryNameLbl: UILabel!
     @IBOutlet weak var agreeBtn: UIButton!
 
+    @IBOutlet weak var signUpTitleLBL: UILabel!
+    @IBOutlet weak var accountInfoLBL: UILabel!
+    @IBOutlet weak var firstNameLBL: UILabel!
+    @IBOutlet weak var lastNameLBL: UILabel!
+    @IBOutlet weak var mobileLBL: UILabel!
+    @IBOutlet weak var emailLBL: UILabel!
+    @IBOutlet weak var dateOfBirthLBL: UILabel!
+    @IBOutlet weak var genderLBL: UILabel!
+    @IBOutlet weak var passLBL: UILabel!
+    @IBOutlet weak var termsBTN: UIButton!
+    @IBOutlet weak var bySigningUpLBL: UILabel!
+    @IBOutlet weak var confirmPassLBL: UILabel!
+    @IBOutlet weak var alreadyHaveAccountLBL: UILabel!
+    @IBOutlet weak var loginBTN: UIButton!
+
     let pickerView = ToolbarPickerView()
     let datePicker = UIDatePicker()
     var textType: Int = 0
@@ -45,6 +60,35 @@ class SignUpVC: UIViewController {
         agreeBtn.layer.borderColor = #colorLiteral(red: 0.07058823529, green: 0.4666666667, blue: 0.8196078431, alpha: 1)
         agreeBtn.layer.borderWidth = 1
 
+    }
+    func setLocalization(){
+        signUpTitleLBL.text = "SignUp".localized
+        accountInfoLBL.text = "AccountInfo".localized
+        firstNameLBL.text = "FirstName".localized
+        fNameTxt.placeholder = "FirstName".localized
+        lastNameLBL.text = "LastName".localized
+        lastNameTxt.placeholder = "LastName".localized
+        mobileLBL.text = "Mobile".localized
+        phoneTxt.placeholder = "Mobile".localized
+        emailLBL.text = "Email".localized
+        emailTxt.placeholder = "Email".localized
+        dateOfBirthLBL.text = "DateOfBirth".localized
+        dateTxt.placeholder = "DateOfBirth".localized
+        genderLBL.text = "Gender".localized
+        genderTxt.placeholder = "Gender".localized
+        passLBL.text = "Password".localized
+        passwordTxt.placeholder = "Password".localized
+        confirmPassLBL.text = "ConfirmPassword".localized
+        confPasswordTxt.placeholder = "ConfirmPassword".localized
+        termsBTN.setTitle("TermsOfUse".localized, for: .normal)
+        bySigningUpLBL.text = "BySigningUpYouAgreeToOur"
+        createAccountBtn.setTitle("CreateAccount".localized, for: .normal)
+        alreadyHaveAccountLBL.text = "AlreadyHaveAccount".localized
+        loginBTN.setTitle("Login".localized, for: .normal)
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        setLocalization()
+        self.phoneTxt.placeholder = "+2 000 00000 000"
     }
     @IBAction func agreeBtnPressed(_ sender: Any) {
         agree = !agree

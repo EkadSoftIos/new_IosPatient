@@ -31,6 +31,23 @@ class PermissionVC: UIViewController, UITextFieldDelegate {
     @IBOutlet var healthCareTxt: UITextField!
     @IBOutlet var chooseDoctorsView: UIView!
     @IBOutlet var chooseViewHEight: NSLayoutConstraint!
+    @IBOutlet weak var allowForLBL: UILabel!
+    @IBOutlet weak var allowAllDoctorLBL: UILabel!
+    @IBOutlet weak var chooseSomeLBL: UILabel!
+    @IBOutlet weak var filterProviderByLBL: UILabel!
+    @IBOutlet weak var entityLBL: UILabel!
+    @IBOutlet weak var mainSpecLBL: UILabel!
+    @IBOutlet weak var healthCareProvLBL: UILabel!
+    @IBOutlet weak var basicProfLBL: UILabel!
+    @IBOutlet weak var medicalReportsLBL: UILabel!
+    @IBOutlet weak var emergencyContactLBL: UILabel!
+    @IBOutlet weak var healthProfLBL: UILabel!
+    @IBOutlet weak var diseasesLBL: UILabel!
+    @IBOutlet weak var medicationLBL: UILabel!
+    @IBOutlet weak var allerqiesLBL: UILabel!
+    @IBOutlet weak var socialHistoryLBL: UILabel!
+    @IBOutlet weak var familyHistoryLBL: UILabel!
+    @IBOutlet weak var surgeyLBL: UILabel!
     var Model: UserDataModel?
     var showpersonal: Bool = false
     var ForAllDoctors: Bool = false

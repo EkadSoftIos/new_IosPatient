@@ -16,6 +16,8 @@ class SearchOeVc: UIViewController ,UISearchBarDelegate{
     var consultationServiceId: Int? 
     
     @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet var noDataView: UIView!
+    @IBOutlet var noDataLBL: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +31,7 @@ class SearchOeVc: UIViewController ,UISearchBarDelegate{
         searchTableView.separatorStyle = .none
     }
     override func viewWillAppear(_ animated: Bool) {
+        self.noDataView.isHidden = true
         self.navigationItem.title = "Search".localized
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: AppColor.Blue]
         newModel = model
@@ -39,12 +42,22 @@ class SearchOeVc: UIViewController ,UISearchBarDelegate{
         
                 if searchText.isEmpty {
                     self.currentArray = newModel?.message?.speciality
+                    if currentArray?.count == 0 {
+                        self.noDataView.isHidden = false
+                    }else{
+                        self.noDataView.isHidden = true
+                    }
                     self.searchTableView.reloadData()
                 } else {
                     self.currentArray = self.currentArray?.filter({ (doctor) -> Bool in
                         guard let searchTxt = self.searchBar.text else {return false}
                         return (doctor.nameLocalized!.lowercased().contains(searchTxt.lowercased()))
                                 })
+                    if currentArray?.count == 0 {
+                        self.noDataView.isHidden = false
+                    }else{
+                        self.noDataView.isHidden = true
+                    }
                     self.searchTableView.reloadData()
                 }
 

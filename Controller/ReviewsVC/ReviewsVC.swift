@@ -13,10 +13,10 @@ class ReviewsVC: UIViewController, BaseViewProtocol {
     var doctorId: Int?
     var doctorReviewData: DoctorReviewsData? {
         didSet {
-            let totalRate = doctorReviewData?.totalDoctorRate ?? 0
-            let doctorRating = doctorReviewData?.totalDoctorRate ?? 0
-            let assistantRating = doctorReviewData?.totalAssistantRate ?? 0
-            let clinicRating = doctorReviewData?.totalClinicRate ?? 0
+            let totalRate = doctorReviewData?.totalDoctorRate ?? 0.0
+            let doctorRating = doctorReviewData?.totalDoctorRate ?? 0.0
+            let assistantRating = doctorReviewData?.totalAssistantRate ?? 0.0
+            let clinicRating = doctorReviewData?.totalClinicRate ?? 0.0
             
             totalRatingView.rating = Double(totalRate)
             doctorRatingView.rating = Double(doctorRating)

@@ -23,9 +23,16 @@ extension AllAllergiesVC: UITableViewDelegate, UITableViewDataSource {
         cell.detailsOneLBl.text = "- \(allergies?.allergiesName ?? "")"
         cell.detailsTwoLbl.text = "- \(allergies?.allergiesTriggeredBy ?? "")"
         cell.deleteHandelr = {
-            self.callApiDelete(Id: allergies?.patientAllergiesID ?? 0)
-            self.model?.message?.tblPatientAllergies?.remove(at: indexPath.row)
-            self.allergiesTableView.deleteRows(at: [indexPath], with: .automatic)
+//            self.callApiDelete(Id: allergies?.patientAllergiesID ?? 0)
+//            self.model?.message?.tblPatientAllergies?.remove(at: indexPath.row)
+//            self.allergiesTableView.deleteRows(at: [indexPath], with: .automatic)
+            let vc = DeleteAllergiesVC()
+            vc.id = allergies?.patientAllergiesID ?? 0
+            vc.Delegete = self
+             vc.modalPresentationStyle = .overCurrentContext
+             vc.modalTransitionStyle = .crossDissolve
+             self.present(vc, animated: true, completion: nil)
+
         }
         cell.editHandelr = {
             let vc = AddAllergiesVC()

@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="seguisb.ttf">
+        <array key="font_bold.TTF">
             <string>SegoeUI-Semibold</string>
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DefultLocationVC" customModule="E4_Patient" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DefultLocationVC" customModule="E4clinic" customModuleProvider="target">
             <connections>
                 <outlet property="addressLbl" destination="GlF-Jh-yab" id="bbK-UW-iou"/>
                 <outlet property="blurView" destination="637-VR-Nhh" id="ui7-DT-cdA"/>
@@ -29,7 +30,7 @@
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="637-VR-Nhh">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fpb-Ew-dUF">
                     <rect key="frame" x="32" y="295" width="350" height="306"/>
@@ -56,7 +57,7 @@
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="26.5" translatesAutoresizingMaskIntoConstraints="NO" id="FAc-NQ-QJ8">
                             <rect key="frame" x="22" y="232" width="306.5" height="35"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fgB-g7-AnV">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fgB-g7-AnV">
                                     <rect key="frame" x="0.0" y="0.0" width="140" height="35"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="140" id="J1r-BE-RTq"/>
@@ -83,7 +84,7 @@
                                         <action selector="no_Click:" destination="-1" eventType="touchUpInside" id="5iA-ev-DT6"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="03p-qa-mgy" customClass="TransitionButton" customModule="TransitionButton">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="03p-qa-mgy" customClass="TransitionButton" customModule="TransitionButton">
                                     <rect key="frame" x="166.5" y="0.0" width="140" height="35"/>
                                     <color key="backgroundColor" name="Blue"/>
                                     <constraints>
@@ -128,6 +129,7 @@
                     </userDefinedRuntimeAttributes>
                 </view>
             </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="637-VR-Nhh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="78t-XP-Av0"/>
@@ -139,10 +141,14 @@
                 <constraint firstItem="637-VR-Nhh" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="wy7-wY-xKm"/>
                 <constraint firstItem="fpb-Ew-dUF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="xWS-cC-gey"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="-100.00000000000001" y="68.973214285714278"/>
         </view>
     </objects>
+    <designables>
+        <designable name="03p-qa-mgy">
+            <size key="intrinsicContentSize" width="30" height="32"/>
+        </designable>
+    </designables>
     <resources>
         <image name="ic_defult address" width="54" height="69.5"/>
         <namedColor name="Blue">
@@ -151,5 +157,8 @@
         <namedColor name="darkGray">
             <color red="0.41999998688697815" green="0.41999998688697815" blue="0.41999998688697815" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

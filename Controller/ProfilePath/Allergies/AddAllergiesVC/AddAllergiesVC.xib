@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
@@ -11,20 +11,26 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="seguisb.ttf">
+        <array key="font_bold.TTF">
             <string>SegoeUI-Semibold</string>
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddAllergiesVC" customModule="E4_Patient" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddAllergiesVC" customModule="E4clinic" customModuleProvider="target">
             <connections>
+                <outlet property="additionLBL" destination="xVe-5G-tdY" id="ZZb-iG-fPG"/>
                 <outlet property="addtionalTxt" destination="tBG-7Y-dU9" id="BLg-iG-8Ps"/>
+                <outlet property="allerNameLBL" destination="64b-qd-CCN" id="R9i-cf-wPK"/>
+                <outlet property="firstDiagLBL" destination="jef-ob-CyR" id="pnI-9C-sBs"/>
                 <outlet property="firstTxt" destination="OMC-cP-0iG" id="JZc-n0-2sr"/>
+                <outlet property="howOftenLBL" destination="vZP-pL-u2Y" id="mJw-Va-94b"/>
                 <outlet property="howTxt" destination="5wX-hQ-Bzf" id="sMT-J6-LEp"/>
                 <outlet property="mainView" destination="vdM-q2-YQ3" id="phd-PZ-8Ux"/>
+                <outlet property="medicationLBL" destination="GkK-g1-hxf" id="boZ-ao-2e8"/>
                 <outlet property="medicationTxt" destination="gFZ-qh-onS" id="aX6-mr-62h"/>
                 <outlet property="nameTxt" destination="Whl-yq-YZh" id="IJN-BA-5ZB"/>
                 <outlet property="saveBtn" destination="r4F-rD-QrQ" id="8gU-gt-bmS"/>
+                <outlet property="triggeredLBL" destination="TvU-zm-5jN" id="dIX-3X-7iV"/>
                 <outlet property="triggeredTxt" destination="xqS-IX-M2W" id="r0Q-EK-6Co"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -129,7 +135,7 @@
                                                 </label>
                                             </subviews>
                                         </stackView>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First diagnosed on" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OMC-cP-0iG" customClass="TextField" customModule="E4_Patient" customModuleProvider="target">
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First diagnosed on" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OMC-cP-0iG" customClass="TextField" customModule="E4clinic" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="20" width="148" height="25"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="25" id="1QF-tP-Snj"/>
@@ -240,6 +246,14 @@
                                 <constraint firstAttribute="width" constant="12" id="lVt-Kt-FpJ"/>
                             </constraints>
                         </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QQP-MC-ThO">
+                            <rect key="frame" x="30" y="287" width="312" height="25"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="   "/>
+                            <connections>
+                                <action selector="openFruitsPickerAction:" destination="-1" eventType="touchUpInside" id="4wc-hb-KhQ"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
@@ -261,20 +275,24 @@
                         <constraint firstItem="O7m-ql-JPL" firstAttribute="top" secondItem="5wX-hQ-Bzf" secondAttribute="bottom" constant="10" id="OYy-vh-zqZ"/>
                         <constraint firstItem="tBG-7Y-dU9" firstAttribute="top" secondItem="xVe-5G-tdY" secondAttribute="bottom" constant="4" id="P3p-AR-daU"/>
                         <constraint firstItem="GkK-g1-hxf" firstAttribute="top" secondItem="O7m-ql-JPL" secondAttribute="bottom" constant="10" id="TXx-lt-XQq"/>
+                        <constraint firstItem="QQP-MC-ThO" firstAttribute="trailing" secondItem="gFZ-qh-onS" secondAttribute="trailing" id="U21-iv-qlH"/>
                         <constraint firstAttribute="trailing" secondItem="Xw8-wO-uoD" secondAttribute="trailing" constant="30" id="VOt-Ox-sVa"/>
                         <constraint firstItem="vZP-pL-u2Y" firstAttribute="top" secondItem="Xw8-wO-uoD" secondAttribute="bottom" constant="10" id="Vwn-Tg-Vcw"/>
                         <constraint firstItem="Jqe-gf-qhn" firstAttribute="centerY" secondItem="OMC-cP-0iG" secondAttribute="centerY" id="YWF-K4-iuL"/>
                         <constraint firstItem="vZP-pL-u2Y" firstAttribute="leading" secondItem="vdM-q2-YQ3" secondAttribute="leading" constant="30" id="aS7-L2-cLp"/>
                         <constraint firstItem="Fbt-qo-VMV" firstAttribute="centerY" secondItem="gFZ-qh-onS" secondAttribute="centerY" id="bae-g9-Thx"/>
+                        <constraint firstItem="QQP-MC-ThO" firstAttribute="bottom" secondItem="gFZ-qh-onS" secondAttribute="bottom" id="gTm-Wx-650"/>
                         <constraint firstAttribute="trailing" secondItem="GkK-g1-hxf" secondAttribute="trailing" constant="30" id="hKh-hm-bey"/>
                         <constraint firstItem="Xw8-wO-uoD" firstAttribute="top" secondItem="Whl-yq-YZh" secondAttribute="bottom" constant="10" id="hRS-av-OZZ"/>
                         <constraint firstAttribute="trailing" secondItem="tBG-7Y-dU9" secondAttribute="trailing" constant="30" id="i3r-lv-l8N"/>
+                        <constraint firstItem="QQP-MC-ThO" firstAttribute="leading" secondItem="gFZ-qh-onS" secondAttribute="leading" id="kUj-8T-QMh"/>
                         <constraint firstItem="Jqe-gf-qhn" firstAttribute="leading" secondItem="vdM-q2-YQ3" secondAttribute="leading" constant="40" id="n0z-z9-7WG"/>
                         <constraint firstItem="5wX-hQ-Bzf" firstAttribute="leading" secondItem="vdM-q2-YQ3" secondAttribute="leading" constant="30" id="orQ-KV-CZV"/>
                         <constraint firstAttribute="trailing" secondItem="5wX-hQ-Bzf" secondAttribute="trailing" constant="30" id="pjD-4a-Uce"/>
                         <constraint firstAttribute="trailing" secondItem="Whl-yq-YZh" secondAttribute="trailing" constant="30" id="qp4-Bz-Hd7"/>
                         <constraint firstItem="gFZ-qh-onS" firstAttribute="leading" secondItem="vdM-q2-YQ3" secondAttribute="leading" constant="30" id="rnO-Gs-cMG"/>
                         <constraint firstAttribute="trailing" secondItem="O7m-ql-JPL" secondAttribute="trailing" constant="30" id="uSs-Wi-lZU"/>
+                        <constraint firstItem="QQP-MC-ThO" firstAttribute="top" secondItem="gFZ-qh-onS" secondAttribute="top" id="xJu-DT-rdD"/>
                         <constraint firstItem="GkK-g1-hxf" firstAttribute="leading" secondItem="vdM-q2-YQ3" secondAttribute="leading" constant="30" id="xmJ-fs-2Y3"/>
                     </constraints>
                 </view>
@@ -323,7 +341,7 @@
             <color red="0.071000002324581146" green="0.46700000762939453" blue="0.81999999284744263" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="textView">
-            <color red="0.77254901960784317" green="0.76862745098039209" blue="0.76862745098039209" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.77300000190734863" green="0.76899999380111694" blue="0.76899999380111694" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

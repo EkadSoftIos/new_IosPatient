@@ -7,17 +7,34 @@
 
 import UIKit
 import FSPagerView
-class HomeVC: UIViewController {
+class HomeVC: BaseViewControll,UITextFieldDelegate {
     @IBOutlet var lastVisitLbl: UILabel!
     @IBOutlet var nameLbl: UILabel!
     @IBOutlet var userIMG: UIImageView!
     @IBOutlet var searchView: UIView!
+    @IBOutlet var searchTXT: UITextField!
     @IBOutlet var sliderControl: UIPageControl!
     @IBOutlet var SpecializationsCollection: UICollectionView!
     @IBOutlet var doctorServiseCollection: UICollectionView!
     @IBOutlet var medicalServiseCollection: UICollectionView!
     @IBOutlet var topDoctorCollection: UICollectionView!
     @IBOutlet var topOffersCollection: UICollectionView!
+    
+    @IBOutlet weak var welcomeLBL: UILabel!
+    @IBOutlet weak var howDoYouLBL: UILabel!
+    @IBOutlet weak var youCanFindLBL: UILabel!
+    @IBOutlet weak var lastVisitLBL: UILabel!
+    @IBOutlet weak var specializationLBL: UILabel!
+    @IBOutlet weak var seeallSpecBTN: UIButton!
+    @IBOutlet weak var doctorServiceLBL: UILabel!
+    @IBOutlet weak var medicalServiceLBL: UILabel!
+    @IBOutlet weak var seeAllTopDoctorBTN: UIButton!
+    
+    @IBOutlet weak var seeAllTopOfferBTN: UIButton!
+    @IBOutlet weak var topOfferLBL: UILabel!
+    @IBOutlet weak var topDoctorLBL: UILabel!
+    
+    
     @IBOutlet var pagerSlider: FSPagerView!{
         didSet{
             self.pagerSlider.register(FSPagerViewCell.self, forCellWithReuseIdentifier: "cellSlider")
@@ -25,18 +42,45 @@ class HomeVC: UIViewController {
     let doctorServiseArr = [UIImage(named: "home1"), UIImage(named: "home2"), UIImage(named: "home3"), UIImage(named: "home4"), UIImage(named: "home5")]
     let meedicalServiseArr = [(UIImage(named: "ic_hospital"), "Hospital".localized),(UIImage(named: "ms2"), "Pharmacy"),(UIImage(named: "ms3"), "Lab"),(UIImage(named: "ms4"), "X-Rays")]
     var homeResponse: HomeModel?
+    
+    let btn = BadgedButtonItem(with: AppImages.notLogo)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         callApi()
         pagerSlider.transformer = FSPagerViewTransformer(type: .linear)
         searchView.ShadowView(view: searchView, radius: 10, opacity: 0.4, shadowRadius: 4, color: UIColor.lightGray.cgColor)
-        
+        searchTXT.delegate = self
         setupPagerSlider()
         setupCollectionView()
+        
+        self.navigationItem.rightBarButtonItem = btn
+
+        btn.tapAction = {
+            let sb = UIStoryboard(name: "Main", bundle: nil)
+            let vc = sb.instantiateViewController(withIdentifier: "NotificationsVC") as! NotificationsVC
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
     override func viewWillAppear(_ animated: Bool) {
+        setLocalization()
         self.navigationItem.title = "Home".localized
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: AppColor.Blue]
+    }
+    func setLocalization(){
+        welcomeLBL.text = "Welcome".localized
+        howDoYouLBL.text = "How do you feel today ?".localized
+        youCanFindLBL.text = "You can find with us all your medical help.".localized
+        lastVisitLBL.text = "Last visit".localized
+        searchTXT.placeholder = "Search by doctor name".localized
+        specializationLBL.text = "Specializations".localized
+        doctorServiceLBL.text = "Doctor Service".localized
+        medicalServiceLBL.text = "Medical Services".localized
+        topDoctorLBL.text = "Top Doctor".localized
+        topOfferLBL.text = "Top Offers".localized
+        seeallSpecBTN.setTitle("SeeAll".localized, for: .normal)
+        seeAllTopDoctorBTN.setTitle("SeeAll", for: .normal)
+        seeAllTopOfferBTN.setTitle("SeeAll", for: .normal)
     }
     func setupCollectionView(){
         SpecializationsCollection.register(SpecializationsCell.nib, forCellWithReuseIdentifier: "SpecializationsCell")
@@ -92,5 +136,9 @@ class HomeVC: UIViewController {
     }
     @IBAction func seeAllTopOffers_Click(_ sender: Any) {
     }
-    
+    func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
+        let vc = AllSearchVC()
+        vc.searchtext = textField.text ?? ""
+        self.show(vc, sender: nil)
+    }
 }

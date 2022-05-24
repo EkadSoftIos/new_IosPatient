@@ -32,7 +32,7 @@ class MedicalReportsVC: UIViewController {
         }
     }
     func setupTableView(){
-        medicalTable.register(AllAllergiesCell.nib, forCellReuseIdentifier: "AllAllergiesCell")
+        medicalTable.register(MedicalReportCell.nib, forCellReuseIdentifier: "MedicalReportCell")
         medicalTable.separatorStyle = .none
         medicalTable.delegate = self
         medicalTable.dataSource = self
@@ -46,7 +46,7 @@ class MedicalReportsVC: UIViewController {
     }
     
 }
-extension MedicalReportsVC: AddMedicalReport {
+extension MedicalReportsVC: AddMedicalReport ,DeleteMedicalReports{
     func Data(isAdded: Bool) {
         callApiAdd()
     }

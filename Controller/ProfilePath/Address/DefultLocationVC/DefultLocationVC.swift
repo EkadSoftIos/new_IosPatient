@@ -52,7 +52,8 @@ class DefultLocationVC: UIViewController {
                 if model.successtate == 200{
                     self.Delegete?.Data(isAdded: true)
                     self.dismiss(animated: true, completion: nil)
-                    self.showMessage(sub: "Success".localized)
+                    //" تم جعل العنوان كإفتراضي"
+                    self.showMessage(sub: "Address has been made as default".localized)
                     
                 }else{
                     self.yesBtn.stopAnimation()
