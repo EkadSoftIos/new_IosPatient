@@ -113,12 +113,9 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
             let vc = MedicalServicesVC()
             if indexPath.row == 2 { vc.type = .labs }
             else if indexPath.row == 3 { vc.type = .radiologyCenter }
+            else{ return }
             vc.hidesBottomBarWhenPushed = true
             navigationController?.pushViewController(vc, animated: true)
-            
-//            let nav = UINavigationController(rootViewController: vc)
-//            nav.modalPresentationStyle = .fullScreen
-//            present(nav, animated: true)
         }
         
     }
