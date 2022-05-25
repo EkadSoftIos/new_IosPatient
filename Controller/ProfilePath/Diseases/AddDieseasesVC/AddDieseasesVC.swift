@@ -21,9 +21,16 @@ class AddDieseasesVC: UIViewController,UITextViewDelegate, UISearchBarDelegate {
     @IBOutlet var searchBar: UISearchBar!
     @IBOutlet var doctorsViewHeight: NSLayoutConstraint!
     @IBOutlet var mainViewHeight: NSLayoutConstraint!
+    
+    @IBOutlet weak var diseasesLBL: UILabel!
+    @IBOutlet weak var diagnosedLBL: UILabel!
+    @IBOutlet weak var statusLBL: UILabel!
+    @IBOutlet weak var treatedByLBL: UILabel!
+    @IBOutlet weak var notesLBL: UILabel!
+    @IBOutlet weak var medicationLBL: UILabel!
+    
     let regularFont = UIFont.systemFont(ofSize: 16)
     let boldFont = UIFont.boldSystemFont(ofSize: 16)
-
     var model: UserDataModel?
     var Delegete: AddDieseases?
     var isUpdate: Bool = false
@@ -44,6 +51,20 @@ class AddDieseasesVC: UIViewController,UITextViewDelegate, UISearchBarDelegate {
     var doctorId: Int = 0
     var doctorsModel: GetDoctorsModel?
     override func viewWillAppear(_ animated: Bool) {
+        setLocalization()
+    }
+    func setLocalization(){
+        diseasesLBL.text = "Diseases / Conditions Name *".localized
+        dieseasNameTxt.placeholder = "Diseases / Conditions Name".localized
+        diagnosedTxt.placeholder = "Diagnosed On".localized
+        diagnosedLBL.text = "Diagnosed On *".localized
+        statusLBL.text = "Status *".localized
+        statusTxt.placeholder = "Status".localized
+        treatedByLBL.text = "Treated by *".localized
+        medicationTxt.placeholder = "Medication".localized
+        medicationLBL.text = "Medication".localized
+        notesLBL.text = "Notes".localized
+        
     }
     override func viewDidLoad() {
         super.viewDidLoad()

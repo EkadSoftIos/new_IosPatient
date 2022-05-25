@@ -1,24 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="seguisb.ttf">
+        <array key="font_bold.TTF">
             <string>SegoeUI-Semibold</string>
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddFamilyHistoryVC" customModule="E4_Patient" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddFamilyHistoryVC" customModule="E4clinic" customModuleProvider="target">
             <connections>
                 <outlet property="mainView" destination="Aat-ks-uo8" id="BA5-d8-cKh"/>
+                <outlet property="notesLBL" destination="zPN-xk-vLN" id="oQ9-IY-kRn"/>
                 <outlet property="notesTxt" destination="o8b-E0-hdh" id="sNu-BU-pSV"/>
+                <outlet property="relationLBL" destination="K2e-O4-Ada" id="QEW-DZ-CiO"/>
                 <outlet property="relationTxt" destination="42S-AT-j8q" id="NKT-pj-Atz"/>
                 <outlet property="saveBtn" destination="TKd-DM-BdK" id="PRw-Nx-qBk"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -79,7 +81,7 @@
                                     <real key="value" value="0.59999999999999998"/>
                                 </userDefinedRuntimeAttribute>
                                 <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                    <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="value" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </userDefinedRuntimeAttribute>
                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                     <real key="value" value="5"/>
@@ -143,7 +145,7 @@
     </objects>
     <designables>
         <designable name="TKd-DM-BdK">
-            <size key="intrinsicContentSize" width="34" height="30"/>
+            <size key="intrinsicContentSize" width="32" height="32"/>
         </designable>
     </designables>
     <resources>

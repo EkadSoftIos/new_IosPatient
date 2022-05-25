@@ -19,6 +19,7 @@ class SearchVC: UIViewController, UISearchBarDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         searchBarTxt.delegate = self
+        searchBarTxt.placeholder = "Search".localized
         SetUpTableView()
     }
     

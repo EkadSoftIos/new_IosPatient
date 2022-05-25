@@ -59,7 +59,8 @@ extension ProfileVC{
        dateFormatter.dateFormat = dateFormat
 
        let dateFromInputString = dateFormatter.date(from: date_string)
-       dateFormatter.dateFormat = "yyyy-MM-dd"
+//       dateFormatter.dateFormat = "yyyy-MM-dd"
+        dateFormatter.dateFormat = "dd-mm-yyyy"
        if(dateFromInputString != nil){
            return dateFormatter.string(from: dateFromInputString!)
        }

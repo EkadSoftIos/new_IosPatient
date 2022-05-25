@@ -19,6 +19,7 @@ class FollowUpCell: UITableViewCell {
     @IBOutlet weak var tempLbl: UILabel!
     @IBOutlet weak var noteLbl: UILabel!
     @IBOutlet weak var bgView: UIView!
+    @IBOutlet weak var byLBL: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

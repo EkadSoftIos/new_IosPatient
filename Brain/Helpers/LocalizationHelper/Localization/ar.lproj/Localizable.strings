@@ -1,0 +1,208 @@
+/*
+  Localizable.strings
+  
+  Copyright © 2019 nada. All rights reserved.
+*/
+
+//Login
+"Login"="تسجيل الدخول";
+"Welcome Back"="مرحبًا بعودتك";
+"Mobile"="الهاتف";
+"Password"="كلمه السر";
+"Forget Password?"="نسيت كلمة المرور؟";
+"Or Login With"="أو تسجيل الدخول باستخدام";
+"Don't have an account ?"="ليس لديك حساب؟";
+"SignUp"="اشتراك";
+"By signing up you agree to E4 clinic"="بالتسجيل فأنت توافق على عيادة E4";
+"Terms, Condition"="الشروط ، الأحكام";
+
+//Register
+"AccountInfo"="معلومات الحساب";
+"FirstName"="الاسم الأول";
+"LastName"="الكنية";
+"Email"="بريد الالكتروني";
+"DateOfBirth"="تاريخ الولادة";
+"Gender"="جنس";
+"ConfirmPassword"="تأكيد كلمة المرور";
+"TermsOfUse"="تعليمات الاستخدام";
+"BySigningUpYouAgreeToOur"="بالتسجيل فأنت توافق على ";
+"CreateAccount"="إنشاء حساب";
+
+//Add Surgey
+"Name"="اسم";
+"Implants/SupportDevices"="زرع / أجهزة الدعم";
+"Date"="تاريخ ";
+"By"="بواسطة";
+"SearchForDoctor"="ابحث عن طبيب";
+"Notes"="ملاحظات";
+"Edit Surgery"="تعديل الجراحة";
+"Add Surgery"="إضافة جراحة";
+"Save"="حفظ";
+"Surgery / Implants"="الجراحة / زرع";
+"New surgery has been added successfully "="تمت إضافة جراحة جديدة بنجاح";
+"Surgery has been edited successfully"="تم تعديل الجراحة بنجاح";
+"Surgery has been removed from list"=" تم حذف الجراحة من القائمة ";
+"Are you want to Delete this surgey ?"="هل تريد حذف هذه الجراحة؟";
+"Delete Surgey"="حذف الجراحة";
+"No"="لا";
+"Yes"="نعم";
+"DiagnosedOn"="تم التشخيص";
+"TratedByDr."="يعالج من قبل د.";
+
+//Medical report
+"Medical report has been removed from list"=" تم حذف التقرير الطبي من القائمة ";
+"Medical Reports"="التقارير الطبية";
+"Are you want to Delete this medical report ?"="هل تريد حذف هذا التقرير الطبي؟";
+"Name *"="اسم *";
+"Date *"="تاريخ *";
+"Result *"="نتيجة *";
+"Result"="نتيجة";
+"AddAttachments"="أضف ملحقات";
+"Notes *"="ملاحظات *";
+"PoweredBy"="مشغل بواسطة";
+"Test / Radiology Centre"="مركز الفحص / الأشعة";
+"Edit Medical Reports"="تحرير التقارير الطبية";
+"Add Medical Reports"="إضافة التقارير الطبية";
+"Photo Source"="صورة";
+"Choose Source"="اختر المصدر";
+"Camera"="كاميرا";
+"Cancel"="إلغاء";
+
+
+ //Address
+"Delete Address"="حذف العنوان";
+"Are you want to Delete this address ?"="هل تريد حذف هذا العنوان؟";
+
+//Home
+"Home"="Home";
+"Welcome"="Welcome";
+"How do you feel today ?"="How do you feel today ?";
+"You can find with us all your medical help."="You can find with us all your medical help.";
+"Last visit"="Last visit";
+"Search by doctor name"="Search by doctor name";
+"Specializations"="Specializations";
+"Doctor Service"="Doctor Service";
+"Medical Services"="Medical Services";
+"Top Doctor"="Top Doctor";
+"Top Offers"="Top Offers";
+"SeeAll"="SeeAll";
+
+//Contact us
+"Contact Us"="Contact Us";
+
+//BranchInfo
+
+"Clinic Photo"="صورة العيادة";
+"Branch Info"="معلومات الفرع";
+"Home Info"="معلومات الصفحة الرئيسية";
+"HomeVisit"="زيارة منزلية";
+"DoctorMedicalService"="دكتور الخدمة الطبية";
+ 
+//Appointment
+"Your Appointment"="موعدك";
+"Appointment Details"="تفاصيل الموعد";
+"With Doctor"="مع دكتور";
+"Appointment Reason"="سبب التعيين";
+"Appointment Cancel"="إلغاء الموعد";
+"View History Appointment"="عرض موعد المحفوظات";
+"error connecting to server. please try again" = "خطأ في الاتصال بالخادم. يرجى المحاولة مرة أخرى";
+
+//MedicalReport
+" New medical report has been added successfully"="تم إضافة تقرير طبي جديد بنجاح";
+"Medical report  has been edited successfully"="تم تعديل التقرير الطبي بنجاح";
+//Allergies
+"Allergies Name *"="اسم الحساسية *";
+"Triggered by"="الناتجه عن";
+"How often does it occur?"="كم مرة يحدث؟";
+"First diagnosed on"="التشخيص لأول مرة";
+"Medication"="دواء";
+"Additional Notes"="ملاحظات إضافية";
+"New allergies have been added successfully"="تم إضافة حساسية بنجاح";
+"Allergies have been edited successfully"="تم تعديل الحساسية بنجاح";
+"Add Allergies"="إضافة الحساسية";
+"Name required"="الاسم مطلوب";
+"Are you want to Delete this allergy ?"="هل تريد حذف هذه الحساسية؟";
+"Allergies"="الحساسية";
+"New medication has been added successfully"="تم إضافة دواء جديد بنجاح";
+"Delete allergy"="Delete allergy";
+"Allergy has been removed from list"="Allergy has been removed from list";
+//Medication
+"Other Instruction"="تعليمات أخرى";
+"Medication has been edited successfully"="تم تعديل الدواء بنجاح";
+"About"="حول المنتج";
+"Dosage"="الجرعة";
+"Quantity *"="كمية *";
+"Quantity"="كمية";
+"When *"="متي *";
+"When"="متي ";
+"Duration"="مدة";
+"Day"="يوم";
+"Given by Doctor"="مقدم من دكتور";
+
+"Add Medication"="إضافة دواء";
+"MedicationName"="اسم الدواء";
+"Search"="بحث";
+"SetReminder"="تعيين تذكير";
+"Delete Medical Report"="حذف التقرير الطبي";
+"Relation *"="* علاقة";
+
+//Social
+
+"Job"="وظيفة";
+"Education"="تعليم";
+"Smooking"="التدخين";
+"Alcohol Consumption"="استهلاك الكحول";
+"Marital Status"="الحالة الإجتماعية";
+"Children"="أطفال";
+"General Diet"="النظام الغذائي العام";
+"Exercise"="يمارس";
+"Edit Social History"="تحرير التاريخ الاجتماعي";
+
+//Diseases
+"Diseases / Conditions Name *"="اسم الأمراض / الشروط *";
+"Diseases / Conditions Name"="اسم الأمراض / الحالات";
+"Diagnosed On"="تم التشخيص";
+"Diagnosed On *"="تم التشخيص في *";
+"Status *"="حالة *";
+"Status"="حالة";
+"Treated by *"="تم علاجه بواسطة *";
+"Medication"="دواء";
+"Are you want to Delete this disease ?"="هل تريد حذف هذا المرض؟";
+"Delete disease"="حذف المرض";
+"Disease has been removed from list"="تمت إزالة المرض من القائمة";
+
+//Permission
+"Allow For"="السماح ل";
+"Allow All Doctors"="السماح لجميع الأطباء";
+"Choose some Doctors"="اختر بعض الأطباء";
+"Filter Provider By"="تصفية الموفر حسب";
+"Entity"="شخصية";
+"Main Speciality"="التخصص الرئيسي";
+"Healthcare Providers"="مقدمي الرعاية الصحية";
+"Basic Profile"="ملف تعريف أساسي";
+"Medical Reports"="التقارير الطبية";
+"Emergency Contacts"="جهة اتصال للطوارئ";
+"Health Profile"="ملف تعريف الصحة";
+"Diseases / Conditions"="الأمراض / الظروف";
+"Medications"="الأدوية";
+"Allergies"="الحساسية";
+"Social History"="التاريخ الاجتماعي";
+"Family History"="تاريخ العائلة";
+"Surgery / Implants"="الجراحة / يزرع";
+"All"="الجميع";
+
+
+//Family
+"Edit Family History"="تحرير تاريخ العائلة";
+"Add Family History"="إضافة تاريخ العائلة";
+"New family history has been added successfully"="تم إضافة تاريخ عائلة بنجاح";
+"Family history has been edited successfully"=" تم تعديل تاريخ العائلة بنجاح";
+"Family history has been removed from list"= " تم حذف تاريخ العائلة من القائمة ";
+"Are you want to Delete this family ?"="هل تريد حذف هذه العائلة؟";
+"Delete family"="حذف العائلة";
+ 
+
+//doctor profile
+"Doctor has been removed from favorites list"="تمت إزالة الطبيب من قائمة المفضلة";
+"Doctor has been added to favorites list"="تمت إضافة الطبيب إلى قائمة المفضلة";
+

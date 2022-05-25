@@ -1,0 +1,212 @@
+/*
+  Localizable.strings
+  Copyright © 2019 nada. All rights reserved.
+*/
+
+//Login
+"Login"="Login";
+"Welcome Back"="Welcome Back";
+"Mobile"="Mobile";
+"Password"="Password";
+"Forget Password?"="Forget Password?";
+"Or Login With"="Or Login With";
+"Don't have an account ?"="Don't have an account ?";
+"SignUp"="Sign Up";
+"By signing up you agree to E4 clinic"="By signing up you agree to E4 clinic";
+"Terms, Condition"="Terms, Condition";
+
+//Register
+"AccountInfo"="Account Info";
+"FirstName"="First Name";
+"LastName"="Last Name";
+"Email"="Email";
+"DateOfBirth"="Date Of Birth";
+"Gender"="Gender";
+"ConfirmPassword"="Confirm Password";
+"TermsOfUse"="Terms Of Use";
+"BySigningUpYouAgreeToOur"="By Signing Up You Agree To Our";
+"CreateAccount"="Create Account";
+
+// Surgey
+"Name"="Name";
+"Implants/SupportDevices"="Implants/Support Devices";
+"Date"=" Date";
+"By"="By";
+"SearchForDoctor"="Search For Doctor";
+"Notes"="Notes";
+"Edit Surgery"="Edit Surgery";
+"Add Surgery"="Add Surgery";
+"Save"="Save";
+"Surgery / Implants"="Surgery / Implants";
+"New surgery has been added successfully "="New surgery has been added successfully ";
+"Surgery has been edited successfully"="Surgery has been edited successfully";
+"Surgery has been removed from list"="Surgery has been removed from list";
+"Are you want to Delete this surgey ?"="Are you want to Delete this surgey ?";
+"Delete Surgey"="Delete Surgey";
+"Yes"="Yes";
+"No"="No";
+"DiagnosedOn"="Diagnosed On";
+"TratedByDr."="Trated By Dr.";
+
+//Medical report
+"Medical report has been removed from list"="Medical report has been removed from list";
+"Medical Reports"="Medical Reports";
+"Are you want to Delete this medical report ?"="Are you want to Delete this medical report ?";
+"Name *"="Name *";
+"Date *"="Date *";
+"Result *"="Result *";
+"Result"="Result";
+"AddAttachments"="Add Attachments";
+"Notes *"="Notes *";
+"PoweredBy"="Powered By";
+"Test / Radiology Centre"="Test / Radiology Centre";
+"Save"="Save";
+"Edit Medical Reports"="Edit Medical Reports";
+"Add Medical Reports"="Add Medical Reports";
+"Photo Source"="Photo";
+"Choose Source"="Choose Source";
+"Camera"="Camera";
+"Cancel"="Cancel";
+
+
+ //Address
+"Delete Address"="Delete Address";
+"Are you want to Delete this address ?"="Are you want to Delete this address ?";
+
+//Home
+"Home"="Home";
+"Welcome"="Welcome";
+"How do you feel today ?"="How do you feel today ?";
+"You can find with us all your medical help."="You can find with us all your medical help.";
+"Last visit"="Last visit";
+"Search by doctor name"="Search by doctor name";
+"Specializations"="Specializations";
+"Doctor Service"="Doctor Service";
+"Medical Services"="Medical Services";
+"Top Doctor"="Top Doctor";
+"Top Offers"="Top Offers";
+"SeeAll"="SeeAll";
+
+//Contact us
+"Contact Us"="Contact Us";
+
+//BranchInfo
+
+"Clinic Photo"="Clinic Photo";
+"Branch Info"="Branch Info";
+"Home Info"="Home Info";
+"HomeVisit"="Home Visit";
+"DoctorMedicalService"="Doctor Medical Service";
+ 
+//Appointment
+"Your Appointment"="Your Appointment";
+"Appointment Details"="Appointment Details";
+"With Doctor"="With Doctor";
+"Appointment Reason"="Appointment Reason";
+"Appointment Cancel"="Appointment Cancel";
+"View History Appointment"="View History Appointment";
+"error connecting to server. please try again" = "error connecting to server. please try again";
+
+//MedicalReport
+" New medical report has been added successfully"=" New medical report has been added successfully";
+"Medical report  has been edited successfully"="Medical report  has been edited successfully";
+
+//Allergies
+"Allergies Name *"="Allergies Name *";
+"Triggered by"="Triggered by";
+"How often does it occur?"="How often does it occur?";
+"First diagnosed on"="First diagnosed on";
+"Medication"="Medication";
+"Additional Notes"="Additional Notes";
+"New allergies have been added successfully"="New allergies have been added successfully";
+"Allergies have been edited successfully"="Allergies have been edited successfully";
+"Add Allergies"="Add Allergies";
+"Name required"="Name required";
+"Are you want to Delete this allergy ?"="Are you want to Delete this allergy ?";
+"Allergies"="Allergies";
+"Delete allergy"="Delete allergy";
+"Allergy has been removed from list"="Allergy has been removed from list";
+//Medication
+"Other Instruction"="Other Instruction";
+"New medication has been added successfully"="New medication has been added successfully";
+"Medication has been edited successfully"="Medication has been edited successfully";
+"About"="About";
+"Dosage"="Dosage";
+"Quantity *"="Quantity *";
+"Quantity"="Quantity";
+"When *"="When *";
+"When"="When";
+"Duration"="Duration";
+"Day"="Day";
+"Given by Doctor"="Given by Doctor";
+
+"Add Medication"="Add Medication";
+"MedicationName"="MedicationName";
+"Search"="Search";
+"SetReminder"="Set Reminder";
+"Delete Medical Report"="Delete Medical Report";
+"Relation *"="Relation *";
+
+//Social
+
+"Job"="Job";
+"Education"="Education";
+"Smooking"="Smooking";
+"Alcohol Consumption"="Alcohol Consumption";
+"Marital Status"="Marital Status";
+"Children"="Children";
+"General Diet"="General Diet";
+"Exercise"="Exercise";
+"Edit Social History"="Edit Social History";
+
+//Diseases
+"Diseases / Conditions Name *"="Diseases / Conditions Name *";
+"Diseases / Conditions Name"="Diseases / Conditions Name";
+"Diagnosed On"="Diagnosed On";
+"Diagnosed On *"="Diagnosed On *";
+"Status *"="Status *";
+"Status"="Status";
+"Treated by *"="Treated by *";
+"Medication"="Medication";
+"Are you want to Delete this disease ?"="Are you want to Delete this disease ?";
+"Delete disease"="Delete disease";
+"Disease has been removed from list"="Disease has been removed from list";
+
+//Permission
+"Allow For"="Allow For";
+"Allow All Doctors"="Allow All Doctors";
+"Choose some Doctors"="Choose some Doctors";
+"Filter Provider By"="Filter Provider By";
+"Entity"="Entity";
+"Main Speciality"="Main Speciality";
+"Entity"="Entity";
+"Main Speciality"="Main Speciality";
+"Healthcare Providers"="Healthcare Providers";
+"Healthcare Providers"="Healthcare Providers";
+"Basic Profile"="Basic Profile";
+"Medical Reports"="Medical Reports";
+"Emergency Contacts"="Emergency Contacts";
+"Health Profile"="Health Profile";
+"Diseases / Conditions"="Diseases / Conditions";
+"Medications"="Medications";
+"Allergies"="Allergies";
+"Social History"="Social History";
+"Family History"="Family History";
+"Surgery / Implants"="Surgery / Implants";
+"All"="All";
+
+
+ //Family
+"Edit Family History"="Edit Family History";
+"Add Family History"="Add Family History";
+"New family history has been added successfully"="New family history has been added successfully";
+"Family history has been edited successfully"="Family history has been edited successfully";
+"Family History"="Family History";
+"Family history has been removed from list"="Family history has been removed from list";
+"Are you want to Delete this family ?"="Are you want to Delete this family ?";
+"Delete family"="Delete family";
+   
+
+//doctor profile
+"Doctor has been removed from favorites list"="Doctor has been removed from favorites list";
+"Doctor has been added to favorites list"="Doctor has been added to favorites list";

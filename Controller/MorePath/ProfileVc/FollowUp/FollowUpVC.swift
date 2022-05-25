@@ -55,7 +55,7 @@ extension FollowUpVC: UITableViewDelegate, UITableViewDataSource {
         cell.diabetesLbl.text = followUpData?[indexPath.row].diabetes ?? ""
         let milisecond = followUpData?[indexPath.row].createDate ?? ""
         cell.dateLbl.text = convertDateFormat(inputDate: milisecond)
-        
+        cell.byLBL.text = "\("By".localized)\(followUpData?[indexPath.row].doctorName ?? "")"
 //        cell.trachBtn.tag = indexPath.row
 //        cell.trachBtn.addTarget(self, action: #selector(moveBtn(sender:)), for: .touchUpInside)
 //        cell.editBtn.tag = indexPath.row
@@ -77,7 +77,7 @@ extension FollowUpVC: UITableViewDelegate, UITableViewDataSource {
          olDateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
          let oldDate = olDateFormatter.date(from: inputDate) ?? Date()
          let convertDateFormatter = DateFormatter()
-         convertDateFormatter.dateFormat = "MMM dd yyyy"
+         convertDateFormatter.dateFormat = "MMM dd, yyyy"
         convertDateFormatter.locale = Locale(identifier: "en_US_POSIX")
          return convertDateFormatter.string(from: oldDate)
     }

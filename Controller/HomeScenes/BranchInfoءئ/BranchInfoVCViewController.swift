@@ -19,8 +19,10 @@ class BranchInfoVCViewController: UIViewController {
     @IBOutlet var serviseView: UIView!
     @IBOutlet var photoView: UIView!
     @IBOutlet var photoCollection: UICollectionView!
-    @IBOutlet var doctorMedTable: UITableView!
-    
+    @IBOutlet weak var firstServiceLBL: UILabel!
+    @IBOutlet weak var viewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet var moreBTN: UIButton!
+    @IBOutlet var morePhotoBTN: UIButton!
     @IBOutlet weak var branchInfoLBL: UIView!
     
     @IBOutlet weak var doctorMedicalLBL: UILabel!
@@ -31,15 +33,29 @@ class BranchInfoVCViewController: UIViewController {
         setLocalization()
         self.navigationItem.title = "Branch Info".localized
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: AppColor.Blue]
+        
+        if  branchList?.medicalServiceList?.count ?? 0 > 1{
+            moreBTN.isHidden = false
+            viewHeightConstraint.constant = 120
+            firstServiceLBL.text = branchList?.medicalServiceList?[0].medicalServiceNameLocalized ?? ""
+        }else {
+            moreBTN.isHidden = true
+            viewHeightConstraint.constant = 40
+        }
+
+        if branchList?.branchImageList?.count ?? 0 > 6 {
+            morePhotoBTN.isHidden = false
+        }else{
+            morePhotoBTN.isHidden = true
+        }
     }
     func setLocalization(){
-        doctorMedicalLBL.text = "Doctor MedicalService".localized
+        doctorMedicalLBL.text = "DoctorMedicalService".localized
         clinicPhotoLBL.text = "Clinic Photo".localized
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         setBranchData()
-        setupTableView()
         setupCollectionView()
         locationView.ShadowView(view: locationView, radius: 10, opacity: 2, shadowRadius: 2, color: UIColor.lightGray.cgColor)
         serviseView.ShadowView(view: serviseView, radius: 10, opacity: 2, shadowRadius: 2, color: UIColor.lightGray.cgColor)
@@ -55,16 +71,20 @@ class BranchInfoVCViewController: UIViewController {
         branchImg.kf.setImage(with: imgURL)
         branchLocation.text = branchList?.branchAddress_Localized ?? ""
     }
-    func setupTableView(){
-        doctorMedTable.register(DoctorServiseCell.nib, forCellReuseIdentifier: "DoctorServiseCell")
-        doctorMedTable.delegate = self
-        doctorMedTable.dataSource = self
-        doctorMedTable.separatorStyle = .none
-    }
+    
     func setupCollectionView(){
         photoCollection.register(PhotoCell.nib, forCellWithReuseIdentifier: "PhotoCell")
         photoCollection.delegate = self
         photoCollection.dataSource = self
     }
-
+    @IBAction func moreAction(_ sender: Any) {
+        let vc = HomeInfoTableVC()
+        vc.homeList = branchList
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    @IBAction func morePhotoAction(_ sender: Any) {
+        let vc = BranchImagesCollectionVC()
+        vc.branchList = branchList
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }

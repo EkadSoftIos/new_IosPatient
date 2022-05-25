@@ -18,18 +18,24 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddDieseasesVC" customModule="E4clinic" customModuleProvider="target">
             <connections>
+                <outlet property="diagnosedLBL" destination="BzR-xt-ADQ" id="XKt-5v-jO3"/>
                 <outlet property="diagnosedTxt" destination="CQz-V4-zrT" id="5n0-SA-K64"/>
                 <outlet property="dieseasNameTxt" destination="TrQ-Rc-LnW" id="FU4-bf-WWG"/>
+                <outlet property="diseasesLBL" destination="3dd-1m-dju" id="BVz-A3-f4s"/>
                 <outlet property="doctorsTableView" destination="HFh-AM-fcx" id="zWR-3t-m4c"/>
                 <outlet property="doctorsView" destination="lOV-i3-rQK" id="2Ek-m5-PFC"/>
                 <outlet property="doctorsViewHeight" destination="6Nw-Wg-bEH" id="Yki-of-IuF"/>
                 <outlet property="mainView" destination="z4d-XJ-opR" id="15P-2u-a64"/>
                 <outlet property="mainViewHeight" destination="AQw-QE-oy8" id="0bE-C1-8AH"/>
+                <outlet property="medicationLBL" destination="D6D-fu-hsi" id="TN0-Nv-gxr"/>
                 <outlet property="medicationTxt" destination="QOX-Af-7x8" id="FS1-Ft-GCX"/>
+                <outlet property="notesLBL" destination="SwX-I8-ktz" id="lKM-tz-s9o"/>
                 <outlet property="notesTxt" destination="pFe-mm-0zW" id="xVt-uV-Ub9"/>
                 <outlet property="saveBtn" destination="wHc-Lx-aRE" id="lHq-et-Ys4"/>
                 <outlet property="searchBar" destination="AHa-s7-vgW" id="zMX-Uh-5jN"/>
+                <outlet property="statusLBL" destination="Ga1-Xz-QO5" id="KZp-Ir-r9V"/>
                 <outlet property="statusTxt" destination="oE4-jL-8B1" id="W68-AU-aTV"/>
+                <outlet property="treatedByLBL" destination="RIS-jp-OD2" id="N03-q6-BNg"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

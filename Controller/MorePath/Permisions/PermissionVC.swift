@@ -94,6 +94,32 @@ class PermissionVC: UIViewController, UITextFieldDelegate {
         healthCareTxt.delegate = self
     }
     override func viewWillAppear(_ animated: Bool) {
+        setLocaization()
+    }
+    func setLocaization(){
+        allowForLBL.text = "Allow For".localized
+        allowAllDoctorLBL.text = "Allow All Doctors".localized
+        chooseSomeLBL.text = "Choose some Doctors".localized
+        filterProviderByLBL.text = "Filter Provider By".localized
+        entityLBL.text = "Entity".localized
+        mainSpecLBL.text = "Main Speciality".localized
+        entityTxt.placeholder = "Entity".localized
+        mainSpecialityTxt.placeholder = "Main Speciality".localized
+        healthCareTxt.placeholder = "Healthcare Providers".localized
+        healthCareProvLBL.text = "Healthcare Providers".localized
+        basicProfLBL.text = "Basic Profile".localized
+        medicalReportsLBL.text = "Medical Reports".localized
+        emergencyContactLBL.text = "Emergency Contacts".localized
+        healthProfLBL.text = "Health Profile".localized
+        diseasesLBL.text = "Diseases / Conditions".localized
+        medicationLBL.text = "Medications".localized
+        allerqiesLBL.text = "Allergies".localized
+        socialHistoryLBL.text = "Social History".localized
+        familyHistoryLBL.text = "Family History".localized
+        surgeyLBL.text = "Surgery / Implants".localized
+        allPersonalBtn.setTitle("All".localized, for: .normal)
+        allBasicBtn.setTitle("All".localized, for: .normal)
+        savebtn.setTitle("Save".localized, for: .normal)
     }
     func textFieldDidBeginEditing(_ textField: UITextField) {
            if textField == healthCareTxt {
@@ -113,6 +139,9 @@ class PermissionVC: UIViewController, UITextFieldDelegate {
             print("arr: \(helthArr)")
             if Permition?.forAllDoctors == true{
                 ForAllDoctors = true
+                allowAllDoctorLBL.textColor = UIColor (named: "Blue")
+                chooseSomeLBL.textColor = UIColor (named: "darkGray")
+
                 UIView.animate(withDuration: 1) {
                     self.chooseDoctorsView.alpha = 0
                     self.chooseViewHEight.constant = 0
@@ -121,6 +150,9 @@ class PermissionVC: UIViewController, UITextFieldDelegate {
                 radioButton(selected: allowDoctorImage, unselected: chooseDoctorImage)
             }else{
                 ForAllDoctors = false
+                allowAllDoctorLBL.textColor = UIColor (named: "darkGray")
+                chooseSomeLBL.textColor = UIColor (named: "Blue")
+
                 chooseDoctorsView.alpha = 0
                 chooseViewHEight.constant = 0
                 radioButton(selected: chooseDoctorImage, unselected: allowDoctorImage)
@@ -132,14 +164,23 @@ class PermissionVC: UIViewController, UITextFieldDelegate {
             }
             if Permition?.showMedicalReport == true && Permition?.showEmergencyContact == true{
                 isallPersonal = true
+                emergencyContactLBL.textColor = UIColor (named: "Blue")
+                medicalReportsLBL.textColor = UIColor (named: "Blue")
                 allPersonalBtn.setImage(#imageLiteral(resourceName: "ic_check_active"), for: .normal)
             }
             if Permition?.showDisease == true && Permition?.showMedication == true && Permition?.showAllergies == true && Permition?.showSocialHistory == true && Permition?.showSocialFamily == true && Permition?.showSurgery == true {
                 isallBasic = true
+                surgeyLBL.textColor = UIColor (named: "Blue")
+                familyHistoryLBL.textColor = UIColor (named: "Blue")
+                socialHistoryLBL.textColor = UIColor (named: "Blue")
+                allerqiesLBL.textColor = UIColor (named: "Blue")
+                medicationLBL.textColor = UIColor (named: "Blue")
+                diseasesLBL.textColor = UIColor (named: "Blue")
                 allBasicBtn.setImage(#imageLiteral(resourceName: "ic_check_active"), for: .normal)
             }
             if Permition?.showMedicalReport == true{
                ShowAddress = true
+                medicalReportsLBL.textColor = UIColor (named: "Blue")
                checkBox(selectedImage: addressImage)
            }
             if Permition?.showPersonalDetails == true {
@@ -152,29 +193,36 @@ class PermissionVC: UIViewController, UITextFieldDelegate {
             }
             if Permition?.showEmergencyContact == true {
                 checkBox(selectedImage: emergencyImage)
+                emergencyContactLBL.textColor = UIColor (named: "Blue")
                 ShowEmergencyContact = true
             }
             if Permition?.showDisease == true{
+                diseasesLBL.textColor = UIColor (named: "Blue")
                 checkBox(selectedImage: diesesImage)
                 ShowDisease = true
             }
             if Permition?.showMedication == true {
+                medicationLBL.textColor = UIColor (named: "Blue")
                 ShowMedication = true
                 checkBox(selectedImage: medicationsImage)
             }
             if Permition?.showAllergies == true {
+                allerqiesLBL.textColor = UIColor (named: "Blue")
                 ShowAllergies = true
                 checkBox(selectedImage: allergiesImage)
             }
             if Permition?.showSocialHistory == true {
+                socialHistoryLBL.textColor = UIColor (named: "Blue")
                 ShowSocialHistory = true
                 checkBox(selectedImage: socialImage)
             }
             if Permition?.showSocialFamily == true{
+                familyHistoryLBL.textColor = UIColor (named: "Blue")
                 checkBox(selectedImage: familyImage)
                 ShowSocialFamily = true
             }
             if Permition?.showSurgery == true {
+                surgeyLBL.textColor = UIColor (named: "Blue")
                 ShowSurgery = true
                 checkBox(selectedImage: surgeryImage)
             }
@@ -207,6 +255,8 @@ class PermissionVC: UIViewController, UITextFieldDelegate {
     }
     @IBAction func allowDoctors_CLick(_ sender: Any) {
         ForAllDoctors = true
+        allowAllDoctorLBL.textColor = UIColor (named: "Blue")
+        chooseSomeLBL.textColor = UIColor (named: "darkGray")
         UIView.animate(withDuration: 1) {
             self.chooseDoctorsView.alpha = 0
             self.chooseViewHEight.constant = 0
@@ -220,6 +270,9 @@ class PermissionVC: UIViewController, UITextFieldDelegate {
     }
     @IBAction func chooseDoctors_CLick(_ sender: Any) {
         ForAllDoctors = false
+        allowAllDoctorLBL.textColor = UIColor (named: "darkGray")
+        chooseSomeLBL.textColor = UIColor (named: "Blue")
+
         UIView.animate(withDuration: 1) {
             self.chooseDoctorsView.alpha = 1
             self.chooseViewHEight.constant = 210
@@ -246,7 +299,13 @@ class PermissionVC: UIViewController, UITextFieldDelegate {
             ShowAddress = false
         }
         ShowAddress = true
+        if addressImage.image == #imageLiteral(resourceName: "ic_check_active"){
+            medicalReportsLBL.textColor = UIColor (named: "darkGray")
+        }else{
+            medicalReportsLBL.textColor = UIColor (named: "Blue")
+        }
         checkBox(selectedImage: addressImage)
+        
     }
     @IBAction func emergency_CLick(_ sender: Any) {
         if ShowEmergencyContact == false {
@@ -254,9 +313,17 @@ class PermissionVC: UIViewController, UITextFieldDelegate {
         }else{
             ShowEmergencyContact = false
         }
+        if emergencyImage.image == #imageLiteral(resourceName: "ic_check_active"){
+            emergencyContactLBL.textColor = UIColor (named: "darkGray")
+
+        }else{
+            emergencyContactLBL.textColor = UIColor (named: "Blue")
+
+        }
         checkBox(selectedImage: emergencyImage)
     }
     @IBAction func allPersonal_Click(_ sender: Any) {
+
         if isallPersonal == false {
             allPersonalBtn.setImage(#imageLiteral(resourceName: "ic_check_active"), for: .normal)
             addressImage.image = #imageLiteral(resourceName: "ic_check_active")
@@ -264,6 +331,9 @@ class PermissionVC: UIViewController, UITextFieldDelegate {
             isallPersonal = true
             ShowAddress = true
             ShowEmergencyContact = true
+            emergencyContactLBL.textColor = UIColor (named: "Blue")
+            medicalReportsLBL.textColor = UIColor (named: "Blue")
+
         }else{
             allPersonalBtn.setImage(#imageLiteral(resourceName: "ic_check_unactive"), for: .normal)
             addressImage.image = #imageLiteral(resourceName: "ic_check_unactive")
@@ -271,12 +341,17 @@ class PermissionVC: UIViewController, UITextFieldDelegate {
             isallPersonal = false
             ShowAddress = false
             ShowEmergencyContact = false
+            emergencyContactLBL.textColor = UIColor (named: "darkGray")
+            medicalReportsLBL.textColor = UIColor (named: "darkGray")
         }
-        
-        
     }
     //MARK:-basic
     @IBAction func dieseses_Click(_ sender: Any) {
+        if diesesImage.image == #imageLiteral(resourceName: "ic_check_active"){
+            diseasesLBL.textColor = UIColor (named: "darkGray")
+        }else{
+            diseasesLBL.textColor = UIColor (named: "Blue")
+        }
         checkBox(selectedImage: diesesImage)
         if ShowDisease == false{
             ShowDisease = true
@@ -291,6 +366,11 @@ class PermissionVC: UIViewController, UITextFieldDelegate {
         }else{
             ShowMedication = false
         }
+        if medicationsImage.image == #imageLiteral(resourceName: "ic_check_active"){
+            medicationLBL.textColor = UIColor (named: "darkGray")
+        }else{
+            medicationLBL.textColor = UIColor (named: "Blue")
+        }
         checkBox(selectedImage: medicationsImage)
     }
     @IBAction func allergies_Click(_ sender: Any) {
@@ -298,6 +378,11 @@ class PermissionVC: UIViewController, UITextFieldDelegate {
             ShowAllergies = true
         }else{
             ShowAllergies = false
+        }
+        if allergiesImage.image == #imageLiteral(resourceName: "ic_check_active"){
+            allerqiesLBL.textColor = UIColor (named: "darkGray")
+        }else{
+            allerqiesLBL.textColor = UIColor (named: "Blue")
         }
         checkBox(selectedImage: allergiesImage)
     }
@@ -307,9 +392,19 @@ class PermissionVC: UIViewController, UITextFieldDelegate {
         }else{
             ShowSocialHistory = false
         }
+        if socialImage.image == #imageLiteral(resourceName: "ic_check_active"){
+            socialHistoryLBL.textColor = UIColor (named: "darkGray")
+        }else{
+            socialHistoryLBL.textColor = UIColor (named: "Blue")
+        }
         checkBox(selectedImage: socialImage)
     }
     @IBAction func familyHistory_CLick(_ sender: Any) {
+        if familyImage.image == #imageLiteral(resourceName: "ic_check_active"){
+            familyHistoryLBL.textColor = UIColor (named: "darkGray")
+        }else{
+            familyHistoryLBL.textColor = UIColor (named: "Blue")
+        }
         checkBox(selectedImage: familyImage)
         if ShowSocialHistory == false{
             ShowSocialFamily = true
@@ -322,6 +417,11 @@ class PermissionVC: UIViewController, UITextFieldDelegate {
             ShowSurgery = true
         }else{
             ShowSurgery = false
+        }
+        if surgeryImage.image == #imageLiteral(resourceName: "ic_check_active"){
+            surgeyLBL.textColor = UIColor (named: "darkGray")
+        }else{
+            surgeyLBL.textColor = UIColor (named: "Blue")
         }
         checkBox(selectedImage: surgeryImage)
     }
@@ -342,6 +442,12 @@ class PermissionVC: UIViewController, UITextFieldDelegate {
             familyImage.image = #imageLiteral(resourceName: "ic_check_active")
             surgeryImage.image = #imageLiteral(resourceName: "ic_check_active")
             isallBasic = true
+            surgeyLBL.textColor = UIColor (named: "Blue")
+            familyHistoryLBL.textColor = UIColor (named: "Blue")
+            socialHistoryLBL.textColor = UIColor (named: "Blue")
+            allerqiesLBL.textColor = UIColor (named: "Blue")
+            medicationLBL.textColor = UIColor (named: "Blue")
+            diseasesLBL.textColor = UIColor (named: "Blue")
         }else{
             allBasicBtn.setImage(#imageLiteral(resourceName: "ic_check_unactive"), for: .normal)
             diesesImage.image = #imageLiteral(resourceName: "ic_check_unactive")
@@ -357,22 +463,44 @@ class PermissionVC: UIViewController, UITextFieldDelegate {
             ShowSocialHistory = false
             ShowSocialFamily = false
             ShowSurgery = false
+            surgeyLBL.textColor = UIColor (named: "darkGray")
+            familyHistoryLBL.textColor = UIColor (named: "darkGray")
+            socialHistoryLBL.textColor = UIColor (named: "darkGray")
+            allerqiesLBL.textColor = UIColor (named: "darkGray")
+            medicationLBL.textColor = UIColor (named: "darkGray")
+            diseasesLBL.textColor = UIColor (named: "darkGray")
+
         }
     }
     func setUpPickerView(){
         entityPickerView.dataSource = self
         entityPickerView.delegate = self
         entityTxt.inputView = entityPickerView
+        if Languagee.language == .arabic {
+            entityTxt.textAlignment = .right
+        }else{
+            entityTxt.textAlignment = .left
+        }
         createDoneBtn(for: entityTxt)
         
         HealthcareProvidersPickerView.dataSource = self
         HealthcareProvidersPickerView.delegate = self
         healthCareTxt.inputView = HealthcareProvidersPickerView
+        if Languagee.language == .arabic {
+            healthCareTxt.textAlignment = .right
+        }else{
+            healthCareTxt.textAlignment = .left
+        }
         createDoneBtn(for: healthCareTxt)
         
         MainSpecialityPickerView.dataSource = self
         MainSpecialityPickerView.delegate = self
         mainSpecialityTxt.inputView = MainSpecialityPickerView
+        if Languagee.language == .arabic {
+            mainSpecialityTxt.textAlignment = .right
+        }else{
+            mainSpecialityTxt.textAlignment = .left
+        }
         createDoneBtn(for: mainSpecialityTxt)
     }
     func createDoneBtn (for textField : UITextField)

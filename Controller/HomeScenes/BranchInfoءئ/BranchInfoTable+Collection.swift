@@ -26,7 +26,12 @@ extension BranchInfoVCViewController: UITableViewDelegate, UITableViewDataSource
 }
 extension BranchInfoVCViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return branchList?.branchImageList?.count ?? 0
+        if branchList?.branchImageList?.count ?? 0 > 6 {
+            return 6
+        }else{
+            return branchList?.branchImageList?.count ?? 0
+        }
+       
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

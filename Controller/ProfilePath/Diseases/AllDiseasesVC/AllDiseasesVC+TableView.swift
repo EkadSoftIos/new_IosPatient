@@ -21,7 +21,7 @@ extension AllDiseasesVC: UITableViewDelegate, UITableViewDataSource {
         cell.detailsOneLbl.text = dieses?.diseaseNamelocalized ?? ""
         
         var diseaseDate = ""
-        if let diseaseVisitDate = dieses?.createDate?.components(separatedBy: "T") {
+        if let diseaseVisitDate = dieses?.diagonsedDate?.components(separatedBy: "T") {
             diseaseDate = GetFormatedDate(date_string: diseaseVisitDate[0], dateFormat: "yyyy-MM-dd")
         }
         cell.detailsTwoLbl.text = "\("DiagnosedOn".localized)\(": ")\(diseaseDate)"

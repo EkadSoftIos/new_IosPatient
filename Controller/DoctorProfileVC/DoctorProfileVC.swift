@@ -108,7 +108,7 @@ class DoctorProfileVC: UIViewController, BaseViewProtocol {
         doctorImage?.kf.setImage(with: imgURL)
         Animation.roundView(doctorImage)
         doctorDetails.text = doctorProfileData?.fullProfisionalDetails_Localized ?? ""
-        doctorName.text = (doctorProfileData?.prefixTitle_Localized ?? "") + " " + (doctorProfileData?.doctorName ?? "")
+        doctorName.text = (doctorProfileData?.prefixTitle_Localized ?? "") + " . " + (doctorProfileData?.doctorName ?? "")
         rateLbl.text = doctorProfileData?.totalpatientRateCount ?? "0"
         doctorViewerNumber.text = doctorProfileData?.viewersnumber ?? "0"
         totalPatientLbl.text = doctorProfileData?.totalpatient ?? "0"
@@ -223,6 +223,7 @@ class DoctorProfileVC: UIViewController, BaseViewProtocol {
                 print(model)
                 if model.successtate == 200{
                     print("success home")
+                    self.showMessage(title: "", sub: "Doctor has been removed from favorites list".localized, type: .success, layout: .messageView)
                     self.favBTN.setImage(UIImage (named: "unfav"), for: .normal)
                     self.favBTN.tag = 0
                 }else{
@@ -244,6 +245,8 @@ class DoctorProfileVC: UIViewController, BaseViewProtocol {
                 print(model)
                 if model.successtate == 200{
                     print("success home")
+                    self.showMessage(title: "", sub: "Doctor has been added to favorites list".localized, type: .success, layout: .messageView)
+
                     self.favBTN.setImage(UIImage (named: "ic_fav"), for: .normal)
                     self.favBTN.tag = 0
                 }else{

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="font_bold.TTF">
+            <string>SegoeUI-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeInfoVC" customModule="E4clinic" customModuleProvider="target">
+            <connections>
+                <outlet property="doctorMedicalServiceLBL" destination="q6Q-nD-l5A" id="ZPu-tl-Ar0"/>
+                <outlet property="serviseTableView" destination="rrj-nT-02h" id="hPg-qN-SUX"/>
+                <outlet property="serviseView" destination="pVX-d5-5Z3" id="v3j-Jl-af2"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pVX-d5-5Z3">
+                    <rect key="frame" x="20" y="44" width="374" height="818"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Doctor Medical Service" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q6Q-nD-l5A">
+                            <rect key="frame" x="8" y="12" width="183" height="23"/>
+                            <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="17"/>
+                            <color key="textColor" name="Blue"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rrj-nT-02h">
+                            <rect key="frame" x="8" y="43" width="326" height="767"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="rrj-nT-02h" secondAttribute="bottom" constant="8" id="1Ki-wg-Hks"/>
+                        <constraint firstAttribute="trailing" secondItem="rrj-nT-02h" secondAttribute="trailing" constant="40" id="JsO-S8-yXl"/>
+                        <constraint firstItem="rrj-nT-02h" firstAttribute="leading" secondItem="pVX-d5-5Z3" secondAttribute="leading" constant="8" id="abv-rP-gQC"/>
+                        <constraint firstItem="rrj-nT-02h" firstAttribute="top" secondItem="q6Q-nD-l5A" secondAttribute="bottom" constant="8" id="dgM-pq-q3d"/>
+                        <constraint firstItem="q6Q-nD-l5A" firstAttribute="leading" secondItem="pVX-d5-5Z3" secondAttribute="leading" constant="8" id="fLW-vC-Az6"/>
+                        <constraint firstItem="q6Q-nD-l5A" firstAttribute="top" secondItem="pVX-d5-5Z3" secondAttribute="top" constant="12" id="lvI-BJ-fKZ"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="pVX-d5-5Z3" secondAttribute="trailing" constant="20" id="37Y-32-nK3"/>
+                <constraint firstItem="pVX-d5-5Z3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="Uqf-mr-a8j"/>
+                <constraint firstItem="pVX-d5-5Z3" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="UrG-UZ-Kg8"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="pVX-d5-5Z3" secondAttribute="bottom" id="yPR-fA-UH0"/>
+            </constraints>
+            <point key="canvasLocation" x="-42.028985507246382" y="67.633928571428569"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="Blue">
+            <color red="0.071000002324581146" green="0.46700000762939453" blue="0.81999999284744263" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

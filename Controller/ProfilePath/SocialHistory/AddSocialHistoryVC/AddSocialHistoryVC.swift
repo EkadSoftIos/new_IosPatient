@@ -20,6 +20,21 @@ class AddSocialHistoryVC: UIViewController {
     @IBOutlet var generalDietTxt: UITextField!
     @IBOutlet var exercideTxt: UITextField!
     @IBOutlet var saveBtn: TransitionButton!
+    
+    
+    @IBOutlet weak var jobLBL: UILabel!
+    @IBOutlet weak var educationLBL: UILabel!
+    @IBOutlet weak var smookingLBL: UILabel!
+    @IBOutlet weak var yesLBL: UILabel!
+    @IBOutlet weak var noLBL: UILabel!
+    @IBOutlet weak var alcoholLBL: UILabel!
+    @IBOutlet weak var yesAlCoholLBL: UILabel!
+    @IBOutlet weak var noAlcoholLBL: UILabel!
+    @IBOutlet weak var childrenLBL: UILabel!
+    @IBOutlet weak var statusLBL: UILabel!
+    @IBOutlet weak var generalDietLBL: UILabel!
+    @IBOutlet weak var exerciseLBL: UILabel!
+    
     var model: UserDataModel?
     var isSmoking: Bool = false
     var isAlcohol: Bool = false
@@ -27,6 +42,28 @@ class AddSocialHistoryVC: UIViewController {
     var maritalID: Int?
     let maritalPickerView = UIPickerView()
     override func viewWillAppear(_ animated: Bool) {
+        setLocalization()
+    }
+    func setLocalization(){
+        jobLBL.text = "Job".localized
+        jobTxt.placeholder = "Job".localized
+        educationLBL.text = "Education".localized
+        educationTxt.placeholder = "Education".localized
+        smookingLBL.text = "Smooking".localized
+        alcoholLBL.text = "Alcohol Consumption".localized
+        yesLBL.text = "Yes".localized
+        noLBL.text = "No".localized
+        noAlcoholLBL.text = "No".localized
+        yesAlCoholLBL.text = "Yes".localized
+        statusLBL.text = "Marital Status".localized
+        maritalStatusTxt.placeholder = "Marital Status".localized
+        childrenLBL.text = "Children".localized
+        childrenTxt.placeholder = "Children".localized
+        generalDietLBL.text = "General Diet".localized
+        generalDietTxt.placeholder = "General Diet".localized
+        exerciseLBL.text = "Exercise".localized
+        exercideTxt.placeholder = "Exercise".localized
+        saveBtn.setTitle("Save".localized, for: .normal)
     }
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -23,9 +23,17 @@ extension FamilyHistoryVC: UITableViewDelegate, UITableViewDataSource {
         cell.detailsTwoLbl.text = data?.notes
         cell.detailsThreLbl.text = ""
         cell.deleteHandelr = {
-            self.callApiDelete(Id: data?.patientSocialFamilyID ?? 0)
-            self.model?.message?.tblPatientSocialFamily?.remove(at: indexPath.row)
-            self.familyTable.deleteRows(at: [indexPath], with: .automatic)
+//            self.callApiDelete(Id: data?.patientSocialFamilyID ?? 0)
+//            self.model?.message?.tblPatientSocialFamily?.remove(at: indexPath.row)
+//            self.familyTable.deleteRows(at: [indexPath], with: .automatic)
+            
+            let vc = DeleteFamilyHistoryVC()
+            vc.id = data?.patientSocialFamilyID ?? 0
+            vc.Delegete = self
+             vc.modalPresentationStyle = .overCurrentContext
+             vc.modalTransitionStyle = .crossDissolve
+             self.present(vc, animated: true, completion: nil)
+
         }
         cell.editHandelr = {
             let vc = AddFamilyHistoryVC()

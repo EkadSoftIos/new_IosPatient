@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="font_bold.TTF">
+            <string>SegoeUI-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BranchImagesCollectionVC" customModule="E4clinic" customModuleProvider="target">
+            <connections>
+                <outlet property="doctorMedicalServiceLBL" destination="q6Q-nD-l5A" id="ZPu-tl-Ar0"/>
+                <outlet property="photoCollection" destination="c8q-N6-SdS" id="iAs-z4-aMb"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pVX-d5-5Z3">
+                    <rect key="frame" x="20" y="44" width="374" height="818"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clinic Photo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q6Q-nD-l5A">
+                            <rect key="frame" x="8" y="12" width="93" height="23"/>
+                            <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="17"/>
+                            <color key="textColor" name="Blue"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="c8q-N6-SdS">
+                            <rect key="frame" x="8" y="49" width="358" height="769"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="nz5-OR-rwS">
+                                <size key="itemSize" width="128" height="128"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                        </collectionView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="c8q-N6-SdS" secondAttribute="trailing" constant="8" id="0gy-FE-waO"/>
+                        <constraint firstAttribute="bottom" secondItem="c8q-N6-SdS" secondAttribute="bottom" id="1Qt-l5-MAD"/>
+                        <constraint firstItem="c8q-N6-SdS" firstAttribute="top" secondItem="pVX-d5-5Z3" secondAttribute="top" constant="49" id="KES-ht-V8g"/>
+                        <constraint firstItem="q6Q-nD-l5A" firstAttribute="leading" secondItem="pVX-d5-5Z3" secondAttribute="leading" constant="8" id="fLW-vC-Az6"/>
+                        <constraint firstItem="q6Q-nD-l5A" firstAttribute="top" secondItem="pVX-d5-5Z3" secondAttribute="top" constant="12" id="lvI-BJ-fKZ"/>
+                        <constraint firstItem="c8q-N6-SdS" firstAttribute="leading" secondItem="pVX-d5-5Z3" secondAttribute="leading" constant="8" id="ynJ-Pw-SfP"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="pVX-d5-5Z3" secondAttribute="trailing" constant="20" id="37Y-32-nK3"/>
+                <constraint firstItem="pVX-d5-5Z3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="Uqf-mr-a8j"/>
+                <constraint firstItem="pVX-d5-5Z3" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="UrG-UZ-Kg8"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="pVX-d5-5Z3" secondAttribute="bottom" id="yPR-fA-UH0"/>
+            </constraints>
+            <point key="canvasLocation" x="-42.028985507246382" y="67.633928571428569"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="Blue">
+            <color red="0.071000002324581146" green="0.46700000762939453" blue="0.81999999284744263" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

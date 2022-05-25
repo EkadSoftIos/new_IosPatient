@@ -24,6 +24,7 @@ class AddMedicationListVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "Add Medication".localized
+        searchTxt.placeholder = "MedicationName".localized
         changeVIew.ShadowView(view: changeVIew, radius: 5, opacity: 0.5, shadowRadius: 5, color: UIColor.darkGray.cgColor)
         searchTxt.returnKeyType = .search
         setupTableView()

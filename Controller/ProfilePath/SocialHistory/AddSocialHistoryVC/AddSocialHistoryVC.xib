@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
@@ -11,28 +11,40 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Segoe_UI.ttf">
-            <string>SegoeUI</string>
-        </array>
-        <array key="seguisb.ttf">
+        <array key="font_bold.TTF">
             <string>SegoeUI-Semibold</string>
+        </array>
+        <array key="font_regular.TTF">
+            <string>SegoeUI</string>
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddSocialHistoryVC" customModule="E4_Patient" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddSocialHistoryVC" customModule="E4clinic" customModuleProvider="target">
             <connections>
+                <outlet property="alcoholLBL" destination="uMj-Cb-teY" id="r37-p2-Dtb"/>
+                <outlet property="childrenLBL" destination="vOk-yw-Y2L" id="ha1-Kg-RlI"/>
                 <outlet property="childrenTxt" destination="HkZ-ep-vzk" id="2kh-xk-agg"/>
+                <outlet property="educationLBL" destination="cc9-br-pgr" id="Guf-51-ch2"/>
                 <outlet property="educationTxt" destination="k3N-Sw-Xji" id="MTO-cZ-Jd9"/>
                 <outlet property="exercideTxt" destination="xAF-3a-vdd" id="AoI-J3-gsm"/>
+                <outlet property="exerciseLBL" destination="vwD-ew-2Xs" id="UVY-Ve-xqo"/>
+                <outlet property="generalDietLBL" destination="x6P-DX-gmM" id="2P2-i9-GnO"/>
                 <outlet property="generalDietTxt" destination="0Jh-4d-yIW" id="RzY-Ox-L3b"/>
+                <outlet property="jobLBL" destination="qu9-eu-YrK" id="8Uf-JR-1gd"/>
                 <outlet property="jobTxt" destination="HpL-rV-VPc" id="aFh-5j-bE2"/>
                 <outlet property="mainView" destination="OSi-iZ-poo" id="DSX-bf-AkL"/>
                 <outlet property="maritalStatusTxt" destination="I4U-q0-gif" id="llh-jO-Acs"/>
                 <outlet property="noAlcoholImage" destination="tas-4d-TQi" id="XuH-kN-37r"/>
+                <outlet property="noAlcoholLBL" destination="DLB-Rh-LvA" id="enD-a7-jf0"/>
+                <outlet property="noLBL" destination="W67-Rt-aIf" id="HWj-eo-qEu"/>
                 <outlet property="noSmokingImage" destination="gEL-oe-45p" id="t1L-7j-90C"/>
                 <outlet property="saveBtn" destination="Apf-El-2aw" id="bJ9-IY-Ql4"/>
+                <outlet property="smookingLBL" destination="Xeq-O9-tke" id="Qbp-hA-Kuf"/>
+                <outlet property="statusLBL" destination="bGd-1H-DGQ" id="7wQ-lH-E0m"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="yesAlCoholLBL" destination="BVy-yT-uFc" id="hlh-zD-xzA"/>
                 <outlet property="yesAlcoholImage" destination="2hG-1Z-aKg" id="BP8-1k-wyy"/>
+                <outlet property="yesLBL" destination="JaO-RN-Y4D" id="ex2-eY-A3y"/>
                 <outlet property="yesSmokingImage" destination="v7N-r2-aHL" id="R77-13-Kx0"/>
             </connections>
         </placeholder>

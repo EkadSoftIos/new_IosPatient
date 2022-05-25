@@ -17,11 +17,15 @@ extension AddFamilyHistoryVC{
     }
 
     func callApi(){
+        var noteString = notesTxt.text ?? ""
+        if noteString == "Notes".localized {
+            noteString = ""
+        }
         let parameters: [String: Any] = [
             "PatientSocialFamilyId": updateData?.patientSocialFamilyID ?? 0,
             "PatientFk": model?.message?.patientID ?? 0,
             "RelationFk": relationID ?? 0,
-            "Notes": notesTxt.text ?? "",
+            "Notes": noteString,
           ]
         
         NetworkClient.performRequest(_type: SuccessModel.self, router: .addFamily(params: parameters)) { (result) in
@@ -30,7 +34,11 @@ extension AddFamilyHistoryVC{
             case .success(let model):
                 if model.successtate == 200{
                     self.Delegete?.Data(isAdded: true)
-                    self.showMessage(title: "", sub: model.message, type: .success, layout: .messageView)
+                    if self.isUpdate == false {
+                        self.showMessage(title: "", sub: "New family history has been added successfully".localized, type: .success, layout: .messageView)
+                    }else{
+                        self.showMessage(title: "", sub: "Family history has been edited successfully" .localized, type: .success, layout: .messageView)
+                    }
                     self.successLogin()
                     Vibration.success.vibrate()
                     print(parameters)

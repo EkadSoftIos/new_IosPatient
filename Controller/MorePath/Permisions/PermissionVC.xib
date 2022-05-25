@@ -74,22 +74,22 @@
                                     <rect key="frame" x="12" y="24" width="348" height="700"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Patient choose which healthcare providers view his profile" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aDN-5h-rzQ">
-                                            <rect key="frame" x="26" y="24" width="296" height="28"/>
+                                            <rect key="frame" x="26" y="24" width="296" height="32"/>
                                             <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="12"/>
                                             <color key="textColor" name="darkGray"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="dDj-kS-sm1">
-                                            <rect key="frame" x="12" y="67" width="306" height="67.5"/>
+                                            <rect key="frame" x="12" y="71" width="306" height="75.5"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Allow For" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WBn-V3-49O">
-                                                    <rect key="frame" x="0.0" y="0.0" width="63" height="17.5"/>
-                                                    <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="15"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="82" height="25.5"/>
+                                                    <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="19"/>
                                                     <color key="textColor" name="Blue"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yLX-SJ-sM8">
-                                                    <rect key="frame" x="0.0" y="22.5" width="306" height="20"/>
+                                                    <rect key="frame" x="0.0" y="30.5" width="306" height="20"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_radiobtn_unactive" translatesAutoresizingMaskIntoConstraints="NO" id="kLq-xj-pRc">
                                                             <rect key="frame" x="0.0" y="5" width="10" height="10"/>
@@ -99,7 +99,7 @@
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Allow All Doctors" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xce-jp-EFA">
-                                                            <rect key="frame" x="14" y="2" width="292" height="16.5"/>
+                                                            <rect key="frame" x="14" y="0.5" width="292" height="19"/>
                                                             <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="14"/>
                                                             <color key="textColor" name="darkGray"/>
                                                             <nil key="highlightedColor"/>
@@ -126,7 +126,7 @@
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RrJ-J1-UcC">
-                                                    <rect key="frame" x="0.0" y="47.5" width="306" height="20"/>
+                                                    <rect key="frame" x="0.0" y="55.5" width="306" height="20"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_radiobtn_active" translatesAutoresizingMaskIntoConstraints="NO" id="i7p-EC-j3k">
                                                             <rect key="frame" x="0.0" y="5" width="10" height="10"/>
@@ -136,7 +136,7 @@
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose some Doctors" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="02m-SL-p6E">
-                                                            <rect key="frame" x="14" y="2" width="292" height="16.5"/>
+                                                            <rect key="frame" x="14" y="0.5" width="292" height="19"/>
                                                             <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="14"/>
                                                             <color key="textColor" name="darkGray"/>
                                                             <nil key="highlightedColor"/>
@@ -169,16 +169,16 @@
                                             </constraints>
                                         </stackView>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3B1-IN-QSX">
-                                            <rect key="frame" x="0.0" y="146.5" width="348" height="210"/>
+                                            <rect key="frame" x="0.0" y="158.5" width="348" height="210"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filter Provider By" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hrt-Du-MNK">
-                                                    <rect key="frame" x="20" y="0.0" width="290" height="17.5"/>
-                                                    <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="15"/>
+                                                    <rect key="frame" x="12" y="0.0" width="298" height="24"/>
+                                                    <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="18"/>
                                                     <color key="textColor" name="Blue"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Entity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="494-DI-5Gh">
-                                                    <rect key="frame" x="12" y="27.5" width="35.5" height="20"/>
+                                                    <rect key="frame" x="10" y="34" width="36.5" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20" id="L6F-YI-U63"/>
                                                     </constraints>
@@ -187,7 +187,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Entity" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="26e-zm-iEH">
-                                                    <rect key="frame" x="20" y="59.5" width="308" height="25"/>
+                                                    <rect key="frame" x="20" y="66" width="308" height="25"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="25" id="9eN-6f-M7U"/>
                                                     </constraints>
@@ -195,14 +195,14 @@
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dropdowen" translatesAutoresizingMaskIntoConstraints="NO" id="qSZ-70-HQo">
-                                                    <rect key="frame" x="308" y="65" width="12" height="14"/>
+                                                    <rect key="frame" x="308" y="71.5" width="12" height="14"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="12" id="ExT-Bw-qZa"/>
                                                         <constraint firstAttribute="height" constant="14" id="p5x-6O-3Nb"/>
                                                     </constraints>
                                                 </imageView>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Healthcare Providers" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DN0-Vz-dJe">
-                                                    <rect key="frame" x="20" y="183.5" width="308" height="25"/>
+                                                    <rect key="frame" x="20" y="190" width="308" height="25"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="25" id="Z2B-sZ-Kj9"/>
                                                     </constraints>
@@ -210,7 +210,7 @@
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Healthcare Providers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OrW-ee-80U">
-                                                    <rect key="frame" x="20" y="155.5" width="112" height="20"/>
+                                                    <rect key="frame" x="10" y="162" width="113" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20" id="Op3-zA-JYQ"/>
                                                     </constraints>
@@ -219,7 +219,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Main Speciality" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QuN-ha-zLp">
-                                                    <rect key="frame" x="12" y="92.5" width="82" height="20"/>
+                                                    <rect key="frame" x="10" y="99" width="83" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20" id="Q1S-4j-Cyq"/>
                                                     </constraints>
@@ -228,14 +228,14 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dropdowen" translatesAutoresizingMaskIntoConstraints="NO" id="UmC-kc-ZzS">
-                                                    <rect key="frame" x="308" y="189" width="12" height="14"/>
+                                                    <rect key="frame" x="308" y="195.5" width="12" height="14"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="12" id="Kye-k4-lgX"/>
                                                         <constraint firstAttribute="height" constant="14" id="wGd-yL-8rg"/>
                                                     </constraints>
                                                 </imageView>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Main Speciality" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NKB-OB-uoD">
-                                                    <rect key="frame" x="20" y="120.5" width="308" height="25"/>
+                                                    <rect key="frame" x="20" y="127" width="308" height="25"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="25" id="ALC-Dh-w6A"/>
                                                     </constraints>
@@ -243,7 +243,7 @@
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dropdowen" translatesAutoresizingMaskIntoConstraints="NO" id="bsD-e0-FRK">
-                                                    <rect key="frame" x="308" y="126" width="12" height="14"/>
+                                                    <rect key="frame" x="308" y="132.5" width="12" height="14"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="12" id="Gke-Mt-iog"/>
                                                         <constraint firstAttribute="height" constant="14" id="PrX-lX-hwK"/>
@@ -252,7 +252,7 @@
                                             </subviews>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             <constraints>
-                                                <constraint firstItem="hrt-Du-MNK" firstAttribute="leading" secondItem="3B1-IN-QSX" secondAttribute="leading" constant="20" id="2iS-ne-kyE"/>
+                                                <constraint firstItem="hrt-Du-MNK" firstAttribute="leading" secondItem="3B1-IN-QSX" secondAttribute="leading" constant="12" id="2iS-ne-kyE"/>
                                                 <constraint firstItem="qSZ-70-HQo" firstAttribute="centerY" secondItem="26e-zm-iEH" secondAttribute="centerY" id="2nE-Sv-Fr6"/>
                                                 <constraint firstAttribute="trailing" secondItem="qSZ-70-HQo" secondAttribute="trailing" constant="28" id="3jM-cn-CFi"/>
                                                 <constraint firstItem="494-DI-5Gh" firstAttribute="top" secondItem="hrt-Du-MNK" secondAttribute="bottom" constant="10" id="8zA-6m-uNa"/>
@@ -268,25 +268,25 @@
                                                 <constraint firstItem="26e-zm-iEH" firstAttribute="leading" secondItem="3B1-IN-QSX" secondAttribute="leading" constant="20" id="fQm-FU-Wwk"/>
                                                 <constraint firstAttribute="trailing" secondItem="UmC-kc-ZzS" secondAttribute="trailing" constant="28" id="fYy-A6-CSI"/>
                                                 <constraint firstItem="bsD-e0-FRK" firstAttribute="centerY" secondItem="NKB-OB-uoD" secondAttribute="centerY" id="irU-8Z-QUC"/>
-                                                <constraint firstItem="OrW-ee-80U" firstAttribute="leading" secondItem="3B1-IN-QSX" secondAttribute="leading" constant="20" id="j8q-DR-Wgs"/>
+                                                <constraint firstItem="OrW-ee-80U" firstAttribute="leading" secondItem="3B1-IN-QSX" secondAttribute="leading" constant="10" id="j8q-DR-Wgs"/>
                                                 <constraint firstAttribute="trailing" secondItem="NKB-OB-uoD" secondAttribute="trailing" constant="20" id="nhn-O9-i3D"/>
                                                 <constraint firstItem="UmC-kc-ZzS" firstAttribute="centerY" secondItem="DN0-Vz-dJe" secondAttribute="centerY" id="nq1-As-hQD"/>
                                                 <constraint firstItem="hrt-Du-MNK" firstAttribute="top" secondItem="3B1-IN-QSX" secondAttribute="top" id="qOQ-y6-Z0v"/>
-                                                <constraint firstItem="QuN-ha-zLp" firstAttribute="leading" secondItem="3B1-IN-QSX" secondAttribute="leading" constant="12" id="r3I-3K-coF"/>
+                                                <constraint firstItem="QuN-ha-zLp" firstAttribute="leading" secondItem="3B1-IN-QSX" secondAttribute="leading" constant="10" id="r3I-3K-coF"/>
                                                 <constraint firstAttribute="trailing" secondItem="bsD-e0-FRK" secondAttribute="trailing" constant="28" id="sIv-Vf-vIb"/>
                                                 <constraint firstAttribute="height" constant="210" id="sxb-MG-cFl"/>
                                                 <constraint firstItem="DN0-Vz-dJe" firstAttribute="top" secondItem="OrW-ee-80U" secondAttribute="bottom" constant="8" id="w9r-aA-TIU"/>
-                                                <constraint firstItem="494-DI-5Gh" firstAttribute="leading" secondItem="3B1-IN-QSX" secondAttribute="leading" constant="12" id="xAh-uE-Ni0"/>
+                                                <constraint firstItem="494-DI-5Gh" firstAttribute="leading" secondItem="3B1-IN-QSX" secondAttribute="leading" constant="10" id="xAh-uE-Ni0"/>
                                             </constraints>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Basic Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s9G-Ck-tii">
-                                            <rect key="frame" x="12" y="372.5" width="84" height="17.5"/>
+                                            <rect key="frame" x="12" y="384.5" width="82.5" height="20"/>
                                             <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="15"/>
                                             <color key="textColor" name="Blue"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h3b-1j-one">
-                                            <rect key="frame" x="308" y="375" width="28" height="13"/>
+                                            <rect key="frame" x="307" y="387" width="29" height="15"/>
                                             <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="11"/>
                                             <state key="normal" title=" All" image="ic_check_unactive-1">
                                                 <color key="titleColor" name="darkGray"/>
@@ -296,7 +296,7 @@
                                             </connections>
                                         </button>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="6AQ-ZB-b6i">
-                                            <rect key="frame" x="12" y="400" width="324" height="45"/>
+                                            <rect key="frame" x="12" y="414.5" width="324" height="45"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hIq-kj-Shp">
                                                     <rect key="frame" x="0.0" y="0.0" width="324" height="20"/>
@@ -309,7 +309,7 @@
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medical Reports" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Inc-q0-Htx">
-                                                            <rect key="frame" x="14" y="4" width="310" height="12"/>
+                                                            <rect key="frame" x="14" y="3.5" width="310" height="13.5"/>
                                                             <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="10"/>
                                                             <color key="textColor" name="darkGray"/>
                                                             <nil key="highlightedColor"/>
@@ -346,7 +346,7 @@
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Emergency Contacts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XZu-8i-MtA">
-                                                            <rect key="frame" x="14" y="4" width="310" height="12"/>
+                                                            <rect key="frame" x="14" y="3.5" width="310" height="13.5"/>
                                                             <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="10"/>
                                                             <color key="textColor" name="darkGray"/>
                                                             <nil key="highlightedColor"/>
@@ -378,7 +378,7 @@
                                             </constraints>
                                         </stackView>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i8f-rN-Gwn">
-                                            <rect key="frame" x="308" y="457.5" width="28" height="13"/>
+                                            <rect key="frame" x="307" y="472" width="29" height="15"/>
                                             <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="11"/>
                                             <state key="normal" title=" All" image="ic_check_unactive-1">
                                                 <color key="titleColor" name="darkGray"/>
@@ -388,13 +388,13 @@
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Health Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bP6-sR-Wjv">
-                                            <rect key="frame" x="12" y="455" width="90" height="17.5"/>
+                                            <rect key="frame" x="12" y="469.5" width="93" height="20"/>
                                             <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="15"/>
                                             <color key="textColor" name="Blue"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="M4t-MZ-HVU">
-                                            <rect key="frame" x="12" y="482.5" width="326" height="145"/>
+                                            <rect key="frame" x="12" y="499.5" width="326" height="145"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tgO-Cm-2Ec">
                                                     <rect key="frame" x="0.0" y="0.0" width="326" height="20"/>
@@ -407,7 +407,7 @@
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Diseases / Conditions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kt3-Nm-OIJ">
-                                                            <rect key="frame" x="14" y="4" width="312" height="12"/>
+                                                            <rect key="frame" x="14" y="3.5" width="312" height="13.5"/>
                                                             <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="10"/>
                                                             <color key="textColor" name="darkGray"/>
                                                             <nil key="highlightedColor"/>
@@ -444,7 +444,7 @@
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rpx-0e-09d">
-                                                            <rect key="frame" x="14" y="4" width="312" height="12"/>
+                                                            <rect key="frame" x="14" y="3.5" width="312" height="13.5"/>
                                                             <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="10"/>
                                                             <color key="textColor" name="darkGray"/>
                                                             <nil key="highlightedColor"/>
@@ -481,7 +481,7 @@
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Allergies" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d0I-e7-ejP">
-                                                            <rect key="frame" x="14" y="4" width="310" height="12"/>
+                                                            <rect key="frame" x="14" y="3.5" width="310" height="13.5"/>
                                                             <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="10"/>
                                                             <color key="textColor" name="darkGray"/>
                                                             <nil key="highlightedColor"/>
@@ -518,7 +518,7 @@
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Social History" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Yf-4F-gc3">
-                                                            <rect key="frame" x="14" y="4" width="312" height="12"/>
+                                                            <rect key="frame" x="14" y="3.5" width="312" height="13.5"/>
                                                             <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="10"/>
                                                             <color key="textColor" name="darkGray"/>
                                                             <nil key="highlightedColor"/>
@@ -555,7 +555,7 @@
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Family History" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ImK-az-6O8">
-                                                            <rect key="frame" x="14" y="4" width="310" height="12"/>
+                                                            <rect key="frame" x="14" y="3.5" width="310" height="13.5"/>
                                                             <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="10"/>
                                                             <color key="textColor" name="darkGray"/>
                                                             <nil key="highlightedColor"/>
@@ -592,7 +592,7 @@
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Surgery / Implants" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kH0-be-1tf">
-                                                            <rect key="frame" x="14" y="4" width="312" height="12"/>
+                                                            <rect key="frame" x="14" y="3.5" width="312" height="13.5"/>
                                                             <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="10"/>
                                                             <color key="textColor" name="darkGray"/>
                                                             <nil key="highlightedColor"/>

@@ -26,13 +26,16 @@
                 <outlet property="branchName" destination="eRw-Od-D7k" id="thN-OR-PvW"/>
                 <outlet property="branchRate" destination="2Jl-rg-Saz" id="vZR-h0-E1T"/>
                 <outlet property="clinicPhotoLBL" destination="XcL-4T-EKB" id="tyb-1o-Ind"/>
-                <outlet property="doctorMedTable" destination="AIv-yY-Rz3" id="2VH-gI-CXl"/>
                 <outlet property="doctorMedicalLBL" destination="uyh-ax-yW8" id="1O2-2A-bbI"/>
+                <outlet property="firstServiceLBL" destination="eYc-Y4-CBU" id="Oco-Mg-PhR"/>
                 <outlet property="locationView" destination="ion-zj-JdU" id="mMg-zK-ZLA"/>
+                <outlet property="moreBTN" destination="3Ug-j9-e7Q" id="fu2-5s-hJn"/>
+                <outlet property="morePhotoBTN" destination="dEm-pB-4SC" id="kQP-wt-l7C"/>
                 <outlet property="photoCollection" destination="UaI-yB-grd" id="PJs-sQ-h04"/>
                 <outlet property="photoView" destination="Ihu-Ui-VWQ" id="IYY-p7-Qcb"/>
                 <outlet property="serviseView" destination="66T-QR-Kg7" id="vNj-zp-nTH"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewHeightConstraint" destination="NW1-Hv-LlI" id="vNT-dL-m3S"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -148,7 +151,7 @@ emam ali mosque, Building no. 22, Nasr City</string>
                             </variation>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="66T-QR-Kg7">
-                            <rect key="frame" x="20" y="140" width="374" height="200"/>
+                            <rect key="frame" x="20" y="140" width="374" height="120"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Doctor Medical Service" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uyh-ax-yW8">
                                     <rect key="frame" x="8" y="12" width="183" height="23"/>
@@ -156,24 +159,43 @@ emam ali mosque, Building no. 22, Nasr City</string>
                                     <color key="textColor" name="Blue"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AIv-yY-Rz3">
-                                    <rect key="frame" x="8" y="43" width="326" height="149"/>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                </tableView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eYc-Y4-CBU">
+                                    <rect key="frame" x="6" y="57" width="358" height="46"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ug-j9-e7Q">
+                                    <rect key="frame" x="310" y="93" width="58" height="31"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="58" id="1Wj-9K-nRg"/>
+                                        <constraint firstAttribute="height" constant="31" id="Rou-ne-GZl"/>
+                                    </constraints>
+                                    <color key="tintColor" name="Blue"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="More">
+                                        <color key="baseForegroundColor" name="Blue"/>
+                                    </buttonConfiguration>
+                                    <connections>
+                                        <action selector="moreAction:" destination="-1" eventType="touchUpInside" id="F3l-RY-pdU"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
                                 <constraint firstItem="uyh-ax-yW8" firstAttribute="top" secondItem="66T-QR-Kg7" secondAttribute="top" constant="12" id="EBZ-UX-V10"/>
                                 <constraint firstItem="uyh-ax-yW8" firstAttribute="leading" secondItem="66T-QR-Kg7" secondAttribute="leading" constant="8" id="Gun-2t-o6V"/>
-                                <constraint firstAttribute="height" constant="200" id="NW1-Hv-LlI"/>
-                                <constraint firstAttribute="bottom" secondItem="AIv-yY-Rz3" secondAttribute="bottom" constant="8" id="g8q-0n-Pzj"/>
-                                <constraint firstItem="AIv-yY-Rz3" firstAttribute="leading" secondItem="66T-QR-Kg7" secondAttribute="leading" constant="8" id="hOx-wF-Mmv"/>
-                                <constraint firstItem="AIv-yY-Rz3" firstAttribute="top" secondItem="uyh-ax-yW8" secondAttribute="bottom" constant="8" id="pjV-3m-uY7"/>
-                                <constraint firstAttribute="trailing" secondItem="AIv-yY-Rz3" secondAttribute="trailing" constant="40" id="sJo-07-HpX"/>
+                                <constraint firstAttribute="trailing" secondItem="eYc-Y4-CBU" secondAttribute="trailing" constant="10" id="Hje-hD-Chg"/>
+                                <constraint firstAttribute="bottom" secondItem="3Ug-j9-e7Q" secondAttribute="bottom" constant="-4" id="LKf-36-4un"/>
+                                <constraint firstAttribute="height" constant="120" id="NW1-Hv-LlI"/>
+                                <constraint firstAttribute="trailing" secondItem="3Ug-j9-e7Q" secondAttribute="trailing" constant="6" id="SVa-UN-Hnb"/>
+                                <constraint firstItem="eYc-Y4-CBU" firstAttribute="leading" secondItem="66T-QR-Kg7" secondAttribute="leading" constant="6" id="Spx-HP-dRm"/>
+                                <constraint firstAttribute="bottom" secondItem="eYc-Y4-CBU" secondAttribute="bottom" constant="17" id="lhh-2t-5Ug"/>
+                                <constraint firstItem="eYc-Y4-CBU" firstAttribute="top" secondItem="uyh-ax-yW8" secondAttribute="bottom" constant="22" id="zcE-BE-nEA"/>
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ihu-Ui-VWQ">
-                            <rect key="frame" x="20" y="360" width="374" height="200"/>
+                            <rect key="frame" x="20" y="280" width="374" height="220"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clinic Photo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XcL-4T-EKB">
                                     <rect key="frame" x="8" y="12" width="93" height="23"/>
@@ -181,8 +203,23 @@ emam ali mosque, Building no. 22, Nasr City</string>
                                     <color key="textColor" name="Blue"/>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dEm-pB-4SC">
+                                    <rect key="frame" x="308" y="201" width="58" height="31"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="58" id="4rB-fE-3gH"/>
+                                        <constraint firstAttribute="height" constant="31" id="CNZ-hx-9Xv"/>
+                                    </constraints>
+                                    <color key="tintColor" name="Blue"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="More">
+                                        <color key="baseForegroundColor" name="Blue"/>
+                                    </buttonConfiguration>
+                                    <connections>
+                                        <action selector="morePhotoAction:" destination="-1" eventType="touchUpInside" id="0L0-0i-lgx"/>
+                                    </connections>
+                                </button>
                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="UaI-yB-grd">
-                                    <rect key="frame" x="8" y="43" width="358" height="149"/>
+                                    <rect key="frame" x="8" y="43" width="358" height="157"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dAh-da-4KS">
                                         <size key="itemSize" width="128" height="128"/>
@@ -197,10 +234,12 @@ emam ali mosque, Building no. 22, Nasr City</string>
                                 <constraint firstItem="UaI-yB-grd" firstAttribute="leading" secondItem="Ihu-Ui-VWQ" secondAttribute="leading" constant="8" id="6mL-19-Fj5"/>
                                 <constraint firstAttribute="trailing" secondItem="UaI-yB-grd" secondAttribute="trailing" constant="8" id="LBc-QP-LFF"/>
                                 <constraint firstItem="XcL-4T-EKB" firstAttribute="leading" secondItem="Ihu-Ui-VWQ" secondAttribute="leading" constant="8" id="Us5-3f-4sK"/>
+                                <constraint firstItem="dEm-pB-4SC" firstAttribute="top" secondItem="UaI-yB-grd" secondAttribute="bottom" constant="1" id="Yc9-4e-WMb"/>
                                 <constraint firstItem="XcL-4T-EKB" firstAttribute="top" secondItem="Ihu-Ui-VWQ" secondAttribute="top" constant="12" id="gfD-fj-vDy"/>
                                 <constraint firstItem="UaI-yB-grd" firstAttribute="top" secondItem="XcL-4T-EKB" secondAttribute="bottom" constant="8" id="hct-03-skg"/>
-                                <constraint firstAttribute="bottom" secondItem="UaI-yB-grd" secondAttribute="bottom" constant="8" id="hyR-CX-LVJ"/>
-                                <constraint firstAttribute="height" constant="200" id="vtb-7M-s3G"/>
+                                <constraint firstAttribute="bottom" secondItem="UaI-yB-grd" secondAttribute="bottom" constant="20" id="hyR-CX-LVJ"/>
+                                <constraint firstAttribute="trailing" secondItem="dEm-pB-4SC" secondAttribute="trailing" constant="8" id="nWn-8r-Jrm"/>
+                                <constraint firstAttribute="height" constant="220" id="vtb-7M-s3G"/>
                             </constraints>
                         </view>
                     </subviews>

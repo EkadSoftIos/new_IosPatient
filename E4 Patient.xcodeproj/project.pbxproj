@@ -83,6 +83,12 @@
 		613C8BC526ECAF4000FA4A83 /* AppointmentDetailsCancelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613C8BC426ECAF4000FA4A83 /* AppointmentDetailsCancelModel.swift */; };
 		614F9E3B283C5C610055DF4E /* DeleteDiseasesVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 614F9E39283C5C600055DF4E /* DeleteDiseasesVC.xib */; };
 		614F9E3C283C5C610055DF4E /* DeleteDiseasesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614F9E3A283C5C600055DF4E /* DeleteDiseasesVC.swift */; };
+		614F9E40283D8BA50055DF4E /* DeleteFamilyHistoryVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 614F9E3E283D8BA50055DF4E /* DeleteFamilyHistoryVC.xib */; };
+		614F9E41283D8BA50055DF4E /* DeleteFamilyHistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614F9E3F283D8BA50055DF4E /* DeleteFamilyHistoryVC.swift */; };
+		614F9E45283D96720055DF4E /* HomeInfoTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614F9E43283D96720055DF4E /* HomeInfoTableVC.swift */; };
+		614F9E46283D96720055DF4E /* HomeInfoTableVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 614F9E44283D96720055DF4E /* HomeInfoTableVC.xib */; };
+		614F9E4A283DA60D0055DF4E /* BranchImagesCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614F9E48283DA60D0055DF4E /* BranchImagesCollectionVC.swift */; };
+		614F9E4B283DA60D0055DF4E /* BranchImagesCollectionVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 614F9E49283DA60D0055DF4E /* BranchImagesCollectionVC.xib */; };
 		6160C7DD26E63D33006A12BE /* AppointmentNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6160C7DC26E63D33006A12BE /* AppointmentNetwork.swift */; };
 		6160C7DF26E63D8D006A12BE /* WriteReviewsNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6160C7DE26E63D8D006A12BE /* WriteReviewsNetwork.swift */; };
 		6160C7E226E63E72006A12BE /* AppointmentHistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6160C7E026E63E72006A12BE /* AppointmentHistoryModel.swift */; };
@@ -575,6 +581,12 @@
 		613C8BC426ECAF4000FA4A83 /* AppointmentDetailsCancelModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmentDetailsCancelModel.swift; sourceTree = "<group>"; };
 		614F9E39283C5C600055DF4E /* DeleteDiseasesVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeleteDiseasesVC.xib; sourceTree = "<group>"; };
 		614F9E3A283C5C600055DF4E /* DeleteDiseasesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeleteDiseasesVC.swift; sourceTree = "<group>"; };
+		614F9E3E283D8BA50055DF4E /* DeleteFamilyHistoryVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeleteFamilyHistoryVC.xib; sourceTree = "<group>"; };
+		614F9E3F283D8BA50055DF4E /* DeleteFamilyHistoryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeleteFamilyHistoryVC.swift; sourceTree = "<group>"; };
+		614F9E43283D96720055DF4E /* HomeInfoTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeInfoTableVC.swift; sourceTree = "<group>"; };
+		614F9E44283D96720055DF4E /* HomeInfoTableVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeInfoTableVC.xib; sourceTree = "<group>"; };
+		614F9E48283DA60D0055DF4E /* BranchImagesCollectionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BranchImagesCollectionVC.swift; sourceTree = "<group>"; };
+		614F9E49283DA60D0055DF4E /* BranchImagesCollectionVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BranchImagesCollectionVC.xib; sourceTree = "<group>"; };
 		6160C7DC26E63D33006A12BE /* AppointmentNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmentNetwork.swift; sourceTree = "<group>"; };
 		6160C7DE26E63D8D006A12BE /* WriteReviewsNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WriteReviewsNetwork.swift; sourceTree = "<group>"; };
 		6160C7E026E63E72006A12BE /* AppointmentHistoryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmentHistoryModel.swift; sourceTree = "<group>"; };
@@ -1250,6 +1262,33 @@
 				614F9E3A283C5C600055DF4E /* DeleteDiseasesVC.swift */,
 			);
 			path = DeleteDiseasesVC;
+			sourceTree = "<group>";
+		};
+		614F9E3D283D8BA50055DF4E /* DeleteFamilyHistoryVC */ = {
+			isa = PBXGroup;
+			children = (
+				614F9E3E283D8BA50055DF4E /* DeleteFamilyHistoryVC.xib */,
+				614F9E3F283D8BA50055DF4E /* DeleteFamilyHistoryVC.swift */,
+			);
+			path = DeleteFamilyHistoryVC;
+			sourceTree = "<group>";
+		};
+		614F9E42283D96720055DF4E /* HomeInfoTableVC */ = {
+			isa = PBXGroup;
+			children = (
+				614F9E43283D96720055DF4E /* HomeInfoTableVC.swift */,
+				614F9E44283D96720055DF4E /* HomeInfoTableVC.xib */,
+			);
+			path = HomeInfoTableVC;
+			sourceTree = "<group>";
+		};
+		614F9E47283DA60D0055DF4E /* BranchImagesCollectionVC */ = {
+			isa = PBXGroup;
+			children = (
+				614F9E48283DA60D0055DF4E /* BranchImagesCollectionVC.swift */,
+				614F9E49283DA60D0055DF4E /* BranchImagesCollectionVC.xib */,
+			);
+			path = BranchImagesCollectionVC;
 			sourceTree = "<group>";
 		};
 		6160C7E426E63F91006A12BE /* AppointmentHistoryPopupCell */ = {
@@ -2058,6 +2097,7 @@
 		C15F7ED225BBE6CF005EB885 /* FamilyHistoryVC */ = {
 			isa = PBXGroup;
 			children = (
+				614F9E3D283D8BA50055DF4E /* DeleteFamilyHistoryVC */,
 				C15F7ED325BBE73D005EB885 /* FamilyHistoryVC.swift */,
 				C15F7ED425BBE73D005EB885 /* FamilyHistoryVC.xib */,
 				C15F7EF525BBFB48005EB885 /* FamilyHistoryVC+Tableview.swift */,
@@ -2382,6 +2422,7 @@
 		C186E3122647818200B0890C /* BranchInfoVC */ = {
 			isa = PBXGroup;
 			children = (
+				614F9E47283DA60D0055DF4E /* BranchImagesCollectionVC */,
 				C186E31C264785F100B0890C /* ServiseCell */,
 				C186E3172647855600B0890C /* CollectionCell */,
 				C186E3132647821300B0890C /* BranchInfoVCViewController.swift */,
@@ -2413,6 +2454,7 @@
 		C186E323264788E300B0890C /* HomeInfoVC */ = {
 			isa = PBXGroup;
 			children = (
+				614F9E42283D96720055DF4E /* HomeInfoTableVC */,
 				C186E324264788F400B0890C /* HomeInfoVC.swift */,
 				C186E325264788F400B0890C /* HomeInfoVC.xib */,
 			);
@@ -3097,6 +3139,7 @@
 				C18913AA25B4086C006F08EA /* SignUpVC.xib in Resources */,
 				01CD8C7D26F290E700F6F0DE /* DoctorProfileHeaderCell.xib in Resources */,
 				C19B32E4264898C7007B919B /* AddAppointmentVC.xib in Resources */,
+				614F9E4B283DA60D0055DF4E /* BranchImagesCollectionVC.xib in Resources */,
 				61BD6828283B104C00821D51 /* SearchVC.xib in Resources */,
 				C18DA7292647B48600079EE1 /* AppointmentCell.xib in Resources */,
 				C14C630A25DE0262000D50B0 /* ON@3x.png in Resources */,
@@ -3109,6 +3152,7 @@
 				61BD6842283B820600821D51 /* DeleteMedicalReportVC.xib in Resources */,
 				C14C630D25DE0262000D50B0 /* video@3x.png in Resources */,
 				61BD67F62838B16800821D51 /* Localizable.strings in Resources */,
+				614F9E40283D8BA50055DF4E /* DeleteFamilyHistoryVC.xib in Resources */,
 				C186EB9F2647CBDF00E92B8F /* ConsultationsLogVC.xib in Resources */,
 				01F5756826DD72870076273F /* ConsultationLogTBCell.xib in Resources */,
 				C14C630E25DE0262000D50B0 /* cameraIcon@3x.png in Resources */,
@@ -3162,6 +3206,7 @@
 				C18185322635505E00299993 /* SearchOneCell.xib in Resources */,
 				C17C35EE263FB2A300B8B494 /* CityFilterVC.xib in Resources */,
 				61BD6838283B104D00821D51 /* DoctorsSearchCell.xib in Resources */,
+				614F9E46283D96720055DF4E /* HomeInfoTableVC.xib in Resources */,
 				C19961B4263519F000B3FB2A /* DoctorServicesCell.xib in Resources */,
 				01F2F93F27E3FE36009466E1 /* MapFilterDoctorsCell.xib in Resources */,
 				C10E8ECC25B33CED004FFCBF /* Cairo-ExtraLight.ttf in Resources */,
@@ -3462,6 +3507,7 @@
 				C18DA7282647B48600079EE1 /* AppointmentCell.swift in Sources */,
 				01EE401A270C6349005B4E34 /* PatientAttachememntsVC.swift in Sources */,
 				C14C631C25DE0262000D50B0 /* ImageGalleryViewCell.swift in Sources */,
+				614F9E41283D8BA50055DF4E /* DeleteFamilyHistoryVC.swift in Sources */,
 				616178612806C578005EE4C6 /* LogOutInteractor.swift in Sources */,
 				C19EAB7325E94C1C006E6F06 /* GetAdressModel.swift in Sources */,
 				617E26AB2823CF15009D8ABC /* NotificationCountModel.swift in Sources */,
@@ -3488,6 +3534,7 @@
 				C10E8ECB25B33CED004FFCBF /* FontEnum.swift in Sources */,
 				C1820DE825B4142F00396AAE /* ConfirmAccountVC.swift in Sources */,
 				61BD67F72838B16800821D51 /* Localizable.swift in Sources */,
+				614F9E4A283DA60D0055DF4E /* BranchImagesCollectionVC.swift in Sources */,
 				010CFA16270C9BF800E4BCC7 /* FollowUpVC.swift in Sources */,
 				01FE4B5726E56CA6008023AB /* BookingSummaryCollection.swift in Sources */,
 				C13A457D25F43BAF004F2D33 /* AddEmergencyPicker.swift in Sources */,
@@ -3643,6 +3690,7 @@
 				01A1B00A26C844320010E708 /* DoctorSearchModel.swift in Sources */,
 				C15102D625B7E4BC00FEEFB2 /* AllAllergiesVC.swift in Sources */,
 				C14C631025DE0262000D50B0 /* CameraView.swift in Sources */,
+				614F9E45283D96720055DF4E /* HomeInfoTableVC.swift in Sources */,
 				322DCF2325EA632A00142F6A /* GetFullCities.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

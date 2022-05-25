@@ -153,9 +153,30 @@ extension ProfileVC: UITableViewDelegate, UITableViewDataSource {
                 cell.editBtn.isHidden = false
                 if userData?.message?.tblPatientDisease?.count != 0{
                     let model = userData?.message?.tblPatientDisease?[0]
-                    cell.detailsoneLbl.text = model?.notes
-                    cell.detailsTwoLbl.text = self.GetFormatedDate(date_string: model?.diagonsedDate ?? "", dateFormat: "yyyy-MM-dd'T'HH:mm:ss")
-                    cell.detailsThreeLbl.text = "By \(model?.doctorName ?? "")"
+                    cell.detailsoneLbl.text = model?.diseaseNamelocalized
+                    var diseaseDate = ""
+                    if let diseaseVisitDate = model?.diagonsedDate?.components(separatedBy: "T") {
+                        diseaseDate = GetFormatedDate(date_string: diseaseVisitDate[0], dateFormat: "yyyy-MM-dd")
+                    }
+                    cell.detailsTwoLbl.text = "\("DiagnosedOn".localized)\(": ")\(diseaseDate)"
+                    let range = (cell.detailsTwoLbl.text! as NSString).range(of: "DiagnosedOn".localized)
+                    let mutableAttributedString = NSMutableAttributedString.init(string: cell.detailsTwoLbl.text ?? "")
+                    mutableAttributedString.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor (named: "Blue")! , range: range)
+                    cell.detailsTwoLbl.attributedText = mutableAttributedString
+                    
+                    cell.detailsThreeLbl.text = "\("TratedByDr.".localized)\(": ")\(model?.doctorName ?? "")"
+                    let range2 = (cell.detailsThreeLbl.text! as NSString).range(of: "TratedByDr.".localized)
+                    let mutableAttributedString2 = NSMutableAttributedString.init(string: cell.detailsThreeLbl.text ?? "")
+                    mutableAttributedString2.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor (named: "Blue")!, range: range2)
+                    cell.detailsThreeLbl.attributedText = mutableAttributedString2
+
+                    
+                    
+                    
+                    
+                    
+//                    cell.detailsTwoLbl.text = self.GetFormatedDate(date_string: model?.diagonsedDate ?? "", dateFormat: "yyyy-MM-dd'T'HH:mm:ss")
+//                    cell.detailsThreeLbl.text = "By \(model?.doctorName ?? "")"
                     cell.countLbl.text = "+\(userData?.message?.tblPatientDisease?.count ?? 0)"
                     cell.countLbl.isHidden = false
                     cell.stackHeight.constant = 60
@@ -174,7 +195,8 @@ extension ProfileVC: UITableViewDelegate, UITableViewDataSource {
                 if userData?.message?.tblPatientMedicine?.count != 0{
                     let model = userData?.message?.tblPatientMedicine?[0]
                     cell.detailsoneLbl.text = model?.medicationName
-                    cell.detailsTwoLbl.text = model?.medicineStrenght
+                    cell.detailsTwoLbl.text = "\(model?.medicineForm ?? "")\(" - ")\(model?.medicineStrenght ?? "")"
+                    cell.detailsThreeLbl.text = "\(model?.quantity ?? 0)\(" ")\("times".localized)\(" ")\(model?.durationTypetNameLocalized ?? "")\("-")\(model?.whenTake ?? "")\("-")\(model?.durationTypetNameLocalized ?? "")"
                    /* cell.detailsThreeLbl.text = "\(self.GetFormatedDate(date_string: model?.dateFrom ?? "", dateFormat: "yyyy-MM-dd'T'HH:mm:ss")) - \(self.GetFormatedDate(date_string: model?.dateTo ?? "", dateFormat: "yyyy-MM-dd'T'HH:mm:ss"))"*/
                     cell.countLbl.text = "+\(userData?.message?.tblPatientMedicine?.count ?? 0)"
                     cell.countLbl.isHidden = false
@@ -263,9 +285,30 @@ extension ProfileVC: UITableViewDelegate, UITableViewDataSource {
                 cell.editBtn.isHidden = false
                 if userData?.message?.tblPatientSurgery?.count != 0{
                     let model = userData?.message?.tblPatientSurgery?[0]
+                    
+                    var surgeyDate = ""
+                    if let surgeyVisitDate = model?.patientSurgeryDate?.components(separatedBy: "T") {
+                        surgeyDate = GetFormatedDate(date_string: surgeyVisitDate[0], dateFormat: "yyyy-MM-dd")
+                    }
+                    cell.detailsTwoLbl.text = "\("DiagnosedOn".localized)\(": ")\(surgeyDate)"
+                    let range = (cell.detailsTwoLbl.text! as NSString).range(of: "DiagnosedOn".localized)
+                    let mutableAttributedString = NSMutableAttributedString.init(string: cell.detailsTwoLbl.text ?? "")
+                    mutableAttributedString.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor (named: "Blue")! , range: range)
+                    cell.detailsTwoLbl.attributedText = mutableAttributedString
+                    
+                    cell.detailsThreeLbl.text = "\("TratedByDr.".localized)\(": ")\(model?.doctorName ?? "")"
+                    let range2 = (cell.detailsThreeLbl.text! as NSString).range(of: "TratedByDr.".localized)
+                    let mutableAttributedString2 = NSMutableAttributedString.init(string: cell.detailsThreeLbl.text ?? "")
+                    mutableAttributedString2.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor (named: "Blue")!, range: range2)
+                    cell.detailsThreeLbl.attributedText = mutableAttributedString2
+
+                    
+                    
+                    
+                    
                     cell.detailsoneLbl.text = model?.patientSurgeryName
-                    cell.detailsTwoLbl.text = self.GetFormatedDate(date_string: model?.patientSurgeryDate ?? "", dateFormat: "yyyy-MM-dd'T'HH:mm:ss")
-                    cell.detailsThreeLbl.text = "By \(model?.doctorName ?? "")"
+//                    cell.detailsTwoLbl.text = self.GetFormatedDate(date_string: model?.patientSurgeryDate ?? "", dateFormat: "yyyy-MM-dd'T'HH:mm:ss")
+//                    cell.detailsThreeLbl.text = "By \(model?.doctorName ?? "")"
                     cell.countLbl.text = "+\(userData?.message?.tblPatientSurgery?.count ?? 0)"
                     cell.countLbl.isHidden = false
                     cell.stackHeight.constant = 60

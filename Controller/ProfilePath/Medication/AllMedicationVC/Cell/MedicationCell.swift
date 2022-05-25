@@ -17,10 +17,13 @@ class MedicationCell: UITableViewCell {
     @IBOutlet var nameLbl: UILabel!
     @IBOutlet var quantityLbl: UILabel!
     @IBOutlet var editBtn: UIButton!
+    @IBOutlet var reminderBtn: UIButton!
+    
     var deleteHandelr: ActionClouser?
     var editHandelr: ActionClouser?
     override func awakeFromNib() {
         super.awakeFromNib()
+        reminderBtn.setTitle("SetReminder".localized, for: .normal)
         cellView.ShadowView(view: cellView, radius: 10, opacity: 0.2, shadowRadius: 6, color: UIColor.darkGray.cgColor)
         
     }

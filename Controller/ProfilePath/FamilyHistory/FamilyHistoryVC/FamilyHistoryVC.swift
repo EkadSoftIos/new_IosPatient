@@ -15,15 +15,16 @@ class FamilyHistoryVC: UIViewController {
         UIView.animate(withDuration: 1.5) {
             self.addView.rotate(angle: 180)
         }
-    }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setupTableView()
         if model?.message?.tblPatientSocialFamily?.count == 0{
             familyTable.setEmptyView()
         }else{
             familyTable.restore()
         }
+    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupTableView()
+        
         self.navigationItem.title = "Family History".localized
     }
     func setupTableView(){
@@ -41,7 +42,7 @@ class FamilyHistoryVC: UIViewController {
         show(vc, sender: nil)
     }
 }
-extension FamilyHistoryVC: AddFamily{
+extension FamilyHistoryVC: AddFamily , DeleteFamilyHistory{
     func Data(isAdded: Bool) {
         if isAdded == true{
             callApiAdd()

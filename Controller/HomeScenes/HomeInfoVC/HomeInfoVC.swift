@@ -14,11 +14,22 @@ class HomeInfoVC: UIViewController {
     @IBOutlet var homeView: UIView!
     @IBOutlet var serviseView: UIView!
     @IBOutlet var serviseTableView: UITableView!
-    
+    @IBOutlet var moreBTN: UIButton!
     @IBOutlet weak var doctorMedicalServiceLBL: UILabel!
     @IBOutlet weak var homeVisitLBL: UILabel!
+    @IBOutlet weak var firstServiceLBL: UILabel!
+    @IBOutlet weak var viewHeightConstraint: NSLayoutConstraint!
     override func viewWillAppear(_ animated: Bool) {
         setLocalization()
+        if  homeList?.medicalServiceList?.count ?? 0 > 1{
+            moreBTN.isHidden = false
+            viewHeightConstraint.constant = 120
+            firstServiceLBL.text = homeList?.medicalServiceList?[0].medicalServiceNameLocalized ?? ""
+        }else {
+            moreBTN.isHidden = true
+            viewHeightConstraint.constant = 40
+        }
+        
         self.navigationItem.title = "Home Info".localized
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: AppColor.Blue]
     }
@@ -31,32 +42,15 @@ class HomeInfoVC: UIViewController {
         super.viewDidLoad()
         serviseView.ShadowView(view: serviseView, radius: 10, opacity: 2, shadowRadius: 2, color: UIColor.lightGray.cgColor)
         homeView.ShadowView(view: homeView, radius: 10, opacity: 2, shadowRadius: 2, color: UIColor.lightGray.cgColor)
-        setupTableView()
     }
 
-    func setupTableView(){
-        serviseTableView.register(DoctorServiseCell.nib, forCellReuseIdentifier: "DoctorServiseCell")
-        serviseTableView.delegate = self
-        serviseTableView.dataSource = self
-        serviseTableView.separatorStyle = .none
+    @IBAction func moreAction(_ sender: Any) {
+        let vc = HomeInfoTableVC()
+        vc.homeList = homeList
+        self.navigationController?.pushViewController(vc, animated: true)
     }
+
  
 
 }
-extension HomeInfoVC: UITableViewDelegate, UITableViewDataSource{
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return homeList?.medicalServiceList?.count ?? 0
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "DoctorServiseCell") as! DoctorServiseCell
-        cell.selectionStyle = .none
-        
-        cell.medicalName.text = homeList?.medicalServiceList?[indexPath.row].medicalServiceNameLocalized ?? ""
-        
-        return cell
-    }
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 30
-    }
-}
+

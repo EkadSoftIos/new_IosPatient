@@ -12,6 +12,11 @@ class AddFamilyHistoryVC: UIViewController,UITextViewDelegate {
     @IBOutlet var notesTxt: UITextView!
     @IBOutlet var saveBtn: TransitionButton!
     @IBOutlet var mainView: UIView!
+    
+    @IBOutlet weak var relationLBL: UILabel!
+    
+    @IBOutlet weak var notesLBL: UILabel!
+    
     var model: UserDataModel?
     var isUpdate: Bool?
     var SocialID: Int = 0
@@ -21,12 +26,18 @@ class AddFamilyHistoryVC: UIViewController,UITextViewDelegate {
     var relationID: Int?
     let relationPickerView = UIPickerView()
     override func viewWillAppear(_ animated: Bool) {
+        setLocalization()
+    }
+    func setLocalization(){
+        relationLBL.text = "Relation *".localized
+        notesLBL.text = "Notes".localized
+        saveBtn.setTitle("Save".localized, for: .normal)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         mainView.ShadowView(view: mainView, radius: 20, opacity: 0.4, shadowRadius: 4, color: UIColor.black.cgColor)
         
-        notesTxt.text = "notes"
+        notesTxt.text = "Notes".localized
         notesTxt.textColor = UIColor.lightGray
         notesTxt.delegate = self
         setUpPicker()
@@ -55,7 +66,7 @@ class AddFamilyHistoryVC: UIViewController,UITextViewDelegate {
     }
     func textViewDidEndEditing(_ textView: UITextView) {
         if textView.text.isEmpty {
-            textView.text = "notes"
+            textView.text = "Notes".localized
             textView.textColor = UIColor.lightGray
         }
     }
