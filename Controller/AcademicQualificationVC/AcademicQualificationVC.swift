@@ -15,6 +15,7 @@ class AcademicQualificationVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationItem.title = "Academic Qualification".localized
+        self.hidesBottomBarWhenPushed = true
 //        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: AppColor.Blue]
     }
     override func viewDidLoad() {

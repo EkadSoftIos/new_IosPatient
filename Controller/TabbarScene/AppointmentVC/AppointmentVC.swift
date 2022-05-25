@@ -42,6 +42,12 @@ class AppointmentVC: BaseViewControll,FSCalendarDelegate , UISearchBarDelegate {
         return formatter
     }()
     override func viewWillAppear(_ animated: Bool) {
+        
+        if self.hidesBottomBarWhenPushed == true {
+            self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: AppColor.Blue]
+
+        }
+        
         let date = self.dateFormatter.string(from: Date())
         self.date = date
         callApi(date: self.date)
