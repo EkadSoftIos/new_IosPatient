@@ -17,6 +17,7 @@ extension AppDelegate {
            UINavigationBar.appearance().isTranslucent = true
            //UINavigationBar.appearance().backgroundColor = .clear
         UINavigationBar.appearance().backItem?.leftBarButtonItem?.tintColor = AppColor.Blue
+        UINavigationBar.appearance().barTintColor = .white
        }
     func setupTabbar(){
          let appearance = UITabBarItem.appearance()

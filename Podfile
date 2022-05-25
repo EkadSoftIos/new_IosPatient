@@ -6,22 +6,25 @@ target 'E4 Patient' do
   use_frameworks!
 
   # Pods for E4 Patient
-  pod 'Alamofire' , '~> 4.0'
+   pod 'Alamofire' , '~> 4.0'
    pod 'IQKeyboardManager'
    pod 'SwiftMessages'
-   pod 'Kingfisher'
    pod 'SKCountryPicker'
    pod 'UIView+Shake'
    pod 'SwiftMessages'
    pod 'SwiftEntryKit'
    pod 'TransitionButton'
-   pod 'ImagePicker'
    pod 'FSPagerView'
    pod 'RangeSeekSlider'
    pod 'Cosmos'
    pod 'FSCalendar'
    pod 'DLRadioButton'
    pod 'iOSDropDown'
+   
+   
+   pod 'Kingfisher'
+   pod 'ImagePicker', :git => 'https://github.com/hyperoslo/ImagePicker.git'
+   
    
   target 'E4 PatientTests' do
     inherit! :search_paths

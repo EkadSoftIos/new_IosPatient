@@ -77,7 +77,7 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         switch collectionView {
         case SpecializationsCollection:
-        return CGSize(width: 60 , height: 40)
+            return CGSize(width: 60 , height: 40)
         case doctorServiseCollection:
             return CGSize(width: 160 , height: 90)
         case medicalServiseCollection:
@@ -88,28 +88,39 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
             return CGSize(width: 170 , height: 75)
         default:
             return CGSize(width: 170 , height: 7)
-        
-        }
-       
             
+        }
+        
+        
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-            if collectionView == topDoctorCollection {
-                let sb = UIStoryboard(name: "Main", bundle: nil)
-                let vc = sb.instantiateViewController(withIdentifier: "DoctorProfileViewController") as! DoctorProfileViewController
-                vc.doctorId = homeResponse?.message?.doctorDataForAPI?[indexPath.row].businessProviderEmployeeID
-                navigationController?.pushViewController(vc, animated: true)
-            }else if collectionView == SpecializationsCollection{
-                let vc = AllSearchVC()
-                vc.mainSpecialityID = homeResponse?.message?.speciality?[indexPath.row].specialityID
-                self.show(vc, sender: nil)
-
-            } else if collectionView == doctorServiseCollection {
-                let vc = SearchOeVc()
-                vc.model = homeResponse
-                vc.consultationServiceId = indexPath.item + 1
-                self.show(vc, sender: nil)
+        if collectionView == topDoctorCollection {
+            let sb = UIStoryboard(name: "Main", bundle: nil)
+            let vc = sb.instantiateViewController(withIdentifier: "DoctorProfileViewController") as! DoctorProfileViewController
+            vc.doctorId = homeResponse?.message?.doctorDataForAPI?[indexPath.row].businessProviderEmployeeID
+            navigationController?.pushViewController(vc, animated: true)
+        }else if collectionView == SpecializationsCollection{
+            let vc = AllSearchVC()
+            vc.mainSpecialityID = homeResponse?.message?.speciality?[indexPath.row].specialityID
+            self.show(vc, sender: nil)
+            
+        } else if collectionView == doctorServiseCollection {
+            let vc = SearchOeVc()
+            vc.model = homeResponse
+            vc.consultationServiceId = indexPath.item + 1
+            self.show(vc, sender: nil)
+        }else if collectionView == medicalServiseCollection{
+            let vc = MedicalServicesVC()
+            if indexPath.row == 2 { vc.type = .labs }
+            else if indexPath.row == 3 { vc.type = .radiologyCenter }
+            vc.hidesBottomBarWhenPushed = true
+            navigationController?.pushViewController(vc, animated: true)
+            
+//            let nav = UINavigationController(rootViewController: vc)
+//            nav.modalPresentationStyle = .fullScreen
+//            present(nav, animated: true)
         }
+        
     }
     
 }

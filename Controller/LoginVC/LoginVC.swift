@@ -41,13 +41,13 @@ class LoginVC: UIViewController {
         }
     }
     @IBAction func chooseCountry_Click(_ sender: Any) {
-        let countryController = CountryPickerWithSectionViewController.presentController(on: self) { [weak self] (country: Country) in
+        CountryPickerWithSectionViewController.presentController(on: self) { [weak self] (country: Country) in
             guard let self = self else { return }
             self.countryImage.image = country.flag
             self.countryNameLbl.text = country.countryCode
-            self.phoneTxt.placeholder = "\("+")\(country.digitCountrycode)"
+            self.phoneTxt.placeholder = "\("+")\(country.digitCountrycode ?? "--")"
         }
-        countryController.detailColor = UIColor.blue
+        //countryController.detailColor = UIColor.blue
     }
     @IBAction func login_Click(_ sender: Any) {
         validationinput()

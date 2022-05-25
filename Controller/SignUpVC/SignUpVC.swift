@@ -38,12 +38,12 @@ class SignUpVC: UIViewController {
     }
 
     @IBAction func chooseCountry_Click(_ sender: Any) {
-        let countryController = CountryPickerWithSectionViewController.presentController(on: self) { [weak self] (country: Country) in
+        CountryPickerWithSectionViewController.presentController(on: self) { [weak self] (country: Country) in
           guard let self = self else { return }
           self.flagImage.image = country.flag
             self.counntryNameLbl.text = country.countryCode
         }
-        countryController.detailColor = UIColor.blue
+        //countryController.detailColor = UIColor.blue
     }
     @IBAction func login_CLick(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
