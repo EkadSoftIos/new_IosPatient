@@ -569,6 +569,7 @@
 		01FE4B5226E56381008023AB /* ConsultationDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultationDetailsViewModel.swift; sourceTree = "<group>"; };
 		01FE4B5526E56CA6008023AB /* BookingSummaryCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingSummaryCollection.swift; sourceTree = "<group>"; };
 		01FE4B5626E56CA6008023AB /* BookingSummaryCollection.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookingSummaryCollection.xib; sourceTree = "<group>"; };
+		0623A08128421F0200071B8A /* E4ClinicPatient-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "E4ClinicPatient-Bridging-Header.h"; sourceTree = "<group>"; };
 		26960D512C6235A05E89CAA8 /* Pods_E4_Patient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_E4_Patient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FBBBC112BA43A675406D37D /* Pods_E4_PatientTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_E4_PatientTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		322DCF2225EA632A00142F6A /* GetFullCities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFullCities.swift; sourceTree = "<group>"; };
@@ -605,7 +606,6 @@
 		617E26A52823CEFF009D8ABC /* NotificationsTBCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotificationsTBCell.xib; sourceTree = "<group>"; };
 		617E26A92823CF14009D8ABC /* NotificationCountModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationCountModel.swift; sourceTree = "<group>"; };
 		617E26AA2823CF14009D8ABC /* NotificationListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationListModel.swift; sourceTree = "<group>"; };
-		6183F35827F3AE3A0040836F /*  E4ClinicPatient-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = " E4ClinicPatient-Bridging-Header.h"; sourceTree = "<group>"; };
 		619182ED26F65B4600B6A796 /* Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Animation.h; sourceTree = "<group>"; };
 		619182EE26F65B4600B6A796 /* Animation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Animation.m; sourceTree = "<group>"; };
 		61980655281C01E0009CC5CB /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -1246,6 +1246,13 @@
 			path = BookingSummaryCell;
 			sourceTree = "<group>";
 		};
+		062AE0AF2841F8D300CD698F /* MSOtherProviders */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MSOtherProviders;
+			sourceTree = "<group>";
+		};
 		6102527728074C730085B200 /* HelpSupportCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -1565,12 +1572,12 @@
 			isa = PBXGroup;
 			children = (
 				61980655281C01E0009CC5CB /* GoogleService-Info.plist */,
-				6183F35827F3AE3A0040836F /*  E4ClinicPatient-Bridging-Header.h */,
 				C1F8D81925DF301400863B5D /* Network */,
 				C10E8F5225B3A670004FFCBF /* Model */,
 				C10E8F1525B33CF2004FFCBF /* Brain */,
 				C10E8F1925B33D0A004FFCBF /* Controller */,
 				C10E8E2E25B33B03004FFCBF /* E4 Patient */,
+				062AE0AF2841F8D300CD698F /* MSOtherProviders */,
 				C10E8E4525B33B07004FFCBF /* E4 PatientTests */,
 				C10E8E5025B33B07004FFCBF /* E4 PatientUITests */,
 				C10E8E2D25B33B03004FFCBF /* Products */,
@@ -1592,6 +1599,7 @@
 		C10E8E2E25B33B03004FFCBF /* E4 Patient */ = {
 			isa = PBXGroup;
 			children = (
+				0623A08128421F0200071B8A /* E4ClinicPatient-Bridging-Header.h */,
 				C1D60B70261560660041AC66 /* E4 Patient.entitlements */,
 				C10E8E2F25B33B03004FFCBF /* AppDelegate.swift */,
 				C10E8E3125B33B03004FFCBF /* SceneDelegate.swift */,
@@ -3887,15 +3895,16 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "E4 Patient/E4 Patient.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = H7VFXJNULD;
+				DEVELOPMENT_TEAM = B3B9UDWN3P;
 				INFOPLIST_FILE = "E4 Patient/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Ekadsoft.E4Patientt;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Ekadsoft.E4Patient2;
 				PRODUCT_NAME = E4clinic;
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/nadamostafa/Downloads/E4ClinicPatientIos-master/ E4ClinicPatient-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/E4ClinicPatient-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "armv7 armv7s arm64 arm64e x86_64";
@@ -3910,15 +3919,16 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "E4 Patient/E4 Patient.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = H7VFXJNULD;
+				DEVELOPMENT_TEAM = B3B9UDWN3P;
 				INFOPLIST_FILE = "E4 Patient/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Ekadsoft.E4Patientt;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Ekadsoft.E4Patient2;
 				PRODUCT_NAME = E4clinic;
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/nadamostafa/Downloads/E4ClinicPatientIos-master/ E4ClinicPatient-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/E4ClinicPatient-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "armv7 armv7s arm64 arm64e x86_64";
