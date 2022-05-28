@@ -210,3 +210,14 @@
 //doctor profile
 "Doctor has been removed from favorites list"="Doctor has been removed from favorites list";
 "Doctor has been added to favorites list"="Doctor has been added to favorites list";
+
+
+//MSOtherProviders
+"labs"  = "labs";
+"labs" = "labs";
+"labs"  = "labs";
+"X-Rays" = "X-Rays";
+"Search by test name" = "Search by test name";
+"Search by rays name" = "Search by rays name";
+"Find Tests" = "Find Tests";
+"Find Rays" = "Find Rays";
