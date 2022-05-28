@@ -206,3 +206,13 @@
 "Doctor has been removed from favorites list"="تمت إزالة الطبيب من قائمة المفضلة";
 "Doctor has been added to favorites list"="تمت إضافة الطبيب إلى قائمة المفضلة";
 
+
+//MSOtherProviders
+"labs"  = "معامل";
+"rays" = "مراكز";
+"Labs"  = "معامل";
+"X-Rays" = "أشعة إكس";
+"Search by test name" = "بحث باسم التحليل";
+"Search by rays name" = "بحث باسم الاشعة";
+"Find Tests" = "تحليلي";
+"Find Rays" = "اشعتي";

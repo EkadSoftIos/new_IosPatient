@@ -109,6 +109,13 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
                 vc.model = homeResponse
                 vc.consultationServiceId = indexPath.item + 1
                 self.show(vc, sender: nil)
+        }else if collectionView == medicalServiseCollection{
+            let vc = OPsDashboardVC()
+            if indexPath.row == 2 { vc.type = .labs }
+            else if indexPath.row == 3 { vc.type = .rays }
+            else{ return }
+            vc.hidesBottomBarWhenPushed = true
+            navigationController?.pushViewController(vc, animated: true)
         }
     }
     
