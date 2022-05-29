@@ -15,10 +15,15 @@ class ReviewsCell: UITableViewCell {
     @IBOutlet weak var patientRate: UILabel!
     @IBOutlet weak var patientName: UILabel!
     @IBOutlet weak var patientImg: UIImageView!
+    @IBOutlet weak var viewReplyBTN: UIButton!
+    @IBOutlet weak var doctorIMG: UIImageView!
+    @IBOutlet weak var doctorNameLBL: UILabel!
+    @IBOutlet weak var doctorReplyDateLBL: UILabel!
+    @IBOutlet weak var doctorReplyLBL: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        cellView.ShadowView(view: cellView, radius: 10, opacity: 2, shadowRadius: 0.3, color: UIColor.darkGray.cgColor)
+//        contentView.ShadowView(view: cellView, radius: 10, opacity: 2, shadowRadius: 0.3, color: UIColor.darkGray.cgColor)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

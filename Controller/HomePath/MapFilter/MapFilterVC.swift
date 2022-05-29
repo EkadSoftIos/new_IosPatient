@@ -161,7 +161,11 @@ extension MapFilterVC: MKMapViewDelegate {
         self.lattitude = coordinate.latitude
         self.longtitude = coordinate.longitude
         
-        filterDoctors(lat: "\(lattitude)", lng: "\(longtitude)")
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            // your code here
+            self.filterDoctors(lat: "\(self.lattitude)", lng: "\(self.longtitude)")
+        }
+       
         
         mapView.getAddressFromLatLon(pdblLatitude: String(coordinate.latitude), withLongitude: String(coordinate.longitude)) { (address) in
             if address != "" {
