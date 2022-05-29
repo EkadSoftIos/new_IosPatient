@@ -123,6 +123,11 @@ class OPsDashboardVC: UIViewController {
     
     func showSearchResultVC(searchText:String? = nil){
         view.endEditing(true)
+        let vc = SearchOPServicesVC()
+        var msRequest = presenter.msRequest
+        msRequest.searchText =  searchText
+        vc.msRequest = msRequest
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 
@@ -159,7 +164,8 @@ extension OPsDashboardVC: OPsDashboardViewProtocol {
 extension OPsDashboardVC : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        presenter.numberOfEPrescriptions
+        let numberOfRows = presenter.numberOfEPrescriptions
+        return numberOfRows
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

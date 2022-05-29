@@ -9,11 +9,6 @@
 import Foundation
 
 
-enum MSType: Int {
-    case labs = 1
-    case rays
-}
-
 struct SliderDisplayCell{
     let imgURL:URL?
     
@@ -32,6 +27,7 @@ protocol OPsDashboardPresenterProtocol: AnyObject {
     var numberOfAds:Int { get }
     var msLabelTitle:String { get }
     var numberOfEPrescriptions:Int { get }
+    var msRequest:MSOPServicesRequest { get }
     /**
      * Add here your methods for communication VIEW -> PROTOCOL
      */
@@ -74,11 +70,16 @@ class OPsDashboardPresenter {
         ePrescriptionsList.count
     }
     
+    var msRequest:MSOPServicesRequest {
+        msOPServicesRequest ?? MSOPServicesRequest(type: pageType)
+    }
+    
     // MARK: - Private properties -
     private var pageType:MSType!
     private var adsList:[Ad] = []
     private var ePrescriptionsList:[LastPrescription] = []
     private var msNetworkRepository:MSNetworkRepository?
+    private var msOPServicesRequest:MSOPServicesRequest?
     private weak var view: OPsDashboardViewProtocol?
     
     // MARK: - Init -
@@ -95,12 +96,14 @@ extension OPsDashboardPresenter: OPsDashboardPresenterProtocol {
     
     // MARK: - viewDidLoad -
     func viewDidLoad() {
-       fetchData()
+        msOPServicesRequest = MSOPServicesRequest(type: pageType)
+        fetchData()
     }
     
     // MARK: - fetchData -
     func fetchData() {
-        let url = NetworkURL(.otherProviderDashboard(type))
+        guard let request = msOPServicesRequest else { return }
+        let url = NetworkURL(.otherProviderDashboard(request))
         msNetworkRepository?.fetch(ProvidersReponse.self, from: url) { [weak self] result in
             guard let self = self else { return }
             switch result {
