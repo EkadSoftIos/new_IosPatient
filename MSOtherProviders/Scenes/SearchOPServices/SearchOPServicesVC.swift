@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import KafkaRefresh
 import SwiftMessages
 
 //MARK: View -
@@ -17,6 +18,7 @@ protocol SearchOPServicesViewProtocol: AnyObject {
      */
     
     func reloadData()
+    func setSearchText(_ text:String)
     func showMessageAlert(title:String, message:String)
 }
 
@@ -57,12 +59,16 @@ class SearchOPServicesVC: UIViewController {
 
     func setupLayout() {
         title = presenter.title
-        //showUniversalLoadingView(true)
+        showUniversalLoadingView(true)
         searchTextField.delegate = self
         shadowsViews.forEach ({ $0.applyShadow(0.3) })
         searchTextField.placeholder = presenter.searchPlaceholder
         findServicesBtn.setTitle( presenter.findServicesBtnTitle, for: .normal)
         tableView.register(UINib(nibName: "ServiceCell", bundle: nil), forCellReuseIdentifier: "ServiceCell")
+        tableView.bindFootRefreshHandler({ [weak self] in
+            guard let self = self else { return }
+            self.presenter.loadMore()
+        }, themeColor: .selectedPCColor, refreshStyle: .native)
         tableView.delegate = self
         tableView.dataSource = self
     }
@@ -82,7 +88,7 @@ class SearchOPServicesVC: UIViewController {
     func showSearchResultVC(){
         view.endEditing(true)
         guard let text = searchTextField.text?.trimmingCharacters(in: .whitespaces), !text.isEmpty else { return  }
-        presenter.fetchSearchedData(text)
+        presenter.fetchSearchedData(text: text)
     }
     
 }
@@ -107,6 +113,10 @@ extension SearchOPServicesVC: SearchOPServicesViewProtocol {
         tableView.reloadData()
     }
     
+    func setSearchText(_ text: String) {
+        searchTextField.text = text
+    }
+    
     func showMessageAlert(title: String, message: String) {
         showUniversalLoadingView(false)
         showMessage(title: title, sub: message, type: Theme.error, layout: .centeredView)
@@ -119,14 +129,12 @@ extension SearchOPServicesVC: UITableViewDelegate, UITableViewDataSource{
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        50
+        presenter.numberOfRows
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ServiceCell", for: indexPath) as! ServiceCell
-        
-        //presenter.configEPrescriptionCell(cell: cell, indexPath: indexPath)
-        
+        presenter.config(cell: cell, indexPath: indexPath)
         return cell
     }
     

@@ -24,6 +24,7 @@ target 'E4 Patient' do
    pod 'DLRadioButton'
    pod 'iOSDropDown'
 #   pod 'ImagePicker'
+   pod 'KafkaRefresh'
 
 pod 'Firebase/Auth'
 pod 'Firebase/Firestore'

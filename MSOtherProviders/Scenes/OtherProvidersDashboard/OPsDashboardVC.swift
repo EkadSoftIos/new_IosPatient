@@ -96,18 +96,19 @@ class OPsDashboardVC: UIViewController {
     }
     
     
+    @IBAction func uploadEPrescription(_ sender: UIButton) {
+        
+    }
+    
     
     @IBAction func showOrdersList(_ sender: UIButton) {
         
     }
     
-   
-    @IBAction func uploadEPrescription(_ sender: UIButton) {
-        
-    }
-    
     @IBAction func showEPrescriptionsList(_ sender: UIButton) {
-        
+        let vc = EPrescriptionListVC()
+        vc.type = presenter.type
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func showTestList(_ sender: UIButton) {
@@ -123,6 +124,7 @@ class OPsDashboardVC: UIViewController {
     
     func showSearchResultVC(searchText:String? = nil){
         view.endEditing(true)
+        searchTextField.text = ""
         let vc = SearchOPServicesVC()
         var msRequest = presenter.msRequest
         msRequest.searchText =  searchText
@@ -165,6 +167,8 @@ extension OPsDashboardVC : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let numberOfRows = presenter.numberOfEPrescriptions
+        if numberOfRows == 0 { tableView.setEmptyMessage() }
+        else { tableView.hiddenEmptyMessage() }
         return numberOfRows
     }
     
@@ -214,7 +218,6 @@ protocol FSPagerViewCellProtocol{
 extension FSPagerViewCell: FSPagerViewCellProtocol {
     
     func config(display:SliderDisplayCell) {
-        //imageView?.image = UIImage(named: display)
         imageView?.kf.indicatorType = .activity
         imageView?.kf.setImage(with: display.imgURL)
         imageView?.cornerRadius = 20
@@ -260,3 +263,22 @@ extension UIView{
     
 }
 
+
+extension UITableView {
+
+    func setEmptyMessage(_ message: String = "No data found".localized) {
+        let messageLabel = UILabel(frame: CGRect(x: 0, y: 0, width: bounds.size.width, height: bounds.size.height))
+        messageLabel.text = message
+        messageLabel.textColor = .black
+        messageLabel.numberOfLines = 0
+        messageLabel.textAlignment = .center
+        messageLabel.sizeToFit()
+        backgroundView = messageLabel
+        separatorStyle = .none
+    }
+
+    func hiddenEmptyMessage() {
+        backgroundView = nil
+        separatorStyle = .singleLine
+    }
+}

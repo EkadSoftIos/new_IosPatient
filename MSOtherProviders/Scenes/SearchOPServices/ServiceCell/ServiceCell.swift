@@ -28,7 +28,7 @@ class ServiceCell: UITableViewCell, ServiceCellProtocol {
     
     
     func config(display: ServiceCellDisplay) {
-        
+        nameLabel.text = display.name
     }
     
 }

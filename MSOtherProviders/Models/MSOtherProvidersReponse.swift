@@ -11,12 +11,12 @@ import Foundation
 struct MSOtherProvidersReponse: Codable {
     let successtate: Int
     let errormessage: String?
-    let message: MSMessage
+    let message: MSData
 }
 
 // MARK: - Message
-struct MSMessage: Codable {
-    let lastPrescriptions: [LastPrescription]
+struct MSData: Codable {
+    let lastPrescriptions: [EPrescription]
     let ads: [Ad]
 }
 
@@ -33,25 +33,7 @@ struct Ad: Codable {
     }
 }
 
-// MARK: - LastPrescription
-struct LastPrescription: Codable {
-    let doctorFk, preescriptionID: Int
-    let preescriptionDate, doctorNameLocalized: String
-    let orderID, orderDate: String?
-    let doctorProfileImage: String?
-    let services: [Service]
 
-    enum CodingKeys: String, CodingKey {
-        case doctorFk
-        case preescriptionID = "preescriptionId"
-        case preescriptionDate
-        case orderID = "orderId"
-        case orderDate
-        case doctorNameLocalized = "doctor_name_Localized"
-        case doctorProfileImage = "doctor_ProfileImage"
-        case services
-    }
-}
 
 // MARK: - Service
 struct Service: Codable {

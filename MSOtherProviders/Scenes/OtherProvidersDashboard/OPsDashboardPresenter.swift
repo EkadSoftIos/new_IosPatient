@@ -77,7 +77,7 @@ class OPsDashboardPresenter {
     // MARK: - Private properties -
     private var pageType:MSType!
     private var adsList:[Ad] = []
-    private var ePrescriptionsList:[LastPrescription] = []
+    private var ePrescriptionsList:[EPrescription] = []
     private var msNetworkRepository:MSNetworkRepository?
     private var msOPServicesRequest:MSOPServicesRequest?
     private weak var view: OPsDashboardViewProtocol?

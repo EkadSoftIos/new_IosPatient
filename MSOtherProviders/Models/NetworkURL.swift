@@ -16,6 +16,7 @@ class NetworkURL{
     enum URLTypes {
         case otherProviderDashboard(MSOPServicesRequest)
         case searchServiceListForPatient(MSOPServicesRequest)
+        case ePrescriptions(EPrescriptionRequest)
     }
     
     enum URLs{
@@ -28,9 +29,10 @@ class NetworkURL{
         public static let baseURLImage = "https://e4clinicdevapi.ekadsoft.org/"
         public static let otherProviderDashboard:String =
             "\(otherProvider)GetDashBoard"
-        
         public static let searchServiceListForPatient:String =
             "\(otherProvider)SearchServiceListForPatient"
+        public static let ePrescriptions:String =
+            "\(otherProvider)GetPrescriptions"
     }
     
     // MARK: - Private properties -
@@ -55,6 +57,10 @@ class NetworkURL{
             if let testingPath = testingPath { return URL(fileURLWithPath: testingPath) }
             let urlString = "\(URLs.searchServiceListForPatient)"
             return URL(string: urlString)
+        case .ePrescriptions(_):
+            if let testingPath = testingPath { return URL(fileURLWithPath: testingPath) }
+            let urlString = "\(URLs.ePrescriptions)"
+            return URL(string: urlString)
         }
     }
     
@@ -64,6 +70,8 @@ class NetworkURL{
         case .otherProviderDashboard(_):
             return .get
         case .searchServiceListForPatient(_):
+            return .post
+        case .ePrescriptions(_):
             return .post
         }
     }
@@ -75,6 +83,8 @@ class NetworkURL{
                 .otherProviderDashboard(let msOPSRequest),
                 .searchServiceListForPatient(let msOPSRequest):
             return msOPSRequest.dictionary
+        case .ePrescriptions(let epRequest):
+            return epRequest.dictionary
         }
     }
     
@@ -83,7 +93,7 @@ class NetworkURL{
     // MARK: - header -
     var  header:HTTPHeaders?{
         switch self.type {
-        case .otherProviderDashboard(_), .searchServiceListForPatient(_):
+        case .otherProviderDashboard(_), .searchServiceListForPatient(_), .ePrescriptions(_):
             return .authHeaderIfLogin
         }
     }
@@ -93,8 +103,8 @@ class NetworkURL{
         switch self.type {
         case .otherProviderDashboard(_):
             return URLEncoding.default
-        case .searchServiceListForPatient(_):
-            return JSONEncoding.default
+        case .searchServiceListForPatient(_), .ePrescriptions(_):
+            return JSONEncoding.default            
         }
     }
     

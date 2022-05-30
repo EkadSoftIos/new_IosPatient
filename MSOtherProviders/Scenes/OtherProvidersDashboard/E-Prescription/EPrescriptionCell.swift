@@ -25,7 +25,7 @@ struct EPrescriptionDisplatCell{
     let imageURL:URL?
     let msBtnName:String
     
-    init(_ ep:LastPrescription, msType:MSType){
+    init(_ ep:EPrescription, msType:MSType){
         name = ep.doctorNameLocalized
         date = ep.preescriptionDate
         imageURL = URL(string: "\(URLs.baseURLImage)\(ep.doctorProfileImage ?? "")")

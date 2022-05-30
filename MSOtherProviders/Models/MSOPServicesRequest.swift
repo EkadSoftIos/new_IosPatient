@@ -15,11 +15,13 @@ enum MSType: Int, Codable {
 
 struct MSOPServicesRequest:Codable {
     
-    var type:MSType
+    var type:MSType? = nil
+    var opTypeFk:MSType? = nil
     var searchText:String? = nil
-    var branchId:String? = nil
-    var opTypeFk:String? = nil
-    var serviceTypeFk:String? = nil
+    
+    var branchId:Int? = nil
+    var serviceTypeFk:Int? = nil
+    
     var pageNum:Int? = nil
     var rowNum:Int = 10
     

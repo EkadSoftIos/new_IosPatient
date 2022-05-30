@@ -85,6 +85,12 @@
 		06253B8A28432C8A00CE8731 /* SearchOPServices.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06253B8C28432C8A00CE8731 /* SearchOPServices.xib */; };
 		06253B992843300E00CE8731 /* ServiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06253B972843300E00CE8731 /* ServiceCell.swift */; };
 		06253B9A2843300E00CE8731 /* ServiceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06253B982843300E00CE8731 /* ServiceCell.xib */; };
+		0630034028445F1A00163C6F /* SearchMSReponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0630033F28445F1A00163C6F /* SearchMSReponse.swift */; };
+		0630034528446C6500163C6F /* EPrescriptionListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0630034228446C6500163C6F /* EPrescriptionListPresenter.swift */; };
+		0630034628446C6500163C6F /* EPrescriptionListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0630034328446C6500163C6F /* EPrescriptionListVC.swift */; };
+		0630034728446C6500163C6F /* EPrescriptionList.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0630034428446C6500163C6F /* EPrescriptionList.xib */; };
+		06300349284470DC00163C6F /* EPrescriptionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06300348284470DC00163C6F /* EPrescriptionRequest.swift */; };
+		0630034B2844737100163C6F /* EPsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0630034A2844737100163C6F /* EPsResponse.swift */; };
 		06FD674528431790001FD415 /* SearchOPServicesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FD674228431790001FD415 /* SearchOPServicesPresenter.swift */; };
 		06FD674628431790001FD415 /* SearchOPServicesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FD674328431790001FD415 /* SearchOPServicesVC.swift */; };
 		26577C00280B5D97C919F259 /* Pods_E4_PatientTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58A8E60973BB66F789DED7B5 /* Pods_E4_PatientTests.framework */; };
@@ -602,6 +608,12 @@
 		06253B9028432C9100CE8731 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SearchOPServices.strings; sourceTree = "<group>"; };
 		06253B972843300E00CE8731 /* ServiceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCell.swift; sourceTree = "<group>"; };
 		06253B982843300E00CE8731 /* ServiceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceCell.xib; sourceTree = "<group>"; };
+		0630033F28445F1A00163C6F /* SearchMSReponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMSReponse.swift; sourceTree = "<group>"; };
+		0630034228446C6500163C6F /* EPrescriptionListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EPrescriptionListPresenter.swift; sourceTree = "<group>"; };
+		0630034328446C6500163C6F /* EPrescriptionListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EPrescriptionListVC.swift; sourceTree = "<group>"; };
+		0630034428446C6500163C6F /* EPrescriptionList.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EPrescriptionList.xib; sourceTree = "<group>"; };
+		06300348284470DC00163C6F /* EPrescriptionRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EPrescriptionRequest.swift; sourceTree = "<group>"; };
+		0630034A2844737100163C6F /* EPsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EPsResponse.swift; sourceTree = "<group>"; };
 		06FD674228431790001FD415 /* SearchOPServicesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchOPServicesPresenter.swift; sourceTree = "<group>"; };
 		06FD674328431790001FD415 /* SearchOPServicesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchOPServicesVC.swift; sourceTree = "<group>"; };
 		16990E4281003110E60E16D3 /* Pods-E4 Patient-E4 PatientUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-E4 Patient-E4 PatientUITests.release.xcconfig"; path = "Target Support Files/Pods-E4 Patient-E4 PatientUITests/Pods-E4 Patient-E4 PatientUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -1285,6 +1297,9 @@
 			children = (
 				061964AA28425E44006DBFB6 /* NetworkURL.swift */,
 				061964AB28425E44006DBFB6 /* NetworkError.swift */,
+				0630034A2844737100163C6F /* EPsResponse.swift */,
+				0630033F28445F1A00163C6F /* SearchMSReponse.swift */,
+				06300348284470DC00163C6F /* EPrescriptionRequest.swift */,
 				06253B8828431BA600CE8731 /* MSOPServicesRequest.swift */,
 				061964AC28425E44006DBFB6 /* MSOtherProvidersReponse.swift */,
 			);
@@ -1310,6 +1325,7 @@
 		061964B628426275006DBFB6 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				0630034128446C4800163C6F /* EPrescriptionList */,
 				06FD674128431758001FD415 /* SearchOPServices */,
 				061964C228426932006DBFB6 /* OtherProvidersDashboard */,
 			);
@@ -1353,6 +1369,16 @@
 				061964B028425E81006DBFB6 /* Services */,
 			);
 			path = MSOtherProviders;
+			sourceTree = "<group>";
+		};
+		0630034128446C4800163C6F /* EPrescriptionList */ = {
+			isa = PBXGroup;
+			children = (
+				0630034428446C6500163C6F /* EPrescriptionList.xib */,
+				0630034328446C6500163C6F /* EPrescriptionListVC.swift */,
+				0630034228446C6500163C6F /* EPrescriptionListPresenter.swift */,
+			);
+			path = EPrescriptionList;
 			sourceTree = "<group>";
 		};
 		06FD674128431758001FD415 /* SearchOPServices */ = {
@@ -3291,6 +3317,7 @@
 				C1DC8AB825B67ABC00B006AC /* DieseasesCell.xib in Resources */,
 				61BD6820283B104C00821D51 /* AddMedicationListVC.xib in Resources */,
 				01E44AFE26DC1F7800805033 /* WorkingTimeCell.xib in Resources */,
+				0630034728446C6500163C6F /* EPrescriptionList.xib in Resources */,
 				01CD8C8D26F2931200F6F0DE /* ClinicCell.xib in Resources */,
 				C10E8E3925B33B07004FFCBF /* Assets.xcassets in Resources */,
 				C186E30A26476FFD00B0890C /* ReviewsVC.xib in Resources */,
@@ -3644,6 +3671,7 @@
 				061964CC28426A46006DBFB6 /* OPsDashboardPresenter.swift in Sources */,
 				C186EBA22647CC5C00E92B8F /* ConsultationsLogCell.swift in Sources */,
 				C15102EF25B7EFB500FEEFB2 /* AllAllergiesVC+Table.swift in Sources */,
+				0630034B2844737100163C6F /* EPsResponse.swift in Sources */,
 				C14C631125DE0262000D50B0 /* ImagePickerController.swift in Sources */,
 				C15F7EFD25BBFCBD005EB885 /* AddFamilyHistoryVC.swift in Sources */,
 				C1DC8AAC25B679D400B006AC /* AllDiseasesVC.swift in Sources */,
@@ -3669,6 +3697,7 @@
 				061964AD28425E44006DBFB6 /* NetworkURL.swift in Sources */,
 				C13A457D25F43BAF004F2D33 /* AddEmergencyPicker.swift in Sources */,
 				C14C62FE25DE0262000D50B0 /* LoadingButton.swift in Sources */,
+				06300349284470DC00163C6F /* EPrescriptionRequest.swift in Sources */,
 				C1DC8A3B25B6432900B006AC /* AllAdressVC.swift in Sources */,
 				61BD682A283B104C00821D51 /* SearchCell.swift in Sources */,
 				C14C62FC25DE0262000D50B0 /* textField.swift in Sources */,
@@ -3700,6 +3729,7 @@
 				61BD6837283B104D00821D51 /* DoctorsSearchCell.swift in Sources */,
 				C1DC8AC725B67D9400B006AC /* AddDieseasesVC.swift in Sources */,
 				014904B026C5DA4D00BD6D63 /* ProfessionalTitleModel.swift in Sources */,
+				0630034028445F1A00163C6F /* SearchMSReponse.swift in Sources */,
 				61BD6847283C468900821D51 /* DeleteAllergiesVC.swift in Sources */,
 				C14C62F825DE0262000D50B0 /* UIViewController+Extension.swift in Sources */,
 				C1E399A525FC559F0064CAA2 /* AddSocialHistoryPicker.swift in Sources */,
@@ -3738,6 +3768,7 @@
 				C1DC8AB725B67ABC00B006AC /* DieseasesCell.swift in Sources */,
 				C108401F263BD2DE004391EA /* AllSearchTable.swift in Sources */,
 				C18185312635505E00299993 /* SearchOneCell.swift in Sources */,
+				0630034628446C6500163C6F /* EPrescriptionListVC.swift in Sources */,
 				61BD6824283B104C00821D51 /* AddMedicationCollectionCell.swift in Sources */,
 				C13A456925F3DE02004F2D33 /* getAllMedicineModel.swift in Sources */,
 				01ED8C1A2767D51B009F5466 /* MoreDoctorsBranchVC.swift in Sources */,
@@ -3757,6 +3788,7 @@
 				C1DC8A6325B655F200B006AC /* AddAddressVC.swift in Sources */,
 				C10E8EF625B33CED004FFCBF /* StyleButton.swift in Sources */,
 				C13A456D25F3E55A004F2D33 /* AddSocialHistoryNetwork.swift in Sources */,
+				0630034528446C6500163C6F /* EPrescriptionListPresenter.swift in Sources */,
 				C1F8D81F25DF301400863B5D /* Constant.swift in Sources */,
 				C10C0BEF25E9B309008C201F /* SuccessModel.swift in Sources */,
 				C14C62F325DE0262000D50B0 /* NodataTableView.swift in Sources */,
