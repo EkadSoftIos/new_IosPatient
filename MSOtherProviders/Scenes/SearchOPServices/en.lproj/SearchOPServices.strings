@@ -1,0 +1,11 @@
+/* Class = "UIButton"; normalTitle = "Find Labs"; ObjectID = "Kr0-Jq-hqu"; */
+"Kr0-Jq-hqu.title" = "Find Labs";
+
+/* Class = "UITextField"; placeholder = "Search here ..."; ObjectID = "O4t-I9-oWE"; */
+"O4t-I9-oWE.placeholder" = "Search here ...";
+
+/* Class = "UIButton"; normalTitle = "Reset"; ObjectID = "OU6-gE-vjf"; */
+"OU6-gE-vjf.normalTitle" = "Reset";
+
+/* Class = "UIButton"; normalTitle = ""; ObjectID = "eAL-3L-0be"; */
+"eAL-3L-0be.normalTitle" = "";

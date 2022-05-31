@@ -22,6 +22,7 @@ protocol OPsDashboardViewProtocol: AnyObject {
     
     func reloadData()
     func showMessageAlert(title:String, message:String)
+    func showOtherProvidersList(request:RequestType)
 }
 
 class OPsDashboardVC: UIViewController {
@@ -96,18 +97,19 @@ class OPsDashboardVC: UIViewController {
     }
     
     
+    @IBAction func uploadEPrescription(_ sender: UIButton) {
+        showBottomSheet()
+    }
+    
     
     @IBAction func showOrdersList(_ sender: UIButton) {
         
     }
     
-   
-    @IBAction func uploadEPrescription(_ sender: UIButton) {
-        
-    }
-    
     @IBAction func showEPrescriptionsList(_ sender: UIButton) {
-        
+        let vc = EPrescriptionListVC()
+        vc.type = presenter.type
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func showTestList(_ sender: UIButton) {
@@ -123,6 +125,12 @@ class OPsDashboardVC: UIViewController {
     
     func showSearchResultVC(searchText:String? = nil){
         view.endEditing(true)
+        searchTextField.text = ""
+        let vc = SearchOPServicesVC()
+        var msRequest = presenter.msRequest
+        msRequest.searchText =  searchText
+        vc.msRequest = msRequest
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 
@@ -154,12 +162,23 @@ extension OPsDashboardVC: OPsDashboardViewProtocol {
         showMessage(title: title, sub: message, type: Theme.error, layout: .centeredView)
     }
     
+    
+    func showOtherProvidersList(request:RequestType){
+        let vc = OtherProvidersListVC()
+        vc.type = presenter.type
+        vc.request = request
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
 }
 
 extension OPsDashboardVC : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        presenter.numberOfEPrescriptions
+        let numberOfRows = presenter.numberOfEPrescriptions
+        if numberOfRows == 0 { tableView.setEmptyMessage() }
+        else { tableView.hiddenEmptyMessage() }
+        return numberOfRows
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -201,56 +220,58 @@ extension OPsDashboardVC : FSPagerViewDelegate, FSPagerViewDataSource {
     
 }
 
-protocol FSPagerViewCellProtocol{
-    func config(display:SliderDisplayCell)
-}
-
-extension FSPagerViewCell: FSPagerViewCellProtocol {
+extension OPsDashboardVC: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    func config(display:SliderDisplayCell) {
-        //imageView?.image = UIImage(named: display)
-        imageView?.kf.indicatorType = .activity
-        imageView?.kf.setImage(with: display.imgURL)
-        imageView?.cornerRadius = 20
-        imageView?.contentMode = .scaleToFill
-        textLabel?.superview?.isHidden = true
-        contentView.layer.shadowOpacity = 0.3
-    }
-    
-}
-
-
-extension UIColor{
-    
-    public static let normalPCColor = UIColor(named: "normalPCColor")
-    public static let selectedPCColor = UIColor(named: "selectedPCColor")
-    
-}
-
-extension UIView{
-    
-    func applyShadow(_ shadowOpacity:Float = 1) {
-        layer.masksToBounds = false
-        layer.shadowRadius = 5
-        layer.shadowColor = UIColor.black.cgColor
-        layer.shadowOffset = CGSize(width: 1, height: 1)
-        layer.shadowOpacity = shadowOpacity
-    }
-    
-    
-    func applyCustomShadow(shadowColor: UIColor, offSet: CGSize, opacity: Float, shadowRadius: CGFloat, cornerRadius: CGFloat, corners: UIRectCorner) {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
-        let shadowLayer = CAShapeLayer()
-        let size = CGSize(width: cornerRadius, height: cornerRadius)
-        let cgPath = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners, cornerRadii: size).cgPath
-        shadowLayer.path = cgPath
-        shadowLayer.shadowColor = shadowColor.cgColor
-        shadowLayer.shadowPath = cgPath
-        shadowLayer.shadowOffset = offSet
-        shadowLayer.shadowOpacity = opacity
-        shadowLayer.shadowRadius = shadowRadius
-        layer.addSublayer(shadowLayer)
+        picker.dismiss(animated: true)
+        if let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage{
+            showOtherProvidersList(request: .uploadImage(image))
+        }else if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
+            showOtherProvidersList(request: .uploadImage(image))
+        }
+        
+        
+//        picker.dismiss(animated: true)
+//        func sendImage(_ image:UIImage){
+//            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+//                self.showOtherProvidersList(request: .uploadImage(image))
+//            }
+//        }
+//        if let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage{
+//            sendImage(image)
+//        }else if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
+//            sendImage(image)
+//        }
+    }
+    
+    
+    //MARK: showBottomSheet
+    private func showBottomSheet() {
+        if !UIImagePickerController.isSourceTypeAvailable(.camera){
+            showPickerController(sourceType: .photoLibrary)
+            return
+        }
+        let alertController = UIAlertController(title: "Photo Source".localized, message: "Choose Source".localized, preferredStyle: .actionSheet)
+        let cameraAlertAction = UIAlertAction(title: "Camera".localized, style: .default) { _ in
+            self.showPickerController(sourceType: .camera)
+        }
+        alertController.addAction(cameraAlertAction)
+        let photoLibraryAlertAction = UIAlertAction(title: "Photo Library".localized, style: .default) { _ in
+            self.showPickerController(sourceType: .photoLibrary)
+        }
+        alertController.addAction(photoLibraryAlertAction)
+        alertController.addAction(UIAlertAction(title: "Cancel".localized, style: .cancel))
+        present(alertController, animated: true)
+    }
+    
+    //MARK: showPickerController
+    private func showPickerController(sourceType:UIImagePickerController.SourceType){
+        let imagePickerController = UIImagePickerController()
+        imagePickerController.delegate = self
+        imagePickerController.sourceType = sourceType
+        imagePickerController.allowsEditing = true
+        present(imagePickerController, animated: true)
     }
     
 }
-

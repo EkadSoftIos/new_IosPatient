@@ -46,6 +46,7 @@ class MSAPIsManager: MSNetworkRepository{
                     }
                     break
                 case .failure(let error):
+                    print(error)
                     handler(.failure(.custom(error.localizedDescription)))
                     break
                     

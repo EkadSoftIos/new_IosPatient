@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="font_bold.TTF">
+            <string>SegoeUI-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="FilterCell" rowHeight="61" id="pv7-HC-xMe" customClass="FilterCell" customModule="E4clinic" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="321" height="61"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pv7-HC-xMe" id="gxa-nO-dXv">
+                <rect key="frame" x="0.0" y="0.0" width="321" height="61"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="uncheckedRadio" highlightedImage="chechedRadio" translatesAutoresizingMaskIntoConstraints="NO" id="CK5-hO-sYt">
+                        <rect key="frame" x="20" y="20.5" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="CK5-hO-sYt" secondAttribute="height" multiplier="1:1" id="bCd-AV-Y0Q"/>
+                            <constraint firstAttribute="height" constant="20" id="ku9-bc-dXj"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ysE-Di-jzb">
+                        <rect key="frame" x="50" y="10" width="32" height="41"/>
+                        <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="21"/>
+                        </variation>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="ysE-Di-jzb" firstAttribute="leading" secondItem="CK5-hO-sYt" secondAttribute="trailing" constant="10" id="1JZ-0y-P3x"/>
+                    <constraint firstItem="CK5-hO-sYt" firstAttribute="leading" secondItem="gxa-nO-dXv" secondAttribute="leading" constant="20" id="6N3-o7-sd7"/>
+                    <constraint firstItem="ysE-Di-jzb" firstAttribute="top" secondItem="gxa-nO-dXv" secondAttribute="top" constant="10" id="Bzu-m1-P3t"/>
+                    <constraint firstAttribute="bottom" secondItem="ysE-Di-jzb" secondAttribute="bottom" constant="10" id="cHn-v2-mkU"/>
+                    <constraint firstItem="CK5-hO-sYt" firstAttribute="centerY" secondItem="gxa-nO-dXv" secondAttribute="centerY" id="ppD-ws-3qy"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ysE-Di-jzb" secondAttribute="trailing" constant="20" id="wJW-s7-4qK"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="owm-yV-gIU"/>
+            <connections>
+                <outlet property="checkbox" destination="CK5-hO-sYt" id="X1e-ln-Hnb"/>
+                <outlet property="nameLabel" destination="ysE-Di-jzb" id="62l-bK-zC7"/>
+            </connections>
+            <point key="canvasLocation" x="138.40579710144928" y="69.308035714285708"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="chechedRadio" width="22" height="22"/>
+        <image name="uncheckedRadio" width="22" height="22"/>
+    </resources>
+</document>

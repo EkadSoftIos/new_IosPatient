@@ -816,6 +816,41 @@ PODS:
   - GTMSessionFetcher/Core (1.7.2)
   - iOSDropDown (0.3.4)
   - IQKeyboardManager (6.5.10)
+  - KafkaRefresh (1.5.0):
+    - KafkaRefresh/Category (= 1.5.0)
+    - KafkaRefresh/Configuration (= 1.5.0)
+    - KafkaRefresh/Core (= 1.5.0)
+    - KafkaRefresh/Default (= 1.5.0)
+    - KafkaRefresh/Style (= 1.5.0)
+    - KafkaRefresh/UIKit (= 1.5.0)
+  - KafkaRefresh/Category (1.5.0)
+  - KafkaRefresh/Configuration (1.5.0):
+    - KafkaRefresh/UIKit/FootKit
+    - KafkaRefresh/UIKit/HeadKit
+  - KafkaRefresh/Core (1.5.0):
+    - KafkaRefresh/Category
+  - KafkaRefresh/Default (1.5.0):
+    - KafkaRefresh/Style
+  - KafkaRefresh/Style (1.5.0)
+  - KafkaRefresh/UIKit (1.5.0):
+    - KafkaRefresh/UIKit/FootKit (= 1.5.0)
+    - KafkaRefresh/UIKit/HeadKit (= 1.5.0)
+    - KafkaRefresh/UIKit/LayerKit (= 1.5.0)
+  - KafkaRefresh/UIKit/FootKit (1.5.0):
+    - KafkaRefresh/Category
+    - KafkaRefresh/Core
+    - KafkaRefresh/Default
+    - KafkaRefresh/Style
+    - KafkaRefresh/UIKit/LayerKit
+  - KafkaRefresh/UIKit/HeadKit (1.5.0):
+    - KafkaRefresh/Category
+    - KafkaRefresh/Core
+    - KafkaRefresh/Default
+    - KafkaRefresh/Style
+    - KafkaRefresh/UIKit/LayerKit
+  - KafkaRefresh/UIKit/LayerKit (1.5.0):
+    - KafkaRefresh/Category
+    - KafkaRefresh/Default
   - Kingfisher (7.2.2)
   - leveldb-library (1.22.1)
   - Libuv-gRPC (0.0.10):
@@ -858,6 +893,7 @@ DEPENDENCIES:
   - FSPagerView
   - iOSDropDown
   - IQKeyboardManager
+  - KafkaRefresh
   - Kingfisher
   - RangeSeekSlider
   - SKCountryPicker
@@ -901,6 +937,7 @@ SPEC REPOS:
     - GTMSessionFetcher
     - iOSDropDown
     - IQKeyboardManager
+    - KafkaRefresh
     - Kingfisher
     - leveldb-library
     - Libuv-gRPC
@@ -947,6 +984,7 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: 5595ec75acf5be50814f81e9189490412bad82ba
   iOSDropDown: c10a761f9a00c3f1cc9d3bce43ae504628e2f692
   IQKeyboardManager: 45a1fa55c1a5b02c61ac0fd7fd5b62bb4ad20d97
+  KafkaRefresh: 01645b1509b8647809f6bb666629c80855bd3fdd
   Kingfisher: 184d4d1a8c36666e663caf8e08abe87898595c53
   leveldb-library: 50c7b45cbd7bf543c81a468fe557a16ae3db8729
   Libuv-gRPC: 55e51798e14ef436ad9bc45d12d43b77b49df378
@@ -959,6 +997,6 @@ SPEC CHECKSUMS:
   TransitionButton: 36283346e17c64775a1b3bc3a7a72940a367de1f
   "UIView+Shake": 055ad67721de1f74d29c0a1d464697e505dfc62f
 
-PODFILE CHECKSUM: 5a2c194826dcef9c1fc1c0f95c7527a20b2629f7
+PODFILE CHECKSUM: dab8a72e955ed93a6788b8dd998f5233b5e8a61e
 
 COCOAPODS: 1.11.2

@@ -7,12 +7,8 @@
 //
 
 import Foundation
+import SwiftMessages
 
-
-enum MSType: Int {
-    case labs = 1
-    case rays
-}
 
 struct SliderDisplayCell{
     let imgURL:URL?
@@ -32,11 +28,11 @@ protocol OPsDashboardPresenterProtocol: AnyObject {
     var numberOfAds:Int { get }
     var msLabelTitle:String { get }
     var numberOfEPrescriptions:Int { get }
+    var msRequest:MSOPServicesRequest { get }
     /**
      * Add here your methods for communication VIEW -> PROTOCOL
      */
     func viewDidLoad()
-    
     func configAdCell(cell:FSPagerViewCellProtocol, index:Int)
     func configEPrescriptionCell(cell:EPrescriptionCellProtocol, indexPath:IndexPath)
 }
@@ -74,11 +70,16 @@ class OPsDashboardPresenter {
         ePrescriptionsList.count
     }
     
+    var msRequest:MSOPServicesRequest {
+        msOPServicesRequest ?? MSOPServicesRequest(type: pageType)
+    }
+    
     // MARK: - Private properties -
     private var pageType:MSType!
     private var adsList:[Ad] = []
-    private var ePrescriptionsList:[LastPrescription] = []
+    private var ePrescriptionsList:[EPrescription] = []
     private var msNetworkRepository:MSNetworkRepository?
+    private var msOPServicesRequest:MSOPServicesRequest?
     private weak var view: OPsDashboardViewProtocol?
     
     // MARK: - Init -
@@ -95,25 +96,28 @@ extension OPsDashboardPresenter: OPsDashboardPresenterProtocol {
     
     // MARK: - viewDidLoad -
     func viewDidLoad() {
-       fetchData()
+        msOPServicesRequest = MSOPServicesRequest(type: pageType)
+        fetchData()
     }
     
     // MARK: - fetchData -
     func fetchData() {
-        let url = NetworkURL(.otherProviderDashboard(type))
+        guard let request = msOPServicesRequest else { return }
+        let url = NetworkURL(.otherProviderDashboard(request))
         msNetworkRepository?.fetch(ProvidersReponse.self, from: url) { [weak self] result in
             guard let self = self else { return }
             switch result {
             case .success(let response):
                 if let error = response.errormessage, response.successtate != 200{
-                    self.view?.showMessageAlert(title: "Error", message: error)
+                    self.view?.showMessageAlert(title: "Error".localized, message: error)
                     return
                 }
-                self.view?.reloadData()
                 self.adsList = response.message.ads
                 self.ePrescriptionsList = response.message.lastPrescriptions
+                print("lastPrescriptions count: \(response.message.lastPrescriptions.count)")
+                self.view?.reloadData()
             case .failure(let error):
-                self.view?.showMessageAlert(title: "Error", message: error.localizedDescription)
+                self.view?.showMessageAlert(title: "Error".localized, message: error.localizedDescription)
             }
         }//end closure
     }
@@ -127,7 +131,17 @@ extension OPsDashboardPresenter: OPsDashboardPresenterProtocol {
     
     // MARK: - configEPrescriptionCell -
     func configEPrescriptionCell(cell:EPrescriptionCellProtocol, indexPath:IndexPath)  {
-        cell.config(display: EPrescriptionDisplatCell(ePrescriptionsList[indexPath.row], msType: pageType))
+        cell.config(display: EPrescriptionDisplay(ePrescriptionsList[indexPath.row], msType: pageType), indexPath: indexPath, presenter: self)
+    }
+    
+}
+
+// MARK: - EPrescriptionCellPresenter -
+extension OPsDashboardPresenter:EPrescriptionCellPresenter{
+    
+    func showOtherProvidersList(indexPath: IndexPath){
+        let ep = ePrescriptionsList[indexPath.row]
+        view?.showOtherProvidersList(request: .eprescription(ep))
     }
     
 }
