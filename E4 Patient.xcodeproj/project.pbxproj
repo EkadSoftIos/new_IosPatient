@@ -89,8 +89,24 @@
 		0630034528446C6500163C6F /* EPrescriptionListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0630034228446C6500163C6F /* EPrescriptionListPresenter.swift */; };
 		0630034628446C6500163C6F /* EPrescriptionListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0630034328446C6500163C6F /* EPrescriptionListVC.swift */; };
 		0630034728446C6500163C6F /* EPrescriptionList.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0630034428446C6500163C6F /* EPrescriptionList.xib */; };
-		06300349284470DC00163C6F /* EPrescriptionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06300348284470DC00163C6F /* EPrescriptionRequest.swift */; };
-		0630034B2844737100163C6F /* EPsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0630034A2844737100163C6F /* EPsResponse.swift */; };
+		06300349284470DC00163C6F /* EPrescriptionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06300348284470DC00163C6F /* EPrescriptionModel.swift */; };
+		063003572844844700163C6F /* OtherProvidersListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063003542844844700163C6F /* OtherProvidersListPresenter.swift */; };
+		063003582844844700163C6F /* OtherProvidersListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063003552844844700163C6F /* OtherProvidersListVC.swift */; };
+		0630035C2844881200163C6F /* OtherProvidersModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0630035B2844881200163C6F /* OtherProvidersModels.swift */; };
+		0630036028448EBE00163C6F /* OtherProviderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0630035E28448EBE00163C6F /* OtherProviderCell.swift */; };
+		063023B72845DD580085FD59 /* AdFSPagerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063023B62845DD580085FD59 /* AdFSPagerViewCell.swift */; };
+		063023BA2845DDB00085FD59 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063023B92845DDB00085FD59 /* String+Extensions.swift */; };
+		063023BC2845DDDE0085FD59 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063023BB2845DDDE0085FD59 /* UITableView+Extensions.swift */; };
+		063023BE2845DE0C0085FD59 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063023BD2845DE0C0085FD59 /* UIView+Extensions.swift */; };
+		063023C12845DE360085FD59 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063023C02845DE360085FD59 /* UIColor+Extensions.swift */; };
+		063023C32845DE990085FD59 /* UILabel+Extenions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063023C22845DE990085FD59 /* UILabel+Extenions.swift */; };
+		063023D12845FD260085FD59 /* FilterAlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063023CE2845FD260085FD59 /* FilterAlertPresenter.swift */; };
+		063023D22845FD260085FD59 /* FilterAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063023CF2845FD260085FD59 /* FilterAlertVC.swift */; };
+		063023D62846012E0085FD59 /* FilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063023D42846012E0085FD59 /* FilterCell.swift */; };
+		063023D72846012E0085FD59 /* FilterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 063023D52846012E0085FD59 /* FilterCell.xib */; };
+		063023D9284609F40085FD59 /* FilterAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = 063023DB284609F40085FD59 /* FilterAlert.xib */; };
+		0697FED82844AA01001E63F4 /* OtherProviderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0697FEDA2844AA01001E63F4 /* OtherProviderCell.xib */; };
+		0697FEDF2844AA28001E63F4 /* OtherProvidersList.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0697FEE12844AA28001E63F4 /* OtherProvidersList.xib */; };
 		06FD674528431790001FD415 /* SearchOPServicesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FD674228431790001FD415 /* SearchOPServicesPresenter.swift */; };
 		06FD674628431790001FD415 /* SearchOPServicesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FD674328431790001FD415 /* SearchOPServicesVC.swift */; };
 		26577C00280B5D97C919F259 /* Pods_E4_PatientTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58A8E60973BB66F789DED7B5 /* Pods_E4_PatientTests.framework */; };
@@ -612,8 +628,30 @@
 		0630034228446C6500163C6F /* EPrescriptionListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EPrescriptionListPresenter.swift; sourceTree = "<group>"; };
 		0630034328446C6500163C6F /* EPrescriptionListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EPrescriptionListVC.swift; sourceTree = "<group>"; };
 		0630034428446C6500163C6F /* EPrescriptionList.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EPrescriptionList.xib; sourceTree = "<group>"; };
-		06300348284470DC00163C6F /* EPrescriptionRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EPrescriptionRequest.swift; sourceTree = "<group>"; };
-		0630034A2844737100163C6F /* EPsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EPsResponse.swift; sourceTree = "<group>"; };
+		06300348284470DC00163C6F /* EPrescriptionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EPrescriptionModel.swift; sourceTree = "<group>"; };
+		063003542844844700163C6F /* OtherProvidersListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherProvidersListPresenter.swift; sourceTree = "<group>"; };
+		063003552844844700163C6F /* OtherProvidersListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherProvidersListVC.swift; sourceTree = "<group>"; };
+		0630035B2844881200163C6F /* OtherProvidersModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherProvidersModels.swift; sourceTree = "<group>"; };
+		0630035E28448EBE00163C6F /* OtherProviderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherProviderCell.swift; sourceTree = "<group>"; };
+		063023B62845DD580085FD59 /* AdFSPagerViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdFSPagerViewCell.swift; sourceTree = "<group>"; };
+		063023B92845DDB00085FD59 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		063023BB2845DDDE0085FD59 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
+		063023BD2845DE0C0085FD59 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		063023C02845DE360085FD59 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		063023C22845DE990085FD59 /* UILabel+Extenions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extenions.swift"; sourceTree = "<group>"; };
+		063023CE2845FD260085FD59 /* FilterAlertPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterAlertPresenter.swift; sourceTree = "<group>"; };
+		063023CF2845FD260085FD59 /* FilterAlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterAlertVC.swift; sourceTree = "<group>"; };
+		063023D42846012E0085FD59 /* FilterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCell.swift; sourceTree = "<group>"; };
+		063023D52846012E0085FD59 /* FilterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterCell.xib; sourceTree = "<group>"; };
+		063023DA284609F40085FD59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/FilterAlert.xib; sourceTree = "<group>"; };
+		063023DD284609F80085FD59 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/FilterAlert.strings; sourceTree = "<group>"; };
+		063023DF284609FC0085FD59 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/FilterAlert.strings; sourceTree = "<group>"; };
+		0697FED92844AA01001E63F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/OtherProviderCell.xib; sourceTree = "<group>"; };
+		0697FEDC2844AA06001E63F4 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/OtherProviderCell.strings; sourceTree = "<group>"; };
+		0697FEDE2844AA08001E63F4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/OtherProviderCell.strings; sourceTree = "<group>"; };
+		0697FEE02844AA28001E63F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/OtherProvidersList.xib; sourceTree = "<group>"; };
+		0697FEE32844AA7B001E63F4 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/OtherProvidersList.strings; sourceTree = "<group>"; };
+		0697FEE52844AA7D001E63F4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/OtherProvidersList.strings; sourceTree = "<group>"; };
 		06FD674228431790001FD415 /* SearchOPServicesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchOPServicesPresenter.swift; sourceTree = "<group>"; };
 		06FD674328431790001FD415 /* SearchOPServicesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchOPServicesVC.swift; sourceTree = "<group>"; };
 		16990E4281003110E60E16D3 /* Pods-E4 Patient-E4 PatientUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-E4 Patient-E4 PatientUITests.release.xcconfig"; path = "Target Support Files/Pods-E4 Patient-E4 PatientUITests/Pods-E4 Patient-E4 PatientUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -1297,11 +1335,12 @@
 			children = (
 				061964AA28425E44006DBFB6 /* NetworkURL.swift */,
 				061964AB28425E44006DBFB6 /* NetworkError.swift */,
-				0630034A2844737100163C6F /* EPsResponse.swift */,
+				06300348284470DC00163C6F /* EPrescriptionModel.swift */,
 				0630033F28445F1A00163C6F /* SearchMSReponse.swift */,
-				06300348284470DC00163C6F /* EPrescriptionRequest.swift */,
+				0630035B2844881200163C6F /* OtherProvidersModels.swift */,
 				06253B8828431BA600CE8731 /* MSOPServicesRequest.swift */,
 				061964AC28425E44006DBFB6 /* MSOtherProvidersReponse.swift */,
+				063023B62845DD580085FD59 /* AdFSPagerViewCell.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1325,6 +1364,8 @@
 		061964B628426275006DBFB6 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				063023C42845FBF50085FD59 /* AlertsViews */,
+				063003532844842400163C6F /* OtherProvidersList */,
 				0630034128446C4800163C6F /* EPrescriptionList */,
 				06FD674128431758001FD415 /* SearchOPServices */,
 				061964C228426932006DBFB6 /* OtherProvidersDashboard */,
@@ -1367,6 +1408,7 @@
 				061964B628426275006DBFB6 /* Scenes */,
 				061964A928425E44006DBFB6 /* Models */,
 				061964B028425E81006DBFB6 /* Services */,
+				063023B82845DD6D0085FD59 /* Extensions */,
 			);
 			path = MSOtherProviders;
 			sourceTree = "<group>";
@@ -1379,6 +1421,66 @@
 				0630034228446C6500163C6F /* EPrescriptionListPresenter.swift */,
 			);
 			path = EPrescriptionList;
+			sourceTree = "<group>";
+		};
+		063003532844842400163C6F /* OtherProvidersList */ = {
+			isa = PBXGroup;
+			children = (
+				0697FEE12844AA28001E63F4 /* OtherProvidersList.xib */,
+				063003552844844700163C6F /* OtherProvidersListVC.swift */,
+				063003542844844700163C6F /* OtherProvidersListPresenter.swift */,
+				0630035D28448EA700163C6F /* OtherProviderCell */,
+			);
+			path = OtherProvidersList;
+			sourceTree = "<group>";
+		};
+		0630035D28448EA700163C6F /* OtherProviderCell */ = {
+			isa = PBXGroup;
+			children = (
+				0697FEDA2844AA01001E63F4 /* OtherProviderCell.xib */,
+				0630035E28448EBE00163C6F /* OtherProviderCell.swift */,
+			);
+			path = OtherProviderCell;
+			sourceTree = "<group>";
+		};
+		063023B82845DD6D0085FD59 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				063023B92845DDB00085FD59 /* String+Extensions.swift */,
+				063023BB2845DDDE0085FD59 /* UITableView+Extensions.swift */,
+				063023BD2845DE0C0085FD59 /* UIView+Extensions.swift */,
+				063023C02845DE360085FD59 /* UIColor+Extensions.swift */,
+				063023C22845DE990085FD59 /* UILabel+Extenions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		063023C42845FBF50085FD59 /* AlertsViews */ = {
+			isa = PBXGroup;
+			children = (
+				063023C52845FC9A0085FD59 /* FilterAlert */,
+			);
+			path = AlertsViews;
+			sourceTree = "<group>";
+		};
+		063023C52845FC9A0085FD59 /* FilterAlert */ = {
+			isa = PBXGroup;
+			children = (
+				063023DB284609F40085FD59 /* FilterAlert.xib */,
+				063023CF2845FD260085FD59 /* FilterAlertVC.swift */,
+				063023CE2845FD260085FD59 /* FilterAlertPresenter.swift */,
+				063023D8284601350085FD59 /* FilterCell */,
+			);
+			path = FilterAlert;
+			sourceTree = "<group>";
+		};
+		063023D8284601350085FD59 /* FilterCell */ = {
+			isa = PBXGroup;
+			children = (
+				063023D52846012E0085FD59 /* FilterCell.xib */,
+				063023D42846012E0085FD59 /* FilterCell.swift */,
+			);
+			path = FilterCell;
 			sourceTree = "<group>";
 		};
 		06FD674128431758001FD415 /* SearchOPServices */ = {
@@ -3289,6 +3391,7 @@
 				01CD8C7D26F290E700F6F0DE /* DoctorProfileHeaderCell.xib in Resources */,
 				C19B32E4264898C7007B919B /* AddAppointmentVC.xib in Resources */,
 				614F9E4B283DA60D0055DF4E /* BranchImagesCollectionVC.xib in Resources */,
+				0697FEDF2844AA28001E63F4 /* OtherProvidersList.xib in Resources */,
 				61BD6828283B104C00821D51 /* SearchVC.xib in Resources */,
 				C18DA7292647B48600079EE1 /* AppointmentCell.xib in Resources */,
 				C14C630A25DE0262000D50B0 /* ON@3x.png in Resources */,
@@ -3300,6 +3403,7 @@
 				01E44B1826DC284200805033 /* AppointmentAddressCell.xib in Resources */,
 				61BD6842283B820600821D51 /* DeleteMedicalReportVC.xib in Resources */,
 				C14C630D25DE0262000D50B0 /* video@3x.png in Resources */,
+				063023D9284609F40085FD59 /* FilterAlert.xib in Resources */,
 				61BD67F62838B16800821D51 /* Localizable.strings in Resources */,
 				614F9E40283D8BA50055DF4E /* DeleteFamilyHistoryVC.xib in Resources */,
 				C186EB9F2647CBDF00E92B8F /* ConsultationsLogVC.xib in Resources */,
@@ -3314,6 +3418,7 @@
 				C1DC8A7725B6620200B006AC /* DefultLocationVC.xib in Resources */,
 				C186E3202647861F00B0890C /* DoctorServiseCell.xib in Resources */,
 				C434676A2839786B00378565 /* FAQCell.xib in Resources */,
+				0697FED82844AA01001E63F4 /* OtherProviderCell.xib in Resources */,
 				C1DC8AB825B67ABC00B006AC /* DieseasesCell.xib in Resources */,
 				61BD6820283B104C00821D51 /* AddMedicationListVC.xib in Resources */,
 				01E44AFE26DC1F7800805033 /* WorkingTimeCell.xib in Resources */,
@@ -3370,6 +3475,7 @@
 				6160C7E726E63F91006A12BE /* AppointmentHistoryPopupCell.xib in Resources */,
 				C1820E7F25B5126700396AAE /* HomeVC.xib in Resources */,
 				C10E8ECF25B33CED004FFCBF /* Cairo-Light.ttf in Resources */,
+				063023D72846012E0085FD59 /* FilterCell.xib in Resources */,
 				C186EB952647C9EE00E92B8F /* AppointmetHistoryFillterVC.xib in Resources */,
 				C14C630925DE0262000D50B0 /* focusIcon@3x.png in Resources */,
 				C186EB862647C5D700E92B8F /* AppointmentHistoryPopup.xib in Resources */,
@@ -3585,6 +3691,7 @@
 				C19EAB7525E94C94006E6F06 /* AdrressNetworking.swift in Sources */,
 				010CFA14270C9BF000E4BCC7 /* FollowUpCell.swift in Sources */,
 				C14C632B25DE0262000D50B0 /* L012Localizer.swift in Sources */,
+				063023D62846012E0085FD59 /* FilterCell.swift in Sources */,
 				C18DA72D2647B7A700079EE1 /* AppointmentFillterVC.swift in Sources */,
 				C1B6AE9C26264DC100E509D3 /* homeSlider.swift in Sources */,
 				01F5756726DD72870076273F /* ConsultationLogTBCell.swift in Sources */,
@@ -3595,6 +3702,7 @@
 				C14C630625DE0262000D50B0 /* BackBarbutton.swift in Sources */,
 				01FCB99C26D930BD007512A2 /* AddBookingModel.swift in Sources */,
 				C14C62EF25DE0262000D50B0 /* UIApplication + Extension.swift in Sources */,
+				063003572844844700163C6F /* OtherProvidersListPresenter.swift in Sources */,
 				C14C630325DE0262000D50B0 /* toolbar.swift in Sources */,
 				C1F8D82025DF301400863B5D /* APIRouter.swift in Sources */,
 				C10E8F1D25B33D30004FFCBF /* SplashVC.swift in Sources */,
@@ -3603,6 +3711,7 @@
 				01CD8C7826F2906100F6F0DE /* DoctorProfileViewController.swift in Sources */,
 				C1FC080525B53F4200725968 /* EditProfileVC.swift in Sources */,
 				C186EB992647CBAB00E92B8F /* AppointmentDetailsTwoVC.swift in Sources */,
+				063023D22845FD260085FD59 /* FilterAlertVC.swift in Sources */,
 				01E44B1726DC284200805033 /* AppointmentAddressCell.swift in Sources */,
 				C186E32B26478AB500B0890C /* AcademicQualificationVC.swift in Sources */,
 				C186EBB12647D52200E92B8F /* AppointmentDetailsCancelVC.swift in Sources */,
@@ -3626,6 +3735,7 @@
 				C14C62F125DE0262000D50B0 /* UIView+Extension.swift in Sources */,
 				014904B226C5DB2600BD6D63 /* MainSpecialityModel.swift in Sources */,
 				C15F7EBB25BBD892005EB885 /* AddAllergiesVC.swift in Sources */,
+				063023C32845DE990085FD59 /* UILabel+Extenions.swift in Sources */,
 				C10E8F5425B3A678004FFCBF /* User.swift in Sources */,
 				617E26AC2823CF15009D8ABC /* NotificationListModel.swift in Sources */,
 				C10C0BF325E9B769008C201F /* AllAllergiesNetwork.swift in Sources */,
@@ -3669,11 +3779,12 @@
 				0196D2C826CFD0460007C3AF /* DoctorByIdModel.swift in Sources */,
 				61A7EF412835C02D0027775E /* DeleteLocationVC.swift in Sources */,
 				061964CC28426A46006DBFB6 /* OPsDashboardPresenter.swift in Sources */,
+				0630036028448EBE00163C6F /* OtherProviderCell.swift in Sources */,
 				C186EBA22647CC5C00E92B8F /* ConsultationsLogCell.swift in Sources */,
 				C15102EF25B7EFB500FEEFB2 /* AllAllergiesVC+Table.swift in Sources */,
-				0630034B2844737100163C6F /* EPsResponse.swift in Sources */,
 				C14C631125DE0262000D50B0 /* ImagePickerController.swift in Sources */,
 				C15F7EFD25BBFCBD005EB885 /* AddFamilyHistoryVC.swift in Sources */,
+				063023D12845FD260085FD59 /* FilterAlertPresenter.swift in Sources */,
 				C1DC8AAC25B679D400B006AC /* AllDiseasesVC.swift in Sources */,
 				C186E3342647A77100B0890C /* BookingDetailsVC.swift in Sources */,
 				C14C631325DE0262000D50B0 /* ConstraintsSetup.swift in Sources */,
@@ -3697,13 +3808,14 @@
 				061964AD28425E44006DBFB6 /* NetworkURL.swift in Sources */,
 				C13A457D25F43BAF004F2D33 /* AddEmergencyPicker.swift in Sources */,
 				C14C62FE25DE0262000D50B0 /* LoadingButton.swift in Sources */,
-				06300349284470DC00163C6F /* EPrescriptionRequest.swift in Sources */,
+				06300349284470DC00163C6F /* EPrescriptionModel.swift in Sources */,
 				C1DC8A3B25B6432900B006AC /* AllAdressVC.swift in Sources */,
 				61BD682A283B104C00821D51 /* SearchCell.swift in Sources */,
 				C14C62FC25DE0262000D50B0 /* textField.swift in Sources */,
 				619182EF26F65B4600B6A796 /* Animation.m in Sources */,
 				6160C7DF26E63D8D006A12BE /* WriteReviewsNetwork.swift in Sources */,
 				C14C62F025DE0262000D50B0 /* Date+Extension.swift in Sources */,
+				063023BA2845DDB00085FD59 /* String+Extensions.swift in Sources */,
 				C16D3D5D25FE8930009EDCA1 /* EmergencyNumberNetwork.swift in Sources */,
 				C1DC8AA025B673CC00B006AC /* AddEmergencyVC.swift in Sources */,
 				C13A456F25F3E97C004F2D33 /* AddFamilyHistoryNetwork.swift in Sources */,
@@ -3719,6 +3831,7 @@
 				61BD6832283B104C00821D51 /* DeletePopUp.swift in Sources */,
 				C14C631725DE0262000D50B0 /* BottomContainerView.swift in Sources */,
 				C13A457325F426C8004F2D33 /* SurgeryNetwork.swift in Sources */,
+				0630035C2844881200163C6F /* OtherProvidersModels.swift in Sources */,
 				010AB403270C6C81008D1C0D /* ShowAttachementImageVC.swift in Sources */,
 				C1E3999D25FC4C2F0064CAA2 /* AddMedicalReportsPicker.swift in Sources */,
 				C14C630125DE0262000D50B0 /* String + Extension.swift in Sources */,
@@ -3742,6 +3855,7 @@
 				C1820E0B25B41AFD00396AAE /* MoreVC.swift in Sources */,
 				014904AC26C5D17400BD6D63 /* Base.swift in Sources */,
 				C1007AB4263BC8A10060AD2F /* SearchTableViewe.swift in Sources */,
+				063023BE2845DE0C0085FD59 /* UIView+Extensions.swift in Sources */,
 				C14C632E25DE0262000D50B0 /* UserDataAction.swift in Sources */,
 				C10E8E3025B33B03004FFCBF /* AppDelegate.swift in Sources */,
 				C178F21925FED98A00126F27 /* EntityTypeModel.swift in Sources */,
@@ -3787,6 +3901,7 @@
 				01E44B0B26DC23FD00805033 /* ChooseAddressVC.swift in Sources */,
 				C1DC8A6325B655F200B006AC /* AddAddressVC.swift in Sources */,
 				C10E8EF625B33CED004FFCBF /* StyleButton.swift in Sources */,
+				063023B72845DD580085FD59 /* AdFSPagerViewCell.swift in Sources */,
 				C13A456D25F3E55A004F2D33 /* AddSocialHistoryNetwork.swift in Sources */,
 				0630034528446C6500163C6F /* EPrescriptionListPresenter.swift in Sources */,
 				C1F8D81F25DF301400863B5D /* Constant.swift in Sources */,
@@ -3840,9 +3955,11 @@
 				C15F7F1225BBFE5D005EB885 /* Sugary+Table.swift in Sources */,
 				C1C680B926080FA30043EE1C /* getspecialityModel.swift in Sources */,
 				01B9A60326D6E318008FA81B /* WalletBalanceModel.swift in Sources */,
+				063003582844844700163C6F /* OtherProvidersListVC.swift in Sources */,
 				61EE621D280A942E0096009D /* ForgetPassVC.swift in Sources */,
 				C14C632D25DE0262000D50B0 /* DigitInputView.swift in Sources */,
 				C1820E8925B5127B00396AAE /* AppointmentVC.swift in Sources */,
+				063023BC2845DDDE0085FD59 /* UITableView+Extensions.swift in Sources */,
 				0122817127D7EB6700FF9C7E /* CustomAnnotation.swift in Sources */,
 				C1FA094025BCFA2A00433577 /* EmergencyNumberVC+Table.swift in Sources */,
 				616178602806C578005EE4C6 /* LogOutModel.swift in Sources */,
@@ -3855,6 +3972,7 @@
 				C14C632A25DE0262000D50B0 /* UIButton+IndicatorButton.m in Sources */,
 				01FE4B5126E5624E008023AB /* ConsultationDetailsModel.swift in Sources */,
 				01FAB7B827CD5D1E00750DA5 /* PrivacyPolicyVC.swift in Sources */,
+				063023C12845DE360085FD59 /* UIColor+Extensions.swift in Sources */,
 				01A1B00A26C844320010E708 /* DoctorSearchModel.swift in Sources */,
 				C15102D625B7E4BC00FEEFB2 /* AllAllergiesVC.swift in Sources */,
 				C14C631025DE0262000D50B0 /* CameraView.swift in Sources */,
@@ -3913,6 +4031,36 @@
 				06253B9028432C9100CE8731 /* en */,
 			);
 			name = SearchOPServices.xib;
+			sourceTree = "<group>";
+		};
+		063023DB284609F40085FD59 /* FilterAlert.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				063023DA284609F40085FD59 /* Base */,
+				063023DD284609F80085FD59 /* ar */,
+				063023DF284609FC0085FD59 /* en */,
+			);
+			name = FilterAlert.xib;
+			sourceTree = "<group>";
+		};
+		0697FEDA2844AA01001E63F4 /* OtherProviderCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0697FED92844AA01001E63F4 /* Base */,
+				0697FEDC2844AA06001E63F4 /* ar */,
+				0697FEDE2844AA08001E63F4 /* en */,
+			);
+			name = OtherProviderCell.xib;
+			sourceTree = "<group>";
+		};
+		0697FEE12844AA28001E63F4 /* OtherProvidersList.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0697FEE02844AA28001E63F4 /* Base */,
+				0697FEE32844AA7B001E63F4 /* ar */,
+				0697FEE52844AA7D001E63F4 /* en */,
+			);
+			name = OtherProvidersList.xib;
 			sourceTree = "<group>";
 		};
 		61BD67F22838B16800821D51 /* Localizable.strings */ = {

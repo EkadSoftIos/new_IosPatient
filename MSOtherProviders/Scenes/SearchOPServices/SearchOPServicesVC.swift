@@ -74,7 +74,19 @@ class SearchOPServicesVC: UIViewController {
     }
     
     @IBAction func findServicesBtnTapped(_ sender: Any) {
-        
+        guard let opTypeFk = presenter.msRequest.opTypeFk else {
+            showMessageAlert(title: "Error".localized, message: "")
+            return
+        }
+        guard let selectedIndexPaths = tableView.indexPathsForSelectedRows,
+             !selectedIndexPaths.isEmpty else {
+            showMessageAlert(title: "Error".localized, message: "Please choose at least one".localized)
+            return
+        }
+        let vc = OtherProvidersListVC()
+        vc.type = opTypeFk
+        vc.request = .services(presenter.services(for: selectedIndexPaths))
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func resetBtnTapped(_ sender: Any) {
@@ -109,8 +121,8 @@ extension SearchOPServicesVC:UITextFieldDelegate{
 extension SearchOPServicesVC: SearchOPServicesViewProtocol {
     
     func reloadData(){
-        showUniversalLoadingView(false)
         tableView.reloadData()
+        stopLoading()
     }
     
     func setSearchText(_ text: String) {
@@ -118,10 +130,14 @@ extension SearchOPServicesVC: SearchOPServicesViewProtocol {
     }
     
     func showMessageAlert(title: String, message: String) {
-        showUniversalLoadingView(false)
+        stopLoading()
         showMessage(title: title, sub: message, type: Theme.error, layout: .centeredView)
     }
     
+    private func stopLoading(){
+        showUniversalLoadingView(false)
+        tableView.endRefreshing(presenter.canFetchMore)
+    }
     
 }
 

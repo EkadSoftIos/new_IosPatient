@@ -1,0 +1,22 @@
+
+/* Class = "UILabel"; text = "Choose City"; ObjectID = "39M-ph-Vdv"; */
+"39M-ph-Vdv.text" = "Choose City";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "AwH-vX-9JG"; */
+"AwH-vX-9JG.normalTitle" = "";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "FKx-fq-pMD"; */
+"FKx-fq-pMD.normalTitle" = "";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Luo-zP-fwb"; */
+"Luo-zP-fwb.normalTitle" = "";
+
+/* Class = "UILabel"; text = "Filter"; ObjectID = "XPL-VD-o1E"; */
+"XPL-VD-o1E.text" = "Filter";
+
+/* Class = "UILabel"; text = "Near by"; ObjectID = "ijh-AP-Ci9"; */
+"ijh-AP-Ci9.text" = "Near by";
+
+/* Class = "UILabel"; text = "Search Result"; ObjectID = "A8V-zg-UQM"; */
+"A8V-zg-UQM.text" = "Search Result";
+

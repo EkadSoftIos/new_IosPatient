@@ -208,9 +208,9 @@
 
 
 //MSOtherProviders
-"labs"  = "معامل";
-"rays" = "مراكز";
+"Rays" = "مراكز";
 "Labs"  = "معامل";
+"Centers" = "مراكز";
 "X-Rays" = "أشعة إكس";
 "Search by test name" = "بحث باسم التحليل";
 "Search by rays name" = "بحث باسم الاشعة";
@@ -222,3 +222,15 @@
 "Find Centers" = "اجد مراكز";
 "Error" = "خطأ";
 "E-Prescriptions" = "روشته طبيه";
+"Please choose at least one" = "الرجاء اختيار واحد على الأقل";
+"EGP" = "ج.م";
+"Services" = "الخدمات";
+"Search Result for" = "نتائج البحث عن";
+"Tests" = "تحاليل";
+"Rays" = "اشعة";
+"uploaded image" = "الصورة التي تم تحميلها";
+"Highest Discount" = "أعلي تخفيض";
+"Lowest Discount" = "أقل تخفيض";
+"Low To High Price" = "السعر من الأقل للأكبر";
+"High To Low Price" = "السعر من الأكبر للأقل";
+"Please select filter" = "الرجاء اختر تصفية";

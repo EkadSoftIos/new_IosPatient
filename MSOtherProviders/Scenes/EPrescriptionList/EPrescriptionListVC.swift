@@ -11,6 +11,7 @@ import KafkaRefresh
 import SwiftMessages
 
 
+
 //MARK: View -
 protocol EPrescriptionListViewProtocol: AnyObject {
     var presenter: EPrescriptionListPresenterProtocol!  { get set }
@@ -20,6 +21,7 @@ protocol EPrescriptionListViewProtocol: AnyObject {
     
     func reloadData()
     func showMessageAlert(title:String, message:String)
+    func showOtherProvidersList(request:RequestType)
 }
 
 class EPrescriptionListVC: UIViewController {
@@ -67,19 +69,34 @@ class EPrescriptionListVC: UIViewController {
 }
 
 // MARK: - Extensions -
+// MARK: - EPrescriptionListViewProtocol -
 extension EPrescriptionListVC: EPrescriptionListViewProtocol {
+
     func reloadData(){
-        showUniversalLoadingView(false)
         tableView.reloadData()
+        stopLoading()
     }
     
     func showMessageAlert(title: String, message: String) {
-        showUniversalLoadingView(false)
+        stopLoading()
         showMessage(title: title, sub: message, type: Theme.error, layout: .centeredView)
+    }
+    
+    private func stopLoading(){
+        showUniversalLoadingView(false)
+        tableView.endRefreshing(presenter.canFetchMore)
+    }
+    
+    func showOtherProvidersList(request:RequestType){
+        let vc = OtherProvidersListVC()
+        vc.type = presenter.type
+        vc.request = request
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 
 
+// MARK: -  UITableViewDelegate, UITableViewDataSource -
 extension EPrescriptionListVC : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

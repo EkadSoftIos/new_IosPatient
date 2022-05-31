@@ -1,21 +1,21 @@
 //
-//  ServiceCell.swift
+//  FilterCell.swift
 //  E4 Patient
 //
-//  Created by Mostafa Abd ElFatah on 5/29/22.
+//  Created by Mostafa Abd ElFatah on 5/31/22.
 //
 
 import UIKit
 
-struct ServiceCellDisplay{
+struct FilterCellDisplay{
     let name:String
 }
 
-protocol ServiceCellProtocol {
-    func config(display:ServiceCellDisplay)
+protocol FilterCellProtocol {
+    func config(display:FilterCellDisplay)
 }
 
-class ServiceCell: UITableViewCell, ServiceCellProtocol {
+class FilterCell: UITableViewCell, FilterCellProtocol {
 
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var checkbox: UIImageView!
@@ -27,7 +27,7 @@ class ServiceCell: UITableViewCell, ServiceCellProtocol {
     }
     
     
-    func config(display: ServiceCellDisplay) {
+    func config(display: FilterCellDisplay) {
         nameLabel.text = display.name
     }
     

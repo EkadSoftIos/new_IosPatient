@@ -11,6 +11,7 @@ import Foundation
 //MARK: Presenter -
 protocol EPrescriptionListPresenterProtocol: AnyObject {
     var type:MSType{ get set }
+    var canFetchMore:Bool { get }
     var numberOfEPrescriptions:Int { get }
     /**
      * Add here your methods for communication VIEW -> PROTOCOL
@@ -29,6 +30,10 @@ class EPrescriptionListPresenter {
         set{ pageType = newValue }
     }
     
+    var canFetchMore:Bool{
+        rowsNumberOfPage >= 10
+    }
+    
     var numberOfEPrescriptions: Int{
         ePrescriptionsList.count
     }
@@ -39,6 +44,7 @@ class EPrescriptionListPresenter {
     
     // MARK: - Private properties -
     private var pageType:MSType!
+    private var rowsNumberOfPage = 0
     private var epRequest:EPrescriptionRequest!
     private var msOPServicesRequest:MSOPServicesRequest!
     private var ePrescriptionsList:[EPrescription] = []
@@ -54,6 +60,7 @@ class EPrescriptionListPresenter {
 }
 
 // MARK: - Extensions -
+// MARK: - EPrescriptionListPresenterProtocol -
 extension EPrescriptionListPresenter: EPrescriptionListPresenterProtocol {
     
     func viewDidLoad() {
@@ -70,9 +77,10 @@ extension EPrescriptionListPresenter: EPrescriptionListPresenterProtocol {
             switch result {
             case .success(let response):
                 if let error = response.errormessage, response.successtate != 200{
-                    self.view?.showMessageAlert(title: "Error", message: error)
+                    self.view?.showMessageAlert(title: "Error".localized, message: error)
                     return
                 }
+                self.rowsNumberOfPage = response.message.count
                 self.ePrescriptionsList.append(contentsOf: response.message)
                 self.view?.reloadData()
             case .failure(let error):
@@ -90,6 +98,16 @@ extension EPrescriptionListPresenter: EPrescriptionListPresenterProtocol {
     
     // MARK: - configEPrescriptionCell -
     func configEPrescriptionCell(cell:EPrescriptionCellProtocol, indexPath:IndexPath)  {
-        cell.config(display: EPrescriptionDisplatCell(ePrescriptionsList[indexPath.row], msType: pageType))
+        cell.config(display: EPrescriptionDisplay(ePrescriptionsList[indexPath.row], msType: pageType), indexPath: indexPath, presenter: self)
     }
+}
+
+// MARK: - EPrescriptionCellPresenter -
+extension EPrescriptionListPresenter:EPrescriptionCellPresenter{
+    
+    func showOtherProvidersList(indexPath: IndexPath){
+        let ep = ePrescriptionsList[indexPath.row]
+        view?.showOtherProvidersList(request: .eprescription(ep))
+    }
+    
 }

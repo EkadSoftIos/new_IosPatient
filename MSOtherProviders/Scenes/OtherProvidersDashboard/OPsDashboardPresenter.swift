@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SwiftMessages
 
 
 struct SliderDisplayCell{
@@ -32,7 +33,6 @@ protocol OPsDashboardPresenterProtocol: AnyObject {
      * Add here your methods for communication VIEW -> PROTOCOL
      */
     func viewDidLoad()
-    
     func configAdCell(cell:FSPagerViewCellProtocol, index:Int)
     func configEPrescriptionCell(cell:EPrescriptionCellProtocol, indexPath:IndexPath)
 }
@@ -109,14 +109,15 @@ extension OPsDashboardPresenter: OPsDashboardPresenterProtocol {
             switch result {
             case .success(let response):
                 if let error = response.errormessage, response.successtate != 200{
-                    self.view?.showMessageAlert(title: "Error", message: error)
+                    self.view?.showMessageAlert(title: "Error".localized, message: error)
                     return
                 }
-                self.view?.reloadData()
                 self.adsList = response.message.ads
                 self.ePrescriptionsList = response.message.lastPrescriptions
+                print("lastPrescriptions count: \(response.message.lastPrescriptions.count)")
+                self.view?.reloadData()
             case .failure(let error):
-                self.view?.showMessageAlert(title: "Error", message: error.localizedDescription)
+                self.view?.showMessageAlert(title: "Error".localized, message: error.localizedDescription)
             }
         }//end closure
     }
@@ -130,7 +131,17 @@ extension OPsDashboardPresenter: OPsDashboardPresenterProtocol {
     
     // MARK: - configEPrescriptionCell -
     func configEPrescriptionCell(cell:EPrescriptionCellProtocol, indexPath:IndexPath)  {
-        cell.config(display: EPrescriptionDisplatCell(ePrescriptionsList[indexPath.row], msType: pageType))
+        cell.config(display: EPrescriptionDisplay(ePrescriptionsList[indexPath.row], msType: pageType), indexPath: indexPath, presenter: self)
+    }
+    
+}
+
+// MARK: - EPrescriptionCellPresenter -
+extension OPsDashboardPresenter:EPrescriptionCellPresenter{
+    
+    func showOtherProvidersList(indexPath: IndexPath){
+        let ep = ePrescriptionsList[indexPath.row]
+        view?.showOtherProvidersList(request: .eprescription(ep))
     }
     
 }

@@ -12,6 +12,7 @@ import Foundation
 protocol SearchOPServicesPresenterProtocol: AnyObject {
     var title:String { get }
     var numberOfRows:Int { get }
+    var canFetchMore:Bool { get }
     var searchPlaceholder:String{ get }
     var findServicesBtnTitle:String { get }
     var msRequest:MSOPServicesRequest { get set }
@@ -22,11 +23,16 @@ protocol SearchOPServicesPresenterProtocol: AnyObject {
     func config(cell:ServiceCellProtocol, indexPath:IndexPath)
     func fetchSearchedData(text:String)
     func loadMore()
+    func services(for selectedIndexPaths:[IndexPath]) -> [MedicalService]
 }
 
 class SearchOPServicesPresenter {
     
     // MARK: - Public properties -
+    var canFetchMore:Bool{
+        rowsNumberOfPage >= 10
+    }
+    
     var msRequest:MSOPServicesRequest {
         get{ msOPServicesRequest }
         set{ msOPServicesRequest = newValue }
@@ -50,6 +56,7 @@ class SearchOPServicesPresenter {
     }
     
     // MARK: - Private properties -
+    private var rowsNumberOfPage = 0
     private var medicalServicesList:[MedicalService] = []
     private var msOPServicesRequest:MSOPServicesRequest!
     private var msNetworkRepository:MSNetworkRepository?
@@ -77,6 +84,10 @@ extension SearchOPServicesPresenter: SearchOPServicesPresenterProtocol {
         fetchMSData()
     }
     
+    func services(for selectedIndexPaths:[IndexPath]) -> [MedicalService] {
+        selectedIndexPaths.compactMap({ self.medicalServicesList[$0.row] })
+    }
+    
     // MARK: - fetchData -
     private func fetchMSData() {
         guard let request = msOPServicesRequest else { return }
@@ -86,9 +97,10 @@ extension SearchOPServicesPresenter: SearchOPServicesPresenterProtocol {
             switch result {
             case .success(let response):
                 if let error = response.errormessage, response.successtate != 200{
-                    self.view?.showMessageAlert(title: "Error", message: error)
+                    self.view?.showMessageAlert(title: "Error".localized, message: error)
                     return
                 }
+                self.rowsNumberOfPage = response.message.count
                 self.medicalServicesList.append(contentsOf: response.message)
                 self.view?.reloadData()
             case .failure(let error):
