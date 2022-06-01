@@ -1,6 +1,6 @@
 
 /* Class = "UILabel"; text = "Weight"; ObjectID = "6e9-i5-H8A"; */
-"6e9-i5-H8A.text" = "Weight";
+"6e9-i5-H8A.text" = "الوزن";
 
 /* Class = "UILabel"; text = "sep 20,2020"; ObjectID = "7gg-wy-KA3"; */
 "7gg-wy-KA3.text" = "sep 20,2020";
@@ -15,28 +15,28 @@
 "QQ1-XG-XVx.text" = "150";
 
 /* Class = "UILabel"; text = "by patient"; ObjectID = "Uyh-zY-ioa"; */
-"Uyh-zY-ioa.text" = "by patient";
+"Uyh-zY-ioa.text" = "بواسطة المريض";
 
 /* Class = "UILabel"; text = "150"; ObjectID = "atE-8U-Vb8"; */
 "atE-8U-Vb8.text" = "150";
 
 /* Class = "UILabel"; text = "Diabetes"; ObjectID = "dXI-jg-dpD"; */
-"dXI-jg-dpD.text" = "Diabetes";
+"dXI-jg-dpD.text" = "داء السكري";
 
 /* Class = "UILabel"; text = "Hypertension"; ObjectID = "fsu-JY-lXx"; */
-"fsu-JY-lXx.text" = "Hypertension";
+"fsu-JY-lXx.text" = "ارتفاع ضغط الدم";
 
 /* Class = "UILabel"; text = "Notes"; ObjectID = "gFe-Ar-TdL"; */
-"gFe-Ar-TdL.text" = "Notes";
+"gFe-Ar-TdL.text" = "الملاحظات";
 
 /* Class = "UILabel"; text = "150"; ObjectID = "hkG-pe-PEM"; */
 "hkG-pe-PEM.text" = "150";
 
 /* Class = "UILabel"; text = "Tempreture"; ObjectID = "m78-YT-IW0"; */
-"m78-YT-IW0.text" = "Tempreture";
+"m78-YT-IW0.text" = "درجة الحرارة";
 
 /* Class = "UILabel"; text = "Height"; ObjectID = "uGF-bt-TWF"; */
-"uGF-bt-TWF.text" = "Height";
+"uGF-bt-TWF.text" = "الطول";
 
 /* Class = "UILabel"; text = "150"; ObjectID = "wcp-OT-Ujf"; */
 "wcp-OT-Ujf.text" = "150";

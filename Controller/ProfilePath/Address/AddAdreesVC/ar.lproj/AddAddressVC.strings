@@ -3,34 +3,34 @@
 "0Vc-HE-3b9.text" = "*";
 
 /* Class = "UITextField"; placeholder = "Your Location"; ObjectID = "2Pz-s9-c7b"; */
-"2Pz-s9-c7b.placeholder" = "Your Location";
+"2Pz-s9-c7b.placeholder" = "موقعك";
 
 /* Class = "UILabel"; text = "*"; ObjectID = "49Y-Lf-VNX"; */
 "49Y-Lf-VNX.text" = "*";
 
 /* Class = "UITextField"; placeholder = "Street name"; ObjectID = "4wP-rC-BRB"; */
-"4wP-rC-BRB.placeholder" = "Street name";
+"4wP-rC-BRB.placeholder" = "اسم الشارع";
 
 /* Class = "UITextField"; placeholder = "City"; ObjectID = "7Ih-Xi-NGn"; */
-"7Ih-Xi-NGn.placeholder" = "City";
+"7Ih-Xi-NGn.placeholder" = "مدينة";
 
 /* Class = "UITextView"; text = "Landmark"; ObjectID = "7iI-Op-PVL"; */
-"7iI-Op-PVL.text" = "Landmark";
+"7iI-Op-PVL.text" = "معلم معروف";
 
 /* Class = "UILabel"; text = "Floor"; ObjectID = "9Mn-ov-vhj"; */
-"9Mn-ov-vhj.text" = "Floor";
+"9Mn-ov-vhj.text" = "أرضية";
 
 /* Class = "UILabel"; text = "Street name *"; ObjectID = "BQd-hV-deC"; */
-"BQd-hV-deC.text" = "Street name *";
+"BQd-hV-deC.text" = "اسم الشارع *";
 
 /* Class = "UILabel"; text = "*"; ObjectID = "Fg6-fR-ueE"; */
 "Fg6-fR-ueE.text" = "*";
 
 /* Class = "UILabel"; text = "City"; ObjectID = "T9m-pr-KeB"; */
-"T9m-pr-KeB.text" = "City";
+"T9m-pr-KeB.text" = "مدينة";
 
 /* Class = "UITextField"; placeholder = "Area"; ObjectID = "Udj-cr-ZMI"; */
-"Udj-cr-ZMI.placeholder" = "Area";
+"Udj-cr-ZMI.placeholder" = "منطقة";
 
 /* Class = "UILabel"; text = "*"; ObjectID = "W2y-m8-Sef"; */
 "W2y-m8-Sef.text" = "*";

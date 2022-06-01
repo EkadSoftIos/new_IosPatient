@@ -7,7 +7,9 @@
 
 import UIKit
 import IQKeyboardManager
-class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+import MOLH
+
+class SceneDelegate: UIResponder, UIWindowSceneDelegate, MOLHResetable {
 
     var window: UIWindow?
 
@@ -16,16 +18,22 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         setupNavigationBar()
         setupTabbar()
-        setRoot()
         setupKeyboard()
         
         guard let _ = (scene as? UIWindowScene) else { return }
+        
+        MOLH.setLanguageTo(Locale.preferredLanguages[0])
+        MOLH.shared.activate(true)
+        MOLHLanguage.setDefaultLanguage("ar")
+        reset()
     }
+    
     func setupKeyboard(){
         IQKeyboardManager.shared().isEnabled  = true
         IQKeyboardManager.shared().toolbarTintColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-       }
-    func setRoot(){
+    }
+    
+    func reset() {
         let token = UserDefaults.standard.object(forKey: "token")
         if token != nil{
            let vc = TabbarManager()
@@ -38,6 +46,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             window?.makeKeyAndVisible()
         }
     }
+
     
 
 }

@@ -9,10 +9,10 @@
 "PuO-zI-jqL.text" = "Unpaid 50 EGP";
 
 /* Class = "UIButton"; normalTitle = "Starting Video"; ObjectID = "QMN-NX-2LQ"; */
-"QMN-NX-2LQ.normalTitle" = "Starting Video";
+"QMN-NX-2LQ.normalTitle" = "بدء الفيدي";
 
 /* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "Ypl-s6-SCp"; */
-"Ypl-s6-SCp.normalTitle" = "Cancel";
+"Ypl-s6-SCp.normalTitle" = "الغاء";
 
 /* Class = "UILabel"; text = "09:30 PM - 10:00 PM"; ObjectID = "cUQ-D8-b80"; */
 "cUQ-D8-b80.text" = "09:30 PM - 10:00 PM";

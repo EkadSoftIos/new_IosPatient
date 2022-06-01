@@ -24,8 +24,6 @@
                 <outlet property="code2Txt" destination="8wn-Si-6L4" id="vgC-Oj-k4K"/>
                 <outlet property="code3Txt" destination="pWL-h9-o56" id="mhB-zZ-jxM"/>
                 <outlet property="code4Txt" destination="IMM-Uo-nGL" id="fgl-6B-gYT"/>
-                <outlet property="code5Txt" destination="xvG-Kg-2aT" id="lL3-ie-0WG"/>
-                <outlet property="code6Txt" destination="VeE-5u-VdJ" id="QKS-u0-blA"/>
                 <outlet property="confirmAccountButton" destination="o1T-V9-ggh" id="djT-H0-rHy"/>
                 <outlet property="confirmAccountLbl" destination="mVm-fO-fzw" id="EE3-Bi-v0I"/>
                 <outlet property="mainView" destination="gyu-5J-6aB" id="fFp-Wo-sLK"/>

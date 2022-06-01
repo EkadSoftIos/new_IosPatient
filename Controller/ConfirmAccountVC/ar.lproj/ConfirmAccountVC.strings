@@ -1,15 +1,15 @@
 
 /* Class = "UIButton"; normalTitle = "Resend"; ObjectID = "Ezg-Zo-stA"; */
-"Ezg-Zo-stA.normalTitle" = "Resend";
+"Ezg-Zo-stA.normalTitle" = "اعادة الارسال";
 
 /* Class = "UILabel"; text = "Confirm Account"; ObjectID = "hcc-eH-Xb7"; */
-"hcc-eH-Xb7.text" = "Confirm Account";
+"hcc-eH-Xb7.text" = "تاكيد الاكونت";
 
 /* Class = "UILabel"; text = "Don't receive a code?"; ObjectID = "jTa-lt-I5T"; */
-"jTa-lt-I5T.text" = "Don't receive a code?";
+"jTa-lt-I5T.text" = "ا تتلقى رمز؟";
 
 /* Class = "UILabel"; text = "We've sent you a 4 digits confirm code to\nyour Mobile ****53\nPlease enter it below"; ObjectID = "mVm-fO-fzw"; */
-"mVm-fO-fzw.text" = "We've sent you a 4 digits confirm code to\nyour Mobile ****53\nPlease enter it below";
+"mVm-fO-fzw.text" = "لقد أرسلنا لك رمز تأكيد مكون من 4 أرقام إلى \ n هاتفك المحمول **** 53 \ n الرجاء إدخاله أدناه";
 
 /* Class = "UIButton"; normalTitle = "Confirm Account"; ObjectID = "o1T-V9-ggh"; */
-"o1T-V9-ggh.normalTitle" = "Confirm Account";
+"o1T-V9-ggh.normalTitle" = "تأكيد الحساب";

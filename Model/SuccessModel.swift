@@ -14,3 +14,7 @@ struct SuccessModelImage: Codable {
     let successtate: Int?
     let errormessage, message: String?
 }
+struct SuccessWithoutMsgModel: Codable {
+    let successtate: Int?
+    let errormessage: String?
+}

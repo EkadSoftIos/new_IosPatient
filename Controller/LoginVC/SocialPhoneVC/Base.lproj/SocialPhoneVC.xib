@@ -18,7 +18,7 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ForgetPassVC" customModule="E4clinic" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SocialPhoneVC" customModule="E4clinic" customModuleProvider="target">
             <connections>
                 <outlet property="bodyLB" destination="fUA-8d-0iF" id="cTp-eJ-Fal"/>
                 <outlet property="counntryNameLbl" destination="DG0-iP-aSo" id="jW4-9I-ncu"/>
@@ -26,7 +26,6 @@
                 <outlet property="mainView" destination="d8Q-8J-rFU" id="Z8c-lf-Mwr"/>
                 <outlet property="phoneTxt" destination="e0o-JO-y7Z" id="sgy-PS-POr"/>
                 <outlet property="sendBT" destination="ZXn-8L-Tff" id="TA3-te-rDO"/>
-                <outlet property="titleLB" destination="IaH-hW-Upb" id="Ig4-ND-Sbm"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -35,30 +34,14 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d8Q-8J-rFU" customClass="CardView" customModule="E4clinic" customModuleProvider="target">
-                    <rect key="frame" x="20" y="138" width="374" height="630"/>
+                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d8Q-8J-rFU" customClass="CardView" customModule="E4clinic" customModuleProvider="target">
+                    <rect key="frame" x="20" y="236" width="374" height="532"/>
                     <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="forgetPassword" translatesAutoresizingMaskIntoConstraints="NO" id="C2a-FE-iNa">
-                            <rect key="frame" x="137" y="32" width="100" height="100"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="100" id="VUQ-4p-Fhd"/>
-                                <constraint firstAttribute="height" constant="100" id="ZK4-cx-veP"/>
-                            </constraints>
-                        </imageView>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="InJ-3K-1Fp">
+                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="InJ-3K-1Fp">
                             <rect key="frame" x="18.5" y="164" width="337" height="100"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forget Your Password ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IaH-hW-Upb">
-                                    <rect key="frame" x="36.5" y="0.0" width="264.5" height="47.5"/>
-                                    <color key="tintColor" name="Blue"/>
-                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
-                                    <color key="textColor" name="Blue"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fUA-8d-0iF">
-                                    <rect key="frame" x="42" y="52.5" width="253" height="47.5"/>
-                                    <string key="text">Enter your phone we'll send you
-a link to reset your password</string>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your phone " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fUA-8d-0iF">
+                                    <rect key="frame" x="98.5" y="0.0" width="140.5" height="100"/>
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                     <color key="textColor" name="labelGray"/>
                                     <nil key="highlightedColor"/>
@@ -68,7 +51,7 @@ a link to reset your password</string>
                                 <constraint firstAttribute="height" constant="100" id="zPv-Nr-ZcG"/>
                             </constraints>
                         </stackView>
-                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hJ8-Zf-2XP">
+                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hJ8-Zf-2XP">
                             <rect key="frame" x="18.5" y="272" width="337" height="35"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dT5-bU-gH7">
@@ -144,7 +127,7 @@ a link to reset your password</string>
                                 </textField>
                             </subviews>
                         </stackView>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZXn-8L-Tff" customClass="TransitionButton" customModule="TransitionButton">
+                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZXn-8L-Tff" customClass="TransitionButton" customModule="TransitionButton">
                             <rect key="frame" x="93.5" y="331" width="187" height="40"/>
                             <color key="backgroundColor" name="mainColor"/>
                             <constraints>
@@ -170,13 +153,10 @@ a link to reset your password</string>
                     <constraints>
                         <constraint firstItem="hJ8-Zf-2XP" firstAttribute="centerX" secondItem="d8Q-8J-rFU" secondAttribute="centerX" id="6kd-k4-sI9"/>
                         <constraint firstItem="InJ-3K-1Fp" firstAttribute="centerX" secondItem="d8Q-8J-rFU" secondAttribute="centerX" id="9W7-z3-oB7"/>
-                        <constraint firstItem="InJ-3K-1Fp" firstAttribute="top" secondItem="C2a-FE-iNa" secondAttribute="bottom" constant="32" id="JtA-Wt-wCw"/>
                         <constraint firstItem="ZXn-8L-Tff" firstAttribute="top" secondItem="hJ8-Zf-2XP" secondAttribute="bottom" constant="24" id="N5F-6g-1OT"/>
-                        <constraint firstItem="C2a-FE-iNa" firstAttribute="top" secondItem="d8Q-8J-rFU" secondAttribute="top" constant="32" id="Qsr-aG-dlX"/>
                         <constraint firstItem="ZXn-8L-Tff" firstAttribute="width" secondItem="d8Q-8J-rFU" secondAttribute="width" multiplier="0.5" id="fnn-P9-GSc"/>
                         <constraint firstItem="InJ-3K-1Fp" firstAttribute="width" secondItem="d8Q-8J-rFU" secondAttribute="width" multiplier="0.9" id="ng8-J5-nfR"/>
                         <constraint firstItem="hJ8-Zf-2XP" firstAttribute="top" secondItem="InJ-3K-1Fp" secondAttribute="bottom" constant="8" id="pun-s3-qsV"/>
-                        <constraint firstItem="C2a-FE-iNa" firstAttribute="centerX" secondItem="d8Q-8J-rFU" secondAttribute="centerX" id="uPO-SP-o1z"/>
                         <constraint firstItem="ZXn-8L-Tff" firstAttribute="centerX" secondItem="d8Q-8J-rFU" secondAttribute="centerX" id="w6x-Qd-pfX"/>
                         <constraint firstItem="hJ8-Zf-2XP" firstAttribute="width" secondItem="d8Q-8J-rFU" secondAttribute="width" multiplier="0.9" id="x0W-sz-DVi"/>
                     </constraints>
@@ -201,7 +181,6 @@ a link to reset your password</string>
     <resources>
         <image name="Flag" width="21" height="14"/>
         <image name="dropdowen" width="12" height="14"/>
-        <image name="forgetPassword" width="93.5" height="107"/>
         <namedColor name="Blue">
             <color red="0.071000002324581146" green="0.46700000762939453" blue="0.81999999284744263" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

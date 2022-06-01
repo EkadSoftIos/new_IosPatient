@@ -6,7 +6,8 @@
 //
 
 import UIKit
- 
+ import MOLH
+
 class ChangeLanguageVC: UIViewController, ChangeLanguageViewProtocol {
     
     //MARK: - IBOutlets
@@ -66,7 +67,13 @@ class ChangeLanguageVC: UIViewController, ChangeLanguageViewProtocol {
     }
     
     @IBAction func didTappedDone(_ sender: UIButton) {
-        self.dismiss(animated: false, completion: nil)
+        if englishIsSelected {
+            MOLH.setLanguageTo("en")
+            MOLH.reset()
+        }else{
+            MOLH.setLanguageTo("ar")
+            MOLH.reset()
+        }
     }
 }
 
@@ -79,15 +86,14 @@ extension ChangeLanguageVC {
     
     fileprivate func setupLang(){
         arabicLb.setTitle("Arabic".localized, for: .normal)
-//        arabicLb.titleLabel?.textAlignment = Helper.instance.appLang == "en" ? .left : .right
         englishLb.setTitle("English".localized, for: .normal)
-//        englishLb.titleLabel?.textAlignment = Helper.instance.appLang == "en" ? .left : .right
     }
     
     
     
     
     fileprivate func didTappedEnglish(){
+        englishIsSelected = true
         animateButton(sender: englishRadioButton, senderTitle: englishLb)
         englishLb.setTitleColor(activeTextColor, for: .normal)
         arabicLb.setTitleColor(unactiveTextColor, for: .normal)
@@ -96,6 +102,7 @@ extension ChangeLanguageVC {
     }
     
     fileprivate func didTappedArabic(){
+        englishIsSelected = false
         animateButton(sender: arabicRadioButton, senderTitle: arabicLb)
         englishLb.setTitleColor(unactiveTextColor, for: .normal)
         arabicLb.setTitleColor(activeTextColor, for: .normal)
