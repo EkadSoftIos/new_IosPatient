@@ -108,6 +108,13 @@
 		617E26AB2823CF15009D8ABC /* NotificationCountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617E26A92823CF14009D8ABC /* NotificationCountModel.swift */; };
 		617E26AC2823CF15009D8ABC /* NotificationListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617E26AA2823CF14009D8ABC /* NotificationListModel.swift */; };
 		619182EF26F65B4600B6A796 /* Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = 619182EE26F65B4600B6A796 /* Animation.m */; };
+		619358922841006000B7F7A1 /* ChangeLanguageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6193588C2841006000B7F7A1 /* ChangeLanguageRouter.swift */; };
+		619358932841006000B7F7A1 /* ChangeLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6193588D2841006000B7F7A1 /* ChangeLanguage.swift */; };
+		619358942841006000B7F7A1 /* ChangeLanguageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6193588E2841006000B7F7A1 /* ChangeLanguageVC.swift */; };
+		619358952841006000B7F7A1 /* ChangeLanguageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6193588F2841006000B7F7A1 /* ChangeLanguageInteractor.swift */; };
+		619358962841006000B7F7A1 /* ChangeLanguageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 619358902841006000B7F7A1 /* ChangeLanguageModel.swift */; };
+		619358972841006100B7F7A1 /* ChangeLanguagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 619358912841006000B7F7A1 /* ChangeLanguagePresenter.swift */; };
+		619358992841017C00B7F7A1 /* ChangeLanguageVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 619358982841017C00B7F7A1 /* ChangeLanguageVC.xib */; };
 		61A7EF362830D9940027775E /* YBTextPickerDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A7EF2D2830D9920027775E /* YBTextPickerDataModel.swift */; };
 		61A7EF372830D9940027775E /* YBTextPickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61A7EF2F2830D9920027775E /* YBTextPickerCell.xib */; };
 		61A7EF382830D9940027775E /* YBTextPickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A7EF302830D9920027775E /* YBTextPickerCell.swift */; };
@@ -482,6 +489,16 @@
 		C434676A2839786B00378565 /* FAQCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C43467682839786B00378565 /* FAQCell.xib */; };
 		C434676C2839795C00378565 /* FAQModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C434676B2839795C00378565 /* FAQModel.swift */; };
 		C434676E283979AD00378565 /* ContactUsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C434676D283979AD00378565 /* ContactUsModel.swift */; };
+		C4D8AF612842B20100D154BE /* FilterReportsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D8AF602842B20100D154BE /* FilterReportsVC.swift */; };
+		C4D8AF662842B27F00D154BE /* AllReportsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D8AF642842B27E00D154BE /* AllReportsCell.swift */; };
+		C4D8AF672842B27F00D154BE /* AllReportsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4D8AF652842B27F00D154BE /* AllReportsCell.xib */; };
+		C4D8AF6A2842B2B100D154BE /* AllReportsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D8AF682842B2B000D154BE /* AllReportsVC.swift */; };
+		C4D8AF6B2842B2B100D154BE /* AllReportsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D8AF692842B2B000D154BE /* AllReportsModel.swift */; };
+		C4D8AF6F2842B42300D154BE /* AddReminderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D8AF6E2842B42300D154BE /* AddReminderVC.swift */; };
+		C4D8AF722842B43800D154BE /* SetReminderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D8AF712842B43800D154BE /* SetReminderVC.swift */; };
+		C4D8AF772842B46700D154BE /* MedicineReminderTBCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4D8AF752842B46500D154BE /* MedicineReminderTBCell.xib */; };
+		C4D8AF782842B46700D154BE /* MedicineReminderTBCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D8AF762842B46700D154BE /* MedicineReminderTBCell.swift */; };
+		C4D8AF7A2842B46E00D154BE /* MedicineReminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D8AF792842B46E00D154BE /* MedicineReminder.swift */; };
 		C7D1DFA17F3335DAA1E147A1 /* Pods_E4_PatientTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FBBBC112BA43A675406D37D /* Pods_E4_PatientTests.framework */; };
 		F42853C9E5210FD787E67E1A /* Pods_E4_Patient_E4_PatientUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D88C023F839EFCAE9AAD7E8 /* Pods_E4_Patient_E4_PatientUITests.framework */; };
 /* End PBXBuildFile section */
@@ -608,6 +625,13 @@
 		6183F35827F3AE3A0040836F /*  E4ClinicPatient-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = " E4ClinicPatient-Bridging-Header.h"; sourceTree = "<group>"; };
 		619182ED26F65B4600B6A796 /* Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Animation.h; sourceTree = "<group>"; };
 		619182EE26F65B4600B6A796 /* Animation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Animation.m; sourceTree = "<group>"; };
+		6193588C2841006000B7F7A1 /* ChangeLanguageRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeLanguageRouter.swift; sourceTree = "<group>"; };
+		6193588D2841006000B7F7A1 /* ChangeLanguage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeLanguage.swift; sourceTree = "<group>"; };
+		6193588E2841006000B7F7A1 /* ChangeLanguageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeLanguageVC.swift; sourceTree = "<group>"; };
+		6193588F2841006000B7F7A1 /* ChangeLanguageInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeLanguageInteractor.swift; sourceTree = "<group>"; };
+		619358902841006000B7F7A1 /* ChangeLanguageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeLanguageModel.swift; sourceTree = "<group>"; };
+		619358912841006000B7F7A1 /* ChangeLanguagePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeLanguagePresenter.swift; sourceTree = "<group>"; };
+		619358982841017C00B7F7A1 /* ChangeLanguageVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChangeLanguageVC.xib; sourceTree = "<group>"; };
 		61980655281C01E0009CC5CB /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		61A7EF2D2830D9920027775E /* YBTextPickerDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YBTextPickerDataModel.swift; sourceTree = "<group>"; };
 		61A7EF2F2830D9920027775E /* YBTextPickerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YBTextPickerCell.xib; sourceTree = "<group>"; };
@@ -994,6 +1018,16 @@
 		C43467682839786B00378565 /* FAQCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FAQCell.xib; sourceTree = "<group>"; };
 		C434676B2839795C00378565 /* FAQModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQModel.swift; sourceTree = "<group>"; };
 		C434676D283979AD00378565 /* ContactUsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsModel.swift; sourceTree = "<group>"; };
+		C4D8AF602842B20100D154BE /* FilterReportsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterReportsVC.swift; sourceTree = "<group>"; };
+		C4D8AF642842B27E00D154BE /* AllReportsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllReportsCell.swift; sourceTree = "<group>"; };
+		C4D8AF652842B27F00D154BE /* AllReportsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AllReportsCell.xib; sourceTree = "<group>"; };
+		C4D8AF682842B2B000D154BE /* AllReportsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllReportsVC.swift; sourceTree = "<group>"; };
+		C4D8AF692842B2B000D154BE /* AllReportsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllReportsModel.swift; sourceTree = "<group>"; };
+		C4D8AF6E2842B42300D154BE /* AddReminderVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddReminderVC.swift; sourceTree = "<group>"; };
+		C4D8AF712842B43800D154BE /* SetReminderVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetReminderVC.swift; sourceTree = "<group>"; };
+		C4D8AF752842B46500D154BE /* MedicineReminderTBCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MedicineReminderTBCell.xib; sourceTree = "<group>"; };
+		C4D8AF762842B46700D154BE /* MedicineReminderTBCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicineReminderTBCell.swift; sourceTree = "<group>"; };
+		C4D8AF792842B46E00D154BE /* MedicineReminder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicineReminder.swift; sourceTree = "<group>"; };
 		D31BA5E7F746A4EE0F969D94 /* Pods-E4 PatientTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-E4 PatientTests.release.xcconfig"; path = "Target Support Files/Pods-E4 PatientTests/Pods-E4 PatientTests.release.xcconfig"; sourceTree = "<group>"; };
 		D632F11585FE312A8721F3D8 /* Pods-E4 PatientTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-E4 PatientTests.debug.xcconfig"; path = "Target Support Files/Pods-E4 PatientTests/Pods-E4 PatientTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DDACD204C177C0A8CC0878F0 /* Pods-E4 Patient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-E4 Patient.debug.xcconfig"; path = "Target Support Files/Pods-E4 Patient/Pods-E4 Patient.debug.xcconfig"; sourceTree = "<group>"; };
@@ -1337,6 +1371,20 @@
 				619182EE26F65B4600B6A796 /* Animation.m */,
 			);
 			path = Animation;
+			sourceTree = "<group>";
+		};
+		6193588B2841006000B7F7A1 /* Change Language */ = {
+			isa = PBXGroup;
+			children = (
+				619358982841017C00B7F7A1 /* ChangeLanguageVC.xib */,
+				6193588C2841006000B7F7A1 /* ChangeLanguageRouter.swift */,
+				6193588D2841006000B7F7A1 /* ChangeLanguage.swift */,
+				6193588E2841006000B7F7A1 /* ChangeLanguageVC.swift */,
+				6193588F2841006000B7F7A1 /* ChangeLanguageInteractor.swift */,
+				619358902841006000B7F7A1 /* ChangeLanguageModel.swift */,
+				619358912841006000B7F7A1 /* ChangeLanguagePresenter.swift */,
+			);
+			path = "Change Language";
 			sourceTree = "<group>";
 		};
 		61A7EF2C2830D9920027775E /* YBTextPicker */ = {
@@ -1714,6 +1762,8 @@
 		C10E8F1925B33D0A004FFCBF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				C4D8AF6C2842B40200D154BE /* Reminder */,
+				C4D8AF5E2842B1CC00D154BE /* Reports */,
 				01FAB7B427CD5CEF00750DA5 /* More */,
 				01F5756126DD6EC70076273F /* ConsultationLogs */,
 				C18CBD1426A2523D00926D5B /* HomeScenes */,
@@ -2343,6 +2393,7 @@
 		C1820EB425B51D0A00396AAE /* MorePath */ = {
 			isa = PBXGroup;
 			children = (
+				6193588B2841006000B7F7A1 /* Change Language */,
 				6102527728074C730085B200 /* HelpSupportCell */,
 				616178562806C578005EE4C6 /* Log Out */,
 				C186EB872647C71200E92B8F /* MyFavoriteVC */,
@@ -2961,6 +3012,87 @@
 			path = FAQCell;
 			sourceTree = "<group>";
 		};
+		C4D8AF5E2842B1CC00D154BE /* Reports */ = {
+			isa = PBXGroup;
+			children = (
+				C4D8AF622842B21700D154BE /* AllReports */,
+				C4D8AF692842B2B000D154BE /* AllReportsModel.swift */,
+				C4D8AF682842B2B000D154BE /* AllReportsVC.swift */,
+				C4D8AF5F2842B1E200D154BE /* FilterReports */,
+			);
+			path = Reports;
+			sourceTree = "<group>";
+		};
+		C4D8AF5F2842B1E200D154BE /* FilterReports */ = {
+			isa = PBXGroup;
+			children = (
+				C4D8AF602842B20100D154BE /* FilterReportsVC.swift */,
+			);
+			path = FilterReports;
+			sourceTree = "<group>";
+		};
+		C4D8AF622842B21700D154BE /* AllReports */ = {
+			isa = PBXGroup;
+			children = (
+				C4D8AF632842B22A00D154BE /* AllReportsCell */,
+			);
+			path = AllReports;
+			sourceTree = "<group>";
+		};
+		C4D8AF632842B22A00D154BE /* AllReportsCell */ = {
+			isa = PBXGroup;
+			children = (
+				C4D8AF642842B27E00D154BE /* AllReportsCell.swift */,
+				C4D8AF652842B27F00D154BE /* AllReportsCell.xib */,
+			);
+			name = AllReportsCell;
+			path = "../New Group/AllReportsCell";
+			sourceTree = "<group>";
+		};
+		C4D8AF6C2842B40200D154BE /* Reminder */ = {
+			isa = PBXGroup;
+			children = (
+				C4D8AF732842B44600D154BE /* MedicineReminder */,
+				C4D8AF702842B42D00D154BE /* SetReminder */,
+				C4D8AF6D2842B41600D154BE /* AddReminder */,
+			);
+			path = Reminder;
+			sourceTree = "<group>";
+		};
+		C4D8AF6D2842B41600D154BE /* AddReminder */ = {
+			isa = PBXGroup;
+			children = (
+				C4D8AF6E2842B42300D154BE /* AddReminderVC.swift */,
+			);
+			path = AddReminder;
+			sourceTree = "<group>";
+		};
+		C4D8AF702842B42D00D154BE /* SetReminder */ = {
+			isa = PBXGroup;
+			children = (
+				C4D8AF712842B43800D154BE /* SetReminderVC.swift */,
+			);
+			path = SetReminder;
+			sourceTree = "<group>";
+		};
+		C4D8AF732842B44600D154BE /* MedicineReminder */ = {
+			isa = PBXGroup;
+			children = (
+				C4D8AF792842B46E00D154BE /* MedicineReminder.swift */,
+				C4D8AF742842B45700D154BE /* MedicineReminderTBCell */,
+			);
+			path = MedicineReminder;
+			sourceTree = "<group>";
+		};
+		C4D8AF742842B45700D154BE /* MedicineReminderTBCell */ = {
+			isa = PBXGroup;
+			children = (
+				C4D8AF762842B46700D154BE /* MedicineReminderTBCell.swift */,
+				C4D8AF752842B46500D154BE /* MedicineReminderTBCell.xib */,
+			);
+			path = MedicineReminderTBCell;
+			sourceTree = "<group>";
+		};
 		D489A7022DBE435A69C022EA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -3149,6 +3281,7 @@
 				C15F7ECA25BBDE7F005EB885 /* AddSocialHistoryVC.xib in Resources */,
 				C15F7F4425BC219F005EB885 /* PermissionVC.xib in Resources */,
 				01E44B1826DC284200805033 /* AppointmentAddressCell.xib in Resources */,
+				619358992841017C00B7F7A1 /* ChangeLanguageVC.xib in Resources */,
 				61BD6842283B820600821D51 /* DeleteMedicalReportVC.xib in Resources */,
 				C14C630D25DE0262000D50B0 /* video@3x.png in Resources */,
 				61BD67F62838B16800821D51 /* Localizable.strings in Resources */,
@@ -3213,9 +3346,11 @@
 				C10E8ED125B33CED004FFCBF /* Cairo-Bold.ttf in Resources */,
 				C10E8F2625B33E39004FFCBF /* LoginVC.xib in Resources */,
 				C1DC8A3C25B6432900B006AC /* AllAdressVC.xib in Resources */,
+				C4D8AF672842B27F00D154BE /* AllReportsCell.xib in Resources */,
 				C14C630B25DE0262000D50B0 /* OFF@3x.png in Resources */,
 				C18DA7242647B21C00079EE1 /* SuccessBookingVC.xib in Resources */,
 				C10E8E972648A22B00481B45 /* ShiftCell.xib in Resources */,
+				C4D8AF772842B46700D154BE /* MedicineReminderTBCell.xib in Resources */,
 				6160C7E726E63F91006A12BE /* AppointmentHistoryPopupCell.xib in Resources */,
 				C1820E7F25B5126700396AAE /* HomeVC.xib in Resources */,
 				C10E8ECF25B33CED004FFCBF /* Cairo-Light.ttf in Resources */,
@@ -3364,6 +3499,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				61BD682F283B104C00821D51 /* MedicationCell.swift in Sources */,
+				C4D8AF782842B46700D154BE /* MedicineReminderTBCell.swift in Sources */,
+				C4D8AF7A2842B46E00D154BE /* MedicineReminder.swift in Sources */,
 				C18868AC26A5C39C00CAF951 /* font_bold.TTF in Sources */,
 				C18868AD26A5C39C00CAF951 /* font_regular.TTF in Sources */,
 				616178622806C578005EE4C6 /* LogOutPresenter.swift in Sources */,
@@ -3380,9 +3517,12 @@
 				C1977DBB25FC2271004AD914 /* MapVc.swift in Sources */,
 				C13A457725F42BF0004F2D33 /* MedicalReportsNetwork.swift in Sources */,
 				C186EB8F2647C76C00E92B8F /* MyFavoriteCell.swift in Sources */,
+				619358972841006100B7F7A1 /* ChangeLanguagePresenter.swift in Sources */,
+				C4D8AF662842B27F00D154BE /* AllReportsCell.swift in Sources */,
 				C19EAB6925E7E50F006E6F06 /* SignUpNetwork.swift in Sources */,
 				C186CCA22664607100755A41 /* homeNetwork.swift in Sources */,
 				61BD683D283B1AC900821D51 /* MedicalReportCell.swift in Sources */,
+				619358952841006000B7F7A1 /* ChangeLanguageInteractor.swift in Sources */,
 				C1DC8A4625B6451500B006AC /* AllAddressCell.swift in Sources */,
 				C181852826354FE300299993 /* SearchOeVc.swift in Sources */,
 				01F5756326DD6EF60076273F /* ConsultationLogVC.swift in Sources */,
@@ -3406,15 +3546,18 @@
 				01A4D2E626C72E2F00EF8E4E /* AllSearchViewModel.swift in Sources */,
 				C186E31126477EB500B0890C /* ReviewsTableView.swift in Sources */,
 				C1820E7E25B5126600396AAE /* HomeVC.swift in Sources */,
+				619358932841006000B7F7A1 /* ChangeLanguage.swift in Sources */,
 				C1E3999F25FC4FD30064CAA2 /* AddSurgeryPicker.swift in Sources */,
 				0158FAD8270C3ECF00758D58 /* ProfileSummaryCell.swift in Sources */,
 				C17C35F0263FB2E000B8B494 /* CityFiltterTableView.swift in Sources */,
 				C14C631F25DE0262000D50B0 /* LocationManager.swift in Sources */,
+				619358942841006000B7F7A1 /* ChangeLanguageVC.swift in Sources */,
 				C13A457525F4287A004F2D33 /* AddSurgeryNetwork.swift in Sources */,
 				C186EBAC2647D05800E92B8F /* ConsultationsLogDetailsVC.swift in Sources */,
 				C184A1202647E185005453FC /* WriteReviewsVC.swift in Sources */,
 				613C8BC126ECA1BA00FA4A83 /* AppointmentDetailsModel.swift in Sources */,
 				C14C62F225DE0262000D50B0 /* BaseViewControll.swift in Sources */,
+				C4D8AF722842B43800D154BE /* SetReminderVC.swift in Sources */,
 				01CD8C8C26F2931200F6F0DE /* ClinicCell.swift in Sources */,
 				C14C631925DE0262000D50B0 /* Helper.swift in Sources */,
 				C18DA7232647B21C00079EE1 /* SuccessBookingVC.swift in Sources */,
@@ -3457,9 +3600,11 @@
 				C14C62FB25DE0262000D50B0 /* UIStoryBoard+Extension.swift in Sources */,
 				C14C630525DE0262000D50B0 /* AlamofireMultipart.swift in Sources */,
 				C10E8F1125B33CED004FFCBF /* AppStrings.swift in Sources */,
+				619358922841006000B7F7A1 /* ChangeLanguageRouter.swift in Sources */,
 				C1E3999B25FC3A870064CAA2 /* exTableView.swift in Sources */,
 				0106D79A26C522520054E254 /* PrefixTitleTBCell.swift in Sources */,
 				C15F7F0925BBFDFA005EB885 /* SurgeryVC.swift in Sources */,
+				619358962841006000B7F7A1 /* ChangeLanguageModel.swift in Sources */,
 				014904A826C5CDF100BD6D63 /* FilterViewModel.swift in Sources */,
 				C13A456525F2EC11004F2D33 /* getRelationsModel.swift in Sources */,
 				C14C632025DE0262000D50B0 /* Configuration.swift in Sources */,
@@ -3514,6 +3659,7 @@
 				0196D2C826CFD0460007C3AF /* DoctorByIdModel.swift in Sources */,
 				61A7EF412835C02D0027775E /* DeleteLocationVC.swift in Sources */,
 				C186EBA22647CC5C00E92B8F /* ConsultationsLogCell.swift in Sources */,
+				C4D8AF6F2842B42300D154BE /* AddReminderVC.swift in Sources */,
 				C15102EF25B7EFB500FEEFB2 /* AllAllergiesVC+Table.swift in Sources */,
 				C14C631125DE0262000D50B0 /* ImagePickerController.swift in Sources */,
 				C15F7EFD25BBFCBD005EB885 /* AddFamilyHistoryVC.swift in Sources */,
@@ -3544,6 +3690,7 @@
 				C14C62FC25DE0262000D50B0 /* textField.swift in Sources */,
 				619182EF26F65B4600B6A796 /* Animation.m in Sources */,
 				6160C7DF26E63D8D006A12BE /* WriteReviewsNetwork.swift in Sources */,
+				C4D8AF6A2842B2B100D154BE /* AllReportsVC.swift in Sources */,
 				C14C62F025DE0262000D50B0 /* Date+Extension.swift in Sources */,
 				C16D3D5D25FE8930009EDCA1 /* EmergencyNumberNetwork.swift in Sources */,
 				C1DC8AA025B673CC00B006AC /* AddEmergencyVC.swift in Sources */,
@@ -3632,6 +3779,7 @@
 				C1A76B4725EADB20008F46DF /* addDieseasNetwork.swift in Sources */,
 				01F2F14B26E00B5200793A60 /* ConsultationLogModel.swift in Sources */,
 				C14C630225DE0262000D50B0 /* UIImagePickerController + Extension.swift in Sources */,
+				C4D8AF6B2842B2B100D154BE /* AllReportsModel.swift in Sources */,
 				C14C631A25DE0262000D50B0 /* ImageGalleryViewDataSource.swift in Sources */,
 				322DCF2525EAC29A00142F6A /* EditProfileVCPicker.swift in Sources */,
 				C186EB852647C5D700E92B8F /* AppointmentHistoryPopup.swift in Sources */,
@@ -3659,6 +3807,7 @@
 				6160C7E826E63F91006A12BE /* AppointmentHistoryPopupCell.swift in Sources */,
 				61BD6831283B104C00821D51 /* AllMedicationVC.swift in Sources */,
 				C1C680B02607D45A0043EE1C /* getDoctorsModel.swift in Sources */,
+				C4D8AF612842B20100D154BE /* FilterReportsVC.swift in Sources */,
 				C1820DF225B4196000396AAE /* TabbarManager.swift in Sources */,
 				61BD6822283B104C00821D51 /* addMedicationTableCell.swift in Sources */,
 				6160C7DD26E63D33006A12BE /* AppointmentNetwork.swift in Sources */,
@@ -3895,7 +4044,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Ekadsoft.E4Patientt;
 				PRODUCT_NAME = E4clinic;
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/nadamostafa/Downloads/E4ClinicPatientIos-master/ E4ClinicPatient-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/nadamostafa/Downloads/E4ClinicPatientIos-master-4/ E4ClinicPatient-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "armv7 armv7s arm64 arm64e x86_64";
@@ -3918,7 +4067,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Ekadsoft.E4Patientt;
 				PRODUCT_NAME = E4clinic;
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/nadamostafa/Downloads/E4ClinicPatientIos-master/ E4ClinicPatient-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/nadamostafa/Downloads/E4ClinicPatientIos-master-4/ E4ClinicPatient-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "armv7 armv7s arm64 arm64e x86_64";

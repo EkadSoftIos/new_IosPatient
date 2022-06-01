@@ -1,0 +1,15 @@
+
+/* Class = "UILabel"; text = "EG"; ObjectID = "DG0-iP-aSo"; */
+"DG0-iP-aSo.text" = "EG";
+
+/* Class = "UILabel"; text = "Forget Your Password ?"; ObjectID = "IaH-hW-Upb"; */
+"IaH-hW-Upb.text" = "Forget Your Password ?";
+
+/* Class = "UIButton"; normalTitle = "Send"; ObjectID = "ZXn-8L-Tff"; */
+"ZXn-8L-Tff.normalTitle" = "Send";
+
+/* Class = "UITextField"; placeholder = "+20 000 00000 000"; ObjectID = "e0o-JO-y7Z"; */
+"e0o-JO-y7Z.placeholder" = "+20 000 00000 000";
+
+/* Class = "UILabel"; text = "Enter your phone we'll send you\na link to reset your password"; ObjectID = "fUA-8d-0iF"; */
+"fUA-8d-0iF.text" = "Enter your phone we'll send you\na link to reset your password";

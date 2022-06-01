@@ -224,10 +224,17 @@ Login with</string>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wGa-rJ-170">
                                             <rect key="frame" x="0.0" y="0.0" width="47.5" height="40"/>
                                             <state key="normal" image="FaceBook"/>
+                                            <connections>
+                                                <action selector="didTappedFaceBook:" destination="-1" eventType="touchUpInside" id="jh1-Tl-I3f"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5E8-eY-XgP">
                                             <rect key="frame" x="62.5" y="0.0" width="47.5" height="40"/>
                                             <state key="normal" image="Google"/>
+                                            <connections>
+                                                <action selector="didTappedGoogle:" destination="-1" eventType="touchUpInside" id="6Yz-e7-yIP"/>
+                                                <action selector="google_Click:" destination="-1" eventType="touchUpInside" id="pIv-Fg-nJ0"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yS9-1b-WKn">
                                             <rect key="frame" x="110" y="0.0" width="40" height="40"/>

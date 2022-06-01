@@ -1,0 +1,72 @@
+
+/* Class = "UILabel"; text = "Choose some Doctors"; ObjectID = "02m-SL-p6E"; */
+"02m-SL-p6E.text" = "Choose some Doctors";
+
+/* Class = "UITextField"; placeholder = "Entity"; ObjectID = "26e-zm-iEH"; */
+"26e-zm-iEH.placeholder" = "Entity";
+
+/* Class = "UILabel"; text = "Entity"; ObjectID = "494-DI-5Gh"; */
+"494-DI-5Gh.text" = "Entity";
+
+/* Class = "UILabel"; text = "Social History"; ObjectID = "6Yf-4F-gc3"; */
+"6Yf-4F-gc3.text" = "Social History";
+
+/* Class = "UITextField"; placeholder = "Healthcare Providers"; ObjectID = "DN0-Vz-dJe"; */
+"DN0-Vz-dJe.placeholder" = "Healthcare Providers";
+
+/* Class = "UILabel"; text = "Family History"; ObjectID = "ImK-az-6O8"; */
+"ImK-az-6O8.text" = "Family History";
+
+/* Class = "UILabel"; text = "Medical Reports"; ObjectID = "Inc-q0-Htx"; */
+"Inc-q0-Htx.text" = "Medical Reports";
+
+/* Class = "UITextField"; placeholder = "Main Speciality"; ObjectID = "NKB-OB-uoD"; */
+"NKB-OB-uoD.placeholder" = "Main Speciality";
+
+/* Class = "UILabel"; text = "Healthcare Providers"; ObjectID = "OrW-ee-80U"; */
+"OrW-ee-80U.text" = "Healthcare Providers";
+
+/* Class = "UILabel"; text = "Main Speciality"; ObjectID = "QuN-ha-zLp"; */
+"QuN-ha-zLp.text" = "Main Speciality";
+
+/* Class = "UILabel"; text = "Allow For"; ObjectID = "WBn-V3-49O"; */
+"WBn-V3-49O.text" = "Allow For";
+
+/* Class = "UILabel"; text = "Emergency Contacts"; ObjectID = "XZu-8i-MtA"; */
+"XZu-8i-MtA.text" = "Emergency Contacts";
+
+/* Class = "UILabel"; text = "Allow All Doctors"; ObjectID = "Xce-jp-EFA"; */
+"Xce-jp-EFA.text" = "Allow All Doctors";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "a07-1C-aDc"; */
+"a07-1C-aDc.normalTitle" = "Save";
+
+/* Class = "UILabel"; text = "Patient choose which healthcare providers view his profile"; ObjectID = "aDN-5h-rzQ"; */
+"aDN-5h-rzQ.text" = "Patient choose which healthcare providers view his profile";
+
+/* Class = "UILabel"; text = "Health Profile"; ObjectID = "bP6-sR-Wjv"; */
+"bP6-sR-Wjv.text" = "Health Profile";
+
+/* Class = "UILabel"; text = "Allergies"; ObjectID = "d0I-e7-ejP"; */
+"d0I-e7-ejP.text" = "Allergies";
+
+/* Class = "UIButton"; normalTitle = " All"; ObjectID = "h3b-1j-one"; */
+"h3b-1j-one.normalTitle" = " All";
+
+/* Class = "UILabel"; text = "Filter Provider By"; ObjectID = "hrt-Du-MNK"; */
+"hrt-Du-MNK.text" = "Filter Provider By";
+
+/* Class = "UIButton"; normalTitle = " All"; ObjectID = "i8f-rN-Gwn"; */
+"i8f-rN-Gwn.normalTitle" = " All";
+
+/* Class = "UILabel"; text = "Surgery / Implants"; ObjectID = "kH0-be-1tf"; */
+"kH0-be-1tf.text" = "Surgery / Implants";
+
+/* Class = "UILabel"; text = "Diseases / Conditions"; ObjectID = "kt3-Nm-OIJ"; */
+"kt3-Nm-OIJ.text" = "Diseases / Conditions";
+
+/* Class = "UILabel"; text = "Medications"; ObjectID = "rpx-0e-09d"; */
+"rpx-0e-09d.text" = "Medications";
+
+/* Class = "UILabel"; text = "Basic Profile"; ObjectID = "s9G-Ck-tii"; */
+"s9G-Ck-tii.text" = "Basic Profile";

@@ -39,8 +39,9 @@ extension MoreVC: UITableViewDelegate, UITableViewDataSource {
             let vc = MyFavoriteVC()
             vc.hidesBottomBarWhenPushed = true
             self.show(vc, sender: nil)
-//        case 3:
-            //Medicine Reminder
+        case 3:
+            let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MedicineReminder")
+            navigationController?.pushViewController(vc, animated: true)
 //        case 4:
             //Blog
         case 5:
@@ -51,8 +52,9 @@ extension MoreVC: UITableViewDelegate, UITableViewDataSource {
         case 6:
             let vc = ConsultationsLogVC()
             self.show(vc, sender: nil)
-//        case 7:
-            //Reports
+        case 7:
+            let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AllReportsVC")
+            navigationController?.pushViewController(vc, animated: true)
 //        case 8:
             //My Orders
         case 9:
@@ -87,8 +89,13 @@ extension MoreVC: UITableViewDelegate, UITableViewDataSource {
 //            let vc = sb.instantiateViewController(withIdentifier: "FAQVC")
 //            navigationController?.pushViewController(vc, animated: true)
         
-//        case 16:
+        case 13:
             //Language
+            let vcc = ChangeLanguageVC()
+             vcc.modalPresentationStyle = .overCurrentContext
+             vcc.modalTransitionStyle = .crossDissolve
+             self.present(vcc, animated: true, completion: nil)
+
         case 14:
             let sb = UIStoryboard(name: "Main", bundle: nil)
             let vc = sb.instantiateViewController(withIdentifier: "LogOutVC")

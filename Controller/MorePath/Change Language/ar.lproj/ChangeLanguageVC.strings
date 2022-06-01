@@ -1,0 +1,15 @@
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "1kd-eh-ITt"; */
+"1kd-eh-ITt.normalTitle" = "Cancel";
+
+/* Class = "UIButton"; normalTitle = "Done"; ObjectID = "6H0-g4-nOq"; */
+"6H0-g4-nOq.normalTitle" = "Done";
+
+/* Class = "UIButton"; normalTitle = "English"; ObjectID = "MZZ-Mi-rsD"; */
+"MZZ-Mi-rsD.normalTitle" = "English";
+
+/* Class = "UILabel"; text = "Language"; ObjectID = "T64-Na-wsY"; */
+"T64-Na-wsY.text" = "Language";
+
+/* Class = "UIButton"; normalTitle = "Arabic"; ObjectID = "oQt-iz-ceX"; */
+"oQt-iz-ceX.normalTitle" = "Arabic";

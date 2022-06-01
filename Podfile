@@ -38,6 +38,8 @@ pod 'FacebookCore'
 pod 'FacebookLogin'
 pod 'FacebookShare'
 
+pod 'MOLH'
+
   target 'E4 PatientTests' do
     inherit! :search_paths
     # Pods for testing
