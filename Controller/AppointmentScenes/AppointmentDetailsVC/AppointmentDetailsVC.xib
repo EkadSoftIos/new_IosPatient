@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -22,7 +23,9 @@
                 <outlet property="appointmentReasonDescLBL" destination="jhF-09-cXi" id="CYY-39-2RZ"/>
                 <outlet property="appointmentReasonTitleLBL" destination="ShL-Ix-xMa" id="GRm-lw-EcL"/>
                 <outlet property="bookingStatusLBL" destination="333-fn-eMK" id="GdB-vx-aLc"/>
+                <outlet property="branchAddressContLBL" destination="HPE-ZJ-vAS" id="GLV-xB-Iit"/>
                 <outlet property="branchAddressLBL" destination="DRO-6O-bRM" id="w4m-Jz-WzJ"/>
+                <outlet property="branchIconIMG" destination="kJm-kX-yiS" id="AHh-BD-HXs"/>
                 <outlet property="clinicIconIMG" destination="MvB-hl-mur" id="evL-Wh-kvC"/>
                 <outlet property="clinicNameLBL" destination="8YP-56-gK0" id="EDI-dM-6qQ"/>
                 <outlet property="dataHeightConstraint" destination="N0j-Kb-bLE" id="izF-Mg-LfC"/>
@@ -62,7 +65,7 @@
                                     <rect key="frame" x="20" y="20" width="374" height="310"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="amf-eY-iMA">
-                                            <rect key="frame" x="24" y="24" width="166" height="15"/>
+                                            <rect key="frame" x="24" y="24" width="167.5" height="15"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_clinic" translatesAutoresizingMaskIntoConstraints="NO" id="MvB-hl-mur">
                                                     <rect key="frame" x="0.0" y="0.0" width="15" height="15"/>
@@ -72,7 +75,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clinic Consultation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8YP-56-gK0">
-                                                    <rect key="frame" x="23" y="0.0" width="143" height="15"/>
+                                                    <rect key="frame" x="23" y="0.0" width="144.5" height="15"/>
                                                     <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="17"/>
                                                     <color key="textColor" name="Blue"/>
                                                     <nil key="highlightedColor"/>
@@ -80,33 +83,33 @@
                                             </subviews>
                                         </stackView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Your Appointment " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WD4-ke-zEo">
-                                            <rect key="frame" x="24" y="47" width="189.5" height="20"/>
+                                            <rect key="frame" x="24" y="47" width="195" height="23"/>
                                             <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="17"/>
                                             <color key="textColor" name="Blue"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xNr-yW-vD7">
-                                            <rect key="frame" x="24" y="75" width="200.5" height="15"/>
+                                            <rect key="frame" x="24" y="78" width="179.5" height="20"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_calender-1" translatesAutoresizingMaskIntoConstraints="NO" id="DHu-eP-9Kt">
-                                                    <rect key="frame" x="0.0" y="0.0" width="15" height="15"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="15" id="9qX-Yc-AoR"/>
-                                                        <constraint firstAttribute="width" constant="15" id="pOd-vL-slo"/>
+                                                        <constraint firstAttribute="height" constant="20" id="9qX-Yc-AoR"/>
+                                                        <constraint firstAttribute="width" constant="20" id="pOd-vL-slo"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monday  Sep 11,  2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wqD-31-faO">
-                                                    <rect key="frame" x="23" y="0.0" width="177.5" height="15"/>
-                                                    <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="17"/>
+                                                    <rect key="frame" x="28" y="0.0" width="151.5" height="20"/>
+                                                    <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="15"/>
                                                     <color key="textColor" name="darkGray"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </stackView>
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Nqd-4K-P11">
-                                            <rect key="frame" x="24" y="98" width="185.5" height="15"/>
+                                            <rect key="frame" x="24" y="110" width="179" height="15"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_Medicine Reminder" translatesAutoresizingMaskIntoConstraints="NO" id="Cev-H7-eHz">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock" translatesAutoresizingMaskIntoConstraints="NO" id="Cev-H7-eHz">
                                                     <rect key="frame" x="0.0" y="0.0" width="15" height="15"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="15" id="nnh-X8-NwB"/>
@@ -114,7 +117,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="09:30 PM - 10:00 PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QgP-il-AYf">
-                                                    <rect key="frame" x="23" y="0.0" width="162.5" height="15"/>
+                                                    <rect key="frame" x="23" y="0.0" width="156" height="15"/>
                                                     <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="17"/>
                                                     <color key="textColor" name="darkGray"/>
                                                     <nil key="highlightedColor"/>
@@ -122,35 +125,40 @@
                                             </subviews>
                                         </stackView>
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="B4e-2j-nNp">
-                                            <rect key="frame" x="24" y="121" width="192.5" height="15"/>
+                                            <rect key="frame" x="24" y="133" width="294" height="25"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_clinic" translatesAutoresizingMaskIntoConstraints="NO" id="kJm-kX-yiS">
-                                                    <rect key="frame" x="0.0" y="0.0" width="15" height="15"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="20" height="25"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="15" id="E0m-JA-sbY"/>
-                                                        <constraint firstAttribute="height" constant="15" id="sVZ-aD-oIf"/>
+                                                        <constraint firstAttribute="width" constant="20" id="E0m-JA-sbY"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="El-Shouroq (Nasr City)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DRO-6O-bRM">
-                                                    <rect key="frame" x="23" y="0.0" width="169.5" height="15"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="El-Shouroq" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DRO-6O-bRM">
+                                                    <rect key="frame" x="28" y="0.0" width="86" height="25"/>
                                                     <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="17"/>
                                                     <color key="textColor" name="Blue"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="El-Shouroq (Nasr City)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HPE-ZJ-vAS">
+                                                    <rect key="frame" x="122" y="0.0" width="172" height="25"/>
+                                                    <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="15" id="spz-ji-ekj"/>
+                                                <constraint firstAttribute="height" constant="25" id="spz-ji-ekj"/>
                                             </constraints>
                                         </stackView>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_location" translatesAutoresizingMaskIntoConstraints="NO" id="Bmd-Z7-hc0">
-                                            <rect key="frame" x="24" y="144" width="20" height="20"/>
+                                            <rect key="frame" x="24" y="166" width="20" height="20"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="20" id="64d-JB-bmN"/>
                                                 <constraint firstAttribute="height" constant="20" id="6jn-6G-NWU"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Buz-RG-yyt">
-                                            <rect key="frame" x="52" y="144" width="282" height="35"/>
+                                            <rect key="frame" x="52" y="166" width="282" height="40"/>
                                             <string key="text">43 Nakhla moteey st , triumph square , 
 infront of emam ali mosque Nasr City</string>
                                             <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="15"/>
@@ -158,9 +166,9 @@ infront of emam ali mosque Nasr City</string>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bwM-Qa-NOL">
-                                            <rect key="frame" x="24" y="187" width="172.5" height="15"/>
+                                            <rect key="frame" x="24" y="214" width="167.5" height="15"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="walletunactive" translatesAutoresizingMaskIntoConstraints="NO" id="fz0-4O-8JN">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Wallet" translatesAutoresizingMaskIntoConstraints="NO" id="fz0-4O-8JN">
                                                     <rect key="frame" x="0.0" y="0.0" width="15" height="15"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="15" id="OvZ-mF-anF"/>
@@ -168,7 +176,7 @@ infront of emam ali mosque Nasr City</string>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Fees 230 EGP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YII-Zy-7PK">
-                                                    <rect key="frame" x="23" y="0.0" width="149.5" height="15"/>
+                                                    <rect key="frame" x="23" y="0.0" width="144.5" height="15"/>
                                                     <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="17"/>
                                                     <color key="textColor" name="Blue"/>
                                                     <nil key="highlightedColor"/>
@@ -176,13 +184,13 @@ infront of emam ali mosque Nasr City</string>
                                             </subviews>
                                         </stackView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="With Doctor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KvN-sM-4xJ">
-                                            <rect key="frame" x="243" y="210" width="91" height="20"/>
+                                            <rect key="frame" x="239.5" y="237" width="94.5" height="23"/>
                                             <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="17"/>
                                             <color key="textColor" name="Blue"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Iwt-WJ-7Yz">
-                                            <rect key="frame" x="172" y="235" width="162" height="25"/>
+                                            <rect key="frame" x="172.5" y="265" width="161.5" height="25"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_user_contact" translatesAutoresizingMaskIntoConstraints="NO" id="sRd-du-haj">
                                                     <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
@@ -192,7 +200,7 @@ infront of emam ali mosque Nasr City</string>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dr. Ahmed Karim" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WO7-Zm-O4Z">
-                                                    <rect key="frame" x="33" y="0.0" width="129" height="20"/>
+                                                    <rect key="frame" x="33" y="0.0" width="128.5" height="23"/>
                                                     <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -200,13 +208,13 @@ infront of emam ali mosque Nasr City</string>
                                             </subviews>
                                         </stackView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Awaiting Response" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="333-fn-eMK">
-                                            <rect key="frame" x="254.5" y="22" width="111.5" height="15.5"/>
+                                            <rect key="frame" x="254" y="22" width="112" height="17.5"/>
                                             <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="13"/>
-                                            <color key="textColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="textColor" systemColor="systemYellowColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unpaid 230 EGP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iQg-Hm-Mdm">
-                                            <rect key="frame" x="261" y="45.5" width="105" height="19"/>
+                                            <rect key="frame" x="266.5" y="47.5" width="99.5" height="19"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="19" id="mwK-he-ceG"/>
                                             </constraints>
@@ -215,7 +223,7 @@ infront of emam ali mosque Nasr City</string>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
                                         <constraint firstItem="bwM-Qa-NOL" firstAttribute="top" secondItem="Buz-RG-yyt" secondAttribute="bottom" constant="8" id="547-1j-Esy"/>
                                         <constraint firstItem="WD4-ke-zEo" firstAttribute="top" secondItem="amf-eY-iMA" secondAttribute="bottom" constant="8" id="5sB-IY-5vg"/>
@@ -233,7 +241,7 @@ infront of emam ali mosque Nasr City</string>
                                         <constraint firstItem="B4e-2j-nNp" firstAttribute="top" secondItem="Nqd-4K-P11" secondAttribute="bottom" constant="8" id="YQs-sj-j1d"/>
                                         <constraint firstItem="iQg-Hm-Mdm" firstAttribute="leading" secondItem="WD4-ke-zEo" secondAttribute="trailing" constant="47.5" id="ZAd-G2-JgV"/>
                                         <constraint firstItem="B4e-2j-nNp" firstAttribute="leading" secondItem="nAc-zZ-CXa" secondAttribute="leading" constant="24" id="amu-8h-2oT"/>
-                                        <constraint firstItem="Nqd-4K-P11" firstAttribute="top" secondItem="xNr-yW-vD7" secondAttribute="bottom" constant="8" id="bz8-5Y-M3C"/>
+                                        <constraint firstItem="Nqd-4K-P11" firstAttribute="top" secondItem="xNr-yW-vD7" secondAttribute="bottom" constant="12" id="bz8-5Y-M3C"/>
                                         <constraint firstItem="Iwt-WJ-7Yz" firstAttribute="top" secondItem="KvN-sM-4xJ" secondAttribute="bottom" constant="5" id="eCr-rb-JAJ"/>
                                         <constraint firstAttribute="trailing" secondItem="Iwt-WJ-7Yz" secondAttribute="trailing" constant="40" id="iZU-fu-zWK"/>
                                         <constraint firstItem="xNr-yW-vD7" firstAttribute="top" secondItem="WD4-ke-zEo" secondAttribute="bottom" constant="8" id="oUV-fe-Psl"/>
@@ -268,7 +276,7 @@ text, and a search for</string>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
                                         <constraint firstAttribute="bottom" secondItem="jhF-09-cXi" secondAttribute="bottom" constant="12" id="6N4-H6-9bF"/>
                                         <constraint firstAttribute="trailing" secondItem="jhF-09-cXi" secondAttribute="trailing" constant="24" id="PaN-6N-NO0"/>
@@ -283,8 +291,8 @@ text, and a search for</string>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q1y-QM-q8K">
                                     <rect key="frame" x="20" y="528" width="374" height="140"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="View History Appointment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6p1-mT-MKf">
-                                            <rect key="frame" x="24" y="16" width="197.5" height="20.5"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="View Appointment History" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6p1-mT-MKf">
+                                            <rect key="frame" x="24" y="16" width="205.5" height="20.5"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="20.5" id="t5w-x1-83u"/>
                                             </constraints>
@@ -298,7 +306,7 @@ text, and a search for</string>
                                             <color key="textColor" name="labelGray"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V88-Ru-kWj">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V88-Ru-kWj">
                                             <rect key="frame" x="280" y="102" width="80" height="30"/>
                                             <color key="backgroundColor" name="Blue"/>
                                             <constraints>
@@ -319,7 +327,7 @@ text, and a search for</string>
                                             </connections>
                                         </button>
                                     </subviews>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
                                         <constraint firstItem="6p1-mT-MKf" firstAttribute="leading" secondItem="q1y-QM-q8K" secondAttribute="leading" constant="24" id="34q-B9-ufx"/>
                                         <constraint firstItem="6p1-mT-MKf" firstAttribute="top" secondItem="q1y-QM-q8K" secondAttribute="top" constant="16" id="576-cO-j7d"/>
@@ -333,7 +341,7 @@ text, and a search for</string>
                                     </constraints>
                                 </view>
                             </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="800" id="1as-4z-OJp"/>
                                 <constraint firstItem="nAc-zZ-CXa" firstAttribute="leading" secondItem="zPg-jO-Uc7" secondAttribute="leading" constant="20" id="4h5-ib-Iy7"/>
@@ -357,24 +365,24 @@ text, and a search for</string>
                     </constraints>
                 </scrollView>
             </subviews>
-            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="vPd-li-Yp7" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="E19-us-BPV"/>
                 <constraint firstAttribute="bottom" secondItem="vPd-li-Yp7" secondAttribute="bottom" id="Nl1-af-iuo"/>
                 <constraint firstItem="vPd-li-Yp7" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="XHo-Qm-mf2"/>
                 <constraint firstItem="vPd-li-Yp7" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="YUb-w7-S2H"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="73.913043478260875" y="67.633928571428569"/>
         </view>
     </objects>
     <resources>
-        <image name="ic_Medicine Reminder" width="17.5" height="17.5"/>
+        <image name="Wallet" width="13" height="13.5"/>
+        <image name="clock" width="11.5" height="11.5"/>
         <image name="ic_calender-1" width="11.5" height="12"/>
         <image name="ic_clinic" width="15" height="15"/>
         <image name="ic_location" width="9.5" height="13.5"/>
         <image name="ic_user_contact" width="40" height="40"/>
-        <image name="walletunactive" width="16" height="15.5"/>
         <namedColor name="Blue">
             <color red="0.071000002324581146" green="0.46700000762939453" blue="0.81999999284744263" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -387,5 +395,11 @@ text, and a search for</string>
         <namedColor name="labelGray">
             <color red="0.31000000238418579" green="0.31000000238418579" blue="0.31000000238418579" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

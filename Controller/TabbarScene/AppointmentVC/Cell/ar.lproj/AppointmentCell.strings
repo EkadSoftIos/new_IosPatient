@@ -1,0 +1,24 @@
+
+/* Class = "UILabel"; text = "Confirm"; ObjectID = "B7J-Ig-2BT"; */
+"B7J-Ig-2BT.text" = "Confirm";
+
+/* Class = "UILabel"; text = "Confirm"; ObjectID = "GdD-vg-QSu"; */
+"GdD-vg-QSu.text" = "Confirm";
+
+/* Class = "UILabel"; text = "Unpaid 50 EGP"; ObjectID = "PuO-zI-jqL"; */
+"PuO-zI-jqL.text" = "Unpaid 50 EGP";
+
+/* Class = "UIButton"; normalTitle = "Starting Video"; ObjectID = "QMN-NX-2LQ"; */
+"QMN-NX-2LQ.normalTitle" = "بدء الفيدي";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "Ypl-s6-SCp"; */
+"Ypl-s6-SCp.normalTitle" = "الغاء";
+
+/* Class = "UILabel"; text = "09:30 PM - 10:00 PM"; ObjectID = "cUQ-D8-b80"; */
+"cUQ-D8-b80.text" = "09:30 PM - 10:00 PM";
+
+/* Class = "UILabel"; text = "Doctor Ahmed Karim"; ObjectID = "foM-gv-xUS"; */
+"foM-gv-xUS.text" = "Doctor Ahmed Karim";
+
+/* Class = "UILabel"; text = "Clinic Consultation"; ObjectID = "zsf-j8-azk"; */
+"zsf-j8-azk.text" = "Clinic Consultation";

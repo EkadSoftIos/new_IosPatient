@@ -16,7 +16,8 @@ target 'E4 Patient' do
 #   pod 'SwiftMessages'
    pod 'SwiftEntryKit'
    pod 'TransitionButton'
-   
+   pod 'GoogleSignIn', '~> 5.0.2'
+
    pod 'FSPagerView'
    pod 'RangeSeekSlider'
    pod 'Cosmos'
@@ -26,9 +27,14 @@ target 'E4 Patient' do
 #   pod 'ImagePicker'
    pod 'KafkaRefresh'
 
-pod 'Firebase/Auth'
 pod 'Firebase/Firestore'
+pod 'Firebase'
 pod 'Firebase/Analytics'
+pod 'FirebaseCore'
+pod 'Firebase/Auth'
+pod 'Firebase/Database'
+pod 'Firebase/Storage'
+pod 'Firebase/Messaging'
 
 pod 'FacebookSDK'
 pod 'FacebookSDK/LoginKit'
@@ -38,6 +44,9 @@ pod 'FBSDKMessengerShareKit'
 pod 'FacebookCore'
 pod 'FacebookLogin'
 pod 'FacebookShare'
+#pod 'GoogleSignIn', '~> 5.0.2'
+
+pod 'MOLH'
 
   target 'E4 PatientTests' do
     inherit! :search_paths

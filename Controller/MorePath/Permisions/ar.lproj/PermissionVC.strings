@@ -1,0 +1,72 @@
+
+/* Class = "UILabel"; text = "Choose some Doctors"; ObjectID = "02m-SL-p6E"; */
+"02m-SL-p6E.text" = "اختر بعض الأطباء";
+
+/* Class = "UITextField"; placeholder = "Entity"; ObjectID = "26e-zm-iEH"; */
+"26e-zm-iEH.placeholder" = "كيان";
+
+/* Class = "UILabel"; text = "Entity"; ObjectID = "494-DI-5Gh"; */
+"494-DI-5Gh.text" = "كيان";
+
+/* Class = "UILabel"; text = "Social History"; ObjectID = "6Yf-4F-gc3"; */
+"6Yf-4F-gc3.text" = "التاريخ الاجتماعي";
+
+/* Class = "UITextField"; placeholder = "Healthcare Providers"; ObjectID = "DN0-Vz-dJe"; */
+"DN0-Vz-dJe.placeholder" = "مقدمي الرعاية الصحية";
+
+/* Class = "UILabel"; text = "Family History"; ObjectID = "ImK-az-6O8"; */
+"ImK-az-6O8.text" = "تاريخ العائلة";
+
+/* Class = "UILabel"; text = "Medical Reports"; ObjectID = "Inc-q0-Htx"; */
+"Inc-q0-Htx.text" = "التقارير الطبية";
+
+/* Class = "UITextField"; placeholder = "Main Speciality"; ObjectID = "NKB-OB-uoD"; */
+"NKB-OB-uoD.placeholder" = "التخصص الرئيسي";
+
+/* Class = "UILabel"; text = "Healthcare Providers"; ObjectID = "OrW-ee-80U"; */
+"OrW-ee-80U.text" = "مقدمي الرعاية الصحية";
+
+/* Class = "UILabel"; text = "Main Speciality"; ObjectID = "QuN-ha-zLp"; */
+"QuN-ha-zLp.text" = "التخصص الرئيسي";
+
+/* Class = "UILabel"; text = "Allow For"; ObjectID = "WBn-V3-49O"; */
+"WBn-V3-49O.text" = "السماح ل";
+
+/* Class = "UILabel"; text = "Emergency Contacts"; ObjectID = "XZu-8i-MtA"; */
+"XZu-8i-MtA.text" = "جهة اتصال للطوارئ";
+
+/* Class = "UILabel"; text = "Allow All Doctors"; ObjectID = "Xce-jp-EFA"; */
+"Xce-jp-EFA.text" = "يسمح لجميع الأطباء";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "a07-1C-aDc"; */
+"a07-1C-aDc.normalTitle" = "حفظ";
+
+/* Class = "UILabel"; text = "Patient choose which healthcare providers view his profile"; ObjectID = "aDN-5h-rzQ"; */
+"aDN-5h-rzQ.text" = "يختار المريض مقدمي الرعاية الصحية الذين يشاهدون ملفه الشخصي";
+
+/* Class = "UILabel"; text = "Health Profile"; ObjectID = "bP6-sR-Wjv"; */
+"bP6-sR-Wjv.text" = "الملف الصحي";
+
+/* Class = "UILabel"; text = "Allergies"; ObjectID = "d0I-e7-ejP"; */
+"d0I-e7-ejP.text" = "الحساسية";
+
+/* Class = "UIButton"; normalTitle = " All"; ObjectID = "h3b-1j-one"; */
+"h3b-1j-one.normalTitle" = " الكل";
+
+/* Class = "UILabel"; text = "Filter Provider By"; ObjectID = "hrt-Du-MNK"; */
+"hrt-Du-MNK.text" = "تصفية مزود حسب";
+
+/* Class = "UIButton"; normalTitle = " All"; ObjectID = "i8f-rN-Gwn"; */
+"i8f-rN-Gwn.normalTitle" = " الكل";
+
+/* Class = "UILabel"; text = "Surgery / Implants"; ObjectID = "kH0-be-1tf"; */
+"kH0-be-1tf.text" = "الجراحة / يزرع";
+
+/* Class = "UILabel"; text = "Diseases / Conditions"; ObjectID = "kt3-Nm-OIJ"; */
+"kt3-Nm-OIJ.text" = "الأمراض / الحالات";
+
+/* Class = "UILabel"; text = "Medications"; ObjectID = "rpx-0e-09d"; */
+"rpx-0e-09d.text" = "الأدوية";
+
+/* Class = "UILabel"; text = "Basic Profile"; ObjectID = "s9G-Ck-tii"; */
+"s9G-Ck-tii.text" = "الملف الشخصي الأساسي";
