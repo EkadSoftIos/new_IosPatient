@@ -15,6 +15,7 @@ typealias Image = UIImage
 
 //MARK: View -
 protocol OtherProvidersListViewProtocol: AnyObject {
+    var userLocation:String { get set }
     var searchResultText:String { get set }
     var presenter: OtherProvidersListPresenterProtocol!  { get set }
     /**
@@ -22,6 +23,7 @@ protocol OtherProvidersListViewProtocol: AnyObject {
      */
 
     func reloadData()
+    func showLoading()
     func setEP(display: EPrescriptionDisplay)
     func showMessageAlert(title:String, message:String)
 }
@@ -36,6 +38,7 @@ class OtherProvidersListVC: UIViewController {
     @IBOutlet weak var doctorNameLabel: UILabel!
     @IBOutlet weak var docAvatarImgView: UIImageView!
     @IBOutlet weak var searchResultLabel: UILabel!
+    @IBOutlet weak var userLocationLabel: UILabel!
     var presenter: OtherProvidersListPresenterProtocol!
     
     var type:MSType{
@@ -81,11 +84,6 @@ class OtherProvidersListVC: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
     }
-    
-//    let alert = DeleteAlertVC()
-//    alert.hander = hander
-//    alert.message = "Are you sure to remove the product from the basket ?".localized
-
 
     @IBAction func filterCityBtnTapped(_ sender: UIButton) {
         let alert = FilterAlertVC()
@@ -100,6 +98,9 @@ class OtherProvidersListVC: UIViewController {
     }
     
     @IBAction func chooseCityBtnTapped(_ sender: UIButton) {
+        let vc = AULocationVC()
+        vc.type = .countries
+        navigationController?.pushViewController(vc, animated: true)
         
     }
     
@@ -111,6 +112,11 @@ class OtherProvidersListVC: UIViewController {
 // MARK: - Extensions -
 // MARK: - OtherProvidersListViewProtocol -
 extension OtherProvidersListVC: OtherProvidersListViewProtocol {
+    
+    var userLocation: String{
+        get { userLocationLabel.text ?? "" }
+        set { userLocationLabel.text = newValue }
+    }
     
     var searchResultText: String {
         get { searchResultLabel.text ?? "" }
@@ -137,10 +143,16 @@ extension OtherProvidersListVC: OtherProvidersListViewProtocol {
         docAvatarImgView.kf.setImage(with: display.imageURL, placeholder: UIImage(named: "ProfileImage"))
     }
     
+    func showLoading(){
+        showUniversalLoadingView(true)
+        tableView.footRefreshControl.resumeRefreshAvailable()
+    }
+    
     private func stopLoading(){
         showUniversalLoadingView(false)
         tableView.endRefreshing(presenter.canFetchMore)
     }
+    
 }
 
 // MARK: -  UITableViewDelegate, UITableViewDataSource -

@@ -13,18 +13,15 @@ typealias URLs = NetworkURL.URLs
 
 class NetworkURL{
         
-    enum URLTypes {
-        case otherProviderDashboard(MSOPServicesRequest)
-        case searchServiceListForPatient(MSOPServicesRequest)
-        case ePrescriptions(EPrescriptionRequest)
-        case otherProviders(OPRequest)
-    }
-    
     enum URLs{
         // MARK: - Private properties -
+        //rootURL = "https://e4clinicdevapi.ekadsoft.org/api/"
         private static let rootURL = Constants.baseURL
         private static let otherProvider = "\(rootURL)OtherProvider/"
+        private static let lookup = "\(rootURL)Lookup/"
         
+        
+        // Lookup/
         // MARK: - public properties -
         public static let baseURLImage = "https://e4clinicdevapi.ekadsoft.org/"
         public static let otherProviderDashboard:String =
@@ -35,6 +32,16 @@ class NetworkURL{
             "\(otherProvider)GetPrescriptions"
         public static let otherProviders:String =
             "\(otherProvider)OtherProvidersSearch"
+        public static let availableCountries:String =
+            "\(lookup)Country_get_all_full"
+    }
+    
+    enum URLTypes {
+        case otherProviderDashboard(MSOPServicesRequest)
+        case searchServiceListForPatient(MSOPServicesRequest)
+        case ePrescriptions(EPrescriptionRequest)
+        case otherProviders(OPRequest)
+        case availableCountries
     }
     
     // MARK: - Private properties -
@@ -60,13 +67,15 @@ class NetworkURL{
             return URL(string:  "\(URLs.ePrescriptions)")
         case .otherProviders(_):
             return URL(string:  "\(URLs.otherProviders)")
+        case .availableCountries:
+            return URL(string:  "\(URLs.availableCountries)")
         }
     }
     
     // MARK: - method -
     var method:HTTPMethod{
         switch self.type {
-        case .otherProviderDashboard(_):
+        case .otherProviderDashboard(_), .availableCountries :
             return .get
         case
                 .searchServiceListForPatient(_),
@@ -87,6 +96,8 @@ class NetworkURL{
             return epRequest.dictionary
         case .otherProviders(let opRequest):
             return opRequest.dictionary
+        case .availableCountries:
+            return nil
         }
     }
     
@@ -99,7 +110,8 @@ class NetworkURL{
                 .otherProviderDashboard(_),
                 .searchServiceListForPatient(_),
                 .ePrescriptions(_),
-                .otherProviders(_):
+                .otherProviders(_),
+                .availableCountries:
             return .authHeaderIfLogin
         }
     }
@@ -112,7 +124,8 @@ class NetworkURL{
         case
                 .searchServiceListForPatient(_),
                 .ePrescriptions(_),
-                .otherProviders(_):
+                .otherProviders(_),
+                .availableCountries:
             return JSONEncoding.default            
         }
     }

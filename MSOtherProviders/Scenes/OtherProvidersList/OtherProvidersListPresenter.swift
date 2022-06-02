@@ -7,10 +7,11 @@
 //
 
 import Foundation
+import SKCountryPicker
 
 
 enum RequestType {
-    case uploadImage(Image)
+    case uploadImage([Image])
     case services([MedicalService])
     case eprescription(EPrescription)
 }
@@ -29,6 +30,7 @@ protocol OtherProvidersListPresenterProtocol: AnyObject {
     func config(cell:OtherProviderCellProtocol, indexPath:IndexPath)
     func loadMore()
     func sortList(accordingTo sort:SortType)
+    func userLocation(country:ULCountry, city:City, area:Area)
 }
 
 class OtherProvidersListPresenter {
@@ -114,11 +116,31 @@ extension OtherProvidersListPresenter: OtherProvidersListPresenterProtocol {
         fetchOPData()
     }
     
+    func resetAndFetch(){
+        view?.showLoading()
+        fetchOPData()
+    }
+    
+    // MARK: - sortList -
     func sortList(accordingTo sort:SortType){
         opBranchesList.removeAll()
         opRequest.pageNum! = 1
         opRequest.sortType = sort
-        fetchOPData()
+        resetAndFetch()
+    }
+    
+    
+    // MARK: - userLocation -
+    func userLocation(country:ULCountry, city:City, area:Area) {
+        view?.userLocation = city.nameLocalized
+        opBranchesList.removeAll()
+        opRequest.pageNum! = 1
+        opRequest.latitude = nil
+        opRequest.longitude = nil
+        opRequest.countryfk = country.countryID
+        opRequest.cityFk = city.cityID
+        opRequest.areaFk = area.areaID
+        resetAndFetch()
     }
     
     // MARK: - config -
@@ -150,7 +172,7 @@ extension OtherProvidersListPresenter{
                 searchResultText.append(contentsOf: " + \(ep.services.count - 1) \(pageType == .labs ? "Tests".localized:"Rays".localized)")
             }
             view?.searchResultText = searchResultText
-        case .uploadImage(let image):
+        case .uploadImage(let images):
             let searchResultText = "\("Search Result for".localized) \("uploaded image".localized)"
             
             view?.searchResultText = searchResultText
