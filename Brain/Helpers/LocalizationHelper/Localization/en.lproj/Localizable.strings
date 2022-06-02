@@ -211,3 +211,35 @@
 "Doctor has been removed from favorites list"="Doctor has been removed from favorites list";
 "Doctor has been added to favorites list"="Doctor has been added to favorites list";
 "Your Location"="Your Location";
+
+
+//MSOtherProviders
+"Labs"  = "Labs";
+"Rays" = "Rays";
+"Centers" = "Centers";
+"X-Rays" = "X-Rays";
+"Search by test name" = "Search by test name";
+"Search by rays name" = "Search by rays name";
+"Find Tests" = "Find Tests";
+"Find Rays" = "Find Rays";
+"Labs Search" = "Labs Search";
+"Rays Search" = "Rays Search";
+"Find Labs" = "Find Labs";
+"Find Centers" = "Find Centers";
+"Error" = "Error";
+"E-Prescriptions" = "E-Prescriptions";
+"Please choose at least one" = "Please choose at least one";
+"EGP" = "EGP";
+"Services" = "Services";
+"Search Result for" = "Search Result for";
+"Tests" = "Tests";
+"Rays" = "Rays";
+"uploaded image" = "uploaded image";
+"Highest Discount" = "Highest Discount";
+"Lowest Discount" = "Lowest Discount";
+"Low To High Price" = "Low To High Price";
+"High To Low Price" = "High To Low Price";
+"Please select filter" = "Please select filter";
+"Select Area"  = "Select Area";
+"Select City"  = "Select City";
+"Select Country" = "Select Country";

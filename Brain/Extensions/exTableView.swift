@@ -6,6 +6,7 @@
 //
 
 import UIKit
+
 extension UITableView {
     
    func reloadAnimationTable(){
@@ -160,7 +161,6 @@ extension UITableView {
 //            self.backgroundView = nil
             //self.separatorStyle = .singleLine
         }
-    
     
     
 }

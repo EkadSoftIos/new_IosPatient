@@ -96,7 +96,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate , UNUserNotificationCenter
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         GIDSignIn.sharedInstance().delegate = self
 
-       // let attributes = [NSAttributedString.Key.font:  UIFont(name: "Helvetica-Bold", size: 0.1)!, NSAttributedString.Key.foregroundColor: UIColor.clear]
+        Languagee.language = .english
+
+        // let attributes = [NSAttributedString.Key.font:  UIFont(name: "Helvetica-Bold", size: 0.1)!, NSAttributedString.Key.foregroundColor: UIColor.clear]
 
         //setupTabbar()
       //  window?.rootViewController = LoginVC()

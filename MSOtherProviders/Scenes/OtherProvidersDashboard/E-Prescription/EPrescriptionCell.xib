@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="font_bold.TTF">
+            <string>SegoeUI-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="EPrescriptionCell" rowHeight="102" id="KGk-i7-Jjw" customClass="EPrescriptionCell" customModule="E4clinic" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="354" height="102"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="354" height="102"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a08-JK-6dh">
+                        <rect key="frame" x="20" y="10" width="314" height="80"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="Ycn-5G-D58">
+                                <rect key="frame" x="10" y="10" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Ycn-5G-D58" secondAttribute="height" multiplier="1:1" id="alD-Ii-3am"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OGQ-oo-D2c">
+                                <rect key="frame" x="273" y="49" width="36" height="21"/>
+                                <color key="backgroundColor" red="0.1333333333" green="0.49019607840000001" blue="0.81176470590000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Labs" buttonSize="mini">
+                                    <fontDescription key="titleFontDescription" name="SegoeUI" family="Segoe UI" pointSize="8"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="msBtnBtnTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="PuF-u0-07I"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="sDU-T6-Qbd">
+                                <rect key="frame" x="80" y="10" width="183" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E-Prescription Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZo-uf-ZjW">
+                                        <rect key="frame" x="0.0" y="0.0" width="183" height="30"/>
+                                        <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="16"/>
+                                        <color key="textColor" red="0.1333333333" green="0.49019607840000001" blue="0.81176470590000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="24"/>
+                                        </variation>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sep 11, 2020" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ag-D6-gbK">
+                                        <rect key="frame" x="0.0" y="30" width="183" height="30"/>
+                                        <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="14"/>
+                                        <color key="textColor" red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="21"/>
+                                        </variation>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="sDU-T6-Qbd" firstAttribute="top" secondItem="a08-JK-6dh" secondAttribute="top" constant="10" id="03b-Zf-QhT"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Ycn-5G-D58" secondAttribute="bottom" constant="10" id="8Zj-ho-KXr"/>
+                            <constraint firstItem="Ycn-5G-D58" firstAttribute="leading" secondItem="a08-JK-6dh" secondAttribute="leading" constant="10" id="ACG-lz-BtW"/>
+                            <constraint firstItem="OGQ-oo-D2c" firstAttribute="leading" secondItem="sDU-T6-Qbd" secondAttribute="trailing" constant="10" id="Iep-5C-gO4"/>
+                            <constraint firstItem="sDU-T6-Qbd" firstAttribute="leading" secondItem="Ycn-5G-D58" secondAttribute="trailing" constant="10" id="eEW-tg-ZbG"/>
+                            <constraint firstItem="Ycn-5G-D58" firstAttribute="top" secondItem="a08-JK-6dh" secondAttribute="top" constant="10" id="ef9-iB-gaG"/>
+                            <constraint firstAttribute="bottom" secondItem="OGQ-oo-D2c" secondAttribute="bottom" constant="10" id="kP5-PC-wrP"/>
+                            <constraint firstAttribute="bottom" secondItem="sDU-T6-Qbd" secondAttribute="bottom" constant="10" id="lTQ-Nn-7QM"/>
+                            <constraint firstAttribute="trailing" secondItem="OGQ-oo-D2c" secondAttribute="trailing" constant="5" id="lrL-lh-YRK"/>
+                            <constraint firstItem="Ycn-5G-D58" firstAttribute="width" secondItem="a08-JK-6dh" secondAttribute="width" multiplier="0.2" id="xgn-xa-fKP"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="a08-JK-6dh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="0qL-5b-GO4"/>
+                    <constraint firstAttribute="bottom" secondItem="a08-JK-6dh" secondAttribute="bottom" constant="10" id="4E9-zp-8nr"/>
+                    <constraint firstItem="a08-JK-6dh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="Sag-30-Cju"/>
+                    <constraint firstAttribute="trailing" secondItem="a08-JK-6dh" secondAttribute="trailing" constant="20" id="z3i-X3-FT1"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="avatarImgView" destination="Ycn-5G-D58" id="kDI-qj-qtG"/>
+                <outlet property="dateLabel" destination="5Ag-D6-gbK" id="XZ1-U9-Uan"/>
+                <outlet property="msBtn" destination="OGQ-oo-D2c" id="u3P-ed-IVk"/>
+                <outlet property="nameLabel" destination="HZo-uf-ZjW" id="fNs-NH-ea9"/>
+                <outlet property="shadowView" destination="a08-JK-6dh" id="ckO-qs-84o"/>
+            </connections>
+            <point key="canvasLocation" x="162.31884057971016" y="101.78571428571428"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="avatar" width="60" height="60"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
