@@ -22,7 +22,7 @@ extension String{
         let code = Languagee.language.rawValue
         calendar.locale = Locale(identifier: code)
         formatter.calendar = calendar
-        formatter.dateFormat = "MM dd, yyyy"
+        formatter.dateFormat = "MMM dd, yyyy"
         formatter.locale = Locale(identifier: code)
         let dateString = formatter.string(from: date)
         return dateString

@@ -98,7 +98,10 @@ class OPsDashboardVC: UIViewController {
     
     
     @IBAction func uploadEPrescription(_ sender: UIButton) {
-        showBottomSheet()
+        //showBottomSheet()
+        let imagePickerController = ImagePickerController()
+        imagePickerController.delegate = self
+        present(imagePickerController, animated: true)
     }
     
     
@@ -220,29 +223,35 @@ extension OPsDashboardVC : FSPagerViewDelegate, FSPagerViewDataSource {
     
 }
 
+
+extension OPsDashboardVC: ImagePickerDelegate{
+    func wrapperDidPress(_ imagePicker: ImagePickerController, images: [UIImage]) {
+        
+    }
+    
+    func doneButtonDidPress(_ imagePicker: ImagePickerController, images: [UIImage]) {
+        if images.isEmpty { return }
+        showOtherProvidersList(request: .uploadImage(images))
+    }
+    
+    func cancelButtonDidPress(_ imagePicker: ImagePickerController) {
+        
+    }
+    
+    
+}
+
+
 extension OPsDashboardVC: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
         picker.dismiss(animated: true)
         if let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage{
-            showOtherProvidersList(request: .uploadImage(image))
+            showOtherProvidersList(request: .uploadImage([image]))
         }else if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
-            showOtherProvidersList(request: .uploadImage(image))
+            showOtherProvidersList(request: .uploadImage([image]))
         }
-        
-        
-//        picker.dismiss(animated: true)
-//        func sendImage(_ image:UIImage){
-//            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-//                self.showOtherProvidersList(request: .uploadImage(image))
-//            }
-//        }
-//        if let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage{
-//            sendImage(image)
-//        }else if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
-//            sendImage(image)
-//        }
     }
     
     

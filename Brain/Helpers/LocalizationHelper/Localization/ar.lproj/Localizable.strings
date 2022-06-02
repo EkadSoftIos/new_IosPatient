@@ -234,3 +234,6 @@
 "Low To High Price" = "السعر من الأقل للأكبر";
 "High To Low Price" = "السعر من الأكبر للأقل";
 "Please select filter" = "الرجاء اختر تصفية";
+"Select Area"  = "إختر المنطقة";
+"Select City"  = "إختر المدينة";
+"Select Country" = "إختر الدولة";
