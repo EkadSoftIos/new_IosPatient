@@ -57,7 +57,7 @@ class AULocationVC: UIViewController {
     
     func setupLayoutUI() {
         showUniversalLoadingView(true)
-        shadowViews.forEach({ $0.applyShadow(0.3) })
+        shadowViews.forEach({ $0.applyShadow(0.15) })
         tableView.register(UINib(nibName: "AULocationCell", bundle: nil), forCellReuseIdentifier: "AULocationCell")
         tableView.delegate = self
         tableView.dataSource = self
