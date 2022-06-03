@@ -104,6 +104,35 @@
 		063023D9284609F40085FD59 /* FilterAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = 063023DB284609F40085FD59 /* FilterAlert.xib */; };
 		0697FED82844AA01001E63F4 /* OtherProviderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0697FEDA2844AA01001E63F4 /* OtherProviderCell.xib */; };
 		0697FEDF2844AA28001E63F4 /* OtherProvidersList.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0697FEE12844AA28001E63F4 /* OtherProvidersList.xib */; };
+		06D84EA52849BB8E00DEF1D1 /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06D84EA32849BB8E00DEF1D1 /* LoginVC.xib */; };
+		06D84EAE2849BBCA00DEF1D1 /* SocialPhoneVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D84EAA2849BBCA00DEF1D1 /* SocialPhoneVC.swift */; };
+		06D84EAF2849BBCA00DEF1D1 /* SocialPhoneVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06D84EAB2849BBCA00DEF1D1 /* SocialPhoneVC.xib */; };
+		06D84EB32849BC3900DEF1D1 /* SignUpVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06D84EB12849BC3900DEF1D1 /* SignUpVC.xib */; };
+		06D84EB72849BC6D00DEF1D1 /* ForgetPassVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06D84EB52849BC6C00DEF1D1 /* ForgetPassVC.xib */; };
+		06D84EBB2849BC8600DEF1D1 /* ConfirmAccountVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06D84EB92849BC8600DEF1D1 /* ConfirmAccountVC.xib */; };
+		06D84EBF2849BCB500DEF1D1 /* AppointmentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06D84EBD2849BCB500DEF1D1 /* AppointmentCell.xib */; };
+		06D84EC32849BCDE00DEF1D1 /* AppointmentVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06D84EC12849BCDD00DEF1D1 /* AppointmentVC.xib */; };
+		06D84EC72849BD1500DEF1D1 /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06D84EC52849BD1400DEF1D1 /* HomeVC.xib */; };
+		06D84ECB2849BD5700DEF1D1 /* HelpSupportCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06D84EC92849BD5700DEF1D1 /* HelpSupportCell.xib */; };
+		06D84ECE2849BEB800DEF1D1 /* ForgetPasswordVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06D84ECC2849BEB800DEF1D1 /* ForgetPasswordVC.xib */; };
+		06D84ED22849BEDD00DEF1D1 /* PermissionVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06D84ED02849BEDD00DEF1D1 /* PermissionVC.xib */; };
+		06D84ED62849BF2100DEF1D1 /* FollowUpCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06D84ED42849BF2000DEF1D1 /* FollowUpCell.xib */; };
+		06D84EDA2849BF6A00DEF1D1 /* AttachementTBCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06D84ED82849BF6A00DEF1D1 /* AttachementTBCell.xib */; };
+		06D84EDE2849BF9100DEF1D1 /* EditProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06D84EDC2849BF9000DEF1D1 /* EditProfileVC.xib */; };
+		06D84EE22849BFCF00DEF1D1 /* ProfileDataPopUpVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06D84EE02849BFCE00DEF1D1 /* ProfileDataPopUpVC.xib */; };
+		06D84EE62849C00100DEF1D1 /* ProfileSummaryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06D84EE42849C00000DEF1D1 /* ProfileSummaryCell.xib */; };
+		06D84EEA2849C02500DEF1D1 /* ProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06D84EE82849C02400DEF1D1 /* ProfileCell.xib */; };
+		06D84EEE2849C04900DEF1D1 /* ProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06D84EEC2849C04900DEF1D1 /* ProfileVC.xib */; };
+		06D84EF22849C0DA00DEF1D1 /* AddAddressVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06D84EF02849C0DA00DEF1D1 /* AddAddressVC.xib */; };
+		06D84EF62849C10600DEF1D1 /* AllAddressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06D84EF42849C10600DEF1D1 /* AllAddressCell.xib */; };
+		06D84F042849C20800DEF1D1 /* ChangeLanguageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D84EFB2849C20600DEF1D1 /* ChangeLanguageRouter.swift */; };
+		06D84F052849C20800DEF1D1 /* ChangeLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D84EFC2849C20600DEF1D1 /* ChangeLanguage.swift */; };
+		06D84F062849C20800DEF1D1 /* ChangeLanguageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D84EFD2849C20600DEF1D1 /* ChangeLanguageVC.swift */; };
+		06D84F072849C20900DEF1D1 /* ChangeLanguageVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06D84EFE2849C20600DEF1D1 /* ChangeLanguageVC.xib */; };
+		06D84F082849C20900DEF1D1 /* ChangeLanguageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D84F002849C20600DEF1D1 /* ChangeLanguageInteractor.swift */; };
+		06D84F092849C20900DEF1D1 /* ChangeLanguageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D84F012849C20600DEF1D1 /* ChangeLanguageModel.swift */; };
+		06D84F0A2849C20900DEF1D1 /* ChangeLanguagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D84F022849C20600DEF1D1 /* ChangeLanguagePresenter.swift */; };
+		06D84F0C2849CBC000DEF1D1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 61980655281C01E0009CC5CB /* GoogleService-Info.plist */; };
 		06F932BE28485F2B00DAFB3D /* AULocationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F932BB28485F2B00DAFB3D /* AULocationPresenter.swift */; };
 		06F932BF28485F2B00DAFB3D /* AULocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F932BC28485F2B00DAFB3D /* AULocationVC.swift */; };
 		06F932C22848607100DAFB3D /* UserLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F932C12848607100DAFB3D /* UserLocation.swift */; };
@@ -142,22 +171,12 @@
 		616178602806C578005EE4C6 /* LogOutModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6161785A2806C578005EE4C6 /* LogOutModel.swift */; };
 		616178612806C578005EE4C6 /* LogOutInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6161785B2806C578005EE4C6 /* LogOutInteractor.swift */; };
 		616178622806C578005EE4C6 /* LogOutPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6161785C2806C578005EE4C6 /* LogOutPresenter.swift */; };
-		6168CD7428449673008C5C84 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6168CD73284495CF008C5C84 /* GoogleService-Info.plist */; };
-		6168CD7B28460C76008C5C84 /* SocialPhoneVC.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6168CD7628460C67008C5C84 /* SocialPhoneVC.strings */; };
-		6168CD7C28460C76008C5C84 /* SocialPhoneVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6168CD7828460C67008C5C84 /* SocialPhoneVC.swift */; };
-		6168CD7D28460C76008C5C84 /* SocialPhoneVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6168CD7928460C67008C5C84 /* SocialPhoneVC.xib */; };
 		617E26A62823CEFF009D8ABC /* NotificationsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617E26A22823CEFF009D8ABC /* NotificationsVC.swift */; };
 		617E26A72823CEFF009D8ABC /* NotificationsTBCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617E26A42823CEFF009D8ABC /* NotificationsTBCell.swift */; };
 		617E26A82823CEFF009D8ABC /* NotificationsTBCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 617E26A52823CEFF009D8ABC /* NotificationsTBCell.xib */; };
 		617E26AB2823CF15009D8ABC /* NotificationCountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617E26A92823CF14009D8ABC /* NotificationCountModel.swift */; };
 		617E26AC2823CF15009D8ABC /* NotificationListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617E26AA2823CF14009D8ABC /* NotificationListModel.swift */; };
 		619182EF26F65B4600B6A796 /* Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = 619182EE26F65B4600B6A796 /* Animation.m */; };
-		619358922841006000B7F7A1 /* ChangeLanguageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6193588C2841006000B7F7A1 /* ChangeLanguageRouter.swift */; };
-		619358932841006000B7F7A1 /* ChangeLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6193588D2841006000B7F7A1 /* ChangeLanguage.swift */; };
-		619358942841006000B7F7A1 /* ChangeLanguageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6193588E2841006000B7F7A1 /* ChangeLanguageVC.swift */; };
-		619358952841006000B7F7A1 /* ChangeLanguageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6193588F2841006000B7F7A1 /* ChangeLanguageInteractor.swift */; };
-		619358962841006000B7F7A1 /* ChangeLanguageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 619358902841006000B7F7A1 /* ChangeLanguageModel.swift */; };
-		619358972841006100B7F7A1 /* ChangeLanguagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 619358912841006000B7F7A1 /* ChangeLanguagePresenter.swift */; };
 		61A7EF362830D9940027775E /* YBTextPickerDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A7EF2D2830D9920027775E /* YBTextPickerDataModel.swift */; };
 		61A7EF372830D9940027775E /* YBTextPickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61A7EF2F2830D9920027775E /* YBTextPickerCell.xib */; };
 		61A7EF382830D9940027775E /* YBTextPickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A7EF302830D9920027775E /* YBTextPickerCell.swift */; };
@@ -518,39 +537,6 @@
 		C434676A2839786B00378565 /* FAQCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C43467682839786B00378565 /* FAQCell.xib */; };
 		C434676C2839795C00378565 /* FAQModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C434676B2839795C00378565 /* FAQModel.swift */; };
 		C434676E283979AD00378565 /* ContactUsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C434676D283979AD00378565 /* ContactUsModel.swift */; };
-		C458109B2843FB980026A9F4 /* ReportServiceListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C458109A2843FB970026A9F4 /* ReportServiceListModel.swift */; };
-		C4BCC959284557E300D04808 /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4BCC95B284557E300D04808 /* LoginVC.xib */; };
-		C4BCC95E284559F200D04808 /* SignUpVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4BCC960284559F200D04808 /* SignUpVC.xib */; };
-		C4BCC96328455B0100D04808 /* ForgetPassVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4BCC96528455B0100D04808 /* ForgetPassVC.xib */; };
-		C4BCC96828455B8E00D04808 /* ConfirmAccountVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4BCC96A28455B8E00D04808 /* ConfirmAccountVC.xib */; };
-		C4BCC96D28455C3100D04808 /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4BCC96F28455C3100D04808 /* HomeVC.xib */; };
-		C4BCC97228455F4100D04808 /* AppointmentVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4BCC97428455F4100D04808 /* AppointmentVC.xib */; };
-		C4BCC97728455F8B00D04808 /* AppointmentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4BCC97928455F8B00D04808 /* AppointmentCell.xib */; };
-		C4BCC97C2845610D00D04808 /* ProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4BCC97E2845610D00D04808 /* ProfileVC.xib */; };
-		C4BCC9822845616E00D04808 /* ProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4BCC9842845616E00D04808 /* ProfileCell.xib */; };
-		C4BCC9872845619100D04808 /* ProfileSummaryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4BCC9892845619100D04808 /* ProfileSummaryCell.xib */; };
-		C4BCC98C284561CA00D04808 /* ProfileDataPopUpVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4BCC98E284561CA00D04808 /* ProfileDataPopUpVC.xib */; };
-		C4BCC9912845628100D04808 /* EditProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4BCC9932845628100D04808 /* EditProfileVC.xib */; };
-		C4BCC9962845636000D04808 /* AttachementTBCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4BCC9982845636000D04808 /* AttachementTBCell.xib */; };
-		C4BCC99B2845638900D04808 /* FollowUpCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4BCC99D2845638900D04808 /* FollowUpCell.xib */; };
-		C4BCC9A02845642E00D04808 /* PermissionVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4BCC9A22845642E00D04808 /* PermissionVC.xib */; };
-		C4BCC9A52845660F00D04808 /* ForgetPasswordVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4BCC9A72845660F00D04808 /* ForgetPasswordVC.xib */; };
-		C4BCC9AA284566A600D04808 /* HelpSupportCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4BCC9AC284566A600D04808 /* HelpSupportCell.xib */; };
-		C4BCC9AF2845672F00D04808 /* ChangeLanguageVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4BCC9B12845672F00D04808 /* ChangeLanguageVC.xib */; };
-		C4BCC9B42845680C00D04808 /* AllAddressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4BCC9B62845680C00D04808 /* AllAddressCell.xib */; };
-		C4BCC9B9284568BF00D04808 /* AddAddressVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4BCC9BB284568BF00D04808 /* AddAddressVC.xib */; };
-		C4D8AF612842B20100D154BE /* FilterReportsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D8AF602842B20100D154BE /* FilterReportsVC.swift */; };
-		C4D8AF662842B27F00D154BE /* AllReportsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D8AF642842B27E00D154BE /* AllReportsCell.swift */; };
-		C4D8AF672842B27F00D154BE /* AllReportsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4D8AF652842B27F00D154BE /* AllReportsCell.xib */; };
-		C4D8AF6A2842B2B100D154BE /* AllReportsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D8AF682842B2B000D154BE /* AllReportsVC.swift */; };
-		C4D8AF6B2842B2B100D154BE /* AllReportsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D8AF692842B2B000D154BE /* AllReportsModel.swift */; };
-		C4D8AF6F2842B42300D154BE /* AddReminderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D8AF6E2842B42300D154BE /* AddReminderVC.swift */; };
-		C4D8AF722842B43800D154BE /* SetReminderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D8AF712842B43800D154BE /* SetReminderVC.swift */; };
-		C4D8AF772842B46700D154BE /* MedicineReminderTBCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4D8AF752842B46500D154BE /* MedicineReminderTBCell.xib */; };
-		C4D8AF782842B46700D154BE /* MedicineReminderTBCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D8AF762842B46700D154BE /* MedicineReminderTBCell.swift */; };
-		C4D8AF7A2842B46E00D154BE /* MedicineReminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D8AF792842B46E00D154BE /* MedicineReminder.swift */; };
-		C7D1DFA17F3335DAA1E147A1 /* Pods_E4_PatientTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FBBBC112BA43A675406D37D /* Pods_E4_PatientTests.framework */; };
-		F42853C9E5210FD787E67E1A /* Pods_E4_Patient_E4_PatientUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D88C023F839EFCAE9AAD7E8 /* Pods_E4_Patient_E4_PatientUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -679,6 +665,54 @@
 		0697FEE02844AA28001E63F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/OtherProvidersList.xib; sourceTree = "<group>"; };
 		0697FEE32844AA7B001E63F4 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/OtherProvidersList.strings; sourceTree = "<group>"; };
 		0697FEE52844AA7D001E63F4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/OtherProvidersList.strings; sourceTree = "<group>"; };
+		06D84EA42849BB8E00DEF1D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LoginVC.xib; sourceTree = "<group>"; };
+		06D84EA62849BBA700DEF1D1 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LoginVC.strings; sourceTree = "<group>"; };
+		06D84EAA2849BBCA00DEF1D1 /* SocialPhoneVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialPhoneVC.swift; sourceTree = "<group>"; };
+		06D84EAC2849BBCA00DEF1D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SocialPhoneVC.xib; sourceTree = "<group>"; };
+		06D84EB02849BC1600DEF1D1 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/SocialPhoneVC.strings; sourceTree = "<group>"; };
+		06D84EB22849BC3900DEF1D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SignUpVC.xib; sourceTree = "<group>"; };
+		06D84EB42849BC4500DEF1D1 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/SignUpVC.strings; sourceTree = "<group>"; };
+		06D84EB62849BC6C00DEF1D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ForgetPassVC.xib; sourceTree = "<group>"; };
+		06D84EB82849BC7800DEF1D1 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/ForgetPassVC.strings; sourceTree = "<group>"; };
+		06D84EBA2849BC8600DEF1D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ConfirmAccountVC.xib; sourceTree = "<group>"; };
+		06D84EBC2849BC9100DEF1D1 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/ConfirmAccountVC.strings; sourceTree = "<group>"; };
+		06D84EBE2849BCB500DEF1D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/AppointmentCell.xib; sourceTree = "<group>"; };
+		06D84EC02849BCC500DEF1D1 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/AppointmentCell.strings; sourceTree = "<group>"; };
+		06D84EC22849BCDD00DEF1D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/AppointmentVC.xib; sourceTree = "<group>"; };
+		06D84EC42849BCEC00DEF1D1 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/AppointmentVC.strings; sourceTree = "<group>"; };
+		06D84EC62849BD1500DEF1D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/HomeVC.xib; sourceTree = "<group>"; };
+		06D84EC82849BD2400DEF1D1 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/HomeVC.strings; sourceTree = "<group>"; };
+		06D84ECA2849BD5700DEF1D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/HelpSupportCell.xib; sourceTree = "<group>"; };
+		06D84ECD2849BEB800DEF1D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ForgetPasswordVC.xib; sourceTree = "<group>"; };
+		06D84ECF2849BECB00DEF1D1 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/ForgetPasswordVC.strings; sourceTree = "<group>"; };
+		06D84ED12849BEDD00DEF1D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/PermissionVC.xib; sourceTree = "<group>"; };
+		06D84ED32849BF0800DEF1D1 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/PermissionVC.strings; sourceTree = "<group>"; };
+		06D84ED52849BF2100DEF1D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/FollowUpCell.xib; sourceTree = "<group>"; };
+		06D84ED72849BF3700DEF1D1 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/FollowUpCell.strings; sourceTree = "<group>"; };
+		06D84ED92849BF6A00DEF1D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/AttachementTBCell.xib; sourceTree = "<group>"; };
+		06D84EDB2849BF7900DEF1D1 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/AttachementTBCell.strings; sourceTree = "<group>"; };
+		06D84EDD2849BF9000DEF1D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/EditProfileVC.xib; sourceTree = "<group>"; };
+		06D84EDF2849BFA200DEF1D1 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/EditProfileVC.strings; sourceTree = "<group>"; };
+		06D84EE12849BFCE00DEF1D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ProfileDataPopUpVC.xib; sourceTree = "<group>"; };
+		06D84EE32849BFE100DEF1D1 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/ProfileDataPopUpVC.strings; sourceTree = "<group>"; };
+		06D84EE52849C00000DEF1D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ProfileSummaryCell.xib; sourceTree = "<group>"; };
+		06D84EE72849C01300DEF1D1 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/ProfileSummaryCell.strings; sourceTree = "<group>"; };
+		06D84EE92849C02400DEF1D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ProfileCell.xib; sourceTree = "<group>"; };
+		06D84EEB2849C03600DEF1D1 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/ProfileCell.strings; sourceTree = "<group>"; };
+		06D84EED2849C04900DEF1D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ProfileVC.xib; sourceTree = "<group>"; };
+		06D84EEF2849C05700DEF1D1 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/ProfileVC.strings; sourceTree = "<group>"; };
+		06D84EF12849C0DA00DEF1D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/AddAddressVC.xib; sourceTree = "<group>"; };
+		06D84EF32849C0F300DEF1D1 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/AddAddressVC.strings; sourceTree = "<group>"; };
+		06D84EF52849C10600DEF1D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/AllAddressCell.xib; sourceTree = "<group>"; };
+		06D84EF72849C11B00DEF1D1 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/AllAddressCell.strings; sourceTree = "<group>"; };
+		06D84EFB2849C20600DEF1D1 /* ChangeLanguageRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeLanguageRouter.swift; sourceTree = "<group>"; };
+		06D84EFC2849C20600DEF1D1 /* ChangeLanguage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeLanguage.swift; sourceTree = "<group>"; };
+		06D84EFD2849C20600DEF1D1 /* ChangeLanguageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeLanguageVC.swift; sourceTree = "<group>"; };
+		06D84EFF2849C20600DEF1D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ChangeLanguageVC.xib; sourceTree = "<group>"; };
+		06D84F002849C20600DEF1D1 /* ChangeLanguageInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeLanguageInteractor.swift; sourceTree = "<group>"; };
+		06D84F012849C20600DEF1D1 /* ChangeLanguageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeLanguageModel.swift; sourceTree = "<group>"; };
+		06D84F022849C20600DEF1D1 /* ChangeLanguagePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeLanguagePresenter.swift; sourceTree = "<group>"; };
+		06D84F0B2849C22C00DEF1D1 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/ChangeLanguageVC.strings; sourceTree = "<group>"; };
 		06F932BB28485F2B00DAFB3D /* AULocationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AULocationPresenter.swift; sourceTree = "<group>"; };
 		06F932BC28485F2B00DAFB3D /* AULocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AULocationVC.swift; sourceTree = "<group>"; };
 		06F932C12848607100DAFB3D /* UserLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocation.swift; sourceTree = "<group>"; };
@@ -721,10 +755,6 @@
 		6161785A2806C578005EE4C6 /* LogOutModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogOutModel.swift; sourceTree = "<group>"; };
 		6161785B2806C578005EE4C6 /* LogOutInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogOutInteractor.swift; sourceTree = "<group>"; };
 		6161785C2806C578005EE4C6 /* LogOutPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogOutPresenter.swift; sourceTree = "<group>"; };
-		6168CD73284495CF008C5C84 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		6168CD7728460C67008C5C84 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/SocialPhoneVC.strings; sourceTree = "<group>"; };
-		6168CD7828460C67008C5C84 /* SocialPhoneVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialPhoneVC.swift; sourceTree = "<group>"; };
-		6168CD7A28460C67008C5C84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SocialPhoneVC.xib; sourceTree = "<group>"; };
 		617E26A22823CEFF009D8ABC /* NotificationsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsVC.swift; sourceTree = "<group>"; };
 		617E26A42823CEFF009D8ABC /* NotificationsTBCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsTBCell.swift; sourceTree = "<group>"; };
 		617E26A52823CEFF009D8ABC /* NotificationsTBCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotificationsTBCell.xib; sourceTree = "<group>"; };
@@ -732,12 +762,7 @@
 		617E26AA2823CF14009D8ABC /* NotificationListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationListModel.swift; sourceTree = "<group>"; };
 		619182ED26F65B4600B6A796 /* Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Animation.h; sourceTree = "<group>"; };
 		619182EE26F65B4600B6A796 /* Animation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Animation.m; sourceTree = "<group>"; };
-		6193588C2841006000B7F7A1 /* ChangeLanguageRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeLanguageRouter.swift; sourceTree = "<group>"; };
-		6193588D2841006000B7F7A1 /* ChangeLanguage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeLanguage.swift; sourceTree = "<group>"; };
-		6193588E2841006000B7F7A1 /* ChangeLanguageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeLanguageVC.swift; sourceTree = "<group>"; };
-		6193588F2841006000B7F7A1 /* ChangeLanguageInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeLanguageInteractor.swift; sourceTree = "<group>"; };
-		619358902841006000B7F7A1 /* ChangeLanguageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeLanguageModel.swift; sourceTree = "<group>"; };
-		619358912841006000B7F7A1 /* ChangeLanguagePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeLanguagePresenter.swift; sourceTree = "<group>"; };
+		61980655281C01E0009CC5CB /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		61A7EF2D2830D9920027775E /* YBTextPickerDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YBTextPickerDataModel.swift; sourceTree = "<group>"; };
 		61A7EF2F2830D9920027775E /* YBTextPickerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YBTextPickerCell.xib; sourceTree = "<group>"; };
 		61A7EF302830D9920027775E /* YBTextPickerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YBTextPickerCell.swift; sourceTree = "<group>"; };
@@ -1107,62 +1132,6 @@
 		C43467682839786B00378565 /* FAQCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FAQCell.xib; sourceTree = "<group>"; };
 		C434676B2839795C00378565 /* FAQModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQModel.swift; sourceTree = "<group>"; };
 		C434676D283979AD00378565 /* ContactUsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsModel.swift; sourceTree = "<group>"; };
-		C458109A2843FB970026A9F4 /* ReportServiceListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportServiceListModel.swift; sourceTree = "<group>"; };
-		C4BCC9582845502E00D04808 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
-		C4BCC95A284557E300D04808 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LoginVC.xib; sourceTree = "<group>"; };
-		C4BCC95D284557E700D04808 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LoginVC.strings; sourceTree = "<group>"; };
-		C4BCC95F284559F200D04808 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SignUpVC.xib; sourceTree = "<group>"; };
-		C4BCC962284559F500D04808 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/SignUpVC.strings; sourceTree = "<group>"; };
-		C4BCC96428455B0100D04808 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ForgetPassVC.xib; sourceTree = "<group>"; };
-		C4BCC96728455B0700D04808 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/ForgetPassVC.strings; sourceTree = "<group>"; };
-		C4BCC96928455B8E00D04808 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ConfirmAccountVC.xib; sourceTree = "<group>"; };
-		C4BCC96C28455B9100D04808 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/ConfirmAccountVC.strings; sourceTree = "<group>"; };
-		C4BCC96E28455C3100D04808 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/HomeVC.xib; sourceTree = "<group>"; };
-		C4BCC97128455C3400D04808 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/HomeVC.strings; sourceTree = "<group>"; };
-		C4BCC97328455F4100D04808 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/AppointmentVC.xib; sourceTree = "<group>"; };
-		C4BCC97628455F4500D04808 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/AppointmentVC.strings; sourceTree = "<group>"; };
-		C4BCC97828455F8B00D04808 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/AppointmentCell.xib; sourceTree = "<group>"; };
-		C4BCC97B28455F9400D04808 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/AppointmentCell.strings; sourceTree = "<group>"; };
-		C4BCC97F2845611200D04808 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ProfileVC.xib; sourceTree = "<group>"; };
-		C4BCC9812845612C00D04808 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/ProfileVC.strings; sourceTree = "<group>"; };
-		C4BCC9832845616E00D04808 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ProfileCell.xib; sourceTree = "<group>"; };
-		C4BCC9862845617B00D04808 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/ProfileCell.strings; sourceTree = "<group>"; };
-		C4BCC9882845619100D04808 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ProfileSummaryCell.xib; sourceTree = "<group>"; };
-		C4BCC98B2845619500D04808 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/ProfileSummaryCell.strings; sourceTree = "<group>"; };
-		C4BCC98D284561CA00D04808 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ProfileDataPopUpVC.xib; sourceTree = "<group>"; };
-		C4BCC990284561D000D04808 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/ProfileDataPopUpVC.strings; sourceTree = "<group>"; };
-		C4BCC9922845628100D04808 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/EditProfileVC.xib; sourceTree = "<group>"; };
-		C4BCC9952845628400D04808 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/EditProfileVC.strings; sourceTree = "<group>"; };
-		C4BCC9972845636000D04808 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/AttachementTBCell.xib; sourceTree = "<group>"; };
-		C4BCC99A2845636800D04808 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/AttachementTBCell.strings; sourceTree = "<group>"; };
-		C4BCC99C2845638900D04808 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/FollowUpCell.xib; sourceTree = "<group>"; };
-		C4BCC99F2845638E00D04808 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/FollowUpCell.strings; sourceTree = "<group>"; };
-		C4BCC9A12845642E00D04808 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/PermissionVC.xib; sourceTree = "<group>"; };
-		C4BCC9A42845647E00D04808 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/PermissionVC.strings; sourceTree = "<group>"; };
-		C4BCC9A62845660F00D04808 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ForgetPasswordVC.xib; sourceTree = "<group>"; };
-		C4BCC9A92845661400D04808 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/ForgetPasswordVC.strings; sourceTree = "<group>"; };
-		C4BCC9AB284566A600D04808 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/HelpSupportCell.xib; sourceTree = "<group>"; };
-		C4BCC9AE284566AC00D04808 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/HelpSupportCell.strings; sourceTree = "<group>"; };
-		C4BCC9B02845672F00D04808 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ChangeLanguageVC.xib; sourceTree = "<group>"; };
-		C4BCC9B32845673400D04808 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/ChangeLanguageVC.strings; sourceTree = "<group>"; };
-		C4BCC9B52845680C00D04808 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/AllAddressCell.xib; sourceTree = "<group>"; };
-		C4BCC9B82845683100D04808 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/AllAddressCell.strings; sourceTree = "<group>"; };
-		C4BCC9BA284568BF00D04808 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/AddAddressVC.xib; sourceTree = "<group>"; };
-		C4BCC9BD284568C300D04808 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/AddAddressVC.strings; sourceTree = "<group>"; };
-		C4D8AF602842B20100D154BE /* FilterReportsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterReportsVC.swift; sourceTree = "<group>"; };
-		C4D8AF642842B27E00D154BE /* AllReportsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllReportsCell.swift; sourceTree = "<group>"; };
-		C4D8AF652842B27F00D154BE /* AllReportsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AllReportsCell.xib; sourceTree = "<group>"; };
-		C4D8AF682842B2B000D154BE /* AllReportsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllReportsVC.swift; sourceTree = "<group>"; };
-		C4D8AF692842B2B000D154BE /* AllReportsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllReportsModel.swift; sourceTree = "<group>"; };
-		C4D8AF6E2842B42300D154BE /* AddReminderVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddReminderVC.swift; sourceTree = "<group>"; };
-		C4D8AF712842B43800D154BE /* SetReminderVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetReminderVC.swift; sourceTree = "<group>"; };
-		C4D8AF752842B46500D154BE /* MedicineReminderTBCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MedicineReminderTBCell.xib; sourceTree = "<group>"; };
-		C4D8AF762842B46700D154BE /* MedicineReminderTBCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicineReminderTBCell.swift; sourceTree = "<group>"; };
-		C4D8AF792842B46E00D154BE /* MedicineReminder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicineReminder.swift; sourceTree = "<group>"; };
-		D31BA5E7F746A4EE0F969D94 /* Pods-E4 PatientTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-E4 PatientTests.release.xcconfig"; path = "Target Support Files/Pods-E4 PatientTests/Pods-E4 PatientTests.release.xcconfig"; sourceTree = "<group>"; };
-		D632F11585FE312A8721F3D8 /* Pods-E4 PatientTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-E4 PatientTests.debug.xcconfig"; path = "Target Support Files/Pods-E4 PatientTests/Pods-E4 PatientTests.debug.xcconfig"; sourceTree = "<group>"; };
-		DDACD204C177C0A8CC0878F0 /* Pods-E4 Patient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-E4 Patient.debug.xcconfig"; path = "Target Support Files/Pods-E4 Patient/Pods-E4 Patient.debug.xcconfig"; sourceTree = "<group>"; };
-		F69716F8FB8B9E2C9FC071DA /* Pods-E4 Patient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-E4 Patient.release.xcconfig"; path = "Target Support Files/Pods-E4 Patient/Pods-E4 Patient.release.xcconfig"; sourceTree = "<group>"; };
 		CAA71164FC8209532F4F9B26 /* Pods_E4_Patient_E4_PatientUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_E4_Patient_E4_PatientUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCDFA4502490909F8417FD18 /* Pods-E4 Patient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-E4 Patient.debug.xcconfig"; path = "Target Support Files/Pods-E4 Patient/Pods-E4 Patient.debug.xcconfig"; sourceTree = "<group>"; };
 		E5D159A8405D17FCFFB8D125 /* Pods-E4 Patient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-E4 Patient.release.xcconfig"; path = "Target Support Files/Pods-E4 Patient/Pods-E4 Patient.release.xcconfig"; sourceTree = "<group>"; };
@@ -1209,7 +1178,7 @@
 			isa = PBXGroup;
 			children = (
 				010AB3FE270C6884008D1C0D /* AttachementTBCell.swift */,
-				C4BCC9982845636000D04808 /* AttachementTBCell.xib */,
+				06D84ED82849BF6A00DEF1D1 /* AttachementTBCell.xib */,
 			);
 			path = AttachementTBCell;
 			sourceTree = "<group>";
@@ -1227,7 +1196,7 @@
 			isa = PBXGroup;
 			children = (
 				010CFA12270C9BF000E4BCC7 /* FollowUpCell.swift */,
-				C4BCC99D2845638900D04808 /* FollowUpCell.xib */,
+				06D84ED42849BF2000DEF1D1 /* FollowUpCell.xib */,
 			);
 			path = FollowUpCell;
 			sourceTree = "<group>";
@@ -1248,8 +1217,8 @@
 		0158FAD5270C3EAB00758D58 /* SummaryCell */ = {
 			isa = PBXGroup;
 			children = (
+				06D84EE42849C00000DEF1D1 /* ProfileSummaryCell.xib */,
 				0158FAD6270C3ECF00758D58 /* ProfileSummaryCell.swift */,
-				C4BCC9892845619100D04808 /* ProfileSummaryCell.xib */,
 			);
 			path = SummaryCell;
 			sourceTree = "<group>";
@@ -1569,20 +1538,35 @@
 			path = FilterCell;
 			sourceTree = "<group>";
 		};
+		06D84EA72849BBCA00DEF1D1 /* SocialPhoneVC */ = {
+			isa = PBXGroup;
+			children = (
+				06D84EAB2849BBCA00DEF1D1 /* SocialPhoneVC.xib */,
+				06D84EAA2849BBCA00DEF1D1 /* SocialPhoneVC.swift */,
+			);
+			path = SocialPhoneVC;
+			sourceTree = "<group>";
+		};
+		06D84EF82849C20600DEF1D1 /* Change Language */ = {
+			isa = PBXGroup;
+			children = (
+				06D84EFB2849C20600DEF1D1 /* ChangeLanguageRouter.swift */,
+				06D84EFC2849C20600DEF1D1 /* ChangeLanguage.swift */,
+				06D84EFD2849C20600DEF1D1 /* ChangeLanguageVC.swift */,
+				06D84EFE2849C20600DEF1D1 /* ChangeLanguageVC.xib */,
+				06D84F002849C20600DEF1D1 /* ChangeLanguageInteractor.swift */,
+				06D84F012849C20600DEF1D1 /* ChangeLanguageModel.swift */,
+				06D84F022849C20600DEF1D1 /* ChangeLanguagePresenter.swift */,
+			);
+			path = "Change Language";
+			sourceTree = "<group>";
+		};
 		06F932B22848584E00DAFB3D /* UserLocation */ = {
 			isa = PBXGroup;
 			children = (
-				06F932B3284858F700DAFB3D /* MapsLocation */,
 				06F932B42848591600DAFB3D /* AddressUserLocation */,
 			);
 			path = UserLocation;
-			sourceTree = "<group>";
-		};
-		06F932B3284858F700DAFB3D /* MapsLocation */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = MapsLocation;
 			sourceTree = "<group>";
 		};
 		06F932B42848591600DAFB3D /* AddressUserLocation */ = {
@@ -1620,7 +1604,7 @@
 			isa = PBXGroup;
 			children = (
 				6102527828074C730085B200 /* HelpSupportCell.swift */,
-				C4BCC9AC284566A600D04808 /* HelpSupportCell.xib */,
+				06D84EC92849BD5700DEF1D1 /* HelpSupportCell.xib */,
 			);
 			path = HelpSupportCell;
 			sourceTree = "<group>";
@@ -1682,16 +1666,6 @@
 			path = "Log Out";
 			sourceTree = "<group>";
 		};
-		6168CD7528460C67008C5C84 /* SocialPhoneVC */ = {
-			isa = PBXGroup;
-			children = (
-				6168CD7628460C67008C5C84 /* SocialPhoneVC.strings */,
-				6168CD7828460C67008C5C84 /* SocialPhoneVC.swift */,
-				6168CD7928460C67008C5C84 /* SocialPhoneVC.xib */,
-			);
-			path = SocialPhoneVC;
-			sourceTree = "<group>";
-		};
 		617E26A12823CEFF009D8ABC /* NotificationVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -1717,20 +1691,6 @@
 				619182EE26F65B4600B6A796 /* Animation.m */,
 			);
 			path = Animation;
-			sourceTree = "<group>";
-		};
-		6193588B2841006000B7F7A1 /* Change Language */ = {
-			isa = PBXGroup;
-			children = (
-				C4BCC9B12845672F00D04808 /* ChangeLanguageVC.xib */,
-				6193588C2841006000B7F7A1 /* ChangeLanguageRouter.swift */,
-				6193588D2841006000B7F7A1 /* ChangeLanguage.swift */,
-				6193588E2841006000B7F7A1 /* ChangeLanguageVC.swift */,
-				6193588F2841006000B7F7A1 /* ChangeLanguageInteractor.swift */,
-				619358902841006000B7F7A1 /* ChangeLanguageModel.swift */,
-				619358912841006000B7F7A1 /* ChangeLanguagePresenter.swift */,
-			);
-			path = "Change Language";
 			sourceTree = "<group>";
 		};
 		61A7EF2C2830D9920027775E /* YBTextPicker */ = {
@@ -1917,7 +1877,7 @@
 		61EE6217280A942E0096009D /* ForgetPassVC */ = {
 			isa = PBXGroup;
 			children = (
-				C4BCC96528455B0100D04808 /* ForgetPassVC.xib */,
+				06D84EB52849BC6C00DEF1D1 /* ForgetPassVC.xib */,
 				61EE621A280A942E0096009D /* ForgetPassVC.swift */,
 			);
 			path = ForgetPassVC;
@@ -1958,9 +1918,6 @@
 		C10E8E2325B33B03004FFCBF = {
 			isa = PBXGroup;
 			children = (
-				6168CD73284495CF008C5C84 /* GoogleService-Info.plist */,
-				6183F35827F3AE3A0040836F /*  E4ClinicPatient-Bridging-Header.h */,
-				61980655281C01E0009CC5CB /* GoogleService-Info.plist */,
 				C1F8D81925DF301400863B5D /* Network */,
 				C10E8F5225B3A670004FFCBF /* Model */,
 				C10E8F1525B33CF2004FFCBF /* Brain */,
@@ -1989,6 +1946,7 @@
 			isa = PBXGroup;
 			children = (
 				0623A08128421F0200071B8A /* E4ClinicPatient-Bridging-Header.h */,
+				61980655281C01E0009CC5CB /* GoogleService-Info.plist */,
 				C1D60B70261560660041AC66 /* E4 Patient.entitlements */,
 				C10E8E2F25B33B03004FFCBF /* AppDelegate.swift */,
 				C10E8E3125B33B03004FFCBF /* SceneDelegate.swift */,
@@ -2111,8 +2069,6 @@
 		C10E8F1925B33D0A004FFCBF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				C4D8AF6C2842B40200D154BE /* Reminder */,
-				C4D8AF5E2842B1CC00D154BE /* Reports */,
 				01FAB7B427CD5CEF00750DA5 /* More */,
 				01F5756126DD6EC70076273F /* ConsultationLogs */,
 				C18CBD1426A2523D00926D5B /* HomeScenes */,
@@ -2152,9 +2108,9 @@
 		C10E8F2225B33E23004FFCBF /* LoginVC */ = {
 			isa = PBXGroup;
 			children = (
-				6168CD7528460C67008C5C84 /* SocialPhoneVC */,
+				06D84EA72849BBCA00DEF1D1 /* SocialPhoneVC */,
+				06D84EA32849BB8E00DEF1D1 /* LoginVC.xib */,
 				C10E8F2325B33E39004FFCBF /* LoginVC.swift */,
-				C4BCC95B284557E300D04808 /* LoginVC.xib */,
 				C19EAB6425E7DE28006E6F06 /* loginNetwork.swift */,
 			);
 			path = LoginVC;
@@ -2586,8 +2542,8 @@
 		C15F7F3D25BC2173005EB885 /* Permisions */ = {
 			isa = PBXGroup;
 			children = (
+				06D84ED02849BEDD00DEF1D1 /* PermissionVC.xib */,
 				C15F7F4125BC219E005EB885 /* PermissionVC.swift */,
-				C4BCC9A22845642E00D04808 /* PermissionVC.xib */,
 				C160095D25F504F0008CCA0B /* PermissionNetwork.swift */,
 				C17F99A525FFCCDD0043EF08 /* PermissionPickerView.swift */,
 			);
@@ -2650,8 +2606,8 @@
 		C1820DE525B4140B00396AAE /* ConfirmAccountVC */ = {
 			isa = PBXGroup;
 			children = (
+				06D84EB92849BC8600DEF1D1 /* ConfirmAccountVC.xib */,
 				C1820DE625B4142F00396AAE /* ConfirmAccountVC.swift */,
-				C4BCC96A28455B8E00D04808 /* ConfirmAccountVC.xib */,
 				C19EAB7025E9106B006E6F06 /* codeValidation.swift */,
 			);
 			path = ConfirmAccountVC;
@@ -2703,8 +2659,8 @@
 			children = (
 				C19961AA2635192A00B3FB2A /* Cells */,
 				C1820E7C25B5126600396AAE /* HomeVC.swift */,
-				C4BCC96F28455C3100D04808 /* HomeVC.xib */,
 				C181852226354CB300299993 /* HomeCollectionView.swift */,
+				06D84EC52849BD1400DEF1D1 /* HomeVC.xib */,
 				C1B6AE9B26264DC100E509D3 /* homeSlider.swift */,
 				C186CCA12664607100755A41 /* homeNetwork.swift */,
 			);
@@ -2717,7 +2673,7 @@
 				C18DA7252647B47700079EE1 /* Cell */,
 				6160C7DC26E63D33006A12BE /* AppointmentNetwork.swift */,
 				C1820E8725B5127B00396AAE /* AppointmentVC.swift */,
-				C4BCC97428455F4100D04808 /* AppointmentVC.xib */,
+				06D84EC12849BCDD00DEF1D1 /* AppointmentVC.xib */,
 			);
 			path = AppointmentVC;
 			sourceTree = "<group>";
@@ -2743,7 +2699,7 @@
 		C1820EB425B51D0A00396AAE /* MorePath */ = {
 			isa = PBXGroup;
 			children = (
-				6193588B2841006000B7F7A1 /* Change Language */,
+				06D84EF82849C20600DEF1D1 /* Change Language */,
 				6102527728074C730085B200 /* HelpSupportCell */,
 				616178562806C578005EE4C6 /* Log Out */,
 				C186EB872647C71200E92B8F /* MyFavoriteVC */,
@@ -2764,7 +2720,7 @@
 				C1820ED025B532C300396AAE /* ProfileDataPopUpVC */,
 				C1820EC025B528BB00396AAE /* Cell */,
 				C1820EB625B51D3200396AAE /* ProfileVC.swift */,
-				C4BCC97E2845610D00D04808 /* ProfileVC.xib */,
+				06D84EEC2849C04900DEF1D1 /* ProfileVC.xib */,
 				C1820ECB25B52CE000396AAE /* Profile+TableView.swift */,
 				C19EAB6E25E7FBF1006E6F06 /* ProfileNetwork.swift */,
 			);
@@ -2776,7 +2732,7 @@
 			children = (
 				0158FAD5270C3EAB00758D58 /* SummaryCell */,
 				C1820EC125B528CD00396AAE /* ProfileCell.swift */,
-				C4BCC9842845616E00D04808 /* ProfileCell.xib */,
+				06D84EE82849C02400DEF1D1 /* ProfileCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -2784,8 +2740,8 @@
 		C1820ED025B532C300396AAE /* ProfileDataPopUpVC */ = {
 			isa = PBXGroup;
 			children = (
+				06D84EE02849BFCE00DEF1D1 /* ProfileDataPopUpVC.xib */,
 				C1820ED125B532DC00396AAE /* ProfileDataPopUpVC.swift */,
-				C4BCC98E284561CA00D04808 /* ProfileDataPopUpVC.xib */,
 			);
 			path = ProfileDataPopUpVC;
 			sourceTree = "<group>";
@@ -2831,7 +2787,7 @@
 				C186E3212647869B00B0890C /* BranchInfoTable+Collection.swift */,
 			);
 			name = BranchInfoVC;
-			path = "BranchInfoءئ";
+			path = "BranchInfoءئ";
 			sourceTree = "<group>";
 		};
 		C186E3172647855600B0890C /* CollectionCell */ = {
@@ -2984,8 +2940,8 @@
 		C18913A325B40843006F08EA /* SignUpVC */ = {
 			isa = PBXGroup;
 			children = (
+				06D84EB12849BC3900DEF1D1 /* SignUpVC.xib */,
 				C18913A725B4086C006F08EA /* SignUpVC.swift */,
-				C4BCC960284559F200D04808 /* SignUpVC.xib */,
 				C19EAB6825E7E50F006E6F06 /* SignUpNetwork.swift */,
 				C19EAB6A25E7E9D9006E6F06 /* SignUpPicker.swift */,
 			);
@@ -3028,7 +2984,7 @@
 			isa = PBXGroup;
 			children = (
 				C18DA7262647B48600079EE1 /* AppointmentCell.swift */,
-				C4BCC97928455F8B00D04808 /* AppointmentCell.xib */,
+				06D84EBD2849BCB500DEF1D1 /* AppointmentCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -3176,7 +3132,7 @@
 			isa = PBXGroup;
 			children = (
 				C1DC8A4425B6451500B006AC /* AllAddressCell.swift */,
-				C4BCC9B62845680C00D04808 /* AllAddressCell.xib */,
+				06D84EF42849C10600DEF1D1 /* AllAddressCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -3185,7 +3141,7 @@
 			isa = PBXGroup;
 			children = (
 				C1DC8A6125B655F200B006AC /* AddAddressVC.swift */,
-				C4BCC9BB284568BF00D04808 /* AddAddressVC.xib */,
+				06D84EF02849C0DA00DEF1D1 /* AddAddressVC.xib */,
 			);
 			path = AddAdreesVC;
 			sourceTree = "<group>";
@@ -3306,7 +3262,7 @@
 			isa = PBXGroup;
 			children = (
 				C1FA090225BCE54F00433577 /* ForgetPasswordVC.swift */,
-				C4BCC9A72845660F00D04808 /* ForgetPasswordVC.xib */,
+				06D84ECC2849BEB800DEF1D1 /* ForgetPasswordVC.xib */,
 			);
 			path = ForgetpasswordVC;
 			sourceTree = "<group>";
@@ -3335,8 +3291,8 @@
 		C1FC080225B53F2700725968 /* EditProfileVC */ = {
 			isa = PBXGroup;
 			children = (
+				06D84EDC2849BF9000DEF1D1 /* EditProfileVC.xib */,
 				C1FC080325B53F4200725968 /* EditProfileVC.swift */,
-				C4BCC9932845628100D04808 /* EditProfileVC.xib */,
 				322DCF2425EAC29A00142F6A /* EditProfileVCPicker.swift */,
 				C13A457A25F438AC004F2D33 /* EditProfileNetwork.swift */,
 			);
@@ -3362,89 +3318,6 @@
 			path = FAQCell;
 			sourceTree = "<group>";
 		};
-		C4D8AF5E2842B1CC00D154BE /* Reports */ = {
-			isa = PBXGroup;
-			children = (
-				C4D8AF622842B21700D154BE /* AllReports */,
-				C4D8AF692842B2B000D154BE /* AllReportsModel.swift */,
-				C4D8AF682842B2B000D154BE /* AllReportsVC.swift */,
-				C4D8AF5F2842B1E200D154BE /* FilterReports */,
-			);
-			path = Reports;
-			sourceTree = "<group>";
-		};
-		C4D8AF5F2842B1E200D154BE /* FilterReports */ = {
-			isa = PBXGroup;
-			children = (
-				C4D8AF602842B20100D154BE /* FilterReportsVC.swift */,
-				C458109A2843FB970026A9F4 /* ReportServiceListModel.swift */,
-			);
-			path = FilterReports;
-			sourceTree = "<group>";
-		};
-		C4D8AF622842B21700D154BE /* AllReports */ = {
-			isa = PBXGroup;
-			children = (
-				C4D8AF632842B22A00D154BE /* AllReportsCell */,
-			);
-			path = AllReports;
-			sourceTree = "<group>";
-		};
-		C4D8AF632842B22A00D154BE /* AllReportsCell */ = {
-			isa = PBXGroup;
-			children = (
-				C4D8AF642842B27E00D154BE /* AllReportsCell.swift */,
-				C4D8AF652842B27F00D154BE /* AllReportsCell.xib */,
-			);
-			name = AllReportsCell;
-			path = "../New Group/AllReportsCell";
-			sourceTree = "<group>";
-		};
-		C4D8AF6C2842B40200D154BE /* Reminder */ = {
-			isa = PBXGroup;
-			children = (
-				C4D8AF732842B44600D154BE /* MedicineReminder */,
-				C4D8AF702842B42D00D154BE /* SetReminder */,
-				C4D8AF6D2842B41600D154BE /* AddReminder */,
-			);
-			path = Reminder;
-			sourceTree = "<group>";
-		};
-		C4D8AF6D2842B41600D154BE /* AddReminder */ = {
-			isa = PBXGroup;
-			children = (
-				C4D8AF6E2842B42300D154BE /* AddReminderVC.swift */,
-			);
-			path = AddReminder;
-			sourceTree = "<group>";
-		};
-		C4D8AF702842B42D00D154BE /* SetReminder */ = {
-			isa = PBXGroup;
-			children = (
-				C4D8AF712842B43800D154BE /* SetReminderVC.swift */,
-			);
-			path = SetReminder;
-			sourceTree = "<group>";
-		};
-		C4D8AF732842B44600D154BE /* MedicineReminder */ = {
-			isa = PBXGroup;
-			children = (
-				C4D8AF792842B46E00D154BE /* MedicineReminder.swift */,
-				C4D8AF742842B45700D154BE /* MedicineReminderTBCell */,
-			);
-			path = MedicineReminder;
-			sourceTree = "<group>";
-		};
-		C4D8AF742842B45700D154BE /* MedicineReminderTBCell */ = {
-			isa = PBXGroup;
-			children = (
-				C4D8AF762842B46700D154BE /* MedicineReminderTBCell.swift */,
-				C4D8AF752842B46500D154BE /* MedicineReminderTBCell.xib */,
-			);
-			path = MedicineReminderTBCell;
-			sourceTree = "<group>";
-		};
-		D489A7022DBE435A69C022EA /* Frameworks */ = {
 		E51B57C029E1449E400C24E0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -3479,9 +3352,8 @@
 				C10E8E2825B33B03004FFCBF /* Sources */,
 				C10E8E2925B33B03004FFCBF /* Frameworks */,
 				C10E8E2A25B33B03004FFCBF /* Resources */,
-				8DB01B46325A1495B8F50C91 /* [CP] Embed Pods Frameworks */,
-				71FC27F2AE6E59521D43ADCB /* [CP] Copy Pods Resources */,
 				30CE13FC5AEEC6D43EA05EBB /* [CP] Embed Pods Frameworks */,
+				2A35FB8D332C43C566A8A420 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -3519,9 +3391,8 @@
 				C10E8E4925B33B07004FFCBF /* Sources */,
 				C10E8E4A25B33B07004FFCBF /* Frameworks */,
 				C10E8E4B25B33B07004FFCBF /* Resources */,
-				56C5EB53AB9CFD0C5B49645D /* [CP] Embed Pods Frameworks */,
-				94FBDE674C2A740B724CB7CD /* [CP] Copy Pods Resources */,
 				9159F6FD5A50CC4575833D90 /* [CP] Embed Pods Frameworks */,
+				D67C7CB953FB1E2A042F65F6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -3581,15 +3452,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6168CD7428449673008C5C84 /* GoogleService-Info.plist in Resources */,
 				C1820E1725B41B1600396AAE /* MoreCell.xib in Resources */,
 				61BD682D283B104C00821D51 /* AllMedicationVC.xib in Resources */,
-				C4BCC9B42845680C00D04808 /* AllAddressCell.xib in Resources */,
 				C15F7F3625BC02C1005EB885 /* AddMedicalReportsVC.xib in Resources */,
 				C15F7EBC25BBD892005EB885 /* AddAllergiesVC.xib in Resources */,
 				C1DC8A8625B6682600B006AC /* AllEmergencyContactsVC.xib in Resources */,
 				C1DC8A9125B66BE300B006AC /* EmergencyContactsCell.xib in Resources */,
-				C4BCC9B9284568BF00D04808 /* AddAddressVC.xib in Resources */,
+				06D84EC72849BD1500DEF1D1 /* HomeVC.xib in Resources */,
 				C181852926354FE300299993 /* SearchOeVc.xib in Resources */,
 				C1FA093825BCF81E00433577 /* EmergencyNumberCellTableViewCell.xib in Resources */,
 				C1DC8AA125B673CC00B006AC /* AddEmergencyVC.xib in Resources */,
@@ -3598,55 +3467,51 @@
 				C15F7F2625BC0087005EB885 /* MedicalReportsVC.xib in Resources */,
 				61BD67FB2839BB9B00821D51 /* DeleteSurgeyVC.xib in Resources */,
 				C18868AB26A5C36500CAF951 /* font_bold.TTF in Resources */,
+				06D84ED62849BF2100DEF1D1 /* FollowUpCell.xib in Resources */,
 				C1007AB9263BCADF0060AD2F /* AllSearchVC.xib in Resources */,
+				06D84F072849C20900DEF1D1 /* ChangeLanguageVC.xib in Resources */,
 				C186EBAD2647D05800E92B8F /* ConsultationsLogDetailsVC.xib in Resources */,
-				C4BCC99B2845638900D04808 /* FollowUpCell.xib in Resources */,
 				C186EB902647C76C00E92B8F /* MyFavoriteCell.xib in Resources */,
 				C1820E9525B5128D00396AAE /* PharmacyVC.xib in Resources */,
+				06D84EE22849BFCF00DEF1D1 /* ProfileDataPopUpVC.xib in Resources */,
 				C19961AF2635194B00B3FB2A /* SpecializationsCell.xib in Resources */,
 				61BD682B283B104C00821D51 /* SearchCell.xib in Resources */,
 				C15F7ED625BBE73D005EB885 /* FamilyHistoryVC.xib in Resources */,
 				C17C35E9263FB06700B8B494 /* SortVC.xib in Resources */,
-				C4BCC96328455B0100D04808 /* ForgetPassVC.xib in Resources */,
-				C4BCC9872845619100D04808 /* ProfileSummaryCell.xib in Resources */,
+				06D84ED22849BEDD00DEF1D1 /* PermissionVC.xib in Resources */,
 				01FE4B5826E56CA6008023AB /* BookingSummaryCollection.xib in Resources */,
 				C15F7F0A25BBFDFA005EB885 /* SurgeryVC.xib in Resources */,
 				C186EB8B2647C72300E92B8F /* MyFavoriteVC.xib in Resources */,
 				C14C630C25DE0262000D50B0 /* AUTO@3x.png in Resources */,
+				06D84EBB2849BC8600DEF1D1 /* ConfirmAccountVC.xib in Resources */,
 				061964CF284279A8006DBFB6 /* OPsDashboard.xib in Resources */,
+				06D84EEE2849C04900DEF1D1 /* ProfileVC.xib in Resources */,
 				61A7EF372830D9940027775E /* YBTextPickerCell.xib in Resources */,
 				C184A1212647E185005453FC /* WriteReviewsVC.xib in Resources */,
 				C186EB812647C41500E92B8F /* AppointmentDetailsVC.xib in Resources */,
-				C4BCC97C2845610D00D04808 /* ProfileVC.xib in Resources */,
+				06D84EE62849C00100DEF1D1 /* ProfileSummaryCell.xib in Resources */,
 				01CD8C8326F291BC00F6F0DE /* AboutDoctorCell.xib in Resources */,
 				61A7EF3B2830D9940027775E /* YBTextPicker_unchecked.png in Resources */,
-				C4BCC97228455F4100D04808 /* AppointmentVC.xib in Resources */,
-				C4BCC9A52845660F00D04808 /* ForgetPasswordVC.xib in Resources */,
 				06253B9A2843300E00CE8731 /* ServiceCell.xib in Resources */,
-				C1820E8A25B5127B00396AAE /* AppointmentVC.xib in Resources */,
-				C1FA090525BCE54F00433577 /* ForgetPasswordVC.xib in Resources */,
 				C186E3302647A59E00B0890C /* AcademicQualificationCell.xib in Resources */,
 				C10E8ED225B33CED004FFCBF /* OFL.txt in Resources */,
 				C1084024263BD452004391EA /* FillterVC.xib in Resources */,
 				C1DC8A6F25B65F9200B006AC /* MapVcc.xib in Resources */,
-				C4BCC95E284559F200D04808 /* SignUpVC.xib in Resources */,
 				01CD8C7D26F290E700F6F0DE /* DoctorProfileHeaderCell.xib in Resources */,
 				C19B32E4264898C7007B919B /* AddAppointmentVC.xib in Resources */,
-				6168CD7B28460C76008C5C84 /* SocialPhoneVC.strings in Resources */,
+				06D84EAF2849BBCA00DEF1D1 /* SocialPhoneVC.xib in Resources */,
 				614F9E4B283DA60D0055DF4E /* BranchImagesCollectionVC.xib in Resources */,
 				0697FEDF2844AA28001E63F4 /* OtherProvidersList.xib in Resources */,
 				61BD6828283B104C00821D51 /* SearchVC.xib in Resources */,
-				C4BCC97728455F8B00D04808 /* AppointmentCell.xib in Resources */,
 				C14C630A25DE0262000D50B0 /* ON@3x.png in Resources */,
 				C10E8F1E25B33D30004FFCBF /* SplashVC.xib in Resources */,
+				06D84EF62849C10600DEF1D1 /* AllAddressCell.xib in Resources */,
 				C186E30F26477C8400B0890C /* ReviewsCell.xib in Resources */,
 				C10E8ECE25B33CED004FFCBF /* Cairo-Regular.ttf in Resources */,
+				06D84EA52849BB8E00DEF1D1 /* LoginVC.xib in Resources */,
 				C15F7ECA25BBDE7F005EB885 /* AddSocialHistoryVC.xib in Resources */,
-				C4BCC9A02845642E00D04808 /* PermissionVC.xib in Resources */,
-				C15F7F4425BC219F005EB885 /* PermissionVC.xib in Resources */,
 				06F932C7284867BB00DAFB3D /* AULocationCell.xib in Resources */,
 				01E44B1826DC284200805033 /* AppointmentAddressCell.xib in Resources */,
-				C4BCC9AF2845672F00D04808 /* ChangeLanguageVC.xib in Resources */,
 				61BD6842283B820600821D51 /* DeleteMedicalReportVC.xib in Resources */,
 				C14C630D25DE0262000D50B0 /* video@3x.png in Resources */,
 				063023D9284609F40085FD59 /* FilterAlert.xib in Resources */,
@@ -3656,13 +3521,10 @@
 				01F5756826DD72870076273F /* ConsultationLogTBCell.xib in Resources */,
 				C14C630E25DE0262000D50B0 /* cameraIcon@3x.png in Resources */,
 				0106D79B26C522520054E254 /* PrefixTitleTBCell.xib in Resources */,
+				06D84EDA2849BF6A00DEF1D1 /* AttachementTBCell.xib in Resources */,
 				C1820E9F25B5129E00396AAE /* BlogVC.xib in Resources */,
 				61A7EF3A2830D9940027775E /* YBTextPicker_checked.png in Resources */,
-				C4BCC9912845628100D04808 /* EditProfileVC.xib in Resources */,
-				C4BCC96828455B8E00D04808 /* ConfirmAccountVC.xib in Resources */,
-				C1FC080625B53F4200725968 /* EditProfileVC.xib in Resources */,
 				06F932C8284881A300DAFB3D /* AULocation.xib in Resources */,
-				C1820DE925B4142F00396AAE /* ConfirmAccountVC.xib in Resources */,
 				C10E8E3C25B33B07004FFCBF /* LaunchScreen.storyboard in Resources */,
 				C1DC8A7725B6620200B006AC /* DefultLocationVC.xib in Resources */,
 				C186E3202647861F00B0890C /* DoctorServiseCell.xib in Resources */,
@@ -3680,24 +3542,23 @@
 				C1DC8AAD25B679D400B006AC /* AllDiseasesVC.xib in Resources */,
 				C186EBA82647CE2700E92B8F /* ConsultationsLogFillterVC.xib in Resources */,
 				01E44B0326DC207F00805033 /* AvailableCollectionCell.xib in Resources */,
-				C4BCC9822845616E00D04808 /* ProfileCell.xib in Resources */,
 				C1FA092A25BCF80800433577 /* EmergencyNumberVC.xib in Resources */,
-				C4BCC98C284561CA00D04808 /* ProfileDataPopUpVC.xib in Resources */,
-				C4BCC9AA284566A600D04808 /* HelpSupportCell.xib in Resources */,
 				C10E8ED025B33CED004FFCBF /* Cairo-Black.ttf in Resources */,
 				C15102D725B7E4BC00FEEFB2 /* AllAllergiesVC.xib in Resources */,
-				6168CD7D28460C76008C5C84 /* SocialPhoneVC.xib in Resources */,
 				C10E8ECD25B33CED004FFCBF /* Cairo-SemiBold.ttf in Resources */,
 				C186EBA32647CC5C00E92B8F /* ConsultationsLogCell.xib in Resources */,
+				06D84EB72849BC6D00DEF1D1 /* ForgetPassVC.xib in Resources */,
 				61BD683E283B1AC900821D51 /* MedicalReportCell.xib in Resources */,
 				C19961B926351A5D00B3FB2A /* MedicalServicesCell.xib in Resources */,
+				06D84ECE2849BEB800DEF1D1 /* ForgetPasswordVC.xib in Resources */,
 				C108401D263BCE83004391EA /* AllSearchCell.xib in Resources */,
+				06D84F0C2849CBC000DEF1D1 /* GoogleService-Info.plist in Resources */,
 				C14C630825DE0262000D50B0 /* selectedImageGallery@3x.png in Resources */,
 				C186E327264788F400B0890C /* HomeInfoVC.xib in Resources */,
 				C186E31B2647857300B0890C /* PhotoCell.xib in Resources */,
 				01CD8C8826F2925600F6F0DE /* AcadimicQualificationCell.xib in Resources */,
 				C1820E0C25B41AFD00396AAE /* MoreVC.xib in Resources */,
-				C4BCC9962845636000D04808 /* AttachementTBCell.xib in Resources */,
+				06D84EDE2849BF9100DEF1D1 /* EditProfileVC.xib in Resources */,
 				C10E8E3725B33B03004FFCBF /* Main.storyboard in Resources */,
 				61BD6848283C468900821D51 /* DeleteAllergiesVC.xib in Resources */,
 				C19961C32635208100B3FB2A /* TopOffersCell.xib in Resources */,
@@ -3708,24 +3569,24 @@
 				61BD6833283B104C00821D51 /* CountinueAddMedicationVC.xib in Resources */,
 				C186EB9A2647CBAB00E92B8F /* AppointmentDetailsTwoVC.xib in Resources */,
 				C186E3352647A77100B0890C /* BookingDetailsVC.xib in Resources */,
+				06D84EC32849BCDE00DEF1D1 /* AppointmentVC.xib in Resources */,
 				C18185322635505E00299993 /* SearchOneCell.xib in Resources */,
 				C17C35EE263FB2A300B8B494 /* CityFilterVC.xib in Resources */,
 				61BD6838283B104D00821D51 /* DoctorsSearchCell.xib in Resources */,
 				614F9E46283D96720055DF4E /* HomeInfoTableVC.xib in Resources */,
 				C19961B4263519F000B3FB2A /* DoctorServicesCell.xib in Resources */,
+				06D84EF22849C0DA00DEF1D1 /* AddAddressVC.xib in Resources */,
 				01F2F93F27E3FE36009466E1 /* MapFilterDoctorsCell.xib in Resources */,
+				06D84ECB2849BD5700DEF1D1 /* HelpSupportCell.xib in Resources */,
 				C10E8ECC25B33CED004FFCBF /* Cairo-ExtraLight.ttf in Resources */,
 				C10E8ED125B33CED004FFCBF /* Cairo-Bold.ttf in Resources */,
-				C4BCC959284557E300D04808 /* LoginVC.xib in Resources */,
 				C1DC8A3C25B6432900B006AC /* AllAdressVC.xib in Resources */,
-				C4D8AF672842B27F00D154BE /* AllReportsCell.xib in Resources */,
 				C14C630B25DE0262000D50B0 /* OFF@3x.png in Resources */,
 				06253B8A28432C8A00CE8731 /* SearchOPServices.xib in Resources */,
+				06D84EBF2849BCB500DEF1D1 /* AppointmentCell.xib in Resources */,
 				C18DA7242647B21C00079EE1 /* SuccessBookingVC.xib in Resources */,
 				C10E8E972648A22B00481B45 /* ShiftCell.xib in Resources */,
-				C4D8AF772842B46700D154BE /* MedicineReminderTBCell.xib in Resources */,
 				6160C7E726E63F91006A12BE /* AppointmentHistoryPopupCell.xib in Resources */,
-				C4BCC96D28455C3100D04808 /* HomeVC.xib in Resources */,
 				C10E8ECF25B33CED004FFCBF /* Cairo-Light.ttf in Resources */,
 				063023D72846012E0085FD59 /* FilterCell.xib in Resources */,
 				C186EB952647C9EE00E92B8F /* AppointmetHistoryFillterVC.xib in Resources */,
@@ -3744,8 +3605,10 @@
 				61A7EF402835C02D0027775E /* DeleteLocationVC.xib in Resources */,
 				C1DC8AC825B67D9400B006AC /* AddDieseasesVC.xib in Resources */,
 				61BD6821283B104C00821D51 /* AddMedicationCollectionCell.xib in Resources */,
+				06D84EB32849BC3900DEF1D1 /* SignUpVC.xib in Resources */,
 				061964C12842667F006DBFB6 /* EPrescriptionCell.xib in Resources */,
 				61BD6823283B104C00821D51 /* addMedicationTableCell.xib in Resources */,
+				06D84EEA2849C02500DEF1D1 /* ProfileCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3766,6 +3629,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2A35FB8D332C43C566A8A420 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-E4 Patient/Pods-E4 Patient-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-E4 Patient/Pods-E4 Patient-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-E4 Patient/Pods-E4 Patient-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		30CE13FC5AEEC6D43EA05EBB /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -3844,41 +3724,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		71FC27F2AE6E59521D43ADCB /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-E4 Patient/Pods-E4 Patient-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-E4 Patient/Pods-E4 Patient-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-E4 Patient/Pods-E4 Patient-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8DB01B46325A1495B8F50C91 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-E4 Patient/Pods-E4 Patient-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-E4 Patient/Pods-E4 Patient-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-E4 Patient/Pods-E4 Patient-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		94FBDE674C2A740B724CB7CD /* [CP] Copy Pods Resources */ = {
+		D67C7CB953FB1E2A042F65F6 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -3895,7 +3741,6 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-E4 Patient-E4 PatientUITests/Pods-E4 Patient-E4 PatientUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FE6DA36342597C50AB4813CF /* [CP] Check Pods Manifest.lock */ = {
 		D9BB600A46E1DC33D257A85E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -3926,8 +3771,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				61BD682F283B104C00821D51 /* MedicationCell.swift in Sources */,
-				C4D8AF782842B46700D154BE /* MedicineReminderTBCell.swift in Sources */,
-				C4D8AF7A2842B46E00D154BE /* MedicineReminder.swift in Sources */,
 				C18868AC26A5C39C00CAF951 /* font_bold.TTF in Sources */,
 				C18868AD26A5C39C00CAF951 /* font_regular.TTF in Sources */,
 				616178622806C578005EE4C6 /* LogOutPresenter.swift in Sources */,
@@ -3942,17 +3785,13 @@
 				C14C630725DE0262000D50B0 /* ISMessages.m in Sources */,
 				01E6F07226C65B5F00859BC0 /* MedicalServicesModel.swift in Sources */,
 				C1820EC325B528CD00396AAE /* ProfileCell.swift in Sources */,
-				6168CD7C28460C76008C5C84 /* SocialPhoneVC.swift in Sources */,
 				061964AF28425E44006DBFB6 /* MSOtherProvidersReponse.swift in Sources */,
 				C1977DBB25FC2271004AD914 /* MapVc.swift in Sources */,
 				C13A457725F42BF0004F2D33 /* MedicalReportsNetwork.swift in Sources */,
 				C186EB8F2647C76C00E92B8F /* MyFavoriteCell.swift in Sources */,
-				619358972841006100B7F7A1 /* ChangeLanguagePresenter.swift in Sources */,
-				C4D8AF662842B27F00D154BE /* AllReportsCell.swift in Sources */,
 				C19EAB6925E7E50F006E6F06 /* SignUpNetwork.swift in Sources */,
 				C186CCA22664607100755A41 /* homeNetwork.swift in Sources */,
 				61BD683D283B1AC900821D51 /* MedicalReportCell.swift in Sources */,
-				619358952841006000B7F7A1 /* ChangeLanguageInteractor.swift in Sources */,
 				C1DC8A4625B6451500B006AC /* AllAddressCell.swift in Sources */,
 				C181852826354FE300299993 /* SearchOeVc.swift in Sources */,
 				01F5756326DD6EF60076273F /* ConsultationLogVC.swift in Sources */,
@@ -3976,18 +3815,15 @@
 				01A4D2E626C72E2F00EF8E4E /* AllSearchViewModel.swift in Sources */,
 				C186E31126477EB500B0890C /* ReviewsTableView.swift in Sources */,
 				C1820E7E25B5126600396AAE /* HomeVC.swift in Sources */,
-				619358932841006000B7F7A1 /* ChangeLanguage.swift in Sources */,
 				C1E3999F25FC4FD30064CAA2 /* AddSurgeryPicker.swift in Sources */,
 				0158FAD8270C3ECF00758D58 /* ProfileSummaryCell.swift in Sources */,
 				C17C35F0263FB2E000B8B494 /* CityFiltterTableView.swift in Sources */,
 				C14C631F25DE0262000D50B0 /* LocationManager.swift in Sources */,
-				619358942841006000B7F7A1 /* ChangeLanguageVC.swift in Sources */,
 				C13A457525F4287A004F2D33 /* AddSurgeryNetwork.swift in Sources */,
 				C186EBAC2647D05800E92B8F /* ConsultationsLogDetailsVC.swift in Sources */,
 				C184A1202647E185005453FC /* WriteReviewsVC.swift in Sources */,
 				613C8BC126ECA1BA00FA4A83 /* AppointmentDetailsModel.swift in Sources */,
 				C14C62F225DE0262000D50B0 /* BaseViewControll.swift in Sources */,
-				C4D8AF722842B43800D154BE /* SetReminderVC.swift in Sources */,
 				01CD8C8C26F2931200F6F0DE /* ClinicCell.swift in Sources */,
 				C14C631925DE0262000D50B0 /* Helper.swift in Sources */,
 				C18DA7232647B21C00079EE1 /* SuccessBookingVC.swift in Sources */,
@@ -3995,6 +3831,8 @@
 				C13A456125F2E903004F2D33 /* AllEmergencyContactsNetwork.swift in Sources */,
 				61BD6827283B104C00821D51 /* AddMedication+Table+Collection.swift in Sources */,
 				C19EAB7125E9106B006E6F06 /* codeValidation.swift in Sources */,
+				06D84F042849C20800DEF1D1 /* ChangeLanguageRouter.swift in Sources */,
+				06D84F062849C20800DEF1D1 /* ChangeLanguageVC.swift in Sources */,
 				C14C631625DE0262000D50B0 /* ImageStack.swift in Sources */,
 				C19EAB6D25E7F674006E6F06 /* GetDataModel.swift in Sources */,
 				C1D077482643836100D4F88A /* DoctorProfileVC.swift in Sources */,
@@ -4033,11 +3871,9 @@
 				C14C62FB25DE0262000D50B0 /* UIStoryBoard+Extension.swift in Sources */,
 				C14C630525DE0262000D50B0 /* AlamofireMultipart.swift in Sources */,
 				C10E8F1125B33CED004FFCBF /* AppStrings.swift in Sources */,
-				619358922841006000B7F7A1 /* ChangeLanguageRouter.swift in Sources */,
 				C1E3999B25FC3A870064CAA2 /* exTableView.swift in Sources */,
 				0106D79A26C522520054E254 /* PrefixTitleTBCell.swift in Sources */,
 				C15F7F0925BBFDFA005EB885 /* SurgeryVC.swift in Sources */,
-				619358962841006000B7F7A1 /* ChangeLanguageModel.swift in Sources */,
 				014904A826C5CDF100BD6D63 /* FilterViewModel.swift in Sources */,
 				C13A456525F2EC11004F2D33 /* getRelationsModel.swift in Sources */,
 				C14C632025DE0262000D50B0 /* Configuration.swift in Sources */,
@@ -4097,8 +3933,6 @@
 				061964CC28426A46006DBFB6 /* OPsDashboardPresenter.swift in Sources */,
 				0630036028448EBE00163C6F /* OtherProviderCell.swift in Sources */,
 				C186EBA22647CC5C00E92B8F /* ConsultationsLogCell.swift in Sources */,
-				C458109B2843FB980026A9F4 /* ReportServiceListModel.swift in Sources */,
-				C4D8AF6F2842B42300D154BE /* AddReminderVC.swift in Sources */,
 				C15102EF25B7EFB500FEEFB2 /* AllAllergiesVC+Table.swift in Sources */,
 				C14C631125DE0262000D50B0 /* ImagePickerController.swift in Sources */,
 				C15F7EFD25BBFCBD005EB885 /* AddFamilyHistoryVC.swift in Sources */,
@@ -4132,7 +3966,6 @@
 				C14C62FC25DE0262000D50B0 /* textField.swift in Sources */,
 				619182EF26F65B4600B6A796 /* Animation.m in Sources */,
 				6160C7DF26E63D8D006A12BE /* WriteReviewsNetwork.swift in Sources */,
-				C4D8AF6A2842B2B100D154BE /* AllReportsVC.swift in Sources */,
 				C14C62F025DE0262000D50B0 /* Date+Extension.swift in Sources */,
 				063023BA2845DDB00085FD59 /* String+Extensions.swift in Sources */,
 				C16D3D5D25FE8930009EDCA1 /* EmergencyNumberNetwork.swift in Sources */,
@@ -4173,8 +4006,10 @@
 				61A7EF362830D9940027775E /* YBTextPickerDataModel.swift in Sources */,
 				C1820E0B25B41AFD00396AAE /* MoreVC.swift in Sources */,
 				014904AC26C5D17400BD6D63 /* Base.swift in Sources */,
+				06D84F082849C20900DEF1D1 /* ChangeLanguageInteractor.swift in Sources */,
 				C1007AB4263BC8A10060AD2F /* SearchTableViewe.swift in Sources */,
 				063023BE2845DE0C0085FD59 /* UIView+Extensions.swift in Sources */,
+				06D84F052849C20800DEF1D1 /* ChangeLanguage.swift in Sources */,
 				C14C632E25DE0262000D50B0 /* UserDataAction.swift in Sources */,
 				C10E8E3025B33B03004FFCBF /* AppDelegate.swift in Sources */,
 				06F932BE28485F2B00DAFB3D /* AULocationPresenter.swift in Sources */,
@@ -4232,7 +4067,6 @@
 				C1A76B4725EADB20008F46DF /* addDieseasNetwork.swift in Sources */,
 				01F2F14B26E00B5200793A60 /* ConsultationLogModel.swift in Sources */,
 				C14C630225DE0262000D50B0 /* UIImagePickerController + Extension.swift in Sources */,
-				C4D8AF6B2842B2B100D154BE /* AllReportsModel.swift in Sources */,
 				C14C631A25DE0262000D50B0 /* ImageGalleryViewDataSource.swift in Sources */,
 				322DCF2525EAC29A00142F6A /* EditProfileVCPicker.swift in Sources */,
 				C186EB852647C5D700E92B8F /* AppointmentHistoryPopup.swift in Sources */,
@@ -4263,11 +4097,12 @@
 				61BD6831283B104C00821D51 /* AllMedicationVC.swift in Sources */,
 				061964CD28426A46006DBFB6 /* OPsDashboardVC.swift in Sources */,
 				C1C680B02607D45A0043EE1C /* getDoctorsModel.swift in Sources */,
-				C4D8AF612842B20100D154BE /* FilterReportsVC.swift in Sources */,
 				C1820DF225B4196000396AAE /* TabbarManager.swift in Sources */,
 				06FD674628431790001FD415 /* SearchOPServicesVC.swift in Sources */,
 				61BD6822283B104C00821D51 /* addMedicationTableCell.swift in Sources */,
+				06D84F0A2849C20900DEF1D1 /* ChangeLanguagePresenter.swift in Sources */,
 				6160C7DD26E63D33006A12BE /* AppointmentNetwork.swift in Sources */,
+				06D84F092849C20900DEF1D1 /* ChangeLanguageModel.swift in Sources */,
 				C186EB802647C41500E92B8F /* AppointmentDetailsVC.swift in Sources */,
 				C19961BD26351BB100B3FB2A /* TopDoctorCell.swift in Sources */,
 				61BD6843283B820600821D51 /* DeleteMedicalReportVC.swift in Sources */,
@@ -4283,6 +4118,7 @@
 				61EE621D280A942E0096009D /* ForgetPassVC.swift in Sources */,
 				C14C632D25DE0262000D50B0 /* DigitInputView.swift in Sources */,
 				C1820E8925B5127B00396AAE /* AppointmentVC.swift in Sources */,
+				06D84EAE2849BBCA00DEF1D1 /* SocialPhoneVC.swift in Sources */,
 				063023BC2845DDDE0085FD59 /* UITableView+Extensions.swift in Sources */,
 				0122817127D7EB6700FF9C7E /* CustomAnnotation.swift in Sources */,
 				C1FA094025BCFA2A00433577 /* EmergencyNumberVC+Table.swift in Sources */,
@@ -4337,20 +4173,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		6168CD7628460C67008C5C84 /* SocialPhoneVC.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6168CD7728460C67008C5C84 /* ar */,
-			);
-			name = SocialPhoneVC.strings;
-			sourceTree = "<group>";
-		};
-		6168CD7928460C67008C5C84 /* SocialPhoneVC.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6168CD7A28460C67008C5C84 /* Base */,
-			);
-			name = SocialPhoneVC.xib;
 		061964D1284279A8006DBFB6 /* OPsDashboard.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -4401,6 +4223,194 @@
 			name = OtherProvidersList.xib;
 			sourceTree = "<group>";
 		};
+		06D84EA32849BB8E00DEF1D1 /* LoginVC.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				06D84EA42849BB8E00DEF1D1 /* Base */,
+				06D84EA62849BBA700DEF1D1 /* ar */,
+			);
+			name = LoginVC.xib;
+			sourceTree = "<group>";
+		};
+		06D84EAB2849BBCA00DEF1D1 /* SocialPhoneVC.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				06D84EAC2849BBCA00DEF1D1 /* Base */,
+				06D84EB02849BC1600DEF1D1 /* ar */,
+			);
+			name = SocialPhoneVC.xib;
+			sourceTree = "<group>";
+		};
+		06D84EB12849BC3900DEF1D1 /* SignUpVC.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				06D84EB22849BC3900DEF1D1 /* Base */,
+				06D84EB42849BC4500DEF1D1 /* ar */,
+			);
+			name = SignUpVC.xib;
+			sourceTree = "<group>";
+		};
+		06D84EB52849BC6C00DEF1D1 /* ForgetPassVC.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				06D84EB62849BC6C00DEF1D1 /* Base */,
+				06D84EB82849BC7800DEF1D1 /* ar */,
+			);
+			name = ForgetPassVC.xib;
+			sourceTree = "<group>";
+		};
+		06D84EB92849BC8600DEF1D1 /* ConfirmAccountVC.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				06D84EBA2849BC8600DEF1D1 /* Base */,
+				06D84EBC2849BC9100DEF1D1 /* ar */,
+			);
+			name = ConfirmAccountVC.xib;
+			sourceTree = "<group>";
+		};
+		06D84EBD2849BCB500DEF1D1 /* AppointmentCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				06D84EBE2849BCB500DEF1D1 /* Base */,
+				06D84EC02849BCC500DEF1D1 /* ar */,
+			);
+			name = AppointmentCell.xib;
+			sourceTree = "<group>";
+		};
+		06D84EC12849BCDD00DEF1D1 /* AppointmentVC.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				06D84EC22849BCDD00DEF1D1 /* Base */,
+				06D84EC42849BCEC00DEF1D1 /* ar */,
+			);
+			name = AppointmentVC.xib;
+			sourceTree = "<group>";
+		};
+		06D84EC52849BD1400DEF1D1 /* HomeVC.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				06D84EC62849BD1500DEF1D1 /* Base */,
+				06D84EC82849BD2400DEF1D1 /* ar */,
+			);
+			name = HomeVC.xib;
+			sourceTree = "<group>";
+		};
+		06D84EC92849BD5700DEF1D1 /* HelpSupportCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				06D84ECA2849BD5700DEF1D1 /* Base */,
+			);
+			name = HelpSupportCell.xib;
+			sourceTree = "<group>";
+		};
+		06D84ECC2849BEB800DEF1D1 /* ForgetPasswordVC.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				06D84ECD2849BEB800DEF1D1 /* Base */,
+				06D84ECF2849BECB00DEF1D1 /* ar */,
+			);
+			name = ForgetPasswordVC.xib;
+			sourceTree = "<group>";
+		};
+		06D84ED02849BEDD00DEF1D1 /* PermissionVC.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				06D84ED12849BEDD00DEF1D1 /* Base */,
+				06D84ED32849BF0800DEF1D1 /* ar */,
+			);
+			name = PermissionVC.xib;
+			sourceTree = "<group>";
+		};
+		06D84ED42849BF2000DEF1D1 /* FollowUpCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				06D84ED52849BF2100DEF1D1 /* Base */,
+				06D84ED72849BF3700DEF1D1 /* ar */,
+			);
+			name = FollowUpCell.xib;
+			sourceTree = "<group>";
+		};
+		06D84ED82849BF6A00DEF1D1 /* AttachementTBCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				06D84ED92849BF6A00DEF1D1 /* Base */,
+				06D84EDB2849BF7900DEF1D1 /* ar */,
+			);
+			name = AttachementTBCell.xib;
+			sourceTree = "<group>";
+		};
+		06D84EDC2849BF9000DEF1D1 /* EditProfileVC.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				06D84EDD2849BF9000DEF1D1 /* Base */,
+				06D84EDF2849BFA200DEF1D1 /* ar */,
+			);
+			name = EditProfileVC.xib;
+			sourceTree = "<group>";
+		};
+		06D84EE02849BFCE00DEF1D1 /* ProfileDataPopUpVC.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				06D84EE12849BFCE00DEF1D1 /* Base */,
+				06D84EE32849BFE100DEF1D1 /* ar */,
+			);
+			name = ProfileDataPopUpVC.xib;
+			sourceTree = "<group>";
+		};
+		06D84EE42849C00000DEF1D1 /* ProfileSummaryCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				06D84EE52849C00000DEF1D1 /* Base */,
+				06D84EE72849C01300DEF1D1 /* ar */,
+			);
+			name = ProfileSummaryCell.xib;
+			sourceTree = "<group>";
+		};
+		06D84EE82849C02400DEF1D1 /* ProfileCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				06D84EE92849C02400DEF1D1 /* Base */,
+				06D84EEB2849C03600DEF1D1 /* ar */,
+			);
+			name = ProfileCell.xib;
+			sourceTree = "<group>";
+		};
+		06D84EEC2849C04900DEF1D1 /* ProfileVC.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				06D84EED2849C04900DEF1D1 /* Base */,
+				06D84EEF2849C05700DEF1D1 /* ar */,
+			);
+			name = ProfileVC.xib;
+			sourceTree = "<group>";
+		};
+		06D84EF02849C0DA00DEF1D1 /* AddAddressVC.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				06D84EF12849C0DA00DEF1D1 /* Base */,
+				06D84EF32849C0F300DEF1D1 /* ar */,
+			);
+			name = AddAddressVC.xib;
+			sourceTree = "<group>";
+		};
+		06D84EF42849C10600DEF1D1 /* AllAddressCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				06D84EF52849C10600DEF1D1 /* Base */,
+				06D84EF72849C11B00DEF1D1 /* ar */,
+			);
+			name = AllAddressCell.xib;
+			sourceTree = "<group>";
+		};
+		06D84EFE2849C20600DEF1D1 /* ChangeLanguageVC.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				06D84EFF2849C20600DEF1D1 /* Base */,
+				06D84F0B2849C22C00DEF1D1 /* ar */,
+			);
+			name = ChangeLanguageVC.xib;
+			sourceTree = "<group>";
+		};
 		06F932CA284881A300DAFB3D /* AULocation.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -4424,7 +4434,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				C10E8E3625B33B03004FFCBF /* Base */,
-				C4BCC9582845502E00D04808 /* ar */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -4443,186 +4452,6 @@
 				C1977DB925FC2271004AD914 /* Base */,
 			);
 			name = MapVc.xib;
-			sourceTree = "<group>";
-		};
-		C4BCC95B284557E300D04808 /* LoginVC.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C4BCC95A284557E300D04808 /* Base */,
-				C4BCC95D284557E700D04808 /* ar */,
-			);
-			name = LoginVC.xib;
-			sourceTree = "<group>";
-		};
-		C4BCC960284559F200D04808 /* SignUpVC.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C4BCC95F284559F200D04808 /* Base */,
-				C4BCC962284559F500D04808 /* ar */,
-			);
-			name = SignUpVC.xib;
-			sourceTree = "<group>";
-		};
-		C4BCC96528455B0100D04808 /* ForgetPassVC.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C4BCC96428455B0100D04808 /* Base */,
-				C4BCC96728455B0700D04808 /* ar */,
-			);
-			name = ForgetPassVC.xib;
-			sourceTree = "<group>";
-		};
-		C4BCC96A28455B8E00D04808 /* ConfirmAccountVC.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C4BCC96928455B8E00D04808 /* Base */,
-				C4BCC96C28455B9100D04808 /* ar */,
-			);
-			name = ConfirmAccountVC.xib;
-			sourceTree = "<group>";
-		};
-		C4BCC96F28455C3100D04808 /* HomeVC.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C4BCC96E28455C3100D04808 /* Base */,
-				C4BCC97128455C3400D04808 /* ar */,
-			);
-			name = HomeVC.xib;
-			sourceTree = "<group>";
-		};
-		C4BCC97428455F4100D04808 /* AppointmentVC.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C4BCC97328455F4100D04808 /* Base */,
-				C4BCC97628455F4500D04808 /* ar */,
-			);
-			name = AppointmentVC.xib;
-			sourceTree = "<group>";
-		};
-		C4BCC97928455F8B00D04808 /* AppointmentCell.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C4BCC97828455F8B00D04808 /* Base */,
-				C4BCC97B28455F9400D04808 /* ar */,
-			);
-			name = AppointmentCell.xib;
-			sourceTree = "<group>";
-		};
-		C4BCC97E2845610D00D04808 /* ProfileVC.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C4BCC97F2845611200D04808 /* Base */,
-				C4BCC9812845612C00D04808 /* ar */,
-			);
-			name = ProfileVC.xib;
-			sourceTree = "<group>";
-		};
-		C4BCC9842845616E00D04808 /* ProfileCell.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C4BCC9832845616E00D04808 /* Base */,
-				C4BCC9862845617B00D04808 /* ar */,
-			);
-			name = ProfileCell.xib;
-			sourceTree = "<group>";
-		};
-		C4BCC9892845619100D04808 /* ProfileSummaryCell.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C4BCC9882845619100D04808 /* Base */,
-				C4BCC98B2845619500D04808 /* ar */,
-			);
-			name = ProfileSummaryCell.xib;
-			sourceTree = "<group>";
-		};
-		C4BCC98E284561CA00D04808 /* ProfileDataPopUpVC.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C4BCC98D284561CA00D04808 /* Base */,
-				C4BCC990284561D000D04808 /* ar */,
-			);
-			name = ProfileDataPopUpVC.xib;
-			sourceTree = "<group>";
-		};
-		C4BCC9932845628100D04808 /* EditProfileVC.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C4BCC9922845628100D04808 /* Base */,
-				C4BCC9952845628400D04808 /* ar */,
-			);
-			name = EditProfileVC.xib;
-			sourceTree = "<group>";
-		};
-		C4BCC9982845636000D04808 /* AttachementTBCell.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C4BCC9972845636000D04808 /* Base */,
-				C4BCC99A2845636800D04808 /* ar */,
-			);
-			name = AttachementTBCell.xib;
-			sourceTree = "<group>";
-		};
-		C4BCC99D2845638900D04808 /* FollowUpCell.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C4BCC99C2845638900D04808 /* Base */,
-				C4BCC99F2845638E00D04808 /* ar */,
-			);
-			name = FollowUpCell.xib;
-			sourceTree = "<group>";
-		};
-		C4BCC9A22845642E00D04808 /* PermissionVC.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C4BCC9A12845642E00D04808 /* Base */,
-				C4BCC9A42845647E00D04808 /* ar */,
-			);
-			name = PermissionVC.xib;
-			sourceTree = "<group>";
-		};
-		C4BCC9A72845660F00D04808 /* ForgetPasswordVC.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C4BCC9A62845660F00D04808 /* Base */,
-				C4BCC9A92845661400D04808 /* ar */,
-			);
-			name = ForgetPasswordVC.xib;
-			sourceTree = "<group>";
-		};
-		C4BCC9AC284566A600D04808 /* HelpSupportCell.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C4BCC9AB284566A600D04808 /* Base */,
-				C4BCC9AE284566AC00D04808 /* ar */,
-			);
-			name = HelpSupportCell.xib;
-			sourceTree = "<group>";
-		};
-		C4BCC9B12845672F00D04808 /* ChangeLanguageVC.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C4BCC9B02845672F00D04808 /* Base */,
-				C4BCC9B32845673400D04808 /* ar */,
-			);
-			name = ChangeLanguageVC.xib;
-			sourceTree = "<group>";
-		};
-		C4BCC9B62845680C00D04808 /* AllAddressCell.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C4BCC9B52845680C00D04808 /* Base */,
-				C4BCC9B82845683100D04808 /* ar */,
-			);
-			name = AllAddressCell.xib;
-			sourceTree = "<group>";
-		};
-		C4BCC9BB284568BF00D04808 /* AddAddressVC.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C4BCC9BA284568BF00D04808 /* Base */,
-				C4BCC9BD284568C300D04808 /* ar */,
-			);
-			name = AddAddressVC.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -4752,8 +4581,6 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "E4 Patient/E4 Patient.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_TEAM = H7VFXJNULD;
 				DEVELOPMENT_TEAM = B3B9UDWN3P;
 				INFOPLIST_FILE = "E4 Patient/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
@@ -4761,12 +4588,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Ekadsoft.E4Patientt;
-				PRODUCT_NAME = E4clinic;
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/nadamostafa/Downloads/E4ClinicPatientIos-master-4-2/ E4ClinicPatient-Bridging-Header.h";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Ekadsoft.E4Patient2;
 				PRODUCT_NAME = E4clinic;
+				SWIFT_INSTALL_OBJC_HEADER = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/E4ClinicPatient-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -4782,8 +4606,6 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "E4 Patient/E4 Patient.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_TEAM = H7VFXJNULD;
 				DEVELOPMENT_TEAM = B3B9UDWN3P;
 				INFOPLIST_FILE = "E4 Patient/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
@@ -4791,12 +4613,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Ekadsoft.E4Patientt;
-				PRODUCT_NAME = E4clinic;
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/nadamostafa/Downloads/E4ClinicPatientIos-master-4-2/ E4ClinicPatient-Bridging-Header.h";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Ekadsoft.E4Patient2;
 				PRODUCT_NAME = E4clinic;
+				SWIFT_INSTALL_OBJC_HEADER = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/E4ClinicPatient-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
