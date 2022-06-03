@@ -15,7 +15,13 @@ class NetworkClient{
     static func performRequest<T> (_type:T.Type ,router : APIRouter , completion : @escaping (Swift.Result<T,Error>) -> ()) where T : Decodable{
         let token = UserDefaults.standard.object(forKey: "token")
 //        var headers: [String: String] = ["Content-Type":"application/json", "lang": "2"]
-        var headers: HTTPHeaders = ["Content-Type":"application/json", "lang": "2"]
+        var lang = "2"
+        if Locale.preferredLanguages[0] == "ar" {
+            lang = "1"
+        } else {
+            lang = "2"
+        }
+        var headers: HTTPHeaders = ["Content-Type":"application/json", "lang": lang]
         if let token = token as? String {
             headers["Authorization"] = "Bearer \(token)"
             

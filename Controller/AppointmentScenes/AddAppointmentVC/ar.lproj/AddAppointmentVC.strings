@@ -1,0 +1,42 @@
+
+/* Class = "UIButton"; normalTitle = "continue"; ObjectID = "3EE-pJ-SG7"; */
+"3EE-pJ-SG7.normalTitle" = "continue";
+
+/* Class = "UIButton"; normalTitle = "Appointment reservation"; ObjectID = "3gd-ss-IHr"; */
+"3gd-ss-IHr.normalTitle" = "Appointment reservation";
+
+/* Class = "UILabel"; text = "0 EGP"; ObjectID = "81M-NG-Cj2"; */
+"81M-NG-Cj2.text" = "0 EGP";
+
+/* Class = "UILabel"; text = "43 Nakhla moteey st , triumph square , \ninfront of emam ali mosque Nasr City"; ObjectID = "DPc-TJ-Ola"; */
+"DPc-TJ-Ola.text" = "43 Nakhla moteey st , triumph square , \ninfront of emam ali mosque Nasr City";
+
+/* Class = "UILabel"; text = "0 EGP"; ObjectID = "Rum-xA-CP9"; */
+"Rum-xA-CP9.text" = "0 EGP";
+
+/* Class = "UILabel"; text = "Service"; ObjectID = "dLF-up-Zq6"; */
+"dLF-up-Zq6.text" = "Service";
+
+/* Class = "UILabel"; text = "Second Consultations Fees"; ObjectID = "iee-wT-heK"; */
+"iee-wT-heK.text" = "Second Consultations Fees";
+
+/* Class = "UILabel"; text = "El-Shouroq (Nasr City)"; ObjectID = "jP7-D1-RO5"; */
+"jP7-D1-RO5.text" = "El-Shouroq (Nasr City)";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "oY3-bJ-D1d"; */
+"oY3-bJ-D1d.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Choose Your Consultations"; ObjectID = "slB-Le-Qfe"; */
+"slB-Le-Qfe.text" = "اختر استشاراتك";
+
+/* Class = "UITextView"; text = "Appointment Reason"; ObjectID = "tqq-3W-vbO"; */
+"tqq-3W-vbO.text" = "سبب التعيين";
+
+/* Class = "UILabel"; text = "Appointment Reason"; ObjectID = "xoh-Kj-XB0"; */
+"xoh-Kj-XB0.text" = "سبب التعيينn";
+
+/* Class = "UILabel"; text = "Consultations Fees"; ObjectID = "xqI-bU-78P"; */
+"xqI-bU-78P.text" = "رسوم الاستشارات";
+
+/* Class = "UITextField"; placeholder = "servise"; ObjectID = "zQy-da-de8"; */
+"zQy-da-de8.placeholder" = "خدمة";

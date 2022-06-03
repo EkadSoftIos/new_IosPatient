@@ -126,9 +126,9 @@ to figure out how to treat some diseases</string>
                         </constraints>
                     </view>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2QO-bm-3Un">
-                        <rect key="frame" x="199" y="170" width="113" height="31"/>
+                        <rect key="frame" x="161" y="170" width="151" height="31"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="113" id="s0I-Nc-MP0"/>
+                            <constraint firstAttribute="width" constant="151" id="s0I-Nc-MP0"/>
                         </constraints>
                         <color key="tintColor" name="Blue"/>
                         <state key="normal" title="Button"/>
@@ -177,7 +177,7 @@ to figure out how to treat some diseases</string>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.97318872223067809" green="0.97318872223067809" blue="0.97318872223067809" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="7dh-F0-Fbg" firstAttribute="leading" secondItem="yKh-VC-8Oi" secondAttribute="trailing" constant="12" id="C2W-UW-AgN"/>
                             <constraint firstItem="eIh-RK-aGj" firstAttribute="leading" secondItem="yKh-VC-8Oi" secondAttribute="trailing" constant="16" id="ELf-Nf-43S"/>
@@ -191,6 +191,17 @@ to figure out how to treat some diseases</string>
                             <constraint firstAttribute="trailing" secondItem="VYR-Wc-QvB" secondAttribute="trailing" constant="16" id="tL0-Ad-9nG"/>
                             <constraint firstItem="yKh-VC-8Oi" firstAttribute="leading" secondItem="HuD-o7-U5A" secondAttribute="leading" constant="16" id="wkF-5t-czV"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="15"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
                 <constraints>
@@ -216,6 +227,7 @@ to figure out how to treat some diseases</string>
                 <outlet property="patientName" destination="Wsi-RW-xvp" id="pSE-va-Jws"/>
                 <outlet property="patientRate" destination="d1b-en-Dfd" id="BbG-cv-10m"/>
                 <outlet property="rateDate" destination="cFb-gY-9yN" id="A4j-a7-hCz"/>
+                <outlet property="subViewHeightConstrait" destination="hdN-6A-SMP" id="9x0-zQ-MTE"/>
                 <outlet property="viewReplyBTN" destination="2QO-bm-3Un" id="SHw-23-fW9"/>
             </connections>
             <point key="canvasLocation" x="-200.00000000000003" y="184.15178571428569"/>

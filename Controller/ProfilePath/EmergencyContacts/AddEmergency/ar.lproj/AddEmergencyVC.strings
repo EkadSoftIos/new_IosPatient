@@ -1,0 +1,60 @@
+
+/* Class = "UILabel"; text = "Country"; ObjectID = "0Rx-kK-NUt"; */
+"0Rx-kK-NUt.text" = "دولة";
+
+/* Class = "UILabel"; text = "Mobile"; ObjectID = "13h-ae-1hD"; */
+"13h-ae-1hD.text" = "التليفون المحمول";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "3bX-ce-PgA"; */
+"3bX-ce-PgA.normalTitle" = "حفظ";
+
+/* Class = "UILabel"; text = "*"; ObjectID = "4CR-Qb-cfF"; */
+"4CR-Qb-cfF.text" = "*";
+
+/* Class = "UITextField"; placeholder = "Name"; ObjectID = "AuC-cD-N3e"; */
+"AuC-cD-N3e.placeholder" = "الاسم";
+
+/* Class = "UITextField"; placeholder = "Address"; ObjectID = "BHs-1p-NiK"; */
+"BHs-1p-NiK.placeholder" = "العنوان";
+
+/* Class = "UITextField"; placeholder = "Phone"; ObjectID = "Cz7-ut-SXg"; */
+"Cz7-ut-SXg.placeholder" = "التليفون المحمول";
+
+/* Class = "UITextField"; placeholder = "Area"; ObjectID = "D5v-pd-lIc"; */
+"D5v-pd-lIc.placeholder" = "منطقة";
+
+/* Class = "UILabel"; text = "Area"; ObjectID = "El8-TQ-jQi"; */
+"El8-TQ-jQi.text" = "منطقة";
+
+/* Class = "UILabel"; text = "City"; ObjectID = "Grr-t3-zmt"; */
+"Grr-t3-zmt.text" = "مدينة";
+
+/* Class = "UILabel"; text = "Address"; ObjectID = "QIl-gn-mGJ"; */
+"QIl-gn-mGJ.text" = "العنوان";
+
+/* Class = "UITextField"; placeholder = "Country"; ObjectID = "R3b-Z2-Nim"; */
+"R3b-Z2-Nim.placeholder" = "دولة";
+
+/* Class = "UILabel"; text = "EG"; ObjectID = "Vst-RY-gtn"; */
+"Vst-RY-gtn.text" = "EG";
+
+/* Class = "UILabel"; text = "Relation "; ObjectID = "X2P-sg-cTc"; */
+"X2P-sg-cTc.text" = "علاقة ";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "dFg-tI-SGT"; */
+"dFg-tI-SGT.placeholder" = "البريد الإلكتروني";
+
+/* Class = "UITextField"; placeholder = "City"; ObjectID = "j00-ja-HhD"; */
+"j00-ja-HhD.placeholder" = "مدينة";
+
+/* Class = "UILabel"; text = "*"; ObjectID = "qno-uY-sFZ"; */
+"qno-uY-sFZ.text" = "*";
+
+/* Class = "UILabel"; text = "Email"; ObjectID = "rmD-lV-oBZ"; */
+"rmD-lV-oBZ.text" = "البريد الإلكتروني";
+
+/* Class = "UITextField"; placeholder = "Relation "; ObjectID = "uu0-tb-qDm"; */
+"uu0-tb-qDm.placeholder" = "علاقة ";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "z42-3b-3FS"; */
+"z42-3b-3FS.text" = "الاسم";

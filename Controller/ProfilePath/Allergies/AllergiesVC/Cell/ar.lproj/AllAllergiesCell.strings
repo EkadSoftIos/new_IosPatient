@@ -1,0 +1,9 @@
+
+/* Class = "UILabel"; text = "Allergies"; ObjectID = "7qY-QH-Wvc"; */
+"7qY-QH-Wvc.text" = "الحساسية";
+
+/* Class = "UILabel"; text = "- Penicillin"; ObjectID = "PWk-RQ-u9H"; */
+"PWk-RQ-u9H.text" = "- Penicillin";
+
+/* Class = "UILabel"; text = "- Sulfa drug"; ObjectID = "uAb-ER-Jap"; */
+"uAb-ER-Jap.text" = "- Sulfa drug";

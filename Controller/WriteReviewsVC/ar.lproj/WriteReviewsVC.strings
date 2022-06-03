@@ -1,0 +1,18 @@
+
+/* Class = "UILabel"; text = "Give a rate"; ObjectID = "KQL-AM-g2d"; */
+"KQL-AM-g2d.text" = "اضف تقييم";
+
+/* Class = "UILabel"; text = "Assistant Rating"; ObjectID = "ZFH-7c-nJD"; */
+"ZFH-7c-nJD.text" = "تقييم المساعد";
+
+/* Class = "UILabel"; text = "Assistant Rating"; ObjectID = "Zmw-Qh-n2D"; */
+"Zmw-Qh-n2D.text" = "تقييم المساعد";
+
+/* Class = "UILabel"; text = "Doctor Rating"; ObjectID = "dH2-Gt-aT5"; */
+"dH2-Gt-aT5.text" = "تقييم الطبيب";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "rYE-Ho-QsA"; */
+"rYE-Ho-QsA.normalTitle" = "حفظ";
+
+/* Class = "UILabel"; text = "Write a review"; ObjectID = "s5f-kc-auf"; */
+"s5f-kc-auf.text" = "أكتب مراجعة";

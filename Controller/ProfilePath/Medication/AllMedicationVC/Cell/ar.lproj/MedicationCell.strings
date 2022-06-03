@@ -1,0 +1,21 @@
+
+/* Class = "UIButton"; normalTitle = "Set Reminder"; ObjectID = "1BS-cU-kX3"; */
+"1BS-cU-kX3.normalTitle" = "تعيين تذكير";
+
+/* Class = "UILabel"; text = "Sep 11, 2020 - Sep 20, 2020"; ObjectID = "GyH-d7-hze"; */
+"GyH-d7-hze.text" = "Sep 11, 2020 - Sep 20, 2020";
+
+/* Class = "UILabel"; text = "Every 2 days"; ObjectID = "LlI-XE-4gV"; */
+"LlI-XE-4gV.text" = "Every 2 days";
+
+/* Class = "UIButton"; normalTitle = "   Cart"; ObjectID = "Ook-YB-LbI"; */
+"Ook-YB-LbI.normalTitle" = "   Cart";
+
+/* Class = "UILabel"; text = "3 times daily, Before Meals"; ObjectID = "Rvu-1e-96h"; */
+"Rvu-1e-96h.text" = "3 times daily, Before Meals";
+
+/* Class = "UILabel"; text = "Vitamin C"; ObjectID = "ndF-9J-Mml"; */
+"ndF-9J-Mml.text" = "Vitamin C";
+
+/* Class = "UILabel"; text = "Tap - 250mg"; ObjectID = "wTW-1h-IaJ"; */
+"wTW-1h-IaJ.text" = "Tap - 250mg";

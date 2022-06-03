@@ -1,0 +1,18 @@
+
+/* Class = "UILabel"; text = "Filter"; ObjectID = "71m-gp-Oqs"; */
+"71m-gp-Oqs.text" = "تصفية";
+
+/* Class = "UISearchBar"; placeholder = "Search by Doctor Name"; ObjectID = "ghb-c8-CB9"; */
+"ghb-c8-CB9.placeholder" = "البحث باسم الدكتور";
+
+/* Class = "UILabel"; text = "You have no appointements"; ObjectID = "uNI-q2-Exo"; */
+"uNI-q2-Exo.text" = "ليس لديك مواعيد";
+
+/* Class = "UIButton"; configuration.subtitle = " "; ObjectID = "wfu-bY-AfD"; */
+"wfu-bY-AfD.configuration.subtitle" = " ";
+
+/* Class = "UIButton"; configuration.title = " "; ObjectID = "wfu-bY-AfD"; */
+"wfu-bY-AfD.configuration.title" = " ";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "wfu-bY-AfD"; */
+"wfu-bY-AfD.normalTitle" = "Button";

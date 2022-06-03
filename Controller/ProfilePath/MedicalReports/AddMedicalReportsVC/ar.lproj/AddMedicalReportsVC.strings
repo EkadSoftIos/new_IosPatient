@@ -1,0 +1,39 @@
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "5NC-Tn-qq8"; */
+"5NC-Tn-qq8.normalTitle" = "حفظ";
+
+/* Class = "UILabel"; text = "Test / Radiology Centre"; ObjectID = "9NA-nd-XuO"; */
+"9NA-nd-XuO.text" = "مركز الفحص / الأشعة";
+
+/* Class = "UILabel"; text = "Date"; ObjectID = "Gwu-bV-chx"; */
+"Gwu-bV-chx.text" = "التاريخ";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "RvE-QT-4TW"; */
+"RvE-QT-4TW.text" = "الاسم";
+
+/* Class = "UITextView"; text = "Notes"; ObjectID = "SJM-hI-RnS"; */
+"SJM-hI-RnS.text" = "ملاحظات";
+
+/* Class = "UILabel"; text = "Notes"; ObjectID = "ewP-x3-1IE"; */
+"ewP-x3-1IE.text" = "ملاحظات";
+
+/* Class = "UILabel"; text = "Prescribed By"; ObjectID = "hdS-FL-mMp"; */
+"hdS-FL-mMp.text" = "المنصوص عليها";
+
+/* Class = "UIButton"; normalTitle = "Add Attachment"; ObjectID = "i8f-kT-ble"; */
+"i8f-kT-ble.normalTitle" = "إضافة مرفق";
+
+/* Class = "UILabel"; text = "Results"; ObjectID = "nbu-aN-Voc"; */
+"nbu-aN-Voc.text" = "النتائج";
+
+/* Class = "UITextField"; placeholder = "Date"; ObjectID = "ogo-mC-1HY"; */
+"ogo-mC-1HY.placeholder" = "التاريخ";
+
+/* Class = "UITextField"; placeholder = "Test "; ObjectID = "pXL-uH-zuB"; */
+"pXL-uH-zuB.placeholder" = "اختبار ";
+
+/* Class = "UITextView"; text = "Results"; ObjectID = "tgm-Ed-nw6"; */
+"tgm-Ed-nw6.text" = "النتائج";
+
+/* Class = "UITextField"; placeholder = "Name"; ObjectID = "tnR-Cz-waH"; */
+"tnR-Cz-waH.placeholder" = "الاسم";

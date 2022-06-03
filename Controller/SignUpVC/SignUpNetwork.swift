@@ -53,7 +53,7 @@ extension SignUpVC{
     }
     func callApi(){
         let parameters: [String: Any] = [
-            "PhoneCode": "+2",
+            "PhoneCode": "+20",
             "BirthDate": dateTxt.text ?? "",
             "countryID": 1,
             "email": emailTxt.text ?? "",
@@ -73,8 +73,7 @@ extension SignUpVC{
                 self.createAccountBtn.stopAnimation()
                 if let error = model.errormessage {
                     self.showAlertWith(msg: error)
-                }
-                else {
+                }else {
                     let vc = ConfirmAccountVC()
                     vc.modalPresentationStyle = .fullScreen
                     vc.codeMessage = model.message

@@ -1,0 +1,36 @@
+
+/* Class = "UITextField"; placeholder = "Name"; ObjectID = "5Vn-lF-ZTy"; */
+"5Vn-lF-ZTy.placeholder" = "الاسم";
+
+/* Class = "UILabel"; text = "Implants / Support Devices"; ObjectID = "7qx-s6-JSO"; */
+"7qx-s6-JSO.text" = "زرع / أجهزة الدعم";
+
+/* Class = "UILabel"; text = "Notes"; ObjectID = "8SE-sw-oMl"; */
+"8SE-sw-oMl.text" = "ملاحظات";
+
+/* Class = "UILabel"; text = "Name *"; ObjectID = "Db5-dh-6Kh"; */
+"Db5-dh-6Kh.text" = "الاسم *";
+
+/* Class = "UITextField"; placeholder = "Date"; ObjectID = "GKg-Dg-ma6"; */
+"GKg-Dg-ma6.placeholder" = "التاريخ";
+
+/* Class = "UITextField"; placeholder = "Status"; ObjectID = "NCM-k6-4lj"; */
+"NCM-k6-4lj.placeholder" = "الحالة";
+
+/* Class = "UILabel"; text = "Status"; ObjectID = "NVc-7h-u0d"; */
+"NVc-7h-u0d.text" = "الحالة";
+
+/* Class = "UITextField"; placeholder = "Implants / Support Devices"; ObjectID = "W2m-ZC-1Zd"; */
+"W2m-ZC-1Zd.placeholder" = "زرع / أجهزة الدعم";
+
+/* Class = "UITextView"; text = "Notes"; ObjectID = "ebK-hg-jRD"; */
+"ebK-hg-jRD.text" = "ملاحظات";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "en0-GW-HPu"; */
+"en0-GW-HPu.normalTitle" = "حفظ";
+
+/* Class = "UILabel"; text = "By"; ObjectID = "kIh-Ci-n2L"; */
+"kIh-Ci-n2L.text" = "بواسطة";
+
+/* Class = "UILabel"; text = "Date *"; ObjectID = "v7z-4p-Yhy"; */
+"v7z-4p-Yhy.text" = "التاريخ *";

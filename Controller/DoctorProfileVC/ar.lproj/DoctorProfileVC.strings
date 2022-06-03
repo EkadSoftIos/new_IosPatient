@@ -1,0 +1,90 @@
+
+/* Class = "UILabel"; text = "Doctor Can Do"; ObjectID = "03T-I4-KJk"; */
+"03T-I4-KJk.text" = "يمكن للطبيب القيام به";
+
+/* Class = "UILabel"; text = "Video Call Consultations"; ObjectID = "0By-5F-NC9"; */
+"0By-5F-NC9.text" = "استشارات مكالمات الفيديو";
+
+/* Class = "UILabel"; text = "Frist Available on Sunday 20 Oct"; ObjectID = "0Me-We-7G0"; */
+"0Me-We-7G0.text" = "Frist Available on Sunday 20 Oct";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "1JW-J0-9Cn"; */
+"1JW-J0-9Cn.text" = "الاسم";
+
+/* Class = "UILabel"; text = "Consultant in Pediatric Dentistry"; ObjectID = "2cn-C0-HKh"; */
+"2cn-C0-HKh.text" = "استشاري طب أسنان الأطفال";
+
+/* Class = "UILabel"; text = "Academic Qualification"; ObjectID = "5PE-K0-Pc4"; */
+"5PE-K0-Pc4.text" = "المؤهل العلمي";
+
+/* Class = "UIButton"; normalTitle = "More.."; ObjectID = "5bF-NF-BSp"; */
+"5bF-NF-BSp.normalTitle" = "أكثر..";
+
+/* Class = "UIButton"; normalTitle = "More.."; ObjectID = "8So-kS-Hfg"; */
+"8So-kS-Hfg.normalTitle" = "أكثر..";
+
+/* Class = "UILabel"; text = "El-Shouroq (New Cairo)"; ObjectID = "EGK-5b-YY1"; */
+"EGK-5b-YY1.text" = "El-Shouroq (New Cairo)";
+
+/* Class = "UILabel"; text = "Immediate Video Call"; ObjectID = "FZS-2B-mVI"; */
+"FZS-2B-mVI.text" = "مكالمة فيديو فورية";
+
+/* Class = "UIButton"; normalTitle = "More.."; ObjectID = "HCZ-BH-9sn"; */
+"HCZ-BH-9sn.normalTitle" = "أكثر..";
+
+/* Class = "UILabel"; text = "200K"; ObjectID = "Jwf-RT-QDM"; */
+"Jwf-RT-QDM.text" = "200K";
+
+/* Class = "UIButton"; normalTitle = "Booking"; ObjectID = "N61-rI-Yop"; */
+"N61-rI-Yop.normalTitle" = "حجز";
+
+/* Class = "UILabel"; text = "532K"; ObjectID = "N8f-OY-Ch5"; */
+"N8f-OY-Ch5.text" = "532K";
+
+/* Class = "UILabel"; text = "Ask Doctor"; ObjectID = "OCY-yI-sDk"; */
+"OCY-yI-sDk.text" = "اسأل الطبيب";
+
+/* Class = "UIButton"; normalTitle = "more..."; ObjectID = "TUU-ni-4r5"; */
+"TUU-ni-4r5.normalTitle" = "أكثر..";
+
+/* Class = "UILabel"; text = "Fellowship in Advanced Aesthetics and Restorative\nDentistry, Department of Surgical and Diagnostic \nSciences, University - 2019"; ObjectID = "TaC-vp-i3n"; */
+"TaC-vp-i3n.text" = "Fellowship in Advanced Aesthetics and Restorative\nDentistry, Department of Surgical and Diagnostic \nSciences, University - 2019";
+
+/* Class = "UILabel"; text = "500K"; ObjectID = "Vcj-xS-Bel"; */
+"Vcj-xS-Bel.text" = "500K";
+
+/* Class = "UILabel"; text = "Fees 200 EGP"; ObjectID = "Xsg-CK-VpR"; */
+"Xsg-CK-VpR.text" = "Fees 200 EGP";
+
+/* Class = "UILabel"; text = "Available Tomorrow From 05:00PM"; ObjectID = "aVM-78-CEx"; */
+"aVM-78-CEx.text" = "Available Tomorrow From 05:00PM";
+
+/* Class = "UIButton"; normalTitle = "More.."; ObjectID = "aVb-bO-TVT"; */
+"aVb-bO-TVT.normalTitle" = "أكثر..";
+
+/* Class = "UILabel"; text = "Fees 150 EGP"; ObjectID = "bGE-qB-vIV"; */
+"bGE-qB-vIV.text" = "Fees 150 EGP";
+
+/* Class = "UILabel"; text = "See all Reviews "; ObjectID = "cc9-XJ-mA1"; */
+"cc9-XJ-mA1.text" = "مشاهدة جميع التعليقات ";
+
+/* Class = "UILabel"; text = "About Doctor"; ObjectID = "j9n-d7-mtx"; */
+"j9n-d7-mtx.text" = "عن دكتور";
+
+/* Class = "UIButton"; normalTitle = "Booking"; ObjectID = "kQF-db-0aT"; */
+"kQF-db-0aT.normalTitle" = "حجز";
+
+/* Class = "UILabel"; text = "Fees 150 EGP"; ObjectID = "lUR-wN-0IK"; */
+"lUR-wN-0IK.text" = "Fees 150 EGP";
+
+/* Class = "UILabel"; text = "No Available Appointments"; ObjectID = "rfr-27-ShM"; */
+"rfr-27-ShM.text" = "لا توجد مواعيد متاحة";
+
+/* Class = "UILabel"; text = "4.9"; ObjectID = "xAe-Bg-1dI"; */
+"xAe-Bg-1dI.text" = "4.9";
+
+/* Class = "UIButton"; normalTitle = "Booking"; ObjectID = "yRi-Rg-PIk"; */
+"yRi-Rg-PIk.normalTitle" = "حجز";
+
+/* Class = "UILabel"; text = "Home Visit "; ObjectID = "zxs-nA-8Uo"; */
+"zxs-nA-8Uo.text" = "زيارة منزلية ";

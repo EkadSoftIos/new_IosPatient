@@ -1,0 +1,18 @@
+
+/* Class = "UILabel"; text = "Sorting"; ObjectID = "8e9-jC-1fK"; */
+"8e9-jC-1fK.text" = "فرز";
+
+/* Class = "UILabel"; text = "No data exist"; ObjectID = "Arj-Qf-Gq4"; */
+"Arj-Qf-Gq4.text" = "لا توجد بيانات";
+
+/* Class = "UILabel"; text = "Filter"; ObjectID = "CHg-Uh-wr8"; */
+"CHg-Uh-wr8.text" = "منقي";
+
+/* Class = "UISearchBar"; placeholder = "Search by Doctor Name"; ObjectID = "W1M-3y-ZKL"; */
+"W1M-3y-ZKL.placeholder" = "البحث عن طريق اسم الطبيب";
+
+/* Class = "UILabel"; text = "Map"; ObjectID = "e9O-Ql-6Sp"; */
+"e9O-Ql-6Sp.text" = "خريطة";
+
+/* Class = "UILabel"; text = "Choose City"; ObjectID = "uZk-QQ-AkS"; */
+"uZk-QQ-AkS.text" = "اختر المدينة";

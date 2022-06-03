@@ -1,0 +1,21 @@
+
+/* Class = "UIButton"; normalTitle = "Reset"; ObjectID = "4nQ-QW-HuZ"; */
+"4nQ-QW-HuZ.normalTitle" = "إعادة ضبط";
+
+/* Class = "UILabel"; text = "Sorting By"; ObjectID = "5zJ-oC-qL4"; */
+"5zJ-oC-qL4.text" = "الفرز حسب";
+
+/* Class = "UIButton"; normalTitle = "Price High To Low"; ObjectID = "7qH-8o-9BX"; */
+"7qH-8o-9BX.normalTitle" = "السعر الاعلى الى الادنى";
+
+/* Class = "UIButton"; normalTitle = "Search"; ObjectID = "aKA-2O-cO5"; */
+"aKA-2O-cO5.normalTitle" = "بحث";
+
+/* Class = "UIButton"; normalTitle = " Price Low To High"; ObjectID = "qul-FT-AZC"; */
+"qul-FT-AZC.normalTitle" = " السعر من الارخص للاعلى";
+
+/* Class = "UIButton"; normalTitle = "Professional Title"; ObjectID = "xD6-os-ojV"; */
+"xD6-os-ojV.normalTitle" = "اسم محترف";
+
+/* Class = "UIButton"; normalTitle = "Top Rated"; ObjectID = "xKU-UK-dAz"; */
+"xKU-UK-dAz.normalTitle" = "أعلى التقييمات";

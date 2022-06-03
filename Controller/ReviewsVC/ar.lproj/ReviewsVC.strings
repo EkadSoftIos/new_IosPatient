@@ -1,0 +1,27 @@
+
+/* Class = "UILabel"; text = "Clinic Rating"; ObjectID = "4o4-dY-45Z"; */
+"4o4-dY-45Z.text" = "تقييم العيادة";
+
+/* Class = "UILabel"; text = "Overall Reviews"; ObjectID = "94v-yf-IUq"; */
+"94v-yf-IUq.text" = "المراجعات الشاملة";
+
+/* Class = "UILabel"; text = "4.9"; ObjectID = "CVe-G3-Mtk"; */
+"CVe-G3-Mtk.text" = "4.9";
+
+/* Class = "UILabel"; text = "Assistant Rating"; ObjectID = "DpI-Re-JZk"; */
+"DpI-Re-JZk.text" = "تقييم المساعد";
+
+/* Class = "UILabel"; text = "3.1"; ObjectID = "Xku-W8-4KI"; */
+"Xku-W8-4KI.text" = "3.1";
+
+/* Class = "UILabel"; text = "4.9"; ObjectID = "kpy-23-rr7"; */
+"kpy-23-rr7.text" = "4.9";
+
+/* Class = "UILabel"; text = "3.1"; ObjectID = "l4l-JM-gT9"; */
+"l4l-JM-gT9.text" = "3.1";
+
+/* Class = "UILabel"; text = "From 1249 Visitors"; ObjectID = "tc5-gE-vxF"; */
+"tc5-gE-vxF.text" = "From 1249 Visitors";
+
+/* Class = "UILabel"; text = "Doctor Rating"; ObjectID = "vZZ-XS-H14"; */
+"vZZ-XS-H14.text" = "تقييم الطبيب";

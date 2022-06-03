@@ -36,7 +36,8 @@ class FAQVC: UIViewController {
             case .success(let model):
                 print(model)
                 if model.successtate == 200{
-                    self.faqData = model.message 
+                    self.faqData = model.message
+                    self.faqTB.reloadData()
                 }else{
 
                 }

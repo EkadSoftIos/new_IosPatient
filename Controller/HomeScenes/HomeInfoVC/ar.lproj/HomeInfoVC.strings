@@ -1,0 +1,12 @@
+
+/* Class = "UIButton"; configuration.title = "More"; ObjectID = "nMa-3P-FCU"; */
+"nMa-3P-FCU.configuration.title" = "أكثر";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "nMa-3P-FCU"; */
+"nMa-3P-FCU.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = " Doctor Medical Service"; ObjectID = "q6Q-nD-l5A"; */
+"q6Q-nD-l5A.text" = " خدمة الطبيب الطبي";
+
+/* Class = "UILabel"; text = "Home Visit "; ObjectID = "vAK-x1-8NB"; */
+"vAK-x1-8NB.text" = "زيارة منزلية ";

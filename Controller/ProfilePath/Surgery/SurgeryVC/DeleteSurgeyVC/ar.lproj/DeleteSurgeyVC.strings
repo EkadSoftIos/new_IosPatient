@@ -1,0 +1,12 @@
+
+/* Class = "UIButton"; normalTitle = "Yes"; ObjectID = "03p-qa-mgy"; */
+"03p-qa-mgy.normalTitle" = "موافق";
+
+/* Class = "UILabel"; text = "Are you want to delete this surgey?"; ObjectID = "GlF-Jh-yab"; */
+"GlF-Jh-yab.text" = "هل تريد حذف هذه الجراحة؟";
+
+/* Class = "UIButton"; normalTitle = "No"; ObjectID = "fgB-g7-AnV"; */
+"fgB-g7-AnV.normalTitle" = "غير موافق";
+
+/* Class = "UILabel"; text = "Delete Surgey"; ObjectID = "lgN-zD-lQU"; */
+"lgN-zD-lQU.text" = "حذف الجراحة";

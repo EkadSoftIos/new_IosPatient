@@ -1,0 +1,27 @@
+
+/* Class = "UILabel"; text = "4.9"; ObjectID = "2Jl-rg-Saz"; */
+"2Jl-rg-Saz.text" = "4.9";
+
+/* Class = "UIButton"; configuration.title = "More"; ObjectID = "3Ug-j9-e7Q"; */
+"3Ug-j9-e7Q.configuration.title" = "اكثر";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "3Ug-j9-e7Q"; */
+"3Ug-j9-e7Q.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Clinic Photo"; ObjectID = "XcL-4T-EKB"; */
+"XcL-4T-EKB.text" = "صور العيادة";
+
+/* Class = "UIButton"; configuration.title = "More"; ObjectID = "dEm-pB-4SC"; */
+"dEm-pB-4SC.configuration.title" = "اكثر";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "dEm-pB-4SC"; */
+"dEm-pB-4SC.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "El-Shouroq (Nasr City)"; ObjectID = "eRw-Od-D7k"; */
+"eRw-Od-D7k.text" = "El-Shouroq (Nasr City)";
+
+/* Class = "UILabel"; text = " Doctor Medical Service"; ObjectID = "uyh-ax-yW8"; */
+"uyh-ax-yW8.text" = " دكتور ميديكال سيرفيكe";
+
+/* Class = "UILabel"; text = "43 Nakhla moteey st , triumph square , infront of \nemam ali mosque, Building no. 22, Nasr City"; ObjectID = "xMQ-Z7-TYm"; */
+"xMQ-Z7-TYm.text" = "43 Nakhla moteey st , triumph square , infront of \nemam ali mosque, Building no. 22, Nasr City";

@@ -1,0 +1,306 @@
+
+/* Class = "UITextField"; placeholder = "Mobile"; ObjectID = "1D3-5V-ltN"; */
+"1D3-5V-ltN.placeholder" = "رقم التليفون";
+
+/* Class = "UILabel"; text = "Log Out"; ObjectID = "23U-r9-YpE"; */
+"23U-r9-YpE.text" = "تسجيل الخروج";
+
+/* Class = "UILabel"; text = "Date"; ObjectID = "29c-q6-UjF"; */
+"29c-q6-UjF.text" = "التاريخ";
+
+/* Class = "UIButton"; normalTitle = "   Paid"; ObjectID = "2Z9-Le-DPm"; */
+"2Z9-Le-DPm.normalTitle" = "   مدفوع";
+
+/* Class = "UITextField"; placeholder = "schedule type"; ObjectID = "3Ve-ZU-a3L"; */
+"3Ve-ZU-a3L.placeholder" = "نوع الجدول";
+
+/* Class = "UIButton"; normalTitle = "From"; ObjectID = "3wm-Uf-VCx"; */
+"3wm-Uf-VCx.normalTitle" = "من";
+
+/* Class = "UITextField"; placeholder = "to"; ObjectID = "5o2-rk-CS1"; */
+"5o2-rk-CS1.placeholder" = "الي";
+
+/* Class = "UILabel"; text = "Frequency"; ObjectID = "5oC-Xa-xRb"; */
+"5oC-Xa-xRb.text" = "تكرار";
+
+/* Class = "UIButton"; normalTitle = "   Cancelled"; ObjectID = "6WM-iz-Fle"; */
+"6WM-iz-Fle.normalTitle" = "   ألغيت";
+
+/* Class = "UILabel"; text = "Branch"; ObjectID = "8G4-zO-t5A"; */
+"8G4-zO-t5A.text" = "فرع";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "8Uf-TK-VhL"; */
+"8Uf-TK-VhL.normalTitle" = "حفظ";
+
+/* Class = "UIButton"; normalTitle = "   Unpaid"; ObjectID = "9Kj-ut-3hb"; */
+"9Kj-ut-3hb.normalTitle" = "   غير مدفوع";
+
+/* Class = "UILabel"; text = "Reminder times"; ObjectID = "9uo-bf-g53"; */
+"9uo-bf-g53.text" = "مرات التذكير";
+
+/* Class = "UILabel"; text = "Email"; ObjectID = "At2-zl-9N3"; */
+"At2-zl-9N3.text" = "البريد الإلكتروني";
+
+/* Class = "UILabel"; text = "Frequency"; ObjectID = "BMh-uw-B6I"; */
+"BMh-uw-B6I.text" = "تكرار";
+
+/* Class = "UIButton"; normalTitle = "   Last 30 days"; ObjectID = "CKd-Ru-kph"; */
+"CKd-Ru-kph.normalTitle" = "   آخر 30 يومًا";
+
+/* Class = "UIButton"; normalTitle = "  Fr"; ObjectID = "CRZ-oZ-Tys"; */
+"CRZ-oZ-Tys.normalTitle" = "  Fr";
+
+/* Class = "UIButton"; normalTitle = "Delete"; ObjectID = "Cp5-tA-pqU"; */
+"Cp5-tA-pqU.normalTitle" = "حذف";
+
+/* Class = "UITextField"; placeholder = "start time"; ObjectID = "DlU-Ph-bq4"; */
+"DlU-Ph-bq4.placeholder" = "وقت البدء";
+
+/* Class = "UILabel"; text = "Duration"; ObjectID = "EdY-On-pa8"; */
+"EdY-On-pa8.text" = "مدة";
+
+/* Class = "UILabel"; text = "Payment status"; ObjectID = "FY2-5l-d5e"; */
+"FY2-5l-d5e.text" = "حالة السداد";
+
+/* Class = "UILabel"; text = "Are you sure want to delete ?"; ObjectID = "Fjq-Ix-NLX"; */
+"Fjq-Ix-NLX.text" = "هل أنت متأكد من أنك تريد الحذف؟";
+
+/* Class = "UIButton"; normalTitle = "   All"; ObjectID = "FpL-4w-w5N"; */
+"FpL-4w-w5N.normalTitle" = "   الكل";
+
+/* Class = "UIButton"; normalTitle = "   No Show"; ObjectID = "GAC-GT-yIB"; */
+"GAC-GT-yIB.normalTitle" = "   لا تظهر";
+
+/* Class = "UILabel"; text = "Other instruction"; ObjectID = "GQk-zv-quk"; */
+"GQk-zv-quk.text" = "تعليمات أخرى";
+
+/* Class = "UILabel"; text = "Tap - 50"; ObjectID = "GTi-nG-1hj"; */
+"GTi-nG-1hj.text" = "اضغط - 50";
+
+/* Class = "UIButton"; normalTitle = "Reset"; ObjectID = "GXZ-qm-CX5"; */
+"GXZ-qm-CX5.normalTitle" = "إعادة ضبط";
+
+/* Class = "UILabel"; text = "Enter the number"; ObjectID = "I7K-Le-CjA"; */
+"I7K-Le-CjA.text" = "أدخل الرقم";
+
+/* Class = "UIButton"; normalTitle = "  Mo"; ObjectID = "IKO-Gw-bEa"; */
+"IKO-Gw-bEa.normalTitle" = "  Mo";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "Iuf-iB-0xw"; */
+"Iuf-iB-0xw.normalTitle" = "الغاء";
+
+/* Class = "UILabel"; text = "Appointement status"; ObjectID = "Iwt-XI-xcd"; */
+"Iwt-XI-xcd.text" = "حالة التعيين";
+
+/* Class = "UIButton"; normalTitle = "Search"; ObjectID = "JXp-Il-jVi"; */
+"JXp-Il-jVi.normalTitle" = "بحث";
+
+/* Class = "UITextField"; placeholder = "start time"; ObjectID = "L0C-FB-v1u"; */
+"L0C-FB-v1u.placeholder" = "وقت البدء";
+
+/* Class = "UITextField"; placeholder = "From"; ObjectID = "LT8-2c-WZ3"; */
+"LT8-2c-WZ3.placeholder" = "من";
+
+/* Class = "UITextField"; placeholder = "3 times dialy"; ObjectID = "Lgs-AM-yQp"; */
+"Lgs-AM-yQp.placeholder" = "3 مرات يومياً";
+
+/* Class = "UITextField"; placeholder = "schedule type"; ObjectID = "M0M-df-DnV"; */
+"M0M-df-DnV.placeholder" = "نوع الجدول";
+
+/* Class = "UILabel"; text = "Schedule type"; ObjectID = "N9d-m4-rJc"; */
+"N9d-m4-rJc.text" = "نوع الجدول";
+
+/* Class = "UIButton"; normalTitle = "Log Out"; ObjectID = "NC5-gd-idI"; */
+"NC5-gd-idI.normalTitle" = "تسجيل الخروج";
+
+/* Class = "UIButton"; normalTitle = "  Tu"; ObjectID = "Nh9-vQ-uR6"; */
+"Nh9-vQ-uR6.normalTitle" = "  Tu";
+
+/* Class = "UILabel"; text = "3 times dialy"; ObjectID = "OIQ-ds-D8M"; */
+"OIQ-ds-D8M.text" = "3 مرات يومياً";
+
+/* Class = "UILabel"; text = "Scheduling"; ObjectID = "OO6-eb-euh"; */
+"OO6-eb-euh.text" = "الجدولة";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "PYD-8j-vim"; */
+"PYD-8j-vim.normalTitle" = "حفظ";
+
+/* Class = "UITextView"; text = "Message"; ObjectID = "Pw8-Hl-tct"; */
+"Pw8-Hl-tct.text" = "رسالة";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "QRH-gj-gnL"; */
+"QRH-gj-gnL.normalTitle" = "Button";
+
+/* Class = "UITextView"; text = "other instruction"; ObjectID = "RE6-yj-WLW"; */
+"RE6-yj-WLW.text" = "تعليمات أخرى";
+
+/* Class = "UIButton"; normalTitle = "  Su"; ObjectID = "RO3-xb-b97"; */
+"RO3-xb-b97.normalTitle" = "  Su";
+
+/* Class = "UILabel"; text = "every days"; ObjectID = "Rfp-cB-iC9"; */
+"Rfp-cB-iC9.text" = "كل الأيام";
+
+/* Class = "UITextField"; placeholder = "frequency"; ObjectID = "Rmn-gU-Wqn"; */
+"Rmn-gU-Wqn.placeholder" = "تكرر";
+
+/* Class = "UITextField"; placeholder = "Branch"; ObjectID = "TR6-RO-MCK"; */
+"TR6-RO-MCK.placeholder" = "فرع";
+
+/* Class = "UILabel"; text = "Other instruction"; ObjectID = "UdE-FA-0Pu"; */
+"UdE-FA-0Pu.text" = "تعليمات أخرى";
+
+/* Class = "UILabel"; text = "_"; ObjectID = "UiT-hV-oTb"; */
+"UiT-hV-oTb.text" = "_";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "UuF-tv-sCh"; */
+"UuF-tv-sCh.placeholder" = "البريد الإلكتروني";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "VDq-wq-U1l"; */
+"VDq-wq-U1l.normalTitle" = "الغاء";
+
+/* Class = "UILabel"; text = "Schedule type"; ObjectID = "VRa-cZ-KdG"; */
+"VRa-cZ-KdG.text" = "نوع الجدول";
+
+/* Class = "UITextField"; placeholder = "frequency"; ObjectID = "VWn-4W-oZX"; */
+"VWn-4W-oZX.placeholder" = "تكرر";
+
+/* Class = "UIButton"; normalTitle = "   Finished"; ObjectID = "VkG-Lg-syA"; */
+"VkG-Lg-syA.normalTitle" = "   تم الانتهاء من";
+
+/* Class = "UILabel"; text = "Vitamine C"; ObjectID = "XPl-1P-Isc"; */
+"XPl-1P-Isc.text" = "فيتامين سي";
+
+/* Class = "UILabel"; text = "every days"; ObjectID = "XSL-dH-fyh"; */
+"XSL-dH-fyh.text" = "كل الأيام";
+
+/* Class = "UIButton"; normalTitle = "   Awainting Response"; ObjectID = "YFE-cO-03M"; */
+"YFE-cO-03M.normalTitle" = "   إيماء الرد";
+
+/* Class = "UILabel"; text = "To"; ObjectID = "YdJ-b8-vZi"; */
+"YdJ-b8-vZi.text" = "الي";
+
+/* Class = "UILabel"; text = "Filter"; ObjectID = "a4E-dw-IlC"; */
+"a4E-dw-IlC.text" = "تصفية";
+
+/* Class = "UITextField"; placeholder = "vitamine C"; ObjectID = "a5Z-7O-8rX"; */
+"a5Z-7O-8rX.placeholder" = "فيتامين سي";
+
+/* Class = "UILabel"; text = "_"; ObjectID = "a8H-Eq-2fK"; */
+"a8H-Eq-2fK.text" = "_";
+
+/* Class = "UILabel"; text = "Enter the number"; ObjectID = "b2V-b0-BRJ"; */
+"b2V-b0-BRJ.text" = "أدخل الرقم";
+
+/* Class = "UIButton"; normalTitle = "   All"; ObjectID = "bX5-YY-0K1"; */
+"bX5-YY-0K1.normalTitle" = "   الكل";
+
+/* Class = "UILabel"; text = "Mobile"; ObjectID = "bbX-Zz-W8R"; */
+"bbX-Zz-W8R.text" = "التليفون المحمول";
+
+/* Class = "UIButton"; normalTitle = "Delete All"; ObjectID = "cMA-m9-QsH"; */
+"cMA-m9-QsH.normalTitle" = "حذف الكل";
+
+/* Class = "UILabel"; text = "Service Type"; ObjectID = "ckO-cX-api"; */
+"ckO-cX-api.text" = "نوع الخدمة";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "dYz-2b-XMa"; */
+"dYz-2b-XMa.text" = "Label";
+
+/* Class = "UITextField"; placeholder = "Name"; ObjectID = "dui-Ok-BC8"; */
+"dui-Ok-BC8.placeholder" = "الاسم";
+
+/* Class = "UIButton"; normalTitle = "  Sa"; ObjectID = "eEZ-q0-VXl"; */
+"eEZ-q0-VXl.normalTitle" = "  Sa";
+
+/* Class = "UIButton"; normalTitle = "   Refunded"; ObjectID = "eQ4-io-wmW"; */
+"eQ4-io-wmW.normalTitle" = "   معاد";
+
+/* Class = "UILabel"; text = "Duration"; ObjectID = "evH-sv-7Xd"; */
+"evH-sv-7Xd.text" = "مدة";
+
+/* Class = "UITextField"; placeholder = "Service Type"; ObjectID = "evv-gE-gIn"; */
+"evv-gE-gIn.placeholder" = "نوع الخدمة";
+
+/* Class = "UILabel"; text = "Scheduling"; ObjectID = "fVk-i4-oSG"; */
+"fVk-i4-oSG.text" = "الجدولة";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "jHG-eD-AkU"; */
+"jHG-eD-AkU.normalTitle" = "حفظ";
+
+/* Class = "UILabel"; text = "_"; ObjectID = "jNA-u9-DBc"; */
+"jNA-u9-DBc.text" = "_";
+
+/* Class = "UIButton"; normalTitle = "   Confirm"; ObjectID = "jsV-KH-jLd"; */
+"jsV-KH-jLd.normalTitle" = "   تاكيد";
+
+/* Class = "UITextView"; text = "other instruction"; ObjectID = "kLY-8T-c3T"; */
+"kLY-8T-c3T.text" = "تعليمات أخرى";
+
+/* Class = "UILabel"; text = "Choose Address"; ObjectID = "lEH-Wa-jTM"; */
+"lEH-Wa-jTM.text" = "اختر العنوان";
+
+/* Class = "UITextField"; placeholder = "From"; ObjectID = "lVf-Ru-wFH"; */
+"lVf-Ru-wFH.placeholder" = "من";
+
+/* Class = "UIButton"; normalTitle = "   Cancelled"; ObjectID = "lq8-eX-adE"; */
+"lq8-eX-adE.normalTitle" = "   ألغيت";
+
+/* Class = "UITextField"; placeholder = "3 times dialy"; ObjectID = "lzt-aM-5Mj"; */
+"lzt-aM-5Mj.placeholder" = "3 مرات يومياً";
+
+/* Class = "UILabel"; text = "Medication Name"; ObjectID = "n35-s9-A3p"; */
+"n35-s9-A3p.text" = "اسم الدواء";
+
+/* Class = "UITextField"; placeholder = "to"; ObjectID = "nBb-Am-c24"; */
+"nBb-Am-c24.placeholder" = "الي";
+
+/* Class = "UIButton"; normalTitle = "  Th"; ObjectID = "np3-8Q-thY"; */
+"np3-8Q-thY.normalTitle" = "  Th";
+
+/* Class = "UILabel"; text = "Filter"; ObjectID = "qMf-13-Rvx"; */
+"qMf-13-Rvx.text" = "تصفية";
+
+/* Class = "UILabel"; text = "Message"; ObjectID = "qOO-Wa-je5"; */
+"qOO-Wa-je5.text" = "رسالة";
+
+/* Class = "UILabel"; text = "Service Type"; ObjectID = "qbs-Us-YSk"; */
+"qbs-Us-YSk.text" = "نوع الخدمة";
+
+/* Class = "UITextField"; placeholder = "Search by medicine name"; ObjectID = "qsr-cd-wfX"; */
+"qsr-cd-wfX.placeholder" = "البحث باسم الطب";
+
+/* Class = "UILabel"; text = "Are you sure want to Logout ?"; ObjectID = "slE-u1-CYA"; */
+"slE-u1-CYA.text" = "هل أنت متأكد من أنك تريد تسجيل الخروج؟";
+
+/* Class = "UILabel"; text = "Reminder times"; ObjectID = "t8j-1h-7LQ"; */
+"t8j-1h-7LQ.text" = "مرات التذكير";
+
+/* Class = "UILabel"; text = "Start time"; ObjectID = "tT6-NP-aBe"; */
+"tT6-NP-aBe.text" = "وقت البدء";
+
+/* Class = "UILabel"; text = "Choose Address"; ObjectID = "uGf-q1-UHm"; */
+"uGf-q1-UHm.text" = "اختر العنوان";
+
+/* Class = "UILabel"; text = "Start time"; ObjectID = "uTT-gp-nRY"; */
+"uTT-gp-nRY.text" = "وقت البدء";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "uzp-AB-24r"; */
+"uzp-AB-24r.text" = "الاسم";
+
+/* Class = "UIButton"; normalTitle = "   Last 7 days"; ObjectID = "vl0-Xw-wjy"; */
+"vl0-Xw-wjy.normalTitle" = "   اخر 7 ايام";
+
+/* Class = "UILabel"; text = "......"; ObjectID = "x7l-nJ-vWK"; */
+"x7l-nJ-vWK.text" = "......";
+
+/* Class = "UIButton"; normalTitle = "Read All"; ObjectID = "xQD-mJ-iB6"; */
+"xQD-mJ-iB6.normalTitle" = "اقرأ كل شيء";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "xWs-st-6vM"; */
+"xWs-st-6vM.text" = "Label";
+
+/* Class = "UITextField"; placeholder = "Search by name or mobile"; ObjectID = "yGG-LF-Dpm"; */
+"yGG-LF-Dpm.placeholder" = "البحث بالاسم أو المحمول";
+
+/* Class = "UIButton"; normalTitle = "  We"; ObjectID = "zWP-K9-fua"; */
+"zWP-K9-fua.normalTitle" = "  We";

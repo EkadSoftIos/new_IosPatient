@@ -48,7 +48,7 @@ extension EditProfileVC{
         }
     }
     func callApi(){
-        let prefix = "+2"
+        let prefix = "+20"
                 guard phoneTxt.text!.hasPrefix(prefix) else { return }
                 let phoneWithoutPref  = String(phoneTxt.text!.dropFirst(prefix.count).trimmingCharacters(in: .whitespacesAndNewlines))
         var parameters: [String: Any] = [

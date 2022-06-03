@@ -1,0 +1,60 @@
+
+/* Class = "UIButton"; normalTitle = "Reset"; ObjectID = "0NX-ib-wch"; */
+"0NX-ib-wch.normalTitle" = "إعادة ضبط";
+
+/* Class = "UILabel"; text = "Gender"; ObjectID = "17q-Vv-3aH"; */
+"17q-Vv-3aH.text" = "النوع";
+
+/* Class = "UILabel"; text = "0 - 2000 EGP"; ObjectID = "2Mm-GR-4Tc"; */
+"2Mm-GR-4Tc.text" = "0 - 2000 EGP";
+
+/* Class = "UILabel"; text = "Cancelation"; ObjectID = "3iC-cj-Kbs"; */
+"3iC-cj-Kbs.text" = "الإلغاء";
+
+/* Class = "UIButton"; normalTitle = "Search"; ObjectID = "4DH-AS-eI2"; */
+"4DH-AS-eI2.normalTitle" = "بحث";
+
+/* Class = "UILabel"; text = "Prefix Title"; ObjectID = "9Vf-j9-N0R"; */
+"9Vf-j9-N0R.text" = "عنوان البادئة";
+
+/* Class = "UIButton"; normalTitle = "Select day"; ObjectID = "AQu-dN-j5R"; */
+"AQu-dN-j5R.normalTitle" = "حدد اليوم";
+
+/* Class = "UIButton"; normalTitle = "Male"; ObjectID = "Dzi-tc-OqU"; */
+"Dzi-tc-OqU.normalTitle" = "ذكر";
+
+/* Class = "UIButton"; normalTitle = "Allow Free Cancelation"; ObjectID = "EZ3-jG-bdo"; */
+"EZ3-jG-bdo.normalTitle" = "السماح بالإلغاء المجاني";
+
+/* Class = "UIButton"; normalTitle = "All"; ObjectID = "UyL-zf-2aR"; */
+"UyL-zf-2aR.normalTitle" = "الكل";
+
+/* Class = "UILabel"; text = "Main Speciality"; ObjectID = "VCu-7s-fNU"; */
+"VCu-7s-fNU.text" = "التخصص الرئيسي";
+
+/* Class = "UILabel"; text = "Professional Title"; ObjectID = "WHc-j9-ov6"; */
+"WHc-j9-ov6.text" = "اسم محترف";
+
+/* Class = "UIButton"; normalTitle = "Female"; ObjectID = "XAG-UZ-Dyx"; */
+"XAG-UZ-Dyx.normalTitle" = "أنثى";
+
+/* Class = "UIButton"; normalTitle = "Tommorow"; ObjectID = "YnW-dh-5aM"; */
+"YnW-dh-5aM.normalTitle" = "غدا";
+
+/* Class = "UILabel"; text = "Price Range"; ObjectID = "aTM-91-RCI"; */
+"aTM-91-RCI.text" = "نطاق السعر";
+
+/* Class = "UIButton"; normalTitle = "Today"; ObjectID = "b9Y-Bd-ASD"; */
+"b9Y-Bd-ASD.normalTitle" = "اليوم";
+
+/* Class = "UILabel"; text = "Consultation Fees"; ObjectID = "bhR-oS-HO8"; */
+"bhR-oS-HO8.text" = "رسوم الاستشارة";
+
+/* Class = "UILabel"; text = "Sub Specialties"; ObjectID = "sKx-z9-OSE"; */
+"sKx-z9-OSE.text" = "التخصصات الفرعية";
+
+/* Class = "UILabel"; text = "Availability"; ObjectID = "xas-ld-WWG"; */
+"xas-ld-WWG.text" = "التوفر";
+
+/* Class = "UILabel"; text = "Medical Services"; ObjectID = "zoa-Gd-LCo"; */
+"zoa-Gd-LCo.text" = "الخدمات الطبية";

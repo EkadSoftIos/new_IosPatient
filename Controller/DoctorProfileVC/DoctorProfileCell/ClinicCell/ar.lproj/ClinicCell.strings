@@ -1,0 +1,15 @@
+
+/* Class = "UIButton"; normalTitle = "Booking"; ObjectID = "9E5-Po-GvJ"; */
+"9E5-Po-GvJ.normalTitle" = "حجز";
+
+/* Class = "UILabel"; text = "Available Tomorrow From 05:00PM"; ObjectID = "EuD-yR-j2l"; */
+"EuD-yR-j2l.text" = "Available Tomorrow From 05:00PM";
+
+/* Class = "UILabel"; text = "Fees 200 EGP"; ObjectID = "KCG-s7-AzV"; */
+"KCG-s7-AzV.text" = "Fees 200 EGP";
+
+/* Class = "UIButton"; normalTitle = "more.."; ObjectID = "U4t-XX-l0N"; */
+"U4t-XX-l0N.normalTitle" = "المزيد";
+
+/* Class = "UILabel"; text = "El-Shouroq (New Cairo)"; ObjectID = "ZnV-8R-zEQ"; */
+"ZnV-8R-zEQ.text" = "El-Shouroq (New Cairo)";

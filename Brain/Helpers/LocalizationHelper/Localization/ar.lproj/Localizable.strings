@@ -74,7 +74,7 @@
 "Are you want to Delete this address ?"="هل تريد حذف هذا العنوان؟";
 
 //Home
-"Home"="Home";
+"Home"="الرئيسية";
 "Welcome"="Welcome";
 "How do you feel today ?"="How do you feel today ?";
 "You can find with us all your medical help."="You can find with us all your medical help.";
@@ -206,3 +206,8 @@
 "Doctor has been removed from favorites list"="تمت إزالة الطبيب من قائمة المفضلة";
 "Doctor has been added to favorites list"="تمت إضافة الطبيب إلى قائمة المفضلة";
 "Your Location"="موقعك";
+
+"Appointment" = "ميعاد";
+"Pharmacy" = "صيدلية";
+"Club" = "النادي";
+"More" = "المزيد";

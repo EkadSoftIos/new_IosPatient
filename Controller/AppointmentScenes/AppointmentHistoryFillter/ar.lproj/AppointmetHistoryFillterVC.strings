@@ -1,0 +1,36 @@
+
+/* Class = "UIButton"; normalTitle = "Search"; ObjectID = "5Tl-Lt-dpK"; */
+"5Tl-Lt-dpK.normalTitle" = "بحث";
+
+/* Class = "UILabel"; text = "Clinic Consultation"; ObjectID = "Ay8-Mc-gPQ"; */
+"Ay8-Mc-gPQ.text" = "استشارة عيادة";
+
+/* Class = "UILabel"; text = "Video Call Consultations"; ObjectID = "DqN-mc-qzy"; */
+"DqN-mc-qzy.text" = "استشارات مكالمات الفيديو";
+
+/* Class = "UIButton"; normalTitle = "Reset"; ObjectID = "JBd-MU-ASq"; */
+"JBd-MU-ASq.normalTitle" = "إعادة ضبط";
+
+/* Class = "UILabel"; text = "Immediate Video Call"; ObjectID = "MyF-9d-gdk"; */
+"MyF-9d-gdk.text" = "مكالمة فيديو فورية";
+
+/* Class = "UILabel"; text = "Select Service Type"; ObjectID = "NBY-J0-9WL"; */
+"NBY-J0-9WL.text" = "حدد نوع الخدمة";
+
+/* Class = "UILabel"; text = "Finished"; ObjectID = "Thl-xB-dgF"; */
+"Thl-xB-dgF.text" = "تم الانتهاء من";
+
+/* Class = "UILabel"; text = "Cancel"; ObjectID = "aV5-vR-oH2"; */
+"aV5-vR-oH2.text" = "الغاء";
+
+/* Class = "UILabel"; text = "No Show"; ObjectID = "blg-n0-7kW"; */
+"blg-n0-7kW.text" = "لا تظهر";
+
+/* Class = "UILabel"; text = "All"; ObjectID = "cgu-fB-kMR"; */
+"cgu-fB-kMR.text" = "الكل";
+
+/* Class = "UILabel"; text = "Appointment Status"; ObjectID = "hUi-eD-6HW"; */
+"hUi-eD-6HW.text" = "حالة التعيين";
+
+/* Class = "UILabel"; text = "Home Visit "; ObjectID = "miJ-yP-YDN"; */
+"miJ-yP-YDN.text" = "زيارة منزلية ";

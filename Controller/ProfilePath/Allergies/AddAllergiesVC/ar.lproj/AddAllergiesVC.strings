@@ -1,0 +1,54 @@
+
+/* Class = "UITextField"; placeholder = "How often does it occur"; ObjectID = "5wX-hQ-Bzf"; */
+"5wX-hQ-Bzf.placeholder" = "كم مرة يحدث ذلك";
+
+/* Class = "UILabel"; text = "Allergies Name "; ObjectID = "64b-qd-CCN"; */
+"64b-qd-CCN.text" = "اسم الحساسية ";
+
+/* Class = "UILabel"; text = "Medication"; ObjectID = "GkK-g1-hxf"; */
+"GkK-g1-hxf.text" = "دواء";
+
+/* Class = "UITextField"; placeholder = "First diagnosed on"; ObjectID = "OMC-cP-0iG"; */
+"OMC-cP-0iG.placeholder" = "تم تشخيصه لأول مرة";
+
+/* Class = "UIButton"; configuration.title = "   "; ObjectID = "QQP-MC-ThO"; */
+"QQP-MC-ThO.configuration.title" = "   ";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "QQP-MC-ThO"; */
+"QQP-MC-ThO.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "*"; ObjectID = "Tui-cZ-mWm"; */
+"Tui-cZ-mWm.text" = "*";
+
+/* Class = "UILabel"; text = "Triggered by"; ObjectID = "TvU-zm-5jN"; */
+"TvU-zm-5jN.text" = "الناجمة عن";
+
+/* Class = "UITextField"; placeholder = "Allergies Name "; ObjectID = "Whl-yq-YZh"; */
+"Whl-yq-YZh.placeholder" = "اسم الحساسية ";
+
+/* Class = "UITextField"; placeholder = "Medication"; ObjectID = "gFZ-qh-onS"; */
+"gFZ-qh-onS.placeholder" = "دواء";
+
+/* Class = "UILabel"; text = "First diagnosed on"; ObjectID = "jef-ob-CyR"; */
+"jef-ob-CyR.text" = "تم تشخيصه لأول مرة";
+
+/* Class = "UITextField"; placeholder = "Status"; ObjectID = "mBp-9u-6Hc"; */
+"mBp-9u-6Hc.placeholder" = "حالة";
+
+/* Class = "UILabel"; text = "Status"; ObjectID = "opA-ko-xOE"; */
+"opA-ko-xOE.text" = "حالة";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "r4F-rD-QrQ"; */
+"r4F-rD-QrQ.normalTitle" = "حفظ";
+
+/* Class = "UITextView"; text = "Additional Notes"; ObjectID = "tBG-7Y-dU9"; */
+"tBG-7Y-dU9.text" = "ملاحظات إضافية";
+
+/* Class = "UILabel"; text = "How often does it occur?"; ObjectID = "vZP-pL-u2Y"; */
+"vZP-pL-u2Y.text" = "كم مرة يحدث؟";
+
+/* Class = "UILabel"; text = "Additional Notes"; ObjectID = "xVe-5G-tdY"; */
+"xVe-5G-tdY.text" = "ملاحظات إضافية";
+
+/* Class = "UITextField"; placeholder = "Triggered by"; ObjectID = "xqS-IX-M2W"; */
+"xqS-IX-M2W.placeholder" = "الناجمة عن";

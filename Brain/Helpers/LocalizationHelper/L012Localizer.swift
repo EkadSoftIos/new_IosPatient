@@ -58,20 +58,20 @@ extension UILabel {
 
 
 extension UITextField {
-    @objc public func cstmlayoutSubviews() {
-        self.cstmlayoutSubviews()
-        if self.tag <= 0 {
-            if UIApplication.isRTL()  {
-                if self.textAlignment == .center { return }
-                if self.textAlignment == .right { return }
-                self.textAlignment = .right
-            } else {
-                if self.textAlignment == .center { return }
-                if self.textAlignment == .left { return }
-                self.textAlignment = .left
-            }
-        }
-    }
+//    @objc public  func cstmlayoutSubviews() {
+//        self.cstmlayoutSubviews()
+//        if self.tag <= 0 {
+//            if UIApplication.isRTL()  {
+//                if self.textAlignment == .center { return }
+//                if self.textAlignment == .right { return }
+//                self.textAlignment = .right
+//            } else {
+//                if self.textAlignment == .center { return }
+//                if self.textAlignment == .left { return }
+//                self.textAlignment = .left
+//            }
+//        }
+//    }
 }
 
 var numberoftimes = 0

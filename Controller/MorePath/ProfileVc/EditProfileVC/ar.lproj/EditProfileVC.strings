@@ -1,0 +1,78 @@
+
+/* Class = "UILabel"; text = "Last Name"; ObjectID = "160-fd-c1t"; */
+"160-fd-c1t.text" = "الاسم الاخير";
+
+/* Class = "UITextField"; placeholder = "Last Name"; ObjectID = "1f5-4q-BCP"; */
+"1f5-4q-BCP.placeholder" = "الاسم الاخير";
+
+/* Class = "UILabel"; text = "Date of Birth *"; ObjectID = "3Ae-0Z-3Yu"; */
+"3Ae-0Z-3Yu.text" = "تاريخ الميلاد";
+
+/* Class = "UILabel"; text = "First Name"; ObjectID = "5nD-0R-ljB"; */
+"5nD-0R-ljB.text" = "الاسم الاول";
+
+/* Class = "UITextField"; placeholder = "Identification"; ObjectID = "BSh-F5-S5z"; */
+"BSh-F5-S5z.placeholder" = "هوية";
+
+/* Class = "UILabel"; text = "*"; ObjectID = "CrV-6C-Y00"; */
+"CrV-6C-Y00.text" = "*";
+
+/* Class = "UITextField"; placeholder = "Blood Group"; ObjectID = "M64-AW-Ime"; */
+"M64-AW-Ime.placeholder" = "فصيلة الدم";
+
+/* Class = "UILabel"; text = "+20"; ObjectID = "PxD-C1-N1w"; */
+"PxD-C1-N1w.text" = "+20";
+
+/* Class = "UITextField"; placeholder = "Gender"; ObjectID = "Tbh-lW-LnH"; */
+"Tbh-lW-LnH.placeholder" = "النوع";
+
+/* Class = "UILabel"; text = "Gender *"; ObjectID = "UOx-Ta-XiZ"; */
+"UOx-Ta-XiZ.text" = "النوع *";
+
+/* Class = "UILabel"; text = "*"; ObjectID = "Wgz-Gy-JpP"; */
+"Wgz-Gy-JpP.text" = "*";
+
+/* Class = "UITextField"; placeholder = "Weight"; ObjectID = "Zna-9O-CkY"; */
+"Zna-9O-CkY.placeholder" = "الوزن";
+
+/* Class = "UILabel"; text = "Blood Group"; ObjectID = "bXJ-Pl-QN0"; */
+"bXJ-Pl-QN0.text" = "فصيلة الدم";
+
+/* Class = "UITextField"; placeholder = "First Name"; ObjectID = "dl7-SP-HvV"; */
+"dl7-SP-HvV.placeholder" = "الاسم الاول";
+
+/* Class = "UITextField"; placeholder = "Height"; ObjectID = "eCL-1e-YWL"; */
+"eCL-1e-YWL.placeholder" = "الطول";
+
+/* Class = "UITextField"; placeholder = "Phone"; ObjectID = "gYd-lo-h7G"; */
+"gYd-lo-h7G.placeholder" = "رقم الهاتف";
+
+/* Class = "UILabel"; text = "Height"; ObjectID = "i5i-jD-91Q"; */
+"i5i-jD-91Q.text" = "الطول";
+
+/* Class = "UIButton"; normalTitle = "Change your Profile"; ObjectID = "id4-be-O44"; */
+"id4-be-O44.normalTitle" = "تغيير ملف التعريف الخاص بك";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "ltu-uu-h9v"; */
+"ltu-uu-h9v.normalTitle" = "حفظ";
+
+/* Class = "UILabel"; text = "Weight"; ObjectID = "obu-lx-cDa"; */
+"obu-lx-cDa.text" = "الوزن";
+
+/* Class = "UIButton"; normalTitle = "Add Attachment"; ObjectID = "oeW-Xq-lRc"; */
+"oeW-Xq-lRc.normalTitle" = "إضافة مرفق";
+
+/* Class = "UILabel"; text = "Mobile *"; ObjectID = "qLg-zk-JHZ"; */
+"qLg-zk-JHZ.text" = "رقم التليفون *";
+
+/* Class = "UILabel"; text = "Identification"; ObjectID = "qR4-QH-UNV"; */
+"qR4-QH-UNV.text" = "هوية";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "tMq-O4-kxv"; */
+"tMq-O4-kxv.placeholder" = "البريد الالكتروني";
+
+/* Class = "UITextField"; placeholder = "000-000-000"; ObjectID = "vUL-YO-zPv"; */
+"vUL-YO-zPv.placeholder" = "000-000-000";
+
+/* Class = "UILabel"; text = "Email *"; ObjectID = "z1O-K6-wDe"; */
+"z1O-K6-wDe.text" = "البريد الالكتروني *";

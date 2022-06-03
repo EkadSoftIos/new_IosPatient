@@ -1,0 +1,54 @@
+
+/* Class = "UILabel"; text = "Paid 230 EGP"; ObjectID = "2Rq-56-3pN"; */
+"2Rq-56-3pN.text" = "Paid 230 EGP";
+
+/* Class = "UILabel"; text = "Clinic Consultation"; ObjectID = "34v-w5-ebr"; */
+"34v-w5-ebr.text" = "استشارة عيادة";
+
+/* Class = "UILabel"; text = "Your Appointment "; ObjectID = "8Mk-C0-Jh1"; */
+"8Mk-C0-Jh1.text" = "موعدك ";
+
+/* Class = "UILabel"; text = "It look like readable English. Many desktop publishing packages \nand web page editors now use Lorem Ipsum as their default model\ntext, and a search for"; ObjectID = "Agb-44-xri"; */
+"Agb-44-xri.text" = "It look like readable English. Many desktop publishing packages \nand web page editors now use Lorem Ipsum as their default model\ntext, and a search for";
+
+/* Class = "UILabel"; text = "Dr. Ahmed Karim"; ObjectID = "FCE-qU-HUb"; */
+"FCE-qU-HUb.text" = "Dr. Ahmed Karim";
+
+/* Class = "UILabel"; text = "43 Nakhla moteey st , triumph square , \ninfront of emam ali mosque Nasr City"; ObjectID = "INh-nB-MS2"; */
+"INh-nB-MS2.text" = "43 Nakhla moteey st , triumph square , \ninfront of emam ali mosque Nasr City";
+
+/* Class = "UILabel"; text = "Total Fees 230 EGP"; ObjectID = "K6B-tp-B2L"; */
+"K6B-tp-B2L.text" = "Total Fees 230 EGP";
+
+/* Class = "UILabel"; text = "Dr. Asser Ahmed booked on 08 August 2020, Saturday"; ObjectID = "Prj-30-HLg"; */
+"Prj-30-HLg.text" = "Dr. Asser Ahmed booked on 08 August 2020, Saturday";
+
+/* Class = "UILabel"; text = "09:30 PM - 10:00 PM"; ObjectID = "TtM-t4-TZW"; */
+"TtM-t4-TZW.text" = "09:30 PM - 10:00 PM";
+
+/* Class = "UILabel"; text = "El-Shouroq (Nasr City)"; ObjectID = "Uxm-rD-PLj"; */
+"Uxm-rD-PLj.text" = "El-Shouroq (Nasr City)";
+
+/* Class = "UILabel"; text = "With Doctor"; ObjectID = "eFs-Bv-zkR"; */
+"eFs-Bv-zkR.text" = "مع دكتور";
+
+/* Class = "UILabel"; text = "Appointment Cancelled"; ObjectID = "edP-sV-S1X"; */
+"edP-sV-S1X.text" = "تم إلغاء الموعد";
+
+/* Class = "UILabel"; text = "View History Appointment"; ObjectID = "fPa-pi-vlP"; */
+"fPa-pi-vlP.text" = "عرض التاريخ الموعد";
+
+/* Class = "UILabel"; text = "Appointment Reason"; ObjectID = "hU3-E9-dXw"; */
+"hU3-E9-dXw.text" = "سبب التعيين";
+
+/* Class = "UILabel"; text = "Cancelled"; ObjectID = "kz1-ht-AHc"; */
+"kz1-ht-AHc.text" = "ألغيت";
+
+/* Class = "UIButton"; normalTitle = "View"; ObjectID = "oB0-7A-Jeh"; */
+"oB0-7A-Jeh.normalTitle" = "اظهار";
+
+/* Class = "UILabel"; text = "Monday  Sep 11,  2020"; ObjectID = "pQr-UI-pJC"; */
+"pQr-UI-pJC.text" = "Monday  Sep 11,  2020";
+
+/* Class = "UILabel"; text = "It look like readable English. Many desktop publishing packages \nand web page editors now use Lorem Ipsum as their default model\ntext, and a search for"; ObjectID = "yPP-eL-Gf0"; */
+"yPP-eL-Gf0.text" = "It look like readable English. Many desktop publishing packages \nand web page editors now use Lorem Ipsum as their default model\ntext, and a search for";

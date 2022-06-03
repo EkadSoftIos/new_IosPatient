@@ -63,25 +63,10 @@ class HomeVC: BaseViewControll,UITextFieldDelegate {
         }
     }
     override func viewWillAppear(_ animated: Bool) {
-        setLocalization()
         self.navigationItem.title = "Home".localized
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: AppColor.Blue]
     }
-    func setLocalization(){
-        welcomeLBL.text = "Welcome".localized
-        howDoYouLBL.text = "How do you feel today ?".localized
-        youCanFindLBL.text = "You can find with us all your medical help.".localized
-        lastVisitLBL.text = "Last visit".localized
-        searchTXT.placeholder = "Search by doctor name".localized
-        specializationLBL.text = "Specializations".localized
-        doctorServiceLBL.text = "Doctor Service".localized
-        medicalServiceLBL.text = "Medical Services".localized
-        topDoctorLBL.text = "Top Doctor".localized
-        topOfferLBL.text = "Top Offers".localized
-        seeallSpecBTN.setTitle("SeeAll".localized, for: .normal)
-        seeAllTopDoctorBTN.setTitle("SeeAll", for: .normal)
-        seeAllTopOfferBTN.setTitle("SeeAll", for: .normal)
-    }
+    
     func setupCollectionView(){
         SpecializationsCollection.register(SpecializationsCell.nib, forCellWithReuseIdentifier: "SpecializationsCell")
         SpecializationsCollection.delegate = self

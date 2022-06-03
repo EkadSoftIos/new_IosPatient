@@ -27,7 +27,7 @@ extension LoginVC{
     }
     func callApi(){
         let deviceId = UIDevice.current.identifierForVendor!.uuidString
-        let prefix = "+2"
+        let prefix = "+20"
                 guard phoneTxt.text!.hasPrefix(prefix) else { return }
                 let phoneWithoutPref  = String(phoneTxt.text!.dropFirst(prefix.count).trimmingCharacters(in: .whitespacesAndNewlines))
         let parameters: [String: Any] = [
@@ -81,4 +81,73 @@ extension LoginVC{
         vc.modalTransitionStyle = .crossDissolve
         self.show(vc, sender: nil)
     }
+    func checkEmailApi(){
+        self.loginBtn.startAnimation()
+        NetworkClient.performRequest(_type: SuccessBoolModel.self, router: .checkEmail(email: socialEmail)) { (result) in
+            switch result{
+            case .success(let model):
+                print(model)
+                if model.message == true{
+                    self.callExternalApi()
+                }else{
+                    self.loginBtn.stopAnimation()
+                    let vc = SocialPhoneVC()
+                    vc.socialName = self.socialName
+                    vc.socialImage = self.socialImage
+                    vc.socialEmail = self.socialEmail
+                    vc.socialPhone = self.socialPhone
+                    vc.socialUserName = self.socialUserName
+                    vc.social_id = self.social_id
+                    
+                     vc.modalPresentationStyle = .overCurrentContext
+                     vc.modalTransitionStyle = .crossDissolve
+                     self.present(vc, animated: true, completion: nil)
+                }
+            case .failure(let model):
+                self.loginBtn.stopAnimation()
+                self.showMessage(title: "", sub: "error connecting to server. please try again", type: .error, layout: .messageView)
+                print("failure: \(model)")
+            
+            }
+        }
+    }
+    func callExternalApi(){
+        let prefix = "+20"
+                guard phoneTxt.text!.hasPrefix(prefix) else { return }
+                let phoneWithoutPref  = String(phoneTxt.text!.dropFirst(prefix.count).trimmingCharacters(in: .whitespacesAndNewlines))
+        let parameters: [String: Any] = [
+            "Email": socialEmail,
+//            "mobile": passwordTxt.text ?? "",
+//            "patientMobileCode": self.digitalCountryCode,
+            "LoginProvider": social_id,
+            "ProviderKey": socialName,
+//            "PatientName": socialUserName,
+//            "UserType": 2
+          ]
+        
+        NetworkClient.performRequest(_type: User.self, router: .externallogin(params: parameters)) { (result) in
+            switch result{
+            case .success(let model):
+                print(model)
+                if model.apiresponseresult.successtate == 200{
+                    let defaults = UserDefaults.standard
+                    defaults.set(model.token, forKey: "token")
+                    defaults.set(model.apiresponseresult.message.patientID, forKey: "patientId")
+                    defaults.synchronize()
+                    self.successLogin()
+                }else{
+                    self.showMessage(title: "", sub: model.apiresponseresult.errormessage, type: .error, layout: .messageView)
+                    self.loginBtn.stopAnimation()
+                }
+            case .failure(let model):
+                self.loginBtn.stopAnimation()
+                self.showMessage(title: "", sub: "error connecting to server. please try again", type: .error, layout: .messageView)
+                print("failure: \(model)")
+            
+            }
+        }
+    }
+    
+
+    
 }

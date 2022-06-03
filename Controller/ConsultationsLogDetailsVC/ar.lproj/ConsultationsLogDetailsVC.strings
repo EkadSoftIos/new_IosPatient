@@ -1,0 +1,42 @@
+
+/* Class = "UILabel"; text = "With Doctor"; ObjectID = "1lx-SQ-q5E"; */
+"1lx-SQ-q5E.text" = "مع دكتور";
+
+/* Class = "UILabel"; text = "Dr. Ahmed Karim"; ObjectID = "7Sl-eq-ptc"; */
+"7Sl-eq-ptc.text" = "Dr. Ahmed Karim";
+
+/* Class = "UILabel"; text = "It is a  surgery"; ObjectID = "9r4-W3-XID"; */
+"9r4-W3-XID.text" = "إنها عملية جراحية";
+
+/* Class = "UIButton"; normalTitle = "Add all"; ObjectID = "CR1-If-9rt"; */
+"CR1-If-9rt.normalTitle" = "إضافة الجميع";
+
+/* Class = "UILabel"; text = "El-Shouroq (Nasr City)"; ObjectID = "Eav-vK-j6r"; */
+"Eav-vK-j6r.text" = "El-Shouroq (Nasr City)";
+
+/* Class = "UILabel"; text = "43 Nakhla moteey st , triumph square , \ninfront of emam ali mosque Nasr City"; ObjectID = "EwV-Ph-kZT"; */
+"EwV-Ph-kZT.text" = "43 Nakhla moteey st , triumph square , \ninfront of emam ali mosque Nasr City";
+
+/* Class = "UILabel"; text = "Your Appointment "; ObjectID = "GW9-Td-M2F"; */
+"GW9-Td-M2F.text" = "موعدك ";
+
+/* Class = "UILabel"; text = "09:30 PM - 10:00 PM"; ObjectID = "PRU-ph-hso"; */
+"PRU-ph-hso.text" = "09:30 PM - 10:00 PM";
+
+/* Class = "UILabel"; text = "Clinical Summary"; ObjectID = "SKo-Kn-qPv"; */
+"SKo-Kn-qPv.text" = "الملخص";
+
+/* Class = "UILabel"; text = "Clinic Consultation"; ObjectID = "UQ9-gW-Tt3"; */
+"UQ9-gW-Tt3.text" = "استشارة عيادة";
+
+/* Class = "UIButton"; normalTitle = "Buy Now"; ObjectID = "Ygj-Iw-QcA"; */
+"Ygj-Iw-QcA.normalTitle" = "اشتري الآن";
+
+/* Class = "UILabel"; text = "It is a long established fact that a reader will be distracted\nHeart pacemaker implantation surgery"; ObjectID = "bz4-nR-vmF"; */
+"bz4-nR-vmF.text" = "It is a long established fact that a reader will be distracted\nHeart pacemaker implantation surgery";
+
+/* Class = "UILabel"; text = "Monday  Sep 11,  2020"; ObjectID = "lZn-q9-4cL"; */
+"lZn-q9-4cL.text" = "Monday  Sep 11,  2020";
+
+/* Class = "UILabel"; text = "Diseases"; ObjectID = "yex-md-nqh"; */
+"yex-md-nqh.text" = "الأمراض";

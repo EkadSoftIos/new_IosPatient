@@ -1,0 +1,6 @@
+
+/* Class = "UITextField"; placeholder = "Your Location"; ObjectID = "KuF-7E-2ZA"; */
+"KuF-7E-2ZA.placeholder" = "موقعك";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "Yem-Ty-XDf"; */
+"Yem-Ty-XDf.normalTitle" = "حفظ";
