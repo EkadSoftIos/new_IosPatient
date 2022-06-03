@@ -37,7 +37,7 @@ class AULocationCell: UITableViewCell, AULocationCellProtocol {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        containerView.applyShadow(0.2)
+        containerView.applyShadow(0.15)
     }
     
     func config(display: AULocationDisplay) {

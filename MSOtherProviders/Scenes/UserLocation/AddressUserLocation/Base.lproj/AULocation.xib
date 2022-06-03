@@ -42,6 +42,9 @@
                                 <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="24"/>
                             </variation>
                         </label>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gpsLocation" translatesAutoresizingMaskIntoConstraints="NO" id="ofX-tE-emk">
+                            <rect key="frame" x="348" y="13" width="16" height="16"/>
+                        </imageView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zjq-f4-Jbl">
                             <rect key="frame" x="0.0" y="0.0" width="374" height="41.5"/>
                             <state key="normal" title="Button"/>
@@ -58,6 +61,8 @@
                         <constraint firstAttribute="bottom" secondItem="Zjq-f4-Jbl" secondAttribute="bottom" id="NEg-dg-xOP"/>
                         <constraint firstAttribute="trailing" secondItem="Zjq-f4-Jbl" secondAttribute="trailing" id="Pnd-X4-Xre"/>
                         <constraint firstAttribute="bottom" secondItem="eID-f4-jvm" secondAttribute="bottom" constant="10" id="T7e-dJ-xK3"/>
+                        <constraint firstAttribute="trailing" secondItem="ofX-tE-emk" secondAttribute="trailing" constant="10" id="fja-Z4-mJR"/>
+                        <constraint firstItem="ofX-tE-emk" firstAttribute="centerY" secondItem="19a-bA-rG2" secondAttribute="centerY" id="rwA-kd-qex"/>
                         <constraint firstItem="Zjq-f4-Jbl" firstAttribute="top" secondItem="19a-bA-rG2" secondAttribute="top" id="s1k-YJ-Nhz"/>
                         <constraint firstItem="eID-f4-jvm" firstAttribute="top" secondItem="19a-bA-rG2" secondAttribute="top" constant="10" id="xxh-JM-xGT"/>
                     </constraints>
@@ -83,6 +88,7 @@
         </view>
     </objects>
     <resources>
+        <image name="gpsLocation" width="16" height="16"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
