@@ -10,6 +10,10 @@ import Foundation
 
 extension String{
     
+    var doubleValue:Double{
+        Double(self) ?? 0.0
+    }
+    
     var dateFormated:String{
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale(identifier: "en_US_POSIX")

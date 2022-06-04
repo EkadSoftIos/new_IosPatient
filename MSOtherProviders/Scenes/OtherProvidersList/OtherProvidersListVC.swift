@@ -105,7 +105,9 @@ class OtherProvidersListVC: UIViewController {
     }
     
     @IBAction func nearByBtnTapped(_ sender: UIButton) {
-        
+        let vc = MapsLocationVC()
+        vc.request = presenter.mapRequet
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 

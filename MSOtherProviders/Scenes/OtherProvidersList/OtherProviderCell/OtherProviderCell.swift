@@ -18,8 +18,10 @@ struct OtherProviderDisplay{
     let discount:String
     let priceBeforeDiscount:String
     let isUploadedEP:Bool
+    let msImage:String
     
-    init(branch:OtherProviderBranch, servicesNum:Int){
+    init(branch:OtherProviderBranch, servicesNum:Int, msImage:String){
+        self.msImage = msImage
         self.isUploadedEP = servicesNum == 0
         providerName = branch.otherProviderNameLocalized
         branchName = branch.branchNameLocalized
@@ -27,7 +29,7 @@ struct OtherProviderDisplay{
         servicesText = String(format: "%d/%d %@", branch.avaliableCount, servicesNum,  "Services".localized)
         price = String(format: "%.02f\("EGP".localized)", branch.priceAfter)
         priceBeforeDiscount = String(format: "%.02f\("EGP".localized)", branch.priceBefore)
-        discount = String(format: "%.01f$", branch.discountPercentage)
+        discount = String(format: "%.01f%", branch.discountPercentage)
     }
 }
 
@@ -51,6 +53,7 @@ class OtherProviderCell: UITableViewCell, OtherProviderCellProtocol {
     
     @IBOutlet weak var discountView: UIView!
     @IBOutlet weak var servicesView: UIView!
+    @IBOutlet weak var servicesImgeView: UIImageView!
     @IBOutlet weak var priceView: UIView!
     
     
@@ -70,7 +73,7 @@ class OtherProviderCell: UITableViewCell, OtherProviderCellProtocol {
         discountLabel.text = display.discount
         avatarImgView.kf.indicatorType = .activity
         avatarImgView.kf.setImage(with: display.avatar, placeholder: UIImage(named: "ProfileImage"))
-        
+        servicesImgeView.image = UIImage(named: display.msImage)
         discountView.isHidden = display.isUploadedEP
         servicesView.isHidden = display.isUploadedEP
         priceView.isHidden = display.isUploadedEP

@@ -13,6 +13,28 @@ enum MSType: Int, Codable {
     case rays
 }
 
+extension MSType{
+
+    var msImageNamed:String{
+        switch self {
+        case .labs:
+            return "microscope"
+        case .rays:
+            return "XRayskeleton"
+        }
+    }
+    
+    var opListTitle:String{
+        switch self {
+        case .labs:
+            return "Labs".localized
+        case .rays:
+            return "Centers".localized
+        }
+    }
+    
+}
+
 struct MSOPServicesRequest:Codable {
     
     var type:MSType? = nil

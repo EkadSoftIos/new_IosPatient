@@ -243,3 +243,9 @@
 "Select Area"  = "Select Area";
 "Select City"  = "Select City";
 "Select Country" = "Select Country";
+"Select your location" =  "Your Location";
+"Location Services" = "Location Services";
+"Please Enable Location Services in the Settings" ="Please Enable Location Services in the Settings";
+"Settings" = "الإعدادات";
+"Please let us access your location, to make app run perfect" = "يرجى السماح لنا بالوصول إلى موقعك ، لجعل تشغيل التطبيق مثاليًا";
+"No info found near your location" = "No info found near your location";

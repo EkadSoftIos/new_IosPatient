@@ -23,6 +23,7 @@ protocol OtherProvidersListPresenterProtocol: AnyObject {
     var numberOfRows:Int { get }
     var canFetchMore:Bool { get }
     var request:RequestType? { get set }
+    var mapRequet:(type: MSType, msList: [Int]) { get }
     /**
      * Add here your methods for communication VIEW -> PROTOCOL
      */
@@ -30,6 +31,7 @@ protocol OtherProvidersListPresenterProtocol: AnyObject {
     func config(cell:OtherProviderCellProtocol, indexPath:IndexPath)
     func loadMore()
     func sortList(accordingTo sort:SortType)
+    func userLocation(location:Location)
     func userLocation(country:ULCountry, city:City, area:Area)
 }
 
@@ -55,7 +57,11 @@ class OtherProvidersListPresenter {
     }
     
     var title:String {
-        pageType == .labs ?  "Labs".localized:"Centers".localized
+        pageType.opListTitle
+    }
+    
+    var mapRequet:(type: MSType, msList: [Int]){
+        (type:pageType, msList: opRequest.serviceIdList ?? [] )
     }
     
     // MARK: - Private properties -
@@ -131,6 +137,19 @@ extension OtherProvidersListPresenter: OtherProvidersListPresenterProtocol {
     
     
     // MARK: - userLocation -
+    func userLocation(location:Location){
+        view?.userLocation = location.city
+        opBranchesList.removeAll()
+        opRequest.pageNum! = 1
+        opRequest.latitude = location.latitude
+        opRequest.longitude = location.longitude
+        opRequest.distance = 10
+        opRequest.countryfk = nil
+        opRequest.cityFk = nil
+        opRequest.areaFk = nil
+        resetAndFetch()
+    }
+    
     func userLocation(country:ULCountry, city:City, area:Area) {
         view?.userLocation = city.nameLocalized
         opBranchesList.removeAll()
@@ -147,7 +166,7 @@ extension OtherProvidersListPresenter: OtherProvidersListPresenterProtocol {
     func config(cell:OtherProviderCellProtocol, indexPath:IndexPath){
         let branch = opBranchesList[indexPath.row]
         let servicesNum = opRequest.serviceIdList?.count ?? 0
-        cell.config(display: OtherProviderDisplay(branch: branch, servicesNum: servicesNum))
+        cell.config(display: OtherProviderDisplay(branch: branch, servicesNum: servicesNum, msImage: pageType.msImageNamed))
     }
     
 }

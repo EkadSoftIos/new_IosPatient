@@ -18,8 +18,10 @@ protocol AULocationViewProtocol: AnyObject {
      * Add here your methods for communication PRESENTER -> VIEW
      */
     
+    func showAppSetting()
     func reloadData()
     func showListVC(type:AULocationType)
+    func popToOPListVC(location:Location)
     func popToOPListVC(country:ULCountry, city:City, area:Area)
     func showMessageAlert(title:String, message:String)
 }
@@ -64,7 +66,8 @@ class AULocationVC: UIViewController {
     }
 
     @IBAction func autoLocationBtnTapped(_ sender: UIButton) {
-        
+        print("AU: autoLocationBtnTapped")
+        presenter.autoLocation()
     }
 }
 
@@ -81,6 +84,10 @@ extension AULocationVC: AULocationViewProtocol {
         tableView.reloadData()
     }
     
+    func showAppSetting() {
+        openAppSettings()
+    }
+    
     func showMessageAlert(title: String, message: String) {
         showUniversalLoadingView(false)
         showMessage(title: title, sub: message, type: Theme.error, layout: .centeredView)
@@ -92,21 +99,31 @@ extension AULocationVC: AULocationViewProtocol {
         navigationController?.pushViewController(vc, animated: true)
     }
     
+    func popToOPListVC(location:Location) {
+        guard let opListVC = getRootVC() else { return }
+        opListVC.presenter.userLocation(location: location)
+        navigationController?.popToViewController(opListVC, animated: true)
+    }
+    
     func popToOPListVC(country:ULCountry, city:City, area:Area) {
+        guard let opListVC = getRootVC() else { return }
+        opListVC.presenter.userLocation(
+            country: country,
+            city: city,
+            area: area
+        )
+        navigationController?.popToViewController(opListVC, animated: true)
+    }
+    
+    private func getRootVC() -> OtherProvidersListVC? {
         for vc in self.navigationController!.viewControllers as Array {
             if vc.isKind(of: OtherProvidersListVC.self),
                let opListVC = vc as? OtherProvidersListVC {
-                opListVC.presenter.userLocation(
-                    country: country,
-                    city: city,
-                    area: area
-                )
-                navigationController?.popToViewController(vc, animated: true)
-                break
+                return opListVC
             }
         }// end Loop
+        return nil
     }//end func
-    
 }
 
 extension AULocationVC: UITableViewDelegate, UITableViewDataSource {
