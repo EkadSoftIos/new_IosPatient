@@ -13,28 +13,6 @@ enum MSType: Int, Codable {
     case rays
 }
 
-extension MSType{
-
-    var msImageNamed:String{
-        switch self {
-        case .labs:
-            return "microscope"
-        case .rays:
-            return "XRayskeleton"
-        }
-    }
-    
-    var opListTitle:String{
-        switch self {
-        case .labs:
-            return "Labs".localized
-        case .rays:
-            return "Centers".localized
-        }
-    }
-    
-}
-
 struct MSOPServicesRequest:Codable {
     
     var type:MSType? = nil
@@ -73,5 +51,92 @@ extension Encodable {
                                                            options: .prettyPrinted)
         else { return nil }
         return String(data: jsonData, encoding: String.Encoding.utf8)
+    }
+}
+
+extension MSType{
+
+    var btnName:String{
+        switch self {
+        case .labs: return "Labs".localized
+        case .rays: return "Rays".localized
+        }
+    }
+    
+    var searchResultText:String{
+        switch self {
+        case .labs: return "Tests".localized
+        case .rays: return "Rays".localized
+        }
+    }
+    
+    var msImageNamed:String{
+        switch self {
+        case .labs: return "microscope"
+        case .rays: return "XRayskeleton"
+        }
+    }
+    
+    var msPreRequest:String{
+        switch self {
+        case .labs: return "Tests Pre-Request".localized
+        case .rays: return "Rays Pre-Request".localized
+        }
+    }
+    
+    var msSummary:String{
+        switch self {
+        case .labs: return "Tests Summary".localized
+        case .rays: return "Rays Summary".localized
+        }
+    }
+    
+    var opProfileTitle:String{
+        switch self {
+        case .labs: return "Lab Profile".localized
+        case .rays: return "Center Profile".localized
+        }
+    }
+    
+    var opListTitle:String{
+        switch self {
+        case .labs: return "Labs".localized
+        case .rays: return "Centers".localized
+        }
+    }
+    
+    var opsDashboardTitle:String{
+        switch self {
+        case .labs: return "Labs".localized
+        case .rays: return "X-Rays".localized
+        }
+    }
+    
+    var msOPsDashboardBtnTitle:String{
+        switch self {
+        case .labs: return "Find Tests".localized
+        case .rays: return "Find Rays".localized
+        }
+    }
+    
+    var msSearchPlaceholder:String{
+        switch self {
+        case .labs: return "Search by test name".localized
+        case .rays: return "Search by rays name".localized
+        }
+    }
+    
+    var searchOPMSTitle:String{
+        switch self {
+        case .labs: return "Labs Search".localized
+        case .rays: return "Rays Search".localized
+        }
+    }
+    
+    var findServicesBtnTitle:String{
+        switch self {
+        case .labs: return "Find Labs".localized
+        case .rays: return "Find Centers".localized
+        }
     }
 }

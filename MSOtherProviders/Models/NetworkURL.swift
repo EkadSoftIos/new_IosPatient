@@ -21,7 +21,6 @@ class NetworkURL{
         private static let lookup = "\(rootURL)Lookup/"
         
         
-        // Lookup/
         // MARK: - public properties -
         public static let baseURLImage = "https://e4clinicdevapi.ekadsoft.org/"
         public static let otherProviderDashboard:String =
@@ -34,6 +33,8 @@ class NetworkURL{
             "\(otherProvider)OtherProvidersSearch"
         public static let availableCountries:String =
             "\(lookup)Country_get_all_full"
+        public static let opBranchDetails:String =
+            "\(otherProvider)GetOtherProviderBranchData"
     }
     
     enum URLTypes {
@@ -42,6 +43,7 @@ class NetworkURL{
         case ePrescriptions(EPrescriptionRequest)
         case otherProviders(OPRequest)
         case availableCountries
+        case opBranchDetails(OPBranchDetailsRequest)
     }
     
     // MARK: - Private properties -
@@ -69,6 +71,8 @@ class NetworkURL{
             return URL(string:  "\(URLs.otherProviders)")
         case .availableCountries:
             return URL(string:  "\(URLs.availableCountries)")
+        case .opBranchDetails(_):
+            return URL(string:  "\(URLs.opBranchDetails)")
         }
     }
     
@@ -80,7 +84,8 @@ class NetworkURL{
         case
                 .searchServiceListForPatient(_),
                 .ePrescriptions(_),
-                .otherProviders(_):
+                .otherProviders(_),
+                .opBranchDetails(_):
             return .post
         }
     }
@@ -96,6 +101,8 @@ class NetworkURL{
             return epRequest.dictionary
         case .otherProviders(let opRequest):
             return opRequest.dictionary
+        case .opBranchDetails(let branchDetailsRequest):
+            return branchDetailsRequest.dictionary
         case .availableCountries:
             return nil
         }
@@ -111,7 +118,8 @@ class NetworkURL{
                 .searchServiceListForPatient(_),
                 .ePrescriptions(_),
                 .otherProviders(_),
-                .availableCountries:
+                .availableCountries,
+                .opBranchDetails(_):
             return .authHeaderIfLogin
         }
     }
@@ -125,7 +133,8 @@ class NetworkURL{
                 .searchServiceListForPatient(_),
                 .ePrescriptions(_),
                 .otherProviders(_),
-                .availableCountries:
+                .availableCountries,
+                .opBranchDetails(_):
             return JSONEncoding.default            
         }
     }
@@ -185,17 +194,3 @@ extension Languagee{
 }
 
 
-extension String {
-    func ifBlank(use string: String) -> String {
-        isBlank ? string : self
-    }
-    
-    var isBlank: Bool {
-        trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
-    }
-    
-    var trimming: String? {
-        trimmingCharacters(in: .whitespacesAndNewlines)
-    }
-        
-}

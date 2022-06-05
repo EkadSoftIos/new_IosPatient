@@ -1,0 +1,36 @@
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "0sF-Aq-Eis"; */
+"0sF-Aq-Eis.normalTitle" = "";
+
+/* Class = "UILabel"; text = "cairo maadi 9 st cairo maadi 9 st cairo maadi 9 st cairo maadi 9 st"; ObjectID = "1fW-wD-zMq"; */
+"1fW-wD-zMq.text" = "--";
+
+/* Class = "UILabel"; text = "--"; ObjectID = "8p1-5G-Goh"; */
+"8p1-5G-Goh.text" = "--";
+
+/* Class = "UILabel"; text = "Find Test"; ObjectID = "GSa-Vd-6EN"; */
+"GSa-Vd-6EN.text" = "--";
+
+/* Class = "UILabel"; text = "Upload E-Prescription"; ObjectID = "M8o-Hf-V1Z"; */
+"M8o-Hf-V1Z.text" = "تحميل روشته";
+
+/* Class = "UILabel"; text = "Tests Summary"; ObjectID = "QW8-GH-T3z"; */
+"QW8-GH-T3z.text" = "--";
+
+/* Class = "UILabel"; text = "Test Pre-request"; ObjectID = "UZv-81-Pcf"; */
+"UZv-81-Pcf.text" = "--";
+
+/* Class = "UILabel"; text = "Capital Center"; ObjectID = "VgG-sV-Gxk"; */
+"VgG-sV-Gxk.text" = "--";
+
+/* Class = "UILabel"; text = "Branch"; ObjectID = "abW-7w-XZ6"; */
+"abW-7w-XZ6.text" = "--";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "b7E-rq-CXu"; */
+"b7E-rq-CXu.normalTitle" = "الحجز";
+
+/* Class = "UILabel"; text = "Prescriptions Photos"; ObjectID = "nWu-sX-i7W"; */
+"nWu-sX-i7W.text" = "صور الروشته";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "zd0-5l-m9y"; */
+"zd0-5l-m9y.normalTitle" = "";

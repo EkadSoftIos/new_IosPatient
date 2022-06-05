@@ -51,12 +51,6 @@ class MapsLocationVC: UIViewController {
     @IBOutlet weak var servicesImgeView: UIImageView!
     var presenter: MapsLocationPresenterProtocol!
     
-    
-    var request: (type: MSType, msList: [Int])? {
-        get{ presenter.request }
-        set{ presenter.request = newValue }
-    }
-    
     // MARK: - Private properties -
     
     // MARK: - Initializers -
@@ -90,7 +84,12 @@ class MapsLocationVC: UIViewController {
     }
 
     @IBAction func bookingBtnTapped(_ sender: UIButton) {
-        
+        guard let branch = presenter.branch else { return }
+        let vc = OPProfileVC()
+        vc.presenter.branch = branch
+        vc.presenter.type = presenter.type
+        vc.presenter.request = presenter.request
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 

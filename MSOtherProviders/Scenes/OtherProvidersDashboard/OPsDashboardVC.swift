@@ -35,6 +35,7 @@ class OPsDashboardVC: UIViewController {
     @IBOutlet weak var pageControl: FSPageControl!
     @IBOutlet var pagerSlider: FSPagerView!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var msImageView: UIImageView!
     
     var presenter: OPsDashboardPresenterProtocol!
     
@@ -72,6 +73,7 @@ class OPsDashboardVC: UIViewController {
         showUniversalLoadingView(true)
         msLabel.text = presenter.msLabelTitle
         searchTextField.delegate = self
+        msImageView.image = UIImage(named: presenter.type.msImageNamed)
         searchTextField.placeholder = presenter.searchPlaceholder
         shadowsViews.forEach ({ $0.applyShadow(0.3) })
         tableView.register(UINib(nibName: "EPrescriptionCell", bundle: nil), forCellReuseIdentifier: "EPrescriptionCell")
@@ -98,10 +100,10 @@ class OPsDashboardVC: UIViewController {
     
     
     @IBAction func uploadEPrescription(_ sender: UIButton) {
-        //showBottomSheet()
-        let imagePickerController = ImagePickerController()
-        imagePickerController.delegate = self
-        present(imagePickerController, animated: true)
+        showBottomSheet()
+//        let imagePickerController = ImagePickerController()
+//        imagePickerController.delegate = self
+//        present(imagePickerController, animated: true)
     }
     
     
@@ -231,7 +233,9 @@ extension OPsDashboardVC: ImagePickerDelegate{
     
     func doneButtonDidPress(_ imagePicker: ImagePickerController, images: [UIImage]) {
         if images.isEmpty { return }
-        showOtherProvidersList(request: .uploadImage(images))
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            self.showOtherProvidersList(request: .uploadImage(images))
+        }
     }
     
     func cancelButtonDidPress(_ imagePicker: ImagePickerController) {

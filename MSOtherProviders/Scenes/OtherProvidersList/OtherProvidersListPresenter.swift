@@ -23,7 +23,6 @@ protocol OtherProvidersListPresenterProtocol: AnyObject {
     var numberOfRows:Int { get }
     var canFetchMore:Bool { get }
     var request:RequestType? { get set }
-    var mapRequet:(type: MSType, msList: [Int]) { get }
     /**
      * Add here your methods for communication VIEW -> PROTOCOL
      */
@@ -58,10 +57,6 @@ class OtherProvidersListPresenter {
     
     var title:String {
         pageType.opListTitle
-    }
-    
-    var mapRequet:(type: MSType, msList: [Int]){
-        (type:pageType, msList: opRequest.serviceIdList ?? [] )
     }
     
     // MARK: - Private properties -
@@ -166,12 +161,31 @@ extension OtherProvidersListPresenter: OtherProvidersListPresenterProtocol {
     func config(cell:OtherProviderCellProtocol, indexPath:IndexPath){
         let branch = opBranchesList[indexPath.row]
         let servicesNum = opRequest.serviceIdList?.count ?? 0
-        cell.config(display: OtherProviderDisplay(branch: branch, servicesNum: servicesNum, msImage: pageType.msImageNamed))
+        cell.config(display: OtherProviderDisplay(
+            branch:branch,
+            servicesNum: servicesNum,
+            msImage: pageType.msImageNamed),
+            indexPath: indexPath,
+            presenter: self
+        )
     }
     
 }
 
+
+extension OtherProvidersListPresenter:OtherProviderCellPresenter{
+    
+    func bookingOP(for indexPath: IndexPath) {
+        let branch = opBranchesList[indexPath.row]
+        view?.showOPProfile(branch: branch)
+    }
+    
+    
+    
+}
+
 extension OtherProvidersListPresenter{
+    
     func setupRequestType() {
         switch requestType{
         case .services(let msList):
@@ -179,7 +193,7 @@ extension OtherProvidersListPresenter{
             guard let ms = msList.first else { return }
             var searchResultText = "\("Search Result for".localized) \(ms.serviceNameLocalized)"
             if msList.count > 1 {
-                searchResultText.append(contentsOf: " + \(msList.count - 1) \(pageType == .labs ? "Tests".localized:"Rays".localized)")
+                searchResultText.append(contentsOf: " + \(msList.count - 1) \(pageType.searchResultText )")
             }
             view?.searchResultText = searchResultText
         case .eprescription(let ep):
@@ -188,10 +202,10 @@ extension OtherProvidersListPresenter{
             guard let ms = ep.services.first else { return }
             var searchResultText = "\("Search Result for".localized) \(ms.serviceNameLocalized)"
             if ep.services.count > 1 {
-                searchResultText.append(contentsOf: " + \(ep.services.count - 1) \(pageType == .labs ? "Tests".localized:"Rays".localized)")
+                searchResultText.append(contentsOf: " + \(ep.services.count - 1) \(pageType.searchResultText )")
             }
             view?.searchResultText = searchResultText
-        case .uploadImage(let images):
+        case .uploadImage(_):
             let searchResultText = "\("Search Result for".localized) \("uploaded image".localized)"
             
             view?.searchResultText = searchResultText

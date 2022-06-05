@@ -25,6 +25,7 @@ protocol OtherProvidersListViewProtocol: AnyObject {
     func reloadData()
     func showLoading()
     func setEP(display: EPrescriptionDisplay)
+    func showOPProfile(branch:OtherProviderBranch)
     func showMessageAlert(title:String, message:String)
 }
 
@@ -106,7 +107,8 @@ class OtherProvidersListVC: UIViewController {
     
     @IBAction func nearByBtnTapped(_ sender: UIButton) {
         let vc = MapsLocationVC()
-        vc.request = presenter.mapRequet
+        vc.presenter.type = presenter.type
+        vc.presenter.request = presenter.request
         navigationController?.pushViewController(vc, animated: true)
     }
 }
@@ -125,6 +127,14 @@ extension OtherProvidersListVC: OtherProvidersListViewProtocol {
         set { searchResultLabel.text = newValue }
     }
     
+    
+    func showOPProfile(branch:OtherProviderBranch) {
+        let vc = OPProfileVC()
+        vc.presenter.branch = branch
+        vc.presenter.type = presenter.type
+        vc.presenter.request = presenter.request
+        navigationController?.pushViewController(vc, animated: true)
+    }
     
     func reloadData(){
         tableView.reloadData()

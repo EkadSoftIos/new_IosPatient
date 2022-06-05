@@ -106,8 +106,14 @@
 		063023D72846012E0085FD59 /* FilterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 063023D52846012E0085FD59 /* FilterCell.xib */; };
 		063023D9284609F40085FD59 /* FilterAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = 063023DB284609F40085FD59 /* FilterAlert.xib */; };
 		064660CE284B265F00D4929B /* UIViewController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064660CD284B265F00D4929B /* UIViewController+extension.swift */; };
+		0689CE3E284C86DA000CD6C9 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0689CE3D284C86DA000CD6C9 /* UIFont+Extension.swift */; };
+		0689CE40284C8748000CD6C9 /* CGFloat+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0689CE3F284C8748000CD6C9 /* CGFloat+Extension.swift */; };
+		0689CE41284C9430000CD6C9 /* OPProfile.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0689CE43284C9430000CD6C9 /* OPProfile.xib */; };
 		0697FED82844AA01001E63F4 /* OtherProviderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0697FEDA2844AA01001E63F4 /* OtherProviderCell.xib */; };
 		0697FEDF2844AA28001E63F4 /* OtherProvidersList.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0697FEE12844AA28001E63F4 /* OtherProvidersList.xib */; };
+		06A0BECF284BA02F00E6624E /* OPProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A0BECC284BA02F00E6624E /* OPProfilePresenter.swift */; };
+		06A0BED0284BA02F00E6624E /* OPProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A0BECD284BA02F00E6624E /* OPProfileVC.swift */; };
+		06A0BED3284BB0F900E6624E /* OPBranchDetailsReponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A0BED2284BB0F900E6624E /* OPBranchDetailsReponse.swift */; };
 		06A81AA9284AF9D200623A95 /* GeocoderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A81AA8284AF9D200623A95 /* GeocoderManager.swift */; };
 		06D84EA52849BB8E00DEF1D1 /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06D84EA32849BB8E00DEF1D1 /* LoginVC.xib */; };
 		06D84EAE2849BBCA00DEF1D1 /* SocialPhoneVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D84EAA2849BBCA00DEF1D1 /* SocialPhoneVC.swift */; };
@@ -668,12 +674,20 @@
 		063023DD284609F80085FD59 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/FilterAlert.strings; sourceTree = "<group>"; };
 		063023DF284609FC0085FD59 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/FilterAlert.strings; sourceTree = "<group>"; };
 		064660CD284B265F00D4929B /* UIViewController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+extension.swift"; sourceTree = "<group>"; };
+		0689CE3D284C86DA000CD6C9 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
+		0689CE3F284C8748000CD6C9 /* CGFloat+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extension.swift"; sourceTree = "<group>"; };
+		0689CE42284C9430000CD6C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/OPProfile.xib; sourceTree = "<group>"; };
+		0689CE45284C9436000CD6C9 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/OPProfile.strings; sourceTree = "<group>"; };
+		0689CE47284C9437000CD6C9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/OPProfile.strings; sourceTree = "<group>"; };
 		0697FED92844AA01001E63F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/OtherProviderCell.xib; sourceTree = "<group>"; };
 		0697FEDC2844AA06001E63F4 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/OtherProviderCell.strings; sourceTree = "<group>"; };
 		0697FEDE2844AA08001E63F4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/OtherProviderCell.strings; sourceTree = "<group>"; };
 		0697FEE02844AA28001E63F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/OtherProvidersList.xib; sourceTree = "<group>"; };
 		0697FEE32844AA7B001E63F4 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/OtherProvidersList.strings; sourceTree = "<group>"; };
 		0697FEE52844AA7D001E63F4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/OtherProvidersList.strings; sourceTree = "<group>"; };
+		06A0BECC284BA02F00E6624E /* OPProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OPProfilePresenter.swift; sourceTree = "<group>"; };
+		06A0BECD284BA02F00E6624E /* OPProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OPProfileVC.swift; sourceTree = "<group>"; };
+		06A0BED2284BB0F900E6624E /* OPBranchDetailsReponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OPBranchDetailsReponse.swift; sourceTree = "<group>"; };
 		06A81AA8284AF9D200623A95 /* GeocoderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocoderManager.swift; sourceTree = "<group>"; };
 		06D84EA42849BB8E00DEF1D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LoginVC.xib; sourceTree = "<group>"; };
 		06D84EA62849BBA700DEF1D1 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LoginVC.strings; sourceTree = "<group>"; };
@@ -1405,6 +1419,7 @@
 				06253B8828431BA600CE8731 /* MSOPServicesRequest.swift */,
 				061964AC28425E44006DBFB6 /* MSOtherProvidersReponse.swift */,
 				063023B62845DD580085FD59 /* AdFSPagerViewCell.swift */,
+				06A0BED2284BB0F900E6624E /* OPBranchDetailsReponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1429,6 +1444,7 @@
 			isa = PBXGroup;
 			children = (
 				063023C42845FBF50085FD59 /* AlertsViews */,
+				06A0BECB284BA00500E6624E /* OPProfile */,
 				06F932B22848584E00DAFB3D /* UserLocation */,
 				063003532844842400163C6F /* OtherProvidersList */,
 				0630034128446C4800163C6F /* EPrescriptionList */,
@@ -1522,6 +1538,8 @@
 		063023B82845DD6D0085FD59 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				0689CE3F284C8748000CD6C9 /* CGFloat+Extension.swift */,
+				0689CE3D284C86DA000CD6C9 /* UIFont+Extension.swift */,
 				063023B92845DDB00085FD59 /* String+Extensions.swift */,
 				063023BB2845DDDE0085FD59 /* UITableView+Extensions.swift */,
 				063023BD2845DE0C0085FD59 /* UIView+Extensions.swift */,
@@ -1558,6 +1576,16 @@
 				063023D42846012E0085FD59 /* FilterCell.swift */,
 			);
 			path = FilterCell;
+			sourceTree = "<group>";
+		};
+		06A0BECB284BA00500E6624E /* OPProfile */ = {
+			isa = PBXGroup;
+			children = (
+				0689CE43284C9430000CD6C9 /* OPProfile.xib */,
+				06A0BECD284BA02F00E6624E /* OPProfileVC.swift */,
+				06A0BECC284BA02F00E6624E /* OPProfilePresenter.swift */,
+			);
+			path = OPProfile;
 			sourceTree = "<group>";
 		};
 		06A81AA7284AF9B100623A95 /* Utilities */ = {
@@ -3641,6 +3669,7 @@
 				061CD32A284AF467006E9FCD /* MapsLocation.xib in Resources */,
 				61BD6823283B104C00821D51 /* addMedicationTableCell.xib in Resources */,
 				06D84EEA2849C02500DEF1D1 /* ProfileCell.xib in Resources */,
+				0689CE41284C9430000CD6C9 /* OPProfile.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3916,6 +3945,7 @@
 				0122816F27D7E54F00FF9C7E /* LocationExtension.swift in Sources */,
 				C14C632C25DE0262000D50B0 /* L102Language.swift in Sources */,
 				01FAB7BC27CD5D4300750DA5 /* FAQVC.swift in Sources */,
+				06A0BECF284BA02F00E6624E /* OPProfilePresenter.swift in Sources */,
 				C14C62F125DE0262000D50B0 /* UIView+Extension.swift in Sources */,
 				014904B226C5DB2600BD6D63 /* MainSpecialityModel.swift in Sources */,
 				C15F7EBB25BBD892005EB885 /* AddAllergiesVC.swift in Sources */,
@@ -4102,6 +4132,7 @@
 				C1A76B4725EADB20008F46DF /* addDieseasNetwork.swift in Sources */,
 				01F2F14B26E00B5200793A60 /* ConsultationLogModel.swift in Sources */,
 				C14C630225DE0262000D50B0 /* UIImagePickerController + Extension.swift in Sources */,
+				06A0BED3284BB0F900E6624E /* OPBranchDetailsReponse.swift in Sources */,
 				C14C631A25DE0262000D50B0 /* ImageGalleryViewDataSource.swift in Sources */,
 				322DCF2525EAC29A00142F6A /* EditProfileVCPicker.swift in Sources */,
 				C186EB852647C5D700E92B8F /* AppointmentHistoryPopup.swift in Sources */,
@@ -4116,6 +4147,7 @@
 				6160C7EA26E75C72006A12BE /* Extensions.swift in Sources */,
 				C1DC8A9025B66BE300B006AC /* EmergencyContactsCell.swift in Sources */,
 				C1FA092925BCF80800433577 /* EmergencyNumberVC.swift in Sources */,
+				06A0BED0284BA02F00E6624E /* OPProfileVC.swift in Sources */,
 				C15F7EC925BBDE7F005EB885 /* AddSocialHistoryVC.swift in Sources */,
 				C10E8E3225B33B03004FFCBF /* SceneDelegate.swift in Sources */,
 				C17C35E8263FB06700B8B494 /* SortVC.swift in Sources */,
@@ -4133,6 +4165,7 @@
 				061964CD28426A46006DBFB6 /* OPsDashboardVC.swift in Sources */,
 				C1C680B02607D45A0043EE1C /* getDoctorsModel.swift in Sources */,
 				C1820DF225B4196000396AAE /* TabbarManager.swift in Sources */,
+				0689CE3E284C86DA000CD6C9 /* UIFont+Extension.swift in Sources */,
 				06FD674628431790001FD415 /* SearchOPServicesVC.swift in Sources */,
 				61BD6822283B104C00821D51 /* addMedicationTableCell.swift in Sources */,
 				06D84F0A2849C20900DEF1D1 /* ChangeLanguagePresenter.swift in Sources */,
@@ -4151,6 +4184,7 @@
 				01B9A60326D6E318008FA81B /* WalletBalanceModel.swift in Sources */,
 				063003582844844700163C6F /* OtherProvidersListVC.swift in Sources */,
 				61EE621D280A942E0096009D /* ForgetPassVC.swift in Sources */,
+				0689CE40284C8748000CD6C9 /* CGFloat+Extension.swift in Sources */,
 				C14C632D25DE0262000D50B0 /* DigitInputView.swift in Sources */,
 				C1820E8925B5127B00396AAE /* AppointmentVC.swift in Sources */,
 				06D84EAE2849BBCA00DEF1D1 /* SocialPhoneVC.swift in Sources */,
@@ -4237,6 +4271,16 @@
 				063023DF284609FC0085FD59 /* en */,
 			);
 			name = FilterAlert.xib;
+			sourceTree = "<group>";
+		};
+		0689CE43284C9430000CD6C9 /* OPProfile.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0689CE42284C9430000CD6C9 /* Base */,
+				0689CE45284C9436000CD6C9 /* ar */,
+				0689CE47284C9437000CD6C9 /* en */,
+			);
+			name = OPProfile.xib;
 			sourceTree = "<group>";
 		};
 		0697FEDA2844AA01001E63F4 /* OtherProviderCell.xib */ = {

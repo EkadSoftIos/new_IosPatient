@@ -52,3 +52,4 @@ struct Service: Codable {
         case conditionsList = "conditions_list"
     }
 }
+

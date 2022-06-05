@@ -12,7 +12,9 @@ import CoreLocation
 
 //MARK: Presenter -
 protocol MapsLocationPresenterProtocol: AnyObject {
-    var request:(type:MSType, msList:[Int])? { get set }
+    var type:MSType { get set}
+    var request:RequestType? { get set }
+    var branch:OtherProviderBranch? { get }
     /**
      * Add here your methods for communication VIEW -> PROTOCOL
      */
@@ -24,16 +26,27 @@ protocol MapsLocationPresenterProtocol: AnyObject {
 class MapsLocationPresenter: NSObject {
     
     // MARK: - Public properties -
-    var request: (type: MSType, msList: [Int])? {
-        get{ mapRequest }
-        set{ mapRequest = newValue }
+    var type:MSType{
+        get{ pageType }
+        set{ pageType = newValue }
     }
+    
+    var request:RequestType?{
+        get{ requestType }
+        set{ requestType = newValue }
+    }
+    
+    var branch: OtherProviderBranch?{
+        selectedBranch
+    }
+
         
     // MARK: - Private properties -
     private var timeoutTimer:Timer?
-    private var opRequest:OPRequest?
+    private var pageType:MSType!
+    private var opRequest:OPRequest!
+    private var requestType:RequestType?
     private var selectedBranch:OtherProviderBranch?
-    private var mapRequest:(type:MSType, msList:[Int])?
     private var locationManager:CLLocationManager?
     private weak var view: MapsLocationViewProtocol?
     private var opBranchesList:[OtherProviderBranch] = []
@@ -52,14 +65,7 @@ extension MapsLocationPresenter: MapsLocationPresenterProtocol {
     
     func viewDidLoad() {
         setupLMIfNeeded()
-        opRequest = OPRequest(
-            distance: 10,
-            providerType: mapRequest?.type,
-            serviceIdList: mapRequest?.msList
-        )
-        opBranchesList = getOPList()
-        let displays = opBranchesList.map({ OPMapDisplay(branch: $0, servicesNum: self.request?.msList.count ?? 0, msImage: self.request?.type.msImageNamed ?? "ms") })
-        view?.addMarkers(opDisplayList: displays)
+        setupRequestType()
     }
     
     
@@ -68,7 +74,7 @@ extension MapsLocationPresenter: MapsLocationPresenterProtocol {
         guard let branch = opBranchesList.first(where: { $0.otherProviderBranchID == id })
         else { return }
         selectedBranch = branch
-        let display = OPMapDisplay(branch: branch, servicesNum: self.request?.msList.count ?? 0, msImage: self.request?.type.msImageNamed ?? "ms")
+        let display = OPMapDisplay(branch: branch, servicesNum: opRequest?.serviceIdList?.count ?? 0, msImage: self.pageType.msImageNamed )
         view?.configBranch(display: display)
     }
     
@@ -100,7 +106,13 @@ extension MapsLocationPresenter: MapsLocationPresenterProtocol {
                     return
                 }
                 self.opBranchesList = response.message
-                let displays = self.opBranchesList.map({ OPMapDisplay(branch: $0, servicesNum: self.request?.msList.count ?? 0, msImage: self.request?.type.msImageNamed ?? "ms") })
+                let displays = self.opBranchesList.map({
+                    OPMapDisplay(
+                        branch: $0,
+                        servicesNum: self.opRequest?.serviceIdList?.count ?? 0,
+                        msImage: self.pageType.msImageNamed
+                    )
+                })
                 self.view?.addMarkers(opDisplayList: displays)
             case .failure(let error):
                 self.view?.showMessageAlert(title: "Error".localized, message: error.localizedDescription)
@@ -154,6 +166,27 @@ extension MapsLocationPresenter: CLLocationManagerDelegate{
     }
 }
 
+extension MapsLocationPresenter{
+    func setupRequestType() {
+        switch requestType{
+        case .services(let msList):
+            opRequest = OPRequest(
+                distance: 10,
+                providerType: pageType,
+                serviceIdList: msList.map({ $0.serviceID })
+            )
+        case .eprescription(let ep):
+            opRequest = OPRequest(
+                distance: 10,
+                providerType: pageType,
+                serviceIdList: ep.services.map({ $0.serviceID })
+            )
+        default:
+            break
+        }
+    }
+}
+
 
 struct OPMapDisplay{
     
@@ -188,63 +221,64 @@ struct OPMapDisplay{
 }
 
 
-func getOPList() -> [OtherProviderBranch] {
-    [
-        OtherProviderBranch(
-            otherProviderBranchID: 1,
-            branchNameLocalized: "فرع قوص",
-            otherProviderNameLocalized: "مركز الأمل",
-            otherProviderImage:"Upload/reduced_2022040511455697967277776586_7110184399052441_1899890496132401063_n.jpg",
-            otherProviderID: 6,
-            avaliableCount: 3,
-            priceBefore: 700.0,
-            priceAfter: 580.0,
-            discountPercentage: 17.14,
-            distance: 3.5,
-            brancheLat: "25.8551308",
-            brancheLong: "32.8228603"
-        ),
-        OtherProviderBranch(
-            otherProviderBranchID: 2,
-            branchNameLocalized: "فرع حجازة",
-            otherProviderNameLocalized: "مركز الأمل",
-            otherProviderImage:"Upload/reduced_2022040511455697967277776586_7110184399052441_1899890496132401063_n.jpg",
-            otherProviderID: 6,
-            avaliableCount: 3,
-            priceBefore: 700.0,
-            priceAfter: 580.0,
-            discountPercentage: 17.14,
-            distance: 3.5,
-            brancheLat: "25.8559708",
-            brancheLong: "32.8325053"
-        ),
-        OtherProviderBranch(
-            otherProviderBranchID: 3,
-            branchNameLocalized: "فرع رفاعة",
-            otherProviderNameLocalized: "مركز الابتسام",
-            otherProviderImage:"Upload/reduced_2022040511455697967277776586_7110184399052441_1899890496132401063_n.jpg",
-            otherProviderID: 6,
-            avaliableCount: 1,
-            priceBefore: 500.0,
-            priceAfter: 400.0,
-            discountPercentage: 20.0,
-            distance: 1.5,
-            brancheLat: "25.8566368",
-            brancheLong: "32.8329993"
-        ),
-        OtherProviderBranch(
-            otherProviderBranchID: 4,
-            branchNameLocalized: "فرع السويقة",
-            otherProviderNameLocalized: "مركز الابتسام",
-            otherProviderImage:"Upload/reduced_2022040511455697967277776586_7110184399052441_1899890496132401063_n.jpg",
-            otherProviderID: 6,
-            avaliableCount: 1,
-            priceBefore: 500.0,
-            priceAfter: 400.0,
-            discountPercentage: 20.0,
-            distance: 1.5,
-            brancheLat: "25.8518048",
-            brancheLong: "32.8261003"
-        )
-    ]
-}
+//
+//func getOPList() -> [OtherProviderBranch] {
+//    [
+//        OtherProviderBranch(
+//            otherProviderBranchID: 1,
+//            branchNameLocalized: "فرع قوص",
+//            otherProviderNameLocalized: "مركز الأمل",
+//            otherProviderImage:"Upload/reduced_2022040511455697967277776586_7110184399052441_1899890496132401063_n.jpg",
+//            otherProviderID: 6,
+//            avaliableCount: 3,
+//            priceBefore: 700.0,
+//            priceAfter: 580.0,
+//            discountPercentage: 17.14,
+//            distance: 3.5,
+//            brancheLat: "25.8551308",
+//            brancheLong: "32.8228603"
+//        ),
+//        OtherProviderBranch(
+//            otherProviderBranchID: 2,
+//            branchNameLocalized: "فرع حجازة",
+//            otherProviderNameLocalized: "مركز الأمل",
+//            otherProviderImage:"Upload/reduced_2022040511455697967277776586_7110184399052441_1899890496132401063_n.jpg",
+//            otherProviderID: 6,
+//            avaliableCount: 3,
+//            priceBefore: 700.0,
+//            priceAfter: 580.0,
+//            discountPercentage: 17.14,
+//            distance: 3.5,
+//            brancheLat: "25.8559708",
+//            brancheLong: "32.8325053"
+//        ),
+//        OtherProviderBranch(
+//            otherProviderBranchID: 3,
+//            branchNameLocalized: "فرع رفاعة",
+//            otherProviderNameLocalized: "مركز الابتسام",
+//            otherProviderImage:"Upload/reduced_2022040511455697967277776586_7110184399052441_1899890496132401063_n.jpg",
+//            otherProviderID: 6,
+//            avaliableCount: 1,
+//            priceBefore: 500.0,
+//            priceAfter: 400.0,
+//            discountPercentage: 20.0,
+//            distance: 1.5,
+//            brancheLat: "25.8566368",
+//            brancheLong: "32.8329993"
+//        ),
+//        OtherProviderBranch(
+//            otherProviderBranchID: 4,
+//            branchNameLocalized: "فرع السويقة",
+//            otherProviderNameLocalized: "مركز الابتسام",
+//            otherProviderImage:"Upload/reduced_2022040511455697967277776586_7110184399052441_1899890496132401063_n.jpg",
+//            otherProviderID: 6,
+//            avaliableCount: 1,
+//            priceBefore: 500.0,
+//            priceAfter: 400.0,
+//            discountPercentage: 20.0,
+//            distance: 1.5,
+//            brancheLat: "25.8518048",
+//            brancheLong: "32.8261003"
+//        )
+//    ]
+//}
