@@ -45,15 +45,15 @@ class OPsDashboardPresenter {
     
     // MARK: - Public properties -
     var title:String {
-        pageType == .labs ? "Labs".localized:"X-Rays".localized
+        pageType.opsDashboardTitle
     }
     
     var msLabelTitle:String {
-        pageType == .labs ? "Find Tests".localized:"Find Rays".localized
+        pageType.msOPsDashboardBtnTitle
     }
     
     var searchPlaceholder:String{
-        pageType == .labs ? "Search by test name".localized:"Search by rays name".localized
+        pageType.msSearchPlaceholder
     }
 
     

@@ -243,3 +243,16 @@
 "Select Area"  = "Select Area";
 "Select City"  = "Select City";
 "Select Country" = "Select Country";
+"Select your location" =  "Your Location";
+"Location Services" = "Location Services";
+"Please Enable Location Services in the Settings" ="Please Enable Location Services in the Settings";
+"Settings" = "Settings";
+"Please let us access your location, to make app run perfect" = "Please let us access your location, to make app run perfect";
+"No info found near your location" = "No info found near your location";
+"no Pre-Request" = "no";
+"Lab Profile" = "Lab Profile";
+"Center Profile" = "Center Profile";
+"Tests Summary" = "Tests Summary";
+"Rays Summary" = "Rays Summary";
+"Tests Pre-Request" = "Tests Pre-Request";
+"Rays Pre-Request" = "Rays Pre-Request";

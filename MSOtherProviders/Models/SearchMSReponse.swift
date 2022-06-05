@@ -34,3 +34,4 @@ struct MedicalService: Codable {
         case conditionsList = "conditions_list"
     }
 }
+

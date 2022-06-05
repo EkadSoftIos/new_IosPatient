@@ -63,7 +63,7 @@ struct OtherProviderBranch: Codable {
     let otherProviderID, avaliableCount:Int
     let priceBefore, priceAfter: Double
     let discountPercentage: Double
-    let distance: Int
+    let distance: Double
     let brancheLat, brancheLong: String
 
     enum CodingKeys: String, CodingKey {

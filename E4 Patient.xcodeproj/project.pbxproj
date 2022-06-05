@@ -78,6 +78,9 @@
 		061964CC28426A46006DBFB6 /* OPsDashboardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061964C928426A46006DBFB6 /* OPsDashboardPresenter.swift */; };
 		061964CD28426A46006DBFB6 /* OPsDashboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061964CA28426A46006DBFB6 /* OPsDashboardVC.swift */; };
 		061964CF284279A8006DBFB6 /* OPsDashboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 061964D1284279A8006DBFB6 /* OPsDashboard.xib */; };
+		061CD328284AF467006E9FCD /* MapsLocationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061CD325284AF467006E9FCD /* MapsLocationPresenter.swift */; };
+		061CD329284AF467006E9FCD /* MapsLocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061CD326284AF467006E9FCD /* MapsLocationVC.swift */; };
+		061CD32A284AF467006E9FCD /* MapsLocation.xib in Resources */ = {isa = PBXBuildFile; fileRef = 061CD327284AF467006E9FCD /* MapsLocation.xib */; };
 		06253B8928431BA600CE8731 /* MSOPServicesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06253B8828431BA600CE8731 /* MSOPServicesRequest.swift */; };
 		06253B8A28432C8A00CE8731 /* SearchOPServices.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06253B8C28432C8A00CE8731 /* SearchOPServices.xib */; };
 		06253B992843300E00CE8731 /* ServiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06253B972843300E00CE8731 /* ServiceCell.swift */; };
@@ -102,8 +105,16 @@
 		063023D62846012E0085FD59 /* FilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063023D42846012E0085FD59 /* FilterCell.swift */; };
 		063023D72846012E0085FD59 /* FilterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 063023D52846012E0085FD59 /* FilterCell.xib */; };
 		063023D9284609F40085FD59 /* FilterAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = 063023DB284609F40085FD59 /* FilterAlert.xib */; };
+		064660CE284B265F00D4929B /* UIViewController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064660CD284B265F00D4929B /* UIViewController+extension.swift */; };
+		0689CE3E284C86DA000CD6C9 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0689CE3D284C86DA000CD6C9 /* UIFont+Extension.swift */; };
+		0689CE40284C8748000CD6C9 /* CGFloat+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0689CE3F284C8748000CD6C9 /* CGFloat+Extension.swift */; };
+		0689CE41284C9430000CD6C9 /* OPProfile.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0689CE43284C9430000CD6C9 /* OPProfile.xib */; };
 		0697FED82844AA01001E63F4 /* OtherProviderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0697FEDA2844AA01001E63F4 /* OtherProviderCell.xib */; };
 		0697FEDF2844AA28001E63F4 /* OtherProvidersList.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0697FEE12844AA28001E63F4 /* OtherProvidersList.xib */; };
+		06A0BECF284BA02F00E6624E /* OPProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A0BECC284BA02F00E6624E /* OPProfilePresenter.swift */; };
+		06A0BED0284BA02F00E6624E /* OPProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A0BECD284BA02F00E6624E /* OPProfileVC.swift */; };
+		06A0BED3284BB0F900E6624E /* OPBranchDetailsReponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A0BED2284BB0F900E6624E /* OPBranchDetailsReponse.swift */; };
+		06A81AA9284AF9D200623A95 /* GeocoderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A81AA8284AF9D200623A95 /* GeocoderManager.swift */; };
 		06D84EA52849BB8E00DEF1D1 /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06D84EA32849BB8E00DEF1D1 /* LoginVC.xib */; };
 		06D84EAE2849BBCA00DEF1D1 /* SocialPhoneVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D84EAA2849BBCA00DEF1D1 /* SocialPhoneVC.swift */; };
 		06D84EAF2849BBCA00DEF1D1 /* SocialPhoneVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06D84EAB2849BBCA00DEF1D1 /* SocialPhoneVC.xib */; };
@@ -630,6 +641,9 @@
 		061964D0284279A8006DBFB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/OPsDashboard.xib; sourceTree = "<group>"; };
 		061964D3284279B0006DBFB6 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/OPsDashboard.strings; sourceTree = "<group>"; };
 		061964D5284279B7006DBFB6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/OPsDashboard.strings; sourceTree = "<group>"; };
+		061CD325284AF467006E9FCD /* MapsLocationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsLocationPresenter.swift; sourceTree = "<group>"; };
+		061CD326284AF467006E9FCD /* MapsLocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsLocationVC.swift; sourceTree = "<group>"; };
+		061CD327284AF467006E9FCD /* MapsLocation.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapsLocation.xib; sourceTree = "<group>"; };
 		0623A08128421F0200071B8A /* E4ClinicPatient-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "E4ClinicPatient-Bridging-Header.h"; sourceTree = "<group>"; };
 		06253B8828431BA600CE8731 /* MSOPServicesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSOPServicesRequest.swift; sourceTree = "<group>"; };
 		06253B8B28432C8A00CE8731 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SearchOPServices.xib; sourceTree = "<group>"; };
@@ -659,12 +673,22 @@
 		063023DA284609F40085FD59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/FilterAlert.xib; sourceTree = "<group>"; };
 		063023DD284609F80085FD59 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/FilterAlert.strings; sourceTree = "<group>"; };
 		063023DF284609FC0085FD59 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/FilterAlert.strings; sourceTree = "<group>"; };
+		064660CD284B265F00D4929B /* UIViewController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+extension.swift"; sourceTree = "<group>"; };
+		0689CE3D284C86DA000CD6C9 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
+		0689CE3F284C8748000CD6C9 /* CGFloat+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extension.swift"; sourceTree = "<group>"; };
+		0689CE42284C9430000CD6C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/OPProfile.xib; sourceTree = "<group>"; };
+		0689CE45284C9436000CD6C9 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/OPProfile.strings; sourceTree = "<group>"; };
+		0689CE47284C9437000CD6C9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/OPProfile.strings; sourceTree = "<group>"; };
 		0697FED92844AA01001E63F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/OtherProviderCell.xib; sourceTree = "<group>"; };
 		0697FEDC2844AA06001E63F4 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/OtherProviderCell.strings; sourceTree = "<group>"; };
 		0697FEDE2844AA08001E63F4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/OtherProviderCell.strings; sourceTree = "<group>"; };
 		0697FEE02844AA28001E63F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/OtherProvidersList.xib; sourceTree = "<group>"; };
 		0697FEE32844AA7B001E63F4 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/OtherProvidersList.strings; sourceTree = "<group>"; };
 		0697FEE52844AA7D001E63F4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/OtherProvidersList.strings; sourceTree = "<group>"; };
+		06A0BECC284BA02F00E6624E /* OPProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OPProfilePresenter.swift; sourceTree = "<group>"; };
+		06A0BECD284BA02F00E6624E /* OPProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OPProfileVC.swift; sourceTree = "<group>"; };
+		06A0BED2284BB0F900E6624E /* OPBranchDetailsReponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OPBranchDetailsReponse.swift; sourceTree = "<group>"; };
+		06A81AA8284AF9D200623A95 /* GeocoderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocoderManager.swift; sourceTree = "<group>"; };
 		06D84EA42849BB8E00DEF1D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LoginVC.xib; sourceTree = "<group>"; };
 		06D84EA62849BBA700DEF1D1 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LoginVC.strings; sourceTree = "<group>"; };
 		06D84EAA2849BBCA00DEF1D1 /* SocialPhoneVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialPhoneVC.swift; sourceTree = "<group>"; };
@@ -1395,6 +1419,7 @@
 				06253B8828431BA600CE8731 /* MSOPServicesRequest.swift */,
 				061964AC28425E44006DBFB6 /* MSOtherProvidersReponse.swift */,
 				063023B62845DD580085FD59 /* AdFSPagerViewCell.swift */,
+				06A0BED2284BB0F900E6624E /* OPBranchDetailsReponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1419,6 +1444,7 @@
 			isa = PBXGroup;
 			children = (
 				063023C42845FBF50085FD59 /* AlertsViews */,
+				06A0BECB284BA00500E6624E /* OPProfile */,
 				06F932B22848584E00DAFB3D /* UserLocation */,
 				063003532844842400163C6F /* OtherProvidersList */,
 				0630034128446C4800163C6F /* EPrescriptionList */,
@@ -1448,6 +1474,16 @@
 			path = OtherProvidersDashboard;
 			sourceTree = "<group>";
 		};
+		061CD324284AF430006E9FCD /* MapsLocation */ = {
+			isa = PBXGroup;
+			children = (
+				061CD327284AF467006E9FCD /* MapsLocation.xib */,
+				061CD326284AF467006E9FCD /* MapsLocationVC.swift */,
+				061CD325284AF467006E9FCD /* MapsLocationPresenter.swift */,
+			);
+			path = MapsLocation;
+			sourceTree = "<group>";
+		};
 		06253B9128432FC900CE8731 /* ServiceCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -1461,6 +1497,7 @@
 			isa = PBXGroup;
 			children = (
 				061964B628426275006DBFB6 /* Scenes */,
+				06A81AA7284AF9B100623A95 /* Utilities */,
 				061964A928425E44006DBFB6 /* Models */,
 				061964B028425E81006DBFB6 /* Services */,
 				063023B82845DD6D0085FD59 /* Extensions */,
@@ -1501,11 +1538,14 @@
 		063023B82845DD6D0085FD59 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				0689CE3F284C8748000CD6C9 /* CGFloat+Extension.swift */,
+				0689CE3D284C86DA000CD6C9 /* UIFont+Extension.swift */,
 				063023B92845DDB00085FD59 /* String+Extensions.swift */,
 				063023BB2845DDDE0085FD59 /* UITableView+Extensions.swift */,
 				063023BD2845DE0C0085FD59 /* UIView+Extensions.swift */,
 				063023C02845DE360085FD59 /* UIColor+Extensions.swift */,
 				063023C22845DE990085FD59 /* UILabel+Extenions.swift */,
+				064660CD284B265F00D4929B /* UIViewController+extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1538,6 +1578,24 @@
 			path = FilterCell;
 			sourceTree = "<group>";
 		};
+		06A0BECB284BA00500E6624E /* OPProfile */ = {
+			isa = PBXGroup;
+			children = (
+				0689CE43284C9430000CD6C9 /* OPProfile.xib */,
+				06A0BECD284BA02F00E6624E /* OPProfileVC.swift */,
+				06A0BECC284BA02F00E6624E /* OPProfilePresenter.swift */,
+			);
+			path = OPProfile;
+			sourceTree = "<group>";
+		};
+		06A81AA7284AF9B100623A95 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				06A81AA8284AF9D200623A95 /* GeocoderManager.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		06D84EA72849BBCA00DEF1D1 /* SocialPhoneVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -1564,6 +1622,7 @@
 		06F932B22848584E00DAFB3D /* UserLocation */ = {
 			isa = PBXGroup;
 			children = (
+				061CD324284AF430006E9FCD /* MapsLocation */,
 				06F932B42848591600DAFB3D /* AddressUserLocation */,
 			);
 			path = UserLocation;
@@ -3607,8 +3666,10 @@
 				61BD6821283B104C00821D51 /* AddMedicationCollectionCell.xib in Resources */,
 				06D84EB32849BC3900DEF1D1 /* SignUpVC.xib in Resources */,
 				061964C12842667F006DBFB6 /* EPrescriptionCell.xib in Resources */,
+				061CD32A284AF467006E9FCD /* MapsLocation.xib in Resources */,
 				61BD6823283B104C00821D51 /* addMedicationTableCell.xib in Resources */,
 				06D84EEA2849C02500DEF1D1 /* ProfileCell.xib in Resources */,
+				0689CE41284C9430000CD6C9 /* OPProfile.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3884,6 +3945,7 @@
 				0122816F27D7E54F00FF9C7E /* LocationExtension.swift in Sources */,
 				C14C632C25DE0262000D50B0 /* L102Language.swift in Sources */,
 				01FAB7BC27CD5D4300750DA5 /* FAQVC.swift in Sources */,
+				06A0BECF284BA02F00E6624E /* OPProfilePresenter.swift in Sources */,
 				C14C62F125DE0262000D50B0 /* UIView+Extension.swift in Sources */,
 				014904B226C5DB2600BD6D63 /* MainSpecialityModel.swift in Sources */,
 				C15F7EBB25BBD892005EB885 /* AddAllergiesVC.swift in Sources */,
@@ -3924,6 +3986,7 @@
 				C18DA7282647B48600079EE1 /* AppointmentCell.swift in Sources */,
 				01EE401A270C6349005B4E34 /* PatientAttachememntsVC.swift in Sources */,
 				C14C631C25DE0262000D50B0 /* ImageGalleryViewCell.swift in Sources */,
+				061CD329284AF467006E9FCD /* MapsLocationVC.swift in Sources */,
 				614F9E41283D8BA50055DF4E /* DeleteFamilyHistoryVC.swift in Sources */,
 				616178612806C578005EE4C6 /* LogOutInteractor.swift in Sources */,
 				C19EAB7325E94C1C006E6F06 /* GetAdressModel.swift in Sources */,
@@ -3938,6 +4001,7 @@
 				C15F7EFD25BBFCBD005EB885 /* AddFamilyHistoryVC.swift in Sources */,
 				063023D12845FD260085FD59 /* FilterAlertPresenter.swift in Sources */,
 				C1DC8AAC25B679D400B006AC /* AllDiseasesVC.swift in Sources */,
+				061CD328284AF467006E9FCD /* MapsLocationPresenter.swift in Sources */,
 				C186E3342647A77100B0890C /* BookingDetailsVC.swift in Sources */,
 				C14C631325DE0262000D50B0 /* ConstraintsSetup.swift in Sources */,
 				C186E30E26477C8400B0890C /* ReviewsCell.swift in Sources */,
@@ -3996,6 +4060,7 @@
 				014904B026C5DA4D00BD6D63 /* ProfessionalTitleModel.swift in Sources */,
 				0630034028445F1A00163C6F /* SearchMSReponse.swift in Sources */,
 				61BD6847283C468900821D51 /* DeleteAllergiesVC.swift in Sources */,
+				064660CE284B265F00D4929B /* UIViewController+extension.swift in Sources */,
 				C14C62F825DE0262000D50B0 /* UIViewController+Extension.swift in Sources */,
 				C1E399A525FC559F0064CAA2 /* AddSocialHistoryPicker.swift in Sources */,
 				C1DC8A8525B6682600B006AC /* AllEmergencyContactsVC.swift in Sources */,
@@ -4067,6 +4132,7 @@
 				C1A76B4725EADB20008F46DF /* addDieseasNetwork.swift in Sources */,
 				01F2F14B26E00B5200793A60 /* ConsultationLogModel.swift in Sources */,
 				C14C630225DE0262000D50B0 /* UIImagePickerController + Extension.swift in Sources */,
+				06A0BED3284BB0F900E6624E /* OPBranchDetailsReponse.swift in Sources */,
 				C14C631A25DE0262000D50B0 /* ImageGalleryViewDataSource.swift in Sources */,
 				322DCF2525EAC29A00142F6A /* EditProfileVCPicker.swift in Sources */,
 				C186EB852647C5D700E92B8F /* AppointmentHistoryPopup.swift in Sources */,
@@ -4081,6 +4147,7 @@
 				6160C7EA26E75C72006A12BE /* Extensions.swift in Sources */,
 				C1DC8A9025B66BE300B006AC /* EmergencyContactsCell.swift in Sources */,
 				C1FA092925BCF80800433577 /* EmergencyNumberVC.swift in Sources */,
+				06A0BED0284BA02F00E6624E /* OPProfileVC.swift in Sources */,
 				C15F7EC925BBDE7F005EB885 /* AddSocialHistoryVC.swift in Sources */,
 				C10E8E3225B33B03004FFCBF /* SceneDelegate.swift in Sources */,
 				C17C35E8263FB06700B8B494 /* SortVC.swift in Sources */,
@@ -4098,6 +4165,7 @@
 				061964CD28426A46006DBFB6 /* OPsDashboardVC.swift in Sources */,
 				C1C680B02607D45A0043EE1C /* getDoctorsModel.swift in Sources */,
 				C1820DF225B4196000396AAE /* TabbarManager.swift in Sources */,
+				0689CE3E284C86DA000CD6C9 /* UIFont+Extension.swift in Sources */,
 				06FD674628431790001FD415 /* SearchOPServicesVC.swift in Sources */,
 				61BD6822283B104C00821D51 /* addMedicationTableCell.swift in Sources */,
 				06D84F0A2849C20900DEF1D1 /* ChangeLanguagePresenter.swift in Sources */,
@@ -4116,6 +4184,7 @@
 				01B9A60326D6E318008FA81B /* WalletBalanceModel.swift in Sources */,
 				063003582844844700163C6F /* OtherProvidersListVC.swift in Sources */,
 				61EE621D280A942E0096009D /* ForgetPassVC.swift in Sources */,
+				0689CE40284C8748000CD6C9 /* CGFloat+Extension.swift in Sources */,
 				C14C632D25DE0262000D50B0 /* DigitInputView.swift in Sources */,
 				C1820E8925B5127B00396AAE /* AppointmentVC.swift in Sources */,
 				06D84EAE2849BBCA00DEF1D1 /* SocialPhoneVC.swift in Sources */,
@@ -4130,6 +4199,7 @@
 				C14C632125DE0262000D50B0 /* imagepickerHelper.swift in Sources */,
 				014904AA26C5CEAD00BD6D63 /* Observable.swift in Sources */,
 				C14C632A25DE0262000D50B0 /* UIButton+IndicatorButton.m in Sources */,
+				06A81AA9284AF9D200623A95 /* GeocoderManager.swift in Sources */,
 				01FE4B5126E5624E008023AB /* ConsultationDetailsModel.swift in Sources */,
 				01FAB7B827CD5D1E00750DA5 /* PrivacyPolicyVC.swift in Sources */,
 				063023C12845DE360085FD59 /* UIColor+Extensions.swift in Sources */,
@@ -4201,6 +4271,16 @@
 				063023DF284609FC0085FD59 /* en */,
 			);
 			name = FilterAlert.xib;
+			sourceTree = "<group>";
+		};
+		0689CE43284C9430000CD6C9 /* OPProfile.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0689CE42284C9430000CD6C9 /* Base */,
+				0689CE45284C9436000CD6C9 /* ar */,
+				0689CE47284C9437000CD6C9 /* en */,
+			);
+			name = OPProfile.xib;
 			sourceTree = "<group>";
 		};
 		0697FEDA2844AA01001E63F4 /* OtherProviderCell.xib */ = {

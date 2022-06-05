@@ -8,16 +8,6 @@
 import UIKit
 import Kingfisher
 
-extension MSType{
-    
-    var btnName:String{
-        switch self {
-        case .labs: return "Labs".localized
-        case .rays: return "Rays".localized
-        }
-    }
-    
-}
 
 struct EPrescriptionDisplay{
     let name:String
@@ -29,7 +19,7 @@ struct EPrescriptionDisplay{
         name = ep.doctorNameLocalized
         date = ep.preescriptionDate.dateFormated
         imageURL = URL(string: "\(URLs.baseURLImage)\(ep.doctorProfileImage ?? "")")
-        msBtnName = msType.btnName
+        msBtnName = msType.opListTitle
     }
 }
 

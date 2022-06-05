@@ -238,3 +238,16 @@
 "Select Area"  = "إختر المنطقة";
 "Select City"  = "إختر المدينة";
 "Select Country" = "إختر الدولة";
+"Select your location" =  "حدد موقعك";
+"Location Services" = "خدمات الموقع";
+"Please Enable Location Services in the Settings" = "يرجى تفعيل خدمات الموقع في الإعدادات";
+"Settings" = "الإعدادات";
+"Please let us access your location, to make app run perfect" = "يرجى السماح لنا بالوصول إلى موقعك ، لجعل تشغيل التطبيق مثاليًا";
+"No info found near your location" = "لا يوجد معلومات بالقرب من موقعك";
+"no Pre-Request" = "لا يوجد";
+"Lab Profile" = "بروفيل المعمل";
+"Center Profile" = "بروفيل المركز";
+"Tests Summary" = "ملخص التحاليل";
+"Rays Summary" = "ملخص الأشعة";
+"Tests Pre-Request" = "ما قبل التحاليل";
+"Rays Pre-Request" = "ما قبل الأشعة";

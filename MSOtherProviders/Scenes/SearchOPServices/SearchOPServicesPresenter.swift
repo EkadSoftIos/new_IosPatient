@@ -39,16 +39,16 @@ class SearchOPServicesPresenter {
     }
     
     var title:String {
-        msOPServicesRequest.type == .labs ? "Labs Search".localized:"Rays Search".localized
+        msOPServicesRequest.type!.searchOPMSTitle
     }
     
     var searchPlaceholder:String{
-        msOPServicesRequest.type == .labs ? "Search by test name".localized:"Search by rays name".localized
+        msOPServicesRequest.type!.msSearchPlaceholder
     }
 
     
     var findServicesBtnTitle:String {
-        msOPServicesRequest.type == .labs ? "Find Labs".localized:"Find Centers".localized
+        msOPServicesRequest.type!.findServicesBtnTitle
     }
     
     var numberOfRows: Int{

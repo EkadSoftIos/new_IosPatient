@@ -48,6 +48,9 @@
                                         <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="bookingBtnTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="9qA-hU-pGJ"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rtQ-wn-r94" userLabel="discount">
                                 <rect key="frame" x="231" y="5" width="50" height="16"/>
@@ -192,7 +195,7 @@
                                                     </label>
                                                 </subviews>
                                             </stackView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="money" translatesAutoresizingMaskIntoConstraints="NO" id="aX5-FS-WTF">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Money" translatesAutoresizingMaskIntoConstraints="NO" id="aX5-FS-WTF">
                                                 <rect key="frame" x="5" y="2" width="15" height="15"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="aX5-FS-WTF" secondAttribute="height" multiplier="1:1" id="0Au-Ww-QkG"/>
@@ -258,6 +261,7 @@
                 <outlet property="priceServicesLabel" destination="bXZ-Fa-QpN" id="EFz-zO-AxH"/>
                 <outlet property="priceView" destination="Mi4-wA-31c" id="PZ5-PT-cox"/>
                 <outlet property="providerNameLabel" destination="4yY-zz-Ur6" id="khT-gV-a9y"/>
+                <outlet property="servicesImgeView" destination="42U-Bc-aco" id="grh-d8-WaO"/>
                 <outlet property="servicesLabel" destination="vdO-MM-xjQ" id="L1n-Zf-TEe"/>
                 <outlet property="servicesView" destination="Qg5-ts-DBY" id="xfA-Ww-RkL"/>
             </connections>
@@ -265,10 +269,10 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="Money" width="13" height="13.5"/>
         <image name="gift" width="14.5" height="15.5"/>
         <image name="ic_clinic" width="15" height="15"/>
         <image name="microscope" width="33" height="39.5"/>
-        <image name="money" width="13" height="13.5"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

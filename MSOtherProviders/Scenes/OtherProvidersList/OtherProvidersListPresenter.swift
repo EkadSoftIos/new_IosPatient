@@ -30,6 +30,7 @@ protocol OtherProvidersListPresenterProtocol: AnyObject {
     func config(cell:OtherProviderCellProtocol, indexPath:IndexPath)
     func loadMore()
     func sortList(accordingTo sort:SortType)
+    func userLocation(location:Location)
     func userLocation(country:ULCountry, city:City, area:Area)
 }
 
@@ -55,7 +56,7 @@ class OtherProvidersListPresenter {
     }
     
     var title:String {
-        pageType == .labs ?  "Labs".localized:"Centers".localized
+        pageType.opListTitle
     }
     
     // MARK: - Private properties -
@@ -131,6 +132,19 @@ extension OtherProvidersListPresenter: OtherProvidersListPresenterProtocol {
     
     
     // MARK: - userLocation -
+    func userLocation(location:Location){
+        view?.userLocation = location.city
+        opBranchesList.removeAll()
+        opRequest.pageNum! = 1
+        opRequest.latitude = location.latitude
+        opRequest.longitude = location.longitude
+        opRequest.distance = 10
+        opRequest.countryfk = nil
+        opRequest.cityFk = nil
+        opRequest.areaFk = nil
+        resetAndFetch()
+    }
+    
     func userLocation(country:ULCountry, city:City, area:Area) {
         view?.userLocation = city.nameLocalized
         opBranchesList.removeAll()
@@ -147,12 +161,31 @@ extension OtherProvidersListPresenter: OtherProvidersListPresenterProtocol {
     func config(cell:OtherProviderCellProtocol, indexPath:IndexPath){
         let branch = opBranchesList[indexPath.row]
         let servicesNum = opRequest.serviceIdList?.count ?? 0
-        cell.config(display: OtherProviderDisplay(branch: branch, servicesNum: servicesNum))
+        cell.config(display: OtherProviderDisplay(
+            branch:branch,
+            servicesNum: servicesNum,
+            msImage: pageType.msImageNamed),
+            indexPath: indexPath,
+            presenter: self
+        )
     }
     
 }
 
+
+extension OtherProvidersListPresenter:OtherProviderCellPresenter{
+    
+    func bookingOP(for indexPath: IndexPath) {
+        let branch = opBranchesList[indexPath.row]
+        view?.showOPProfile(branch: branch)
+    }
+    
+    
+    
+}
+
 extension OtherProvidersListPresenter{
+    
     func setupRequestType() {
         switch requestType{
         case .services(let msList):
@@ -160,7 +193,7 @@ extension OtherProvidersListPresenter{
             guard let ms = msList.first else { return }
             var searchResultText = "\("Search Result for".localized) \(ms.serviceNameLocalized)"
             if msList.count > 1 {
-                searchResultText.append(contentsOf: " + \(msList.count - 1) \(pageType == .labs ? "Tests".localized:"Rays".localized)")
+                searchResultText.append(contentsOf: " + \(msList.count - 1) \(pageType.searchResultText )")
             }
             view?.searchResultText = searchResultText
         case .eprescription(let ep):
@@ -169,10 +202,10 @@ extension OtherProvidersListPresenter{
             guard let ms = ep.services.first else { return }
             var searchResultText = "\("Search Result for".localized) \(ms.serviceNameLocalized)"
             if ep.services.count > 1 {
-                searchResultText.append(contentsOf: " + \(ep.services.count - 1) \(pageType == .labs ? "Tests".localized:"Rays".localized)")
+                searchResultText.append(contentsOf: " + \(ep.services.count - 1) \(pageType.searchResultText )")
             }
             view?.searchResultText = searchResultText
-        case .uploadImage(let images):
+        case .uploadImage(_):
             let searchResultText = "\("Search Result for".localized) \("uploaded image".localized)"
             
             view?.searchResultText = searchResultText

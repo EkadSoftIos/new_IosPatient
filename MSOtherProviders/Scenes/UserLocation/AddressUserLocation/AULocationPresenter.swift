@@ -6,8 +6,10 @@
 //
 //
 
+import MOLH
 import Foundation
-import SKCountryPicker
+import CoreLocation
+//import SKCountryPicker
 
 
 enum AULocationType {
@@ -28,9 +30,10 @@ protocol AULocationPresenterProtocol: AnyObject {
     func viewDidLoad()
     func config(_ cell:AULocationCellProtocol, for indexPath:IndexPath)
     func didSelectRow(at indexPath:IndexPath )
+    func autoLocation() 
 }
 
-class AULocationPresenter {
+class AULocationPresenter: NSObject {
     
     // MARK: - Public properties -
     var numberOfRows: Int{
@@ -46,14 +49,18 @@ class AULocationPresenter {
     private var country:ULCountry!
     private var itemsList:[Any] = []
     private var auLocationType:AULocationType!
+    private var locationManager:CLLocationManager?
     private weak var view: AULocationViewProtocol?
     private var msNetworkRepository:MSNetworkRepository?
-    
+    private var msGeocoderManager:GeocoderManagerProtocol?
+
     // MARK: - Init -
     init(view: AULocationViewProtocol,
-         networkManager:MSNetworkRepository = MSAPIsManager()) {
+         networkManager:MSNetworkRepository = MSAPIsManager(),
+         geocoderManager:GeocoderManagerProtocol = GeocoderManager()) {
         self.view = view
-        self.msNetworkRepository = networkManager
+        msNetworkRepository = networkManager
+        msGeocoderManager = geocoderManager
     }
 }
 
@@ -143,4 +150,62 @@ extension AULocationPresenter: AULocationPresenterProtocol {
             break
         }
     }
+}
+
+
+// MARK: - CLLocationManagerDelegate -
+extension AULocationPresenter: CLLocationManagerDelegate{
+    
+    func setupLMIfNeeded(){
+        if !CLLocationManager.locationServicesEnabled() {
+            view?.showMessageAlert(title: "Error".localized, message: "Please enable lcation services".localized)
+            return
+        }
+        locationManager = CLLocationManager()
+        locationManager?.delegate = self
+        locationManager?.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager?.requestAlwaysAuthorization()
+        locationManager?.requestWhenInUseAuthorization()
+    }
+    
+    func autoLocation() {
+        setupLMIfNeeded()
+        locationManager?.startUpdatingLocation()
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        switch(CLLocationManager.authorizationStatus()) {
+        case .authorizedAlways, .authorizedWhenInUse, .notDetermined:
+            locationManager?.startUpdatingLocation()
+        case .restricted, .denied:
+            // redirect the users to settings
+            view?.showAppSetting()
+        default:
+            break
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let location = locations.sorted(by: { $0.horizontalAccuracy < $1.horizontalAccuracy }).first
+        else{ return }
+        locationManager?.stopUpdatingLocation()
+        updateUserLocation(location: location)
+    }
+    
+    
+    private func updateUserLocation(location:CLLocation){
+        let lang = MOLHLanguage.currentAppleLanguage()
+        showUniversalLoadingView(true)
+        msGeocoderManager?.getLocationInfo(for: location, lang: lang) { [weak self] result in
+            guard let self = self else { return }
+            showUniversalLoadingView(false)
+            switch result {
+            case .success(let response):
+                self.view?.popToOPListVC(location: response)
+            case .failure(let error):
+                self.view?.showMessageAlert(title: "Error".localized, message: error.localizedDescription)
+            }
+        }// end closure
+    }//end func
+    
 }

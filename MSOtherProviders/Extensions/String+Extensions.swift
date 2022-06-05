@@ -8,7 +8,26 @@
 import Foundation
 
 
+
+extension String {
+    func ifBlank(use string: String) -> String {
+        isBlank ? string : self
+    }
+    var isBlank: Bool {
+        trimmingCharacters(in: .whitespacesAndNewlines).isEmpty || trimmingCharacters(in: .whitespacesAndNewlines).lowercased() == "null"
+    }
+    
+    func font(ofSize size:CGFloat = 15) -> UIFont {
+        UIFont(name: self, size: size) ?? .systemFont(ofSize: size)
+    }
+        
+}
+
 extension String{
+    
+    var doubleValue:Double{
+        Double(self) ?? 0.0
+    }
     
     var dateFormated:String{
         let dateFormatter = DateFormatter()

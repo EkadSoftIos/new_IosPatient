@@ -19,6 +19,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OPsDashboardVC">
             <connections>
+                <outlet property="msImageView" destination="sel-Zu-W8Q" id="zxa-C4-LIK"/>
                 <outlet property="msLabel" destination="dvt-vN-0i2" id="5Kx-TU-MKH"/>
                 <outlet property="pageControl" destination="hxV-Wr-FzG" id="ard-BQ-8D0"/>
                 <outlet property="pagerSlider" destination="agi-m2-5FS" id="SsI-wf-opj"/>
@@ -62,13 +63,13 @@
                                     </constraints>
                                 </view>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="microscope" translatesAutoresizingMaskIntoConstraints="NO" id="sel-Zu-W8Q">
-                                    <rect key="frame" x="72" y="30" width="33" height="39.5"/>
+                                    <rect key="frame" x="67.5" y="30" width="42.5" height="50"/>
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="sel-Zu-W8Q" secondAttribute="height" multiplier="11:13" id="QG9-f3-QYs"/>
                                     </constraints>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find Test" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dvt-vN-0i2">
-                                    <rect key="frame" x="4" y="77.5" width="169" height="39"/>
+                                    <rect key="frame" x="4" y="88" width="169" height="28.5"/>
                                     <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="14"/>
                                     <color key="textColor" red="0.1333333333" green="0.49019607840000001" blue="0.81176470590000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
@@ -188,6 +189,9 @@
                             </userDefinedRuntimeAttributes>
                         </view>
                     </subviews>
+                    <constraints>
+                        <constraint firstItem="sel-Zu-W8Q" firstAttribute="height" secondItem="AsF-ze-ia3" secondAttribute="height" id="BYf-oK-J3H"/>
+                    </constraints>
                 </stackView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jfe-RK-giA">
                     <rect key="frame" x="0.0" y="535" width="414" height="41.5"/>
