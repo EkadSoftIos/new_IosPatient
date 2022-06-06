@@ -10,11 +10,11 @@ import UIKit
 
 extension UIView{
     
-    func applyShadow(_ shadowOpacity:Float = 1) {
+    func applyShadow(_ shadowOpacity:Float = 1, shadowRadius:CGFloat = 5 , shadowOffset:CGSize = CGSize(width: 1, height: 1)) {
         layer.masksToBounds = false
-        layer.shadowRadius = 5
+        layer.shadowRadius = shadowRadius
         layer.shadowColor = UIColor.black.cgColor
-        layer.shadowOffset = CGSize(width: 1, height: 1)
+        layer.shadowOffset = shadowOffset
         layer.shadowOpacity = shadowOpacity
     }
     

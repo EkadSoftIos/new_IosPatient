@@ -13,12 +13,12 @@ class ButtonPicker: UIButton {
     static let buttonBorderSize: CGFloat = 68
   }
 
-//  var configuration = Configuration()
+  var imagePickerConfiguration = ImagePickerConfiguration()
 
   lazy var numberLabel: UILabel = { [unowned self] in
     let label = UILabel()
     label.translatesAutoresizingMaskIntoConstraints = false
-//    label.font = self.configuration.numberLabelFont
+    label.font = self.imagePickerConfiguration.numberLabelFont
 
     return label
     }()
@@ -27,13 +27,13 @@ class ButtonPicker: UIButton {
 
   // MARK: - Initializers
 
-//  public init(configuration: Configuration? = nil) {
-//    if let configuration = configuration {
-//      self.configuration = configuration
-//    }
-//    super.init(frame: .zero)
-//    configure()
-//  }
+  public init(configuration: ImagePickerConfiguration? = nil) {
+    if let configuration = configuration {
+      self.imagePickerConfiguration = configuration
+    }
+    super.init(frame: .zero)
+    configure()
+  }
 
   override init(frame: CGRect) {
     super.init(frame: frame)
@@ -99,6 +99,6 @@ class ButtonPicker: UIButton {
 
   @objc func pickerButtonDidHighlight(_ button: UIButton) {
     numberLabel.textColor = UIColor.white
-    backgroundColor = UIColor(red:0.3, green:0.3, blue:0.3, alpha:1)
+    backgroundColor = UIColor(red: 0.3, green: 0.3, blue: 0.3, alpha: 1)
   }
 }

@@ -10,12 +10,16 @@ import UIKit
 import Kingfisher
 import SwiftMessages
 
+
 //MARK: View -
 protocol OPProfileViewProtocol: AnyObject {
     var presenter: OPProfilePresenterProtocol!  { get set }
     /**
      * Add here your methods for communication PRESENTER -> VIEW
      */
+    
+    
+    func reloadImages()
     func setBranchDetails(display:OPBranchDetailsDispaly)
     func showMessageAlert(title: String, message: String)
 }
@@ -73,12 +77,37 @@ class OPProfileVC: UIViewController {
         title = presenter.type.opProfileTitle
         shadowsViews.forEach({ $0.applyShadow(0.3)})
         msImageView.image = UIImage(named: presenter.type.msImageNamed)
-        addBtnMSStackView.isHidden = presenter.canAddMS
-        epPhotosView.isHidden = presenter.canAddMS
         msSummaryLabel.text = presenter.type.msSummary
         msPreRquestTitleLabel.text = presenter.type.msPreRequest
         msLabel.text = presenter.type.msOPsDashboardBtnTitle
         msPreRequestView.isHidden = true
+        if !presenter.canAddMS {
+            epPhotosView.removeFromSuperview()
+            addBtnMSStackView.removeFromSuperview()
+        }
+        collectionView.register(UINib(nibName: "ImageCell", bundle: nil), forCellWithReuseIdentifier: "ImageCell")
+        collectionView.delegate = self
+        collectionView.dataSource = self
+    }
+    
+    
+    @IBAction func uploadEPrescription(_ sender: UIButton) {
+        let imagePickerController = ImagePickerController()
+        imagePickerController.delegate = self
+        imagePickerController.modalPresentationStyle = .overCurrentContext
+        imagePickerController.modalTransitionStyle = .crossDissolve
+        present(imagePickerController, animated: true)
+    }
+    
+    @IBAction func addMSList(_ sender: UIButton) {
+        let vc = AddMSVC()
+        vc.presenter.type = presenter.type
+        vc.presenter.request = presenter.msOPServicesRequest
+        vc.handler = { [weak self] (msList) in
+            guard let self = self else { return }
+            
+        }
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func bookingBtnTapped(_ sender: Any) {
@@ -90,21 +119,85 @@ class OPProfileVC: UIViewController {
 // MARK: - Extensions -
 extension OPProfileVC: OPProfileViewProtocol {
     
+    func reloadImages() {
+        collectionView.reloadData()
+    }
+    
     func setBranchDetails(display:OPBranchDetailsDispaly) {
         providerNameLabel.text = display.providerName
         branchNameLabel.text = display.branchName
         branchAddressLabel.text = display.branchAddress
         avatarImgView.kf.indicatorType = .activity
         avatarImgView.kf.setImage(with: display.avatar, placeholder: UIImage(named: "ProfileImage"))
+        
+        func showPreRequestAnimate(isHidden:Bool){
+            UIView.animate(withDuration: 0.5) {
+                self.msPreRequestView.isHidden = isHidden
+            }
+        }
         if let msPreRequest = display.msPreRequest {
-            msPreRequestView.isHidden = false
+            showPreRequestAnimate(isHidden: false)
             msPreRequestLabel.attributedText = msPreRequest
         }else{
-            msPreRequestView.isHidden = true
+            showPreRequestAnimate(isHidden: true)
         }
     }
     
     func showMessageAlert(title: String, message: String) {
         showMessage(title: title, sub: message, type: Theme.error, layout: .centeredView)
     }
+}
+
+// MARK: - UICollectionViewDelegate, UICollectionViewDataSource -
+extension OPProfileVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        let numberOfImagesItems = presenter.numberOfImagesItems
+        UIView.animate(withDuration: 0.5) {
+            if numberOfImagesItems == 0 {
+                self.epPhotosView.isHidden = true
+            }else{
+                self.epPhotosView.isHidden = false
+            }
+        }
+        return numberOfImagesItems
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImageCell", for: indexPath) as! ImageCell
+        presenter.config(cell: cell, indexPath: indexPath)
+        return cell
+    }
+
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        let height = collectionView.frame.height
+        let width = height * 3/4
+        return CGSize(width: width, height: height)
+    }
+    
+    
+}
+
+// MARK: - ImagePickerDelegate -
+extension OPProfileVC: ImagePickerDelegate{
+    
+    func wrapperDidPress(_ imagePicker: ImagePickerController, images: [UIImage]) {
+        
+    }
+    
+    func doneButtonDidPress(_ imagePicker: ImagePickerController, images: [UIImage]) {
+        if images.isEmpty { return }
+        presenter.add(images: images)
+        imagePicker.dismiss(animated: true)
+    }
+    
+    func cancelButtonDidPress(_ imagePicker: ImagePickerController) {
+        imagePicker.dismiss(animated: true)
+    }
+    
+    
 }

@@ -35,6 +35,9 @@ class NetworkURL{
             "\(lookup)Country_get_all_full"
         public static let opBranchDetails:String =
             "\(otherProvider)GetOtherProviderBranchData"
+        public static let serviceTypeList:String =
+            "\(otherProvider)GetServiceTypeList"
+        
     }
     
     enum URLTypes {
@@ -44,6 +47,7 @@ class NetworkURL{
         case otherProviders(OPRequest)
         case availableCountries
         case opBranchDetails(OPBranchDetailsRequest)
+        case serviceTypeList(MSOPServicesRequest)
     }
     
     // MARK: - Private properties -
@@ -73,13 +77,15 @@ class NetworkURL{
             return URL(string:  "\(URLs.availableCountries)")
         case .opBranchDetails(_):
             return URL(string:  "\(URLs.opBranchDetails)")
+        case .serviceTypeList(_):
+            return URL(string:  "\(URLs.serviceTypeList)")
         }
     }
     
     // MARK: - method -
     var method:HTTPMethod{
         switch self.type {
-        case .otherProviderDashboard(_), .availableCountries :
+        case .otherProviderDashboard(_), .serviceTypeList(_), .availableCountries:
             return .get
         case
                 .searchServiceListForPatient(_),
@@ -94,8 +100,10 @@ class NetworkURL{
     var params:[String:Any]?{
         switch self.type {
         case
+                .serviceTypeList(let msOPSRequest),
                 .otherProviderDashboard(let msOPSRequest),
                 .searchServiceListForPatient(let msOPSRequest):
+            print(msOPSRequest.dictionary)
             return msOPSRequest.dictionary
         case .ePrescriptions(let epRequest):
             return epRequest.dictionary
@@ -119,7 +127,8 @@ class NetworkURL{
                 .ePrescriptions(_),
                 .otherProviders(_),
                 .availableCountries,
-                .opBranchDetails(_):
+                .opBranchDetails(_),
+                .serviceTypeList(_):
             return .authHeaderIfLogin
         }
     }
@@ -127,7 +136,9 @@ class NetworkURL{
     // MARK: - header -
     var encoding:ParameterEncoding{
         switch self.type {
-        case .otherProviderDashboard(_):
+        case
+                .otherProviderDashboard(_),
+                .serviceTypeList(_):
             return URLEncoding.default
         case
                 .searchServiceListForPatient(_),

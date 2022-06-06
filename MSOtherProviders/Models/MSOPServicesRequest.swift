@@ -139,4 +139,33 @@ extension MSType{
         case .rays: return "Find Centers".localized
         }
     }
+    
+    var addMSTitle:String{
+        switch self {
+        case .labs: return "Add Tests".localized
+        case .rays: return "Add Rays".localized
+        }
+    }
+    
+    var msSearchText:String{
+        switch self {
+        case .labs: return "Tests Search".localized
+        case .rays: return "Rays Search".localized
+        }
+    }
+    
+    var chooseMSText:String{
+        switch self {
+        case .labs: return "Choose Tests".localized
+        case .rays: return "Choose Rays".localized
+        }
+    }
+    
+    //placeholder
+    var dropDownPlaceholder:String{
+        switch self {
+        case .labs: return "Choose Tests Category".localized
+        case .rays: return "Choose Rays Category".localized
+        }
+    }
 }

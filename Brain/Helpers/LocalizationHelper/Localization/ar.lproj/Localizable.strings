@@ -251,3 +251,11 @@
 "Rays Summary" = "ملخص الأشعة";
 "Tests Pre-Request" = "ما قبل التحاليل";
 "Rays Pre-Request" = "ما قبل الأشعة";
+"Add Tests" = "إضافة تحاليل";
+"Add Rays" = "إضافة أشعة";
+"Tests Search" = "بحث التحاليل";
+"Rays Search" = "بحث أشعة";
+"Choose Tests" = "اختيار التحاليل";
+"Choose Tests" = "اختيار الاشعة";
+"Choose Tests Category" = "اختيار تصنيف التحاليل";
+"Choose Rays Category" = "اختيار تصنيف الأشعة";
