@@ -13,12 +13,16 @@ import UIKit
 protocol OPProfilePresenterProtocol: AnyObject {
     var canAddMS:Bool{ get }
     var type:MSType{ get set }
+    var numberOfImagesItems:Int { get }
     var request:RequestType?{ get set }
     var branch:OtherProviderBranch? { get set }
+    var msOPServicesRequest:MSOPServicesRequest{ get }
     /**
      * Add here your methods for communication VIEW -> PROTOCOL
      */
     func viewDidLoad()
+    func config(cell:ImageCellProtocol, indexPath:IndexPath)
+    func add(images:[Image])
 }
 
 class OPProfilePresenter {
@@ -34,6 +38,10 @@ class OPProfilePresenter {
         set{ requestType = newValue }
     }
     
+    var numberOfImagesItems:Int{
+        imagesList.count
+    }
+    
     var branch: OtherProviderBranch? {
         get{ opBranch }
         set{ opBranch = newValue }
@@ -41,13 +49,22 @@ class OPProfilePresenter {
     
     var canAddMS:Bool{
         switch requestType {
-        case .eprescription(_): return true
-        default: return false
+        case .eprescription(_): return false
+        default: return true
         }
+    }
+    
+    var msOPServicesRequest:MSOPServicesRequest{
+        MSOPServicesRequest(
+            type: pageType, opTypeFk: pageType,
+            branchId: opBranch?.otherProviderBranchID,
+            pageNum: 1
+        )
     }
     
     // MARK: - Private properties -
     private var pageType:MSType!
+    private var imagesList:[Image] = []
     private var requestType:RequestType?
     private var branchRequest:OPBranchDetailsRequest?
     private var opBranch:OtherProviderBranch?
@@ -96,6 +113,27 @@ extension OPProfilePresenter: OPProfilePresenterProtocol {
     }
 }
 
+// MARK: - ImageCellPresenter -
+extension OPProfilePresenter:ImageCellPresenter{
+    
+    func add(images: [Image]){
+        imagesList.append(contentsOf: images)
+        view?.reloadImages()
+    }
+    
+    func config(cell:ImageCellProtocol, indexPath:IndexPath){
+        let image = imagesList[indexPath.row]
+        cell.config(image: image, indexPath: indexPath, presenter: self)
+    }
+    
+    func deleteImage(at indexPath: IndexPath) {
+        imagesList.remove(at: indexPath.row)
+        view?.reloadImages()
+    }
+    
+}
+
+// MARK: - OPProfilePresenter setupRequestType -
 extension OPProfilePresenter {
     func setupRequestType() {
         guard let branchId = branch?.otherProviderBranchID else { return }
@@ -105,11 +143,15 @@ extension OPProfilePresenter {
             branchRequest?.serviceIdList = msList.map({ $0.serviceID })
         case .eprescription(let ep):
             branchRequest?.serviceIdList = ep.services.map({ $0.serviceID })
+        case .uploadImage(let images):
+            imagesList.append(contentsOf: images)
+            view?.reloadImages()
         default:
             break
         }
     }
 }
+
 
 
 

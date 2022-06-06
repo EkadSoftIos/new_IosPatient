@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="font_bold.TTF">
+            <string>SegoeUI-Semibold</string>
+        </array>
+        <array key="font_regular.TTF">
+            <string>SegoeUI</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddMSVC">
+            <connections>
+                <outlet property="addBtn" destination="4E6-2s-PTq" id="vLo-jU-PEh"/>
+                <outlet property="categoryDropDown" destination="wKE-zO-vYV" id="dmJ-cn-ftz"/>
+                <outlet property="chooseMSLabel" destination="jmC-ei-b7u" id="fC3-X2-gAt"/>
+                <outlet property="msSearchLabel" destination="cmX-eT-qdS" id="Kzi-EN-5Nq"/>
+                <outlet property="searchTextField" destination="Ua0-3w-upz" id="M1b-6B-68d"/>
+                <outlet property="tableView" destination="Z6K-t6-lHq" id="7l0-9a-12t"/>
+                <outlet property="view" destination="Lkt-iL-29x" id="exg-ep-Aol"/>
+                <outletCollection property="shadowsViews" destination="FHL-Tv-cvb" collectionClass="NSMutableArray" id="7pw-zi-xVh"/>
+                <outletCollection property="shadowsViews" destination="gvU-c1-WUs" collectionClass="NSMutableArray" id="4eG-EZ-CK3"/>
+                <outletCollection property="shadowsViews" destination="bk9-2D-uVl" collectionClass="NSMutableArray" id="diP-Mr-qUl"/>
+                <outletCollection property="shadowsViews" destination="4E6-2s-PTq" collectionClass="NSMutableArray" id="gil-c2-moa"/>
+                <outletCollection property="shadowsViews" destination="QR0-RO-wzO" collectionClass="NSMutableArray" id="r6y-Jr-1Hg"/>
+                <outletCollection property="bottomShadowsViews" destination="lxy-FD-r78" collectionClass="NSMutableArray" id="CAw-0U-ttu"/>
+                <outletCollection property="bottomShadowsViews" destination="EFY-1K-xNL" collectionClass="NSMutableArray" id="N4G-v3-1mU"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Lkt-iL-29x">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FHL-Tv-cvb">
+                    <rect key="frame" x="20" y="64" width="374" height="219.5"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test Search" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cmX-eT-qdS">
+                            <rect key="frame" x="10" y="10" width="81.5" height="19"/>
+                            <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="16"/>
+                            <color key="textColor" red="0.1333333333" green="0.49019607840000001" blue="0.81176470590000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                            <variation key="heightClass=regular-widthClass=regular">
+                                <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="24"/>
+                            </variation>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EFY-1K-xNL">
+                            <rect key="frame" x="0.0" y="39" width="374" height="5"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="5" id="dsj-2l-0q1"/>
+                            </constraints>
+                        </view>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search here ..." textAlignment="natural" clearsOnBeginEditing="YES" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Ua0-3w-upz">
+                            <rect key="frame" x="10" y="54" width="354" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="GIr-t3-YWz">
+                                    <variation key="heightClass=regular-widthClass=regular" constant="60"/>
+                                </constraint>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                            <variation key="heightClass=regular-widthClass=regular">
+                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="27"/>
+                            </variation>
+                        </textField>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wKE-zO-vYV" customClass="DropDown" customModule="iOSDropDown">
+                            <rect key="frame" x="10" y="104" width="354" height="40"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bk9-2D-uVl">
+                            <rect key="frame" x="151.5" y="164" width="71.5" height="35.5"/>
+                            <color key="backgroundColor" red="0.1333333333" green="0.49019607840000001" blue="0.81176470590000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Search">
+                                <fontDescription key="titleFontDescription" name="SegoeUI" family="Segoe UI" pointSize="16"/>
+                                <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </buttonConfiguration>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                    <real key="value" value="0.29999999999999999"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                    <real key="value" value="3"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                    <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="searchBtnTapped:" destination="-1" eventType="touchUpInside" id="fc8-OW-0QD"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="Ua0-3w-upz" secondAttribute="trailing" constant="10" id="7B0-Aw-xQj"/>
+                        <constraint firstItem="wKE-zO-vYV" firstAttribute="leading" secondItem="FHL-Tv-cvb" secondAttribute="leading" constant="10" id="Bhr-fC-xcz"/>
+                        <constraint firstItem="wKE-zO-vYV" firstAttribute="top" secondItem="Ua0-3w-upz" secondAttribute="bottom" constant="10" id="Fcs-Ou-uom"/>
+                        <constraint firstItem="bk9-2D-uVl" firstAttribute="centerX" secondItem="FHL-Tv-cvb" secondAttribute="centerX" id="J1u-aD-wIp"/>
+                        <constraint firstAttribute="trailing" secondItem="EFY-1K-xNL" secondAttribute="trailing" id="Q4h-zF-wxC"/>
+                        <constraint firstAttribute="bottom" secondItem="bk9-2D-uVl" secondAttribute="bottom" constant="20" id="UHR-oK-0oD"/>
+                        <constraint firstItem="cmX-eT-qdS" firstAttribute="leading" secondItem="FHL-Tv-cvb" secondAttribute="leading" constant="10" id="ggl-j9-sFm"/>
+                        <constraint firstItem="Ua0-3w-upz" firstAttribute="top" secondItem="EFY-1K-xNL" secondAttribute="bottom" constant="10" id="hbP-LF-atl"/>
+                        <constraint firstItem="Ua0-3w-upz" firstAttribute="leading" secondItem="FHL-Tv-cvb" secondAttribute="leading" constant="10" id="he8-te-Z2B"/>
+                        <constraint firstItem="wKE-zO-vYV" firstAttribute="height" secondItem="Ua0-3w-upz" secondAttribute="height" id="ikR-lH-K9w"/>
+                        <constraint firstItem="bk9-2D-uVl" firstAttribute="top" secondItem="wKE-zO-vYV" secondAttribute="bottom" constant="20" id="kvF-H4-FCr"/>
+                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="cmX-eT-qdS" secondAttribute="trailing" constant="10" id="o2x-E6-OBT"/>
+                        <constraint firstAttribute="trailing" secondItem="wKE-zO-vYV" secondAttribute="trailing" constant="10" id="pDZ-xt-BAX"/>
+                        <constraint firstItem="EFY-1K-xNL" firstAttribute="top" secondItem="cmX-eT-qdS" secondAttribute="bottom" constant="10" id="sFw-a5-8f8"/>
+                        <constraint firstItem="EFY-1K-xNL" firstAttribute="leading" secondItem="FHL-Tv-cvb" secondAttribute="leading" id="uUY-E2-cHo"/>
+                        <constraint firstItem="cmX-eT-qdS" firstAttribute="top" secondItem="FHL-Tv-cvb" secondAttribute="top" constant="10" id="wHy-5y-Plr"/>
+                        <constraint firstItem="Ua0-3w-upz" firstAttribute="top" secondItem="FHL-Tv-cvb" secondAttribute="top" constant="54" id="yPx-zP-WJl"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gvU-c1-WUs">
+                    <rect key="frame" x="20" y="303.5" width="374" height="478.5"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Test" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jmC-ei-b7u">
+                            <rect key="frame" x="10" y="10" width="87" height="21.5"/>
+                            <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="16"/>
+                            <color key="textColor" red="0.1333333333" green="0.49019607840000001" blue="0.81176470590000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                            <variation key="heightClass=regular-widthClass=regular">
+                                <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="24"/>
+                            </variation>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lxy-FD-r78">
+                            <rect key="frame" x="0.0" y="41.5" width="374" height="5"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="5" id="ehW-qM-v1d"/>
+                            </constraints>
+                        </view>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsMultipleSelection="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Z6K-t6-lHq">
+                            <rect key="frame" x="0.0" y="56.5" width="374" height="412"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="Z6K-t6-lHq" firstAttribute="top" secondItem="lxy-FD-r78" secondAttribute="bottom" constant="10" id="8E1-Ow-UYD"/>
+                        <constraint firstAttribute="bottom" secondItem="Z6K-t6-lHq" secondAttribute="bottom" constant="10" id="BKx-RF-b5Q"/>
+                        <constraint firstAttribute="trailing" secondItem="lxy-FD-r78" secondAttribute="trailing" id="MPi-o9-K6O"/>
+                        <constraint firstItem="jmC-ei-b7u" firstAttribute="leading" secondItem="gvU-c1-WUs" secondAttribute="leading" constant="10" id="PZo-rn-PFk"/>
+                        <constraint firstAttribute="trailing" secondItem="Z6K-t6-lHq" secondAttribute="trailing" id="ZMN-Lh-qAl"/>
+                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="jmC-ei-b7u" secondAttribute="trailing" constant="10" id="bjL-Ax-5wv"/>
+                        <constraint firstItem="lxy-FD-r78" firstAttribute="leading" secondItem="gvU-c1-WUs" secondAttribute="leading" id="dDq-8p-NPi"/>
+                        <constraint firstItem="Z6K-t6-lHq" firstAttribute="leading" secondItem="gvU-c1-WUs" secondAttribute="leading" id="fqG-B9-XkS"/>
+                        <constraint firstItem="lxy-FD-r78" firstAttribute="top" secondItem="jmC-ei-b7u" secondAttribute="bottom" constant="10" id="h6G-bQ-aeF"/>
+                        <constraint firstItem="jmC-ei-b7u" firstAttribute="top" secondItem="gvU-c1-WUs" secondAttribute="top" constant="10" id="wNI-g5-R4F"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="VWW-Zf-YIw">
+                    <rect key="frame" x="20" y="802" width="374" height="40"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QR0-RO-wzO">
+                            <rect key="frame" x="0.0" y="0.0" width="177" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="2ry-Ib-RzS">
+                                    <variation key="heightClass=regular-widthClass=regular" constant="60"/>
+                                </constraint>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Reset">
+                                <fontDescription key="titleFontDescription" name="SegoeUI" family="Segoe UI" pointSize="16"/>
+                            </buttonConfiguration>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" red="0.1333333333" green="0.49019607840000001" blue="0.81176470590000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="resetBtnTapped:" destination="-1" eventType="touchUpInside" id="2ZX-aV-v2y"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4E6-2s-PTq">
+                            <rect key="frame" x="197" y="0.0" width="177" height="40"/>
+                            <color key="backgroundColor" red="0.1333333333" green="0.49019607840000001" blue="0.81176470590000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Add Test">
+                                <fontDescription key="titleFontDescription" name="SegoeUI" family="Segoe UI" pointSize="16"/>
+                                <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </buttonConfiguration>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                    <real key="value" value="0.29999999999999999"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                    <real key="value" value="3"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                    <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="addMSBtnTapped:" destination="-1" eventType="touchUpInside" id="Pir-Mx-b1j"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="LJb-ai-OEi"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="gvU-c1-WUs" firstAttribute="leading" secondItem="LJb-ai-OEi" secondAttribute="leading" constant="20" id="22M-DQ-NQo"/>
+                <constraint firstItem="VWW-Zf-YIw" firstAttribute="top" secondItem="gvU-c1-WUs" secondAttribute="bottom" constant="20" id="3O5-Xd-7f3"/>
+                <constraint firstItem="LJb-ai-OEi" firstAttribute="trailing" secondItem="VWW-Zf-YIw" secondAttribute="trailing" constant="20" id="4dr-JQ-F7G"/>
+                <constraint firstItem="LJb-ai-OEi" firstAttribute="trailing" secondItem="FHL-Tv-cvb" secondAttribute="trailing" constant="20" id="63A-d1-F2W"/>
+                <constraint firstItem="LJb-ai-OEi" firstAttribute="bottom" secondItem="VWW-Zf-YIw" secondAttribute="bottom" constant="20" id="6Mc-R3-rB4"/>
+                <constraint firstItem="gvU-c1-WUs" firstAttribute="top" secondItem="FHL-Tv-cvb" secondAttribute="bottom" constant="20" id="8Ek-sM-ycy"/>
+                <constraint firstItem="gvU-c1-WUs" firstAttribute="trailing" secondItem="LJb-ai-OEi" secondAttribute="trailing" constant="-20" id="SDj-6J-dCV"/>
+                <constraint firstItem="FHL-Tv-cvb" firstAttribute="leading" secondItem="LJb-ai-OEi" secondAttribute="leading" constant="20" id="Ycn-ae-Cd9"/>
+                <constraint firstItem="VWW-Zf-YIw" firstAttribute="leading" secondItem="LJb-ai-OEi" secondAttribute="leading" constant="20" id="aeP-gA-M1F"/>
+                <constraint firstItem="FHL-Tv-cvb" firstAttribute="top" secondItem="LJb-ai-OEi" secondAttribute="top" constant="20" id="lFc-Ep-qBN"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="118.52678571428571"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

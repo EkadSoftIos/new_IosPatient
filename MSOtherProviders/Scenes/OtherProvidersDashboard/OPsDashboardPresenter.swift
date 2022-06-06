@@ -112,9 +112,8 @@ extension OPsDashboardPresenter: OPsDashboardPresenterProtocol {
                     self.view?.showMessageAlert(title: "Error".localized, message: error)
                     return
                 }
-                self.adsList = response.message.ads
+                self.adsList.append(contentsOf: response.message.ads ?? [])
                 self.ePrescriptionsList = response.message.lastPrescriptions
-                print("lastPrescriptions count: \(response.message.lastPrescriptions.count)")
                 self.view?.reloadData()
             case .failure(let error):
                 self.view?.showMessageAlert(title: "Error".localized, message: error.localizedDescription)

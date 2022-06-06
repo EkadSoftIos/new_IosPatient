@@ -14,16 +14,16 @@ open class BottomContainerView: UIView {
     static let height: CGFloat = 101
   }
 
-  var configuration = Configuration()
+  var configuration = ImagePickerConfiguration()
 
-//  lazy var pickerButton: ButtonPicker = { [unowned self] in
-//    let pickerButton = ButtonPicker(configuration: self.configuration)
-//    pickerButton.setTitleColor(UIColor.white, for: UIControl.State())
-//    pickerButton.delegate = self
-//    pickerButton.numberLabel.isHidden = !self.configuration.showsImageCountLabel
-//
-//    return pickerButton
-//    }()
+  lazy var pickerButton: ButtonPicker = { [unowned self] in
+    let pickerButton = ButtonPicker(configuration: self.configuration)
+    pickerButton.setTitleColor(UIColor.white, for: UIControl.State())
+    pickerButton.delegate = self
+    pickerButton.numberLabel.isHidden = !self.configuration.showsImageCountLabel
+
+    return pickerButton
+    }()
 
   lazy var borderPickerButton: UIView = {
     let view = UIView()
@@ -65,7 +65,7 @@ open class BottomContainerView: UIView {
 
   // MARK: Initializers
 
-  public init(configuration: Configuration? = nil) {
+  public init(configuration: ImagePickerConfiguration? = nil) {
     if let configuration = configuration {
       self.configuration = configuration
     }
@@ -78,16 +78,23 @@ open class BottomContainerView: UIView {
   }
 
   func configure() {
-//    [borderPickerButton, pickerButton, doneButton, stackView, topSeparator].forEach {
-//      addSubview($0)
-//      $0.translatesAutoresizingMaskIntoConstraints = false
-//    }
+    [borderPickerButton, pickerButton, doneButton, stackView, topSeparator].forEach {
+      addSubview($0)
+      $0.translatesAutoresizingMaskIntoConstraints = false
+    }
 
     backgroundColor = configuration.backgroundColor
     stackView.accessibilityLabel = "Image stack"
     stackView.addGestureRecognizer(tapGestureRecognizer)
 
     setupConstraints()
+    if configuration.galleryOnly {
+      borderPickerButton.isHidden = true
+      pickerButton.isHidden = true
+    }
+    if !configuration.allowMultiplePhotoSelection {
+      stackView.isHidden = true
+    }
   }
 
   // MARK: - Action methods
@@ -110,7 +117,7 @@ open class BottomContainerView: UIView {
     UIView.animate(withDuration: 0.3, animations: {
       imageView.transform = CGAffineTransform(scaleX: 1.05, y: 1.05)
       }, completion: { _ in
-        UIView.animate(withDuration: 0.2, animations: { 
+        UIView.animate(withDuration: 0.2, animations: {
           imageView.transform = CGAffineTransform.identity
         })
     })

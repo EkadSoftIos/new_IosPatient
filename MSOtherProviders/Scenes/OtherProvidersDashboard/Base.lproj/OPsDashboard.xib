@@ -82,7 +82,7 @@
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain"/>
                                     <connections>
-                                        <action selector="showTestList:" destination="-1" eventType="touchUpInside" id="4Wg-VO-FOc"/>
+                                        <action selector="showMSList:" destination="-1" eventType="touchUpInside" id="hrF-5G-kb4"/>
                                     </connections>
                                 </button>
                             </subviews>

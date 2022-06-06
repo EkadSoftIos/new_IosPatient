@@ -11,7 +11,7 @@ protocol CameraViewDelegate: class {
 
 class CameraView: UIViewController, CLLocationManagerDelegate, CameraManDelegate {
 
-  var configuration = Configuration()
+  var configuration = ImagePickerConfiguration()
 
   lazy var blurView: UIVisualEffectView = { [unowned self] in
     let effect = UIBlurEffect(style: .dark)
@@ -102,7 +102,7 @@ class CameraView: UIViewController, CLLocationManagerDelegate, CameraManDelegate
   private var currentZoomFactor: CGFloat = 1.0
   private var previousZoomFactor: CGFloat = 1.0
 
-  public init(configuration: Configuration? = nil) {
+  public init(configuration: ImagePickerConfiguration? = nil) {
     if let configuration = configuration {
       self.configuration = configuration
     }
@@ -152,7 +152,7 @@ class CameraView: UIViewController, CLLocationManagerDelegate, CameraManDelegate
   }
 
   func setupPreviewLayer() {
-    let layer = AVCaptureVideoPreviewLayer(session: cameraMan.session) 
+    let layer = AVCaptureVideoPreviewLayer(session: cameraMan.session)
 
     layer.backgroundColor = configuration.mainColor.cgColor
     layer.autoreverses = true
@@ -187,8 +187,8 @@ class CameraView: UIViewController, CLLocationManagerDelegate, CameraManDelegate
 
   @objc func settingsButtonDidTap() {
     DispatchQueue.main.async {
-        if let settingsURL = URL(string: UIApplication.openSettingsURLString) {
-        UIApplication.shared.open(settingsURL)
+      if let settingsURL = URL(string: UIApplication.openSettingsURLString) {
+        UIApplication.shared.openURL(settingsURL)
       }
     }
   }
@@ -196,7 +196,7 @@ class CameraView: UIViewController, CLLocationManagerDelegate, CameraManDelegate
   // MARK: - Camera actions
 
   func rotateCamera() {
-    UIView.animate(withDuration: 0.3, animations: { 
+    UIView.animate(withDuration: 0.3, animations: {
       self.containerView.alpha = 1
       }, completion: { _ in
         self.cameraMan.switchCamera {
@@ -247,12 +247,12 @@ class CameraView: UIViewController, CLLocationManagerDelegate, CameraManDelegate
 
   func focusTo(_ point: CGPoint) {
     let convertedPoint = CGPoint(x: point.x / UIScreen.main.bounds.width,
-                                 y:point.y / UIScreen.main.bounds.height)
+                                 y: point.y / UIScreen.main.bounds.height)
 
     cameraMan.focus(convertedPoint)
 
     focusImageView.center = point
-    UIView.animate(withDuration: 0.5, animations: { 
+    UIView.animate(withDuration: 0.5, animations: {
       self.focusImageView.alpha = 1
       self.focusImageView.transform = CGAffineTransform(scaleX: 0.6, y: 0.6)
       }, completion: { _ in

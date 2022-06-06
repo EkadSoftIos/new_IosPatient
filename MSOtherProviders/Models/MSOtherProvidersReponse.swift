@@ -17,7 +17,7 @@ struct MSOtherProvidersReponse: Codable {
 // MARK: - Message
 struct MSData: Codable {
     let lastPrescriptions: [EPrescription]
-    let ads: [Ad]
+    let ads: [Ad]?
 }
 
 

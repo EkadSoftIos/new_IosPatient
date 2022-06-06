@@ -100,10 +100,12 @@ class OPsDashboardVC: UIViewController {
     
     
     @IBAction func uploadEPrescription(_ sender: UIButton) {
-        showBottomSheet()
-//        let imagePickerController = ImagePickerController()
-//        imagePickerController.delegate = self
-//        present(imagePickerController, animated: true)
+        //showBottomSheet()
+        let imagePickerController = ImagePickerController()
+        imagePickerController.delegate = self
+        imagePickerController.modalPresentationStyle = .overCurrentContext
+        imagePickerController.modalTransitionStyle = .crossDissolve
+        present(imagePickerController, animated: true)
     }
     
     
@@ -117,7 +119,7 @@ class OPsDashboardVC: UIViewController {
         navigationController?.pushViewController(vc, animated: true)
     }
     
-    @IBAction func showTestList(_ sender: UIButton) {
+    @IBAction func showMSList(_ sender: UIButton) {
         showSearchResultVC()
     }
     
@@ -233,13 +235,12 @@ extension OPsDashboardVC: ImagePickerDelegate{
     
     func doneButtonDidPress(_ imagePicker: ImagePickerController, images: [UIImage]) {
         if images.isEmpty { return }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-            self.showOtherProvidersList(request: .uploadImage(images))
-        }
+        imagePicker.dismiss(animated: true)
+        showOtherProvidersList(request: .uploadImage(images))
     }
     
     func cancelButtonDidPress(_ imagePicker: ImagePickerController) {
-        
+        imagePicker.dismiss(animated: true)
     }
     
     

@@ -1,9 +1,10 @@
 import UIKit
 import Photos
+
 private func < <T: Comparable>(lhs: T?, rhs: T?) -> Bool {
   switch (lhs, rhs) {
-  case let (l?, r?):
-    return l < r
+  case let (someLhs?, someRhs?):
+    return someLhs < someRhs
   case (nil, _?):
     return true
   default:
@@ -25,7 +26,7 @@ open class ImageGalleryView: UIView {
     static let galleryBarHeight: CGFloat = 24
   }
 
-  var configuration = Configuration()
+  var configuration = ImagePickerConfiguration()
 
   lazy open var collectionView: UICollectionView = { [unowned self] in
     let collectionView = UICollectionView(frame: CGRect.zero,
@@ -40,8 +41,8 @@ open class ImageGalleryView: UIView {
     }()
 
   lazy var collectionViewLayout: UICollectionViewLayout = { [unowned self] in
-    let layout = ImageGalleryLayout()
-    layout.scrollDirection = .horizontal
+    let layout = ImageGalleryLayout(configuration: self.configuration)
+    layout.scrollDirection = configuration.galleryOnly ? .vertical : .horizontal
     layout.minimumInteritemSpacing = self.configuration.cellSpacing
     layout.minimumLineSpacing = 2
     layout.sectionInset = UIEdgeInsets.zero
@@ -89,7 +90,7 @@ open class ImageGalleryView: UIView {
 
   // MARK: - Initializers
 
-  public init(configuration: Configuration? = nil) {
+  public init(configuration: ImagePickerConfiguration? = nil) {
     if let configuration = configuration {
       self.configuration = configuration
     }
@@ -112,7 +113,11 @@ open class ImageGalleryView: UIView {
     collectionView.register(ImageGalleryViewCell.self,
                             forCellWithReuseIdentifier: CollectionView.reusableIdentifier)
 
-    [collectionView, topSeparator].forEach { addSubview($0) }
+    if configuration.galleryOnly {
+      addSubview(collectionView)
+    } else {
+      [collectionView, topSeparator].forEach { addSubview($0) }
+    }
 
     topSeparator.addSubview(configuration.indicatorView)
 
@@ -135,8 +140,19 @@ open class ImageGalleryView: UIView {
     topSeparator.autoresizingMask = [.flexibleLeftMargin, .flexibleRightMargin, .flexibleWidth]
     configuration.indicatorView.frame = CGRect(x: (totalWidth - configuration.indicatorWidth) / 2, y: (topSeparator.frame.height - configuration.indicatorHeight) / 2,
       width: configuration.indicatorWidth, height: configuration.indicatorHeight)
-    collectionView.frame = CGRect(x: 0, y: topSeparator.frame.height, width: totalWidth, height: collectionFrame - topSeparator.frame.height)
-    collectionSize = CGSize(width: collectionView.frame.height, height: collectionView.frame.height)
+    
+    collectionView.frame = CGRect(x: 0,
+                                  y: topSeparator.superview != nil ? topSeparator.frame.height : 0,
+                                  width: totalWidth,
+                                  height: collectionFrame - topSeparator.frame.height)
+    
+    if configuration.galleryOnly {
+      let cellSize = collectionView.bounds.width/3 - self.configuration.cellSpacing*2
+      collectionSize = CGSize(width: cellSize, height: cellSize)
+    } else {
+      collectionSize = CGSize(width: collectionView.frame.height, height: collectionView.frame.height)
+    }
+    
     noImagesLabel.center = CGPoint(x: bounds.width / 2, y: (bounds.height + Dimensions.galleryBarHeight) / 2)
 
     collectionView.reloadData()
@@ -231,7 +247,7 @@ extension ImageGalleryView: UICollectionViewDelegate {
 
     let asset = assets[(indexPath as NSIndexPath).row]
 
-    AssetManager.resolveAsset(asset, size: CGSize(width: 100, height: 100)) { image in
+    AssetManager.resolveAsset(asset, size: CGSize(width: 100, height: 100), shouldPreferLowRes: configuration.useLowResolutionPreviewImage) { image in
       guard image != nil else { return }
 
       if cell.selectedImageView.image != nil {
@@ -244,7 +260,7 @@ extension ImageGalleryView: UICollectionViewDelegate {
       } else if self.imageLimit == 0 || self.imageLimit > self.selectedStack.assets.count {
         cell.selectedImageView.image = AssetManager.getImage("selectedImageGallery")
         cell.selectedImageView.transform = CGAffineTransform(scaleX: 0, y: 0)
-        UIView.animate(withDuration: 0.2, animations: { 
+        UIView.animate(withDuration: 0.2, animations: {
           cell.selectedImageView.transform = CGAffineTransform.identity
         })
         self.selectedStack.pushAsset(asset)
