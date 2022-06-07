@@ -81,8 +81,8 @@ extension EPrescriptionListPresenter: EPrescriptionListPresenterProtocol {
                     self.view?.showMessageAlert(title: "Error".localized, message: error)
                     return
                 }
-                self.rowsNumberOfPage = response.message.count
-                self.ePrescriptionsList.append(contentsOf: response.message)
+                self.rowsNumberOfPage = response.eprescription.count
+                self.ePrescriptionsList.append(contentsOf: response.eprescription)
                 self.view?.reloadData()
             case .failure(let error):
                 self.view?.showMessageAlert(title: "Error".localized, message: error.localizedDescription)
@@ -99,7 +99,8 @@ extension EPrescriptionListPresenter: EPrescriptionListPresenterProtocol {
     
     // MARK: - configEPrescriptionCell -
     func configEPrescriptionCell(cell:EPrescriptionCellProtocol, indexPath:IndexPath)  {
-        cell.config(display: EPrescriptionDisplay(ePrescriptionsList[indexPath.row], msType: pageType), indexPath: indexPath, presenter: self)
+        let ep = ePrescriptionsList[indexPath.row]
+        cell.config(display: EPrescriptionDisplay( ep, msType: pageType), indexPath: indexPath, presenter: self)
     }
 }
 

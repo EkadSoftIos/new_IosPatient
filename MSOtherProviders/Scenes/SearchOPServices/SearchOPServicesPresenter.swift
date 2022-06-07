@@ -23,7 +23,7 @@ protocol SearchOPServicesPresenterProtocol: AnyObject {
     func config(cell:ServiceCellProtocol, indexPath:IndexPath)
     func fetchSearchedData(text:String)
     func loadMore()
-    func services(for selectedIndexPaths:[IndexPath]) -> [MedicalService]
+    func services(for selectedIndexPaths:[IndexPath]) -> [Service]
 }
 
 class SearchOPServicesPresenter {
@@ -57,7 +57,7 @@ class SearchOPServicesPresenter {
     
     // MARK: - Private properties -
     private var rowsNumberOfPage = 0
-    private var medicalServicesList:[MedicalService] = []
+    private var medicalServicesList:[Service] = []
     private var msOPServicesRequest:MSOPServicesRequest!
     private var msNetworkRepository:MSNetworkRepository?
     private weak var view: SearchOPServicesViewProtocol?
@@ -84,7 +84,7 @@ extension SearchOPServicesPresenter: SearchOPServicesPresenterProtocol {
         fetchMSData()
     }
     
-    func services(for selectedIndexPaths:[IndexPath]) -> [MedicalService] {
+    func services(for selectedIndexPaths:[IndexPath]) -> [Service] {
         selectedIndexPaths.compactMap({ self.medicalServicesList[$0.row] })
     }
     
@@ -100,8 +100,8 @@ extension SearchOPServicesPresenter: SearchOPServicesPresenterProtocol {
                     self.view?.showMessageAlert(title: "Error".localized, message: error)
                     return
                 }
-                self.rowsNumberOfPage = response.message.count
-                self.medicalServicesList.append(contentsOf: response.message)
+                self.rowsNumberOfPage = response.servicesList.count
+                self.medicalServicesList.append(contentsOf: response.servicesList)
                 self.view?.reloadData()
             case .failure(let error):
                 self.view?.showMessageAlert(title: "Error".localized, message: error.localizedDescription)
@@ -128,7 +128,8 @@ extension SearchOPServicesPresenter: SearchOPServicesPresenterProtocol {
     // MARK: - loadMore -
     func config(cell:ServiceCellProtocol, indexPath:IndexPath){
         let ms = medicalServicesList[indexPath.row]
-        cell.config(display: ServiceCellDisplay(name: ms.serviceNameLocalized))
+        let display = ServiceCellDisplay(service: ms, isWithPrice: false)
+        cell.config(display: display)
     }
     
 }

@@ -49,6 +49,7 @@ class OtherProviderCell: UITableViewCell, OtherProviderCellProtocol {
     
     // MARK: - config  -
     func config(display:OtherProviderDisplay, indexPath:IndexPath, presenter:OtherProviderCellPresenter) {
+        selectionStyle = .none
         self.indexPath = indexPath
         self.presenter = presenter
         providerNameLabel.text = display.providerName
@@ -93,9 +94,9 @@ struct OtherProviderDisplay{
         providerName = branch.otherProviderNameLocalized
         branchName = branch.branchNameLocalized
         avatar = URL(string: "\(URLs.baseURLImage)\(branch.otherProviderImage)")
-        servicesText = String(format: "%d/%d %@", branch.avaliableCount, servicesNum,  "Services".localized)
-        price = String(format: "%.02f\("EGP".localized)", branch.priceAfter)
-        priceBeforeDiscount = String(format: "%.02f\("EGP".localized)", branch.priceBefore)
-        discount = String(format: "%.01f%", branch.discountPercentage)
+        servicesText = branch.avaliableCount.stringServicesValue(servicesNum)
+        price =  branch.priceAfter.stringValue
+        priceBeforeDiscount = branch.priceBefore.stringValue
+        discount = branch.discountPercentage.stringValue
     }
 }

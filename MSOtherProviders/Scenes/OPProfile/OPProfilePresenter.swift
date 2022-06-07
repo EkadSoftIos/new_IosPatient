@@ -23,6 +23,8 @@ protocol OPProfilePresenterProtocol: AnyObject {
     func viewDidLoad()
     func config(cell:ImageCellProtocol, indexPath:IndexPath)
     func add(images:[Image])
+    func addNewServices(servicesList:[Service])
+    func config(msView:MSViewProtocol)
 }
 
 class OPProfilePresenter {
@@ -53,6 +55,7 @@ class OPProfilePresenter {
         default: return true
         }
     }
+
     
     var msOPServicesRequest:MSOPServicesRequest{
         MSOPServicesRequest(
@@ -64,6 +67,7 @@ class OPProfilePresenter {
     
     // MARK: - Private properties -
     private var pageType:MSType!
+    private var msList:[Service] = []
     private var imagesList:[Image] = []
     private var requestType:RequestType?
     private var branchRequest:OPBranchDetailsRequest?
@@ -89,9 +93,18 @@ extension OPProfilePresenter: OPProfilePresenterProtocol {
         fetchBranchDetails()
     }
     
+    // MARK: - addNewServices -
+    func addNewServices(servicesList:[Service]) {
+        let servicesList = msList.mergeWithUniqueServices(servicesList)
+        msList.removeAll()
+        msList.append(contentsOf: servicesList)
+        fetchBranchDetails()
+    }
+    
     
     // MARK: - fetchBranchDetails -
     func fetchBranchDetails(){
+        branchRequest?.serviceIdList = msList.map({ $0.serviceID })
         guard let request = branchRequest else { return }
         showUniversalLoadingView(true)
         let url = NetworkURL(.opBranchDetails(request))
@@ -104,13 +117,45 @@ extension OPProfilePresenter: OPProfilePresenterProtocol {
                     self.view?.showMessageAlert(title: "Error".localized, message: error)
                     return
                 }
-                self.opBranchDetails = response.message
-                self.view?.setBranchDetails(display: OPBranchDetailsDispaly(branch: response.message))
+                self.opBranchDetails = response.branchDetails
+                self.view?.setBranchDetails(display: OPBranchDetailsDispaly(branch: response.branchDetails))
+                self.view?.addMSSummary()
             case .failure(let error):
                 self.view?.showMessageAlert(title: "Error".localized, message: error.localizedDescription)
             }
         }//end closure
     }
+    
+    // MARK: - config MSViewProtocol -
+    func config(msView:MSViewProtocol){
+        let servicesList = opBranchDetails?
+            .servicePriceList?.compactMap({ ServiceViewDisplay($0) }) ?? []
+        
+        var totalPrice = 0.0
+        var totalPriceBefore = 0.0
+        opBranchDetails?.servicePriceList?.forEach({
+            totalPriceBefore += $0.price
+            totalPrice += $0.priceAfterDiscount
+        })
+        
+        let display = MSViewDisplay(
+            title: pageType.msSummary,
+            totalPrice: totalPrice.stringValue,
+            totalPriceBefore: totalPriceBefore.stringValue,
+            isHiddenTotal: servicesList.isEmpty,
+            msList: servicesList
+        )
+        msView.configView(display: display, presenter: self)
+    }
+}
+
+// MARK: - ImageCellPresenter -
+extension OPProfilePresenter:MSViewPresenter{
+    
+    func deleteMS(at: Int){
+        print("OPProfilePresenter did deleted MS")
+    }
+    
 }
 
 // MARK: - ImageCellPresenter -
@@ -133,16 +178,18 @@ extension OPProfilePresenter:ImageCellPresenter{
     
 }
 
-// MARK: - OPProfilePresenter setupRequestType -
+// MARK: - OPProfilePresenter -
 extension OPProfilePresenter {
+    
+    // MARK: - setupRequestType -
     func setupRequestType() {
         guard let branchId = branch?.otherProviderBranchID else { return }
         branchRequest = OPBranchDetailsRequest(branchId: branchId)
         switch requestType{
         case .services(let msList):
-            branchRequest?.serviceIdList = msList.map({ $0.serviceID })
+            self.msList.append(contentsOf: msList)
         case .eprescription(let ep):
-            branchRequest?.serviceIdList = ep.services.map({ $0.serviceID })
+            msList.append(contentsOf: ep.services)
         case .uploadImage(let images):
             imagesList.append(contentsOf: images)
             view?.reloadImages()
@@ -151,9 +198,6 @@ extension OPProfilePresenter {
         }
     }
 }
-
-
-
 
 extension OPBranchDetails{
     
@@ -208,5 +252,27 @@ struct OPBranchDetailsDispaly {
         branchAddress = branch.branchFullAddress
         msPreRequest = branch.msPreRequest
         avatar = URL(string: "\(URLs.baseURLImage)\(branch.otherProviderImage)")
+    }
+}
+
+extension Array{
+    
+    var uniqueService: [Service] {
+        guard let list = self as? [Service] else { return [] }
+        var uniqueValues: [Service] = []
+        for service in list {
+            if uniqueValues.contains(where: { $0.serviceID == service.serviceID }){
+                continue
+            }
+            uniqueValues.append(service)
+        }
+        return uniqueValues
+    }
+    
+    func mergeWithUniqueServices(_ list2:[Service]) -> [Service] {
+        guard let list1 = self as? [Service] else { return [] }
+        let servicesList = list1 + list2
+        let msList = servicesList.uniqueService
+        return msList
     }
 }

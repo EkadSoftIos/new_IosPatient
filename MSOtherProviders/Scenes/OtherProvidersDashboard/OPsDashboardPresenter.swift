@@ -112,8 +112,8 @@ extension OPsDashboardPresenter: OPsDashboardPresenterProtocol {
                     self.view?.showMessageAlert(title: "Error".localized, message: error)
                     return
                 }
-                self.adsList.append(contentsOf: response.message.ads ?? [])
-                self.ePrescriptionsList = response.message.lastPrescriptions
+                self.adsList.append(contentsOf: response.msData.ads ?? [])
+                self.ePrescriptionsList = response.msData.lastPrescriptions
                 self.view?.reloadData()
             case .failure(let error):
                 self.view?.showMessageAlert(title: "Error".localized, message: error.localizedDescription)
@@ -130,7 +130,8 @@ extension OPsDashboardPresenter: OPsDashboardPresenterProtocol {
     
     // MARK: - configEPrescriptionCell -
     func configEPrescriptionCell(cell:EPrescriptionCellProtocol, indexPath:IndexPath)  {
-        cell.config(display: EPrescriptionDisplay(ePrescriptionsList[indexPath.row], msType: pageType), indexPath: indexPath, presenter: self)
+        let ep = ePrescriptionsList[indexPath.row]
+        cell.config(display: EPrescriptionDisplay( ep, msType: pageType), indexPath: indexPath, presenter: self)
     }
     
 }

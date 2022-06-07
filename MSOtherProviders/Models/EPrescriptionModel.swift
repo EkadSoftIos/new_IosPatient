@@ -31,7 +31,13 @@ struct EPrescriptionRequest:Codable {
 struct EPsReponse: Codable {
     let successtate: Int
     let errormessage: String?
-    let message: [EPrescription]
+    let eprescription: [EPrescription]
+    
+    enum CodingKeys: String, CodingKey {
+        case eprescription = "message"
+        case successtate, errormessage
+    }
+    
 }
 
 // MARK: - Message

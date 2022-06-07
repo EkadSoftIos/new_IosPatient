@@ -36,7 +36,7 @@ class AddMSVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     var presenter: AddMSPresenterProtocol!
     
-    var handler:(([MedicalService]) -> Void)?
+    var handler:(([Service]) -> Void)?
     
     // MARK: - Private properties -
     

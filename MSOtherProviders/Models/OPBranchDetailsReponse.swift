@@ -24,7 +24,13 @@ struct OPBranchDetailsRequest:Codable {
 struct OPBranchDetailsReponse: Codable {
     let successtate: Int
     let errormessage: String?
-    let message: OPBranchDetails
+    let branchDetails: OPBranchDetails
+    
+    enum CodingKeys: String, CodingKey {
+        case branchDetails = "message"
+        case successtate, errormessage
+    }
+    
 }
 
 // MARK: - Message
@@ -47,8 +53,8 @@ struct OPBranchDetails: Codable {
 
 // MARK: - ServicePriceList
 struct ServicePriceList: Codable {
-    let serviceFk, otherProviderTypeFk, otherProviderBranchServiceID, commessionNetValue: Int
-    let price, priceAfterDiscount: Int
+    let serviceFk, otherProviderTypeFk, otherProviderBranchServiceID: Int
+    let price, priceAfterDiscount, commessionNetValue: Double
     let conditionsList: [String]
     let serviceNameLocalized: String
 

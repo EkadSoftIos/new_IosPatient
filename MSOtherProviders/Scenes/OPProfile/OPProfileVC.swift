@@ -20,6 +20,7 @@ protocol OPProfileViewProtocol: AnyObject {
     
     
     func reloadImages()
+    func addMSSummary()
     func setBranchDetails(display:OPBranchDetailsDispaly)
     func showMessageAlert(title: String, message: String)
 }
@@ -43,7 +44,8 @@ class OPProfileVC: UIViewController {
     @IBOutlet weak var branchNameLabel: UILabel!
     @IBOutlet weak var avatarImgView: UIImageView!
     @IBOutlet weak var branchAddressLabel: UILabel!
-
+    @IBOutlet weak var msSummaryStackView: UIStackView!
+    
     @IBOutlet weak var msLabel: UILabel!
     @IBOutlet weak var msImageView: UIImageView!
     var presenter: OPProfilePresenterProtocol!
@@ -105,7 +107,7 @@ class OPProfileVC: UIViewController {
         vc.presenter.request = presenter.msOPServicesRequest
         vc.handler = { [weak self] (msList) in
             guard let self = self else { return }
-            
+            self.presenter.addNewServices(servicesList: msList)
         }
         navigationController?.pushViewController(vc, animated: true)
     }
@@ -145,6 +147,14 @@ extension OPProfileVC: OPProfileViewProtocol {
     
     func showMessageAlert(title: String, message: String) {
         showMessage(title: title, sub: message, type: Theme.error, layout: .centeredView)
+    }
+    
+    func addMSSummary(){
+        msSummaryStackView.removeAllArrangedSubviews()
+        let msView = MSView.instance
+        presenter.config(msView: msView as! MSViewProtocol)
+        msSummaryStackView.addArrangedSubview(msView)
+        msSummaryStackView.isHidden = false
     }
 }
 

@@ -5,7 +5,7 @@
 //  Created by Mostafa Abd ElFatah on 5/31/22.
 //
 
-import Foundation
+import UIKit
 
 
 
@@ -33,7 +33,12 @@ extension String{
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale(identifier: "en_US_POSIX")
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
-        guard let date = dateFormatter.date(from:self) else{
+        var dateFromDateFormatter = dateFormatter.date(from:self)
+        if dateFromDateFormatter == nil{
+            dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
+            dateFromDateFormatter = dateFormatter.date(from:self)
+        }
+        guard let date = dateFromDateFormatter else{
             return self
         }
         let formatter = DateFormatter()
@@ -45,6 +50,38 @@ extension String{
         formatter.locale = Locale(identifier: code)
         let dateString = formatter.string(from: date)
         return dateString
+    }
+    
+}
+
+extension String {
+    
+    var generateQRCode:UIImage?{
+        guard let filter = CIFilter(name: "CIQRCodeGenerator"),
+              !isEmpty
+        else { return nil }
+        
+        let data = data(using: String.Encoding.ascii)
+        filter.setValue(data, forKey: "inputMessage")
+        let transform = CGAffineTransform(scaleX: 10, y: 10)
+        guard let output = filter.outputImage?.transformed(by: transform)
+        else { return nil }
+        
+        return UIImage(ciImage: output)
+    }
+    
+    var generateBarCode:UIImage?{
+        guard let filter = CIFilter(name: "CICode128BarcodeGenerator"),
+              !isEmpty
+        else { return nil }
+        
+        let data = data(using: String.Encoding.ascii)
+        filter.setValue(data, forKey: "inputMessage")
+        let transform = CGAffineTransform(scaleX: 10, y: 10)
+        guard let output = filter.outputImage?.transformed(by: transform)
+        else { return nil }
+        
+        return UIImage(ciImage: output)
     }
     
 }

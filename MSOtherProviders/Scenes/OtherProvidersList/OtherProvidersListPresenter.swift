@@ -12,7 +12,7 @@ import SKCountryPicker
 
 enum RequestType {
     case uploadImage([Image])
-    case services([MedicalService])
+    case services([Service])
     case eprescription(EPrescription)
 }
 
@@ -22,6 +22,7 @@ protocol OtherProvidersListPresenterProtocol: AnyObject {
     var type:MSType { get set}
     var numberOfRows:Int { get }
     var canFetchMore:Bool { get }
+    var isUpoadedImage:Bool { get }
     var request:RequestType? { get set }
     /**
      * Add here your methods for communication VIEW -> PROTOCOL
@@ -57,6 +58,15 @@ class OtherProvidersListPresenter {
     
     var title:String {
         pageType.opListTitle
+    }
+    
+    var isUpoadedImage:Bool {
+        switch requestType {
+        case .uploadImage(_):
+            return true
+        default:
+            return false
+        }
     }
     
     // MARK: - Private properties -
@@ -102,8 +112,8 @@ extension OtherProvidersListPresenter: OtherProvidersListPresenterProtocol {
                     self.view?.showMessageAlert(title: "Error".localized, message: error)
                     return
                 }
-                self.rowsNumberOfPage = response.message.count
-                self.opBranchesList.append(contentsOf: response.message)
+                self.rowsNumberOfPage = response.opBranch.count
+                self.opBranchesList.append(contentsOf: response.opBranch)
                 self.view?.reloadData()
             case .failure(let error):
                 self.view?.showMessageAlert(title: "Error".localized, message: error.localizedDescription)
