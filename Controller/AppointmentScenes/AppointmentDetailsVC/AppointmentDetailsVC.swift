@@ -15,6 +15,7 @@ class AppointmentDetailsVC: UIViewController {
     @IBOutlet weak var dateLBL: UILabel!
     @IBOutlet weak var timeLBL: UILabel!
     @IBOutlet weak var branchAddressLBL: UILabel!
+    @IBOutlet weak var branchAddressContLBL: UILabel!
     @IBOutlet weak var branchAddressIcon: UIImageView!
     @IBOutlet weak var locationLBL: UILabel!
     @IBOutlet weak var totalFeesLBL: UILabel!
@@ -22,6 +23,7 @@ class AppointmentDetailsVC: UIViewController {
     @IBOutlet weak var doctorIMG: UIImageView!
     @IBOutlet weak var doctorNameLBL: UILabel!
     @IBOutlet weak var bookingStatusLBL: UILabel!
+    @IBOutlet weak var branchIconIMG: UIImageView!
     @IBOutlet weak var paidLBL: UILabel!
     //15
     @IBOutlet weak var locationHeightConstraint: NSLayoutConstraint!
@@ -67,7 +69,8 @@ class AppointmentDetailsVC: UIViewController {
             bookingStatusLBL.textColor = UIColor.green
         }
         bookingStatusLBL.text = appointmentModel?.bookingStatusName ?? ""
-        self.branchAddressLBL.text = "\(appointmentModel?.entityName_Localized ?? "")\(" ")\("(")\(appointmentModel?.branchName_Localized ?? "")\(")")"
+        self.branchAddressLBL.text = "\(appointmentModel?.entityName_Localized ?? "")"
+        self.branchAddressContLBL.text = "\("(")\(appointmentModel?.branchName_Localized ?? "")\(")")"
         if appointmentModel?.consultationServiceFk == 1 {
             //"Clinic Consultations"
             clinicIconIMG.image = UIImage (named: "ic_clinic")
@@ -97,21 +100,27 @@ class AppointmentDetailsVC: UIViewController {
         timeLBL.text = "\(startTimeString)\("-")\(endTimeString)"
         totalFeesLBL.text = "\("Total Fees ")\(appointmentModel?.bookingFees ?? 0)\(" EGP")"
         if appointmentModel?.isPaied == true {
-            paidLBL.text = "Unpaid"
+            paidLBL.text = "\("Unpaid")\(" ")\(appointmentModel?.bookingFees ?? 0)\(" EGP")"
             paidLBL.textColor = UIColor.red
         }else{
-            paidLBL.text = "Paid"
+            paidLBL.text = "\("Paid")\(" ")\(appointmentModel?.bookingFees ?? 0)\(" EGP")"
             paidLBL.textColor = UIColor.green
         }
         let imgURL = URL(string: "\(Constants.baseURLImage)\(appointmentModel?.profileImage ?? "")")
         doctorIMG.kf.indicatorType = .activity
         doctorIMG.kf.setImage(with: imgURL)
         Animation.roundView(doctorIMG)
-        doctorNameLBL.text = "\(appointmentModel?.prefixTitle_Localized ?? "")\(appointmentModel?.doctor_name ?? "")"
+        doctorNameLBL.text = "\(appointmentModel?.prefixTitle_Localized ?? "")\(".")\(appointmentModel?.doctor_name ?? "")"
         dateLBL.text = convertDate(DateString: appointmentModel?.bookingDate ?? "")
-        appointmentReasonDescLBL.text = appointmentModel?.bookingReason ?? ""
-        appointmentReasonDescLBL.numberOfLines = 3
-        appointmentReasonDescLBL.sizeToFit()
+        if appointmentModel?.bookingReason == "" {
+            resonHeigtConstraint.constant = 0
+        }else{
+            resonHeigtConstraint.constant = 150
+            appointmentReasonDescLBL.text = appointmentModel?.bookingReason ?? ""
+            appointmentReasonDescLBL.numberOfLines = 3
+            appointmentReasonDescLBL.sizeToFit()
+        }
+        
         if appointmentModel?.history?.count != 0 {
             viewHistoryDescLBL.text = appointmentModel?.history?[0].changeStatusReason
             viewHistoryDescLBL.numberOfLines = 2
@@ -139,7 +148,7 @@ class AppointmentDetailsVC: UIViewController {
         dateFormatter.locale = Locale(identifier: "en_US_POSIX") // fixes nil if device time in 24 hour format
         let date = dateFormatter.date(from: dateAsString) ?? Date()
 
-        dateFormatter.dateFormat = "h:mm a"
+        dateFormatter.dateFormat = "hh:mm a"
         let date24 = dateFormatter.string(from: date)
         return date24
     }

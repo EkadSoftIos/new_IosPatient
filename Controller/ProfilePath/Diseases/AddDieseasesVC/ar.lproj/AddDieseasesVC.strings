@@ -1,0 +1,42 @@
+
+/* Class = "UILabel"; text = "Diseases / Conditions Name *"; ObjectID = "3dd-1m-dju"; */
+"3dd-1m-dju.text" = "Diseases / Conditions Name *";
+
+/* Class = "UILabel"; text = "Diagnosed On *"; ObjectID = "BzR-xt-ADQ"; */
+"BzR-xt-ADQ.text" = "Diagnosed On *";
+
+/* Class = "UITextField"; placeholder = "Diagnosed On"; ObjectID = "CQz-V4-zrT"; */
+"CQz-V4-zrT.placeholder" = "Diagnosed On";
+
+/* Class = "UILabel"; text = "Medication"; ObjectID = "D6D-fu-hsi"; */
+"D6D-fu-hsi.text" = "Medication";
+
+/* Class = "UILabel"; text = "Status *"; ObjectID = "Ga1-Xz-QO5"; */
+"Ga1-Xz-QO5.text" = "Status *";
+
+/* Class = "UITextField"; placeholder = "Medication"; ObjectID = "QOX-Af-7x8"; */
+"QOX-Af-7x8.placeholder" = "Medication";
+
+/* Class = "UILabel"; text = "Treated by *"; ObjectID = "RIS-jp-OD2"; */
+"RIS-jp-OD2.text" = "Treated by *";
+
+/* Class = "UIButton"; configuration.title = "   "; ObjectID = "Rjj-SO-Ofx"; */
+"Rjj-SO-Ofx.configuration.title" = "   ";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Rjj-SO-Ofx"; */
+"Rjj-SO-Ofx.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Notes"; ObjectID = "SwX-I8-ktz"; */
+"SwX-I8-ktz.text" = "Notes";
+
+/* Class = "UITextField"; placeholder = "Diseases / Conditions Name"; ObjectID = "TrQ-Rc-LnW"; */
+"TrQ-Rc-LnW.placeholder" = "Diseases / Conditions Name";
+
+/* Class = "UITextField"; placeholder = "Status"; ObjectID = "oE4-jL-8B1"; */
+"oE4-jL-8B1.placeholder" = "Status";
+
+/* Class = "UITextView"; text = "Notes"; ObjectID = "pFe-mm-0zW"; */
+"pFe-mm-0zW.text" = "Notes";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "wHc-Lx-aRE"; */
+"wHc-Lx-aRE.normalTitle" = "Save";

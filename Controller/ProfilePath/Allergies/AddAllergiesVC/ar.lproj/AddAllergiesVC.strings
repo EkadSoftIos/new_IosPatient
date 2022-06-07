@@ -1,0 +1,54 @@
+
+/* Class = "UITextField"; placeholder = "How often does it occur"; ObjectID = "5wX-hQ-Bzf"; */
+"5wX-hQ-Bzf.placeholder" = "How often does it occur";
+
+/* Class = "UILabel"; text = "Allergies Name "; ObjectID = "64b-qd-CCN"; */
+"64b-qd-CCN.text" = "Allergies Name ";
+
+/* Class = "UILabel"; text = "Medication"; ObjectID = "GkK-g1-hxf"; */
+"GkK-g1-hxf.text" = "Medication";
+
+/* Class = "UITextField"; placeholder = "First diagnosed on"; ObjectID = "OMC-cP-0iG"; */
+"OMC-cP-0iG.placeholder" = "First diagnosed on";
+
+/* Class = "UIButton"; configuration.title = "   "; ObjectID = "QQP-MC-ThO"; */
+"QQP-MC-ThO.configuration.title" = "   ";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "QQP-MC-ThO"; */
+"QQP-MC-ThO.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "*"; ObjectID = "Tui-cZ-mWm"; */
+"Tui-cZ-mWm.text" = "*";
+
+/* Class = "UILabel"; text = "Triggered by"; ObjectID = "TvU-zm-5jN"; */
+"TvU-zm-5jN.text" = "Triggered by";
+
+/* Class = "UITextField"; placeholder = "Allergies Name "; ObjectID = "Whl-yq-YZh"; */
+"Whl-yq-YZh.placeholder" = "Allergies Name ";
+
+/* Class = "UITextField"; placeholder = "Medication"; ObjectID = "gFZ-qh-onS"; */
+"gFZ-qh-onS.placeholder" = "Medication";
+
+/* Class = "UILabel"; text = "First diagnosed on"; ObjectID = "jef-ob-CyR"; */
+"jef-ob-CyR.text" = "First diagnosed on";
+
+/* Class = "UITextField"; placeholder = "Status"; ObjectID = "mBp-9u-6Hc"; */
+"mBp-9u-6Hc.placeholder" = "Status";
+
+/* Class = "UILabel"; text = "Status"; ObjectID = "opA-ko-xOE"; */
+"opA-ko-xOE.text" = "Status";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "r4F-rD-QrQ"; */
+"r4F-rD-QrQ.normalTitle" = "Save";
+
+/* Class = "UITextView"; text = "Additional Notes"; ObjectID = "tBG-7Y-dU9"; */
+"tBG-7Y-dU9.text" = "Additional Notes";
+
+/* Class = "UILabel"; text = "How often does it occur?"; ObjectID = "vZP-pL-u2Y"; */
+"vZP-pL-u2Y.text" = "How often does it occur?";
+
+/* Class = "UILabel"; text = "Additional Notes"; ObjectID = "xVe-5G-tdY"; */
+"xVe-5G-tdY.text" = "Additional Notes";
+
+/* Class = "UITextField"; placeholder = "Triggered by"; ObjectID = "xqS-IX-M2W"; */
+"xqS-IX-M2W.placeholder" = "Triggered by";

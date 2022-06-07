@@ -1,0 +1,45 @@
+
+/* Class = "UILabel"; text = "Total Fees 230 EGP"; ObjectID = "4h5-TA-SDe"; */
+"4h5-TA-SDe.text" = "Total Fees 230 EGP";
+
+/* Class = "UILabel"; text = "Your Balance 2000,00 EGP in your wallet"; ObjectID = "5Gb-xB-HiG"; */
+"5Gb-xB-HiG.text" = "Your Balance 2000,00 EGP in your wallet";
+
+/* Class = "UILabel"; text = "Wallet"; ObjectID = "CYa-ps-r23"; */
+"CYa-ps-r23.text" = "Wallet";
+
+/* Class = "UILabel"; text = "Your Appointment "; ObjectID = "DkB-az-DMh"; */
+"DkB-az-DMh.text" = "Your Appointment ";
+
+/* Class = "UIButton"; normalTitle = "Confirm Booking"; ObjectID = "WbG-dt-1xx"; */
+"WbG-dt-1xx.normalTitle" = "Confirm Booking";
+
+/* Class = "UILabel"; text = "You will pay service fees on Clinic"; ObjectID = "Xsw-oz-fRW"; */
+"Xsw-oz-fRW.text" = "You will pay service fees on Clinic";
+
+/* Class = "UILabel"; text = "Monday  Sep 11,  2020"; ObjectID = "XxD-a1-pfH"; */
+"XxD-a1-pfH.text" = "Monday  Sep 11,  2020";
+
+/* Class = "UILabel"; text = "El-Shouroq (Nasr City)"; ObjectID = "Xzo-NL-Qby"; */
+"Xzo-NL-Qby.text" = "El-Shouroq (Nasr City)";
+
+/* Class = "UILabel"; text = "43 Nakhla moteey st , triumph square , \ninfront of emam ali mosque Nasr City"; ObjectID = "dRm-5A-tuv"; */
+"dRm-5A-tuv.text" = "43 Nakhla moteey st , triumph square , \ninfront of emam ali mosque Nasr City";
+
+/* Class = "UILabel"; text = "With Doctor"; ObjectID = "eeh-hp-lYv"; */
+"eeh-hp-lYv.text" = "With Doctor";
+
+/* Class = "UILabel"; text = "09:30 PM - 10:00 PM"; ObjectID = "hZN-DW-cXc"; */
+"hZN-DW-cXc.text" = "09:30 PM - 10:00 PM";
+
+/* Class = "UILabel"; text = "We will withdraw total fees from your wallet"; ObjectID = "mSx-c1-MVE"; */
+"mSx-c1-MVE.text" = "We will withdraw total fees from your wallet";
+
+/* Class = "UILabel"; text = "Clinic Consultation"; ObjectID = "p10-Zd-nye"; */
+"p10-Zd-nye.text" = "Clinic Consultation";
+
+/* Class = "UILabel"; text = "Dr. Ahmed Karim"; ObjectID = "uEe-SJ-rR1"; */
+"uEe-SJ-rR1.text" = "Dr. Ahmed Karim";
+
+/* Class = "UILabel"; text = "Cash"; ObjectID = "x18-i3-d9H"; */
+"x18-i3-d9H.text" = "Cash";

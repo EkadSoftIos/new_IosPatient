@@ -74,6 +74,7 @@ enum APIRouter : URLRequestConvertible{
     case RemoveFavouriteDoctor(id: Int)
     case AppointmentsDetailsCancel(bookingid: Int)
     case cancelAppointment(params: [String: Any])
+    case bookingReport(params: [String: Any])
     
     case notificationList
     case readAllNotifications
@@ -155,6 +156,8 @@ enum APIRouter : URLRequestConvertible{
             return .post
         case.getFullWebPages:
             return .get
+        case.bookingReport:
+            return .post
         }
     }
     var path : String {
@@ -310,6 +313,8 @@ enum APIRouter : URLRequestConvertible{
             return "\(Constants.baseURL)Common/SaveContactUs"
         case.getFullWebPages:
             return "\(Constants.baseURL)Common/GetFullWebPages"
+        case.bookingReport:
+            return "\(Constants.baseURL)Patient/SearchBookingReport"
         }
     }
     var parameters : Parameters?{
@@ -417,6 +422,8 @@ enum APIRouter : URLRequestConvertible{
             return para
         case.getFullWebPages:
             return nil
+        case.bookingReport(params: let para):
+            return para
         }
     }
     var apiToken : String {
