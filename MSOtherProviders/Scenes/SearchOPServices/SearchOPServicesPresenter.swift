@@ -100,8 +100,8 @@ extension SearchOPServicesPresenter: SearchOPServicesPresenterProtocol {
                     self.view?.showMessageAlert(title: "Error".localized, message: error)
                     return
                 }
-                self.rowsNumberOfPage = response.message.count
-                self.medicalServicesList.append(contentsOf: response.message)
+                self.rowsNumberOfPage = response.servicesList.count
+                self.medicalServicesList.append(contentsOf: response.servicesList)
                 self.view?.reloadData()
             case .failure(let error):
                 self.view?.showMessageAlert(title: "Error".localized, message: error.localizedDescription)

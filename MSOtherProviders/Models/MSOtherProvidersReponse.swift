@@ -11,7 +11,12 @@ import Foundation
 struct MSOtherProvidersReponse: Codable {
     let successtate: Int
     let errormessage: String?
-    let message: MSData
+    let msData: MSData
+    
+    enum CodingKeys: String, CodingKey {
+        case msData = "message"
+        case successtate, errormessage
+    }
 }
 
 // MARK: - Message

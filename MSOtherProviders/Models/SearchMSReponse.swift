@@ -12,5 +12,10 @@ import Foundation
 struct MSReponse: Codable {
     let successtate: Int
     let errormessage: String?
-    let message: [Service]
+    let servicesList: [Service]
+    
+    enum CodingKeys: String, CodingKey {
+        case servicesList = "message"
+        case successtate, errormessage
+    }
 }

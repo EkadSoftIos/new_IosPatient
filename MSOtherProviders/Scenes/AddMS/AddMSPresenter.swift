@@ -104,7 +104,7 @@ extension AddMSPresenter: AddMSPresenterProtocol {
                     self.view?.showMessageAlert(title: "Error".localized, message: error)
                     return
                 }
-                self.serviceTypeList.append(contentsOf: response.message)
+                self.serviceTypeList.append(contentsOf: response.serviceTypeList)
             case .failure(let error):
                 self.view?.showMessageAlert(title: "Error".localized, message: error.localizedDescription)
             }
@@ -125,8 +125,8 @@ extension AddMSPresenter: AddMSPresenterProtocol {
                     self.view?.showMessageAlert(title: "Error".localized, message: error)
                     return
                 }
-                self.rowsNumberOfPage = response.message.count
-                self.medicalServicesList.append(contentsOf: response.message)
+                self.rowsNumberOfPage = response.servicesList.count
+                self.medicalServicesList.append(contentsOf: response.servicesList)
             case .failure(let error):
                 self.view?.showMessageAlert(title: "Error".localized, message: error.localizedDescription)
             }

@@ -112,8 +112,8 @@ extension OtherProvidersListPresenter: OtherProvidersListPresenterProtocol {
                     self.view?.showMessageAlert(title: "Error".localized, message: error)
                     return
                 }
-                self.rowsNumberOfPage = response.message.count
-                self.opBranchesList.append(contentsOf: response.message)
+                self.rowsNumberOfPage = response.opBranch.count
+                self.opBranchesList.append(contentsOf: response.opBranch)
                 self.view?.reloadData()
             case .failure(let error):
                 self.view?.showMessageAlert(title: "Error".localized, message: error.localizedDescription)

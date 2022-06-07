@@ -12,7 +12,13 @@ import Foundation
 struct STListReponse: Codable {
     let successtate: Int
     let errormessage: String?
-    let message: [ServiceType]
+    let serviceTypeList: [ServiceType]    
+    
+    enum CodingKeys: String, CodingKey {
+        case serviceTypeList = "message"
+        case successtate, errormessage
+    }
+    
 }
 
 // MARK: - Message

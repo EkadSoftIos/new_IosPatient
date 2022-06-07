@@ -101,11 +101,11 @@ extension MapsLocationPresenter: MapsLocationPresenterProtocol {
                     self.view?.showMessageAlert(title: "Error".localized, message: error)
                     return
                 }
-                if response.message.isEmpty {
+                if response.opBranch.isEmpty {
                     self.view?.showMessageAlert(title: "", message: "No info found near your location".localized, isError: false)
                     return
                 }
-                self.opBranchesList = response.message
+                self.opBranchesList = response.opBranch
                 let displays = self.opBranchesList.map({
                     OPMapDisplay(
                         branch: $0,

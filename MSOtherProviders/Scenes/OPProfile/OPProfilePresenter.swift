@@ -117,8 +117,8 @@ extension OPProfilePresenter: OPProfilePresenterProtocol {
                     self.view?.showMessageAlert(title: "Error".localized, message: error)
                     return
                 }
-                self.opBranchDetails = response.message
-                self.view?.setBranchDetails(display: OPBranchDetailsDispaly(branch: response.message))
+                self.opBranchDetails = response.branchDetails
+                self.view?.setBranchDetails(display: OPBranchDetailsDispaly(branch: response.branchDetails))
                 self.view?.addMSSummary()
             case .failure(let error):
                 self.view?.showMessageAlert(title: "Error".localized, message: error.localizedDescription)

@@ -53,7 +53,13 @@ struct OPRequest:Codable {
 struct OPsReponse: Codable {
     let successtate: Int
     let errormessage: String?
-    let message: [OtherProviderBranch]
+    let opBranch: [OtherProviderBranch]
+    
+    enum CodingKeys: String, CodingKey {
+        case opBranch = "message"
+        case successtate, errormessage
+    }
+    
 }
 
 // MARK: - Message
