@@ -10,9 +10,12 @@ import Foundation
 
 struct Constants {
     //test
+    
     static let baseURL = "https://e4clinictestapi.ekadsoft.org/api/"
     static let baseURLImage = "https://e4clinictestapi.ekadsoft.org/"
+    
     //dev
+    
 //    static let baseURL = "https://e4clinicdevapi.ekadsoft.org/api/"
 //    static let baseURLImage = "https://e4clinicdevapi.ekadsoft.org/"
     

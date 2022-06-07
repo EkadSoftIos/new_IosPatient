@@ -130,7 +130,8 @@ extension OPsDashboardPresenter: OPsDashboardPresenterProtocol {
     
     // MARK: - configEPrescriptionCell -
     func configEPrescriptionCell(cell:EPrescriptionCellProtocol, indexPath:IndexPath)  {
-        cell.config(display: EPrescriptionDisplay(ePrescriptionsList[indexPath.row], msType: pageType), indexPath: indexPath, presenter: self)
+        let ep = ePrescriptionsList[indexPath.row]
+        cell.config(display: EPrescriptionDisplay( ep, msType: pageType), indexPath: indexPath, presenter: self)
     }
     
 }

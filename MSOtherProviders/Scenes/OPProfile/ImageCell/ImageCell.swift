@@ -18,7 +18,7 @@ protocol ImageCellProtocol {
 
 class ImageCell: UICollectionViewCell, ImageCellProtocol {
     
-    // MARK: - oulet variables -
+    // MARK: - Outlet variables -
     @IBOutlet weak var epImageView: UIImageView!
     
     // MARK: - private properties -

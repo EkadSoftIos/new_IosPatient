@@ -33,6 +33,7 @@ class OtherProvidersListVC: UIViewController {
 
     // MARK: - Public properties -
     @IBOutlet var shadowsViews: [UIView]!
+    @IBOutlet weak var filterView: UIView!
     @IBOutlet weak var doctorView: UIView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var epDateLabel: UILabel!
@@ -81,6 +82,7 @@ class OtherProvidersListVC: UIViewController {
             guard let self = self else { return }
             self.presenter.loadMore()
         }, themeColor: .selectedPCColor, refreshStyle: .native)
+        filterView.isHidden = presenter.isUpoadedImage
         tableView.register(UINib(nibName: "OtherProviderCell", bundle: nil), forCellReuseIdentifier: "OtherProviderCell")
         tableView.delegate = self
         tableView.dataSource = self
@@ -100,7 +102,7 @@ class OtherProvidersListVC: UIViewController {
     
     @IBAction func chooseCityBtnTapped(_ sender: UIButton) {
         let vc = AULocationVC()
-        vc.type = .countries
+        vc.type = .citiesList
         navigationController?.pushViewController(vc, animated: true)
         
     }

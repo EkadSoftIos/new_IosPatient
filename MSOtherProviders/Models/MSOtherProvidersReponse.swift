@@ -33,23 +33,29 @@ struct Ad: Codable {
     }
 }
 
-
-
 // MARK: - Service
 struct Service: Codable {
-    let servicePrescriptionID, serviceID: Int
-    let serviceNameLocalized, serviceTypeNameLocalized: String
-    let serviceTypeID, otherProviderTypeFk: Int
+    let serviceID: Int
+    let serviceNameLocalized: String
+    let serviceTypeNameLocalized: String
     let conditionsList: [String]
+    let commessionNetValue: Double?
 
+    
+    let servicePrescriptionID: Int?
+    let serviceTypeID, otherProviderTypeFk: Int?
+
+    let serviceTypeFk: Int?
+    let price, priceAfterDiscount: Double?
+    
     enum CodingKeys: String, CodingKey {
         case servicePrescriptionID = "servicePrescriptionId"
         case serviceID = "serviceId"
         case serviceNameLocalized = "serviceName_Localized"
         case serviceTypeNameLocalized = "serviceTypeName_Localized"
         case serviceTypeID = "serviceTypeId"
-        case otherProviderTypeFk
+        case otherProviderTypeFk, commessionNetValue
         case conditionsList = "conditions_list"
+        case serviceTypeFk, price, priceAfterDiscount
     }
 }
-

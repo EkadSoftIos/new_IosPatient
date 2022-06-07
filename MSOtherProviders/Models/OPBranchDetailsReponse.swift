@@ -47,8 +47,8 @@ struct OPBranchDetails: Codable {
 
 // MARK: - ServicePriceList
 struct ServicePriceList: Codable {
-    let serviceFk, otherProviderTypeFk, otherProviderBranchServiceID, commessionNetValue: Int
-    let price, priceAfterDiscount: Int
+    let serviceFk, otherProviderTypeFk, otherProviderBranchServiceID: Int
+    let price, priceAfterDiscount, commessionNetValue: Double
     let conditionsList: [String]
     let serviceNameLocalized: String
 

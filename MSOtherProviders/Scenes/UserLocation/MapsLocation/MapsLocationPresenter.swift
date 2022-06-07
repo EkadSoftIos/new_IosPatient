@@ -209,10 +209,10 @@ struct OPMapDisplay{
         providerName = branch.otherProviderNameLocalized
         branchName = branch.branchNameLocalized
         avatar = URL(string: "\(URLs.baseURLImage)\(branch.otherProviderImage)")
-        servicesText = String(format: "%d/%d %@", branch.avaliableCount, servicesNum,  "Services".localized)
-        price = String(format: "%.02f\("EGP".localized)", branch.priceAfter)
-        priceBeforeDiscount = String(format: "%.02f\("EGP".localized)", branch.priceBefore)
-        discount = String(format: "%.01f%", branch.discountPercentage)
+        servicesText = branch.avaliableCount.stringServicesValue(servicesNum)
+        price = branch.priceAfter.stringValue
+        priceBeforeDiscount = branch.priceBefore.stringValue
+        discount = branch.discountPercentage.stringValue
         coordinate = CLLocationCoordinate2D(
             latitude: branch.brancheLat.doubleValue,
             longitude: branch.brancheLong.doubleValue

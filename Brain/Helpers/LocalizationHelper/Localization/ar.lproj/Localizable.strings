@@ -217,7 +217,7 @@
 "Search by rays name" = "بحث باسم الاشعة";
 "Find Tests" = "تحليلي";
 "Find Rays" = "اشعتي";
-"Labs Search" = "بحث معامل";
+"Tests Search" = "بحث تحاليل";
 "Rays Search" = "بحث الاشعة";
 "Find Labs" = "اجد معامل";
 "Find Centers" = "اجد مراكز";
@@ -259,3 +259,4 @@
 "Choose Tests" = "اختيار الاشعة";
 "Choose Tests Category" = "اختيار تصنيف التحاليل";
 "Choose Rays Category" = "اختيار تصنيف الأشعة";
+"Total Cost" = "التكلفة الإجمالية";

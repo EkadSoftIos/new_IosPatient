@@ -100,8 +100,8 @@ extension MSType{
     
     var opListTitle:String{
         switch self {
-        case .labs: return "Labs".localized
-        case .rays: return "Centers".localized
+        case .labs: return "Find Labs".localized
+        case .rays: return "Find Centers".localized
         }
     }
     
@@ -128,7 +128,7 @@ extension MSType{
     
     var searchOPMSTitle:String{
         switch self {
-        case .labs: return "Labs Search".localized
+        case .labs: return "Tests Search".localized
         case .rays: return "Rays Search".localized
         }
     }

@@ -23,6 +23,7 @@
                 <outlet property="doctorNameLabel" destination="cDW-Ys-Kq2" id="SXq-T8-y5o"/>
                 <outlet property="doctorView" destination="OuC-V3-Nxv" id="4Vd-nA-7Gw"/>
                 <outlet property="epDateLabel" destination="G6f-tH-skF" id="sps-OV-WgK"/>
+                <outlet property="filterView" destination="HMO-gh-9ix" id="GHd-Xj-X06"/>
                 <outlet property="searchResultLabel" destination="A8V-zg-UQM" id="vXm-i6-idA"/>
                 <outlet property="tableView" destination="KmR-s3-8v8" id="11W-SL-Ofd"/>
                 <outlet property="userLocationLabel" destination="39M-ph-Vdv" id="G0q-JD-StQ"/>

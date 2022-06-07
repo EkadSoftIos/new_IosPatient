@@ -19,7 +19,7 @@ struct EPrescriptionDisplay{
         name = ep.doctorNameLocalized
         date = ep.preescriptionDate.dateFormated
         imageURL = URL(string: "\(URLs.baseURLImage)\(ep.doctorProfileImage ?? "")")
-        msBtnName = msType.opListTitle
+        msBtnName = msType.btnName
     }
 }
 

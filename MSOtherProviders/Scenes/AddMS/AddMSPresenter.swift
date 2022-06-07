@@ -21,7 +21,7 @@ protocol AddMSPresenterProtocol: AnyObject {
     func config(cell:ServiceCellProtocol, indexPath:IndexPath)
     func fetchSearchedData(text:String?, selectedIndex:Int?)
     func loadMore()
-    func services(for selectedIndexPaths:[IndexPath]) -> [MedicalService]
+    func services(for selectedIndexPaths:[IndexPath]) -> [Service]
 }
 
 extension AddMSPresenterProtocol{
@@ -58,7 +58,7 @@ class AddMSPresenter {
     private var pageType:MSType!
     private var rowsNumberOfPage = 0
     private var serviceTypeList:[ServiceType] = []
-    private var medicalServicesList:[MedicalService] = []
+    private var medicalServicesList:[Service] = []
     private var msOPServicesRequest:MSOPServicesRequest!
     private var msNetworkRepository:MSNetworkRepository?
     private var dispatchGroup = DispatchGroup()
@@ -160,11 +160,12 @@ extension AddMSPresenter: AddMSPresenterProtocol {
     // MARK: - loadMore -
     func config(cell:ServiceCellProtocol, indexPath:IndexPath){
         let ms = medicalServicesList[indexPath.row]
-        cell.config(display: ServiceCellDisplay(name: ms.serviceNameLocalized))
+        let display = ServiceCellDisplay(service: ms, isWithPrice: true)
+        cell.config(display: display)
     }
     
     // MARK: - services for selectedIndexPaths -
-    func services(for selectedIndexPaths:[IndexPath]) -> [MedicalService] {
+    func services(for selectedIndexPaths:[IndexPath]) -> [Service] {
         selectedIndexPaths.compactMap({ self.medicalServicesList[$0.row] })
     }
 }

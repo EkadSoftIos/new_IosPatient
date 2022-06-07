@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -107,7 +107,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="37"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Availability" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xas-ld-WWG">
-                                                    <rect key="frame" x="20" y="7" width="84.5" height="23"/>
+                                                    <rect key="frame" x="20" y="8.5" width="80.5" height="20"/>
                                                     <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="17"/>
                                                     <color key="textColor" name="Blue"/>
                                                     <nil key="highlightedColor"/>
@@ -287,7 +287,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="37"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="17q-Vv-3aH">
-                                                    <rect key="frame" x="20" y="7" width="56.5" height="23"/>
+                                                    <rect key="frame" x="20" y="8.5" width="56.5" height="20"/>
                                                     <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="17"/>
                                                     <color key="textColor" name="Blue"/>
                                                     <nil key="highlightedColor"/>
@@ -437,7 +437,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="37"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Consultation Fees" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bhR-oS-HO8">
-                                                    <rect key="frame" x="20" y="7" width="137" height="23"/>
+                                                    <rect key="frame" x="20" y="8.5" width="137.5" height="20"/>
                                                     <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="17"/>
                                                     <color key="textColor" name="Blue"/>
                                                     <nil key="highlightedColor"/>
@@ -480,19 +480,19 @@
                                             </constraints>
                                         </view>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="kge-ad-wlR">
-                                            <rect key="frame" x="24" y="45" width="342" height="0.0"/>
+                                            <rect key="frame" x="24" y="45" width="342" height="82"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="dWU-CM-UVS">
-                                                    <rect key="frame" x="0.0" y="0.0" width="260" height="0.0"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="260" height="17"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price Range" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aTM-91-RCI">
-                                                            <rect key="frame" x="0.0" y="0.0" width="77.5" height="0.0"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="77.5" height="17"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <color key="textColor" red="0.070588235289999995" green="0.46666666670000001" blue="0.81960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 - 2000 EGP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Mm-GR-4Tc">
-                                                            <rect key="frame" x="177.5" y="0.0" width="82.5" height="0.0"/>
+                                                            <rect key="frame" x="177.5" y="0.0" width="82.5" height="17"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                             <color key="textColor" red="0.070588235289999995" green="0.46666666670000001" blue="0.81960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -500,11 +500,11 @@
                                                     </subviews>
                                                 </stackView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mel-v3-4Uo">
-                                                    <rect key="frame" x="0.0" y="0.0" width="130" height="0.0"/>
+                                                    <rect key="frame" x="0.0" y="17" width="130" height="0.0"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </stackView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ycy-mG-BUP" customClass="RangeSeekSlider" customModule="RangeSeekSlider">
-                                                    <rect key="frame" x="0.0" y="0.0" width="342" height="0.0"/>
+                                                    <rect key="frame" x="0.0" y="17" width="342" height="65"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="minLabelColor">
@@ -571,7 +571,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="37"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cancelation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3iC-cj-Kbs">
-                                                    <rect key="frame" x="20" y="7" width="90.5" height="23"/>
+                                                    <rect key="frame" x="20" y="8.5" width="90.5" height="20"/>
                                                     <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="17"/>
                                                     <color key="textColor" name="Blue"/>
                                                     <nil key="highlightedColor"/>
@@ -657,7 +657,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="37"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prefix Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Vf-j9-N0R">
-                                                    <rect key="frame" x="20" y="7" width="82.5" height="23"/>
+                                                    <rect key="frame" x="20" y="8.5" width="80" height="20"/>
                                                     <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="17"/>
                                                     <color key="textColor" name="Blue"/>
                                                     <nil key="highlightedColor"/>
@@ -723,7 +723,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="37"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Professional Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WHc-j9-ov6">
-                                                    <rect key="frame" x="20" y="7" width="131.5" height="23"/>
+                                                    <rect key="frame" x="20" y="8.5" width="130" height="20"/>
                                                     <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="17"/>
                                                     <color key="textColor" name="Blue"/>
                                                     <nil key="highlightedColor"/>
@@ -789,7 +789,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="37"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Main Speciality" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VCu-7s-fNU">
-                                                    <rect key="frame" x="20" y="7" width="117.5" height="23"/>
+                                                    <rect key="frame" x="20" y="8.5" width="116" height="20"/>
                                                     <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="17"/>
                                                     <color key="textColor" name="Blue"/>
                                                     <nil key="highlightedColor"/>
@@ -855,7 +855,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="37"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sub Specialties" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sKx-z9-OSE">
-                                                    <rect key="frame" x="20" y="7" width="115.5" height="23"/>
+                                                    <rect key="frame" x="20" y="8.5" width="118.5" height="20"/>
                                                     <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="17"/>
                                                     <color key="textColor" name="Blue"/>
                                                     <nil key="highlightedColor"/>
@@ -921,7 +921,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="37"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medical Services" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zoa-Gd-LCo">
-                                                    <rect key="frame" x="20" y="7" width="128.5" height="23"/>
+                                                    <rect key="frame" x="20" y="8.5" width="129.5" height="20"/>
                                                     <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="17"/>
                                                     <color key="textColor" name="Blue"/>
                                                     <nil key="highlightedColor"/>
@@ -1089,6 +1089,11 @@
             <point key="canvasLocation" x="-188.40579710144928" y="165.40178571428569"/>
         </view>
     </objects>
+    <designables>
+        <designable name="ycy-mG-BUP">
+            <size key="intrinsicContentSize" width="-1" height="65"/>
+        </designable>
+    </designables>
     <resources>
         <image name="ic_calender" width="12.5" height="12.5"/>
         <image name="ic_next-1" width="11.5" height="6.5"/>
