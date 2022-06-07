@@ -30,9 +30,6 @@ class OPProfileVC: UIViewController {
     // MARK: - Public properties -
     @IBOutlet var roundedViews: [UIView]!
     @IBOutlet var shadowsViews: [UIView]!
-    @IBOutlet weak var msSummaryView: UIView!
-    @IBOutlet weak var msSummaryLabel: UILabel!
-    @IBOutlet weak var msStackView: UIStackView!
     @IBOutlet weak var addBtnMSStackView: UIStackView!
     @IBOutlet weak var epPhotosView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -79,7 +76,6 @@ class OPProfileVC: UIViewController {
         title = presenter.type.opProfileTitle
         shadowsViews.forEach({ $0.applyShadow(0.3)})
         msImageView.image = UIImage(named: presenter.type.msImageNamed)
-        msSummaryLabel.text = presenter.type.msSummary
         msPreRquestTitleLabel.text = presenter.type.msPreRequest
         msLabel.text = presenter.type.msOPsDashboardBtnTitle
         msPreRequestView.isHidden = true

@@ -56,8 +56,8 @@ class ServiceCell: UITableViewCell, ServiceCellProtocol {
             priceBeforeDiscountLabel.text = price
             priceBeforeDiscountLabel.setStrikethroughStyle()
         }
-        priceAfterDiscountLabel.isHidden = display.isWithPrice
-        priceBeforeDiscountLabel.isHidden = display.isWithPrice
+        priceAfterDiscountLabel.isHidden = !display.isWithPrice
+        priceBeforeDiscountLabel.isHidden = !display.isWithPrice
     }
     
 }

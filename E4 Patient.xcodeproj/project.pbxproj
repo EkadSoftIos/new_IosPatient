@@ -4777,6 +4777,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "E4 Patient/E4 Patient.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = B3B9UDWN3P;
 				INFOPLIST_FILE = "E4 Patient/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
@@ -4784,6 +4785,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Ekadsoft.E4Patient2;
 				PRODUCT_NAME = E4clinic;
 				SWIFT_INSTALL_OBJC_HEADER = YES;
@@ -4802,6 +4804,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "E4 Patient/E4 Patient.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = B3B9UDWN3P;
 				INFOPLIST_FILE = "E4 Patient/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
@@ -4809,6 +4812,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Ekadsoft.E4Patient2;
 				PRODUCT_NAME = E4clinic;
 				SWIFT_INSTALL_OBJC_HEADER = YES;
