@@ -109,14 +109,14 @@ extension OPsDashboardPresenter: OPsDashboardPresenterProtocol {
             switch result {
             case .success(let response):
                 if let error = response.errormessage, response.successtate != 200{
-                    self.view?.showMessageAlert(title: "Error".localized, message: error)
+                    self.view?.showMessageAlert(title: .error, message: error)
                     return
                 }
                 self.adsList.append(contentsOf: response.msData.ads ?? [])
                 self.ePrescriptionsList = response.msData.lastPrescriptions
                 self.view?.reloadData()
             case .failure(let error):
-                self.view?.showMessageAlert(title: "Error".localized, message: error.localizedDescription)
+                self.view?.showMessageAlert(title: .error, message: error.localizedDescription)
             }
         }//end closure
     }

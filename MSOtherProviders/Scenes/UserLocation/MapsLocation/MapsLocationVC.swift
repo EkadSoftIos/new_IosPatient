@@ -9,6 +9,7 @@
 import UIKit
 import MapKit
 import Kingfisher
+import APESuperHUD
 import SwiftMessages
 
 //MARK: View -
@@ -102,7 +103,7 @@ extension MapsLocationVC: MapsLocationViewProtocol {
     }
     
     func showMessageAlert(title: String, message: String, isError:Bool = true) {
-        showUniversalLoadingView(false)
+        APESuperHUD.show(style: .loadingIndicator(type: .standard), message: .loading)
         let theme = isError ?  Theme.error:.info
         showMessage(title: title, sub: message, type: theme, layout: .centeredView)
     }

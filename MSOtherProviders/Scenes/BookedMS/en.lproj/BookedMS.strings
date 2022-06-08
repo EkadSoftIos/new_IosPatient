@@ -1,0 +1,18 @@
+
+/* Class = "UILabel"; text = "Your Discount created successfully"; ObjectID = "2cL-TJ-l6g"; */
+"2cL-TJ-l6g.text" = "Your Discount created successfully";
+
+/* Class = "UILabel"; text = "Your booking  Barcode"; ObjectID = "4XB-7Q-y7F"; */
+"4XB-7Q-y7F.text" = "Your booking  Barcode";
+
+/* Class = "UILabel"; text = "by Dr: Ahmed Karim"; ObjectID = "Sev-A7-5dI"; */
+"Sev-A7-5dI.text" = "";
+
+/* Class = "UILabel"; text = "Your booking QR Code"; ObjectID = "XmI-TN-iaM"; */
+"XmI-TN-iaM.text" = "Your booking QR Code";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "1R7-Oh-RGj"; */
+"1R7-Oh-RGj.normalTitle" = "Back to Home";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "GgG-oR-Ume"; */
+"GgG-oR-Ume.normalTitle" = "My Orders";

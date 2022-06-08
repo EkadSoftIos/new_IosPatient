@@ -28,14 +28,6 @@ struct UPImagesReponse: Codable {
     }
 }
 
-
-//{
-//    "FilePathList":[
-//        "Upload/reduced_20220523142248180961jefmutwoumfile.png"
-//    ],
-//    "ProviderType":1
-//}
-
 // MARK: - UploadPrescriptionFilesReponse
 struct UPFilesReponse: Codable {
     let successtate: Int

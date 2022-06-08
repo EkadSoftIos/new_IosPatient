@@ -23,6 +23,7 @@ protocol OPProfileViewProtocol: AnyObject {
     func addMSSummary()
     func setBranchDetails(display:OPBranchDetailsDispaly)
     func showMessageAlert(title: String, message: String)
+    func showBookedServices(_ order:OrderInfo, ep:EPrescription?)
 }
 
 class OPProfileVC: UIViewController {
@@ -109,7 +110,7 @@ class OPProfileVC: UIViewController {
     }
     
     @IBAction func bookingBtnTapped(_ sender: Any) {
-        
+        presenter.bookingServices()
     }
     
 }
@@ -148,9 +149,16 @@ extension OPProfileVC: OPProfileViewProtocol {
     func addMSSummary(){
         msSummaryStackView.removeAllArrangedSubviews()
         let msView = MSView.instance
-        presenter.config(msView: msView as! MSViewProtocol)
+        presenter.config(msView: msView)
         msSummaryStackView.addArrangedSubview(msView)
         msSummaryStackView.isHidden = false
+    }
+    
+    func showBookedServices(_ order:OrderInfo, ep:EPrescription?){
+        let vc = BookedMSVC()
+        vc.presenter.order = order
+        vc.presenter.eprescription = ep
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 

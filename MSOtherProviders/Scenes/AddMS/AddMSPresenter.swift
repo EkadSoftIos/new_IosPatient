@@ -6,6 +6,7 @@
 //
 //
 
+import APESuperHUD
 import Foundation
 
 //MARK: Presenter -
@@ -101,12 +102,12 @@ extension AddMSPresenter: AddMSPresenterProtocol {
             switch result {
             case .success(let response):
                 if let error = response.errormessage, response.successtate != 200{
-                    self.view?.showMessageAlert(title: "Error".localized, message: error)
+                    self.view?.showMessageAlert(title: .error, message: error)
                     return
                 }
                 self.serviceTypeList.append(contentsOf: response.serviceTypeList)
             case .failure(let error):
-                self.view?.showMessageAlert(title: "Error".localized, message: error.localizedDescription)
+                self.view?.showMessageAlert(title: .error, message: error.localizedDescription)
             }
         }//end closure
     }
@@ -122,13 +123,13 @@ extension AddMSPresenter: AddMSPresenterProtocol {
             switch result {
             case .success(let response):
                 if let error = response.errormessage, response.successtate != 200{
-                    self.view?.showMessageAlert(title: "Error".localized, message: error)
+                    self.view?.showMessageAlert(title: .error, message: error)
                     return
                 }
                 self.rowsNumberOfPage = response.servicesList.count
                 self.medicalServicesList.append(contentsOf: response.servicesList)
             case .failure(let error):
-                self.view?.showMessageAlert(title: "Error".localized, message: error.localizedDescription)
+                self.view?.showMessageAlert(title: .error, message: error.localizedDescription)
             }
         }//end closure
     }
@@ -145,7 +146,7 @@ extension AddMSPresenter: AddMSPresenterProtocol {
         }
         msOPServicesRequest.pageNum! = 1
         medicalServicesList.removeAll()
-        showUniversalLoadingView(true)
+        APESuperHUD.show(style: .loadingIndicator(type: .standard), message: .loading)
         fetchMSData()
         notify()
     }

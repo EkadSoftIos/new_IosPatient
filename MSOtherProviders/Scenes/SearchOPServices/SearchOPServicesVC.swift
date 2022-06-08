@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import APESuperHUD
 import KafkaRefresh
 import SwiftMessages
 
@@ -59,7 +60,7 @@ class SearchOPServicesVC: UIViewController {
 
     func setupLayout() {
         title = presenter.title
-        showUniversalLoadingView(true)
+        APESuperHUD.show(style: .loadingIndicator(type: .standard), message: .loading)
         searchTextField.delegate = self
         shadowsViews.forEach ({ $0.applyShadow(0.3) })
         searchTextField.placeholder = presenter.searchPlaceholder
@@ -75,12 +76,12 @@ class SearchOPServicesVC: UIViewController {
     
     @IBAction func findServicesBtnTapped(_ sender: Any) {
         guard let opTypeFk = presenter.msRequest.opTypeFk else {
-            showMessageAlert(title: "Error".localized, message: "")
+            showMessageAlert(title: .error, message: "")
             return
         }
         guard let selectedIndexPaths = tableView.indexPathsForSelectedRows,
              !selectedIndexPaths.isEmpty else {
-            showMessageAlert(title: "Error".localized, message: "Please choose at least one".localized)
+                 showMessageAlert(title: .error, message: "Please choose at least one".localized)
             return
         }
         let vc = OtherProvidersListVC()
@@ -135,7 +136,7 @@ extension SearchOPServicesVC: SearchOPServicesViewProtocol {
     }
     
     private func stopLoading(){
-        showUniversalLoadingView(false)
+        APESuperHUD.dismissAll(animated: true)
         tableView.endRefreshing(presenter.canFetchMore)
     }
     

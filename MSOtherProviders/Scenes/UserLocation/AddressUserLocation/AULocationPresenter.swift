@@ -7,6 +7,7 @@
 //
 
 import MOLH
+import APESuperHUD
 import Foundation
 import CoreLocation
 //import SKCountryPicker
@@ -101,7 +102,7 @@ extension AULocationPresenter: AULocationPresenterProtocol {
             switch result {
             case .success(let response):
                 if let error = response.errormessage, response.successtate != 200 {
-                    self.view?.showMessageAlert(title: "Error".localized, message: error)
+                    self.view?.showMessageAlert(title: .error, message: error)
                     return
                 }
                 if case .countries = self.auLocationType {
@@ -113,7 +114,7 @@ extension AULocationPresenter: AULocationPresenterProtocol {
                 }
                 self.view?.reloadData()
             case .failure(let error):
-                self.view?.showMessageAlert(title: "Error".localized, message: error.localizedDescription)
+                self.view?.showMessageAlert(title: .error, message: error.localizedDescription)
             }
         }//end closure
     }
@@ -158,7 +159,7 @@ extension AULocationPresenter: CLLocationManagerDelegate{
     
     func setupLMIfNeeded(){
         if !CLLocationManager.locationServicesEnabled() {
-            view?.showMessageAlert(title: "Error".localized, message: "Please enable lcation services".localized)
+            view?.showMessageAlert(title: .error, message: .enableLocationServices)
             return
         }
         locationManager = CLLocationManager()
@@ -195,15 +196,15 @@ extension AULocationPresenter: CLLocationManagerDelegate{
     
     private func updateUserLocation(location:CLLocation){
         let lang = MOLHLanguage.currentAppleLanguage()
-        showUniversalLoadingView(true)
+        APESuperHUD.show(style: .loadingIndicator(type: .standard), message: .loading)
         msGeocoderManager?.getLocationInfo(for: location, lang: lang) { [weak self] result in
             guard let self = self else { return }
-            showUniversalLoadingView(false)
+            APESuperHUD.dismissAll(animated: true)
             switch result {
             case .success(let response):
                 self.view?.popToOPListVC(location: response)
             case .failure(let error):
-                self.view?.showMessageAlert(title: "Error".localized, message: error.localizedDescription)
+                self.view?.showMessageAlert(title: .error, message: error.localizedDescription)
             }
         }// end closure
     }//end func

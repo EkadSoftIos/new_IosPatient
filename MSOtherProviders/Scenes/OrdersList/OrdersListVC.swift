@@ -1,8 +1,8 @@
 //
-//  EPrescriptionListVC.swift
+//  OrdersListVC.swift
 //  E4 Patient
 //
-//  Created by Mostafa Abd ElFatah on 5/30/22.
+//  Created by Mostafa Abd ElFatah on 6/8/22.
 //
 //
 
@@ -11,37 +11,32 @@ import APESuperHUD
 import KafkaRefresh
 import SwiftMessages
 
-
-
 //MARK: View -
-protocol EPrescriptionListViewProtocol: AnyObject {
-    var presenter: EPrescriptionListPresenterProtocol!  { get set }
+protocol OrdersListViewProtocol: AnyObject {
+    var presenter: OrdersListPresenterProtocol!  { get set }
     /**
      * Add here your methods for communication PRESENTER -> VIEW
      */
     
     func reloadData()
-    func showMessageAlert(title:String, message:String)
-    func showOtherProvidersList(request:RequestType)
+    func showMessageAlert(title: String, message: String)
 }
 
-class EPrescriptionListVC: UIViewController {
+class OrdersListVC: UIViewController {
 
     // MARK: - Public properties -
+    @IBOutlet var shadowsViews: [UIView]!
     @IBOutlet weak var tableView: UITableView!
-    var presenter: EPrescriptionListPresenterProtocol!
+    @IBOutlet weak var searchTextField: UITextField!
     
-    var type:MSType{
-        get{ presenter.type }
-        set{ presenter.type = newValue }
-    }
+    var presenter: OrdersListPresenterProtocol!
     
     // MARK: - Private properties -
     
     // MARK: - Initializers -
     init() {
-        super.init(nibName: "EPrescriptionList", bundle: nil)
-        presenter = EPrescriptionListPresenter(view: self)
+        super.init(nibName: "OrdersList", bundle: nil)
+        presenter = OrdersListPresenter(view: self)
     }
     
     required init?(coder: NSCoder) {
@@ -56,23 +51,28 @@ class EPrescriptionListVC: UIViewController {
     }
     
     func setupLayoutUI() {
-        title = "E-Prescriptions".localized
+        title = presenter.type.ordersListTitle
         APESuperHUD.show(style: .loadingIndicator(type: .standard), message: .loading)
+        searchTextField.delegate = self
+        shadowsViews.forEach ({ $0.applyShadow(0.3) })
+        tableView.register(UINib(nibName: "OrderCell", bundle: nil), forCellReuseIdentifier: "OrderCell")
         tableView.bindFootRefreshHandler({ [weak self] in
             guard let self = self else { return }
             self.presenter.loadMore()
         }, themeColor: .selectedPCColor, refreshStyle: .native)
-        tableView.register(UINib(nibName: "EPrescriptionCell", bundle: nil), forCellReuseIdentifier: "EPrescriptionCell")
         tableView.delegate = self
         tableView.dataSource = self
+    }
+    
+    @IBAction func filterBtnTapped(_ sender: Any) {
+
     }
 
 }
 
 // MARK: - Extensions -
-// MARK: - EPrescriptionListViewProtocol -
-extension EPrescriptionListVC: EPrescriptionListViewProtocol {
-
+extension OrdersListVC: OrdersListViewProtocol {
+    
     func reloadData(){
         tableView.reloadData()
         stopLoading()
@@ -87,31 +87,19 @@ extension EPrescriptionListVC: EPrescriptionListViewProtocol {
         APESuperHUD.dismissAll(animated: true)
         tableView.endRefreshing(presenter.canFetchMore)
     }
-    
-    func showOtherProvidersList(request:RequestType){
-        let vc = OtherProvidersListVC()
-        vc.type = presenter.type
-        vc.request = request
-        navigationController?.pushViewController(vc, animated: true)
-    }
 }
 
-
-// MARK: -  UITableViewDelegate, UITableViewDataSource -
-extension EPrescriptionListVC : UITableViewDelegate, UITableViewDataSource {
+extension OrdersListVC: UITableViewDelegate, UITableViewDataSource{
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let numberOfRows = presenter.numberOfEPrescriptions
-        if numberOfRows == 0 { tableView.setEmptyMessage() }
-        else { tableView.hiddenEmptyMessage() }
-        return numberOfRows
+        30 //presenter.numberOfRows
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "EPrescriptionCell", for: indexPath) as! EPrescriptionCell
-        
-        presenter.configEPrescriptionCell(cell: cell, indexPath: indexPath)
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "OrderCell", for: indexPath) as! OrderCell
+        //presenter.config(cell: cell, indexPath: indexPath)
         return cell
     }
+    
 }

@@ -11,6 +11,7 @@ enum NetworkError: Error {
     case invalidURL
     case unableToComplete
     case invalidResponse
+    case errorConnection
     case invalidData
     case custom(String)
 }
@@ -24,8 +25,10 @@ extension NetworkError: LocalizedError {
             return "Unable to complete the task".localized
         case .invalidResponse:
             return "Error in response".localized
-        case .invalidData:
+        case .errorConnection:
             return "Invalid data".localized
+        case .invalidData:
+            return "Please connect to the internet and try again.".localized
         case .custom(let error):
             return error
         }

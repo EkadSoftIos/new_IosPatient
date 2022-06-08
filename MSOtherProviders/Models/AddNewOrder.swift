@@ -72,8 +72,8 @@ struct OrderInfo: Codable {
 struct AddOrderRequest:Codable {
     
     var type:MSType? = nil
-    var doctorName:String? = nil
     var opBranchId:Int? = nil
+    var doctorName:String? = nil
     var prescriptionId:Int? = nil
     var filePathList:[String]? = nil
     var serviceBookingDetails:[MSOrderRequest]? = nil

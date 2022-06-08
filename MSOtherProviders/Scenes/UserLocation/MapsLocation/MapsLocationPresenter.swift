@@ -98,7 +98,7 @@ extension MapsLocationPresenter: MapsLocationPresenterProtocol {
             switch result {
             case .success(let response):
                 if let error = response.errormessage, response.successtate != 200 {
-                    self.view?.showMessageAlert(title: "Error".localized, message: error)
+                    self.view?.showMessageAlert(title: .error, message: error)
                     return
                 }
                 if response.opBranch.isEmpty {
@@ -115,7 +115,7 @@ extension MapsLocationPresenter: MapsLocationPresenterProtocol {
                 })
                 self.view?.addMarkers(opDisplayList: displays)
             case .failure(let error):
-                self.view?.showMessageAlert(title: "Error".localized, message: error.localizedDescription)
+                self.view?.showMessageAlert(title: .error, message: error.localizedDescription)
             }
         }//end closure
     }

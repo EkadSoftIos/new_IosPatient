@@ -168,4 +168,12 @@ extension MSType{
         case .rays: return "Choose Rays Category".localized
         }
     }
+    
+    //ordersListTitle
+    var ordersListTitle:String{
+        switch self {
+        case .labs: return "Lab Orders".localized
+        case .rays: return "Center Orders".localized
+        }
+    }
 }

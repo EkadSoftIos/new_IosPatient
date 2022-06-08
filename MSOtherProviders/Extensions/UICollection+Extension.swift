@@ -1,25 +1,14 @@
 //
-//  UITableView+Extensions.swift
+//  UICollection+Extension.swift
 //  E4 Patient
 //
-//  Created by Mostafa Abd ElFatah on 5/31/22.
+//  Created by Mostafa Abd ElFatah on 6/8/22.
 //
 
 import UIKit
-import KafkaRefresh
 
+extension UICollectionView {
 
-extension UITableView {
-
-    
-    func endRefreshing(_ isRefreshAvailable:Bool) {
-        if isRefreshAvailable {
-            footRefreshControl.endRefreshing()
-        }else{
-            footRefreshControl.endRefreshingAndNoLongerRefreshing(withAlertText: "")
-        }
-    }
-    
     func setEmptyMessage(_ message: String = "No data found".localized) {
         let messageLabel = UILabel(frame: CGRect(x: 0, y: 0, width: bounds.size.width, height: bounds.size.height))
         messageLabel.font = UIFont.font(style: .regular, size: 14)
