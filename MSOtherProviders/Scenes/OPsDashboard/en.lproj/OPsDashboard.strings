@@ -1,6 +1,6 @@
 
 /* Class = "UITextField"; placeholder = "Search here ..."; ObjectID = "27n-Cg-kFp"; */
-"27n-Cg-kFp.placeholder" = "بحث هنا ...";
+"27n-Cg-kFp.placeholder" = "Search here ...";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "3o0-j5-oaE"; */
 "3o0-j5-oaE.normalTitle" = "";
@@ -9,22 +9,25 @@
 "5kc-z4-R8a.normalTitle" = "";
 
 /* Class = "UIButton"; configuration.title = "View"; ObjectID = "8Ww-4g-d3g"; */
-"8Ww-4g-d3g.normalTitle" = "عرض";
+"8Ww-4g-d3g.normalTitle" = "View";
 
 /* Class = "UILabel"; text = "E-Prescriptions"; ObjectID = "T3H-XA-INV"; */
-"T3H-XA-INV.text" = "روشته طبيه";
+"T3H-XA-INV.text" = "E-Prescriptions";
 
 /* Class = "UIButton"; configuration.title = "See All"; ObjectID = "TQv-Cb-9TX"; */
-"TQv-Cb-9TX.normalTitle" = "رؤية الكل";
+"TQv-Cb-9TX.normalTitle" = "See All";
 
 /* Class = "UILabel"; text = "Find Test"; ObjectID = "dvt-vN-0i2"; */
-"dvt-vN-0i2.text" = "Find";
+"dvt-vN-0i2.text" = "Find Test";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "i8Y-zY-CVS"; */
 "i8Y-zY-CVS.normalTitle" = "";
 
 /* Class = "UILabel"; text = "My Orders"; ObjectID = "oTB-zj-VN7"; */
-"oTB-zj-VN7.text" = "طلباتي";
+"oTB-zj-VN7.text" = "My Orders";
 
 /* Class = "UILabel"; text = "Upload E-Prescription"; ObjectID = "sfl-Li-PBv"; */
-"sfl-Li-PBv.text" = "تحميل روشته";
+"sfl-Li-PBv.text" = "Upload E-Prescription";
+
+/* Class = "UILabel"; text = "No Ads Found"; ObjectID = "s7g-hJ-Rah"; */
+"s7g-hJ-Rah.text" = "No Ads Found";

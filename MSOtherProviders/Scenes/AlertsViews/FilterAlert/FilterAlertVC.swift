@@ -93,7 +93,7 @@ class FilterAlertVC: UIViewController {
     
     @IBAction func doneBtnTapped(_ sender: Any) {
         guard let selectedIndexPath = tableView.indexPathsForSelectedRows?.first else {
-            showMessageAlert(title: "Error".localized, message: "Please select filter".localized)
+            showMessageAlert(title: .error, message: "Please select filter".localized)
             return
         }
         hander?(presenter.selectedSort(at: selectedIndexPath))

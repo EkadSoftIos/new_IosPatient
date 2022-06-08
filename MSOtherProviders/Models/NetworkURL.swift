@@ -12,43 +12,6 @@ typealias URLs = NetworkURL.URLs
 
 
 class NetworkURL{
-        
-    enum URLs{
-        // MARK: - Private properties -
-        //rootURL = "https://e4clinicdevapi.ekadsoft.org/api/"
-        private static let rootURL = Constants.baseURL
-        private static let otherProvider = "\(rootURL)OtherProvider/"
-        private static let lookup = "\(rootURL)Lookup/"
-        
-        
-        // MARK: - public properties -
-        public static let baseURLImage = "https://e4clinicdevapi.ekadsoft.org/"
-        public static let otherProviderDashboard:String =
-            "\(otherProvider)GetDashBoard"
-        public static let searchServiceListForPatient:String =
-            "\(otherProvider)SearchServiceListForPatient"
-        public static let ePrescriptions:String =
-            "\(otherProvider)GetPrescriptions"
-        public static let otherProviders:String =
-            "\(otherProvider)OtherProvidersSearch"
-        public static let availableCountries:String =
-            "\(lookup)Country_get_all_full"
-        public static let opBranchDetails:String =
-            "\(otherProvider)GetOtherProviderBranchData"
-        public static let serviceTypeList:String =
-            "\(otherProvider)GetServiceTypeList"
-        
-    }
-    
-    enum URLTypes {
-        case otherProviderDashboard(MSOPServicesRequest)
-        case searchServiceListForPatient(MSOPServicesRequest)
-        case ePrescriptions(EPrescriptionRequest)
-        case otherProviders(OPRequest)
-        case availableCountries
-        case opBranchDetails(OPBranchDetailsRequest)
-        case serviceTypeList(MSOPServicesRequest)
-    }
     
     // MARK: - Private properties -
     private let type:URLTypes
@@ -79,9 +42,14 @@ class NetworkURL{
             return URL(string:  "\(URLs.opBranchDetails)")
         case .serviceTypeList(_):
             return URL(string:  "\(URLs.serviceTypeList)")
+        case .addNewOrder(_):
+            return URL(string:  "\(URLs.addNewOrder)")
+        case .uploadImages:
+            return URL(string:  "\(URLs.uploadImages)")
+        case .upFilesRequest(_):
+            return URL(string:  "\(URLs.uploadPrescriptionFiles)")
         }
     }
-    
     // MARK: - method -
     var method:HTTPMethod{
         switch self.type {
@@ -91,7 +59,10 @@ class NetworkURL{
                 .searchServiceListForPatient(_),
                 .ePrescriptions(_),
                 .otherProviders(_),
-                .opBranchDetails(_):
+                .opBranchDetails(_),
+                .addNewOrder(_),
+                .uploadImages,
+                .upFilesRequest(_):
             return .post
         }
     }
@@ -103,7 +74,6 @@ class NetworkURL{
                 .serviceTypeList(let msOPSRequest),
                 .otherProviderDashboard(let msOPSRequest),
                 .searchServiceListForPatient(let msOPSRequest):
-            print(msOPSRequest.dictionary)
             return msOPSRequest.dictionary
         case .ePrescriptions(let epRequest):
             return epRequest.dictionary
@@ -111,7 +81,11 @@ class NetworkURL{
             return opRequest.dictionary
         case .opBranchDetails(let branchDetailsRequest):
             return branchDetailsRequest.dictionary
-        case .availableCountries:
+        case .addNewOrder(let addOrderRequest):
+            return addOrderRequest.dictionary
+        case .upFilesRequest(let upFilesRequest):
+            return upFilesRequest.dictionary
+        case .availableCountries, .uploadImages:
             return nil
         }
     }
@@ -128,7 +102,10 @@ class NetworkURL{
                 .otherProviders(_),
                 .availableCountries,
                 .opBranchDetails(_),
-                .serviceTypeList(_):
+                .serviceTypeList(_),
+                .addNewOrder(_),
+                .uploadImages,
+                .upFilesRequest(_):
             return .authHeaderIfLogin
         }
     }
@@ -145,7 +122,10 @@ class NetworkURL{
                 .ePrescriptions(_),
                 .otherProviders(_),
                 .availableCountries,
-                .opBranchDetails(_):
+                .opBranchDetails(_),
+                .addNewOrder(_),
+                .uploadImages,
+                .upFilesRequest(_):
             return JSONEncoding.default            
         }
     }
@@ -183,6 +163,54 @@ extension HTTPHeaders {
     
 }
 
+extension NetworkURL{
+        
+    enum URLTypes {
+        case otherProviderDashboard(MSOPServicesRequest)
+        case searchServiceListForPatient(MSOPServicesRequest)
+        case ePrescriptions(EPrescriptionRequest)
+        case otherProviders(OPRequest)
+        case availableCountries
+        case opBranchDetails(OPBranchDetailsRequest)
+        case serviceTypeList(MSOPServicesRequest)
+        case addNewOrder(AddOrderRequest)
+        case uploadImages
+        case upFilesRequest(UPFilesRequest)
+    }
+    
+    enum URLs{
+        // MARK: - Private properties -
+        //rootURL = "https://e4clinicdevapi.ekadsoft.org/api/"
+        private static let rootURL = Constants.baseURL
+        private static let otherProvider = "\(rootURL)OtherProvider/"
+        private static let lookup = "\(rootURL)Lookup/"
+        private static let common = "\(rootURL)Common/"
+        
+        // MARK: - public properties -
+        public static let baseURLImage = "https://e4clinicdevapi.ekadsoft.org/"
+        public static let otherProviderDashboard:String =
+            "\(otherProvider)GetDashBoard"
+        public static let searchServiceListForPatient:String =
+            "\(otherProvider)SearchServiceListForPatient"
+        public static let ePrescriptions:String =
+            "\(otherProvider)GetPrescriptions"
+        public static let otherProviders:String =
+            "\(otherProvider)OtherProvidersSearch"
+        public static let availableCountries:String =
+            "\(lookup)Country_get_all_full"
+        public static let opBranchDetails:String =
+            "\(otherProvider)GetOtherProviderBranchData"
+        public static let serviceTypeList:String =
+            "\(otherProvider)GetServiceTypeList"
+        public static let addNewOrder:String =
+            "\(otherProvider)AddNewOrder"
+        public static let uploadImages:String =
+            "\(common)FormDataUploadMultiple"
+        public static let uploadPrescriptionFiles:String =
+            "\(otherProvider)UploadPrescriptionFiles"
+    }
+    
+}
 extension UserDefaults{
     
     public static var userToken:String{

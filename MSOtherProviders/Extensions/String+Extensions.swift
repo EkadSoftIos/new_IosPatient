@@ -8,11 +8,37 @@
 import UIKit
 
 
+extension String{
+    
+    public static var loading:String{
+        "Loading...".localized
+    }
+    
+    public static var storeOrder:String{
+        "Please, wait your order is being booked.".localized
+    }
+    
+    public static var uploadingImges:String{
+        "Uploading Prescriptions images.".localized
+    }
+    
+    public static var error:String{
+        "Error".localized
+    }
+    
+    public static var enableLocationServices:String{
+        "Please Enable Location Services in the Settings".localized
+    }
+    
+}
 
 extension String {
+    
+    
     func ifBlank(use string: String) -> String {
         isBlank ? string : self
     }
+    
     var isBlank: Bool {
         trimmingCharacters(in: .whitespacesAndNewlines).isEmpty || trimmingCharacters(in: .whitespacesAndNewlines).lowercased() == "null"
     }

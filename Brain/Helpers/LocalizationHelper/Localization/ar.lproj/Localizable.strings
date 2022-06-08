@@ -260,3 +260,9 @@
 "Choose Tests Category" = "اختيار تصنيف التحاليل";
 "Choose Rays Category" = "اختيار تصنيف الأشعة";
 "Total Cost" = "التكلفة الإجمالية";
+"Loading..." = "جاري التحميل...";
+"Uploading Prescriptions images." = "جاري تحميل صور الروشتات.";
+"Please, wait your order is being booked." = "من فضلك انتظر، حاري الحجز";
+"By Dr:" = "بواسطة الدكتور:";
+"Lab Orders" = "طلبات المعمل";
+"Center Orders" = "طلبات المركز";

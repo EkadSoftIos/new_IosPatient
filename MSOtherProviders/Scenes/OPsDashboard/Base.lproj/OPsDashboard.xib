@@ -19,6 +19,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OPsDashboardVC">
             <connections>
+                <outlet property="adsLabel" destination="s7g-hJ-Rah" id="pIM-TO-b0k"/>
                 <outlet property="msImageView" destination="sel-Zu-W8Q" id="zxa-C4-LIK"/>
                 <outlet property="msLabel" destination="dvt-vN-0i2" id="5Kx-TU-MKH"/>
                 <outlet property="pageControl" destination="hxV-Wr-FzG" id="ard-BQ-8D0"/>
@@ -42,6 +43,15 @@
                     <rect key="frame" x="0.0" y="114.5" width="414" height="224"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </view>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Ads Found" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s7g-hJ-Rah">
+                    <rect key="frame" x="0.0" y="114.5" width="414" height="224"/>
+                    <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="16"/>
+                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="heightClass=regular-widthClass=regular">
+                        <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="24"/>
+                    </variation>
+                </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hxV-Wr-FzG" customClass="FSPageControl" customModule="FSPagerView">
                     <rect key="frame" x="10" y="348.5" width="394" height="20"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -325,8 +335,12 @@
                 <constraint firstItem="XGD-xd-pIR" firstAttribute="leading" secondItem="CKP-TG-O7o" secondAttribute="leading" id="XOH-AE-TzX"/>
                 <constraint firstItem="bJ0-QY-uHZ" firstAttribute="top" secondItem="Jfe-RK-giA" secondAttribute="bottom" constant="10" id="YZg-Bn-aQ6"/>
                 <constraint firstItem="hxV-Wr-FzG" firstAttribute="top" secondItem="agi-m2-5FS" secondAttribute="bottom" constant="10" id="dxN-Aa-PXD"/>
+                <constraint firstItem="s7g-hJ-Rah" firstAttribute="leading" secondItem="agi-m2-5FS" secondAttribute="leading" id="e0j-qN-yGH"/>
                 <constraint firstItem="CKP-TG-O7o" firstAttribute="trailing" secondItem="bJ0-QY-uHZ" secondAttribute="trailing" id="jh6-v1-9EU"/>
+                <constraint firstItem="s7g-hJ-Rah" firstAttribute="trailing" secondItem="agi-m2-5FS" secondAttribute="trailing" id="jvl-Am-pIK"/>
                 <constraint firstItem="CKP-TG-O7o" firstAttribute="trailing" secondItem="LFZ-QK-Hva" secondAttribute="trailing" constant="20" id="kxM-I3-xGp"/>
+                <constraint firstItem="s7g-hJ-Rah" firstAttribute="bottom" secondItem="agi-m2-5FS" secondAttribute="bottom" id="l8K-d3-ZyB"/>
+                <constraint firstItem="s7g-hJ-Rah" firstAttribute="top" secondItem="agi-m2-5FS" secondAttribute="top" id="lhD-LE-Teq"/>
                 <constraint firstItem="hxV-Wr-FzG" firstAttribute="leading" secondItem="CKP-TG-O7o" secondAttribute="leading" constant="10" id="qWu-3n-4IX"/>
                 <constraint firstItem="Jfe-RK-giA" firstAttribute="leading" secondItem="CKP-TG-O7o" secondAttribute="leading" id="riG-I8-VJ8"/>
                 <constraint firstItem="CKP-TG-O7o" firstAttribute="trailing" secondItem="hxV-Wr-FzG" secondAttribute="trailing" constant="10" id="u0z-Or-b2x"/>

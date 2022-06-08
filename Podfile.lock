@@ -597,6 +597,7 @@ PODS:
     - abseil/base/config
     - abseil/meta/type_traits
   - Alamofire (5.6.1)
+  - APESuperHUD (2.0.1)
   - AppAuth (1.5.0):
     - AppAuth/Core (= 1.5.0)
     - AppAuth/ExternalUserAgent (= 1.5.0)
@@ -926,6 +927,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - APESuperHUD
   - Cosmos
   - DLRadioButton
   - FacebookCore
@@ -963,6 +965,7 @@ SPEC REPOS:
   trunk:
     - abseil
     - Alamofire
+    - APESuperHUD
     - AppAuth
     - BoringSSL-GRPC
     - Cosmos
@@ -1021,6 +1024,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   abseil: ebe5b5529fb05d93a8bdb7951607be08b7fa71bc
   Alamofire: 87bd8c952f9a4454320fce00d9cc3de57bcadaf5
+  APESuperHUD: 18ce2f9f114dd38d8fef5a6831e71ae9634cfc26
   AppAuth: 80317d99ac7ff2801a2f18ff86b48cd315ed465d
   BoringSSL-GRPC: 3175b25143e648463a56daeaaa499c6cb86dad33
   Cosmos: b5c6a9a637e28a061b54c8f8b1d8529d7d4db73f
@@ -1076,6 +1080,6 @@ SPEC CHECKSUMS:
   TransitionButton: 36283346e17c64775a1b3bc3a7a72940a367de1f
   "UIView+Shake": 055ad67721de1f74d29c0a1d464697e505dfc62f
 
-PODFILE CHECKSUM: 390c97bd4d21561802e30b50aa2626cd24eafde1
+PODFILE CHECKSUM: aaeb7c73ed1bd3ef97ea50075a3639128a7018dd
 
 COCOAPODS: 1.11.3

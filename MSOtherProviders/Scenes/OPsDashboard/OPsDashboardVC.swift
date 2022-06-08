@@ -9,8 +9,8 @@
 import UIKit
 import Kingfisher
 import FSPagerView
+import APESuperHUD
 import SwiftMessages
-
 
 
 //MARK: View -
@@ -31,6 +31,7 @@ class OPsDashboardVC: UIViewController {
     @IBOutlet var roundedViews: [UIView]!
     @IBOutlet var shadowsViews: [UIView]!
     @IBOutlet weak var msLabel: UILabel!
+    @IBOutlet weak var adsLabel: UILabel!
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var pageControl: FSPageControl!
     @IBOutlet var pagerSlider: FSPagerView!
@@ -70,7 +71,7 @@ class OPsDashboardVC: UIViewController {
     private func setupLayout(){
         setupPagerSlider()
         title = presenter.title
-        showUniversalLoadingView(true)
+        APESuperHUD.show(style: .loadingIndicator(type: .standard), message: .loading)
         msLabel.text = presenter.msLabelTitle
         searchTextField.delegate = self
         msImageView.image = UIImage(named: presenter.type.msImageNamed)
@@ -159,13 +160,13 @@ extension OPsDashboardVC:UITextFieldDelegate{
 extension OPsDashboardVC: OPsDashboardViewProtocol {
     
     func reloadData(){
-        showUniversalLoadingView(false)
+        APESuperHUD.dismissAll(animated: true)
         pagerSlider.reloadData()
         tableView.reloadData()
     }
     
     func showMessageAlert(title: String, message: String) {
-        showUniversalLoadingView(false)
+        APESuperHUD.dismissAll(animated: true)
         showMessage(title: title, sub: message, type: Theme.error, layout: .centeredView)
     }
     
@@ -179,6 +180,7 @@ extension OPsDashboardVC: OPsDashboardViewProtocol {
     
 }
 
+// MARK: - OPsDashboardVC UITableViewDelegate UITableViewDataSource -
 extension OPsDashboardVC : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -197,11 +199,13 @@ extension OPsDashboardVC : UITableViewDelegate, UITableViewDataSource {
     }
 }
 
+// MARK: - OPsDashboardVC FSPagerViewDelegate FSPagerViewDataSource -
 extension OPsDashboardVC : FSPagerViewDelegate, FSPagerViewDataSource {
     
     func numberOfItems(in pagerView: FSPagerView) -> Int {
         let numberOfItems = presenter.numberOfAds
         pageControl.numberOfPages = numberOfItems
+        adsLabel.isHidden = numberOfItems > 0
         return numberOfItems
     }
     
@@ -228,6 +232,7 @@ extension OPsDashboardVC : FSPagerViewDelegate, FSPagerViewDataSource {
 }
 
 
+// MARK: - OPsDashboardVC ImagePickerDelegate -
 extension OPsDashboardVC: ImagePickerDelegate{
     func wrapperDidPress(_ imagePicker: ImagePickerController, images: [UIImage]) {
         
@@ -247,6 +252,7 @@ extension OPsDashboardVC: ImagePickerDelegate{
 }
 
 
+// MARK: - OPsDashboardVC UIImagePickerControllerDelegate -
 extension OPsDashboardVC: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {

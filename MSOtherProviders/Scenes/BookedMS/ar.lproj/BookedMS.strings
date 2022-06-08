@@ -1,0 +1,18 @@
+
+/* Class = "UILabel"; text = "Your Discount created successfully"; ObjectID = "2cL-TJ-l6g"; */
+"2cL-TJ-l6g.text" = "تم إنشاء الخصم الخاص بك بنجاح";
+
+/* Class = "UILabel"; text = "Your booking  Barcode"; ObjectID = "4XB-7Q-y7F"; */
+"4XB-7Q-y7F.text" = "الباركود الخاص بحجزك";
+
+/* Class = "UILabel"; text = "by Dr: Ahmed Karim"; ObjectID = "Sev-A7-5dI"; */
+"Sev-A7-5dI.text" = "";
+
+/* Class = "UILabel"; text = "Your booking QR Code"; ObjectID = "XmI-TN-iaM"; */
+"XmI-TN-iaM.text" = " الخاص بحجزك QR Code ال";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "1R7-Oh-RGj"; */
+"1R7-Oh-RGj.normalTitle" = "الصفحة الرئسية";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "GgG-oR-Ume"; */
+"GgG-oR-Ume.normalTitle" = "طلباتي";

@@ -109,14 +109,14 @@ extension OtherProvidersListPresenter: OtherProvidersListPresenterProtocol {
             switch result {
             case .success(let response):
                 if let error = response.errormessage, response.successtate != 200 {
-                    self.view?.showMessageAlert(title: "Error".localized, message: error)
+                    self.view?.showMessageAlert(title: .error, message: error)
                     return
                 }
                 self.rowsNumberOfPage = response.opBranch.count
                 self.opBranchesList.append(contentsOf: response.opBranch)
                 self.view?.reloadData()
             case .failure(let error):
-                self.view?.showMessageAlert(title: "Error".localized, message: error.localizedDescription)
+                self.view?.showMessageAlert(title: .error, message: error.localizedDescription)
             }
         }//end closure
     }

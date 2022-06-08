@@ -7,7 +7,8 @@
 //
 
 import Foundation
-import UIKit
+import APESuperHUD
+import SwiftUI
 
 //MARK: Presenter -
 protocol OPProfilePresenterProtocol: AnyObject {
@@ -25,6 +26,7 @@ protocol OPProfilePresenterProtocol: AnyObject {
     func add(images:[Image])
     func addNewServices(servicesList:[Service])
     func config(msView:MSViewProtocol)
+    func bookingServices()
 }
 
 class OPProfilePresenter {
@@ -66,8 +68,10 @@ class OPProfilePresenter {
     }
     
     // MARK: - Private properties -
+    //
     private var pageType:MSType!
     private var msList:[Service] = []
+    private var availableMSList:[ServicePriceList] = []
     private var imagesList:[Image] = []
     private var requestType:RequestType?
     private var branchRequest:OPBranchDetailsRequest?
@@ -106,34 +110,35 @@ extension OPProfilePresenter: OPProfilePresenterProtocol {
     func fetchBranchDetails(){
         branchRequest?.serviceIdList = msList.map({ $0.serviceID })
         guard let request = branchRequest else { return }
-        showUniversalLoadingView(true)
+        APESuperHUD.show(style: .loadingIndicator(type: .standard), message: .loading)
         let url = NetworkURL(.opBranchDetails(request))
         msNetworkRepository?.fetch(OPBranchDetailsReponse.self, from: url) { [weak self] result in
             guard let self = self else { return }
-            showUniversalLoadingView(false)
+            APESuperHUD.dismissAll(animated: true)
             switch result {
             case .success(let response):
                 if let error = response.errormessage, response.successtate != 200 {
-                    self.view?.showMessageAlert(title: "Error".localized, message: error)
+                    self.view?.showMessageAlert(title: .error, message: error)
                     return
                 }
                 self.opBranchDetails = response.branchDetails
+                self.availableMSList.removeAll()
+                self.availableMSList.append(contentsOf: response.branchDetails.servicePriceList ?? [])
                 self.view?.setBranchDetails(display: OPBranchDetailsDispaly(branch: response.branchDetails))
                 self.view?.addMSSummary()
             case .failure(let error):
-                self.view?.showMessageAlert(title: "Error".localized, message: error.localizedDescription)
+                self.view?.showMessageAlert(title: .error, message: error.localizedDescription)
             }
         }//end closure
     }
     
     // MARK: - config MSViewProtocol -
     func config(msView:MSViewProtocol){
-        let servicesList = opBranchDetails?
-            .servicePriceList?.compactMap({ ServiceViewDisplay($0) }) ?? []
+        let servicesList = availableMSList.compactMap({ ServiceViewDisplay($0) })
         
         var totalPrice = 0.0
         var totalPriceBefore = 0.0
-        opBranchDetails?.servicePriceList?.forEach({
+        availableMSList.forEach({
             totalPriceBefore += $0.price
             totalPrice += $0.priceAfterDiscount
         })
@@ -149,11 +154,140 @@ extension OPProfilePresenter: OPProfilePresenterProtocol {
     }
 }
 
+
+// MARK: - OPProfilePresenter Store Order  -
+extension OPProfilePresenter{
+    
+    
+    // MARK: -  bookingServices  -
+    func bookingServices() {
+        guard let branch = opBranchDetails else { return }
+        let serviceBookingDetailsList = availableMSList.map({
+            MSOrderRequest(
+                serviceId: $0.serviceFk,
+                price: $0.price,
+                priceAfterDiscount: $0.priceAfterDiscount,
+                commessionValue: $0.commessionNetValue
+            )
+        })
+
+        switch requestType{
+        case .services(_):
+            let request = AddOrderRequest(
+                type: pageType,
+                opBranchId: branch.otherProviderBranchID,
+                serviceBookingDetails: serviceBookingDetailsList
+            )
+            storeServiceOrder(request)
+        case .eprescription(let ep):
+            let request = AddOrderRequest(
+                type: pageType,
+                opBranchId: branch.otherProviderBranchID,
+                doctorName: ep.doctorNameLocalized,
+                prescriptionId: ep.preescriptionID,
+                serviceBookingDetails:serviceBookingDetailsList
+            )
+            storeServiceOrder(request, ep:ep)
+        case .uploadImage(_):
+            let request = AddOrderRequest(
+                type: pageType,
+                opBranchId: branch.otherProviderBranchID,
+                serviceBookingDetails: serviceBookingDetailsList
+            )
+            uploadImages(request)
+        default:
+            break
+        }
+    }
+    
+    // MARK: -  storeServiceOrder  -
+    private func storeServiceOrder(_ request:AddOrderRequest, ep:EPrescription? = nil){
+        APESuperHUD.show(style: .loadingIndicator(type: .standard), message: .storeOrder)
+        let url = NetworkURL(.addNewOrder(request))
+        msNetworkRepository?.fetch(AddOrderReponse.self, from: url){ [weak self] result in
+            APESuperHUD.dismissAll(animated: true)
+            guard let self = self else { return }
+            switch result {
+            case .success(let response):
+                if let error = response.errormessage, response.successtate != 200 {
+                    self.view?.showMessageAlert(title: .error, message: error)
+                    return
+                }
+                self.view?.showBookedServices(response.orderInfo, ep: ep)
+            case .failure(let error):
+                self.view?.showMessageAlert(title: .error, message: error.localizedDescription)
+            }
+        }//end closure
+    }
+    
+    // MARK: -  uploadImages  -
+    private func uploadImages(_ request:AddOrderRequest){
+        APESuperHUD.show(style: .loadingIndicator(type: .standard), message: .uploadingImges)
+        var imagesData:[(name:String, image:Data)] = []
+        for index in 0...imagesList.count - 1{
+            if let imgData = imagesList[index].pngData(){
+                imagesData.append(("prescription\( UUID().uuidString)", imgData))
+            }
+        }
+        let url = NetworkURL(.uploadImages)
+        msNetworkRepository?.upload(imagesData, UPImagesReponse.self, from: url){ [weak self] result in
+            guard let self = self else { return }
+            switch result {
+            case .success(let response):
+                if let error = response.errormessage, response.successtate != 200 {
+                    APESuperHUD.dismissAll(animated: true)
+                    self.view?.showMessageAlert(title: .error, message: error)
+                    return
+                }
+                let addOrderRequest = AddOrderRequest(
+                    type: request.type,
+                    opBranchId: request.opBranchId,
+                    doctorName: request.doctorName,
+                    prescriptionId: request.prescriptionId,
+                    filePathList:  response.filePathList,
+                    serviceBookingDetails: request.serviceBookingDetails
+                )
+                self.linkUploadPrescriptionFiles(addOrderRequest)
+            case .failure(let error):
+                APESuperHUD.dismissAll(animated: true)
+                self.view?.showMessageAlert(title: .error, message: error.localizedDescription)
+            }
+        }//end closure
+    }
+    
+    // MARK: -  linkUploadPrescriptionFiles  -
+    private func linkUploadPrescriptionFiles(_ request:AddOrderRequest){
+        let upFilesequest = UPFilesRequest(
+            type: request.type,
+            filePathList: request.filePathList
+        )
+        let url = NetworkURL(.upFilesRequest(upFilesequest))
+        msNetworkRepository?.fetch(UPFilesReponse.self, from: url){ [weak self] result in
+            guard let self = self else { return }
+            switch result {
+            case .success(let response):
+                if let error = response.errormessage, response.successtate != 200 {
+                    APESuperHUD.dismissAll(animated: true)
+                    self.view?.showMessageAlert(title: .error, message: error)
+                    return
+                }
+                self.storeServiceOrder(request)
+            case .failure(let error):
+                APESuperHUD.dismissAll(animated: true)
+                self.view?.showMessageAlert(title: .error, message: error.localizedDescription)
+            }
+        }//end closure
+    }
+    
+}
+
+
 // MARK: - ImageCellPresenter -
 extension OPProfilePresenter:MSViewPresenter{
     
-    func deleteMS(at: Int){
-        print("OPProfilePresenter did deleted MS")
+    func deleteMS(at index: Int){
+        availableMSList.remove(at: index)
+        view?.addMSSummary()
     }
     
 }
