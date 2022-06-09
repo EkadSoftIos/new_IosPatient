@@ -1686,8 +1686,8 @@
 		06893D622850948900864584 /* OrderCell */ = {
 			isa = PBXGroup;
 			children = (
-				06893D63285094B000864584 /* OrderCell.swift */,
 				06893D64285094B000864584 /* OrderCell.xib */,
+				06893D63285094B000864584 /* OrderCell.swift */,
 			);
 			path = OrderCell;
 			sourceTree = "<group>";

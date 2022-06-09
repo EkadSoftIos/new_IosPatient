@@ -110,8 +110,20 @@ class OPsDashboardVC: UIViewController {
     }
     
     
-    @IBAction func showOrdersList(_ sender: UIButton) {
-        
+    @IBAction func showOrdersListBtnTapped(_ sender: UIButton) {
+        showOrdersList()
+    }
+    
+    func showOrdersList(delay:Double = 0.0){
+        func showOrdersListVC(){
+            let vc = OrdersListVC()
+            vc.presenter.type = presenter.type
+            navigationController?.pushViewController(vc, animated: true)
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + delay, execute: { [weak self] in
+            guard self != nil else { return }
+            showOrdersListVC()
+        })
     }
     
     @IBAction func showEPrescriptionsList(_ sender: UIButton) {

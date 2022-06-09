@@ -7,17 +7,15 @@
 
 import UIKit
 
+
 class OrderCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
+    @IBOutlet weak var numLabel: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var msNumLabel: UILabel!
+    @IBOutlet weak var branchNameLabel: UILabel!
+    @IBOutlet weak var branchImageView: UIImageView!
     
 }
