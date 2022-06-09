@@ -24,7 +24,7 @@ target 'E4 Patient' do
   pod 'iOSDropDown'
   #pod 'ImagePicker'
   pod 'KafkaRefresh'
-  pod 'APESuperHUD'
+  pod 'PKHUD'
   pod 'Firebase/Firestore'
   pod 'Firebase'
   pod 'Firebase/Analytics'

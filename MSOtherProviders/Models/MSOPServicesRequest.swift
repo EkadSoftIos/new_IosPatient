@@ -55,6 +55,14 @@ extension Encodable {
 }
 
 extension MSType{
+    
+    var othersType:MSType{
+        switch self {
+        case .labs: return .rays
+        case .rays: return .labs
+        }
+    }
+    
 
     var btnName:String{
         switch self {

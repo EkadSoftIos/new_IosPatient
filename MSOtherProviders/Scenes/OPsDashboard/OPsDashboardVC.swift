@@ -7,9 +7,9 @@
 //
 
 import UIKit
+import PKHUD
 import Kingfisher
 import FSPagerView
-import APESuperHUD
 import SwiftMessages
 
 
@@ -70,8 +70,8 @@ class OPsDashboardVC: UIViewController {
     
     private func setupLayout(){
         setupPagerSlider()
+        HUD.show(.progress)
         title = presenter.title
-        APESuperHUD.show(style: .loadingIndicator(type: .standard), message: .loading)
         msLabel.text = presenter.msLabelTitle
         searchTextField.delegate = self
         msImageView.image = UIImage(named: presenter.type.msImageNamed)
@@ -160,13 +160,13 @@ extension OPsDashboardVC:UITextFieldDelegate{
 extension OPsDashboardVC: OPsDashboardViewProtocol {
     
     func reloadData(){
-        APESuperHUD.dismissAll(animated: true)
+        HUD.flash(.success)
         pagerSlider.reloadData()
         tableView.reloadData()
     }
     
     func showMessageAlert(title: String, message: String) {
-        APESuperHUD.dismissAll(animated: true)
+        
         showMessage(title: title, sub: message, type: Theme.error, layout: .centeredView)
     }
     

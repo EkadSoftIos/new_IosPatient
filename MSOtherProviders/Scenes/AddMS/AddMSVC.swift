@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import APESuperHUD
+import PKHUD
 import iOSDropDown
 import KafkaRefresh
 import SwiftMessages
@@ -59,12 +59,12 @@ class AddMSVC: UIViewController {
     }
     
     func setupLayoutUI() {
+        HUD.show(.progress)
         title = presenter.type.addMSTitle
         shadowsViews.forEach({ $0.applyShadow(0.3) })
         bottomShadowsViews.forEach({
             $0.applyShadow(0.15, shadowRadius: 2, shadowOffset: CGSize(width: -1, height: 2))
         })
-        APESuperHUD.show(style: .loadingIndicator(type: .standard), message: .loading)
         addBtn.setTitle(presenter.type.addMSTitle, for: .normal)
         searchTextField.placeholder = presenter.type.msSearchPlaceholder
         searchTextField.delegate = self
@@ -106,7 +106,7 @@ class AddMSVC: UIViewController {
     @IBAction func addMSBtnTapped(_ sender: Any) {
         guard let selectedIndexPaths = tableView.indexPathsForSelectedRows,
              !selectedIndexPaths.isEmpty else {
-                 showMessageAlert(title: .error, message: "Please choose at least one".localized)
+                 showMessageAlert(title: .error, message: .chooseMS)
             return
         }
         print(selectedIndexPaths)
@@ -131,8 +131,9 @@ extension AddMSVC:UITextFieldDelegate{
 extension AddMSVC: AddMSViewProtocol {
     
     func reloadData(){
-        tableView.reloadData()
         stopLoading()
+        HUD.flash(.success)
+        tableView.reloadData()
     }
     
     func reloadDropDown(optionArray:[String]){
@@ -141,11 +142,12 @@ extension AddMSVC: AddMSViewProtocol {
     
     func showMessageAlert(title: String, message: String) {
         stopLoading()
+        HUD.flash(.error)
         showMessage(title: title, sub: message, type: Theme.error, layout: .centeredView)
     }
     
     private func stopLoading(){
-        APESuperHUD.dismissAll(animated: true)
+        
         tableView.endRefreshing(presenter.canFetchMore)
     }
     

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import APESuperHUD
+import PKHUD
 import KafkaRefresh
 import SwiftMessages
 
@@ -51,8 +51,8 @@ class OrdersListVC: UIViewController {
     }
     
     func setupLayoutUI() {
+        HUD.show(.progress)
         title = presenter.type.ordersListTitle
-        APESuperHUD.show(style: .loadingIndicator(type: .standard), message: .loading)
         searchTextField.delegate = self
         shadowsViews.forEach ({ $0.applyShadow(0.3) })
         tableView.register(UINib(nibName: "OrderCell", bundle: nil), forCellReuseIdentifier: "OrderCell")
@@ -71,20 +71,34 @@ class OrdersListVC: UIViewController {
 }
 
 // MARK: - Extensions -
+// MARK: - UITextFieldDelegate Extension -
+extension OrdersListVC:UITextFieldDelegate{
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        guard let text = searchTextField.text?.trimmingCharacters(in: .whitespaces),
+            !text.isEmpty
+        else { return false }
+        //presenter.showSearchResultVC(searchText: text)
+        return false
+    }
+    
+}
 extension OrdersListVC: OrdersListViewProtocol {
     
     func reloadData(){
-        tableView.reloadData()
         stopLoading()
+        HUD.flash(.success)
+        tableView.reloadData()
     }
     
     func showMessageAlert(title: String, message: String) {
         stopLoading()
+        HUD.flash(.error)
         showMessage(title: title, sub: message, type: Theme.error, layout: .centeredView)
     }
     
     private func stopLoading(){
-        APESuperHUD.dismissAll(animated: true)
         tableView.endRefreshing(presenter.canFetchMore)
     }
 }

@@ -30,6 +30,10 @@ extension String{
         "Please Enable Location Services in the Settings".localized
     }
     
+    public static var chooseMS:String{
+        "Please choose at least one".localized
+    }
+    
 }
 
 extension String {

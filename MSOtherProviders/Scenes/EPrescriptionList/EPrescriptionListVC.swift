@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import APESuperHUD
+import PKHUD
 import KafkaRefresh
 import SwiftMessages
 
@@ -56,8 +56,8 @@ class EPrescriptionListVC: UIViewController {
     }
     
     func setupLayoutUI() {
+        HUD.show(.progress)
         title = "E-Prescriptions".localized
-        APESuperHUD.show(style: .loadingIndicator(type: .standard), message: .loading)
         tableView.bindFootRefreshHandler({ [weak self] in
             guard let self = self else { return }
             self.presenter.loadMore()
@@ -74,17 +74,18 @@ class EPrescriptionListVC: UIViewController {
 extension EPrescriptionListVC: EPrescriptionListViewProtocol {
 
     func reloadData(){
-        tableView.reloadData()
         stopLoading()
+        HUD.flash(.success)
+        tableView.reloadData()
     }
     
     func showMessageAlert(title: String, message: String) {
         stopLoading()
+        HUD.flash(.error)
         showMessage(title: title, sub: message, type: Theme.error, layout: .centeredView)
     }
     
     private func stopLoading(){
-        APESuperHUD.dismissAll(animated: true)
         tableView.endRefreshing(presenter.canFetchMore)
     }
     

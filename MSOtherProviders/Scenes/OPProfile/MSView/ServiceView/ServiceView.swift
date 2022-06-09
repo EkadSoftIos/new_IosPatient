@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CloudKit
 
 struct ServiceViewDisplay{
     let id:Int
@@ -13,14 +14,26 @@ struct ServiceViewDisplay{
     let price:String
     let priceBefore:String
     let isAvailable:Bool
+    let isHiddenDeleteBtn:Bool
     
-    init(_ service:ServicePriceList){
+    init(_ service:ServicePriceList, isHiddenDeleteBtn:Bool = false){
         id = service.serviceFk
         msName = service.serviceNameLocalized
         price = service.priceAfterDiscount.stringValue
         priceBefore = service.price.stringValue
         isAvailable = true
+        self.isHiddenDeleteBtn = isHiddenDeleteBtn
     }
+    
+    init(_ service:Service){
+        id = service.serviceID
+        msName = service.serviceNameLocalized
+        price = "unavailable".localized
+        priceBefore = ""
+        isAvailable = false
+        isHiddenDeleteBtn = true
+    }
+    
     
     init(_ totalPrice: String, _ totalPriceBefore: String){
         id = -1
@@ -28,6 +41,7 @@ struct ServiceViewDisplay{
         price = totalPrice
         priceBefore = totalPriceBefore
         isAvailable = true
+        isHiddenDeleteBtn = true
     }
 }
 
@@ -51,14 +65,16 @@ class ServiceView: UIView {
     
     // MARK: - config -
     func configView(display:ServiceViewDisplay, presenter:MSViewPresenter? = nil){
+        tag = display.id
         self.id = display.id
         self.presenter = presenter
         msNameLabel.text = display.msName
         priceLabel.text = display.price
         priceBeforeLabel.text = display.priceBefore
         priceBeforeLabel.setStrikethroughStyle()
-        deleteBtn.isHidden = !display.isAvailable
-        priceBeforeLabel.isHidden = !display.isAvailable
+        deleteBtn.isHidden = display.isHiddenDeleteBtn
+        if !display.isAvailable { priceLabel.textColor = .red }
+        else { priceLabel.textColor = .selectedPCColor }
         if presenter == nil {
             deleteBtn.isHidden = true
             msNameLabel.font = UIFont.font(style: .bold, size: 14)
@@ -69,6 +85,20 @@ class ServiceView: UIView {
     
     // MARK: - delete Action -
     @IBAction func deleteBtnTapped(_ sender: Any) {
-        presenter?.deleteMS(at: id)
+        presenter?.deleteMS(with: id)
     }
+    
+    
+    
+//    @IBAction func deleteBtnTapped(_ sender: Any) {
+//        if let isDeleted = presenter?.deleteMS(with: id), isDeleted {
+//            removeView(with: id)
+//        }
+//    }
+    
+//    func removeView(with tag:Int){
+//        guard let superView = superview as? UIStackView
+//        else { return }
+//        superView.removeArrangedSubview(with: tag)
+//    }
 }

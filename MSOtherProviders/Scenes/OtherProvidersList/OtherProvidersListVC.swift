@@ -7,8 +7,8 @@
 //
 
 import UIKit
+import PKHUD
 import Kingfisher
-import APESuperHUD
 import KafkaRefresh
 import SwiftMessages
 
@@ -77,7 +77,7 @@ class OtherProvidersListVC: UIViewController {
     func setupLayoutUI() {
         title = presenter.title
         doctorView.isHidden = true
-        APESuperHUD.show(style: .loadingIndicator(type: .standard), message: .loading)
+        HUD.show(.progress)
         shadowsViews.forEach ({ $0.applyShadow(0.2) })
         tableView.bindFootRefreshHandler({ [weak self] in
             guard let self = self else { return }
@@ -93,7 +93,7 @@ class OtherProvidersListVC: UIViewController {
         let alert = FilterAlertVC()
         alert.hander = { [weak self] sort in
             guard let self = self else { return }
-            APESuperHUD.show(style: .loadingIndicator(type: .standard), message: .loading)
+            HUD.show(.progress)
             self.presenter.sortList(accordingTo: sort)
         }
         alert.modalPresentationStyle = .overCurrentContext
@@ -140,12 +140,14 @@ extension OtherProvidersListVC: OtherProvidersListViewProtocol {
     }
     
     func reloadData(){
-        tableView.reloadData()
         stopLoading()
+        HUD.flash(.success)
+        tableView.reloadData()
     }
     
     func showMessageAlert(title: String, message: String) {
         stopLoading()
+        HUD.flash(.error)
         showMessage(title: title, sub: message, type: Theme.error, layout: .centeredView)
     }
     
@@ -159,12 +161,11 @@ extension OtherProvidersListVC: OtherProvidersListViewProtocol {
     }
     
     func showLoading(){
-        APESuperHUD.show(style: .loadingIndicator(type: .standard), message: .loading)
+        HUD.show(.progress)
         tableView.footRefreshControl.resumeRefreshAvailable()
     }
     
     private func stopLoading(){
-        APESuperHUD.dismissAll(animated: true)
         tableView.endRefreshing(presenter.canFetchMore)
     }
     

@@ -311,7 +311,7 @@
                                         <constraint firstItem="BOR-G4-bxb" firstAttribute="height" secondItem="DXY-q6-krO" secondAttribute="height" id="OsP-Um-MsL"/>
                                     </constraints>
                                 </stackView>
-                                <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Af8-ox-Zq0">
+                                <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Af8-ox-Zq0">
                                     <rect key="frame" x="0.0" y="308.5" width="374" height="0.0"/>
                                 </stackView>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kzC-Xq-dpf" userLabel="PrescriptionsPhotos">

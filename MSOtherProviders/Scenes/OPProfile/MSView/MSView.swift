@@ -10,7 +10,7 @@ import SwiftUI
 import SwiftMessages
 
 protocol MSViewPresenter:AnyObject{
-    func deleteMS(at index:Int)
+    func deleteMS(with id:Int)
 }
 
 protocol MSViewProtocol{
@@ -38,6 +38,7 @@ class MSView: UIView, MSViewProtocol{
     
     // MARK: - private properties -
     
+    
     override func layoutSubviews() {
         super.layoutSubviews()
         applyShadow( 0.3 )
@@ -60,5 +61,7 @@ class MSView: UIView, MSViewProtocol{
         setNeedsLayout()
         layoutIfNeeded()
     }
+    
+    
 }
 

@@ -17,6 +17,7 @@ protocol OrdersListPresenterProtocol: AnyObject {
      * Add here your methods for communication VIEW -> PROTOCOL
      */
     func viewDidLoad()
+    func loadMore()
 }
 
 class OrdersListPresenter {
@@ -57,4 +58,12 @@ extension OrdersListPresenter: OrdersListPresenterProtocol {
     func viewDidLoad() {
        
     }
+    
+    
+    func loadMore(){
+        //epRequest.pageNum! += 1
+        //fetchData()
+    }
+    
+    
 }
