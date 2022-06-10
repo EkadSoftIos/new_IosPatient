@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="font_bold.TTF">
+            <string>SegoeUI-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="EPImageCell" id="5Sw-0M-bSC" customClass="EPImageCell" customModule="E4clinic" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="RGg-6S-5Di">
+                        <rect key="frame" x="10" y="10" width="180" height="180"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LJQ-Rb-aEp">
+                        <rect key="frame" x="10" y="10" width="180" height="180"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+ More" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="woY-88-3cg">
+                                <rect key="frame" x="66.5" y="80.5" width="47.5" height="19"/>
+                                <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="21"/>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="woY-88-3cg" firstAttribute="centerY" secondItem="LJQ-Rb-aEp" secondAttribute="centerY" id="5I3-BS-YQE"/>
+                            <constraint firstItem="woY-88-3cg" firstAttribute="centerX" secondItem="LJQ-Rb-aEp" secondAttribute="centerX" id="Zbt-Ow-Te3"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="NbO-NV-Q6x"/>
+            <constraints>
+                <constraint firstItem="RGg-6S-5Di" firstAttribute="leading" secondItem="LJQ-Rb-aEp" secondAttribute="leading" id="7Fc-KD-JoQ"/>
+                <constraint firstAttribute="trailing" secondItem="LJQ-Rb-aEp" secondAttribute="trailing" constant="10" id="7fI-r5-171"/>
+                <constraint firstItem="RGg-6S-5Di" firstAttribute="bottom" secondItem="LJQ-Rb-aEp" secondAttribute="bottom" id="TfA-SY-3rF"/>
+                <constraint firstAttribute="bottom" secondItem="LJQ-Rb-aEp" secondAttribute="bottom" constant="10" id="ZIT-LC-OWg"/>
+                <constraint firstItem="LJQ-Rb-aEp" firstAttribute="leading" secondItem="5Sw-0M-bSC" secondAttribute="leading" constant="10" id="emX-bG-FFu"/>
+                <constraint firstItem="LJQ-Rb-aEp" firstAttribute="top" secondItem="5Sw-0M-bSC" secondAttribute="top" constant="10" id="n3l-88-Fcg"/>
+                <constraint firstItem="RGg-6S-5Di" firstAttribute="trailing" secondItem="LJQ-Rb-aEp" secondAttribute="trailing" id="pf1-1u-ADT"/>
+                <constraint firstItem="RGg-6S-5Di" firstAttribute="top" secondItem="LJQ-Rb-aEp" secondAttribute="top" id="ruw-xt-J2B"/>
+            </constraints>
+            <size key="customSize" width="213" height="222"/>
+            <connections>
+                <outlet property="epImageView" destination="RGg-6S-5Di" id="SsR-jM-Isg"/>
+                <outlet property="moreLabel" destination="woY-88-3cg" id="fXT-tn-YWD"/>
+                <outlet property="moreView" destination="LJQ-Rb-aEp" id="iGg-76-gqz"/>
+            </connections>
+            <point key="canvasLocation" x="255.79710144927537" y="139.95535714285714"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="placeholder" width="101" height="71"/>
+    </resources>
+</document>

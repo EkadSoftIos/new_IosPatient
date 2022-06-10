@@ -184,4 +184,12 @@ extension MSType{
         case .rays: return "Center Orders".localized
         }
     }
+    
+
+    var msOrderDetailsTitle:String{
+        switch self {
+        case .labs: return "E-Prescriptoin Tests".localized
+        case .rays: return "E-Prescriptoin Rays".localized
+        }
+    }
 }

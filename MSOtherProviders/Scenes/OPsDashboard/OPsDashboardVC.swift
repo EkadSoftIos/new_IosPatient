@@ -111,7 +111,7 @@ class OPsDashboardVC: UIViewController {
     
     
     @IBAction func showOrdersListBtnTapped(_ sender: UIButton) {
-        showOrdersList()
+        showOrdersList(delay: 0.1)
     }
     
     func showOrdersList(delay:Double = 0.0){
@@ -137,8 +137,7 @@ class OPsDashboardVC: UIViewController {
     }
     
     @IBAction func showSearchTestList(_ sender: UIButton) {
-        guard let text = searchTextField.text?.trimmingCharacters(in: .whitespaces),
-            !text.isEmpty
+        guard let text = searchTextField.text, !text.isBlank
         else { return }
         showSearchResultVC(searchText: text)
     }
@@ -160,8 +159,7 @@ extension OPsDashboardVC:UITextFieldDelegate{
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
-        guard let text = searchTextField.text?.trimmingCharacters(in: .whitespaces),
-            !text.isEmpty
+        guard let text = searchTextField.text, !text.isBlank
         else { return false }
         showSearchResultVC(searchText: text)
         return false
@@ -172,13 +170,13 @@ extension OPsDashboardVC:UITextFieldDelegate{
 extension OPsDashboardVC: OPsDashboardViewProtocol {
     
     func reloadData(){
-        HUD.flash(.success)
+        if HUD.isVisible { HUD.flash(.success) }
         pagerSlider.reloadData()
         tableView.reloadData()
     }
     
     func showMessageAlert(title: String, message: String) {
-        
+        if HUD.isVisible { HUD.flash(.error) }
         showMessage(title: title, sub: message, type: Theme.error, layout: .centeredView)
     }
     

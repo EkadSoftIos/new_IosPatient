@@ -81,7 +81,7 @@ extension AULocationVC: AULocationViewProtocol {
     }
     
     func reloadData(){
-        HUD.flash(.success)
+        if HUD.isVisible { HUD.flash(.success) }
         tableView.reloadData()
     }
     
@@ -90,7 +90,7 @@ extension AULocationVC: AULocationViewProtocol {
     }
     
     func showMessageAlert(title: String, message: String) {
-        HUD.flash(.error)
+        if HUD.isVisible { HUD.flash(.error) }
         showMessage(title: title, sub: message, type: Theme.error, layout: .centeredView)
     }
     

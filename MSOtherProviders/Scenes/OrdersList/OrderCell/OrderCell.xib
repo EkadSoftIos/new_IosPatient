@@ -24,10 +24,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s6F-jJ-NS6">
-                        <rect key="frame" x="10" y="10" width="300" height="154"/>
+                        <rect key="frame" x="20" y="10" width="280" height="154"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQA-CU-9s6">
-                                <rect key="frame" x="238.5" y="10" width="51.5" height="37.5"/>
+                                <rect key="frame" x="240" y="10" width="30" height="56"/>
                                 <string key="text">Total
 500 EGP</string>
                                 <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="14"/>
@@ -130,22 +130,29 @@
                             <constraint firstAttribute="bottom" secondItem="KMp-N5-fgk" secondAttribute="bottom" constant="10" id="cQP-9D-4vG"/>
                             <constraint firstItem="KMp-N5-fgk" firstAttribute="leading" secondItem="s6F-jJ-NS6" secondAttribute="leading" constant="10" id="ocW-kA-7u0"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="s6F-jJ-NS6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="NRf-hA-kmK"/>
+                    <constraint firstItem="s6F-jJ-NS6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="NRf-hA-kmK"/>
                     <constraint firstItem="s6F-jJ-NS6" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="dAj-hZ-lxK"/>
                     <constraint firstAttribute="bottom" secondItem="s6F-jJ-NS6" secondAttribute="bottom" constant="10" id="t05-Tm-B5x"/>
-                    <constraint firstAttribute="trailing" secondItem="s6F-jJ-NS6" secondAttribute="trailing" constant="10" id="umE-Ks-yE6"/>
+                    <constraint firstAttribute="trailing" secondItem="s6F-jJ-NS6" secondAttribute="trailing" constant="20" id="umE-Ks-yE6"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="branchImageView" destination="4fs-pf-OAU" id="26m-LS-0d2"/>
                 <outlet property="branchNameLabel" destination="Yns-Mm-69P" id="hP7-vb-urW"/>
+                <outlet property="conainerView" destination="s6F-jJ-NS6" id="SI4-94-Zih"/>
                 <outlet property="dateLabel" destination="RCq-fs-7WO" id="Ryx-ki-y2u"/>
                 <outlet property="msNumLabel" destination="xXq-oT-kqv" id="5rK-0w-5uL"/>
                 <outlet property="numLabel" destination="T1Z-H6-onM" id="Ae0-xw-0kF"/>
+                <outlet property="priceLabel" destination="dQA-CU-9s6" id="idd-at-qOX"/>
                 <outlet property="timeLabel" destination="RUt-N7-jZa" id="id3-yf-3dN"/>
             </connections>
             <point key="canvasLocation" x="205.79710144927537" y="119.19642857142857"/>

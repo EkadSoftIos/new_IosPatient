@@ -59,7 +59,7 @@ extension String{
         Double(self) ?? 0.0
     }
     
-    var dateFormated:String{
+    var dateValue:Date?{
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale(identifier: "en_US_POSIX")
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
@@ -68,7 +68,11 @@ extension String{
             dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
             dateFromDateFormatter = dateFormatter.date(from:self)
         }
-        guard let date = dateFromDateFormatter else{
+        return dateFromDateFormatter
+    }
+    
+    var dateFormated:String{
+        guard let date = self.dateValue else{
             return self
         }
         let formatter = DateFormatter()
@@ -77,6 +81,36 @@ extension String{
         calendar.locale = Locale(identifier: code)
         formatter.calendar = calendar
         formatter.dateFormat = "MMM dd, yyyy"
+        formatter.locale = Locale(identifier: code)
+        let dateString = formatter.string(from: date)
+        return dateString
+    }
+    
+    var timeFormated:String{
+        guard let date = self.dateValue else{
+            return self
+        }
+        let formatter = DateFormatter()
+        var calendar = Calendar.current
+        let code = Languagee.language.rawValue
+        calendar.locale = Locale(identifier: code)
+        formatter.calendar = calendar
+        formatter.dateFormat = "h:mm a"
+        formatter.locale = Locale(identifier: code)
+        let dateString = formatter.string(from: date)
+        return dateString
+    }
+    
+    var dateFullFormated:String{
+        guard let date = self.dateValue else{
+            return self
+        }
+        let formatter = DateFormatter()
+        var calendar = Calendar.current
+        let code = Languagee.language.rawValue
+        calendar.locale = Locale(identifier: code)
+        formatter.calendar = calendar
+        formatter.dateFormat = "E, MMM dd, yyyy"
         formatter.locale = Locale(identifier: code)
         let dateString = formatter.string(from: date)
         return dateString

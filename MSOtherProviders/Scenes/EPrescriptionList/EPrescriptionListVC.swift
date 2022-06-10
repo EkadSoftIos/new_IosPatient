@@ -75,13 +75,13 @@ extension EPrescriptionListVC: EPrescriptionListViewProtocol {
 
     func reloadData(){
         stopLoading()
-        HUD.flash(.success)
+        if HUD.isVisible { HUD.flash(.success) }
         tableView.reloadData()
     }
     
     func showMessageAlert(title: String, message: String) {
         stopLoading()
-        HUD.flash(.error)
+        if HUD.isVisible { HUD.flash(.error) }
         showMessage(title: title, sub: message, type: Theme.error, layout: .centeredView)
     }
     

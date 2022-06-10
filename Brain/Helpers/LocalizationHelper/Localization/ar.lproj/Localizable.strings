@@ -267,3 +267,17 @@
 "Lab Orders" = "طلبات المعمل";
 "Center Orders" = "طلبات المركز";
 "unavailable" = "غير متوفر";
+"Total" = "الإجمالي";
+"Custom date" = "تاريخ مخصص";
+"Last 30 days" = "آخر 30 يومًا";
+"Last 7 days" = "آخر 7 أيام";
+"Date Picker" = "إخنر التاريخ";
+"Done" = "تم";
+"Cancel" = "إلغاء";
+"Please, choose custom date" =  "من فضلك، اختر التاريخ المخصص";
+"To" = "الى";
+"From" =  "من";
+"Order Details" = "تفاصيل الطلب";
+"E-Prescriptoin Tests" = "تحاليل الروشته";
+"E-Prescriptoin Rays" = "اشعة الروشته";
+"+ More" = "+ المزيد";

@@ -83,3 +83,4 @@ struct OtherProviderBranch: Codable {
         case brancheLong = "branche_long"
     }
 }
+

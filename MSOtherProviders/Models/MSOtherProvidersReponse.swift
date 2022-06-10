@@ -7,6 +7,29 @@
 
 import Foundation
 
+// MARK: - MSOPListReponse
+struct OPListReponse: Codable {
+    let successtate: Int
+    let errormessage: String?
+    let opsList: [OtherProvider]
+    
+    enum CodingKeys: String, CodingKey {
+        case opsList = "message"
+        case successtate, errormessage
+    }
+}
+
+// MARK: - Message
+struct OtherProvider: Codable {
+    let otherProviderID: Int
+    let otherProviderNameLocalized: String
+
+    enum CodingKeys: String, CodingKey {
+        case otherProviderID = "otherProviderId"
+        case otherProviderNameLocalized = "otherProviderName_Localized"
+    }
+}
+
 // MARK: - MedicalServicesReponse
 struct MSOtherProvidersReponse: Codable {
     let successtate: Int
@@ -48,7 +71,8 @@ struct Service: Codable {
 
     
     let servicePrescriptionID: Int?
-    let serviceTypeID, otherProviderTypeFk: Int?
+    let serviceTypeID: Int?
+    let otherProviderTypeFk:MSType?
 
     let serviceTypeFk: Int?
     let price, priceAfterDiscount: Double?

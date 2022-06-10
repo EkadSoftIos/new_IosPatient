@@ -25,7 +25,7 @@ protocol OPProfilePresenterProtocol: AnyObject {
     func config(cell:ImageCellProtocol, indexPath:IndexPath)
     func add(images:[Image])
     func addNewServices(servicesList:[Service])
-    func config(msView:MSViewProtocol, index:Int)
+    func config(msView:BookingMSViewProtocol, index:Int)
     func bookingServices()
 }
 
@@ -75,7 +75,7 @@ class OPProfilePresenter {
     //
     private var pageType:MSType!
     private var msList:[Service] = []
-    private var msSummaryDisplay:[MSViewDisplay] = []
+    private var msSummaryDisplay:[BookingMSViewDisplay] = []
     private var availableMSList:[ServicePriceList] = []
     private var imagesList:[Image] = []
     private var requestType:RequestType?
@@ -122,18 +122,18 @@ extension OPProfilePresenter: OPProfilePresenterProtocol {
             switch result {
             case .success(let response):
                 if let error = response.errormessage, response.successtate != 200 {
-                    HUD.flash(.error)
+                    if HUD.isVisible { HUD.flash(.error) }
                     self.view?.showMessageAlert(title: .error, message: error)
                     return
                 }
-                HUD.flash(.success)
+                if HUD.isVisible { HUD.flash(.success) }
                 self.opBranchDetails = response.branchDetails
                 self.availableMSList.removeAll()
                 self.availableMSList.append(contentsOf: response.branchDetails.servicePriceList ?? [])
                 self.view?.setBranchDetails(display: OPBranchDetailsDispaly(branch: response.branchDetails))
                 self.addMSSummary()
             case .failure(let error):
-                HUD.flash(.error)
+                if HUD.isVisible { HUD.flash(.error) }
                 self.view?.showMessageAlert(title: .error, message: error.localizedDescription)
             }
         }//end closure
@@ -154,26 +154,26 @@ extension OPProfilePresenter: OPProfilePresenterProtocol {
     }
     
     // MARK: - getPageMSListSummary -
-    private func getPageMSListSummary() -> MSViewDisplay? {
+    private func getPageMSListSummary() -> BookingMSViewDisplay? {
         let pageMSList = msList.filter({
             if let opTypeFk = $0.otherProviderTypeFk {
-                return opTypeFk == pageType.rawValue
+                return opTypeFk == pageType
             }
              return true
         })
-        let pageAvailableMSList = availableMSList.filter({ $0.otherProviderTypeFk == pageType.rawValue })
+        let pageAvailableMSList = availableMSList.filter({ $0.otherProviderTypeFk == pageType })
         
         if pageMSList.isEmpty, pageAvailableMSList.isEmpty  { return nil }
 
         
         var servicesList = pageAvailableMSList.compactMap({
-            ServiceViewDisplay($0)
+            BookingServiceViewDisplay($0)
         })
         
         let unavailableMSList = pageMSList
             .unrepeatedService(pageAvailableMSList)
             .compactMap({
-                ServiceViewDisplay($0)
+                BookingServiceViewDisplay($0)
             })
         servicesList.append(contentsOf: unavailableMSList)
         // calculate totl price
@@ -183,7 +183,7 @@ extension OPProfilePresenter: OPProfilePresenterProtocol {
             totalPriceBefore += $0.price
             totalPrice += $0.priceAfterDiscount
         })
-        return MSViewDisplay(
+        return BookingMSViewDisplay(
             title: pageType.msSummary,
             totalPrice: totalPrice.stringValue,
             totalPriceBefore: totalPriceBefore.stringValue,
@@ -194,23 +194,23 @@ extension OPProfilePresenter: OPProfilePresenterProtocol {
     
     
     // MARK: - getOtherMSListSummary -
-    private func getOtherMSListSummary() -> MSViewDisplay? {
+    private func getOtherMSListSummary() -> BookingMSViewDisplay? {
         let otherType = pageType.othersType
         let otherMSList = msList
-            .filter({ $0.otherProviderTypeFk == otherType.rawValue })
+            .filter({ $0.otherProviderTypeFk == otherType })
         // other ms page type
-        let otherAvailablMSList = availableMSList.filter({ $0.otherProviderTypeFk == otherType.rawValue })
+        let otherAvailablMSList = availableMSList.filter({ $0.otherProviderTypeFk == otherType })
         
         if otherMSList.isEmpty, otherAvailablMSList.isEmpty  { return nil }
         
         var servicesList = otherAvailablMSList.compactMap({
-            ServiceViewDisplay($0, isHiddenDeleteBtn: true)
+            BookingServiceViewDisplay($0, isHiddenDeleteBtn: true)
         })
         
         let unavailableMSList = otherMSList
             .unrepeatedService(otherAvailablMSList)
             .compactMap({
-                ServiceViewDisplay($0)
+                BookingServiceViewDisplay($0)
             })
         servicesList.append(contentsOf: unavailableMSList)
         // calculate totl price
@@ -220,7 +220,7 @@ extension OPProfilePresenter: OPProfilePresenterProtocol {
             totalPriceBefore += $0.price
             totalPrice += $0.priceAfterDiscount
         })
-        return MSViewDisplay(
+        return BookingMSViewDisplay(
             title: otherType.msSummary,
             totalPrice: totalPrice.stringValue,
             totalPriceBefore: totalPriceBefore.stringValue,
@@ -231,14 +231,14 @@ extension OPProfilePresenter: OPProfilePresenterProtocol {
     
     
     // MARK: - config MSViewProtocol -
-    func config(msView:MSViewProtocol, index:Int){
+    func config(msView:BookingMSViewProtocol, index:Int){
         let display = msSummaryDisplay[index]
         msView.configView(display: display, presenter: self)
     }
 }
 
 // MARK: - ImageCellPresenter -
-extension OPProfilePresenter:MSViewPresenter{
+extension OPProfilePresenter:BookingMSViewPresenter{
     
     func deleteMS(with id: Int){
         if let msIndex = msList.firstIndex(where: { $0.serviceID == id }),
@@ -246,7 +246,7 @@ extension OPProfilePresenter:MSViewPresenter{
             msList.remove(at: msIndex)
             availableMSList.remove(at: availableMSIndex)
             addMSSummary()
-            let serviceBookingDetailsList = availableMSList.filter({ $0.otherProviderTypeFk == pageType.rawValue }).map({
+            let serviceBookingDetailsList = availableMSList.filter({ $0.otherProviderTypeFk == pageType }).map({
                 MSOrderRequest(
                     serviceId: $0.serviceFk,
                     price: $0.price,
@@ -279,7 +279,7 @@ extension OPProfilePresenter{
     // MARK: -  bookingServices  -
     func bookingServices() {
         guard let branch = opBranchDetails else { return }
-        let serviceBookingDetailsList = availableMSList.filter({ $0.otherProviderTypeFk == pageType.rawValue }).map({
+        let serviceBookingDetailsList = availableMSList.filter({ $0.otherProviderTypeFk == pageType }).map({
             MSOrderRequest(
                 serviceId: $0.serviceFk,
                 price: $0.price,
@@ -340,14 +340,14 @@ extension OPProfilePresenter{
             switch result {
             case .success(let response):
                 if let error = response.errormessage, response.successtate != 200 {
-                    HUD.flash(.error)
+                    if HUD.isVisible { HUD.flash(.error) }
                     self.view?.showMessageAlert(title: .error, message: error)
                     return
                 }
-                HUD.flash(.success)
+                if HUD.isVisible { HUD.flash(.success) }
                 self.view?.showBookedServices(response.orderInfo, ep: ep)
             case .failure(let error):
-                HUD.flash(.error)
+                if HUD.isVisible { HUD.flash(.error) }
                 self.view?.showMessageAlert(title: .error, message: error.localizedDescription)
             }
         }//end closure
@@ -368,7 +368,7 @@ extension OPProfilePresenter{
             switch result {
             case .success(let response):
                 if let error = response.errormessage, response.successtate != 200 {
-                    HUD.flash(.error)
+                    if HUD.isVisible { HUD.flash(.error) }
                     self.view?.showMessageAlert(title: .error, message: error)
                     return
                 }
@@ -382,7 +382,7 @@ extension OPProfilePresenter{
                 )
                 self.linkUploadPrescriptionFiles(addOrderRequest)
             case .failure(let error):
-                HUD.flash(.error)
+                if HUD.isVisible { HUD.flash(.error) }
                 self.view?.showMessageAlert(title: .error, message: error.localizedDescription)
             }
         }//end closure
@@ -400,13 +400,13 @@ extension OPProfilePresenter{
             switch result {
             case .success(let response):
                 if let error = response.errormessage, response.successtate != 200 {
-                    HUD.flash(.error)
+                    if HUD.isVisible { HUD.flash(.error) }
                     self.view?.showMessageAlert(title: .error, message: error)
                     return
                 }
                 self.storeServiceOrder(request)
             case .failure(let error):
-                HUD.flash(.error)
+                if HUD.isVisible { HUD.flash(.error) }
                 self.view?.showMessageAlert(title: .error, message: error.localizedDescription)
             }
         }//end closure
@@ -516,7 +516,7 @@ struct OPBranchDetailsDispaly {
 
 extension Array{
     
-    var uniqueService: [Service] {
+    fileprivate var uniqueService: [Service] {
         guard let list = self as? [Service] else { return [] }
         var uniqueValues: [Service] = []
         for service in list {
@@ -528,7 +528,7 @@ extension Array{
         return uniqueValues
     }
     
-    func unrepeatedService(_ spList:[ServicePriceList]) -> [Service] {
+    fileprivate func unrepeatedService(_ spList:[ServicePriceList]) -> [Service] {
         guard let list = self as? [Service] else { return [] }
         var unrepeatedService: [Service] = []
         for service in list {
@@ -540,7 +540,7 @@ extension Array{
         return unrepeatedService
     }
     
-    func mergeWithUniqueServices(_ list2:[Service]) -> [Service] {
+    fileprivate func mergeWithUniqueServices(_ list2:[Service]) -> [Service] {
         guard let list1 = self as? [Service] else { return [] }
         let servicesList = list1 + list2
         let msList = servicesList.uniqueService

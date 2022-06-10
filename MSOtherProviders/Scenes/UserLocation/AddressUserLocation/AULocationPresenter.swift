@@ -201,10 +201,10 @@ extension AULocationPresenter: CLLocationManagerDelegate{
             guard let self = self else { return }
             switch result {
             case .success(let response):
-                HUD.flash(.success)
+                if HUD.isVisible { HUD.flash(.success) }
                 self.view?.popToOPListVC(location: response)
             case .failure(let error):
-                HUD.flash(.error)
+                if HUD.isVisible { HUD.flash(.error) }
                 self.view?.showMessageAlert(title: .error, message: error.localizedDescription)
             }
         }// end closure

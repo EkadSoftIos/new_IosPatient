@@ -330,7 +330,9 @@
                                             <rect key="frame" x="0.0" y="41.5" width="374" height="150"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="150" id="DQ6-PF-jTX"/>
+                                                <constraint firstAttribute="height" constant="150" id="DQ6-PF-jTX">
+                                                    <variation key="heightClass=regular-widthClass=regular" constant="250"/>
+                                                </constraint>
                                             </constraints>
                                             <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="EI4-J8-Evt">
                                                 <size key="itemSize" width="128" height="128"/>

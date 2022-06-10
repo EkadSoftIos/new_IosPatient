@@ -6,9 +6,8 @@
 //
 
 import UIKit
-import CloudKit
 
-struct ServiceViewDisplay{
+struct BookingServiceViewDisplay{
     let id:Int
     let msName:String
     let price:String
@@ -45,11 +44,11 @@ struct ServiceViewDisplay{
     }
 }
 
-class ServiceView: UIView {
+class BookingServiceView: UIView {
 
     // MARK: - static variables -
-    public static var instance:ServiceView{
-        Bundle.loadView(fromNib: "ServiceView", withType: ServiceView.self) 
+    public static var instance:BookingServiceView{
+        Bundle.loadView(fromNib: "BookingServiceView", withType: BookingServiceView.self)
     }
     
     // MARK: - Outlet variables -
@@ -61,10 +60,10 @@ class ServiceView: UIView {
     
     // MARK: - private properties -
     private var id:Int!
-    private weak var presenter:MSViewPresenter?
+    private weak var presenter:BookingMSViewPresenter?
     
     // MARK: - config -
-    func configView(display:ServiceViewDisplay, presenter:MSViewPresenter? = nil){
+    func configView(display:BookingServiceViewDisplay, presenter:BookingMSViewPresenter? = nil){
         tag = display.id
         self.id = display.id
         self.presenter = presenter

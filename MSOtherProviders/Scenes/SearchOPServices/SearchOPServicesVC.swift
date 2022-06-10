@@ -100,7 +100,8 @@ class SearchOPServicesVC: UIViewController {
     
     func showSearchResultVC(){
         view.endEditing(true)
-        guard let text = searchTextField.text?.trimmingCharacters(in: .whitespaces), !text.isEmpty else { return  }
+        guard let text = searchTextField.text, !text.isBlank
+        else { return  }
         presenter.fetchSearchedData(text: text)
     }
     
@@ -123,7 +124,7 @@ extension SearchOPServicesVC: SearchOPServicesViewProtocol {
     
     func reloadData(){
         stopLoading()
-        HUD.flash(.success)
+        if HUD.isVisible { HUD.flash(.success) }
         tableView.reloadData()
     }
     
@@ -133,7 +134,7 @@ extension SearchOPServicesVC: SearchOPServicesViewProtocol {
     
     func showMessageAlert(title: String, message: String) {
         stopLoading()
-        HUD.flash(.error)
+        if HUD.isVisible { HUD.flash(.error) }
         showMessage(title: title, sub: message, type: Theme.error, layout: .centeredView)
     }
     

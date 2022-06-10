@@ -54,7 +54,7 @@ class OrdersListVC: UIViewController {
         HUD.show(.progress)
         title = presenter.type.ordersListTitle
         searchTextField.delegate = self
-        shadowsViews.forEach ({ $0.applyShadow(0.3) })
+        shadowsViews.forEach ({ $0.applyShadow(0.2) })
         tableView.register(UINib(nibName: "OrderCell", bundle: nil), forCellReuseIdentifier: "OrderCell")
         tableView.bindFootRefreshHandler({ [weak self] in
             guard let self = self else { return }
@@ -65,7 +65,25 @@ class OrdersListVC: UIViewController {
     }
     
     @IBAction func filterBtnTapped(_ sender: Any) {
-
+        let vc = OrdersFilterVC()
+        vc.presenter.type = presenter.type
+        vc.handler = { [weak self] (filter) in
+            guard let self = self else { return }
+            self.presenter.filterOrders(filter)
+        }
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    
+    @IBAction func searchBtnTapped(_ sender: Any) {
+        showSearchResult()
+    }
+    
+    
+    private func showSearchResult(){
+        guard let text = searchTextField.text, !text.isBlank
+        else { return }
+        presenter.searchOrders(text)
     }
 
 }
@@ -76,10 +94,7 @@ extension OrdersListVC:UITextFieldDelegate{
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
-        guard let text = searchTextField.text?.trimmingCharacters(in: .whitespaces),
-            !text.isEmpty
-        else { return false }
-        //presenter.showSearchResultVC(searchText: text)
+        showSearchResult()
         return false
     }
     
@@ -88,13 +103,13 @@ extension OrdersListVC: OrdersListViewProtocol {
     
     func reloadData(){
         stopLoading()
-        HUD.flash(.success)
+        if HUD.isVisible { HUD.flash(.success) }
         tableView.reloadData()
     }
     
     func showMessageAlert(title: String, message: String) {
         stopLoading()
-        HUD.flash(.error)
+        if HUD.isVisible { HUD.flash(.error) }
         showMessage(title: title, sub: message, type: Theme.error, layout: .centeredView)
     }
     
@@ -107,13 +122,24 @@ extension OrdersListVC: UITableViewDelegate, UITableViewDataSource{
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        30 //presenter.numberOfRows
+        let numberOfRows = presenter.numberOfRows
+        if numberOfRows == 0 { tableView.setEmptyMessage() }
+        else { tableView.hiddenEmptyMessage() }
+        return numberOfRows
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "OrderCell", for: indexPath) as! OrderCell
-        //presenter.config(cell: cell, indexPath: indexPath)
+        presenter.config(cell: cell, indexPath: indexPath)
         return cell
+    }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
+        let vc = OrderDetailsVC()
+        vc.presenter.type = presenter.type
+        vc.presenter.order = presenter.didSelectRow(at: indexPath)
+        navigationController?.pushViewController(vc, animated: true)
     }
     
 }
