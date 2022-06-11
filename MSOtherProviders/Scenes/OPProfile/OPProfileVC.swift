@@ -20,7 +20,7 @@ protocol OPProfileViewProtocol: AnyObject {
     
     
     func reloadImages()
-    func addMSSummary()
+    func reloadMSSummary()
     func setBranchDetails(display:OPBranchDetailsDispaly)
     func showMessageAlert(title: String, message: String)
     func showBookedServices(_ order:OrderInfo, ep:EPrescription?)
@@ -146,12 +146,19 @@ extension OPProfileVC: OPProfileViewProtocol {
         showMessage(title: title, sub: message, type: Theme.error, layout: .centeredView)
     }
     
-    func addMSSummary(){
+    func reloadMSSummary(){
         msSummaryStackView.removeAllArrangedSubviews()
-        let msView = MSView.instance
-        presenter.config(msView: msView)
-        msSummaryStackView.addArrangedSubview(msView)
-        msSummaryStackView.isHidden = false
+        if presenter.numberOfSummaryItems <= 0 {
+            return
+        }
+        for index in 0...presenter.numberOfSummaryItems - 1{
+            let msView = MSView.instance
+            presenter.config(msView: msView, index: index)
+            msSummaryStackView.addArrangedSubview(msView)
+        }
+        UIView.animate(withDuration: 0.5) {
+            self.msSummaryStackView.isHidden = false
+        }
     }
     
     func showBookedServices(_ order:OrderInfo, ep:EPrescription?){

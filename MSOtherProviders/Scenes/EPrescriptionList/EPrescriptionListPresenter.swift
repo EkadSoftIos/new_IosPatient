@@ -65,6 +65,7 @@ extension EPrescriptionListPresenter: EPrescriptionListPresenterProtocol {
     
     func viewDidLoad() {
         let patientId = UserDefaults.standard.integer(forKey: "patientId")
+        print("patientId \(patientId)")
         epRequest = EPrescriptionRequest(type: pageType, patientId: patientId, pageNum: 1)
         msOPServicesRequest = MSOPServicesRequest(type: pageType)
         fetchData()

@@ -5,11 +5,10 @@
 //  Created by Mostafa Abd ElFatah on 6/4/22.
 //
 //
-
+import PKHUD
 import UIKit
 import MapKit
 import Kingfisher
-import APESuperHUD
 import SwiftMessages
 
 //MARK: View -
@@ -77,6 +76,7 @@ class MapsLocationVC: UIViewController {
         branchAvatarImgView.cornerRadius = branchAvatarImgView.frame.height / 2
     }
     func setupLayoutUI() {
+        HUD.show(.progress)
         title = "Select your location".localized
         branchView.isHidden = true
         mapView.showsUserLocation = true
@@ -103,7 +103,7 @@ extension MapsLocationVC: MapsLocationViewProtocol {
     }
     
     func showMessageAlert(title: String, message: String, isError:Bool = true) {
-        APESuperHUD.show(style: .loadingIndicator(type: .standard), message: .loading)
+        if HUD.isVisible { HUD.flash(.error) }
         let theme = isError ?  Theme.error:.info
         showMessage(title: title, sub: message, type: theme, layout: .centeredView)
     }
@@ -113,6 +113,7 @@ extension MapsLocationVC: MapsLocationViewProtocol {
     }
     
     func addMarkers(opDisplayList: [OPMapDisplay]){
+        if HUD.isVisible { HUD.flash(.success) }
         opDisplayList.forEach({
             self.addPinToMap(display: $0)
         })
@@ -127,6 +128,7 @@ extension MapsLocationVC: MapsLocationViewProtocol {
         annotation.subtitle = display.providerName
         mapView.addAnnotation(annotation)
     }
+    
     // MARK: - mapView viewFor annotation -
     func configBranch(display:OPMapDisplay)  {
         func configBranch(){

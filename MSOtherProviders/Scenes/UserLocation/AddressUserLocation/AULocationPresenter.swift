@@ -7,7 +7,7 @@
 //
 
 import MOLH
-import APESuperHUD
+import PKHUD
 import Foundation
 import CoreLocation
 //import SKCountryPicker
@@ -196,14 +196,15 @@ extension AULocationPresenter: CLLocationManagerDelegate{
     
     private func updateUserLocation(location:CLLocation){
         let lang = MOLHLanguage.currentAppleLanguage()
-        APESuperHUD.show(style: .loadingIndicator(type: .standard), message: .loading)
+        HUD.show(.progress)
         msGeocoderManager?.getLocationInfo(for: location, lang: lang) { [weak self] result in
             guard let self = self else { return }
-            APESuperHUD.dismissAll(animated: true)
             switch result {
             case .success(let response):
+                if HUD.isVisible { HUD.flash(.success) }
                 self.view?.popToOPListVC(location: response)
             case .failure(let error):
+                if HUD.isVisible { HUD.flash(.error) }
                 self.view?.showMessageAlert(title: .error, message: error.localizedDescription)
             }
         }// end closure

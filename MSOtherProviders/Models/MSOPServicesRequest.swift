@@ -55,6 +55,14 @@ extension Encodable {
 }
 
 extension MSType{
+    
+    var othersType:MSType{
+        switch self {
+        case .labs: return .rays
+        case .rays: return .labs
+        }
+    }
+    
 
     var btnName:String{
         switch self {
@@ -174,6 +182,14 @@ extension MSType{
         switch self {
         case .labs: return "Lab Orders".localized
         case .rays: return "Center Orders".localized
+        }
+    }
+    
+
+    var msOrderDetailsTitle:String{
+        switch self {
+        case .labs: return "E-Prescriptoin Tests".localized
+        case .rays: return "E-Prescriptoin Rays".localized
         }
     }
 }

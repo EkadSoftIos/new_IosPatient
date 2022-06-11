@@ -23,6 +23,7 @@ protocol BookedMSViewProtocol: AnyObject {
 class BookedMSVC: UIViewController {
 
     // MARK: - Public properties -
+    @IBOutlet var shadowsViews: [UIView]!
     @IBOutlet weak var doctorLabel: UILabel!
     @IBOutlet weak var barcodeImageView: UIImageView!
     @IBOutlet weak var qrcodeImageView: UIImageView!
@@ -47,15 +48,20 @@ class BookedMSVC: UIViewController {
         presenter.viewDidLoad()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+    
     func setupLayoutUI() {
         navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
     @IBAction func myOrdersBtnTapped(_ sender: Any) {
-        guard let vc = navigationController?.getRootVC(vc: OPsDashboardVC.self)
+        guard let vc = navigationController?.getRootVC(vc: OPsDashboardVC.self) as? OPsDashboardVC
         else { return  }
         //showOrdersList
-        //vc.showOrdersList()
+        vc.showOrdersList(delay: 0.0)
         navigationController?.popTo(vc: vc)
     }
     

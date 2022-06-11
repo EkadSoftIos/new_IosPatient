@@ -47,10 +47,11 @@ class MSAPIsManager: MSNetworkRepository{
         }
         
         AF.request( url, method: networkURL.method, parameters: networkURL.params, encoding: networkURL.encoding, headers: networkURL.header)
-            .responseData { [weak self] (response) in
+            .responseString { [weak self] (response) in
                 guard self != nil else { return }
                 switch response.result {
-                case .success(_):
+                case .success(let data):
+                    print(data)
                     guard let data = response.data else {
                         handler(.failure(.invalidData))
                         return

@@ -7,20 +7,32 @@
 
 import UIKit
 
-struct ServiceViewDisplay{
+struct BookingServiceViewDisplay{
     let id:Int
     let msName:String
     let price:String
     let priceBefore:String
     let isAvailable:Bool
+    let isHiddenDeleteBtn:Bool
     
-    init(_ service:ServicePriceList){
+    init(_ service:ServicePriceList, isHiddenDeleteBtn:Bool = false){
         id = service.serviceFk
         msName = service.serviceNameLocalized
         price = service.priceAfterDiscount.stringValue
         priceBefore = service.price.stringValue
         isAvailable = true
+        self.isHiddenDeleteBtn = isHiddenDeleteBtn
     }
+    
+    init(_ service:Service){
+        id = service.serviceID
+        msName = service.serviceNameLocalized
+        price = "unavailable".localized
+        priceBefore = ""
+        isAvailable = false
+        isHiddenDeleteBtn = true
+    }
+    
     
     init(_ totalPrice: String, _ totalPriceBefore: String){
         id = -1
@@ -28,14 +40,15 @@ struct ServiceViewDisplay{
         price = totalPrice
         priceBefore = totalPriceBefore
         isAvailable = true
+        isHiddenDeleteBtn = true
     }
 }
 
-class ServiceView: UIView {
+class BookingServiceView: UIView {
 
     // MARK: - static variables -
-    public static var instance:ServiceView{
-        Bundle.loadView(fromNib: "ServiceView", withType: ServiceView.self) 
+    public static var instance:BookingServiceView{
+        Bundle.loadView(fromNib: "BookingServiceView", withType: BookingServiceView.self)
     }
     
     // MARK: - Outlet variables -
@@ -47,18 +60,20 @@ class ServiceView: UIView {
     
     // MARK: - private properties -
     private var id:Int!
-    private weak var presenter:MSViewPresenter?
+    private weak var presenter:BookingMSViewPresenter?
     
     // MARK: - config -
-    func configView(display:ServiceViewDisplay, presenter:MSViewPresenter? = nil){
+    func configView(display:BookingServiceViewDisplay, presenter:BookingMSViewPresenter? = nil){
+        tag = display.id
         self.id = display.id
         self.presenter = presenter
         msNameLabel.text = display.msName
         priceLabel.text = display.price
         priceBeforeLabel.text = display.priceBefore
         priceBeforeLabel.setStrikethroughStyle()
-        deleteBtn.isHidden = !display.isAvailable
-        priceBeforeLabel.isHidden = !display.isAvailable
+        deleteBtn.isHidden = display.isHiddenDeleteBtn
+        if !display.isAvailable { priceLabel.textColor = .red }
+        else { priceLabel.textColor = .selectedPCColor }
         if presenter == nil {
             deleteBtn.isHidden = true
             msNameLabel.font = UIFont.font(style: .bold, size: 14)
@@ -69,6 +84,20 @@ class ServiceView: UIView {
     
     // MARK: - delete Action -
     @IBAction func deleteBtnTapped(_ sender: Any) {
-        presenter?.deleteMS(at: id)
+        presenter?.deleteMS(with: id)
     }
+    
+    
+    
+//    @IBAction func deleteBtnTapped(_ sender: Any) {
+//        if let isDeleted = presenter?.deleteMS(with: id), isDeleted {
+//            removeView(with: id)
+//        }
+//    }
+    
+//    func removeView(with tag:Int){
+//        guard let superView = superview as? UIStackView
+//        else { return }
+//        superView.removeArrangedSubview(with: tag)
+//    }
 }

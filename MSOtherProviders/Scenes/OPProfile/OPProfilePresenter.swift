@@ -7,14 +7,14 @@
 //
 
 import Foundation
-import APESuperHUD
-import SwiftUI
+import PKHUD
 
 //MARK: Presenter -
 protocol OPProfilePresenterProtocol: AnyObject {
     var canAddMS:Bool{ get }
     var type:MSType{ get set }
     var numberOfImagesItems:Int { get }
+    var numberOfSummaryItems:Int { get }
     var request:RequestType?{ get set }
     var branch:OtherProviderBranch? { get set }
     var msOPServicesRequest:MSOPServicesRequest{ get }
@@ -25,7 +25,7 @@ protocol OPProfilePresenterProtocol: AnyObject {
     func config(cell:ImageCellProtocol, indexPath:IndexPath)
     func add(images:[Image])
     func addNewServices(servicesList:[Service])
-    func config(msView:MSViewProtocol)
+    func config(msView:BookingMSViewProtocol, index:Int)
     func bookingServices()
 }
 
@@ -44,6 +44,10 @@ class OPProfilePresenter {
     
     var numberOfImagesItems:Int{
         imagesList.count
+    }
+    
+    var numberOfSummaryItems:Int{
+        msSummaryDisplay.count
     }
     
     var branch: OtherProviderBranch? {
@@ -71,6 +75,7 @@ class OPProfilePresenter {
     //
     private var pageType:MSType!
     private var msList:[Service] = []
+    private var msSummaryDisplay:[BookingMSViewDisplay] = []
     private var availableMSList:[ServicePriceList] = []
     private var imagesList:[Image] = []
     private var requestType:RequestType?
@@ -110,48 +115,160 @@ extension OPProfilePresenter: OPProfilePresenterProtocol {
     func fetchBranchDetails(){
         branchRequest?.serviceIdList = msList.map({ $0.serviceID })
         guard let request = branchRequest else { return }
-        APESuperHUD.show(style: .loadingIndicator(type: .standard), message: .loading)
+        HUD.show(.progress)
         let url = NetworkURL(.opBranchDetails(request))
         msNetworkRepository?.fetch(OPBranchDetailsReponse.self, from: url) { [weak self] result in
             guard let self = self else { return }
-            APESuperHUD.dismissAll(animated: true)
             switch result {
             case .success(let response):
                 if let error = response.errormessage, response.successtate != 200 {
+                    if HUD.isVisible { HUD.flash(.error) }
                     self.view?.showMessageAlert(title: .error, message: error)
                     return
                 }
+                if HUD.isVisible { HUD.flash(.success) }
                 self.opBranchDetails = response.branchDetails
                 self.availableMSList.removeAll()
                 self.availableMSList.append(contentsOf: response.branchDetails.servicePriceList ?? [])
                 self.view?.setBranchDetails(display: OPBranchDetailsDispaly(branch: response.branchDetails))
-                self.view?.addMSSummary()
+                self.addMSSummary()
             case .failure(let error):
+                if HUD.isVisible { HUD.flash(.error) }
                 self.view?.showMessageAlert(title: .error, message: error.localizedDescription)
             }
         }//end closure
     }
     
-    // MARK: - config MSViewProtocol -
-    func config(msView:MSViewProtocol){
-        let servicesList = availableMSList.compactMap({ ServiceViewDisplay($0) })
+    
+    
+    // MARK: - add Summary  -
+    private func addMSSummary(){
+        msSummaryDisplay.removeAll()
+        if let msSummary = getPageMSListSummary() {
+            msSummaryDisplay.append(msSummary)
+        }
+        if let msSummary = getOtherMSListSummary() {
+            msSummaryDisplay.append(msSummary)
+        }
+        self.view?.reloadMSSummary()
+    }
+    
+    // MARK: - getPageMSListSummary -
+    private func getPageMSListSummary() -> BookingMSViewDisplay? {
+        let pageMSList = msList.filter({
+            if let opTypeFk = $0.otherProviderTypeFk {
+                return opTypeFk == pageType
+            }
+             return true
+        })
+        let pageAvailableMSList = availableMSList.filter({ $0.otherProviderTypeFk == pageType })
         
+        if pageMSList.isEmpty, pageAvailableMSList.isEmpty  { return nil }
+
+        
+        var servicesList = pageAvailableMSList.compactMap({
+            BookingServiceViewDisplay($0)
+        })
+        
+        let unavailableMSList = pageMSList
+            .unrepeatedService(pageAvailableMSList)
+            .compactMap({
+                BookingServiceViewDisplay($0)
+            })
+        servicesList.append(contentsOf: unavailableMSList)
+        // calculate totl price
         var totalPrice = 0.0
         var totalPriceBefore = 0.0
-        availableMSList.forEach({
+        pageAvailableMSList.forEach({
             totalPriceBefore += $0.price
             totalPrice += $0.priceAfterDiscount
         })
-        
-        let display = MSViewDisplay(
+        return BookingMSViewDisplay(
             title: pageType.msSummary,
             totalPrice: totalPrice.stringValue,
             totalPriceBefore: totalPriceBefore.stringValue,
-            isHiddenTotal: servicesList.isEmpty,
+            isHiddenTotal: (servicesList.isEmpty || totalPrice <= 0.0),
             msList: servicesList
         )
+    }
+    
+    
+    // MARK: - getOtherMSListSummary -
+    private func getOtherMSListSummary() -> BookingMSViewDisplay? {
+        let otherType = pageType.othersType
+        let otherMSList = msList
+            .filter({ $0.otherProviderTypeFk == otherType })
+        // other ms page type
+        let otherAvailablMSList = availableMSList.filter({ $0.otherProviderTypeFk == otherType })
+        
+        if otherMSList.isEmpty, otherAvailablMSList.isEmpty  { return nil }
+        
+        var servicesList = otherAvailablMSList.compactMap({
+            BookingServiceViewDisplay($0, isHiddenDeleteBtn: true)
+        })
+        
+        let unavailableMSList = otherMSList
+            .unrepeatedService(otherAvailablMSList)
+            .compactMap({
+                BookingServiceViewDisplay($0)
+            })
+        servicesList.append(contentsOf: unavailableMSList)
+        // calculate totl price
+        var totalPrice = 0.0
+        var totalPriceBefore = 0.0
+        otherAvailablMSList.forEach({
+            totalPriceBefore += $0.price
+            totalPrice += $0.priceAfterDiscount
+        })
+        return BookingMSViewDisplay(
+            title: otherType.msSummary,
+            totalPrice: totalPrice.stringValue,
+            totalPriceBefore: totalPriceBefore.stringValue,
+            isHiddenTotal: (servicesList.isEmpty || totalPrice <= 0.0),
+            msList: servicesList
+        )
+    }
+    
+    
+    // MARK: - config MSViewProtocol -
+    func config(msView:BookingMSViewProtocol, index:Int){
+        let display = msSummaryDisplay[index]
         msView.configView(display: display, presenter: self)
     }
+}
+
+// MARK: - ImageCellPresenter -
+extension OPProfilePresenter:BookingMSViewPresenter{
+    
+    func deleteMS(with id: Int){
+        if let msIndex = msList.firstIndex(where: { $0.serviceID == id }),
+           let availableMSIndex = availableMSList.firstIndex(where: { $0.serviceFk == id }) {
+            msList.remove(at: msIndex)
+            availableMSList.remove(at: availableMSIndex)
+            addMSSummary()
+            let serviceBookingDetailsList = availableMSList.filter({ $0.otherProviderTypeFk == pageType }).map({
+                MSOrderRequest(
+                    serviceId: $0.serviceFk,
+                    price: $0.price,
+                    priceAfterDiscount: $0.priceAfterDiscount,
+                    commessionValue: $0.commessionNetValue
+                )
+            })
+            if serviceBookingDetailsList.isEmpty {
+                self.view?.showMessageAlert(title: .error, message: .chooseMS)
+                return
+            }
+        }
+    }
+    
+//    func deleteMS(with id: Int) -> Bool{
+//        if let msIndex = availableMSList.firstIndex(where: { $0.serviceFk == id }){
+//            availableMSList.remove(at: msIndex)
+//            return true
+//        }
+//        return false
+//    }
+    
 }
 
 
@@ -162,7 +279,7 @@ extension OPProfilePresenter{
     // MARK: -  bookingServices  -
     func bookingServices() {
         guard let branch = opBranchDetails else { return }
-        let serviceBookingDetailsList = availableMSList.map({
+        let serviceBookingDetailsList = availableMSList.filter({ $0.otherProviderTypeFk == pageType }).map({
             MSOrderRequest(
                 serviceId: $0.serviceFk,
                 price: $0.price,
@@ -170,9 +287,23 @@ extension OPProfilePresenter{
                 commessionValue: $0.commessionNetValue
             )
         })
+        
+        func showErrorMessage() ->Bool{
+            func canMakeOrder()->Bool {
+                if serviceBookingDetailsList.isEmpty { return false}
+                return true
+            }
+            
+            
+            let isCan = canMakeOrder()
+            if !isCan { view?.showMessageAlert(title: .error, message: .chooseMS) }
+            return !isCan
+        }
 
+        
         switch requestType{
         case .services(_):
+            if showErrorMessage(){ return }
             let request = AddOrderRequest(
                 type: pageType,
                 opBranchId: branch.otherProviderBranchID,
@@ -202,19 +333,21 @@ extension OPProfilePresenter{
     
     // MARK: -  storeServiceOrder  -
     private func storeServiceOrder(_ request:AddOrderRequest, ep:EPrescription? = nil){
-        APESuperHUD.show(style: .loadingIndicator(type: .standard), message: .storeOrder)
+        HUD.show(.progress)
         let url = NetworkURL(.addNewOrder(request))
         msNetworkRepository?.fetch(AddOrderReponse.self, from: url){ [weak self] result in
-            APESuperHUD.dismissAll(animated: true)
             guard let self = self else { return }
             switch result {
             case .success(let response):
                 if let error = response.errormessage, response.successtate != 200 {
+                    if HUD.isVisible { HUD.flash(.error) }
                     self.view?.showMessageAlert(title: .error, message: error)
                     return
                 }
+                if HUD.isVisible { HUD.flash(.success) }
                 self.view?.showBookedServices(response.orderInfo, ep: ep)
             case .failure(let error):
+                if HUD.isVisible { HUD.flash(.error) }
                 self.view?.showMessageAlert(title: .error, message: error.localizedDescription)
             }
         }//end closure
@@ -222,7 +355,7 @@ extension OPProfilePresenter{
     
     // MARK: -  uploadImages  -
     private func uploadImages(_ request:AddOrderRequest){
-        APESuperHUD.show(style: .loadingIndicator(type: .standard), message: .uploadingImges)
+        HUD.show(.progress)
         var imagesData:[(name:String, image:Data)] = []
         for index in 0...imagesList.count - 1{
             if let imgData = imagesList[index].pngData(){
@@ -235,7 +368,7 @@ extension OPProfilePresenter{
             switch result {
             case .success(let response):
                 if let error = response.errormessage, response.successtate != 200 {
-                    APESuperHUD.dismissAll(animated: true)
+                    if HUD.isVisible { HUD.flash(.error) }
                     self.view?.showMessageAlert(title: .error, message: error)
                     return
                 }
@@ -249,7 +382,7 @@ extension OPProfilePresenter{
                 )
                 self.linkUploadPrescriptionFiles(addOrderRequest)
             case .failure(let error):
-                APESuperHUD.dismissAll(animated: true)
+                if HUD.isVisible { HUD.flash(.error) }
                 self.view?.showMessageAlert(title: .error, message: error.localizedDescription)
             }
         }//end closure
@@ -267,27 +400,16 @@ extension OPProfilePresenter{
             switch result {
             case .success(let response):
                 if let error = response.errormessage, response.successtate != 200 {
-                    APESuperHUD.dismissAll(animated: true)
+                    if HUD.isVisible { HUD.flash(.error) }
                     self.view?.showMessageAlert(title: .error, message: error)
                     return
                 }
                 self.storeServiceOrder(request)
             case .failure(let error):
-                APESuperHUD.dismissAll(animated: true)
+                if HUD.isVisible { HUD.flash(.error) }
                 self.view?.showMessageAlert(title: .error, message: error.localizedDescription)
             }
         }//end closure
-    }
-    
-}
-
-
-// MARK: - ImageCellPresenter -
-extension OPProfilePresenter:MSViewPresenter{
-    
-    func deleteMS(at index: Int){
-        availableMSList.remove(at: index)
-        view?.addMSSummary()
     }
     
 }
@@ -339,6 +461,7 @@ extension OPBranchDetails{
         guard let serviceList = servicePriceList else { return nil }
         let attributedString = NSMutableAttributedString()
         for ms in serviceList {
+            if ms.conditionsList.isEmpty { continue }
             attributedString.append(NSAttributedString(
                 string: "- \(ms.serviceNameLocalized)\n",
                 attributes: [
@@ -346,16 +469,16 @@ extension OPBranchDetails{
                     .foregroundColor : UIColor.selectedPCColor ?? UIColor.blue
                 ])
             )
-            if ms.conditionsList.isEmpty {
-                attributedString.append(NSAttributedString(
-                    string: "   - \("no Pre-Request".localized)\n",
-                    attributes: [
-                        .font: UIFont.font(style: .regular, size: 14),
-                        .foregroundColor : UIColor.darkGray
-                    ]
-                ))
-                continue
-            }
+//            if ms.conditionsList.isEmpty {
+//                attributedString.append(NSAttributedString(
+//                    string: "   - \("no Pre-Request".localized)\n",
+//                    attributes: [
+//                        .font: UIFont.font(style: .regular, size: 14),
+//                        .foregroundColor : UIColor.darkGray
+//                    ]
+//                ))
+//                continue
+//            }
             ms.conditionsList.forEach({
                 attributedString.append(NSAttributedString(
                     string: "   - \($0)\n",
@@ -384,14 +507,16 @@ struct OPBranchDetailsDispaly {
         providerName = branch.otherProviderNameLocalized
         branchName = branch.branchNameLocalized
         branchAddress = branch.branchFullAddress
-        msPreRequest = branch.msPreRequest
+        if let msPreRequest = branch.msPreRequest, msPreRequest.length > 0 {
+            self.msPreRequest = msPreRequest
+        }else{ self.msPreRequest = nil }
         avatar = URL(string: "\(URLs.baseURLImage)\(branch.otherProviderImage)")
     }
 }
 
 extension Array{
     
-    var uniqueService: [Service] {
+    fileprivate var uniqueService: [Service] {
         guard let list = self as? [Service] else { return [] }
         var uniqueValues: [Service] = []
         for service in list {
@@ -403,7 +528,19 @@ extension Array{
         return uniqueValues
     }
     
-    func mergeWithUniqueServices(_ list2:[Service]) -> [Service] {
+    fileprivate func unrepeatedService(_ spList:[ServicePriceList]) -> [Service] {
+        guard let list = self as? [Service] else { return [] }
+        var unrepeatedService: [Service] = []
+        for service in list {
+            if spList.contains(where: { $0.serviceFk == service.serviceID }){
+                continue
+            }
+            unrepeatedService.append(service)
+        }
+        return unrepeatedService
+    }
+    
+    fileprivate func mergeWithUniqueServices(_ list2:[Service]) -> [Service] {
         guard let list1 = self as? [Service] else { return [] }
         let servicesList = list1 + list2
         let msList = servicesList.uniqueService

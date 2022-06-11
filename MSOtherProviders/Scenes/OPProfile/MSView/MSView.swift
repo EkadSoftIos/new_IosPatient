@@ -9,23 +9,7 @@ import UIKit
 import SwiftUI
 import SwiftMessages
 
-protocol MSViewPresenter:AnyObject{
-    func deleteMS(at index:Int)
-}
-
-protocol MSViewProtocol{
-    func configView(display:MSViewDisplay, presenter:MSViewPresenter)
-}
-
-struct MSViewDisplay{
-    let title: String
-    let totalPrice: String
-    let totalPriceBefore: String
-    let isHiddenTotal:Bool
-    let msList:[ServiceViewDisplay]
-}
-
-class MSView: UIView, MSViewProtocol{
+class MSView: UIView, BookingMSViewProtocol, BookedSViewProtocol{
 
     // MARK: - static variables -
     public static var instance:MSView{
@@ -38,27 +22,82 @@ class MSView: UIView, MSViewProtocol{
     
     // MARK: - private properties -
     
+    
     override func layoutSubviews() {
         super.layoutSubviews()
         applyShadow( 0.3 )
     }
     
     // MARK: - config -
-    func configView(display: MSViewDisplay, presenter: MSViewPresenter){
+    func configView(display: BookingMSViewDisplay, presenter: BookingMSViewPresenter){
         msTitleLabel.text = display.title
         for ms in display.msList {
-            let msView = ServiceView.instance
+            let msView = BookingServiceView.instance
             msView.configView(display: ms, presenter: presenter)
             msListStackView.addArrangedSubview(msView)
         }
         if !display.isHiddenTotal {
-            let display = ServiceViewDisplay(display.totalPrice, display.totalPriceBefore)
-            let msView = ServiceView.instance
+            let display = BookingServiceViewDisplay(display.totalPrice, display.totalPriceBefore)
+            let msView = BookingServiceView.instance
             msView.configView(display: display)
             msListStackView.addArrangedSubview(msView)
         }
         setNeedsLayout()
         layoutIfNeeded()
     }
+    
+    // MARK: - config -
+    func configView(display: BookedSViewDisplay, presenter: BookedSViewPresenter){
+        msTitleLabel.text = display.title
+        for ms in display.msList {
+            let msView = BookedServiceView.instance
+            msView.configView(display: ms, presenter: presenter)
+            msListStackView.addArrangedSubview(msView)
+        }
+        if !display.isHiddenTotal {
+            let display = BookedServiceViewDisplay(display.totalPrice)
+            let msView = BookedServiceView.instance
+            msView.configView(display: display)
+            msListStackView.addArrangedSubview(msView)
+        }
+        setNeedsLayout()
+        layoutIfNeeded()
+    }
+    
+    
+}
+
+
+protocol BookingMSViewPresenter:AnyObject{
+    func deleteMS(with id:Int)
+}
+
+
+protocol BookingMSViewProtocol{
+    func configView(display:BookingMSViewDisplay, presenter:BookingMSViewPresenter)
+}
+
+
+struct BookingMSViewDisplay{
+    let title: String
+    let totalPrice: String
+    let totalPriceBefore: String
+    let isHiddenTotal:Bool
+    let msList:[BookingServiceViewDisplay]
+}
+
+protocol BookedSViewPresenter:AnyObject{
+    func resultBtnTapped(with id:Int)
+}
+
+protocol BookedSViewProtocol{
+    func configView(display: BookedSViewDisplay, presenter: BookedSViewPresenter)
+}
+
+struct BookedSViewDisplay{
+    let title: String
+    let totalPrice: String
+    let isHiddenTotal:Bool
+    let msList:[BookedServiceViewDisplay]
 }
 

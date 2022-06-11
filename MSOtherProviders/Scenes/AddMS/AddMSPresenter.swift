@@ -6,7 +6,7 @@
 //
 //
 
-import APESuperHUD
+import PKHUD
 import Foundation
 
 //MARK: Presenter -
@@ -146,7 +146,7 @@ extension AddMSPresenter: AddMSPresenterProtocol {
         }
         msOPServicesRequest.pageNum! = 1
         medicalServicesList.removeAll()
-        APESuperHUD.show(style: .loadingIndicator(type: .standard), message: .loading)
+        HUD.show(.progress)
         fetchMSData()
         notify()
     }

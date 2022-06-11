@@ -48,12 +48,23 @@ class NetworkURL{
             return URL(string:  "\(URLs.uploadImages)")
         case .upFilesRequest(_):
             return URL(string:  "\(URLs.uploadPrescriptionFiles)")
+        case .orderList(_):
+            return URL(string:  "\(URLs.getOrderList)")
+        case .otherProviderList(_):
+            return URL(string:  "\(URLs.getOtherProviderList)")
+        case .orderDetails(_):
+            return URL(string:  "\(URLs.getOrderDetails)")
         }
     }
     // MARK: - method -
     var method:HTTPMethod{
         switch self.type {
-        case .otherProviderDashboard(_), .serviceTypeList(_), .availableCountries:
+        case
+                .otherProviderDashboard(_),
+                .serviceTypeList(_),
+                .availableCountries,
+                .otherProviderList(_),
+                .orderDetails(_):
             return .get
         case
                 .searchServiceListForPatient(_),
@@ -62,7 +73,8 @@ class NetworkURL{
                 .opBranchDetails(_),
                 .addNewOrder(_),
                 .uploadImages,
-                .upFilesRequest(_):
+                .upFilesRequest(_),
+                .orderList(_):
             return .post
         }
     }
@@ -73,7 +85,8 @@ class NetworkURL{
         case
                 .serviceTypeList(let msOPSRequest),
                 .otherProviderDashboard(let msOPSRequest),
-                .searchServiceListForPatient(let msOPSRequest):
+                .searchServiceListForPatient(let msOPSRequest),
+                .otherProviderList(let msOPSRequest):
             return msOPSRequest.dictionary
         case .ePrescriptions(let epRequest):
             return epRequest.dictionary
@@ -85,8 +98,14 @@ class NetworkURL{
             return addOrderRequest.dictionary
         case .upFilesRequest(let upFilesRequest):
             return upFilesRequest.dictionary
+        case .orderList( let oRequest):
+            return oRequest.dictionary
         case .availableCountries, .uploadImages:
             return nil
+        case .orderDetails(let bookingId):
+            return [
+                "ServiceBookingId": bookingId
+            ]
         }
     }
     
@@ -105,7 +124,10 @@ class NetworkURL{
                 .serviceTypeList(_),
                 .addNewOrder(_),
                 .uploadImages,
-                .upFilesRequest(_):
+                .upFilesRequest(_),
+                .orderList(_),
+                .otherProviderList(_),
+                .orderDetails(_):
             return .authHeaderIfLogin
         }
     }
@@ -115,7 +137,9 @@ class NetworkURL{
         switch self.type {
         case
                 .otherProviderDashboard(_),
-                .serviceTypeList(_):
+                .serviceTypeList(_),
+                .otherProviderList(_),
+                .orderDetails(_):
             return URLEncoding.default
         case
                 .searchServiceListForPatient(_),
@@ -125,7 +149,8 @@ class NetworkURL{
                 .opBranchDetails(_),
                 .addNewOrder(_),
                 .uploadImages,
-                .upFilesRequest(_):
+                .upFilesRequest(_),
+                .orderList(_):
             return JSONEncoding.default            
         }
     }
@@ -176,6 +201,9 @@ extension NetworkURL{
         case addNewOrder(AddOrderRequest)
         case uploadImages
         case upFilesRequest(UPFilesRequest)
+        case orderList(OrderListRequest)
+        case otherProviderList(MSOPServicesRequest)
+        case orderDetails(Int)
     }
     
     enum URLs{
@@ -208,6 +236,12 @@ extension NetworkURL{
             "\(common)FormDataUploadMultiple"
         public static let uploadPrescriptionFiles:String =
             "\(otherProvider)UploadPrescriptionFiles"
+        public static let getOrderList:String =
+            "\(otherProvider)GetOrderList"
+        public static let getOtherProviderList:String =
+            "\(otherProvider)GetOtherProviderList"
+        public static let getOrderDetails:String =
+            "\(otherProvider)GetOrderDetails"
     }
     
 }

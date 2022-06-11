@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import APESuperHUD
+import PKHUD
 import SwiftMessages
 import SKCountryPicker
 
@@ -59,7 +59,7 @@ class AULocationVC: UIViewController {
     }
     
     func setupLayoutUI() {
-        APESuperHUD.show(style: .loadingIndicator(type: .standard), message: .loading)
+        HUD.show(.progress)
         shadowViews.forEach({ $0.applyShadow(0.15) })
         tableView.register(UINib(nibName: "AULocationCell", bundle: nil), forCellReuseIdentifier: "AULocationCell")
         tableView.delegate = self
@@ -81,7 +81,7 @@ extension AULocationVC: AULocationViewProtocol {
     }
     
     func reloadData(){
-        APESuperHUD.dismissAll(animated: true)
+        if HUD.isVisible { HUD.flash(.success) }
         tableView.reloadData()
     }
     
@@ -90,7 +90,7 @@ extension AULocationVC: AULocationViewProtocol {
     }
     
     func showMessageAlert(title: String, message: String) {
-        APESuperHUD.dismissAll(animated: true)
+        if HUD.isVisible { HUD.flash(.error) }
         showMessage(title: title, sub: message, type: Theme.error, layout: .centeredView)
     }
     

@@ -16,70 +16,75 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ServiceView" customModule="E4clinic" customModuleProvider="target">
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="BookedServiceView" customModule="E4clinic" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="434" height="96"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zix-g9-BBd">
-                    <rect key="frame" x="394" y="16" width="30" height="30"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="30" id="6T7-Jc-Tyd">
-                            <variation key="heightClass=regular-widthClass=regular" constant="45"/>
-                        </constraint>
-                        <constraint firstAttribute="width" secondItem="zix-g9-BBd" secondAttribute="height" multiplier="1:1" id="gre-xS-oDR"/>
-                    </constraints>
-                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                    <state key="normal" backgroundImage="ic_delet"/>
-                    <connections>
-                        <action selector="deleteBtnTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="klS-sv-4iz"/>
-                    </connections>
-                </button>
                 <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="DQg-FT-5s8">
-                    <rect key="frame" x="10" y="10" width="374" height="42"/>
+                    <rect key="frame" x="10" y="10" width="352" height="42"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vt7-80-3Oz">
-                            <rect key="frame" x="0.0" y="0.0" width="264" height="42"/>
+                            <rect key="frame" x="0.0" y="0.0" width="297" height="42"/>
                             <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="14"/>
                             <color key="textColor" red="0.1137254902" green="0.47450980390000003" blue="0.80784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
-                        </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lj7-Nb-oez">
-                            <rect key="frame" x="269" y="0.0" width="50" height="42"/>
-                            <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="14"/>
-                            <color key="textColor" red="0.1137254902" green="0.47450980390000003" blue="0.80784313730000001" alpha="1" colorSpace="calibratedRGB"/>
-                            <nil key="highlightedColor"/>
+                            <variation key="heightClass=regular-widthClass=regular">
+                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="21"/>
+                            </variation>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4gZ-nG-9US">
-                            <rect key="frame" x="324" y="0.0" width="50" height="42"/>
+                            <rect key="frame" x="302" y="0.0" width="50" height="42"/>
                             <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="14"/>
                             <color key="textColor" red="0.1137254902" green="0.47450980390000003" blue="0.80784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
+                            <variation key="heightClass=regular-widthClass=regular">
+                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="21"/>
+                            </variation>
                         </label>
                     </subviews>
                 </stackView>
+                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pxJ-HP-Jg9">
+                    <rect key="frame" x="372" y="18" width="52" height="26"/>
+                    <color key="backgroundColor" red="0.1333333333" green="0.49019607840000001" blue="0.81176470590000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="12"/>
+                    <inset key="contentEdgeInsets" minX="10" minY="5" maxX="10" maxY="5"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Result">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <variation key="heightClass=regular-widthClass=regular">
+                        <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="18"/>
+                    </variation>
+                    <connections>
+                        <action selector="resultBtnTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="0Or-N6-S9d"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="zix-g9-BBd" firstAttribute="centerY" secondItem="DQg-FT-5s8" secondAttribute="centerY" id="53p-w4-iTe"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="zix-g9-BBd" secondAttribute="trailing" constant="10" id="fbu-5v-mj0"/>
-                <constraint firstItem="zix-g9-BBd" firstAttribute="leading" secondItem="DQg-FT-5s8" secondAttribute="trailing" constant="10" id="oYt-b3-40c"/>
+                <constraint firstItem="pxJ-HP-Jg9" firstAttribute="centerY" secondItem="DQg-FT-5s8" secondAttribute="centerY" id="B9V-4g-tJ1"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="pxJ-HP-Jg9" secondAttribute="trailing" constant="10" id="KSy-eG-bT7"/>
+                <constraint firstItem="pxJ-HP-Jg9" firstAttribute="leading" secondItem="DQg-FT-5s8" secondAttribute="trailing" constant="10" id="Nxb-dQ-cbl"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="DQg-FT-5s8" secondAttribute="bottom" constant="10" id="rGq-CC-Pwq"/>
                 <constraint firstItem="DQg-FT-5s8" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="rz7-k4-alt"/>
                 <constraint firstItem="DQg-FT-5s8" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="yms-dl-J70"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="deleteBtn" destination="zix-g9-BBd" id="rN6-wH-saJ"/>
                 <outlet property="msNameLabel" destination="Vt7-80-3Oz" id="5Uf-4Z-ldW"/>
-                <outlet property="priceBeforeLabel" destination="Lj7-Nb-oez" id="5zn-wl-alT"/>
                 <outlet property="priceLabel" destination="4gZ-nG-9US" id="Khn-46-2UF"/>
+                <outlet property="resultBtn" destination="pxJ-HP-Jg9" id="QXg-Qa-m1z"/>
             </connections>
             <point key="canvasLocation" x="153.62318840579712" y="-188.16964285714286"/>
         </view>
     </objects>
     <resources>
-        <image name="ic_delet" width="22.5" height="22.5"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

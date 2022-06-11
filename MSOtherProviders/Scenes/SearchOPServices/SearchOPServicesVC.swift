@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import APESuperHUD
+import PKHUD
 import KafkaRefresh
 import SwiftMessages
 
@@ -59,8 +59,8 @@ class SearchOPServicesVC: UIViewController {
     }
 
     func setupLayout() {
+        HUD.show(.progress)
         title = presenter.title
-        APESuperHUD.show(style: .loadingIndicator(type: .standard), message: .loading)
         searchTextField.delegate = self
         shadowsViews.forEach ({ $0.applyShadow(0.3) })
         searchTextField.placeholder = presenter.searchPlaceholder
@@ -81,7 +81,7 @@ class SearchOPServicesVC: UIViewController {
         }
         guard let selectedIndexPaths = tableView.indexPathsForSelectedRows,
              !selectedIndexPaths.isEmpty else {
-                 showMessageAlert(title: .error, message: "Please choose at least one".localized)
+                 showMessageAlert(title: .error, message: .chooseMS)
             return
         }
         let vc = OtherProvidersListVC()
@@ -100,7 +100,8 @@ class SearchOPServicesVC: UIViewController {
     
     func showSearchResultVC(){
         view.endEditing(true)
-        guard let text = searchTextField.text?.trimmingCharacters(in: .whitespaces), !text.isEmpty else { return  }
+        guard let text = searchTextField.text, !text.isBlank
+        else { return  }
         presenter.fetchSearchedData(text: text)
     }
     
@@ -122,8 +123,9 @@ extension SearchOPServicesVC:UITextFieldDelegate{
 extension SearchOPServicesVC: SearchOPServicesViewProtocol {
     
     func reloadData(){
-        tableView.reloadData()
         stopLoading()
+        if HUD.isVisible { HUD.flash(.success) }
+        tableView.reloadData()
     }
     
     func setSearchText(_ text: String) {
@@ -132,11 +134,11 @@ extension SearchOPServicesVC: SearchOPServicesViewProtocol {
     
     func showMessageAlert(title: String, message: String) {
         stopLoading()
+        if HUD.isVisible { HUD.flash(.error) }
         showMessage(title: title, sub: message, type: Theme.error, layout: .centeredView)
     }
     
     private func stopLoading(){
-        APESuperHUD.dismissAll(animated: true)
         tableView.endRefreshing(presenter.canFetchMore)
     }
     

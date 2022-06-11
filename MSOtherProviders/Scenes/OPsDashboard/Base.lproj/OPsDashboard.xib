@@ -216,12 +216,15 @@
                             </variation>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TQv-Cb-9TX">
-                            <rect key="frame" x="344" y="6" width="60" height="30"/>
-                            <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain" title="See All">
-                                <fontDescription key="titleFontDescription" name="SegoeUI" family="Segoe UI" pointSize="12"/>
-                                <color key="baseForegroundColor" red="0.1333333333" green="0.49019607840000001" blue="0.81176470590000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </buttonConfiguration>
+                            <rect key="frame" x="362" y="5.5" width="42" height="31"/>
+                            <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="14"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="See All">
+                                <color key="titleColor" red="0.1333333333" green="0.49019607840000001" blue="0.81176470590000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <variation key="heightClass=regular-widthClass=regular">
+                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="21"/>
+                            </variation>
                             <connections>
                                 <action selector="showEPrescriptionsList:" destination="-1" eventType="touchUpInside" id="ZTs-UT-9o6"/>
                             </connections>
@@ -250,27 +253,41 @@
                             </variation>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ww-4g-d3g">
-                            <rect key="frame" x="304" y="4.5" width="100" height="33"/>
+                            <rect key="frame" x="304" y="5.5" width="100" height="31"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="100" id="B1j-Qd-Nfb"/>
                             </constraints>
-                            <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain" title="View">
-                                <fontDescription key="titleFontDescription" name="SegoeUI" family="Segoe UI" pointSize="14"/>
-                                <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </buttonConfiguration>
+                            <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="14"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="View">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <variation key="heightClass=regular-widthClass=regular">
+                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="21"/>
+                            </variation>
                             <connections>
-                                <action selector="showOrdersList:" destination="-1" eventType="touchUpInside" id="Tvv-2d-eGl"/>
+                                <action selector="showOrdersListBtnTapped:" destination="-1" eventType="touchUpInside" id="MkO-Hf-xch"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LGa-ZF-Bn9">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="31.5"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <connections>
+                                <action selector="showOrdersListBtnTapped:" destination="-1" eventType="touchUpInside" id="vWw-be-jeI"/>
                             </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" red="0.1333333333" green="0.49019607840000001" blue="0.81176470590000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="8Ww-4g-d3g" firstAttribute="centerY" secondItem="oTB-zj-VN7" secondAttribute="centerY" id="7xR-ey-zUG"/>
+                        <constraint firstItem="LGa-ZF-Bn9" firstAttribute="top" secondItem="XGD-xd-pIR" secondAttribute="top" id="CL7-3V-Wpt"/>
                         <constraint firstAttribute="trailing" secondItem="8Ww-4g-d3g" secondAttribute="trailing" constant="10" id="CpA-Pm-eWA"/>
                         <constraint firstItem="8Ww-4g-d3g" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="oTB-zj-VN7" secondAttribute="trailing" constant="10" id="FhY-Tk-gE1"/>
                         <constraint firstItem="oTB-zj-VN7" firstAttribute="leading" secondItem="XGD-xd-pIR" secondAttribute="leading" constant="20" id="HiA-pr-Ik5"/>
+                        <constraint firstAttribute="trailing" secondItem="LGa-ZF-Bn9" secondAttribute="trailing" id="Iab-qr-SGe"/>
+                        <constraint firstItem="LGa-ZF-Bn9" firstAttribute="leading" secondItem="XGD-xd-pIR" secondAttribute="leading" id="ZVj-IX-u56"/>
                         <constraint firstItem="oTB-zj-VN7" firstAttribute="top" secondItem="XGD-xd-pIR" secondAttribute="top" constant="10" id="nGE-Hx-ekZ"/>
+                        <constraint firstItem="LGa-ZF-Bn9" firstAttribute="bottom" secondItem="oTB-zj-VN7" secondAttribute="bottom" id="rvz-rz-44H"/>
                     </constraints>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="bJ0-QY-uHZ">
@@ -296,6 +313,9 @@
                             <rect key="frame" x="50" y="10" width="314" height="20.5"/>
                             <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="14"/>
                             <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                            <variation key="heightClass=regular-widthClass=regular">
+                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="21"/>
+                            </variation>
                         </textField>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -347,7 +367,7 @@
                 <constraint firstItem="GoI-R7-N0e" firstAttribute="top" secondItem="hxV-Wr-FzG" secondAttribute="bottom" constant="20" id="w8t-UU-9hH"/>
                 <constraint firstItem="CKP-TG-O7o" firstAttribute="trailing" secondItem="agi-m2-5FS" secondAttribute="trailing" id="zOj-nL-AH4"/>
             </constraints>
-            <point key="canvasLocation" x="139" y="119"/>
+            <point key="canvasLocation" x="137.68115942028987" y="118.52678571428571"/>
         </view>
     </objects>
     <resources>

@@ -311,7 +311,7 @@
                                         <constraint firstItem="BOR-G4-bxb" firstAttribute="height" secondItem="DXY-q6-krO" secondAttribute="height" id="OsP-Um-MsL"/>
                                     </constraints>
                                 </stackView>
-                                <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Af8-ox-Zq0">
+                                <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Af8-ox-Zq0">
                                     <rect key="frame" x="0.0" y="308.5" width="374" height="0.0"/>
                                 </stackView>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kzC-Xq-dpf" userLabel="PrescriptionsPhotos">
@@ -330,7 +330,9 @@
                                             <rect key="frame" x="0.0" y="41.5" width="374" height="150"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="150" id="DQ6-PF-jTX"/>
+                                                <constraint firstAttribute="height" constant="150" id="DQ6-PF-jTX">
+                                                    <variation key="heightClass=regular-widthClass=regular" constant="250"/>
+                                                </constraint>
                                             </constraints>
                                             <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="EI4-J8-Evt">
                                                 <size key="itemSize" width="128" height="128"/>
