@@ -19,7 +19,7 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignUpVC" customModule="E4clinic" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignUpVC">
             <connections>
                 <outlet property="accountInfoLBL" destination="gis-di-NXN" id="psU-Rj-ZVW"/>
                 <outlet property="agreeBtn" destination="9fD-KX-lOE" id="bpG-ZR-vYH"/>

@@ -212,6 +212,7 @@
 		06FC022128531079003E239E /* EPImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06FC021F28531079003E239E /* EPImageCell.xib */; };
 		06FD674528431790001FD415 /* SearchOPServicesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FD674228431790001FD415 /* SearchOPServicesPresenter.swift */; };
 		06FD674628431790001FD415 /* SearchOPServicesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FD674328431790001FD415 /* SearchOPServicesVC.swift */; };
+		06FDB4932855039300528838 /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06FDB4912855039300528838 /* LoginVC.xib */; };
 		322DCF2325EA632A00142F6A /* GetFullCities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322DCF2225EA632A00142F6A /* GetFullCities.swift */; };
 		322DCF2525EAC29A00142F6A /* EditProfileVCPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322DCF2425EAC29A00142F6A /* EditProfileVCPicker.swift */; };
 		328F1DEEE422D6967CFC062B /* Pods_RubikCarePatient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CDAABDF34E9B9BA60535E63 /* Pods_RubikCarePatient.framework */; };
@@ -835,8 +836,6 @@
 		06D02A4D285040C100815987 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		06D02A4E285040C100815987 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		06D02A502850413C00815987 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
-		06D84EA42849BB8E00DEF1D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LoginVC.xib; sourceTree = "<group>"; };
-		06D84EA62849BBA700DEF1D1 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LoginVC.strings; sourceTree = "<group>"; };
 		06D84EAA2849BBCA00DEF1D1 /* SocialPhoneVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialPhoneVC.swift; sourceTree = "<group>"; };
 		06D84EAC2849BBCA00DEF1D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SocialPhoneVC.xib; sourceTree = "<group>"; };
 		06D84EB02849BC1600DEF1D1 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/SocialPhoneVC.strings; sourceTree = "<group>"; };
@@ -855,6 +854,8 @@
 		06FC021F28531079003E239E /* EPImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EPImageCell.xib; sourceTree = "<group>"; };
 		06FD674228431790001FD415 /* SearchOPServicesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchOPServicesPresenter.swift; sourceTree = "<group>"; };
 		06FD674328431790001FD415 /* SearchOPServicesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchOPServicesVC.swift; sourceTree = "<group>"; };
+		06FDB4922855039300528838 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LoginVC.xib; sourceTree = "<group>"; };
+		06FDB494285503A300528838 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LoginVC.strings; sourceTree = "<group>"; };
 		0A3A7D91D683879A95484420 /* Pods_RubikCarePatientTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RubikCarePatientTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CDAABDF34E9B9BA60535E63 /* Pods_RubikCarePatient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RubikCarePatient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		322DCF2225EA632A00142F6A /* GetFullCities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFullCities.swift; sourceTree = "<group>"; };
@@ -2605,8 +2606,8 @@
 		C10E8F2225B33E23004FFCBF /* LoginVC */ = {
 			isa = PBXGroup;
 			children = (
+				06FDB4912855039300528838 /* LoginVC.xib */,
 				06D84EA72849BBCA00DEF1D1 /* SocialPhoneVC */,
-				06D84EA32849BB8E00DEF1D1 /* LoginVC.xib */,
 				C10E8F2325B33E39004FFCBF /* LoginVC.swift */,
 				C19EAB6425E7DE28006E6F06 /* loginNetwork.swift */,
 			);
@@ -4047,6 +4048,7 @@
 				C466AC28284807AD00AC1871 /* ReviewsVC.xib in Resources */,
 				C466AC0F284805CB00AC1871 /* DoctorProfileVC.xib in Resources */,
 				C466AC7328480E1F00AC1871 /* AppointmentDetailsCancelVC.xib in Resources */,
+				06FDB4932855039300528838 /* LoginVC.xib in Resources */,
 				065CA7B9285455FF0045CB07 /* font_regular.TTF in Resources */,
 				C1DC8AAD25B679D400B006AC /* AllDiseasesVC.xib in Resources */,
 				06682450285485FA00525151 /* AppointmentVC.xib in Resources */,
@@ -4886,15 +4888,6 @@
 			name = OtherProvidersList.xib;
 			sourceTree = "<group>";
 		};
-		06D84EA32849BB8E00DEF1D1 /* LoginVC.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				06D84EA42849BB8E00DEF1D1 /* Base */,
-				06D84EA62849BBA700DEF1D1 /* ar */,
-			);
-			name = LoginVC.xib;
-			sourceTree = "<group>";
-		};
 		06D84EAB2849BBCA00DEF1D1 /* SocialPhoneVC.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -4902,6 +4895,15 @@
 				06D84EB02849BC1600DEF1D1 /* ar */,
 			);
 			name = SocialPhoneVC.xib;
+			sourceTree = "<group>";
+		};
+		06FDB4912855039300528838 /* LoginVC.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				06FDB4922855039300528838 /* Base */,
+				06FDB494285503A300528838 /* ar */,
+			);
+			name = LoginVC.xib;
 			sourceTree = "<group>";
 		};
 		61BD67F22838B16800821D51 /* Localizable.strings */ = {
