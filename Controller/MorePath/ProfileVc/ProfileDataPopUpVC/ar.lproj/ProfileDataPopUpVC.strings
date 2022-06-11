@@ -3,13 +3,21 @@
 "0oz-I0-nyT.text" = "10%";
 
 /* Class = "UILabel"; text = "Emergency Contacts"; ObjectID = "5SZ-12-9MM"; */
+<<<<<<< HEAD
 "5SZ-12-9MM.text" = "جهة اتصال للطوارئ";
+=======
+"5SZ-12-9MM.text" = "Emergency Contacts";
+>>>>>>> newNada
 
 /* Class = "UILabel"; text = "10%"; ObjectID = "F7R-Io-j1Y"; */
 "F7R-Io-j1Y.text" = "10%";
 
 /* Class = "UILabel"; text = "All Address"; ObjectID = "H2i-MA-DE7"; */
+<<<<<<< HEAD
 "H2i-MA-DE7.text" = "كل العنوان";
+=======
+"H2i-MA-DE7.text" = "All Address";
+>>>>>>> newNada
 
 /* Class = "UILabel"; text = "10%"; ObjectID = "KXm-3L-vFL"; */
 "KXm-3L-vFL.text" = "10%";
@@ -21,7 +29,11 @@
 "QAm-kl-uej.text" = "30%";
 
 /* Class = "UILabel"; text = "Make your profile better"; ObjectID = "VaZ-3T-myq"; */
+<<<<<<< HEAD
 "VaZ-3T-myq.text" = "اجعل ملفك الشخصي أفضل";
+=======
+"VaZ-3T-myq.text" = "Make your profile better";
+>>>>>>> newNada
 
 /* Class = "UILabel"; text = "10%"; ObjectID = "ftU-XF-EvA"; */
 "ftU-XF-EvA.text" = "10%";
@@ -30,6 +42,7 @@
 "hvT-i6-7C7.text" = "10%";
 
 /* Class = "UILabel"; text = "Allergies"; ObjectID = "iFx-kY-Med"; */
+<<<<<<< HEAD
 "iFx-kY-Med.text" = "الحساسية";
 
 /* Class = "UILabel"; text = "Medications"; ObjectID = "j2s-jx-uiv"; */
@@ -40,12 +53,28 @@
 
 /* Class = "UILabel"; text = "Family History"; ObjectID = "lvJ-a6-7Gd"; */
 "lvJ-a6-7Gd.text" = "تاريخ العائلة";
+=======
+"iFx-kY-Med.text" = "Allergies";
+
+/* Class = "UILabel"; text = "Medications"; ObjectID = "j2s-jx-uiv"; */
+"j2s-jx-uiv.text" = "Medications";
+
+/* Class = "UILabel"; text = "Social History"; ObjectID = "jWK-UN-WRC"; */
+"jWK-UN-WRC.text" = "Social History";
+
+/* Class = "UILabel"; text = "Family History"; ObjectID = "lvJ-a6-7Gd"; */
+"lvJ-a6-7Gd.text" = "Family History";
+>>>>>>> newNada
 
 /* Class = "UILabel"; text = "10%"; ObjectID = "nVE-2X-6By"; */
 "nVE-2X-6By.text" = "10%";
 
 /* Class = "UILabel"; text = "Your Profile"; ObjectID = "qtk-lP-tJg"; */
+<<<<<<< HEAD
 "qtk-lP-tJg.text" = "ملفك الشخصي";
+=======
+"qtk-lP-tJg.text" = "Your Profile";
+>>>>>>> newNada
 
 /* Class = "UILabel"; text = "10%"; ObjectID = "rdL-Yf-iYc"; */
 "rdL-Yf-iYc.text" = "10%";
@@ -54,6 +83,7 @@
 "tLM-oh-aR4.text" = "10%";
 
 /* Class = "UILabel"; text = "Surgery / Implants"; ObjectID = "tfj-PZ-u7h"; */
+<<<<<<< HEAD
 "tfj-PZ-u7h.text" = "الجراحة / يزرع";
 
 /* Class = "UILabel"; text = "Insurance"; ObjectID = "tof-hu-oRs"; */
@@ -61,9 +91,22 @@
 
 /* Class = "UILabel"; text = "Diseases / Conditions"; ObjectID = "vdm-ae-jNU"; */
 "vdm-ae-jNU.text" = "الأمراض / الحالات";
+=======
+"tfj-PZ-u7h.text" = "Surgery / Implants";
+
+/* Class = "UILabel"; text = "Insurance"; ObjectID = "tof-hu-oRs"; */
+"tof-hu-oRs.text" = "Insurance";
+
+/* Class = "UILabel"; text = "Diseases / Conditions"; ObjectID = "vdm-ae-jNU"; */
+"vdm-ae-jNU.text" = "Diseases / Conditions";
+>>>>>>> newNada
 
 /* Class = "UILabel"; text = "10%"; ObjectID = "xg9-m6-nxp"; */
 "xg9-m6-nxp.text" = "10%";
 
 /* Class = "UILabel"; text = "Medical Reports"; ObjectID = "zEv-9b-iZ2"; */
+<<<<<<< HEAD
 "zEv-9b-iZ2.text" = "التقارير الطبية";
+=======
+"zEv-9b-iZ2.text" = "Medical Reports";
+>>>>>>> newNada

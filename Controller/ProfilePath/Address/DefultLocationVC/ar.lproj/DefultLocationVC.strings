@@ -1,0 +1,12 @@
+
+/* Class = "UIButton"; normalTitle = "Yes"; ObjectID = "03p-qa-mgy"; */
+"03p-qa-mgy.normalTitle" = "Yes";
+
+/* Class = "UILabel"; text = "Are you want to set this address a default?"; ObjectID = "GlF-Jh-yab"; */
+"GlF-Jh-yab.text" = "Are you want to set this address a default?";
+
+/* Class = "UIButton"; normalTitle = "No"; ObjectID = "fgB-g7-AnV"; */
+"fgB-g7-AnV.normalTitle" = "No";
+
+/* Class = "UILabel"; text = "Default Address"; ObjectID = "lgN-zD-lQU"; */
+"lgN-zD-lQU.text" = "Default Address";

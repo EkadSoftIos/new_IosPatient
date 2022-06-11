@@ -1155,7 +1155,11 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="y41-QS-8Ge">
                                                 <rect key="frame" x="24" y="45" width="104" height="138"/>
                                                 <subviews>
+<<<<<<< HEAD
                                                     <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FpL-4w-w5N">
+=======
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FpL-4w-w5N">
+>>>>>>> newNada
                                                         <rect key="frame" x="0.0" y="0.0" width="104" height="22"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="   All" image="ic_radiobtn_unactive">
@@ -1165,7 +1169,11 @@
                                                             <action selector="didTappedPaymentBtn:" destination="LNT-kP-Wzo" eventType="touchUpInside" id="hzJ-FH-Mua"/>
                                                         </connections>
                                                     </button>
+<<<<<<< HEAD
                                                     <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Z9-Le-DPm">
+=======
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Z9-Le-DPm">
+>>>>>>> newNada
                                                         <rect key="frame" x="0.0" y="29" width="104" height="22"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="   Paid" image="ic_radiobtn_unactive">
@@ -1175,7 +1183,11 @@
                                                             <action selector="didTappedPaymentBtn:" destination="LNT-kP-Wzo" eventType="touchUpInside" id="DIe-WS-3Ql"/>
                                                         </connections>
                                                     </button>
+<<<<<<< HEAD
                                                     <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Kj-ut-3hb">
+=======
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Kj-ut-3hb">
+>>>>>>> newNada
                                                         <rect key="frame" x="0.0" y="58" width="104" height="22"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="   Unpaid" image="ic_radiobtn_unactive">
@@ -1185,7 +1197,11 @@
                                                             <action selector="didTappedPaymentBtn:" destination="LNT-kP-Wzo" eventType="touchUpInside" id="ZCT-ua-sHb"/>
                                                         </connections>
                                                     </button>
+<<<<<<< HEAD
                                                     <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eQ4-io-wmW">
+=======
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eQ4-io-wmW">
+>>>>>>> newNada
                                                         <rect key="frame" x="0.0" y="87" width="104" height="22"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="   Refunded" image="ic_radiobtn_unactive">
@@ -1195,7 +1211,11 @@
                                                             <action selector="didTappedPaymentBtn:" destination="LNT-kP-Wzo" eventType="touchUpInside" id="cwN-88-45R"/>
                                                         </connections>
                                                     </button>
+<<<<<<< HEAD
                                                     <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6WM-iz-Fle">
+=======
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6WM-iz-Fle">
+>>>>>>> newNada
                                                         <rect key="frame" x="0.0" y="116" width="104" height="22"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="   Cancelled" image="ic_radiobtn_unactive">
@@ -1208,7 +1228,11 @@
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7pN-Yh-RyH">
+<<<<<<< HEAD
                                                 <rect key="frame" x="0.0" y="0.0" width="305" height="36"/>
+=======
+                                                <rect key="frame" x="0.0" y="0.0" width="264" height="36"/>
+>>>>>>> newNada
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <connections>
                                                     <action selector="didTappedPaymentStatus:" destination="LNT-kP-Wzo" eventType="touchUpInside" id="D9F-nu-jER"/>

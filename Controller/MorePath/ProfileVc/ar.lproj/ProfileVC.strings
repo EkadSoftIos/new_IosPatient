@@ -6,19 +6,34 @@
 "Coh-Xq-elw.text" = "_";
 
 /* Class = "UILabel"; text = "Your Profile"; ObjectID = "Dml-JD-gPJ"; */
+<<<<<<< HEAD
 "Dml-JD-gPJ.text" = "ملفك الشخصي";
+=======
+"Dml-JD-gPJ.text" = "Your Profile";
+>>>>>>> newNada
 
 /* Class = "UILabel"; text = "0%"; ObjectID = "Jvz-Fw-9Zd"; */
 "Jvz-Fw-9Zd.text" = "0%";
 
 /* Class = "UILabel"; text = "Medical Profile"; ObjectID = "TkR-Du-zya"; */
+<<<<<<< HEAD
 "TkR-Du-zya.text" = "الملف الطبي";
 
 /* Class = "UILabel"; text = "Visit summary"; ObjectID = "a3i-uL-HkY"; */
 "a3i-uL-HkY.text" = "ملخص الزيارة";
+=======
+"TkR-Du-zya.text" = "Medical Profile";
+
+/* Class = "UILabel"; text = "Visit summary"; ObjectID = "a3i-uL-HkY"; */
+"a3i-uL-HkY.text" = "Visit summary";
+>>>>>>> newNada
 
 /* Class = "UILabel"; text = "_"; ObjectID = "eau-Bo-4Ma"; */
 "eau-Bo-4Ma.text" = "_";
 
 /* Class = "UILabel"; text = "Patient Info"; ObjectID = "kBZ-RI-4TA"; */
+<<<<<<< HEAD
 "kBZ-RI-4TA.text" = "معلومات المريض";
+=======
+"kBZ-RI-4TA.text" = "Patient Info";
+>>>>>>> newNada

@@ -166,10 +166,13 @@ enum APIRouter : URLRequestConvertible{
             return .get
         case.bookingReport:
             return .post
+<<<<<<< HEAD
         case.reportServiceList:
             return .get
         case.reportBranchList:
             return .get
+=======
+>>>>>>> newNada
         }
     }
     var path : String {
@@ -331,10 +334,13 @@ enum APIRouter : URLRequestConvertible{
             return "\(Constants.baseURL)Common/GetFullWebPages"
         case.bookingReport:
             return "\(Constants.baseURL)Patient/SearchBookingReport"
+<<<<<<< HEAD
         case.reportServiceList:
             return "\(Constants.baseURL)Patient/GetServicesList"
         case.reportBranchList:
             return "\(Constants.baseURL)Patient/GetDoctorList"
+=======
+>>>>>>> newNada
         }
     }
     var parameters : Parameters?{
@@ -448,10 +454,13 @@ enum APIRouter : URLRequestConvertible{
             return nil
         case.bookingReport(params: let para):
             return para
+<<<<<<< HEAD
         case.reportServiceList:
             return nil
         case.reportBranchList:
             return nil
+=======
+>>>>>>> newNada
         }
     }
     var apiToken : String {

@@ -1,5 +1,6 @@
 
 /* Class = "UILabel"; text = "FAQ"; ObjectID = "4xE-BR-5Q5"; */
+<<<<<<< HEAD
 "4xE-BR-5Q5.text" = "التعليمات";
 
 /* Class = "UILabel"; text = "Terms,conditions"; ObjectID = "HES-Ud-ztZ"; */
@@ -13,3 +14,18 @@
 
 /* Class = "UILabel"; text = "Privacy Policy"; ObjectID = "ifd-sn-TY1"; */
 "ifd-sn-TY1.text" = "سياسة الخصوصية";
+=======
+"4xE-BR-5Q5.text" = "FAQ";
+
+/* Class = "UILabel"; text = "Terms,conditions"; ObjectID = "HES-Ud-ztZ"; */
+"HES-Ud-ztZ.text" = "Terms,conditions";
+
+/* Class = "UILabel"; text = "Contact Us"; ObjectID = "XAk-hZ-Bgf"; */
+"XAk-hZ-Bgf.text" = "Contact Us";
+
+/* Class = "UILabel"; text = "Help & Suppoort"; ObjectID = "eJI-q1-hrK"; */
+"eJI-q1-hrK.text" = "Help & Suppoort";
+
+/* Class = "UILabel"; text = "Privacy Policy"; ObjectID = "ifd-sn-TY1"; */
+"ifd-sn-TY1.text" = "Privacy Policy";
+>>>>>>> newNada

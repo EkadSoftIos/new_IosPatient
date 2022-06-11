@@ -467,22 +467,33 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+<<<<<<< HEAD
             uuid = "DF614B9E-6377-423D-AFDF-638D4B09AEC6"
+=======
+            uuid = "B4500FDF-49F7-488D-BC45-2800AF817112"
+>>>>>>> newNada
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Controller/MorePath/Change Language/ChangeLanguageVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
+<<<<<<< HEAD
             startingLineNumber = "70"
             endingLineNumber = "70"
             landmarkName = "didTappedDone(_:)"
+=======
+            startingLineNumber = "90"
+            endingLineNumber = "90"
+            landmarkName = "didTappedEnglish()"
+>>>>>>> newNada
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+<<<<<<< HEAD
             uuid = "A11204B5-AC59-4E51-A7C5-03726FC9463D"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -525,6 +536,18 @@
             startingLineNumber = "51"
             endingLineNumber = "51"
             landmarkName = "tableView(_:heightForRowAt:)"
+=======
+            uuid = "AB2147EA-5D3E-499F-BB7B-6C04B3C0AB08"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Controller/MorePath/Change Language/ChangeLanguageVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
+            landmarkName = "didTappedArabic()"
+>>>>>>> newNada
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

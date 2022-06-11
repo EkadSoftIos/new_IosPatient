@@ -902,12 +902,15 @@ PODS:
     - KafkaRefresh/Default
   - Kingfisher (7.2.2)
   - leveldb-library (1.22.1)
+<<<<<<< HEAD
   - Libuv-gRPC (0.0.10):
     - Libuv-gRPC/Implementation (= 0.0.10)
     - Libuv-gRPC/Interface (= 0.0.10)
   - Libuv-gRPC/Implementation (0.0.10):
     - Libuv-gRPC/Interface (= 0.0.10)
   - Libuv-gRPC/Interface (0.0.10)
+=======
+>>>>>>> newNada
   - MOLH (1.4.3)
   - nanopb (2.30908.0):
     - nanopb/decode (= 2.30908.0)
@@ -953,7 +956,10 @@ DEPENDENCIES:
   - KafkaRefresh
   - Kingfisher
   - MOLH
+<<<<<<< HEAD
   - PKHUD
+=======
+>>>>>>> newNada
   - RangeSeekSlider
   - SKCountryPicker
   - SwiftEntryKit
@@ -1009,7 +1015,10 @@ SPEC REPOS:
     - KafkaRefresh
     - Kingfisher
     - leveldb-library
+<<<<<<< HEAD
     - Libuv-gRPC
+=======
+>>>>>>> newNada
     - MOLH
     - nanopb
     - PKHUD
@@ -1068,7 +1077,10 @@ SPEC CHECKSUMS:
   KafkaRefresh: 01645b1509b8647809f6bb666629c80855bd3fdd
   Kingfisher: 184d4d1a8c36666e663caf8e08abe87898595c53
   leveldb-library: 50c7b45cbd7bf543c81a468fe557a16ae3db8729
+<<<<<<< HEAD
   Libuv-gRPC: 55e51798e14ef436ad9bc45d12d43b77b49df378
+=======
+>>>>>>> newNada
   MOLH: e45827d200aeb1310641090fd8cd03ad2b42ae72
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   PKHUD: 98f3e4bc904b9c916f1c5bb6d765365b5357291b
@@ -1080,6 +1092,10 @@ SPEC CHECKSUMS:
   TransitionButton: 36283346e17c64775a1b3bc3a7a72940a367de1f
   "UIView+Shake": 055ad67721de1f74d29c0a1d464697e505dfc62f
 
+<<<<<<< HEAD
 PODFILE CHECKSUM: ef9cd6732a6a1f004f3b478dc5d6096f29816801
+=======
+PODFILE CHECKSUM: c3c961a2c7c1242cad592f3a5d34ab4317e6964c
+>>>>>>> newNada
 
 COCOAPODS: 1.11.3

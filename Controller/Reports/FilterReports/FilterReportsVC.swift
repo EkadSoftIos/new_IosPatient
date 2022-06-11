@@ -12,6 +12,10 @@ protocol FilterReportProtocol: AnyObject {
     func returnFilterData(fromDate: String, toDate: String, appointementStatus: [Int], serviceFk: Int?, branchFK: Int?, paymentStatus: Int?)
 }
 
+protocol FilterReportProtocol: AnyObject {
+    func returnFilterData(fromDate: String, toDate: String, appointementStatus: [Int], serviceFk: Int?, branchFK: Int?)
+}
+
 class FilterReportsVC: UIViewController {
     
     @IBOutlet weak var toTF: UITextField!
@@ -36,8 +40,13 @@ class FilterReportsVC: UIViewController {
     @IBOutlet weak var separatorServiceTypeView: UIView!
     @IBOutlet weak var serviceTypeImg: UIImageView!
     @IBOutlet weak var serviceTypeStack: UIStackView!
+<<<<<<< HEAD
     @IBOutlet weak var branchTF: DropDown!
     @IBOutlet weak var serviceTypeTF: DropDown!
+=======
+    @IBOutlet weak var branchTF: UITextField!
+    @IBOutlet weak var serviceTypeTF: UITextField!
+>>>>>>> newNada
     @IBOutlet weak var seviceTypeViewConst: NSLayoutConstraint!
     @IBOutlet weak var paymentStatusViewConst: NSLayoutConstraint!
     @IBOutlet weak var dateViewConst: NSLayoutConstraint!
@@ -55,7 +64,10 @@ class FilterReportsVC: UIViewController {
     var fromDate: String?
     var toDate: String?
     var appointementStatus: [Int] = []
+<<<<<<< HEAD
     var paymentStatus: Int?
+=======
+>>>>>>> newNada
     var serviceFk: Int?
     var branchFK: Int?
     
@@ -66,6 +78,7 @@ class FilterReportsVC: UIViewController {
         formatter.dateFormat = "yyyy/MM/dd"
         return formatter
     }()
+<<<<<<< HEAD
     var serviceListNameArr: [String] = [] {
         didSet {
             serviceTypeTF.optionArray = serviceListNameArr
@@ -79,11 +92,14 @@ class FilterReportsVC: UIViewController {
         }
     }
     var branchListIdArr: [Int] = []
+=======
+>>>>>>> newNada
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupUI()
+<<<<<<< HEAD
         getReportServiceList()
         getBranchList()
         
@@ -260,6 +276,135 @@ class FilterReportsVC: UIViewController {
                 fromDate = self.dateFormatter.string(from: thirtyDaysAgo ?? now)
                 toDate = self.dateFormatter.string(from: now)
 
+=======
+        
+    }
+    
+    @IBAction func didTappedServiceType() {
+        selectedServiceType = !selectedServiceType
+        if selectedServiceType {
+            serviceTypeStack.isHidden = false
+            seviceTypeViewConst.constant = 220
+            serviceTypeImg.image = #imageLiteral(resourceName: "ic_next-1")
+            separatorServiceTypeView.isHidden = false
+        } else {
+            serviceTypeStack.isHidden = true
+            seviceTypeViewConst.constant = 44
+            serviceTypeImg.image = #imageLiteral(resourceName: "ic_next-2")
+            separatorServiceTypeView.isHidden = true
+        }
+    }
+    
+    @IBAction
+    func didTappedPaymentStatus(_ sender: Any) {
+        selectedPaymentStatus = !selectedPaymentStatus
+        if selectedPaymentStatus {
+            paymentStackView.isHidden = false
+            paymentStatusConstraint.constant = 200
+            paymentDropDownImg.image = #imageLiteral(resourceName: "ic_next-1")
+            separatorPaymentView.isHidden = false
+        } else {
+            paymentStackView.isHidden = true
+            paymentStatusConstraint.constant = 44
+            paymentDropDownImg.image = #imageLiteral(resourceName: "ic_next-2")
+            separatorPaymentView.isHidden = true
+        }
+    }
+    
+    @IBAction
+    func didTappedPaymentBtn(_ sender: Any) {
+        
+    }
+    
+    @IBAction
+    func didTappedAppointementBtn(_ sender: UIButton) {
+        let tags = [1, 2, 3, 4, 5, 6, 7]
+        let btnTag = sender.tag
+        if appointementStatus.contains(btnTag) {
+            if let index = appointementStatus.firstIndex(of: btnTag) {
+                appointementStatus.remove(at: index)
+            }
+        } else {
+            appointementStatus.append(btnTag)
+        }
+        
+        for tag in tags {
+            if let btn = view.viewWithTag(tag) as? UIButton {
+                if appointementStatus.contains(tag) {
+                    btn.setImage(UIImage(named: "ic_radiobtn_active"), for: .normal)
+                } else {
+                    btn.setImage(UIImage(named: "ic_radiobtn_unactive"), for: .normal)
+                }
+            }
+        }
+    }
+    
+    @IBAction
+    func didTappedAppointStatus(_ sender: Any) {
+        selectedappointement = !selectedappointement
+        if selectedappointement {
+            appointementStackView.isHidden = false
+            appointementStatusConstraint.constant = 220
+            appointementDropDownImg.image = #imageLiteral(resourceName: "ic_next-1")
+            separatorappointementView.isHidden = false
+        } else {
+            appointementStackView.isHidden = true
+            appointementStatusConstraint.constant = 44
+            appointementDropDownImg.image = #imageLiteral(resourceName: "ic_next-2")
+            separatorappointementView.isHidden = true
+        }
+    }
+    
+    @IBAction
+    func didTappedDate(_ sender: Any) {
+        selectedDate = !selectedDate
+        if selectedDate {
+            dateStackView.isHidden = false
+            dateViewConst.constant = 200
+            dateDropDownImg.image = #imageLiteral(resourceName: "ic_next-1")
+            separatorDateView.isHidden = false
+        } else {
+            dateStackView.isHidden = true
+            dateViewConst.constant = 44
+            dateDropDownImg.image = #imageLiteral(resourceName: "ic_next-2")
+            separatorDateView.isHidden = true
+        }
+    }
+    
+    @IBAction
+    func didTappedDateBtn(_ sender: UIButton) {
+        let tags = [30, 31, 32]
+        let btnTag = sender.tag
+        for tag in tags {
+            if let btn = view.viewWithTag(tag) as? UIButton {
+                if tag == btnTag {
+                    btn.setImage(UIImage(named: "ic_radiobtn_active"), for: .normal)
+                } else {
+                    btn.setImage(UIImage(named: "ic_radiobtn_unactive"), for: .normal)
+               }
+            }
+        }
+        
+        if btnTag == 32 {
+            fromTF.isEnabled = true
+            toTF.isEnabled = true
+        } else {
+            fromTF.isEnabled = false
+            toTF.isEnabled = false
+            fromTF.text = ""
+            toTF.text = ""
+            if btnTag == 30 {
+                let now = Date()
+                let sevenDaysAgo = Calendar.current.date(byAdding: .day, value: -7, to: now)
+                fromDate = self.dateFormatter.string(from: sevenDaysAgo ?? now)
+                toDate = self.dateFormatter.string(from: now)
+            } else {
+                let now = Date()
+                let thirtyDaysAgo = Calendar.current.date(byAdding: .day, value: -30, to: now)
+                fromDate = self.dateFormatter.string(from: thirtyDaysAgo ?? now)
+                toDate = self.dateFormatter.string(from: now)
+
+>>>>>>> newNada
             }
         }
         
@@ -273,6 +418,7 @@ class FilterReportsVC: UIViewController {
         if appointementStatus.contains(7) {
             appointementStatus = [1, 2, 3, 4, 5, 6]
         }
+<<<<<<< HEAD
         if paymentStatus != nil {
             if paymentStatus == 15 {
                 paymentStatus = nil
@@ -281,13 +427,20 @@ class FilterReportsVC: UIViewController {
             }
         }
         delegate?.returnFilterData(fromDate: fromDate ?? "", toDate: toDate ?? "", appointementStatus: appointementStatus, serviceFk: serviceFk, branchFK: branchFK, paymentStatus: paymentStatus ?? 0)
+=======
+        delegate?.returnFilterData(fromDate: fromDate ?? "", toDate: toDate ?? "", appointementStatus: appointementStatus, serviceFk: serviceFk, branchFK: branchFK)
+>>>>>>> newNada
         navigationController?.popViewController(animated: true)
     }
     
     @IBAction
     func didTappedReset(_ sender: Any) {
         resetData()
+<<<<<<< HEAD
         delegate?.returnFilterData(fromDate: fromDate ?? "", toDate: toDate ?? "", appointementStatus: appointementStatus, serviceFk: serviceFk, branchFK: branchFK, paymentStatus: paymentStatus ?? 0)
+=======
+        delegate?.returnFilterData(fromDate: fromDate ?? "", toDate: toDate ?? "", appointementStatus: appointementStatus, serviceFk: serviceFk, branchFK: branchFK)
+>>>>>>> newNada
         navigationController?.popViewController(animated: true)
     }
     
@@ -295,12 +448,16 @@ class FilterReportsVC: UIViewController {
         fromDate = ""
         toDate = ""
         appointementStatus = []
+<<<<<<< HEAD
         paymentStatus = nil
+=======
+>>>>>>> newNada
         serviceFk = nil
         branchFK = nil
     }
     
 }
+<<<<<<< HEAD
 
 extension FilterReportsVC {
     fileprivate func setupUI() {
@@ -317,6 +474,15 @@ extension FilterReportsVC {
             self.branchFK = self.branchListIdArr[index]
         }
 
+=======
+
+extension FilterReportsVC {
+    fileprivate func setupUI() {
+        self.title = "Filter"
+        
+        fromTF.isEnabled = false
+        toTF.isEnabled = false
+>>>>>>> newNada
         
         let datePickerView = UIDatePicker()
         datePickerView.datePickerMode = .date

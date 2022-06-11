@@ -8,6 +8,7 @@
 import UIKit
 import IQKeyboardManager
 import FBSDKCoreKit
+<<<<<<< HEAD
 import Firebase
 import FirebaseMessaging
 import FirebaseDatabase
@@ -17,6 +18,9 @@ import GoogleUtilities
 import FirebaseMessaging
 import FirebaseDatabase
 import UserNotifications
+=======
+import MOLH
+>>>>>>> newNada
 
 //@main
 @UIApplicationMain
@@ -87,6 +91,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate , UNUserNotificationCenter
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         setupNavigationBar()
+<<<<<<< HEAD
         FirebaseApp.configure()
         UNUserNotificationCenter.current().delegate = self
         Messaging.messaging().delegate = self
@@ -99,6 +104,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate , UNUserNotificationCenter
         Languagee.language = .english
 
         // let attributes = [NSAttributedString.Key.font:  UIFont(name: "Helvetica-Bold", size: 0.1)!, NSAttributedString.Key.foregroundColor: UIColor.clear]
+=======
+        
+//        Languagee.language = .arabic
+        MOLH.shared.activate(true)
+       // let attributes = [NSAttributedString.Key.font:  UIFont(name: "Helvetica-Bold", size: 0.1)!, NSAttributedString.Key.foregroundColor: UIColor.clear]
+>>>>>>> newNada
 
         //setupTabbar()
       //  window?.rootViewController = LoginVC()

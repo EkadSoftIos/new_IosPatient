@@ -45,6 +45,8 @@ target 'E4 Patient' do
 
   pod 'MOLH'
 
+pod 'MOLH'
+
   target 'E4 PatientTests' do
     inherit! :search_paths
     # Pods for testing

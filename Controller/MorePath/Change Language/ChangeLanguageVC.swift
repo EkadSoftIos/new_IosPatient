@@ -6,8 +6,12 @@
 //
 
 import UIKit
+<<<<<<< HEAD
  import MOLH
 
+=======
+ 
+>>>>>>> newNada
 class ChangeLanguageVC: UIViewController, ChangeLanguageViewProtocol {
     
     //MARK: - IBOutlets
@@ -67,6 +71,7 @@ class ChangeLanguageVC: UIViewController, ChangeLanguageViewProtocol {
     }
     
     @IBAction func didTappedDone(_ sender: UIButton) {
+<<<<<<< HEAD
         if englishIsSelected {
             MOLH.setLanguageTo("en")
             MOLH.reset()
@@ -74,6 +79,9 @@ class ChangeLanguageVC: UIViewController, ChangeLanguageViewProtocol {
             MOLH.setLanguageTo("ar")
             MOLH.reset()
         }
+=======
+        self.dismiss(animated: false, completion: nil)
+>>>>>>> newNada
     }
 }
 
@@ -86,14 +94,23 @@ extension ChangeLanguageVC {
     
     fileprivate func setupLang(){
         arabicLb.setTitle("Arabic".localized, for: .normal)
+<<<<<<< HEAD
         englishLb.setTitle("English".localized, for: .normal)
+=======
+//        arabicLb.titleLabel?.textAlignment = Helper.instance.appLang == "en" ? .left : .right
+        englishLb.setTitle("English".localized, for: .normal)
+//        englishLb.titleLabel?.textAlignment = Helper.instance.appLang == "en" ? .left : .right
+>>>>>>> newNada
     }
     
     
     
     
     fileprivate func didTappedEnglish(){
+<<<<<<< HEAD
         englishIsSelected = true
+=======
+>>>>>>> newNada
         animateButton(sender: englishRadioButton, senderTitle: englishLb)
         englishLb.setTitleColor(activeTextColor, for: .normal)
         arabicLb.setTitleColor(unactiveTextColor, for: .normal)
@@ -102,7 +119,10 @@ extension ChangeLanguageVC {
     }
     
     fileprivate func didTappedArabic(){
+<<<<<<< HEAD
         englishIsSelected = false
+=======
+>>>>>>> newNada
         animateButton(sender: arabicRadioButton, senderTitle: arabicLb)
         englishLb.setTitleColor(unactiveTextColor, for: .normal)
         arabicLb.setTitleColor(activeTextColor, for: .normal)

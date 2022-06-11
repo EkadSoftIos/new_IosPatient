@@ -6,6 +6,7 @@
 "7vO-yV-Ix7.placeholder" = "000-000-000";
 
 /* Class = "UILabel"; text = "First Name"; ObjectID = "9kM-Uf-kiK"; */
+<<<<<<< HEAD
 "9kM-Uf-kiK.text" = "الاسم اللاول";
 
 /* Class = "UIButton"; normalTitle = "Create Account"; ObjectID = "G7C-Np-SXo"; */
@@ -16,12 +17,28 @@
 
 /* Class = "UILabel"; text = "Sign Up"; ObjectID = "Hcg-4p-Aqm"; */
 "Hcg-4p-Aqm.text" = "تسجيل";
+=======
+"9kM-Uf-kiK.text" = "First Name";
+
+/* Class = "UIButton"; normalTitle = "Create Account"; ObjectID = "G7C-Np-SXo"; */
+"G7C-Np-SXo.normalTitle" = "Create Account";
+
+/* Class = "UILabel"; text = "Email"; ObjectID = "GV6-xb-WFC"; */
+"GV6-xb-WFC.text" = "Email";
+
+/* Class = "UILabel"; text = "Sign Up"; ObjectID = "Hcg-4p-Aqm"; */
+"Hcg-4p-Aqm.text" = "Sign Up";
+>>>>>>> newNada
 
 /* Class = "UILabel"; text = "*"; ObjectID = "Iqz-up-943"; */
 "Iqz-up-943.text" = "*";
 
 /* Class = "UILabel"; text = "Gender"; ObjectID = "L2s-nw-0ge"; */
+<<<<<<< HEAD
 "L2s-nw-0ge.text" = "النوع";
+=======
+"L2s-nw-0ge.text" = "Gender";
+>>>>>>> newNada
 
 /* Class = "UITextField"; placeholder = "+20 000 00000 000"; ObjectID = "LHO-I3-VWF"; */
 "LHO-I3-VWF.placeholder" = "+20 000 00000 000";
@@ -30,15 +47,23 @@
 "NL9-1y-rtT.normalTitle" = "Button";
 
 /* Class = "UILabel"; text = "Last Name"; ObjectID = "Oc4-lW-EZK"; */
+<<<<<<< HEAD
 "Oc4-lW-EZK.text" = "الاسم الاخير";
 
 /* Class = "UIButton"; normalTitle = "Login"; ObjectID = "PlF-cu-pjZ"; */
 "PlF-cu-pjZ.normalTitle" = "تسجيل الدخول";
+=======
+"Oc4-lW-EZK.text" = "Last Name";
+
+/* Class = "UIButton"; normalTitle = "Login"; ObjectID = "PlF-cu-pjZ"; */
+"PlF-cu-pjZ.normalTitle" = "Login";
+>>>>>>> newNada
 
 /* Class = "UILabel"; text = "EG"; ObjectID = "SAC-ed-LUc"; */
 "SAC-ed-LUc.text" = "EG";
 
 /* Class = "UITextField"; placeholder = "Gender"; ObjectID = "V92-Tf-DeK"; */
+<<<<<<< HEAD
 "V92-Tf-DeK.placeholder" = "النوع";
 
 /* Class = "UITextField"; placeholder = "Email"; ObjectID = "VWW-mc-ujc"; */
@@ -52,6 +77,21 @@
 
 /* Class = "UILabel"; text = "Date of Birth"; ObjectID = "ZPG-Uh-kJZ"; */
 "ZPG-Uh-kJZ.text" = "تاريخ الميلاد";
+=======
+"V92-Tf-DeK.placeholder" = "Gender";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "VWW-mc-ujc"; */
+"VWW-mc-ujc.placeholder" = "Email";
+
+/* Class = "UILabel"; text = "Mobile"; ObjectID = "WMR-Lf-sza"; */
+"WMR-Lf-sza.text" = "Mobile";
+
+/* Class = "UITextField"; placeholder = "First Name"; ObjectID = "YaM-WI-ZCd"; */
+"YaM-WI-ZCd.placeholder" = "First Name";
+
+/* Class = "UILabel"; text = "Date of Birth"; ObjectID = "ZPG-Uh-kJZ"; */
+"ZPG-Uh-kJZ.text" = "Date of Birth";
+>>>>>>> newNada
 
 /* Class = "UILabel"; text = "*"; ObjectID = "arU-vl-Nl3"; */
 "arU-vl-Nl3.text" = "*";
@@ -69,6 +109,7 @@
 "fSZ-UT-Pbo.text" = "*";
 
 /* Class = "UILabel"; text = "Password"; ObjectID = "ffW-jf-duy"; */
+<<<<<<< HEAD
 "ffW-jf-duy.text" = "كلمة المرور";
 
 /* Class = "UILabel"; text = "Account Info"; ObjectID = "gis-di-NXN"; */
@@ -79,11 +120,24 @@
 
 /* Class = "UILabel"; text = "Confirm Password"; ObjectID = "iKb-hI-ckB"; */
 "iKb-hI-ckB.text" = "تاكيد كلمة المرور";
+=======
+"ffW-jf-duy.text" = "Password";
+
+/* Class = "UILabel"; text = "Account Info"; ObjectID = "gis-di-NXN"; */
+"gis-di-NXN.text" = "Account Info";
+
+/* Class = "UITextField"; placeholder = "Confirm password"; ObjectID = "hgE-zR-4nK"; */
+"hgE-zR-4nK.placeholder" = "Confirm password";
+
+/* Class = "UILabel"; text = "Confirm Password"; ObjectID = "iKb-hI-ckB"; */
+"iKb-hI-ckB.text" = "Confirm Password";
+>>>>>>> newNada
 
 /* Class = "UILabel"; text = "*"; ObjectID = "la7-KL-Ehp"; */
 "la7-KL-Ehp.text" = "*";
 
 /* Class = "UITextField"; placeholder = "Password"; ObjectID = "mjn-RY-4Vt"; */
+<<<<<<< HEAD
 "mjn-RY-4Vt.placeholder" = "كلمة المرور";
 
 /* Class = "UIButton"; normalTitle = "Terms of use"; ObjectID = "o2m-NC-vcD"; */
@@ -100,3 +154,21 @@
 
 /* Class = "UITextField"; placeholder = "Last Name"; ObjectID = "uhk-PM-d3j"; */
 "uhk-PM-d3j.placeholder" = "الاسم الاخير";
+=======
+"mjn-RY-4Vt.placeholder" = "Password";
+
+/* Class = "UIButton"; normalTitle = "Terms of use"; ObjectID = "o2m-NC-vcD"; */
+"o2m-NC-vcD.normalTitle" = "Terms of use";
+
+/* Class = "UILabel"; text = "Already have an account?"; ObjectID = "qXR-6N-zxJ"; */
+"qXR-6N-zxJ.text" = "Already have an account?";
+
+/* Class = "UILabel"; text = "OR\nLogin with"; ObjectID = "qwp-bH-2oO"; */
+"qwp-bH-2oO.text" = "OR\nLogin with";
+
+/* Class = "UILabel"; text = "By signing up you are agree to our"; ObjectID = "tOf-mk-lwM"; */
+"tOf-mk-lwM.text" = "By signing up you are agree to our";
+
+/* Class = "UITextField"; placeholder = "Last Name"; ObjectID = "uhk-PM-d3j"; */
+"uhk-PM-d3j.placeholder" = "Last Name";
+>>>>>>> newNada

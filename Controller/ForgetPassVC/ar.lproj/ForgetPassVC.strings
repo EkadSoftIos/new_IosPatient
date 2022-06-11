@@ -3,13 +3,24 @@
 "DG0-iP-aSo.text" = "EG";
 
 /* Class = "UILabel"; text = "Forget Your Password ?"; ObjectID = "IaH-hW-Upb"; */
+<<<<<<< HEAD
 "IaH-hW-Upb.text" = "نسيت كلمة المرور ؟";
 
 /* Class = "UIButton"; normalTitle = "Send"; ObjectID = "ZXn-8L-Tff"; */
 "ZXn-8L-Tff.normalTitle" = "ارسال";
+=======
+"IaH-hW-Upb.text" = "Forget Your Password ?";
+
+/* Class = "UIButton"; normalTitle = "Send"; ObjectID = "ZXn-8L-Tff"; */
+"ZXn-8L-Tff.normalTitle" = "Send";
+>>>>>>> newNada
 
 /* Class = "UITextField"; placeholder = "+20 000 00000 000"; ObjectID = "e0o-JO-y7Z"; */
 "e0o-JO-y7Z.placeholder" = "+20 000 00000 000";
 
 /* Class = "UILabel"; text = "Enter your phone we'll send you\na link to reset your password"; ObjectID = "fUA-8d-0iF"; */
+<<<<<<< HEAD
 "fUA-8d-0iF.text" = "أدخل رقم هاتفك وسنرسل لك \ n رابطًا لإعادة تعيين كلمة المرور الخاصة بك";
+=======
+"fUA-8d-0iF.text" = "Enter your phone we'll send you\na link to reset your password";
+>>>>>>> newNada

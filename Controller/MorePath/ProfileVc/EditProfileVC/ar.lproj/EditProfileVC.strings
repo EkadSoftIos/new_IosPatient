@@ -1,5 +1,6 @@
 
 /* Class = "UILabel"; text = "Last Name"; ObjectID = "160-fd-c1t"; */
+<<<<<<< HEAD
 "160-fd-c1t.text" = "الاسم الاخير";
 
 /* Class = "UITextField"; placeholder = "Last Name"; ObjectID = "1f5-4q-BCP"; */
@@ -13,26 +14,53 @@
 
 /* Class = "UITextField"; placeholder = "Identification"; ObjectID = "BSh-F5-S5z"; */
 "BSh-F5-S5z.placeholder" = "هوية";
+=======
+"160-fd-c1t.text" = "Last Name";
+
+/* Class = "UITextField"; placeholder = "Last Name"; ObjectID = "1f5-4q-BCP"; */
+"1f5-4q-BCP.placeholder" = "Last Name";
+
+/* Class = "UILabel"; text = "Date of Birth *"; ObjectID = "3Ae-0Z-3Yu"; */
+"3Ae-0Z-3Yu.text" = "Date of Birth *";
+
+/* Class = "UILabel"; text = "First Name"; ObjectID = "5nD-0R-ljB"; */
+"5nD-0R-ljB.text" = "First Name";
+
+/* Class = "UITextField"; placeholder = "Identification"; ObjectID = "BSh-F5-S5z"; */
+"BSh-F5-S5z.placeholder" = "Identification";
+>>>>>>> newNada
 
 /* Class = "UILabel"; text = "*"; ObjectID = "CrV-6C-Y00"; */
 "CrV-6C-Y00.text" = "*";
 
 /* Class = "UITextField"; placeholder = "Blood Group"; ObjectID = "M64-AW-Ime"; */
+<<<<<<< HEAD
 "M64-AW-Ime.placeholder" = "فصيلة الدم";
+=======
+"M64-AW-Ime.placeholder" = "Blood Group";
+>>>>>>> newNada
 
 /* Class = "UILabel"; text = "+20"; ObjectID = "PxD-C1-N1w"; */
 "PxD-C1-N1w.text" = "+20";
 
 /* Class = "UITextField"; placeholder = "Gender"; ObjectID = "Tbh-lW-LnH"; */
+<<<<<<< HEAD
 "Tbh-lW-LnH.placeholder" = "النوع";
 
 /* Class = "UILabel"; text = "Gender *"; ObjectID = "UOx-Ta-XiZ"; */
 "UOx-Ta-XiZ.text" = "النوع *";
+=======
+"Tbh-lW-LnH.placeholder" = "Gender";
+
+/* Class = "UILabel"; text = "Gender *"; ObjectID = "UOx-Ta-XiZ"; */
+"UOx-Ta-XiZ.text" = "Gender *";
+>>>>>>> newNada
 
 /* Class = "UILabel"; text = "*"; ObjectID = "Wgz-Gy-JpP"; */
 "Wgz-Gy-JpP.text" = "*";
 
 /* Class = "UITextField"; placeholder = "Weight"; ObjectID = "Zna-9O-CkY"; */
+<<<<<<< HEAD
 "Zna-9O-CkY.placeholder" = "الوزن";
 
 /* Class = "UILabel"; text = "Blood Group"; ObjectID = "bXJ-Pl-QN0"; */
@@ -70,9 +98,52 @@
 
 /* Class = "UITextField"; placeholder = "Email"; ObjectID = "tMq-O4-kxv"; */
 "tMq-O4-kxv.placeholder" = "البريد الالكتروني";
+=======
+"Zna-9O-CkY.placeholder" = "Weight";
+
+/* Class = "UILabel"; text = "Blood Group"; ObjectID = "bXJ-Pl-QN0"; */
+"bXJ-Pl-QN0.text" = "Blood Group";
+
+/* Class = "UITextField"; placeholder = "First Name"; ObjectID = "dl7-SP-HvV"; */
+"dl7-SP-HvV.placeholder" = "First Name";
+
+/* Class = "UITextField"; placeholder = "Height"; ObjectID = "eCL-1e-YWL"; */
+"eCL-1e-YWL.placeholder" = "Height";
+
+/* Class = "UITextField"; placeholder = "Phone"; ObjectID = "gYd-lo-h7G"; */
+"gYd-lo-h7G.placeholder" = "Phone";
+
+/* Class = "UILabel"; text = "Height"; ObjectID = "i5i-jD-91Q"; */
+"i5i-jD-91Q.text" = "Height";
+
+/* Class = "UIButton"; normalTitle = "Change your Profile"; ObjectID = "id4-be-O44"; */
+"id4-be-O44.normalTitle" = "Change your Profile";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "ltu-uu-h9v"; */
+"ltu-uu-h9v.normalTitle" = "Save";
+
+/* Class = "UILabel"; text = "Weight"; ObjectID = "obu-lx-cDa"; */
+"obu-lx-cDa.text" = "Weight";
+
+/* Class = "UIButton"; normalTitle = "Add Attachment"; ObjectID = "oeW-Xq-lRc"; */
+"oeW-Xq-lRc.normalTitle" = "Add Attachment";
+
+/* Class = "UILabel"; text = "Mobile *"; ObjectID = "qLg-zk-JHZ"; */
+"qLg-zk-JHZ.text" = "Mobile *";
+
+/* Class = "UILabel"; text = "Identification"; ObjectID = "qR4-QH-UNV"; */
+"qR4-QH-UNV.text" = "Identification";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "tMq-O4-kxv"; */
+"tMq-O4-kxv.placeholder" = "Email";
+>>>>>>> newNada
 
 /* Class = "UITextField"; placeholder = "000-000-000"; ObjectID = "vUL-YO-zPv"; */
 "vUL-YO-zPv.placeholder" = "000-000-000";
 
 /* Class = "UILabel"; text = "Email *"; ObjectID = "z1O-K6-wDe"; */
+<<<<<<< HEAD
 "z1O-K6-wDe.text" = "البريد الالكتروني *";
+=======
+"z1O-K6-wDe.text" = "Email *";
+>>>>>>> newNada

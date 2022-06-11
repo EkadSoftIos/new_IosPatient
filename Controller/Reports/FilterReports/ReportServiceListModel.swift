@@ -6,6 +6,7 @@
 //
 
 import Foundation
+<<<<<<< HEAD
 
 struct ReportServiceListModel: Codable {
     let successtate: Int?
@@ -23,3 +24,5 @@ struct ReportServiceListData: Codable {
         case nameLocalized = "name_Localized"
     }
 }
+=======
+>>>>>>> newNada
