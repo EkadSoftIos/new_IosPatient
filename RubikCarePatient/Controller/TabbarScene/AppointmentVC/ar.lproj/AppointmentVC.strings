@@ -1,0 +1,18 @@
+
+/* Class = "UILabel"; text = "Filter"; ObjectID = "71m-gp-Oqs"; */
+"71m-gp-Oqs.text" = "Filter";
+
+/* Class = "UISearchBar"; placeholder = "Search by Doctor Name"; ObjectID = "ghb-c8-CB9"; */
+"ghb-c8-CB9.placeholder" = "Search by Doctor Name";
+
+/* Class = "UILabel"; text = "You have no appointements"; ObjectID = "uNI-q2-Exo"; */
+"uNI-q2-Exo.text" = "You have no appointements";
+
+/* Class = "UIButton"; configuration.subtitle = " "; ObjectID = "wfu-bY-AfD"; */
+"wfu-bY-AfD.configuration.subtitle" = " ";
+
+/* Class = "UIButton"; configuration.title = " "; ObjectID = "wfu-bY-AfD"; */
+"wfu-bY-AfD.configuration.title" = " ";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "wfu-bY-AfD"; */
+"wfu-bY-AfD.normalTitle" = "Button";

@@ -102,6 +102,30 @@
 		06455D40284F15EC00EC0FB3 /* BookingServiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06455D3F284F15EC00EC0FB3 /* BookingServiceView.xib */; };
 		064660CE284B265F00D4929B /* UIViewController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064660CD284B265F00D4929B /* UIViewController+extension.swift */; };
 		065C12D8285203E00041EC4F /* OrdersFilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065C12D7285203E00041EC4F /* OrdersFilterVC.swift */; };
+		065CA7B8285455FF0045CB07 /* font_bold.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 065CA7B6285455FE0045CB07 /* font_bold.TTF */; };
+		065CA7B9285455FF0045CB07 /* font_regular.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 065CA7B7285455FE0045CB07 /* font_regular.TTF */; };
+		065CA7BA285456C10045CB07 /* font_bold.TTF in Sources */ = {isa = PBXBuildFile; fileRef = 065CA7B6285455FE0045CB07 /* font_bold.TTF */; };
+		065CA7BB285456C10045CB07 /* font_regular.TTF in Sources */ = {isa = PBXBuildFile; fileRef = 065CA7B7285455FE0045CB07 /* font_regular.TTF */; };
+		065CA7CA285464C70045CB07 /* ChangeLanguageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065CA7C4285464C40045CB07 /* ChangeLanguageModel.swift */; };
+		065CA7CB285464C70045CB07 /* ChangeLanguageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065CA7C5285464C50045CB07 /* ChangeLanguageInteractor.swift */; };
+		065CA7CC285464C70045CB07 /* ChangeLanguagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065CA7C6285464C50045CB07 /* ChangeLanguagePresenter.swift */; };
+		065CA7CD285464C70045CB07 /* ChangeLanguageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065CA7C7285464C60045CB07 /* ChangeLanguageRouter.swift */; };
+		065CA7CE285464C70045CB07 /* ChangeLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065CA7C8285464C60045CB07 /* ChangeLanguage.swift */; };
+		065CA7CF285464C70045CB07 /* ChangeLanguageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065CA7C9285464C70045CB07 /* ChangeLanguageVC.swift */; };
+		065CA7D2285464D20045CB07 /* ChangeLanguageVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 065CA7D0285464D20045CB07 /* ChangeLanguageVC.xib */; };
+		065CA7DD285465850045CB07 /* RubikCarePatientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065CA7DC285465850045CB07 /* RubikCarePatientTests.swift */; };
+		065CA7EA285465A10045CB07 /* RubikCarePatientUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065CA7E9285465A10045CB07 /* RubikCarePatientUITests.swift */; };
+		065CA7EC285465A10045CB07 /* RubikCarePatientUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065CA7EB285465A10045CB07 /* RubikCarePatientUITestsLaunchTests.swift */; };
+		06682439285466FD00525151 /* AllReportsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06682435285466FC00525151 /* AllReportsCell.swift */; };
+		0668243A285466FD00525151 /* AllReportsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06682436285466FC00525151 /* AllReportsCell.xib */; };
+		0668244028547EA100525151 /* BranchImagesCollectionVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0668244228547EA100525151 /* BranchImagesCollectionVC.xib */; };
+		06682447285483F000525151 /* BranchInfoVCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06682449285483F000525151 /* BranchInfoVCViewController.xib */; };
+		0668244D2854852000525151 /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0668244B2854852000525151 /* HomeVC.xib */; };
+		06682450285485FA00525151 /* AppointmentVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0668244E285485F900525151 /* AppointmentVC.xib */; };
+		06682454285486C200525151 /* SignUpVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06682452285486C200525151 /* SignUpVC.xib */; };
+		06682458285486FC00525151 /* ConfirmAccountVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06682456285486FB00525151 /* ConfirmAccountVC.xib */; };
+		0668245C2854874F00525151 /* ForgetPasswordVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0668245A2854874F00525151 /* ForgetPasswordVC.xib */; };
+		06682460285487D100525151 /* AddAddressVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0668245E285487D100525151 /* AddAddressVC.xib */; };
 		0678831F285240D4007E8E61 /* DatePickerDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0678831E285240D4007E8E61 /* DatePickerDialog.swift */; };
 		06788321285246F1007E8E61 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06788320285246F1007E8E61 /* Date+Extensions.swift */; };
 		06893D4F28505B9A00864584 /* BookedMSPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06893D4C28505B9A00864584 /* BookedMSPresenter.swift */; };
@@ -123,12 +147,7 @@
 		0697FEDF2844AA28001E63F4 /* OtherProvidersList.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0697FEE12844AA28001E63F4 /* OtherProvidersList.xib */; };
 		069A2B4A284D9D5600608356 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069A2B48284D9D5600608356 /* ImageCell.swift */; };
 		069A2B4B284D9D5600608356 /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 069A2B49284D9D5600608356 /* ImageCell.xib */; };
-		069A2BA7284DB54000608356 /* selectedImageGallery@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 069A2B88284DB53E00608356 /* selectedImageGallery@3x.png */; };
-		069A2BA8284DB54000608356 /* focusIcon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 069A2B89284DB53E00608356 /* focusIcon@3x.png */; };
-		069A2BA9284DB54000608356 /* ON@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 069A2B8A284DB53E00608356 /* ON@3x.png */; };
-		069A2BAA284DB54000608356 /* OFF@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 069A2B8B284DB53E00608356 /* OFF@3x.png */; };
 		069A2BAB284DB54000608356 /* AUTO@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 069A2B8C284DB53E00608356 /* AUTO@3x.png */; };
-		069A2BAC284DB54000608356 /* video@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 069A2B8D284DB53E00608356 /* video@3x.png */; };
 		069A2BAD284DB54000608356 /* cameraIcon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 069A2B8E284DB53E00608356 /* cameraIcon@3x.png */; };
 		069A2BAE284DB54000608356 /* CameraMan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069A2B91284DB53F00608356 /* CameraMan.swift */; };
 		069A2BAF284DB54000608356 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069A2B92284DB53F00608356 /* CameraView.swift */; };
@@ -167,35 +186,16 @@
 		06D02A4A28503BE200815987 /* FSPagerView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D02A4928503BE200815987 /* FSPagerView+Extension.swift */; };
 		06D02A4F285040C200815987 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D02A4D285040C100815987 /* Reachability.m */; };
 		06D02A512850413C00815987 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D02A502850413C00815987 /* Network.swift */; };
-		06D84EA52849BB8E00DEF1D1 /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06D84EA32849BB8E00DEF1D1 /* LoginVC.xib */; };
 		06D84EAE2849BBCA00DEF1D1 /* SocialPhoneVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D84EAA2849BBCA00DEF1D1 /* SocialPhoneVC.swift */; };
-		06D84EAF2849BBCA00DEF1D1 /* SocialPhoneVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06D84EAB2849BBCA00DEF1D1 /* SocialPhoneVC.xib */; };
-		06D84EB32849BC3900DEF1D1 /* SignUpVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06D84EB12849BC3900DEF1D1 /* SignUpVC.xib */; };
-		06D84EB72849BC6D00DEF1D1 /* ForgetPassVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06D84EB52849BC6C00DEF1D1 /* ForgetPassVC.xib */; };
-		06D84EBB2849BC8600DEF1D1 /* ConfirmAccountVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06D84EB92849BC8600DEF1D1 /* ConfirmAccountVC.xib */; };
-		06D84EBF2849BCB500DEF1D1 /* AppointmentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06D84EBD2849BCB500DEF1D1 /* AppointmentCell.xib */; };
-		06D84EC32849BCDE00DEF1D1 /* AppointmentVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06D84EC12849BCDD00DEF1D1 /* AppointmentVC.xib */; };
-		06D84EC72849BD1500DEF1D1 /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06D84EC52849BD1400DEF1D1 /* HomeVC.xib */; };
-		06D84ECB2849BD5700DEF1D1 /* HelpSupportCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06D84EC92849BD5700DEF1D1 /* HelpSupportCell.xib */; };
-		06D84ECE2849BEB800DEF1D1 /* ForgetPasswordVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06D84ECC2849BEB800DEF1D1 /* ForgetPasswordVC.xib */; };
-		06D84ED22849BEDD00DEF1D1 /* PermissionVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06D84ED02849BEDD00DEF1D1 /* PermissionVC.xib */; };
-		06D84ED62849BF2100DEF1D1 /* FollowUpCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06D84ED42849BF2000DEF1D1 /* FollowUpCell.xib */; };
-		06D84EDA2849BF6A00DEF1D1 /* AttachementTBCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06D84ED82849BF6A00DEF1D1 /* AttachementTBCell.xib */; };
-		06D84EDE2849BF9100DEF1D1 /* EditProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06D84EDC2849BF9000DEF1D1 /* EditProfileVC.xib */; };
-		06D84EE22849BFCF00DEF1D1 /* ProfileDataPopUpVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06D84EE02849BFCE00DEF1D1 /* ProfileDataPopUpVC.xib */; };
-		06D84EE62849C00100DEF1D1 /* ProfileSummaryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06D84EE42849C00000DEF1D1 /* ProfileSummaryCell.xib */; };
-		06D84EEA2849C02500DEF1D1 /* ProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06D84EE82849C02400DEF1D1 /* ProfileCell.xib */; };
-		06D84EEE2849C04900DEF1D1 /* ProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06D84EEC2849C04900DEF1D1 /* ProfileVC.xib */; };
-		06D84EF22849C0DA00DEF1D1 /* AddAddressVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06D84EF02849C0DA00DEF1D1 /* AddAddressVC.xib */; };
-		06D84EF62849C10600DEF1D1 /* AllAddressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06D84EF42849C10600DEF1D1 /* AllAddressCell.xib */; };
-		06D84F042849C20800DEF1D1 /* ChangeLanguageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D84EFB2849C20600DEF1D1 /* ChangeLanguageRouter.swift */; };
-		06D84F052849C20800DEF1D1 /* ChangeLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D84EFC2849C20600DEF1D1 /* ChangeLanguage.swift */; };
-		06D84F062849C20800DEF1D1 /* ChangeLanguageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D84EFD2849C20600DEF1D1 /* ChangeLanguageVC.swift */; };
-		06D84F072849C20900DEF1D1 /* ChangeLanguageVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06D84EFE2849C20600DEF1D1 /* ChangeLanguageVC.xib */; };
-		06D84F082849C20900DEF1D1 /* ChangeLanguageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D84F002849C20600DEF1D1 /* ChangeLanguageInteractor.swift */; };
-		06D84F092849C20900DEF1D1 /* ChangeLanguageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D84F012849C20600DEF1D1 /* ChangeLanguageModel.swift */; };
-		06D84F0A2849C20900DEF1D1 /* ChangeLanguagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D84F022849C20600DEF1D1 /* ChangeLanguagePresenter.swift */; };
-		06D84F0C2849CBC000DEF1D1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 61980655281C01E0009CC5CB /* GoogleService-Info.plist */; };
+		06D84EB32849BC3900DEF1D1 /* (null) in Resources */ = {isa = PBXBuildFile; };
+		06D84EBB2849BC8600DEF1D1 /* (null) in Resources */ = {isa = PBXBuildFile; };
+		06D84ED22849BEDD00DEF1D1 /* (null) in Resources */ = {isa = PBXBuildFile; };
+		06D84EDA2849BF6A00DEF1D1 /* (null) in Resources */ = {isa = PBXBuildFile; };
+		06D84EE22849BFCF00DEF1D1 /* (null) in Resources */ = {isa = PBXBuildFile; };
+		06D84EEA2849C02500DEF1D1 /* (null) in Resources */ = {isa = PBXBuildFile; };
+		06D84EEE2849C04900DEF1D1 /* (null) in Resources */ = {isa = PBXBuildFile; };
+		06D84EF62849C10600DEF1D1 /* (null) in Resources */ = {isa = PBXBuildFile; };
+		06D84F072849C20900DEF1D1 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		06F84A28284F24F700479C1F /* BookingServiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F84A27284F24F700479C1F /* BookingServiceView.swift */; };
 		06F84A2B284F26AF00479C1F /* MSView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06F84A2A284F26AF00479C1F /* MSView.xib */; };
 		06F84A2D284F26FB00479C1F /* MSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F84A2C284F26FB00479C1F /* MSView.swift */; };
@@ -204,7 +204,7 @@
 		06F932C22848607100DAFB3D /* UserLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F932C12848607100DAFB3D /* UserLocation.swift */; };
 		06F932C6284867BB00DAFB3D /* AULocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F932C4284867BB00DAFB3D /* AULocationCell.swift */; };
 		06F932C7284867BB00DAFB3D /* AULocationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06F932C5284867BB00DAFB3D /* AULocationCell.xib */; };
-		06F932C8284881A300DAFB3D /* AULocation.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06F932CA284881A300DAFB3D /* AULocation.xib */; };
+		06F932C8284881A300DAFB3D /* (null) in Resources */ = {isa = PBXBuildFile; };
 		06FC02172852FCD6003E239E /* OrderDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FC02162852FCD6003E239E /* OrderDetailsVC.swift */; };
 		06FC021A285300C0003E239E /* BookedServiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06FC0219285300C0003E239E /* BookedServiceView.xib */; };
 		06FC021C285300E9003E239E /* BookedServiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FC021B285300E9003E239E /* BookedServiceView.swift */; };
@@ -212,18 +212,16 @@
 		06FC022128531079003E239E /* EPImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06FC021F28531079003E239E /* EPImageCell.xib */; };
 		06FD674528431790001FD415 /* SearchOPServicesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FD674228431790001FD415 /* SearchOPServicesPresenter.swift */; };
 		06FD674628431790001FD415 /* SearchOPServicesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FD674328431790001FD415 /* SearchOPServicesVC.swift */; };
-		26577C00280B5D97C919F259 /* Pods_E4_PatientTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58A8E60973BB66F789DED7B5 /* Pods_E4_PatientTests.framework */; };
 		322DCF2325EA632A00142F6A /* GetFullCities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322DCF2225EA632A00142F6A /* GetFullCities.swift */; };
 		322DCF2525EAC29A00142F6A /* EditProfileVCPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322DCF2425EAC29A00142F6A /* EditProfileVCPicker.swift */; };
-		5B6FA16C8A6071E22DAC8BC8 /* Pods_E4_Patient_E4_PatientUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAA71164FC8209532F4F9B26 /* Pods_E4_Patient_E4_PatientUITests.framework */; };
+		328F1DEEE422D6967CFC062B /* Pods_RubikCarePatient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CDAABDF34E9B9BA60535E63 /* Pods_RubikCarePatient.framework */; };
 		6102527A28074C730085B200 /* HelpSupportCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6102527828074C730085B200 /* HelpSupportCell.swift */; };
 		6102527D2807F5AF0085B200 /* LogoutModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6102527C2807F5AF0085B200 /* LogoutModel.swift */; };
 		613C8BC126ECA1BA00FA4A83 /* AppointmentDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613C8BC026ECA1BA00FA4A83 /* AppointmentDetailsModel.swift */; };
 		613C8BC326ECA69000FA4A83 /* AppointmentDetailsCancelNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613C8BC226ECA69000FA4A83 /* AppointmentDetailsCancelNetwork.swift */; };
 		613C8BC526ECAF4000FA4A83 /* AppointmentDetailsCancelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613C8BC426ECAF4000FA4A83 /* AppointmentDetailsCancelModel.swift */; };
-		6145755428481E41006225F6 /* SocialPhoneVC.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6145754F28481E41006225F6 /* SocialPhoneVC.strings */; };
-		6145755528481E41006225F6 /* SocialPhoneVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6145755128481E41006225F6 /* SocialPhoneVC.swift */; };
-		6145755628481E41006225F6 /* SocialPhoneVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6145755228481E41006225F6 /* SocialPhoneVC.xib */; };
+		6145755428481E41006225F6 /* (null) in Resources */ = {isa = PBXBuildFile; };
+		6145755628481E41006225F6 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		614F9E3C283C5C610055DF4E /* DeleteDiseasesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614F9E3A283C5C600055DF4E /* DeleteDiseasesVC.swift */; };
 		614F9E41283D8BA50055DF4E /* DeleteFamilyHistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614F9E3F283D8BA50055DF4E /* DeleteFamilyHistoryVC.swift */; };
 		614F9E45283D96720055DF4E /* HomeInfoTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614F9E43283D96720055DF4E /* HomeInfoTableVC.swift */; };
@@ -241,19 +239,12 @@
 		616178602806C578005EE4C6 /* LogOutModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6161785A2806C578005EE4C6 /* LogOutModel.swift */; };
 		616178612806C578005EE4C6 /* LogOutInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6161785B2806C578005EE4C6 /* LogOutInteractor.swift */; };
 		616178622806C578005EE4C6 /* LogOutPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6161785C2806C578005EE4C6 /* LogOutPresenter.swift */; };
-		6168CD7428449673008C5C84 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6168CD73284495CF008C5C84 /* GoogleService-Info.plist */; };
 		617E26A62823CEFF009D8ABC /* NotificationsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617E26A22823CEFF009D8ABC /* NotificationsVC.swift */; };
 		617E26A72823CEFF009D8ABC /* NotificationsTBCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617E26A42823CEFF009D8ABC /* NotificationsTBCell.swift */; };
 		617E26A82823CEFF009D8ABC /* NotificationsTBCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 617E26A52823CEFF009D8ABC /* NotificationsTBCell.xib */; };
 		617E26AB2823CF15009D8ABC /* NotificationCountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617E26A92823CF14009D8ABC /* NotificationCountModel.swift */; };
 		617E26AC2823CF15009D8ABC /* NotificationListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617E26AA2823CF14009D8ABC /* NotificationListModel.swift */; };
 		619182EF26F65B4600B6A796 /* Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = 619182EE26F65B4600B6A796 /* Animation.m */; };
-		619358922841006000B7F7A1 /* ChangeLanguageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6193588C2841006000B7F7A1 /* ChangeLanguageRouter.swift */; };
-		619358932841006000B7F7A1 /* ChangeLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6193588D2841006000B7F7A1 /* ChangeLanguage.swift */; };
-		619358942841006000B7F7A1 /* ChangeLanguageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6193588E2841006000B7F7A1 /* ChangeLanguageVC.swift */; };
-		619358952841006000B7F7A1 /* ChangeLanguageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6193588F2841006000B7F7A1 /* ChangeLanguageInteractor.swift */; };
-		619358962841006000B7F7A1 /* ChangeLanguageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 619358902841006000B7F7A1 /* ChangeLanguageModel.swift */; };
-		619358972841006100B7F7A1 /* ChangeLanguagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 619358912841006000B7F7A1 /* ChangeLanguagePresenter.swift */; };
 		61A7EF362830D9940027775E /* YBTextPickerDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A7EF2D2830D9920027775E /* YBTextPickerDataModel.swift */; };
 		61A7EF372830D9940027775E /* YBTextPickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61A7EF2F2830D9920027775E /* YBTextPickerCell.xib */; };
 		61A7EF382830D9940027775E /* YBTextPickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A7EF302830D9920027775E /* YBTextPickerCell.swift */; };
@@ -292,13 +283,9 @@
 		61BD683D283B1AC900821D51 /* MedicalReportCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BD683B283B1AC900821D51 /* MedicalReportCell.swift */; };
 		61BD6843283B820600821D51 /* DeleteMedicalReportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BD6841283B820500821D51 /* DeleteMedicalReportVC.swift */; };
 		61BD6847283C468900821D51 /* DeleteAllergiesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BD6845283C468600821D51 /* DeleteAllergiesVC.swift */; };
-<<<<<<< HEAD:E4 Patient.xcodeproj/project.pbxproj
-		61BD6848283C468900821D51 /* DeleteAllergiesVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61BD6846283C468600821D51 /* DeleteAllergiesVC.xib */; };
-=======
->>>>>>> newNada:RubikCarePatient.xcodeproj/project.pbxproj
 		61EE621D280A942E0096009D /* ForgetPassVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61EE621A280A942E0096009D /* ForgetPassVC.swift */; };
 		61EE621F280AA7530096009D /* ForgotPasswordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61EE621E280AA7520096009D /* ForgotPasswordModel.swift */; };
-		AE9C32B77A0768EF3E8B9E4A /* Pods_E4_Patient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 744281E7D81F7C66A49F9E9E /* Pods_E4_Patient.framework */; };
+		826352A13652BEC13DE72FCD /* Pods_RubikCarePatientTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A3A7D91D683879A95484420 /* Pods_RubikCarePatientTests.framework */; };
 		C1007AB4263BC8A10060AD2F /* SearchTableViewe.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1007AB3263BC8A10060AD2F /* SearchTableViewe.swift */; };
 		C1007AB8263BCADF0060AD2F /* AllSearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1007AB6263BCADF0060AD2F /* AllSearchVC.swift */; };
 		C108401C263BCE83004391EA /* AllSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C108401A263BCE83004391EA /* AllSearchCell.swift */; };
@@ -315,8 +302,6 @@
 		C10E8E3725B33B03004FFCBF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C10E8E3525B33B03004FFCBF /* Main.storyboard */; };
 		C10E8E3925B33B07004FFCBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C10E8E3825B33B07004FFCBF /* Assets.xcassets */; };
 		C10E8E3C25B33B07004FFCBF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C10E8E3A25B33B07004FFCBF /* LaunchScreen.storyboard */; };
-		C10E8E4725B33B07004FFCBF /* E4_PatientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10E8E4625B33B07004FFCBF /* E4_PatientTests.swift */; };
-		C10E8E5225B33B07004FFCBF /* E4_PatientUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10E8E5125B33B07004FFCBF /* E4_PatientUITests.swift */; };
 		C10E8E962648A22B00481B45 /* ShiftCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10E8E942648A22B00481B45 /* ShiftCell.swift */; };
 		C10E8E972648A22B00481B45 /* ShiftCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C10E8E952648A22B00481B45 /* ShiftCell.xib */; };
 		C10E8E9B2648A2F700481B45 /* hoursCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10E8E992648A2F700481B45 /* hoursCell.swift */; };
@@ -470,10 +455,6 @@
 		C186EBA72647CE2700E92B8F /* ConsultationsLogFillterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C186EBA52647CE2700E92B8F /* ConsultationsLogFillterVC.swift */; };
 		C186EBAC2647D05800E92B8F /* ConsultationsLogDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C186EBAA2647D05800E92B8F /* ConsultationsLogDetailsVC.swift */; };
 		C186EBB12647D52200E92B8F /* AppointmentDetailsCancelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C186EBAF2647D52200E92B8F /* AppointmentDetailsCancelVC.swift */; };
-		C18868AA26A5C36500CAF951 /* font_regular.TTF in Resources */ = {isa = PBXBuildFile; fileRef = C18868A826A5C36400CAF951 /* font_regular.TTF */; };
-		C18868AB26A5C36500CAF951 /* font_bold.TTF in Resources */ = {isa = PBXBuildFile; fileRef = C18868A926A5C36400CAF951 /* font_bold.TTF */; };
-		C18868AC26A5C39C00CAF951 /* font_bold.TTF in Sources */ = {isa = PBXBuildFile; fileRef = C18868A926A5C36400CAF951 /* font_bold.TTF */; };
-		C18868AD26A5C39C00CAF951 /* font_regular.TTF in Sources */ = {isa = PBXBuildFile; fileRef = C18868A826A5C36400CAF951 /* font_regular.TTF */; };
 		C18913A925B4086C006F08EA /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18913A725B4086C006F08EA /* SignUpVC.swift */; };
 		C18DA7232647B21C00079EE1 /* SuccessBookingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18DA7212647B21C00079EE1 /* SuccessBookingVC.swift */; };
 		C18DA7282647B48600079EE1 /* AppointmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18DA7262647B48600079EE1 /* AppointmentCell.swift */; };
@@ -553,8 +534,6 @@
 		C434676A2839786B00378565 /* FAQCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C43467682839786B00378565 /* FAQCell.xib */; };
 		C434676C2839795C00378565 /* FAQModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C434676B2839795C00378565 /* FAQModel.swift */; };
 		C434676E283979AD00378565 /* ContactUsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C434676D283979AD00378565 /* ContactUsModel.swift */; };
-<<<<<<< HEAD:E4 Patient.xcodeproj/project.pbxproj
-=======
 		C435947B284B5D45002958D3 /* WalletCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4359479284B5D45002958D3 /* WalletCell.swift */; };
 		C435947C284B5D45002958D3 /* WalletCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C435947A284B5D45002958D3 /* WalletCell.xib */; };
 		C4359480284B684C002958D3 /* CreditCardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C435947F284B684C002958D3 /* CreditCardVC.swift */; };
@@ -611,33 +590,13 @@
 		C466AC7328480E1F00AC1871 /* AppointmentDetailsCancelVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C466AC7528480E1F00AC1871 /* AppointmentDetailsCancelVC.xib */; };
 		C466AC7828480EB300AC1871 /* HomeInfoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C466AC7A28480EB300AC1871 /* HomeInfoVC.xib */; };
 		C466AC7D28480EE700AC1871 /* HomeInfoTableVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C466AC7F28480EE700AC1871 /* HomeInfoTableVC.xib */; };
-		C466AC8228480F0900AC1871 /* BranchInfoVCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C466AC8428480F0900AC1871 /* BranchInfoVCViewController.xib */; };
-		C466AC8728480F4C00AC1871 /* BranchImagesCollectionVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C466AC8928480F4C00AC1871 /* BranchImagesCollectionVC.xib */; };
-		C466AC8C28480F7E00AC1871 /* AllReportsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C466AC8E28480F7E00AC1871 /* AllReportsCell.xib */; };
 		C48A2979284BD17F008409AA /* ChargeWalletModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48A2978284BD17F008409AA /* ChargeWalletModel.swift */; };
 		C4A0A874284A03E6006C06A3 /* WalletVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A0A873284A03E6006C06A3 /* WalletVC.swift */; };
-		C4BCC959284557E300D04808 /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4BCC95B284557E300D04808 /* LoginVC.xib */; };
-		C4BCC95E284559F200D04808 /* SignUpVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4BCC960284559F200D04808 /* SignUpVC.xib */; };
 		C4BCC96328455B0100D04808 /* ForgetPassVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4BCC96528455B0100D04808 /* ForgetPassVC.xib */; };
-		C4BCC96828455B8E00D04808 /* ConfirmAccountVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4BCC96A28455B8E00D04808 /* ConfirmAccountVC.xib */; };
-		C4BCC96D28455C3100D04808 /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4BCC96F28455C3100D04808 /* HomeVC.xib */; };
-		C4BCC97228455F4100D04808 /* AppointmentVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4BCC97428455F4100D04808 /* AppointmentVC.xib */; };
-		C4BCC97728455F8B00D04808 /* AppointmentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4BCC97928455F8B00D04808 /* AppointmentCell.xib */; };
-		C4BCC97C2845610D00D04808 /* ProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4BCC97E2845610D00D04808 /* ProfileVC.xib */; };
-		C4BCC9822845616E00D04808 /* ProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4BCC9842845616E00D04808 /* ProfileCell.xib */; };
 		C4BCC9872845619100D04808 /* ProfileSummaryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4BCC9892845619100D04808 /* ProfileSummaryCell.xib */; };
-		C4BCC98C284561CA00D04808 /* ProfileDataPopUpVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4BCC98E284561CA00D04808 /* ProfileDataPopUpVC.xib */; };
-		C4BCC9912845628100D04808 /* EditProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4BCC9932845628100D04808 /* EditProfileVC.xib */; };
-		C4BCC9962845636000D04808 /* AttachementTBCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4BCC9982845636000D04808 /* AttachementTBCell.xib */; };
 		C4BCC99B2845638900D04808 /* FollowUpCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4BCC99D2845638900D04808 /* FollowUpCell.xib */; };
-		C4BCC9A02845642E00D04808 /* PermissionVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4BCC9A22845642E00D04808 /* PermissionVC.xib */; };
-		C4BCC9A52845660F00D04808 /* ForgetPasswordVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4BCC9A72845660F00D04808 /* ForgetPasswordVC.xib */; };
 		C4BCC9AA284566A600D04808 /* HelpSupportCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4BCC9AC284566A600D04808 /* HelpSupportCell.xib */; };
-		C4BCC9AF2845672F00D04808 /* ChangeLanguageVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4BCC9B12845672F00D04808 /* ChangeLanguageVC.xib */; };
-		C4BCC9B42845680C00D04808 /* AllAddressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4BCC9B62845680C00D04808 /* AllAddressCell.xib */; };
-		C4BCC9B9284568BF00D04808 /* AddAddressVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4BCC9BB284568BF00D04808 /* AddAddressVC.xib */; };
 		C4D8AF612842B20100D154BE /* FilterReportsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D8AF602842B20100D154BE /* FilterReportsVC.swift */; };
-		C4D8AF662842B27F00D154BE /* AllReportsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D8AF642842B27E00D154BE /* AllReportsCell.swift */; };
 		C4D8AF6A2842B2B100D154BE /* AllReportsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D8AF682842B2B000D154BE /* AllReportsVC.swift */; };
 		C4D8AF6B2842B2B100D154BE /* AllReportsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D8AF692842B2B000D154BE /* AllReportsModel.swift */; };
 		C4D8AF6F2842B42300D154BE /* AddReminderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D8AF6E2842B42300D154BE /* AddReminderVC.swift */; };
@@ -645,25 +604,23 @@
 		C4D8AF772842B46700D154BE /* MedicineReminderTBCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4D8AF752842B46500D154BE /* MedicineReminderTBCell.xib */; };
 		C4D8AF782842B46700D154BE /* MedicineReminderTBCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D8AF762842B46700D154BE /* MedicineReminderTBCell.swift */; };
 		C4D8AF7A2842B46E00D154BE /* MedicineReminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D8AF792842B46E00D154BE /* MedicineReminder.swift */; };
-		C7D1DFA17F3335DAA1E147A1 /* Pods_E4_PatientTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FBBBC112BA43A675406D37D /* Pods_E4_PatientTests.framework */; };
-		F42853C9E5210FD787E67E1A /* Pods_E4_Patient_E4_PatientUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D88C023F839EFCAE9AAD7E8 /* Pods_E4_Patient_E4_PatientUITests.framework */; };
->>>>>>> newNada:RubikCarePatient.xcodeproj/project.pbxproj
+		ED149728E579FAC588895C08 /* Pods_RubikCarePatient_RubikCarePatientUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44ACCAC5DB15C36908829D86 /* Pods_RubikCarePatient_RubikCarePatientUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		C10E8E4325B33B07004FFCBF /* PBXContainerItemProxy */ = {
+		065CA7DE285465850045CB07 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C10E8E2425B33B03004FFCBF /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = C10E8E2B25B33B03004FFCBF;
-			remoteInfo = "E4 Patient";
+			remoteInfo = RubikCarePatient;
 		};
-		C10E8E4E25B33B07004FFCBF /* PBXContainerItemProxy */ = {
+		065CA7ED285465A10045CB07 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C10E8E2425B33B03004FFCBF /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = C10E8E2B25B33B03004FFCBF;
-			remoteInfo = "E4 Patient";
+			remoteInfo = RubikCarePatient;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -738,7 +695,7 @@
 		061CD325284AF467006E9FCD /* MapsLocationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsLocationPresenter.swift; sourceTree = "<group>"; };
 		061CD326284AF467006E9FCD /* MapsLocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsLocationVC.swift; sourceTree = "<group>"; };
 		061CD327284AF467006E9FCD /* MapsLocation.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapsLocation.xib; sourceTree = "<group>"; };
-		0623A08128421F0200071B8A /* E4ClinicPatient-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "E4ClinicPatient-Bridging-Header.h"; sourceTree = "<group>"; };
+		0623A08128421F0200071B8A /* RubikCarePatient-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RubikCarePatient-Bridging-Header.h"; sourceTree = "<group>"; };
 		06253B8828431BA600CE8731 /* MSOPServicesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSOPServicesRequest.swift; sourceTree = "<group>"; };
 		06253B8B28432C8A00CE8731 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SearchOPServices.xib; sourceTree = "<group>"; };
 		06253B8E28432C8D00CE8731 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/SearchOPServices.strings; sourceTree = "<group>"; };
@@ -770,6 +727,40 @@
 		06455D3F284F15EC00EC0FB3 /* BookingServiceView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookingServiceView.xib; sourceTree = "<group>"; };
 		064660CD284B265F00D4929B /* UIViewController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+extension.swift"; sourceTree = "<group>"; };
 		065C12D7285203E00041EC4F /* OrdersFilterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersFilterVC.swift; sourceTree = "<group>"; };
+		065CA7B6285455FE0045CB07 /* font_bold.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = font_bold.TTF; sourceTree = "<group>"; };
+		065CA7B7285455FE0045CB07 /* font_regular.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = font_regular.TTF; sourceTree = "<group>"; };
+		065CA7C4285464C40045CB07 /* ChangeLanguageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeLanguageModel.swift; sourceTree = "<group>"; };
+		065CA7C5285464C50045CB07 /* ChangeLanguageInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeLanguageInteractor.swift; sourceTree = "<group>"; };
+		065CA7C6285464C50045CB07 /* ChangeLanguagePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeLanguagePresenter.swift; sourceTree = "<group>"; };
+		065CA7C7285464C60045CB07 /* ChangeLanguageRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeLanguageRouter.swift; sourceTree = "<group>"; };
+		065CA7C8285464C60045CB07 /* ChangeLanguage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeLanguage.swift; sourceTree = "<group>"; };
+		065CA7C9285464C70045CB07 /* ChangeLanguageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeLanguageVC.swift; sourceTree = "<group>"; };
+		065CA7D1285464D20045CB07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ChangeLanguageVC.xib; sourceTree = "<group>"; };
+		065CA7D3285464FC0045CB07 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/ChangeLanguageVC.strings; sourceTree = "<group>"; };
+		065CA7D5285465000045CB07 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/ChangeLanguageVC.strings; sourceTree = "<group>"; };
+		065CA7DA285465850045CB07 /* RubikCarePatientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RubikCarePatientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		065CA7DC285465850045CB07 /* RubikCarePatientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RubikCarePatientTests.swift; sourceTree = "<group>"; };
+		065CA7E7285465A10045CB07 /* RubikCarePatientUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RubikCarePatientUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		065CA7E9285465A10045CB07 /* RubikCarePatientUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RubikCarePatientUITests.swift; sourceTree = "<group>"; };
+		065CA7EB285465A10045CB07 /* RubikCarePatientUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RubikCarePatientUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		06682435285466FC00525151 /* AllReportsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllReportsCell.swift; sourceTree = "<group>"; };
+		06682437285466FC00525151 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/AllReportsCell.xib; sourceTree = "<group>"; };
+		0668243B2854672100525151 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/AllReportsCell.strings; sourceTree = "<group>"; };
+		0668244128547EA100525151 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/BranchImagesCollectionVC.xib; sourceTree = "<group>"; };
+		0668244428547EA300525151 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/BranchImagesCollectionVC.strings; sourceTree = "<group>"; };
+		06682448285483F000525151 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/BranchInfoVCViewController.xib; sourceTree = "<group>"; };
+		0668244A285483F700525151 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/BranchInfoVCViewController.strings; sourceTree = "<group>"; };
+		0668244C2854852000525151 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/HomeVC.xib; sourceTree = "<group>"; };
+		0668244F285485F900525151 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/AppointmentVC.xib; sourceTree = "<group>"; };
+		066824512854862300525151 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/AppointmentVC.strings; sourceTree = "<group>"; };
+		06682453285486C200525151 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SignUpVC.xib; sourceTree = "<group>"; };
+		06682455285486D100525151 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/SignUpVC.strings; sourceTree = "<group>"; };
+		06682457285486FB00525151 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ConfirmAccountVC.xib; sourceTree = "<group>"; };
+		066824592854870D00525151 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/ConfirmAccountVC.strings; sourceTree = "<group>"; };
+		0668245B2854874F00525151 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ForgetPasswordVC.xib; sourceTree = "<group>"; };
+		0668245D2854876200525151 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/ForgetPasswordVC.strings; sourceTree = "<group>"; };
+		0668245F285487D100525151 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/AddAddressVC.xib; sourceTree = "<group>"; };
+		06682461285487DE00525151 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/AddAddressVC.strings; sourceTree = "<group>"; };
 		0678831E285240D4007E8E61 /* DatePickerDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerDialog.swift; sourceTree = "<group>"; };
 		06788320285246F1007E8E61 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		06893D4C28505B9A00864584 /* BookedMSPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookedMSPresenter.swift; sourceTree = "<group>"; };
@@ -849,49 +840,6 @@
 		06D84EAA2849BBCA00DEF1D1 /* SocialPhoneVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialPhoneVC.swift; sourceTree = "<group>"; };
 		06D84EAC2849BBCA00DEF1D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SocialPhoneVC.xib; sourceTree = "<group>"; };
 		06D84EB02849BC1600DEF1D1 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/SocialPhoneVC.strings; sourceTree = "<group>"; };
-		06D84EB22849BC3900DEF1D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SignUpVC.xib; sourceTree = "<group>"; };
-		06D84EB42849BC4500DEF1D1 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/SignUpVC.strings; sourceTree = "<group>"; };
-		06D84EB62849BC6C00DEF1D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ForgetPassVC.xib; sourceTree = "<group>"; };
-		06D84EB82849BC7800DEF1D1 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/ForgetPassVC.strings; sourceTree = "<group>"; };
-		06D84EBA2849BC8600DEF1D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ConfirmAccountVC.xib; sourceTree = "<group>"; };
-		06D84EBC2849BC9100DEF1D1 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/ConfirmAccountVC.strings; sourceTree = "<group>"; };
-		06D84EBE2849BCB500DEF1D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/AppointmentCell.xib; sourceTree = "<group>"; };
-		06D84EC02849BCC500DEF1D1 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/AppointmentCell.strings; sourceTree = "<group>"; };
-		06D84EC22849BCDD00DEF1D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/AppointmentVC.xib; sourceTree = "<group>"; };
-		06D84EC42849BCEC00DEF1D1 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/AppointmentVC.strings; sourceTree = "<group>"; };
-		06D84EC62849BD1500DEF1D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/HomeVC.xib; sourceTree = "<group>"; };
-		06D84EC82849BD2400DEF1D1 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/HomeVC.strings; sourceTree = "<group>"; };
-		06D84ECA2849BD5700DEF1D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/HelpSupportCell.xib; sourceTree = "<group>"; };
-		06D84ECD2849BEB800DEF1D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ForgetPasswordVC.xib; sourceTree = "<group>"; };
-		06D84ECF2849BECB00DEF1D1 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/ForgetPasswordVC.strings; sourceTree = "<group>"; };
-		06D84ED12849BEDD00DEF1D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/PermissionVC.xib; sourceTree = "<group>"; };
-		06D84ED32849BF0800DEF1D1 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/PermissionVC.strings; sourceTree = "<group>"; };
-		06D84ED52849BF2100DEF1D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/FollowUpCell.xib; sourceTree = "<group>"; };
-		06D84ED72849BF3700DEF1D1 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/FollowUpCell.strings; sourceTree = "<group>"; };
-		06D84ED92849BF6A00DEF1D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/AttachementTBCell.xib; sourceTree = "<group>"; };
-		06D84EDB2849BF7900DEF1D1 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/AttachementTBCell.strings; sourceTree = "<group>"; };
-		06D84EDD2849BF9000DEF1D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/EditProfileVC.xib; sourceTree = "<group>"; };
-		06D84EDF2849BFA200DEF1D1 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/EditProfileVC.strings; sourceTree = "<group>"; };
-		06D84EE12849BFCE00DEF1D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ProfileDataPopUpVC.xib; sourceTree = "<group>"; };
-		06D84EE32849BFE100DEF1D1 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/ProfileDataPopUpVC.strings; sourceTree = "<group>"; };
-		06D84EE52849C00000DEF1D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ProfileSummaryCell.xib; sourceTree = "<group>"; };
-		06D84EE72849C01300DEF1D1 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/ProfileSummaryCell.strings; sourceTree = "<group>"; };
-		06D84EE92849C02400DEF1D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ProfileCell.xib; sourceTree = "<group>"; };
-		06D84EEB2849C03600DEF1D1 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/ProfileCell.strings; sourceTree = "<group>"; };
-		06D84EED2849C04900DEF1D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ProfileVC.xib; sourceTree = "<group>"; };
-		06D84EEF2849C05700DEF1D1 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/ProfileVC.strings; sourceTree = "<group>"; };
-		06D84EF12849C0DA00DEF1D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/AddAddressVC.xib; sourceTree = "<group>"; };
-		06D84EF32849C0F300DEF1D1 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/AddAddressVC.strings; sourceTree = "<group>"; };
-		06D84EF52849C10600DEF1D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/AllAddressCell.xib; sourceTree = "<group>"; };
-		06D84EF72849C11B00DEF1D1 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/AllAddressCell.strings; sourceTree = "<group>"; };
-		06D84EFB2849C20600DEF1D1 /* ChangeLanguageRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeLanguageRouter.swift; sourceTree = "<group>"; };
-		06D84EFC2849C20600DEF1D1 /* ChangeLanguage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeLanguage.swift; sourceTree = "<group>"; };
-		06D84EFD2849C20600DEF1D1 /* ChangeLanguageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeLanguageVC.swift; sourceTree = "<group>"; };
-		06D84EFF2849C20600DEF1D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ChangeLanguageVC.xib; sourceTree = "<group>"; };
-		06D84F002849C20600DEF1D1 /* ChangeLanguageInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeLanguageInteractor.swift; sourceTree = "<group>"; };
-		06D84F012849C20600DEF1D1 /* ChangeLanguageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeLanguageModel.swift; sourceTree = "<group>"; };
-		06D84F022849C20600DEF1D1 /* ChangeLanguagePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeLanguagePresenter.swift; sourceTree = "<group>"; };
-		06D84F0B2849C22C00DEF1D1 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/ChangeLanguageVC.strings; sourceTree = "<group>"; };
 		06F84A27284F24F700479C1F /* BookingServiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingServiceView.swift; sourceTree = "<group>"; };
 		06F84A2A284F26AF00479C1F /* MSView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MSView.xib; sourceTree = "<group>"; };
 		06F84A2C284F26FB00479C1F /* MSView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSView.swift; sourceTree = "<group>"; };
@@ -900,9 +848,6 @@
 		06F932C12848607100DAFB3D /* UserLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocation.swift; sourceTree = "<group>"; };
 		06F932C4284867BB00DAFB3D /* AULocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AULocationCell.swift; sourceTree = "<group>"; };
 		06F932C5284867BB00DAFB3D /* AULocationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AULocationCell.xib; sourceTree = "<group>"; };
-		06F932C9284881A300DAFB3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/AULocation.xib; sourceTree = "<group>"; };
-		06F932CC284881A700DAFB3D /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/AULocation.strings; sourceTree = "<group>"; };
-		06F932CE284881A900DAFB3D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/AULocation.strings; sourceTree = "<group>"; };
 		06FC02162852FCD6003E239E /* OrderDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailsVC.swift; sourceTree = "<group>"; };
 		06FC0219285300C0003E239E /* BookedServiceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookedServiceView.xib; sourceTree = "<group>"; };
 		06FC021B285300E9003E239E /* BookedServiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookedServiceView.swift; sourceTree = "<group>"; };
@@ -910,20 +855,16 @@
 		06FC021F28531079003E239E /* EPImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EPImageCell.xib; sourceTree = "<group>"; };
 		06FD674228431790001FD415 /* SearchOPServicesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchOPServicesPresenter.swift; sourceTree = "<group>"; };
 		06FD674328431790001FD415 /* SearchOPServicesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchOPServicesVC.swift; sourceTree = "<group>"; };
-		16990E4281003110E60E16D3 /* Pods-E4 Patient-E4 PatientUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-E4 Patient-E4 PatientUITests.release.xcconfig"; path = "Target Support Files/Pods-E4 Patient-E4 PatientUITests/Pods-E4 Patient-E4 PatientUITests.release.xcconfig"; sourceTree = "<group>"; };
-		269CD9ECAEF2E4C802DD1670 /* Pods-E4 PatientTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-E4 PatientTests.release.xcconfig"; path = "Target Support Files/Pods-E4 PatientTests/Pods-E4 PatientTests.release.xcconfig"; sourceTree = "<group>"; };
+		0A3A7D91D683879A95484420 /* Pods_RubikCarePatientTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RubikCarePatientTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0CDAABDF34E9B9BA60535E63 /* Pods_RubikCarePatient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RubikCarePatient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		322DCF2225EA632A00142F6A /* GetFullCities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFullCities.swift; sourceTree = "<group>"; };
 		322DCF2425EAC29A00142F6A /* EditProfileVCPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileVCPicker.swift; sourceTree = "<group>"; };
-		35F5C954CCA434E2E885B531 /* Pods-E4 PatientTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-E4 PatientTests.debug.xcconfig"; path = "Target Support Files/Pods-E4 PatientTests/Pods-E4 PatientTests.debug.xcconfig"; sourceTree = "<group>"; };
-		58A8E60973BB66F789DED7B5 /* Pods_E4_PatientTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_E4_PatientTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		44ACCAC5DB15C36908829D86 /* Pods_RubikCarePatient_RubikCarePatientUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RubikCarePatient_RubikCarePatientUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6102527828074C730085B200 /* HelpSupportCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpSupportCell.swift; sourceTree = "<group>"; };
 		6102527C2807F5AF0085B200 /* LogoutModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogoutModel.swift; sourceTree = "<group>"; };
 		613C8BC026ECA1BA00FA4A83 /* AppointmentDetailsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmentDetailsModel.swift; sourceTree = "<group>"; };
 		613C8BC226ECA69000FA4A83 /* AppointmentDetailsCancelNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmentDetailsCancelNetwork.swift; sourceTree = "<group>"; };
 		613C8BC426ECAF4000FA4A83 /* AppointmentDetailsCancelModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmentDetailsCancelModel.swift; sourceTree = "<group>"; };
-		6145755028481E41006225F6 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/SocialPhoneVC.strings; sourceTree = "<group>"; };
-		6145755128481E41006225F6 /* SocialPhoneVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialPhoneVC.swift; sourceTree = "<group>"; };
-		6145755328481E41006225F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SocialPhoneVC.xib; sourceTree = "<group>"; };
 		614F9E3A283C5C600055DF4E /* DeleteDiseasesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeleteDiseasesVC.swift; sourceTree = "<group>"; };
 		614F9E3F283D8BA50055DF4E /* DeleteFamilyHistoryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeleteFamilyHistoryVC.swift; sourceTree = "<group>"; };
 		614F9E43283D96720055DF4E /* HomeInfoTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeInfoTableVC.swift; sourceTree = "<group>"; };
@@ -941,7 +882,6 @@
 		6161785A2806C578005EE4C6 /* LogOutModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogOutModel.swift; sourceTree = "<group>"; };
 		6161785B2806C578005EE4C6 /* LogOutInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogOutInteractor.swift; sourceTree = "<group>"; };
 		6161785C2806C578005EE4C6 /* LogOutPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogOutPresenter.swift; sourceTree = "<group>"; };
-		6168CD73284495CF008C5C84 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		617E26A22823CEFF009D8ABC /* NotificationsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsVC.swift; sourceTree = "<group>"; };
 		617E26A42823CEFF009D8ABC /* NotificationsTBCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsTBCell.swift; sourceTree = "<group>"; };
 		617E26A52823CEFF009D8ABC /* NotificationsTBCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotificationsTBCell.xib; sourceTree = "<group>"; };
@@ -949,12 +889,6 @@
 		617E26AA2823CF14009D8ABC /* NotificationListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationListModel.swift; sourceTree = "<group>"; };
 		619182ED26F65B4600B6A796 /* Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Animation.h; sourceTree = "<group>"; };
 		619182EE26F65B4600B6A796 /* Animation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Animation.m; sourceTree = "<group>"; };
-		6193588C2841006000B7F7A1 /* ChangeLanguageRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeLanguageRouter.swift; sourceTree = "<group>"; };
-		6193588D2841006000B7F7A1 /* ChangeLanguage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeLanguage.swift; sourceTree = "<group>"; };
-		6193588E2841006000B7F7A1 /* ChangeLanguageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeLanguageVC.swift; sourceTree = "<group>"; };
-		6193588F2841006000B7F7A1 /* ChangeLanguageInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeLanguageInteractor.swift; sourceTree = "<group>"; };
-		619358902841006000B7F7A1 /* ChangeLanguageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeLanguageModel.swift; sourceTree = "<group>"; };
-		619358912841006000B7F7A1 /* ChangeLanguagePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeLanguagePresenter.swift; sourceTree = "<group>"; };
 		61A7EF2D2830D9920027775E /* YBTextPickerDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YBTextPickerDataModel.swift; sourceTree = "<group>"; };
 		61A7EF2F2830D9920027775E /* YBTextPickerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YBTextPickerCell.xib; sourceTree = "<group>"; };
 		61A7EF302830D9920027775E /* YBTextPickerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YBTextPickerCell.swift; sourceTree = "<group>"; };
@@ -994,14 +928,12 @@
 		61BD683B283B1AC900821D51 /* MedicalReportCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalReportCell.swift; sourceTree = "<group>"; };
 		61BD6841283B820500821D51 /* DeleteMedicalReportVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeleteMedicalReportVC.swift; sourceTree = "<group>"; };
 		61BD6845283C468600821D51 /* DeleteAllergiesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeleteAllergiesVC.swift; sourceTree = "<group>"; };
-<<<<<<< HEAD:E4 Patient.xcodeproj/project.pbxproj
-		61BD6846283C468600821D51 /* DeleteAllergiesVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeleteAllergiesVC.xib; sourceTree = "<group>"; };
-=======
->>>>>>> newNada:RubikCarePatient.xcodeproj/project.pbxproj
 		61EE621A280A942E0096009D /* ForgetPassVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgetPassVC.swift; sourceTree = "<group>"; };
 		61EE621E280AA7520096009D /* ForgotPasswordModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordModel.swift; sourceTree = "<group>"; };
-		744281E7D81F7C66A49F9E9E /* Pods_E4_Patient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_E4_Patient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		854E6FBF66518C5BE144AD2F /* Pods-E4 Patient-E4 PatientUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-E4 Patient-E4 PatientUITests.debug.xcconfig"; path = "Target Support Files/Pods-E4 Patient-E4 PatientUITests/Pods-E4 Patient-E4 PatientUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		75BFD499B90E1B95BDAE5B59 /* Pods-RubikCarePatient-RubikCarePatientUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RubikCarePatient-RubikCarePatientUITests.debug.xcconfig"; path = "Target Support Files/Pods-RubikCarePatient-RubikCarePatientUITests/Pods-RubikCarePatient-RubikCarePatientUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		84C9CD1BDC5DB198E679686D /* Pods-RubikCarePatient-RubikCarePatientUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RubikCarePatient-RubikCarePatientUITests.release.xcconfig"; path = "Target Support Files/Pods-RubikCarePatient-RubikCarePatientUITests/Pods-RubikCarePatient-RubikCarePatientUITests.release.xcconfig"; sourceTree = "<group>"; };
+		AA90069BD72E2F67CBE5DEAE /* Pods-RubikCarePatient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RubikCarePatient.debug.xcconfig"; path = "Target Support Files/Pods-RubikCarePatient/Pods-RubikCarePatient.debug.xcconfig"; sourceTree = "<group>"; };
+		B13C5060F7360577A7DBC38A /* Pods-RubikCarePatient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RubikCarePatient.release.xcconfig"; path = "Target Support Files/Pods-RubikCarePatient/Pods-RubikCarePatient.release.xcconfig"; sourceTree = "<group>"; };
 		C1007AB3263BC8A10060AD2F /* SearchTableViewe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewe.swift; sourceTree = "<group>"; };
 		C1007AB6263BCADF0060AD2F /* AllSearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllSearchVC.swift; sourceTree = "<group>"; };
 		C108401A263BCE83004391EA /* AllSearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllSearchCell.swift; sourceTree = "<group>"; };
@@ -1020,12 +952,6 @@
 		C10E8E3825B33B07004FFCBF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C10E8E3B25B33B07004FFCBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C10E8E3D25B33B07004FFCBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C10E8E4225B33B07004FFCBF /* E4 PatientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "E4 PatientTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C10E8E4625B33B07004FFCBF /* E4_PatientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = E4_PatientTests.swift; sourceTree = "<group>"; };
-		C10E8E4825B33B07004FFCBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C10E8E4D25B33B07004FFCBF /* E4 PatientUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "E4 PatientUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C10E8E5125B33B07004FFCBF /* E4_PatientUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = E4_PatientUITests.swift; sourceTree = "<group>"; };
-		C10E8E5325B33B07004FFCBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C10E8E7025B33CEC004FFCBF /* FontEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontEnum.swift; sourceTree = "<group>"; };
 		C10E8E7225B33CEC004FFCBF /* Cairo-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-ExtraLight.ttf"; sourceTree = "<group>"; };
 		C10E8E7325B33CEC004FFCBF /* Cairo-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -1181,8 +1107,6 @@
 		C186EBA52647CE2700E92B8F /* ConsultationsLogFillterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultationsLogFillterVC.swift; sourceTree = "<group>"; };
 		C186EBAA2647D05800E92B8F /* ConsultationsLogDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultationsLogDetailsVC.swift; sourceTree = "<group>"; };
 		C186EBAF2647D52200E92B8F /* AppointmentDetailsCancelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentDetailsCancelVC.swift; sourceTree = "<group>"; };
-		C18868A826A5C36400CAF951 /* font_regular.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = font_regular.TTF; sourceTree = "<group>"; };
-		C18868A926A5C36400CAF951 /* font_bold.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = font_bold.TTF; sourceTree = "<group>"; };
 		C18913A725B4086C006F08EA /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		C18DA7212647B21C00079EE1 /* SuccessBookingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessBookingVC.swift; sourceTree = "<group>"; };
 		C18DA7262647B48600079EE1 /* AppointmentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentCell.swift; sourceTree = "<group>"; };
@@ -1220,7 +1144,7 @@
 		C1C680B826080FA30043EE1C /* getspecialityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getspecialityModel.swift; sourceTree = "<group>"; };
 		C1D077462643836100D4F88A /* DoctorProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorProfileVC.swift; sourceTree = "<group>"; };
 		C1D4E1062612AE29004AB9A1 /* BusinessProviderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessProviderModel.swift; sourceTree = "<group>"; };
-		C1D60B70261560660041AC66 /* E4 Patient.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "E4 Patient.entitlements"; sourceTree = "<group>"; };
+		C1D60B70261560660041AC66 /* RubikCarePatient.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RubikCarePatient.entitlements; sourceTree = "<group>"; };
 		C1DC8A3925B6432900B006AC /* AllAdressVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllAdressVC.swift; sourceTree = "<group>"; };
 		C1DC8A3A25B6432900B006AC /* AllAdressVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllAdressVC.xib; sourceTree = "<group>"; };
 		C1DC8A4425B6451500B006AC /* AllAddressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllAddressCell.swift; sourceTree = "<group>"; };
@@ -1263,11 +1187,6 @@
 		C43467682839786B00378565 /* FAQCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FAQCell.xib; sourceTree = "<group>"; };
 		C434676B2839795C00378565 /* FAQModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQModel.swift; sourceTree = "<group>"; };
 		C434676D283979AD00378565 /* ContactUsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsModel.swift; sourceTree = "<group>"; };
-<<<<<<< HEAD:E4 Patient.xcodeproj/project.pbxproj
-		CAA71164FC8209532F4F9B26 /* Pods_E4_Patient_E4_PatientUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_E4_Patient_E4_PatientUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DCDFA4502490909F8417FD18 /* Pods-E4 Patient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-E4 Patient.debug.xcconfig"; path = "Target Support Files/Pods-E4 Patient/Pods-E4 Patient.debug.xcconfig"; sourceTree = "<group>"; };
-		E5D159A8405D17FCFFB8D125 /* Pods-E4 Patient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-E4 Patient.release.xcconfig"; path = "Target Support Files/Pods-E4 Patient/Pods-E4 Patient.release.xcconfig"; sourceTree = "<group>"; };
-=======
 		C4359479284B5D45002958D3 /* WalletCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletCell.swift; sourceTree = "<group>"; };
 		C435947A284B5D45002958D3 /* WalletCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WalletCell.xib; sourceTree = "<group>"; };
 		C435947F284B684C002958D3 /* CreditCardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardVC.swift; sourceTree = "<group>"; };
@@ -1375,57 +1294,20 @@
 		C466AC7C28480EB500AC1871 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/HomeInfoVC.strings; sourceTree = "<group>"; };
 		C466AC7E28480EE700AC1871 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/HomeInfoTableVC.xib; sourceTree = "<group>"; };
 		C466AC8128480EEC00AC1871 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/HomeInfoTableVC.strings; sourceTree = "<group>"; };
-		C466AC8328480F0900AC1871 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/BranchInfoVCViewController.xib; sourceTree = "<group>"; };
-		C466AC8628480F0C00AC1871 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/BranchInfoVCViewController.strings; sourceTree = "<group>"; };
-		C466AC8828480F4C00AC1871 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/BranchImagesCollectionVC.xib; sourceTree = "<group>"; };
-		C466AC8B28480F5100AC1871 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/BranchImagesCollectionVC.strings; sourceTree = "<group>"; };
-		C466AC8D28480F7E00AC1871 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/AllReportsCell.xib; sourceTree = "<group>"; };
-		C466AC9028480F8900AC1871 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/AllReportsCell.strings; sourceTree = "<group>"; };
 		C48A2978284BD17F008409AA /* ChargeWalletModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargeWalletModel.swift; sourceTree = "<group>"; };
 		C4A0A873284A03E6006C06A3 /* WalletVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletVC.swift; sourceTree = "<group>"; };
 		C4BCC9582845502E00D04808 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
-		C4BCC95A284557E300D04808 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LoginVC.xib; sourceTree = "<group>"; };
-		C4BCC95D284557E700D04808 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LoginVC.strings; sourceTree = "<group>"; };
-		C4BCC95F284559F200D04808 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SignUpVC.xib; sourceTree = "<group>"; };
-		C4BCC962284559F500D04808 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/SignUpVC.strings; sourceTree = "<group>"; };
 		C4BCC96428455B0100D04808 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ForgetPassVC.xib; sourceTree = "<group>"; };
 		C4BCC96728455B0700D04808 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/ForgetPassVC.strings; sourceTree = "<group>"; };
-		C4BCC96928455B8E00D04808 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ConfirmAccountVC.xib; sourceTree = "<group>"; };
-		C4BCC96C28455B9100D04808 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/ConfirmAccountVC.strings; sourceTree = "<group>"; };
-		C4BCC96E28455C3100D04808 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/HomeVC.xib; sourceTree = "<group>"; };
-		C4BCC97128455C3400D04808 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/HomeVC.strings; sourceTree = "<group>"; };
-		C4BCC97328455F4100D04808 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/AppointmentVC.xib; sourceTree = "<group>"; };
-		C4BCC97628455F4500D04808 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/AppointmentVC.strings; sourceTree = "<group>"; };
-		C4BCC97828455F8B00D04808 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/AppointmentCell.xib; sourceTree = "<group>"; };
-		C4BCC97B28455F9400D04808 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/AppointmentCell.strings; sourceTree = "<group>"; };
-		C4BCC97F2845611200D04808 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ProfileVC.xib; sourceTree = "<group>"; };
-		C4BCC9812845612C00D04808 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/ProfileVC.strings; sourceTree = "<group>"; };
-		C4BCC9832845616E00D04808 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ProfileCell.xib; sourceTree = "<group>"; };
-		C4BCC9862845617B00D04808 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/ProfileCell.strings; sourceTree = "<group>"; };
 		C4BCC9882845619100D04808 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ProfileSummaryCell.xib; sourceTree = "<group>"; };
 		C4BCC98B2845619500D04808 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/ProfileSummaryCell.strings; sourceTree = "<group>"; };
-		C4BCC98D284561CA00D04808 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ProfileDataPopUpVC.xib; sourceTree = "<group>"; };
-		C4BCC990284561D000D04808 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/ProfileDataPopUpVC.strings; sourceTree = "<group>"; };
-		C4BCC9922845628100D04808 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/EditProfileVC.xib; sourceTree = "<group>"; };
-		C4BCC9952845628400D04808 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/EditProfileVC.strings; sourceTree = "<group>"; };
 		C4BCC9972845636000D04808 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/AttachementTBCell.xib; sourceTree = "<group>"; };
 		C4BCC99A2845636800D04808 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/AttachementTBCell.strings; sourceTree = "<group>"; };
 		C4BCC99C2845638900D04808 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/FollowUpCell.xib; sourceTree = "<group>"; };
 		C4BCC99F2845638E00D04808 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/FollowUpCell.strings; sourceTree = "<group>"; };
-		C4BCC9A12845642E00D04808 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/PermissionVC.xib; sourceTree = "<group>"; };
-		C4BCC9A42845647E00D04808 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/PermissionVC.strings; sourceTree = "<group>"; };
-		C4BCC9A62845660F00D04808 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ForgetPasswordVC.xib; sourceTree = "<group>"; };
-		C4BCC9A92845661400D04808 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/ForgetPasswordVC.strings; sourceTree = "<group>"; };
 		C4BCC9AB284566A600D04808 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/HelpSupportCell.xib; sourceTree = "<group>"; };
 		C4BCC9AE284566AC00D04808 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/HelpSupportCell.strings; sourceTree = "<group>"; };
-		C4BCC9B02845672F00D04808 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ChangeLanguageVC.xib; sourceTree = "<group>"; };
-		C4BCC9B32845673400D04808 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/ChangeLanguageVC.strings; sourceTree = "<group>"; };
-		C4BCC9B52845680C00D04808 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/AllAddressCell.xib; sourceTree = "<group>"; };
-		C4BCC9B82845683100D04808 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/AllAddressCell.strings; sourceTree = "<group>"; };
-		C4BCC9BA284568BF00D04808 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/AddAddressVC.xib; sourceTree = "<group>"; };
-		C4BCC9BD284568C300D04808 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/AddAddressVC.strings; sourceTree = "<group>"; };
 		C4D8AF602842B20100D154BE /* FilterReportsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterReportsVC.swift; sourceTree = "<group>"; };
-		C4D8AF642842B27E00D154BE /* AllReportsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllReportsCell.swift; sourceTree = "<group>"; };
 		C4D8AF682842B2B000D154BE /* AllReportsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllReportsVC.swift; sourceTree = "<group>"; };
 		C4D8AF692842B2B000D154BE /* AllReportsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllReportsModel.swift; sourceTree = "<group>"; };
 		C4D8AF6E2842B42300D154BE /* AddReminderVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddReminderVC.swift; sourceTree = "<group>"; };
@@ -1433,35 +1315,32 @@
 		C4D8AF752842B46500D154BE /* MedicineReminderTBCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MedicineReminderTBCell.xib; sourceTree = "<group>"; };
 		C4D8AF762842B46700D154BE /* MedicineReminderTBCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicineReminderTBCell.swift; sourceTree = "<group>"; };
 		C4D8AF792842B46E00D154BE /* MedicineReminder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicineReminder.swift; sourceTree = "<group>"; };
-		D31BA5E7F746A4EE0F969D94 /* Pods-E4 PatientTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-E4 PatientTests.release.xcconfig"; path = "Target Support Files/Pods-E4 PatientTests/Pods-E4 PatientTests.release.xcconfig"; sourceTree = "<group>"; };
-		D632F11585FE312A8721F3D8 /* Pods-E4 PatientTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-E4 PatientTests.debug.xcconfig"; path = "Target Support Files/Pods-E4 PatientTests/Pods-E4 PatientTests.debug.xcconfig"; sourceTree = "<group>"; };
-		DDACD204C177C0A8CC0878F0 /* Pods-E4 Patient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-E4 Patient.debug.xcconfig"; path = "Target Support Files/Pods-E4 Patient/Pods-E4 Patient.debug.xcconfig"; sourceTree = "<group>"; };
-		F69716F8FB8B9E2C9FC071DA /* Pods-E4 Patient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-E4 Patient.release.xcconfig"; path = "Target Support Files/Pods-E4 Patient/Pods-E4 Patient.release.xcconfig"; sourceTree = "<group>"; };
->>>>>>> newNada:RubikCarePatient.xcodeproj/project.pbxproj
+		EDDFBEBDA71AD05447DF9145 /* Pods-RubikCarePatientTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RubikCarePatientTests.debug.xcconfig"; path = "Target Support Files/Pods-RubikCarePatientTests/Pods-RubikCarePatientTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F2F8C6077E019E4FDB7E636D /* Pods-RubikCarePatientTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RubikCarePatientTests.release.xcconfig"; path = "Target Support Files/Pods-RubikCarePatientTests/Pods-RubikCarePatientTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		065CA7D7285465850045CB07 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				826352A13652BEC13DE72FCD /* Pods_RubikCarePatientTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		065CA7E4285465A10045CB07 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED149728E579FAC588895C08 /* Pods_RubikCarePatient_RubikCarePatientUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C10E8E2925B33B03004FFCBF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE9C32B77A0768EF3E8B9E4A /* Pods_E4_Patient.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C10E8E3F25B33B07004FFCBF /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				26577C00280B5D97C919F259 /* Pods_E4_PatientTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C10E8E4A25B33B07004FFCBF /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5B6FA16C8A6071E22DAC8BC8 /* Pods_E4_Patient_E4_PatientUITests.framework in Frameworks */,
+				328F1DEEE422D6967CFC062B /* Pods_RubikCarePatient.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1481,11 +1360,7 @@
 			isa = PBXGroup;
 			children = (
 				010AB3FE270C6884008D1C0D /* AttachementTBCell.swift */,
-<<<<<<< HEAD:E4 Patient.xcodeproj/project.pbxproj
-				06D84ED82849BF6A00DEF1D1 /* AttachementTBCell.xib */,
-=======
 				C4BCC9982845636000D04808 /* AttachementTBCell.xib */,
->>>>>>> newNada:RubikCarePatient.xcodeproj/project.pbxproj
 			);
 			path = AttachementTBCell;
 			sourceTree = "<group>";
@@ -1503,11 +1378,7 @@
 			isa = PBXGroup;
 			children = (
 				010CFA12270C9BF000E4BCC7 /* FollowUpCell.swift */,
-<<<<<<< HEAD:E4 Patient.xcodeproj/project.pbxproj
-				06D84ED42849BF2000DEF1D1 /* FollowUpCell.xib */,
-=======
 				C4BCC99D2845638900D04808 /* FollowUpCell.xib */,
->>>>>>> newNada:RubikCarePatient.xcodeproj/project.pbxproj
 			);
 			path = FollowUpCell;
 			sourceTree = "<group>";
@@ -1528,12 +1399,8 @@
 		0158FAD5270C3EAB00758D58 /* SummaryCell */ = {
 			isa = PBXGroup;
 			children = (
-				06D84EE42849C00000DEF1D1 /* ProfileSummaryCell.xib */,
 				0158FAD6270C3ECF00758D58 /* ProfileSummaryCell.swift */,
-<<<<<<< HEAD:E4 Patient.xcodeproj/project.pbxproj
-=======
 				C4BCC9892845619100D04808 /* ProfileSummaryCell.xib */,
->>>>>>> newNada:RubikCarePatient.xcodeproj/project.pbxproj
 			);
 			path = SummaryCell;
 			sourceTree = "<group>";
@@ -1896,6 +1763,63 @@
 			path = BookingServiceView;
 			sourceTree = "<group>";
 		};
+		065CA7BC285457C20045CB07 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				C10E8E3D25B33B07004FFCBF /* Info.plist */,
+				C10E8E2F25B33B03004FFCBF /* AppDelegate.swift */,
+				C10E8E3125B33B03004FFCBF /* SceneDelegate.swift */,
+				C1D60B70261560660041AC66 /* RubikCarePatient.entitlements */,
+				C1820DFC25B419EE00396AAE /* AppDelegate+Funcs.swift */,
+				C10E8E3A25B33B07004FFCBF /* LaunchScreen.storyboard */,
+				0623A08128421F0200071B8A /* RubikCarePatient-Bridging-Header.h */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		065CA7BD285457DC0045CB07 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C10E8E3825B33B07004FFCBF /* Assets.xcassets */,
+				C10E8F2D25B3967F004FFCBF /* Color.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		065CA7DB285465850045CB07 /* RubikCarePatientTests */ = {
+			isa = PBXGroup;
+			children = (
+				065CA7DC285465850045CB07 /* RubikCarePatientTests.swift */,
+			);
+			path = RubikCarePatientTests;
+			sourceTree = "<group>";
+		};
+		065CA7E8285465A10045CB07 /* RubikCarePatientUITests */ = {
+			isa = PBXGroup;
+			children = (
+				065CA7E9285465A10045CB07 /* RubikCarePatientUITests.swift */,
+				065CA7EB285465A10045CB07 /* RubikCarePatientUITestsLaunchTests.swift */,
+			);
+			path = RubikCarePatientUITests;
+			sourceTree = "<group>";
+		};
+		06682431285466FC00525151 /* AllReport */ = {
+			isa = PBXGroup;
+			children = (
+				06682432285466FC00525151 /* AllReportsCell */,
+			);
+			path = AllReport;
+			sourceTree = "<group>";
+		};
+		06682432285466FC00525151 /* AllReportsCell */ = {
+			isa = PBXGroup;
+			children = (
+				06682436285466FC00525151 /* AllReportsCell.xib */,
+				06682435285466FC00525151 /* AllReportsCell.swift */,
+			);
+			path = AllReportsCell;
+			sourceTree = "<group>";
+		};
 		06893D4B28505B7D00864584 /* BookedMS */ = {
 			isa = PBXGroup;
 			children = (
@@ -2106,13 +2030,13 @@
 		06D84EF82849C20600DEF1D1 /* Change Language */ = {
 			isa = PBXGroup;
 			children = (
-				06D84EFB2849C20600DEF1D1 /* ChangeLanguageRouter.swift */,
-				06D84EFC2849C20600DEF1D1 /* ChangeLanguage.swift */,
-				06D84EFD2849C20600DEF1D1 /* ChangeLanguageVC.swift */,
-				06D84EFE2849C20600DEF1D1 /* ChangeLanguageVC.xib */,
-				06D84F002849C20600DEF1D1 /* ChangeLanguageInteractor.swift */,
-				06D84F012849C20600DEF1D1 /* ChangeLanguageModel.swift */,
-				06D84F022849C20600DEF1D1 /* ChangeLanguagePresenter.swift */,
+				065CA7D0285464D20045CB07 /* ChangeLanguageVC.xib */,
+				065CA7C8285464C60045CB07 /* ChangeLanguage.swift */,
+				065CA7C5285464C50045CB07 /* ChangeLanguageInteractor.swift */,
+				065CA7C4285464C40045CB07 /* ChangeLanguageModel.swift */,
+				065CA7C6285464C50045CB07 /* ChangeLanguagePresenter.swift */,
+				065CA7C7285464C60045CB07 /* ChangeLanguageRouter.swift */,
+				065CA7C9285464C70045CB07 /* ChangeLanguageVC.swift */,
 			);
 			path = "Change Language";
 			sourceTree = "<group>";
@@ -2140,7 +2064,6 @@
 		06F932B42848591600DAFB3D /* AddressUserLocation */ = {
 			isa = PBXGroup;
 			children = (
-				06F932CA284881A300DAFB3D /* AULocation.xib */,
 				06F932BC28485F2B00DAFB3D /* AULocationVC.swift */,
 				06F932BB28485F2B00DAFB3D /* AULocationPresenter.swift */,
 				06F932C3284867A000DAFB3D /* AULocationCell */,
@@ -2190,23 +2113,9 @@
 			isa = PBXGroup;
 			children = (
 				6102527828074C730085B200 /* HelpSupportCell.swift */,
-<<<<<<< HEAD:E4 Patient.xcodeproj/project.pbxproj
-				06D84EC92849BD5700DEF1D1 /* HelpSupportCell.xib */,
-=======
 				C4BCC9AC284566A600D04808 /* HelpSupportCell.xib */,
->>>>>>> newNada:RubikCarePatient.xcodeproj/project.pbxproj
 			);
 			path = HelpSupportCell;
-			sourceTree = "<group>";
-		};
-		6145754E28481E41006225F6 /* SocialPhoneVC */ = {
-			isa = PBXGroup;
-			children = (
-				6145754F28481E41006225F6 /* SocialPhoneVC.strings */,
-				6145755128481E41006225F6 /* SocialPhoneVC.swift */,
-				6145755228481E41006225F6 /* SocialPhoneVC.xib */,
-			);
-			path = SocialPhoneVC;
 			sourceTree = "<group>";
 		};
 		614F9E38283C5C600055DF4E /* DeleteDiseasesVC */ = {
@@ -2239,8 +2148,8 @@
 		614F9E47283DA60D0055DF4E /* BranchImagesCollectionVC */ = {
 			isa = PBXGroup;
 			children = (
+				0668244228547EA100525151 /* BranchImagesCollectionVC.xib */,
 				614F9E48283DA60D0055DF4E /* BranchImagesCollectionVC.swift */,
-				C466AC8928480F4C00AC1871 /* BranchImagesCollectionVC.xib */,
 			);
 			path = BranchImagesCollectionVC;
 			sourceTree = "<group>";
@@ -2291,20 +2200,6 @@
 				619182EE26F65B4600B6A796 /* Animation.m */,
 			);
 			path = Animation;
-			sourceTree = "<group>";
-		};
-		6193588B2841006000B7F7A1 /* Change Language */ = {
-			isa = PBXGroup;
-			children = (
-				C4BCC9B12845672F00D04808 /* ChangeLanguageVC.xib */,
-				6193588C2841006000B7F7A1 /* ChangeLanguageRouter.swift */,
-				6193588D2841006000B7F7A1 /* ChangeLanguage.swift */,
-				6193588E2841006000B7F7A1 /* ChangeLanguageVC.swift */,
-				6193588F2841006000B7F7A1 /* ChangeLanguageInteractor.swift */,
-				619358902841006000B7F7A1 /* ChangeLanguageModel.swift */,
-				619358912841006000B7F7A1 /* ChangeLanguagePresenter.swift */,
-			);
-			path = "Change Language";
 			sourceTree = "<group>";
 		};
 		61A7EF2C2830D9920027775E /* YBTextPicker */ = {
@@ -2491,14 +2386,20 @@
 		61EE6217280A942E0096009D /* ForgetPassVC */ = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< HEAD:E4 Patient.xcodeproj/project.pbxproj
-				06D84EB52849BC6C00DEF1D1 /* ForgetPassVC.xib */,
-=======
 				C4BCC96528455B0100D04808 /* ForgetPassVC.xib */,
->>>>>>> newNada:RubikCarePatient.xcodeproj/project.pbxproj
 				61EE621A280A942E0096009D /* ForgetPassVC.swift */,
 			);
 			path = ForgetPassVC;
+			sourceTree = "<group>";
+		};
+		6B0FB124800E8F1F46C6738C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0CDAABDF34E9B9BA60535E63 /* Pods_RubikCarePatient.framework */,
+				44ACCAC5DB15C36908829D86 /* Pods_RubikCarePatient_RubikCarePatientUITests.framework */,
+				0A3A7D91D683879A95484420 /* Pods_RubikCarePatientTests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		C1007AB5263BCAC80060AD2F /* AllSearchVC */ = {
@@ -2536,22 +2437,12 @@
 		C10E8E2325B33B03004FFCBF = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< HEAD:E4 Patient.xcodeproj/project.pbxproj
-=======
-				6168CD73284495CF008C5C84 /* GoogleService-Info.plist */,
-				6183F35827F3AE3A0040836F /*  E4ClinicPatient-Bridging-Header.h */,
->>>>>>> newNada:RubikCarePatient.xcodeproj/project.pbxproj
-				C1F8D81925DF301400863B5D /* Network */,
-				C10E8F5225B3A670004FFCBF /* Model */,
-				C10E8F1525B33CF2004FFCBF /* Brain */,
-				C10E8F1925B33D0A004FFCBF /* Controller */,
-				C10E8E2E25B33B03004FFCBF /* E4 Patient */,
-				062AE0AF2841F8D300CD698F /* MSOtherProviders */,
-				C10E8E4525B33B07004FFCBF /* E4 PatientTests */,
-				C10E8E5025B33B07004FFCBF /* E4 PatientUITests */,
+				C10E8E2E25B33B03004FFCBF /* RubikCarePatient */,
+				065CA7DB285465850045CB07 /* RubikCarePatientTests */,
+				065CA7E8285465A10045CB07 /* RubikCarePatientUITests */,
 				C10E8E2D25B33B03004FFCBF /* Products */,
 				F10B2E8C679B36CD61EAF553 /* Pods */,
-				E51B57C029E1449E400C24E0 /* Frameworks */,
+				6B0FB124800E8F1F46C6738C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -2559,55 +2450,32 @@
 			isa = PBXGroup;
 			children = (
 				C10E8E2C25B33B03004FFCBF /* E4clinic.app */,
-				C10E8E4225B33B07004FFCBF /* E4 PatientTests.xctest */,
-				C10E8E4D25B33B07004FFCBF /* E4 PatientUITests.xctest */,
+				065CA7DA285465850045CB07 /* RubikCarePatientTests.xctest */,
+				065CA7E7285465A10045CB07 /* RubikCarePatientUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C10E8E2E25B33B03004FFCBF /* E4 Patient */ = {
+		C10E8E2E25B33B03004FFCBF /* RubikCarePatient */ = {
 			isa = PBXGroup;
 			children = (
-				0623A08128421F0200071B8A /* E4ClinicPatient-Bridging-Header.h */,
-				61980655281C01E0009CC5CB /* GoogleService-Info.plist */,
-				C1D60B70261560660041AC66 /* E4 Patient.entitlements */,
-				C10E8E2F25B33B03004FFCBF /* AppDelegate.swift */,
-				C10E8E3125B33B03004FFCBF /* SceneDelegate.swift */,
-				C10E8E3325B33B03004FFCBF /* ViewController.swift */,
-				C10E8E3525B33B03004FFCBF /* Main.storyboard */,
-				C10E8E3825B33B07004FFCBF /* Assets.xcassets */,
-				C10E8E3A25B33B07004FFCBF /* LaunchScreen.storyboard */,
-				C10E8E3D25B33B07004FFCBF /* Info.plist */,
-				C10E8F2D25B3967F004FFCBF /* Color.xcassets */,
-				C1820DFC25B419EE00396AAE /* AppDelegate+Funcs.swift */,
+				065CA7BC285457C20045CB07 /* App */,
+				C10E8F1525B33CF2004FFCBF /* Brain */,
+				C10E8F5225B3A670004FFCBF /* Model */,
+				C1F8D81925DF301400863B5D /* Network */,
+				C10E8F1925B33D0A004FFCBF /* Controller */,
+				065CA7BD285457DC0045CB07 /* Resources */,
+				062AE0AF2841F8D300CD698F /* MSOtherProviders */,
 			);
-			path = "E4 Patient";
-			sourceTree = "<group>";
-		};
-		C10E8E4525B33B07004FFCBF /* E4 PatientTests */ = {
-			isa = PBXGroup;
-			children = (
-				C10E8E4625B33B07004FFCBF /* E4_PatientTests.swift */,
-				C10E8E4825B33B07004FFCBF /* Info.plist */,
-			);
-			path = "E4 PatientTests";
-			sourceTree = "<group>";
-		};
-		C10E8E5025B33B07004FFCBF /* E4 PatientUITests */ = {
-			isa = PBXGroup;
-			children = (
-				C10E8E5125B33B07004FFCBF /* E4_PatientUITests.swift */,
-				C10E8E5325B33B07004FFCBF /* Info.plist */,
-			);
-			path = "E4 PatientUITests";
+			path = RubikCarePatient;
 			sourceTree = "<group>";
 		};
 		C10E8E6F25B33CEC004FFCBF /* Font */ = {
 			isa = PBXGroup;
 			children = (
-				C10E8F3225B39802004FFCBF /* SegoeUI */,
 				C10E8E7025B33CEC004FFCBF /* FontEnum.swift */,
 				C10E8E7125B33CEC004FFCBF /* cairo */,
+				C10E8F3225B39802004FFCBF /* SegoeUI */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -2692,6 +2560,8 @@
 		C10E8F1925B33D0A004FFCBF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				C10E8E3525B33B03004FFCBF /* Main.storyboard */,
+				C10E8E3325B33B03004FFCBF /* ViewController.swift */,
 				C435947E284B682E002958D3 /* CreditCard */,
 				C4A0A86E284A019B006C06A3 /* Wallet */,
 				C4D8AF6C2842B40200D154BE /* Reminder */,
@@ -2735,15 +2605,9 @@
 		C10E8F2225B33E23004FFCBF /* LoginVC */ = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< HEAD:E4 Patient.xcodeproj/project.pbxproj
 				06D84EA72849BBCA00DEF1D1 /* SocialPhoneVC */,
 				06D84EA32849BB8E00DEF1D1 /* LoginVC.xib */,
 				C10E8F2325B33E39004FFCBF /* LoginVC.swift */,
-=======
-				6145754E28481E41006225F6 /* SocialPhoneVC */,
-				C10E8F2325B33E39004FFCBF /* LoginVC.swift */,
-				C4BCC95B284557E300D04808 /* LoginVC.xib */,
->>>>>>> newNada:RubikCarePatient.xcodeproj/project.pbxproj
 				C19EAB6425E7DE28006E6F06 /* loginNetwork.swift */,
 			);
 			path = LoginVC;
@@ -2752,8 +2616,8 @@
 		C10E8F3225B39802004FFCBF /* SegoeUI */ = {
 			isa = PBXGroup;
 			children = (
-				C18868A926A5C36400CAF951 /* font_bold.TTF */,
-				C18868A826A5C36400CAF951 /* font_regular.TTF */,
+				065CA7B6285455FE0045CB07 /* font_bold.TTF */,
+				065CA7B7285455FE0045CB07 /* font_regular.TTF */,
 			);
 			path = SegoeUI;
 			sourceTree = "<group>";
@@ -3087,12 +2951,7 @@
 		C15F7F3D25BC2173005EB885 /* Permisions */ = {
 			isa = PBXGroup;
 			children = (
-				06D84ED02849BEDD00DEF1D1 /* PermissionVC.xib */,
 				C15F7F4125BC219E005EB885 /* PermissionVC.swift */,
-<<<<<<< HEAD:E4 Patient.xcodeproj/project.pbxproj
-=======
-				C4BCC9A22845642E00D04808 /* PermissionVC.xib */,
->>>>>>> newNada:RubikCarePatient.xcodeproj/project.pbxproj
 				C160095D25F504F0008CCA0B /* PermissionNetwork.swift */,
 				C17F99A525FFCCDD0043EF08 /* PermissionPickerView.swift */,
 			);
@@ -3155,12 +3014,8 @@
 		C1820DE525B4140B00396AAE /* ConfirmAccountVC */ = {
 			isa = PBXGroup;
 			children = (
-				06D84EB92849BC8600DEF1D1 /* ConfirmAccountVC.xib */,
+				06682456285486FB00525151 /* ConfirmAccountVC.xib */,
 				C1820DE625B4142F00396AAE /* ConfirmAccountVC.swift */,
-<<<<<<< HEAD:E4 Patient.xcodeproj/project.pbxproj
-=======
-				C4BCC96A28455B8E00D04808 /* ConfirmAccountVC.xib */,
->>>>>>> newNada:RubikCarePatient.xcodeproj/project.pbxproj
 				C19EAB7025E9106B006E6F06 /* codeValidation.swift */,
 			);
 			path = ConfirmAccountVC;
@@ -3210,14 +3065,10 @@
 		C1820E7B25B5125200396AAE /* HomeVC */ = {
 			isa = PBXGroup;
 			children = (
+				0668244B2854852000525151 /* HomeVC.xib */,
 				C19961AA2635192A00B3FB2A /* Cells */,
 				C1820E7C25B5126600396AAE /* HomeVC.swift */,
-<<<<<<< HEAD:E4 Patient.xcodeproj/project.pbxproj
-=======
-				C4BCC96F28455C3100D04808 /* HomeVC.xib */,
->>>>>>> newNada:RubikCarePatient.xcodeproj/project.pbxproj
 				C181852226354CB300299993 /* HomeCollectionView.swift */,
-				06D84EC52849BD1400DEF1D1 /* HomeVC.xib */,
 				C1B6AE9B26264DC100E509D3 /* homeSlider.swift */,
 				C186CCA12664607100755A41 /* homeNetwork.swift */,
 			);
@@ -3227,14 +3078,10 @@
 		C1820E8625B5127300396AAE /* AppointmentVC */ = {
 			isa = PBXGroup;
 			children = (
+				0668244E285485F900525151 /* AppointmentVC.xib */,
 				C18DA7252647B47700079EE1 /* Cell */,
 				6160C7DC26E63D33006A12BE /* AppointmentNetwork.swift */,
 				C1820E8725B5127B00396AAE /* AppointmentVC.swift */,
-<<<<<<< HEAD:E4 Patient.xcodeproj/project.pbxproj
-				06D84EC12849BCDD00DEF1D1 /* AppointmentVC.xib */,
-=======
-				C4BCC97428455F4100D04808 /* AppointmentVC.xib */,
->>>>>>> newNada:RubikCarePatient.xcodeproj/project.pbxproj
 			);
 			path = AppointmentVC;
 			sourceTree = "<group>";
@@ -3260,11 +3107,7 @@
 		C1820EB425B51D0A00396AAE /* MorePath */ = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< HEAD:E4 Patient.xcodeproj/project.pbxproj
 				06D84EF82849C20600DEF1D1 /* Change Language */,
-=======
-				6193588B2841006000B7F7A1 /* Change Language */,
->>>>>>> newNada:RubikCarePatient.xcodeproj/project.pbxproj
 				6102527728074C730085B200 /* HelpSupportCell */,
 				616178562806C578005EE4C6 /* Log Out */,
 				C186EB872647C71200E92B8F /* MyFavoriteVC */,
@@ -3285,11 +3128,6 @@
 				C1820ED025B532C300396AAE /* ProfileDataPopUpVC */,
 				C1820EC025B528BB00396AAE /* Cell */,
 				C1820EB625B51D3200396AAE /* ProfileVC.swift */,
-<<<<<<< HEAD:E4 Patient.xcodeproj/project.pbxproj
-				06D84EEC2849C04900DEF1D1 /* ProfileVC.xib */,
-=======
-				C4BCC97E2845610D00D04808 /* ProfileVC.xib */,
->>>>>>> newNada:RubikCarePatient.xcodeproj/project.pbxproj
 				C1820ECB25B52CE000396AAE /* Profile+TableView.swift */,
 				C19EAB6E25E7FBF1006E6F06 /* ProfileNetwork.swift */,
 			);
@@ -3301,11 +3139,6 @@
 			children = (
 				0158FAD5270C3EAB00758D58 /* SummaryCell */,
 				C1820EC125B528CD00396AAE /* ProfileCell.swift */,
-<<<<<<< HEAD:E4 Patient.xcodeproj/project.pbxproj
-				06D84EE82849C02400DEF1D1 /* ProfileCell.xib */,
-=======
-				C4BCC9842845616E00D04808 /* ProfileCell.xib */,
->>>>>>> newNada:RubikCarePatient.xcodeproj/project.pbxproj
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -3313,12 +3146,7 @@
 		C1820ED025B532C300396AAE /* ProfileDataPopUpVC */ = {
 			isa = PBXGroup;
 			children = (
-				06D84EE02849BFCE00DEF1D1 /* ProfileDataPopUpVC.xib */,
 				C1820ED125B532DC00396AAE /* ProfileDataPopUpVC.swift */,
-<<<<<<< HEAD:E4 Patient.xcodeproj/project.pbxproj
-=======
-				C4BCC98E284561CA00D04808 /* ProfileDataPopUpVC.xib */,
->>>>>>> newNada:RubikCarePatient.xcodeproj/project.pbxproj
 			);
 			path = ProfileDataPopUpVC;
 			sourceTree = "<group>";
@@ -3356,11 +3184,11 @@
 		C186E3122647818200B0890C /* BranchInfoVC */ = {
 			isa = PBXGroup;
 			children = (
+				06682449285483F000525151 /* BranchInfoVCViewController.xib */,
 				614F9E47283DA60D0055DF4E /* BranchImagesCollectionVC */,
 				C186E31C264785F100B0890C /* ServiseCell */,
 				C186E3172647855600B0890C /* CollectionCell */,
 				C186E3132647821300B0890C /* BranchInfoVCViewController.swift */,
-				C466AC8428480F0900AC1871 /* BranchInfoVCViewController.xib */,
 				C186E3212647869B00B0890C /* BranchInfoTable+Collection.swift */,
 			);
 			name = BranchInfoVC;
@@ -3517,12 +3345,8 @@
 		C18913A325B40843006F08EA /* SignUpVC */ = {
 			isa = PBXGroup;
 			children = (
-				06D84EB12849BC3900DEF1D1 /* SignUpVC.xib */,
+				06682452285486C200525151 /* SignUpVC.xib */,
 				C18913A725B4086C006F08EA /* SignUpVC.swift */,
-<<<<<<< HEAD:E4 Patient.xcodeproj/project.pbxproj
-=======
-				C4BCC960284559F200D04808 /* SignUpVC.xib */,
->>>>>>> newNada:RubikCarePatient.xcodeproj/project.pbxproj
 				C19EAB6825E7E50F006E6F06 /* SignUpNetwork.swift */,
 				C19EAB6A25E7E9D9006E6F06 /* SignUpPicker.swift */,
 			);
@@ -3565,11 +3389,6 @@
 			isa = PBXGroup;
 			children = (
 				C18DA7262647B48600079EE1 /* AppointmentCell.swift */,
-<<<<<<< HEAD:E4 Patient.xcodeproj/project.pbxproj
-				06D84EBD2849BCB500DEF1D1 /* AppointmentCell.xib */,
-=======
-				C4BCC97928455F8B00D04808 /* AppointmentCell.xib */,
->>>>>>> newNada:RubikCarePatient.xcodeproj/project.pbxproj
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -3717,11 +3536,6 @@
 			isa = PBXGroup;
 			children = (
 				C1DC8A4425B6451500B006AC /* AllAddressCell.swift */,
-<<<<<<< HEAD:E4 Patient.xcodeproj/project.pbxproj
-				06D84EF42849C10600DEF1D1 /* AllAddressCell.xib */,
-=======
-				C4BCC9B62845680C00D04808 /* AllAddressCell.xib */,
->>>>>>> newNada:RubikCarePatient.xcodeproj/project.pbxproj
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -3729,12 +3543,8 @@
 		C1DC8A6025B655D600B006AC /* AddAdreesVC */ = {
 			isa = PBXGroup;
 			children = (
+				0668245E285487D100525151 /* AddAddressVC.xib */,
 				C1DC8A6125B655F200B006AC /* AddAddressVC.swift */,
-<<<<<<< HEAD:E4 Patient.xcodeproj/project.pbxproj
-				06D84EF02849C0DA00DEF1D1 /* AddAddressVC.xib */,
-=======
-				C4BCC9BB284568BF00D04808 /* AddAddressVC.xib */,
->>>>>>> newNada:RubikCarePatient.xcodeproj/project.pbxproj
 			);
 			path = AddAdreesVC;
 			sourceTree = "<group>";
@@ -3854,12 +3664,8 @@
 		C1FA090125BCE53A00433577 /* ForgetpasswordVC */ = {
 			isa = PBXGroup;
 			children = (
+				0668245A2854874F00525151 /* ForgetPasswordVC.xib */,
 				C1FA090225BCE54F00433577 /* ForgetPasswordVC.swift */,
-<<<<<<< HEAD:E4 Patient.xcodeproj/project.pbxproj
-				06D84ECC2849BEB800DEF1D1 /* ForgetPasswordVC.xib */,
-=======
-				C4BCC9A72845660F00D04808 /* ForgetPasswordVC.xib */,
->>>>>>> newNada:RubikCarePatient.xcodeproj/project.pbxproj
 			);
 			path = ForgetpasswordVC;
 			sourceTree = "<group>";
@@ -3888,12 +3694,7 @@
 		C1FC080225B53F2700725968 /* EditProfileVC */ = {
 			isa = PBXGroup;
 			children = (
-				06D84EDC2849BF9000DEF1D1 /* EditProfileVC.xib */,
 				C1FC080325B53F4200725968 /* EditProfileVC.swift */,
-<<<<<<< HEAD:E4 Patient.xcodeproj/project.pbxproj
-=======
-				C4BCC9932845628100D04808 /* EditProfileVC.xib */,
->>>>>>> newNada:RubikCarePatient.xcodeproj/project.pbxproj
 				322DCF2425EAC29A00142F6A /* EditProfileVCPicker.swift */,
 				C13A457A25F438AC004F2D33 /* EditProfileNetwork.swift */,
 			);
@@ -3919,9 +3720,6 @@
 			path = FAQCell;
 			sourceTree = "<group>";
 		};
-<<<<<<< HEAD:E4 Patient.xcodeproj/project.pbxproj
-		E51B57C029E1449E400C24E0 /* Frameworks */ = {
-=======
 		C4359478284B5D12002958D3 /* WalletCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -3954,7 +3752,7 @@
 		C4D8AF5E2842B1CC00D154BE /* Reports */ = {
 			isa = PBXGroup;
 			children = (
-				C4D8AF622842B21700D154BE /* AllReports */,
+				06682431285466FC00525151 /* AllReport */,
 				C4D8AF692842B2B000D154BE /* AllReportsModel.swift */,
 				C4D8AF682842B2B000D154BE /* AllReportsVC.swift */,
 				C4D8AF5F2842B1E200D154BE /* FilterReports */,
@@ -3969,24 +3767,6 @@
 				C458109A2843FB970026A9F4 /* ReportServiceListModel.swift */,
 			);
 			path = FilterReports;
-			sourceTree = "<group>";
-		};
-		C4D8AF622842B21700D154BE /* AllReports */ = {
-			isa = PBXGroup;
-			children = (
-				C4D8AF632842B22A00D154BE /* AllReportsCell */,
-			);
-			path = AllReports;
-			sourceTree = "<group>";
-		};
-		C4D8AF632842B22A00D154BE /* AllReportsCell */ = {
-			isa = PBXGroup;
-			children = (
-				C4D8AF642842B27E00D154BE /* AllReportsCell.swift */,
-				C466AC8E28480F7E00AC1871 /* AllReportsCell.xib */,
-			);
-			name = AllReportsCell;
-			path = "../New Group/AllReportsCell";
 			sourceTree = "<group>";
 		};
 		C4D8AF6C2842B40200D154BE /* Reminder */ = {
@@ -4033,26 +3813,15 @@
 			path = MedicineReminderTBCell;
 			sourceTree = "<group>";
 		};
-		D489A7022DBE435A69C022EA /* Frameworks */ = {
->>>>>>> newNada:RubikCarePatient.xcodeproj/project.pbxproj
-			isa = PBXGroup;
-			children = (
-				744281E7D81F7C66A49F9E9E /* Pods_E4_Patient.framework */,
-				CAA71164FC8209532F4F9B26 /* Pods_E4_Patient_E4_PatientUITests.framework */,
-				58A8E60973BB66F789DED7B5 /* Pods_E4_PatientTests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		F10B2E8C679B36CD61EAF553 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				DCDFA4502490909F8417FD18 /* Pods-E4 Patient.debug.xcconfig */,
-				E5D159A8405D17FCFFB8D125 /* Pods-E4 Patient.release.xcconfig */,
-				854E6FBF66518C5BE144AD2F /* Pods-E4 Patient-E4 PatientUITests.debug.xcconfig */,
-				16990E4281003110E60E16D3 /* Pods-E4 Patient-E4 PatientUITests.release.xcconfig */,
-				35F5C954CCA434E2E885B531 /* Pods-E4 PatientTests.debug.xcconfig */,
-				269CD9ECAEF2E4C802DD1670 /* Pods-E4 PatientTests.release.xcconfig */,
+				AA90069BD72E2F67CBE5DEAE /* Pods-RubikCarePatient.debug.xcconfig */,
+				B13C5060F7360577A7DBC38A /* Pods-RubikCarePatient.release.xcconfig */,
+				75BFD499B90E1B95BDAE5B59 /* Pods-RubikCarePatient-RubikCarePatientUITests.debug.xcconfig */,
+				84C9CD1BDC5DB198E679686D /* Pods-RubikCarePatient-RubikCarePatientUITests.release.xcconfig */,
+				EDDFBEBDA71AD05447DF9145 /* Pods-RubikCarePatientTests.debug.xcconfig */,
+				F2F8C6077E019E4FDB7E636D /* Pods-RubikCarePatientTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -4060,75 +3829,65 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C10E8E2B25B33B03004FFCBF /* E4 Patient */ = {
+		065CA7D9285465850045CB07 /* RubikCarePatientTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C10E8E5625B33B07004FFCBF /* Build configuration list for PBXNativeTarget "E4 Patient" */;
+			buildConfigurationList = 065CA7E0285465850045CB07 /* Build configuration list for PBXNativeTarget "RubikCarePatientTests" */;
 			buildPhases = (
-				31AE501D54A5AC32B5A686AA /* [CP] Check Pods Manifest.lock */,
+				07C456CCB896A4035C89E169 /* [CP] Check Pods Manifest.lock */,
+				065CA7D6285465850045CB07 /* Sources */,
+				065CA7D7285465850045CB07 /* Frameworks */,
+				065CA7D8285465850045CB07 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				065CA7DF285465850045CB07 /* PBXTargetDependency */,
+			);
+			name = RubikCarePatientTests;
+			productName = RubikCarePatientTests;
+			productReference = 065CA7DA285465850045CB07 /* RubikCarePatientTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		065CA7E6285465A10045CB07 /* RubikCarePatientUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 065CA7EF285465A10045CB07 /* Build configuration list for PBXNativeTarget "RubikCarePatientUITests" */;
+			buildPhases = (
+				55EF6F3EFB5875C2C9804BDC /* [CP] Check Pods Manifest.lock */,
+				065CA7E3285465A10045CB07 /* Sources */,
+				065CA7E4285465A10045CB07 /* Frameworks */,
+				065CA7E5285465A10045CB07 /* Resources */,
+				5E67DEF397AED52EAA63F85D /* [CP] Embed Pods Frameworks */,
+				12C6932DB8FBA7DF2ABF997C /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				065CA7EE285465A10045CB07 /* PBXTargetDependency */,
+			);
+			name = RubikCarePatientUITests;
+			productName = RubikCarePatientUITests;
+			productReference = 065CA7E7285465A10045CB07 /* RubikCarePatientUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		C10E8E2B25B33B03004FFCBF /* RubikCarePatient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C10E8E5625B33B07004FFCBF /* Build configuration list for PBXNativeTarget "RubikCarePatient" */;
+			buildPhases = (
+				B712FC8198E43DA31B3A0D4F /* [CP] Check Pods Manifest.lock */,
 				C10E8E2825B33B03004FFCBF /* Sources */,
 				C10E8E2925B33B03004FFCBF /* Frameworks */,
 				C10E8E2A25B33B03004FFCBF /* Resources */,
-<<<<<<< HEAD:E4 Patient.xcodeproj/project.pbxproj
-				30CE13FC5AEEC6D43EA05EBB /* [CP] Embed Pods Frameworks */,
-				2A35FB8D332C43C566A8A420 /* [CP] Copy Pods Resources */,
-=======
-				8DB01B46325A1495B8F50C91 /* [CP] Embed Pods Frameworks */,
-				71FC27F2AE6E59521D43ADCB /* [CP] Copy Pods Resources */,
->>>>>>> newNada:RubikCarePatient.xcodeproj/project.pbxproj
+				B7C1D9ADDEADA993FBA026D3 /* [CP] Embed Pods Frameworks */,
+				AF14A9FCFFDF9CBD6387E19D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "E4 Patient";
+			name = RubikCarePatient;
 			productName = "E4 Patient";
 			productReference = C10E8E2C25B33B03004FFCBF /* E4clinic.app */;
 			productType = "com.apple.product-type.application";
-		};
-		C10E8E4125B33B07004FFCBF /* E4 PatientTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C10E8E5925B33B07004FFCBF /* Build configuration list for PBXNativeTarget "E4 PatientTests" */;
-			buildPhases = (
-				D9BB600A46E1DC33D257A85E /* [CP] Check Pods Manifest.lock */,
-				C10E8E3E25B33B07004FFCBF /* Sources */,
-				C10E8E3F25B33B07004FFCBF /* Frameworks */,
-				C10E8E4025B33B07004FFCBF /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C10E8E4425B33B07004FFCBF /* PBXTargetDependency */,
-			);
-			name = "E4 PatientTests";
-			productName = "E4 PatientTests";
-			productReference = C10E8E4225B33B07004FFCBF /* E4 PatientTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		C10E8E4C25B33B07004FFCBF /* E4 PatientUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C10E8E5C25B33B07004FFCBF /* Build configuration list for PBXNativeTarget "E4 PatientUITests" */;
-			buildPhases = (
-				B9D5552D7623083557D05ABE /* [CP] Check Pods Manifest.lock */,
-				C10E8E4925B33B07004FFCBF /* Sources */,
-				C10E8E4A25B33B07004FFCBF /* Frameworks */,
-				C10E8E4B25B33B07004FFCBF /* Resources */,
-<<<<<<< HEAD:E4 Patient.xcodeproj/project.pbxproj
-				9159F6FD5A50CC4575833D90 /* [CP] Embed Pods Frameworks */,
-				D67C7CB953FB1E2A042F65F6 /* [CP] Copy Pods Resources */,
-=======
-				56C5EB53AB9CFD0C5B49645D /* [CP] Embed Pods Frameworks */,
-				94FBDE674C2A740B724CB7CD /* [CP] Copy Pods Resources */,
->>>>>>> newNada:RubikCarePatient.xcodeproj/project.pbxproj
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C10E8E4F25B33B07004FFCBF /* PBXTargetDependency */,
-			);
-			name = "E4 PatientUITests";
-			productName = "E4 PatientUITests";
-			productReference = C10E8E4D25B33B07004FFCBF /* E4 PatientUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -4136,23 +3895,23 @@
 		C10E8E2425B33B03004FFCBF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1220;
+				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1220;
 				TargetAttributes = {
+					065CA7D9285465850045CB07 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = C10E8E2B25B33B03004FFCBF;
+					};
+					065CA7E6285465A10045CB07 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = C10E8E2B25B33B03004FFCBF;
+					};
 					C10E8E2B25B33B03004FFCBF = {
 						CreatedOnToolsVersion = 12.2;
 					};
-					C10E8E4125B33B07004FFCBF = {
-						CreatedOnToolsVersion = 12.2;
-						TestTargetID = C10E8E2B25B33B03004FFCBF;
-					};
-					C10E8E4C25B33B07004FFCBF = {
-						CreatedOnToolsVersion = 12.2;
-						TestTargetID = C10E8E2B25B33B03004FFCBF;
-					};
 				};
 			};
-			buildConfigurationList = C10E8E2725B33B03004FFCBF /* Build configuration list for PBXProject "E4 Patient" */;
+			buildConfigurationList = C10E8E2725B33B03004FFCBF /* Build configuration list for PBXProject "RubikCarePatient" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -4166,180 +3925,120 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C10E8E2B25B33B03004FFCBF /* E4 Patient */,
-				C10E8E4125B33B07004FFCBF /* E4 PatientTests */,
-				C10E8E4C25B33B07004FFCBF /* E4 PatientUITests */,
+				C10E8E2B25B33B03004FFCBF /* RubikCarePatient */,
+				065CA7D9285465850045CB07 /* RubikCarePatientTests */,
+				065CA7E6285465A10045CB07 /* RubikCarePatientUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		065CA7D8285465850045CB07 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		065CA7E5285465A10045CB07 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C10E8E2A25B33B03004FFCBF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6168CD7428449673008C5C84 /* GoogleService-Info.plist in Resources */,
 				C1820E1725B41B1600396AAE /* MoreCell.xib in Resources */,
 				61BD682D283B104C00821D51 /* AllMedicationVC.xib in Resources */,
-<<<<<<< HEAD:E4 Patient.xcodeproj/project.pbxproj
-				C15F7F3625BC02C1005EB885 /* AddMedicalReportsVC.xib in Resources */,
-				C15F7EBC25BBD892005EB885 /* AddAllergiesVC.xib in Resources */,
-				C1DC8A8625B6682600B006AC /* AllEmergencyContactsVC.xib in Resources */,
-				C1DC8A9125B66BE300B006AC /* EmergencyContactsCell.xib in Resources */,
-				06D84EC72849BD1500DEF1D1 /* HomeVC.xib in Resources */,
-				C181852926354FE300299993 /* SearchOeVc.xib in Resources */,
-				C1FA093825BCF81E00433577 /* EmergencyNumberCellTableViewCell.xib in Resources */,
-				C1DC8AA125B673CC00B006AC /* AddEmergencyVC.xib in Resources */,
+				065CA7D2285464D20045CB07 /* ChangeLanguageVC.xib in Resources */,
 				06FC021A285300C0003E239E /* BookedServiceView.xib in Resources */,
-=======
-				C4BCC9B42845680C00D04808 /* AllAddressCell.xib in Resources */,
 				C466ABE0284801E300AC1871 /* AddMedicalReportsVC.xib in Resources */,
 				C466ABB82847FE5400AC1871 /* AddAllergiesVC.xib in Resources */,
 				C1DC8A8625B6682600B006AC /* AllEmergencyContactsVC.xib in Resources */,
 				C466AB952847F9A600AC1871 /* EmergencyContactsCell.xib in Resources */,
-				C4BCC9B9284568BF00D04808 /* AddAddressVC.xib in Resources */,
 				C466ABF12848033C00AC1871 /* SearchOeVc.xib in Resources */,
 				C1FA093825BCF81E00433577 /* EmergencyNumberCellTableViewCell.xib in Resources */,
 				C466AB9A2847F9FF00AC1871 /* AddEmergencyVC.xib in Resources */,
->>>>>>> newNada:RubikCarePatient.xcodeproj/project.pbxproj
 				C186E32C26478AB500B0890C /* AcademicQualificationVC.xib in Resources */,
+				06682454285486C200525151 /* SignUpVC.xib in Resources */,
 				C19961BE26351BB100B3FB2A /* TopDoctorCell.xib in Resources */,
 				C15F7F2625BC0087005EB885 /* MedicalReportsVC.xib in Resources */,
 				C466ABCC284800D700AC1871 /* DeleteSurgeyVC.xib in Resources */,
-				C18868AB26A5C36500CAF951 /* font_bold.TTF in Resources */,
-<<<<<<< HEAD:E4 Patient.xcodeproj/project.pbxproj
-				06D84ED62849BF2100DEF1D1 /* FollowUpCell.xib in Resources */,
-				C1007AB9263BCADF0060AD2F /* AllSearchVC.xib in Resources */,
-				06D84F072849C20900DEF1D1 /* ChangeLanguageVC.xib in Resources */,
-				C186EBAD2647D05800E92B8F /* ConsultationsLogDetailsVC.xib in Resources */,
-=======
+				06D84F072849C20900DEF1D1 /* (null) in Resources */,
+				0668244028547EA100525151 /* BranchImagesCollectionVC.xib in Resources */,
 				C466ABF62848037100AC1871 /* AllSearchVC.xib in Resources */,
 				C466AC3C2848099700AC1871 /* ConsultationsLogDetailsVC.xib in Resources */,
-				6145755628481E41006225F6 /* SocialPhoneVC.xib in Resources */,
+				6145755628481E41006225F6 /* (null) in Resources */,
 				C4BCC99B2845638900D04808 /* FollowUpCell.xib in Resources */,
->>>>>>> newNada:RubikCarePatient.xcodeproj/project.pbxproj
 				C186EB902647C76C00E92B8F /* MyFavoriteCell.xib in Resources */,
 				C1820E9525B5128D00396AAE /* PharmacyVC.xib in Resources */,
-				06D84EE22849BFCF00DEF1D1 /* ProfileDataPopUpVC.xib in Resources */,
+				06D84EE22849BFCF00DEF1D1 /* (null) in Resources */,
+				0668243A285466FD00525151 /* AllReportsCell.xib in Resources */,
 				C19961AF2635194B00B3FB2A /* SpecializationsCell.xib in Resources */,
 				61BD682B283B104C00821D51 /* SearchCell.xib in Resources */,
 				C15F7ED625BBE73D005EB885 /* FamilyHistoryVC.xib in Resources */,
-<<<<<<< HEAD:E4 Patient.xcodeproj/project.pbxproj
-				C17C35E9263FB06700B8B494 /* SortVC.xib in Resources */,
-				06D84ED22849BEDD00DEF1D1 /* PermissionVC.xib in Resources */,
-=======
+				06D84ED22849BEDD00DEF1D1 /* (null) in Resources */,
 				C466AC052848051300AC1871 /* SortVC.xib in Resources */,
 				C4BCC96328455B0100D04808 /* ForgetPassVC.xib in Resources */,
 				C4BCC9872845619100D04808 /* ProfileSummaryCell.xib in Resources */,
->>>>>>> newNada:RubikCarePatient.xcodeproj/project.pbxproj
 				01FE4B5826E56CA6008023AB /* BookingSummaryCollection.xib in Resources */,
 				C15F7F0A25BBFDFA005EB885 /* SurgeryVC.xib in Resources */,
 				C186EB8B2647C72300E92B8F /* MyFavoriteVC.xib in Resources */,
-				06D84EBB2849BC8600DEF1D1 /* ConfirmAccountVC.xib in Resources */,
+				06D84EBB2849BC8600DEF1D1 /* (null) in Resources */,
 				06893D522850713E00864584 /* BookedMS.xib in Resources */,
 				06F84A2B284F26AF00479C1F /* MSView.xib in Resources */,
 				061964CF284279A8006DBFB6 /* OPsDashboard.xib in Resources */,
 				069A2B4B284D9D5600608356 /* ImageCell.xib in Resources */,
-				06D84EEE2849C04900DEF1D1 /* ProfileVC.xib in Resources */,
+				06D84EEE2849C04900DEF1D1 /* (null) in Resources */,
 				06893D612850926000864584 /* OrdersList.xib in Resources */,
 				61A7EF372830D9940027775E /* YBTextPickerCell.xib in Resources */,
-<<<<<<< HEAD:E4 Patient.xcodeproj/project.pbxproj
-				C184A1212647E185005453FC /* WriteReviewsVC.xib in Resources */,
-				C186EB812647C41500E92B8F /* AppointmentDetailsVC.xib in Resources */,
-				06D84EE62849C00100DEF1D1 /* ProfileSummaryCell.xib in Resources */,
-				01CD8C8326F291BC00F6F0DE /* AboutDoctorCell.xib in Resources */,
-				61A7EF3B2830D9940027775E /* YBTextPicker_unchecked.png in Resources */,
 				06253B9A2843300E00CE8731 /* ServiceCell.xib in Resources */,
-				C186E3302647A59E00B0890C /* AcademicQualificationCell.xib in Resources */,
-				C10E8ED225B33CED004FFCBF /* OFL.txt in Resources */,
-				C1084024263BD452004391EA /* FillterVC.xib in Resources */,
-				C1DC8A6F25B65F9200B006AC /* MapVcc.xib in Resources */,
-				01CD8C7D26F290E700F6F0DE /* DoctorProfileHeaderCell.xib in Resources */,
-				C19B32E4264898C7007B919B /* AddAppointmentVC.xib in Resources */,
 				06961FCC2851D6B70056789B /* OrdersFilter.xib in Resources */,
-				06D84EAF2849BBCA00DEF1D1 /* SocialPhoneVC.xib in Resources */,
-				069A2BA9284DB54000608356 /* ON@3x.png in Resources */,
-				614F9E4B283DA60D0055DF4E /* BranchImagesCollectionVC.xib in Resources */,
 				0697FEDF2844AA28001E63F4 /* OtherProvidersList.xib in Resources */,
-				61BD6828283B104C00821D51 /* SearchVC.xib in Resources */,
-=======
 				C466AC4128480A3700AC1871 /* WriteReviewsVC.xib in Resources */,
 				C466AC5F28480C3A00AC1871 /* AppointmentDetailsVC.xib in Resources */,
-				C4BCC97C2845610D00D04808 /* ProfileVC.xib in Resources */,
 				C466AC192848073100AC1871 /* AboutDoctorCell.xib in Resources */,
 				61A7EF3B2830D9940027775E /* YBTextPicker_unchecked.png in Resources */,
-				C4BCC97228455F4100D04808 /* AppointmentVC.xib in Resources */,
-				C4BCC9A52845660F00D04808 /* ForgetPasswordVC.xib in Resources */,
 				C186E3302647A59E00B0890C /* AcademicQualificationCell.xib in Resources */,
 				C10E8ED225B33CED004FFCBF /* OFL.txt in Resources */,
 				C466AC002848041C00AC1871 /* FillterVC.xib in Resources */,
 				C466AB862847F8DF00AC1871 /* MapVcc.xib in Resources */,
-				C4BCC95E284559F200D04808 /* SignUpVC.xib in Resources */,
 				C466AC14284806BB00AC1871 /* DoctorProfileHeaderCell.xib in Resources */,
 				C466AC4628480A9100AC1871 /* AddAppointmentVC.xib in Resources */,
-				C466AC8728480F4C00AC1871 /* BranchImagesCollectionVC.xib in Resources */,
 				61BD6828283B104C00821D51 /* SearchVC.xib in Resources */,
-				C4BCC97728455F8B00D04808 /* AppointmentCell.xib in Resources */,
-				C14C630A25DE0262000D50B0 /* ON@3x.png in Resources */,
->>>>>>> newNada:RubikCarePatient.xcodeproj/project.pbxproj
 				C10E8F1E25B33D30004FFCBF /* SplashVC.xib in Resources */,
-				06D84EF62849C10600DEF1D1 /* AllAddressCell.xib in Resources */,
+				06D84EF62849C10600DEF1D1 /* (null) in Resources */,
 				C186E30F26477C8400B0890C /* ReviewsCell.xib in Resources */,
 				C10E8ECE25B33CED004FFCBF /* Cairo-Regular.ttf in Resources */,
-<<<<<<< HEAD:E4 Patient.xcodeproj/project.pbxproj
-				06D84EA52849BB8E00DEF1D1 /* LoginVC.xib in Resources */,
-				C15F7ECA25BBDE7F005EB885 /* AddSocialHistoryVC.xib in Resources */,
 				06F932C7284867BB00DAFB3D /* AULocationCell.xib in Resources */,
-				01E44B1826DC284200805033 /* AppointmentAddressCell.xib in Resources */,
-				61BD6842283B820600821D51 /* DeleteMedicalReportVC.xib in Resources */,
 				063023D9284609F40085FD59 /* FilterAlert.xib in Resources */,
-				61BD67F62838B16800821D51 /* Localizable.strings in Resources */,
 				069F94BB2852EA4100F044C6 /* OrderDetails.xib in Resources */,
-				614F9E40283D8BA50055DF4E /* DeleteFamilyHistoryVC.xib in Resources */,
-=======
+				06682460285487D100525151 /* AddAddressVC.xib in Resources */,
 				C466ABBD2847FF5300AC1871 /* AddSocialHistoryVC.xib in Resources */,
-				C4BCC9A02845642E00D04808 /* PermissionVC.xib in Resources */,
 				01E44B1826DC284200805033 /* AppointmentAddressCell.xib in Resources */,
-				C4BCC9AF2845672F00D04808 /* ChangeLanguageVC.xib in Resources */,
 				C466ABDB284801B000AC1871 /* DeleteMedicalReportVC.xib in Resources */,
-				C14C630D25DE0262000D50B0 /* video@3x.png in Resources */,
 				61BD67F62838B16800821D51 /* Localizable.strings in Resources */,
 				C466ABC22848005700AC1871 /* DeleteFamilyHistoryVC.xib in Resources */,
->>>>>>> newNada:RubikCarePatient.xcodeproj/project.pbxproj
+				0668245C2854874F00525151 /* ForgetPasswordVC.xib in Resources */,
 				C186EB9F2647CBDF00E92B8F /* ConsultationsLogVC.xib in Resources */,
 				01F5756826DD72870076273F /* ConsultationLogTBCell.xib in Resources */,
 				0106D79B26C522520054E254 /* PrefixTitleTBCell.xib in Resources */,
-				06D84EDA2849BF6A00DEF1D1 /* AttachementTBCell.xib in Resources */,
+				06D84EDA2849BF6A00DEF1D1 /* (null) in Resources */,
 				C1820E9F25B5129E00396AAE /* BlogVC.xib in Resources */,
+				06682458285486FC00525151 /* ConfirmAccountVC.xib in Resources */,
 				61A7EF3A2830D9940027775E /* YBTextPicker_checked.png in Resources */,
-<<<<<<< HEAD:E4 Patient.xcodeproj/project.pbxproj
-				06F932C8284881A300DAFB3D /* AULocation.xib in Resources */,
-=======
-				C4BCC9912845628100D04808 /* EditProfileVC.xib in Resources */,
-				C4BCC96828455B8E00D04808 /* ConfirmAccountVC.xib in Resources */,
->>>>>>> newNada:RubikCarePatient.xcodeproj/project.pbxproj
+				06F932C8284881A300DAFB3D /* (null) in Resources */,
 				C10E8E3C25B33B07004FFCBF /* LaunchScreen.storyboard in Resources */,
 				C466AB8B2847F90500AC1871 /* DefultLocationVC.xib in Resources */,
 				C186E3202647861F00B0890C /* DoctorServiseCell.xib in Resources */,
 				C434676A2839786B00378565 /* FAQCell.xib in Resources */,
-<<<<<<< HEAD:E4 Patient.xcodeproj/project.pbxproj
 				0697FED82844AA01001E63F4 /* OtherProviderCell.xib in Resources */,
-				C1DC8AB825B67ABC00B006AC /* DieseasesCell.xib in Resources */,
-				61BD6820283B104C00821D51 /* AddMedicationListVC.xib in Resources */,
-				01E44AFE26DC1F7800805033 /* WorkingTimeCell.xib in Resources */,
 				0630034728446C6500163C6F /* EPrescriptionList.xib in Resources */,
-				01CD8C8D26F2931200F6F0DE /* ClinicCell.xib in Resources */,
-				C10E8E3925B33B07004FFCBF /* Assets.xcassets in Resources */,
 				06FC022128531079003E239E /* EPImageCell.xib in Resources */,
-				C186E30A26476FFD00B0890C /* ReviewsVC.xib in Resources */,
-				C1D077492643836100D4F88A /* DoctorProfileVC.xib in Resources */,
-				C186EBB22647D52200E92B8F /* AppointmentDetailsCancelVC.xib in Resources */,
 				06893D66285094B000864584 /* OrderCell.xib in Resources */,
-				C1DC8AAD25B679D400B006AC /* AllDiseasesVC.xib in Resources */,
-				C186EBA82647CE2700E92B8F /* ConsultationsLogFillterVC.xib in Resources */,
-				01E44B0326DC207F00805033 /* AvailableCollectionCell.xib in Resources */,
-				C1FA092A25BCF80800433577 /* EmergencyNumberVC.xib in Resources */,
-=======
 				C466AB9F2847FCD700AC1871 /* DieseasesCell.xib in Resources */,
 				C466ABEA284802DA00AC1871 /* AddMedicationListVC.xib in Resources */,
 				C466AC4B28480B0400AC1871 /* WorkingTimeCell.xib in Resources */,
@@ -4348,63 +4047,33 @@
 				C466AC28284807AD00AC1871 /* ReviewsVC.xib in Resources */,
 				C466AC0F284805CB00AC1871 /* DoctorProfileVC.xib in Resources */,
 				C466AC7328480E1F00AC1871 /* AppointmentDetailsCancelVC.xib in Resources */,
+				065CA7B9285455FF0045CB07 /* font_regular.TTF in Resources */,
 				C1DC8AAD25B679D400B006AC /* AllDiseasesVC.xib in Resources */,
-				6145755428481E41006225F6 /* SocialPhoneVC.strings in Resources */,
+				06682450285485FA00525151 /* AppointmentVC.xib in Resources */,
+				6145755428481E41006225F6 /* (null) in Resources */,
 				C466AC372848090500AC1871 /* ConsultationsLogFillterVC.xib in Resources */,
 				C466AC5028480B4400AC1871 /* AvailableCollectionCell.xib in Resources */,
-				C4BCC9822845616E00D04808 /* ProfileCell.xib in Resources */,
 				C435947C284B5D45002958D3 /* WalletCell.xib in Resources */,
 				C1FA092A25BCF80800433577 /* EmergencyNumberVC.xib in Resources */,
-				C4BCC98C284561CA00D04808 /* ProfileDataPopUpVC.xib in Resources */,
 				C4BCC9AA284566A600D04808 /* HelpSupportCell.xib in Resources */,
->>>>>>> newNada:RubikCarePatient.xcodeproj/project.pbxproj
 				C10E8ED025B33CED004FFCBF /* Cairo-Black.ttf in Resources */,
 				C15102D725B7E4BC00FEEFB2 /* AllAllergiesVC.xib in Resources */,
 				C10E8ECD25B33CED004FFCBF /* Cairo-SemiBold.ttf in Resources */,
 				C186EBA32647CC5C00E92B8F /* ConsultationsLogCell.xib in Resources */,
-<<<<<<< HEAD:E4 Patient.xcodeproj/project.pbxproj
-				06D84EB72849BC6D00DEF1D1 /* ForgetPassVC.xib in Resources */,
-				61BD683E283B1AC900821D51 /* MedicalReportCell.xib in Resources */,
-				C19961B926351A5D00B3FB2A /* MedicalServicesCell.xib in Resources */,
-				06D84ECE2849BEB800DEF1D1 /* ForgetPasswordVC.xib in Resources */,
 				069A2BAD284DB54000608356 /* cameraIcon@3x.png in Resources */,
-				C108401D263BCE83004391EA /* AllSearchCell.xib in Resources */,
-				06D84F0C2849CBC000DEF1D1 /* GoogleService-Info.plist in Resources */,
-				C186E327264788F400B0890C /* HomeInfoVC.xib in Resources */,
 				069A2BAB284DB54000608356 /* AUTO@3x.png in Resources */,
 				069A2BC6284DC23700608356 /* AddMS.xib in Resources */,
-				069A2BAC284DB54000608356 /* video@3x.png in Resources */,
-=======
 				C466ABD62848018A00AC1871 /* MedicalReportCell.xib in Resources */,
 				C19961B926351A5D00B3FB2A /* MedicalServicesCell.xib in Resources */,
 				C466ABFB284803D500AC1871 /* AllSearchCell.xib in Resources */,
-				C14C630825DE0262000D50B0 /* selectedImageGallery@3x.png in Resources */,
 				C466AC7828480EB300AC1871 /* HomeInfoVC.xib in Resources */,
->>>>>>> newNada:RubikCarePatient.xcodeproj/project.pbxproj
 				C186E31B2647857300B0890C /* PhotoCell.xib in Resources */,
 				C466AC1E2848076400AC1871 /* AcadimicQualificationCell.xib in Resources */,
 				C1820E0C25B41AFD00396AAE /* MoreVC.xib in Resources */,
-<<<<<<< HEAD:E4 Patient.xcodeproj/project.pbxproj
-				06D84EDE2849BF9100DEF1D1 /* EditProfileVC.xib in Resources */,
-				069A2BAA284DB54000608356 /* OFF@3x.png in Resources */,
-=======
-				C4BCC9962845636000D04808 /* AttachementTBCell.xib in Resources */,
->>>>>>> newNada:RubikCarePatient.xcodeproj/project.pbxproj
 				C10E8E3725B33B03004FFCBF /* Main.storyboard in Resources */,
 				C466ABB32847FE1300AC1871 /* DeleteAllergiesVC.xib in Resources */,
 				C19961C32635208100B3FB2A /* TopOffersCell.xib in Resources */,
-<<<<<<< HEAD:E4 Patient.xcodeproj/project.pbxproj
-				C15F7EFE25BBFCBD005EB885 /* AddFamilyHistoryVC.xib in Resources */,
-				614F9E3B283C5C610055DF4E /* DeleteDiseasesVC.xib in Resources */,
 				06455D40284F15EC00EC0FB3 /* BookingServiceView.xib in Resources */,
-				C15102E725B7E66600FEEFB2 /* AllAllergiesCell.xib in Resources */,
-				01E44B0826DC214900805033 /* AddressCell.xib in Resources */,
-				61BD6833283B104C00821D51 /* CountinueAddMedicationVC.xib in Resources */,
-				069A2BA7284DB54000608356 /* selectedImageGallery@3x.png in Resources */,
-				C186EB9A2647CBAB00E92B8F /* AppointmentDetailsTwoVC.xib in Resources */,
-				C186E3352647A77100B0890C /* BookingDetailsVC.xib in Resources */,
-				06D84EC32849BCDE00DEF1D1 /* AppointmentVC.xib in Resources */,
-=======
 				C466ABC72848009D00AC1871 /* AddFamilyHistoryVC.xib in Resources */,
 				C466ABA42847FCF800AC1871 /* DeleteDiseasesVC.xib in Resources */,
 				C466ABAE2847FDF800AC1871 /* AllAllergiesCell.xib in Resources */,
@@ -4412,50 +4081,27 @@
 				61BD6833283B104C00821D51 /* CountinueAddMedicationVC.xib in Resources */,
 				C466AC6E28480D6300AC1871 /* AppointmentDetailsTwoVC.xib in Resources */,
 				C466AC2D2848082800AC1871 /* BookingDetailsVC.xib in Resources */,
->>>>>>> newNada:RubikCarePatient.xcodeproj/project.pbxproj
+				0668244D2854852000525151 /* HomeVC.xib in Resources */,
 				C18185322635505E00299993 /* SearchOneCell.xib in Resources */,
 				C17C35EE263FB2A300B8B494 /* CityFilterVC.xib in Resources */,
 				61BD6838283B104D00821D51 /* DoctorsSearchCell.xib in Resources */,
 				C466AC7D28480EE700AC1871 /* HomeInfoTableVC.xib in Resources */,
+				06682447285483F000525151 /* BranchInfoVCViewController.xib in Resources */,
 				C19961B4263519F000B3FB2A /* DoctorServicesCell.xib in Resources */,
-<<<<<<< HEAD:E4 Patient.xcodeproj/project.pbxproj
-				06D84EF22849C0DA00DEF1D1 /* AddAddressVC.xib in Resources */,
-				01F2F93F27E3FE36009466E1 /* MapFilterDoctorsCell.xib in Resources */,
-				06D84ECB2849BD5700DEF1D1 /* HelpSupportCell.xib in Resources */,
-				C10E8ECC25B33CED004FFCBF /* Cairo-ExtraLight.ttf in Resources */,
-				C10E8ED125B33CED004FFCBF /* Cairo-Bold.ttf in Resources */,
-				C1DC8A3C25B6432900B006AC /* AllAdressVC.xib in Resources */,
 				06253B8A28432C8A00CE8731 /* SearchOPServices.xib in Resources */,
-				069A2BA8284DB54000608356 /* focusIcon@3x.png in Resources */,
-				06D84EBF2849BCB500DEF1D1 /* AppointmentCell.xib in Resources */,
-				C18DA7242647B21C00079EE1 /* SuccessBookingVC.xib in Resources */,
-=======
 				C466AC0A2848058F00AC1871 /* MapFilterDoctorsCell.xib in Resources */,
 				C10E8ECC25B33CED004FFCBF /* Cairo-ExtraLight.ttf in Resources */,
+				065CA7B8285455FF0045CB07 /* font_bold.TTF in Resources */,
 				C10E8ED125B33CED004FFCBF /* Cairo-Bold.ttf in Resources */,
-				C4BCC959284557E300D04808 /* LoginVC.xib in Resources */,
 				C1DC8A3C25B6432900B006AC /* AllAdressVC.xib in Resources */,
-				C466AC8C28480F7E00AC1871 /* AllReportsCell.xib in Resources */,
-				C14C630B25DE0262000D50B0 /* OFF@3x.png in Resources */,
 				C466AC32284808C400AC1871 /* SuccessBookingVC.xib in Resources */,
->>>>>>> newNada:RubikCarePatient.xcodeproj/project.pbxproj
 				C10E8E972648A22B00481B45 /* ShiftCell.xib in Resources */,
 				C4D8AF772842B46700D154BE /* MedicineReminderTBCell.xib in Resources */,
 				6160C7E726E63F91006A12BE /* AppointmentHistoryPopupCell.xib in Resources */,
-<<<<<<< HEAD:E4 Patient.xcodeproj/project.pbxproj
-				C10E8ECF25B33CED004FFCBF /* Cairo-Light.ttf in Resources */,
 				063023D72846012E0085FD59 /* FilterCell.xib in Resources */,
-				C186EB952647C9EE00E92B8F /* AppointmetHistoryFillterVC.xib in Resources */,
-				C186EB862647C5D700E92B8F /* AppointmentHistoryPopup.xib in Resources */,
-				C186E3162647821300B0890C /* BranchInfoVCViewController.xib in Resources */,
-=======
-				C4BCC96D28455C3100D04808 /* HomeVC.xib in Resources */,
 				C10E8ECF25B33CED004FFCBF /* Cairo-Light.ttf in Resources */,
 				C466AC6928480CD800AC1871 /* AppointmetHistoryFillterVC.xib in Resources */,
-				C14C630925DE0262000D50B0 /* focusIcon@3x.png in Resources */,
 				C466AC6428480CB200AC1871 /* AppointmentHistoryPopup.xib in Resources */,
-				C466AC8228480F0900AC1871 /* BranchInfoVCViewController.xib in Resources */,
->>>>>>> newNada:RubikCarePatient.xcodeproj/project.pbxproj
 				617E26A82823CEFF009D8ABC /* NotificationsTBCell.xib in Resources */,
 				C466AC5A28480BAD00AC1871 /* AppointmentFillterVC.xib in Resources */,
 				C466ABD12848011A00AC1871 /* AddSurgeryVC.xib in Resources */,
@@ -4464,71 +4110,117 @@
 				C466ABE52848029B00AC1871 /* MedicationCell.xib in Resources */,
 				C10E8E9C2648A2F700481B45 /* hoursCell.xib in Resources */,
 				C1977DBC25FC2271004AD914 /* MapVc.xib in Resources */,
-				C18868AA26A5C36500CAF951 /* font_regular.TTF in Resources */,
 				C466AB902847F94300AC1871 /* DeleteLocationVC.xib in Resources */,
 				C466ABA92847FD3100AC1871 /* AddDieseasesVC.xib in Resources */,
 				61BD6821283B104C00821D51 /* AddMedicationCollectionCell.xib in Resources */,
-				06D84EB32849BC3900DEF1D1 /* SignUpVC.xib in Resources */,
+				06D84EB32849BC3900DEF1D1 /* (null) in Resources */,
 				061964C12842667F006DBFB6 /* EPrescriptionCell.xib in Resources */,
 				061CD32A284AF467006E9FCD /* MapsLocation.xib in Resources */,
 				61BD6823283B104C00821D51 /* addMedicationTableCell.xib in Resources */,
-				06D84EEA2849C02500DEF1D1 /* ProfileCell.xib in Resources */,
+				06D84EEA2849C02500DEF1D1 /* (null) in Resources */,
 				0689CE41284C9430000CD6C9 /* OPProfile.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C10E8E4025B33B07004FFCBF /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C10E8E4B25B33B07004FFCBF /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2A35FB8D332C43C566A8A420 /* [CP] Copy Pods Resources */ = {
+		07C456CCB896A4035C89E169 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-E4 Patient/Pods-E4 Patient-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Copy Pods Resources";
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-E4 Patient/Pods-E4 Patient-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RubikCarePatientTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-E4 Patient/Pods-E4 Patient-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		30CE13FC5AEEC6D43EA05EBB /* [CP] Embed Pods Frameworks */ = {
+		12C6932DB8FBA7DF2ABF997C /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-E4 Patient/Pods-E4 Patient-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-RubikCarePatient-RubikCarePatientUITests/Pods-RubikCarePatient-RubikCarePatientUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RubikCarePatient-RubikCarePatientUITests/Pods-RubikCarePatient-RubikCarePatientUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RubikCarePatient-RubikCarePatientUITests/Pods-RubikCarePatient-RubikCarePatientUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		55EF6F3EFB5875C2C9804BDC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RubikCarePatient-RubikCarePatientUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5E67DEF397AED52EAA63F85D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RubikCarePatient-RubikCarePatientUITests/Pods-RubikCarePatient-RubikCarePatientUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-E4 Patient/Pods-E4 Patient-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-RubikCarePatient-RubikCarePatientUITests/Pods-RubikCarePatient-RubikCarePatientUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-E4 Patient/Pods-E4 Patient-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RubikCarePatient-RubikCarePatientUITests/Pods-RubikCarePatient-RubikCarePatientUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		31AE501D54A5AC32B5A686AA /* [CP] Check Pods Manifest.lock */ = {
+		AF14A9FCFFDF9CBD6387E19D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RubikCarePatient/Pods-RubikCarePatient-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RubikCarePatient/Pods-RubikCarePatient-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RubikCarePatient/Pods-RubikCarePatient-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B712FC8198E43DA31B3A0D4F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -4543,145 +4235,59 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-E4 Patient-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-RubikCarePatient-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9159F6FD5A50CC4575833D90 /* [CP] Embed Pods Frameworks */ = {
+		B7C1D9ADDEADA993FBA026D3 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-E4 Patient-E4 PatientUITests/Pods-E4 Patient-E4 PatientUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-RubikCarePatient/Pods-RubikCarePatient-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-E4 Patient-E4 PatientUITests/Pods-E4 Patient-E4 PatientUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-RubikCarePatient/Pods-RubikCarePatient-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-E4 Patient-E4 PatientUITests/Pods-E4 Patient-E4 PatientUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B9D5552D7623083557D05ABE /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-E4 Patient-E4 PatientUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-<<<<<<< HEAD:E4 Patient.xcodeproj/project.pbxproj
-		D67C7CB953FB1E2A042F65F6 /* [CP] Copy Pods Resources */ = {
-=======
-		71FC27F2AE6E59521D43ADCB /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-E4 Patient/Pods-E4 Patient-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-E4 Patient/Pods-E4 Patient-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-E4 Patient/Pods-E4 Patient-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8DB01B46325A1495B8F50C91 /* [CP] Embed Pods Frameworks */ = {
->>>>>>> newNada:RubikCarePatient.xcodeproj/project.pbxproj
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-E4 Patient-E4 PatientUITests/Pods-E4 Patient-E4 PatientUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-E4 Patient-E4 PatientUITests/Pods-E4 Patient-E4 PatientUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-E4 Patient-E4 PatientUITests/Pods-E4 Patient-E4 PatientUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-<<<<<<< HEAD:E4 Patient.xcodeproj/project.pbxproj
-		D9BB600A46E1DC33D257A85E /* [CP] Check Pods Manifest.lock */ = {
-=======
-		94FBDE674C2A740B724CB7CD /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-E4 Patient-E4 PatientUITests/Pods-E4 Patient-E4 PatientUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-E4 Patient-E4 PatientUITests/Pods-E4 Patient-E4 PatientUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-E4 Patient-E4 PatientUITests/Pods-E4 Patient-E4 PatientUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		FE6DA36342597C50AB4813CF /* [CP] Check Pods Manifest.lock */ = {
->>>>>>> newNada:RubikCarePatient.xcodeproj/project.pbxproj
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-E4 PatientTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RubikCarePatient/Pods-RubikCarePatient-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		065CA7D6285465850045CB07 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				065CA7DD285465850045CB07 /* RubikCarePatientTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		065CA7E3285465A10045CB07 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				065CA7EA285465A10045CB07 /* RubikCarePatientUITests.swift in Sources */,
+				065CA7EC285465A10045CB07 /* RubikCarePatientUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C10E8E2825B33B03004FFCBF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				065CA7BA285456C10045CB07 /* font_bold.TTF in Sources */,
+				065CA7BB285456C10045CB07 /* font_regular.TTF in Sources */,
 				61BD682F283B104C00821D51 /* MedicationCell.swift in Sources */,
 				C4D8AF782842B46700D154BE /* MedicineReminderTBCell.swift in Sources */,
 				C4D8AF7A2842B46E00D154BE /* MedicineReminder.swift in Sources */,
-				C18868AC26A5C39C00CAF951 /* font_bold.TTF in Sources */,
-				C18868AD26A5C39C00CAF951 /* font_regular.TTF in Sources */,
 				616178622806C578005EE4C6 /* LogOutPresenter.swift in Sources */,
 				C10E8F2525B33E39004FFCBF /* LoginVC.swift in Sources */,
 				01CD8C7C26F290E700F6F0DE /* DoctorProfileHeaderCell.swift in Sources */,
@@ -4694,21 +4300,14 @@
 				C14C630725DE0262000D50B0 /* ISMessages.m in Sources */,
 				01E6F07226C65B5F00859BC0 /* MedicalServicesModel.swift in Sources */,
 				C1820EC325B528CD00396AAE /* ProfileCell.swift in Sources */,
-<<<<<<< HEAD:E4 Patient.xcodeproj/project.pbxproj
 				061964AF28425E44006DBFB6 /* MSOtherProvidersReponse.swift in Sources */,
-=======
-				6145755528481E41006225F6 /* SocialPhoneVC.swift in Sources */,
->>>>>>> newNada:RubikCarePatient.xcodeproj/project.pbxproj
 				C1977DBB25FC2271004AD914 /* MapVc.swift in Sources */,
 				C13A457725F42BF0004F2D33 /* MedicalReportsNetwork.swift in Sources */,
 				C186EB8F2647C76C00E92B8F /* MyFavoriteCell.swift in Sources */,
-				619358972841006100B7F7A1 /* ChangeLanguagePresenter.swift in Sources */,
-				C4D8AF662842B27F00D154BE /* AllReportsCell.swift in Sources */,
 				C19EAB6925E7E50F006E6F06 /* SignUpNetwork.swift in Sources */,
 				069A2BBD284DB54100608356 /* VideoInfoView.swift in Sources */,
 				C186CCA22664607100755A41 /* homeNetwork.swift in Sources */,
 				61BD683D283B1AC900821D51 /* MedicalReportCell.swift in Sources */,
-				619358952841006000B7F7A1 /* ChangeLanguageInteractor.swift in Sources */,
 				C1DC8A4625B6451500B006AC /* AllAddressCell.swift in Sources */,
 				C181852826354FE300299993 /* SearchOeVc.swift in Sources */,
 				01F5756326DD6EF60076273F /* ConsultationLogVC.swift in Sources */,
@@ -4731,35 +4330,30 @@
 				C17F99A825FFCEFA0043EF08 /* SpecialityModel.swift in Sources */,
 				C434676E283979AD00378565 /* ContactUsModel.swift in Sources */,
 				C186EB9E2647CBDF00E92B8F /* ConsultationsLogVC.swift in Sources */,
+				065CA7CA285464C70045CB07 /* ChangeLanguageModel.swift in Sources */,
 				C1007AB8263BCADF0060AD2F /* AllSearchVC.swift in Sources */,
 				01E44B0726DC214900805033 /* AddressCell.swift in Sources */,
 				01A4D2E626C72E2F00EF8E4E /* AllSearchViewModel.swift in Sources */,
 				C186E31126477EB500B0890C /* ReviewsTableView.swift in Sources */,
 				C1820E7E25B5126600396AAE /* HomeVC.swift in Sources */,
-				619358932841006000B7F7A1 /* ChangeLanguage.swift in Sources */,
 				C1E3999F25FC4FD30064CAA2 /* AddSurgeryPicker.swift in Sources */,
 				0158FAD8270C3ECF00758D58 /* ProfileSummaryCell.swift in Sources */,
 				C17C35F0263FB2E000B8B494 /* CityFiltterTableView.swift in Sources */,
-<<<<<<< HEAD:E4 Patient.xcodeproj/project.pbxproj
-=======
-				C14C631F25DE0262000D50B0 /* LocationManager.swift in Sources */,
-				619358942841006000B7F7A1 /* ChangeLanguageVC.swift in Sources */,
->>>>>>> newNada:RubikCarePatient.xcodeproj/project.pbxproj
 				C13A457525F4287A004F2D33 /* AddSurgeryNetwork.swift in Sources */,
 				C186EBAC2647D05800E92B8F /* ConsultationsLogDetailsVC.swift in Sources */,
 				C184A1202647E185005453FC /* WriteReviewsVC.swift in Sources */,
 				613C8BC126ECA1BA00FA4A83 /* AppointmentDetailsModel.swift in Sources */,
 				C14C62F225DE0262000D50B0 /* BaseViewControll.swift in Sources */,
 				C4D8AF722842B43800D154BE /* SetReminderVC.swift in Sources */,
+				065CA7CE285464C70045CB07 /* ChangeLanguage.swift in Sources */,
 				01CD8C8C26F2931200F6F0DE /* ClinicCell.swift in Sources */,
 				C18DA7232647B21C00079EE1 /* SuccessBookingVC.swift in Sources */,
 				C13A456125F2E903004F2D33 /* AllEmergencyContactsNetwork.swift in Sources */,
 				61BD6827283B104C00821D51 /* AddMedication+Table+Collection.swift in Sources */,
 				C19EAB7125E9106B006E6F06 /* codeValidation.swift in Sources */,
-				06D84F042849C20800DEF1D1 /* ChangeLanguageRouter.swift in Sources */,
-				06D84F062849C20800DEF1D1 /* ChangeLanguageVC.swift in Sources */,
 				C19EAB6D25E7F674006E6F06 /* GetDataModel.swift in Sources */,
 				C1D077482643836100D4F88A /* DoctorProfileVC.swift in Sources */,
+				06682439285466FD00525151 /* AllReportsCell.swift in Sources */,
 				0108F730276FBEE300BC8058 /* CancelAppointementModel.swift in Sources */,
 				069A2BBE284DB54100608356 /* LocationManager.swift in Sources */,
 				C14C632925DE0262000D50B0 /* HideNavigation.swift in Sources */,
@@ -4797,11 +4391,9 @@
 				06961FC52851B3B10056789B /* OrderListReponse.swift in Sources */,
 				C14C630525DE0262000D50B0 /* AlamofireMultipart.swift in Sources */,
 				C10E8F1125B33CED004FFCBF /* AppStrings.swift in Sources */,
-				619358922841006000B7F7A1 /* ChangeLanguageRouter.swift in Sources */,
 				C1E3999B25FC3A870064CAA2 /* exTableView.swift in Sources */,
 				0106D79A26C522520054E254 /* PrefixTitleTBCell.swift in Sources */,
 				C15F7F0925BBFDFA005EB885 /* SurgeryVC.swift in Sources */,
-				619358962841006000B7F7A1 /* ChangeLanguageModel.swift in Sources */,
 				014904A826C5CDF100BD6D63 /* FilterViewModel.swift in Sources */,
 				C13A456525F2EC11004F2D33 /* getRelationsModel.swift in Sources */,
 				6160C7E226E63E72006A12BE /* AppointmentHistoryModel.swift in Sources */,
@@ -4870,11 +4462,8 @@
 				C4D8AF6F2842B42300D154BE /* AddReminderVC.swift in Sources */,
 				C15102EF25B7EFB500FEEFB2 /* AllAllergiesVC+Table.swift in Sources */,
 				C15F7EFD25BBFCBD005EB885 /* AddFamilyHistoryVC.swift in Sources */,
-<<<<<<< HEAD:E4 Patient.xcodeproj/project.pbxproj
 				063023D12845FD260085FD59 /* FilterAlertPresenter.swift in Sources */,
-=======
 				C4359484284B77B2002958D3 /* WalletTransactionModel.swift in Sources */,
->>>>>>> newNada:RubikCarePatient.xcodeproj/project.pbxproj
 				C1DC8AAC25B679D400B006AC /* AllDiseasesVC.swift in Sources */,
 				061CD328284AF467006E9FCD /* MapsLocationPresenter.swift in Sources */,
 				C186E3342647A77100B0890C /* BookingDetailsVC.swift in Sources */,
@@ -4889,6 +4478,7 @@
 				614F9E3C283C5C610055DF4E /* DeleteDiseasesVC.swift in Sources */,
 				01E44B0226DC207F00805033 /* AvailableCollectionCell.swift in Sources */,
 				C108401C263BCE83004391EA /* AllSearchCell.swift in Sources */,
+				065CA7CB285464C70045CB07 /* ChangeLanguageInteractor.swift in Sources */,
 				C15F7F2E25BC013C005EB885 /* MedicalReportsVC+Table.swift in Sources */,
 				010AB400270C6884008D1C0D /* AttachementTBCell.swift in Sources */,
 				C15F7F1925BBFF0B005EB885 /* AddSurgeryVC.swift in Sources */,
@@ -4904,12 +4494,9 @@
 				069A2BB2284DB54000608356 /* ConstraintsSetup.swift in Sources */,
 				C13A457D25F43BAF004F2D33 /* AddEmergencyPicker.swift in Sources */,
 				C14C62FE25DE0262000D50B0 /* LoadingButton.swift in Sources */,
-<<<<<<< HEAD:E4 Patient.xcodeproj/project.pbxproj
 				06300349284470DC00163C6F /* EPrescriptionModel.swift in Sources */,
 				069A2BB1284DB54000608356 /* TopView.swift in Sources */,
-=======
 				C4359482284B766B002958D3 /* WalletModel.swift in Sources */,
->>>>>>> newNada:RubikCarePatient.xcodeproj/project.pbxproj
 				C1DC8A3B25B6432900B006AC /* AllAdressVC.swift in Sources */,
 				61BD682A283B104C00821D51 /* SearchCell.swift in Sources */,
 				C14C62FC25DE0262000D50B0 /* textField.swift in Sources */,
@@ -4933,11 +4520,7 @@
 				61BD6830283B104C00821D51 /* AllMedicationNetwork.swift in Sources */,
 				C10E8EFB25B33CED004FFCBF /* StyleTextView.swift in Sources */,
 				61BD6832283B104C00821D51 /* DeletePopUp.swift in Sources */,
-<<<<<<< HEAD:E4 Patient.xcodeproj/project.pbxproj
-=======
-				C14C631725DE0262000D50B0 /* BottomContainerView.swift in Sources */,
 				C4A0A874284A03E6006C06A3 /* WalletVC.swift in Sources */,
->>>>>>> newNada:RubikCarePatient.xcodeproj/project.pbxproj
 				C13A457325F426C8004F2D33 /* SurgeryNetwork.swift in Sources */,
 				0630035C2844881200163C6F /* OtherProvidersModels.swift in Sources */,
 				010AB403270C6C81008D1C0D /* ShowAttachementImageVC.swift in Sources */,
@@ -4961,6 +4544,7 @@
 				01CD8C8726F2925600F6F0DE /* AcadimicQualificationCell.swift in Sources */,
 				C186E3152647821300B0890C /* BranchInfoVCViewController.swift in Sources */,
 				06AD61AD284F334700CF26EB /* Double+Extension.swift in Sources */,
+				065CA7CD285464C70045CB07 /* ChangeLanguageRouter.swift in Sources */,
 				069A2BB5284DB54000608356 /* ImageStack.swift in Sources */,
 				C10C0BF525E9C7F5008C201F /* AllDiseasesNetwork.swift in Sources */,
 				06893D5F2850926000864584 /* OrdersListPresenter.swift in Sources */,
@@ -4968,10 +4552,8 @@
 				61A7EF362830D9940027775E /* YBTextPickerDataModel.swift in Sources */,
 				C1820E0B25B41AFD00396AAE /* MoreVC.swift in Sources */,
 				014904AC26C5D17400BD6D63 /* Base.swift in Sources */,
-				06D84F082849C20900DEF1D1 /* ChangeLanguageInteractor.swift in Sources */,
 				C1007AB4263BC8A10060AD2F /* SearchTableViewe.swift in Sources */,
 				063023BE2845DE0C0085FD59 /* UIView+Extensions.swift in Sources */,
-				06D84F052849C20800DEF1D1 /* ChangeLanguage.swift in Sources */,
 				C14C632E25DE0262000D50B0 /* UserDataAction.swift in Sources */,
 				C10E8E3025B33B03004FFCBF /* AppDelegate.swift in Sources */,
 				06961FCA2851D6B70056789B /* OrdersFilterPresenter.swift in Sources */,
@@ -4993,6 +4575,7 @@
 				C1977DB325FA86E8004AD914 /* getBloodGroubModel.swift in Sources */,
 				C1820E1F25B41E3C00396AAE /* More+TableView.swift in Sources */,
 				6160CB8B26E76A0F006A12BE /* MyFavoriteNetwork.swift in Sources */,
+				065CA7CC285464C70045CB07 /* ChangeLanguagePresenter.swift in Sources */,
 				06F84A28284F24F700479C1F /* BookingServiceView.swift in Sources */,
 				01F2F14926E0080700793A60 /* ConsultationLogViewModel.swift in Sources */,
 				C17F99A625FFCCDD0043EF08 /* PermissionPickerView.swift in Sources */,
@@ -5035,12 +4618,8 @@
 				C1A76B4725EADB20008F46DF /* addDieseasNetwork.swift in Sources */,
 				01F2F14B26E00B5200793A60 /* ConsultationLogModel.swift in Sources */,
 				C14C630225DE0262000D50B0 /* UIImagePickerController + Extension.swift in Sources */,
-<<<<<<< HEAD:E4 Patient.xcodeproj/project.pbxproj
 				06A0BED3284BB0F900E6624E /* OPBranchDetailsReponse.swift in Sources */,
-=======
 				C4D8AF6B2842B2B100D154BE /* AllReportsModel.swift in Sources */,
-				C14C631A25DE0262000D50B0 /* ImageGalleryViewDataSource.swift in Sources */,
->>>>>>> newNada:RubikCarePatient.xcodeproj/project.pbxproj
 				322DCF2525EAC29A00142F6A /* EditProfileVCPicker.swift in Sources */,
 				C186EB852647C5D700E92B8F /* AppointmentHistoryPopup.swift in Sources */,
 				C19B32E3264898C7007B919B /* AddAppointmentVC.swift in Sources */,
@@ -5084,10 +4663,9 @@
 				C1820DF225B4196000396AAE /* TabbarManager.swift in Sources */,
 				0689CE3E284C86DA000CD6C9 /* UIFont+Extension.swift in Sources */,
 				06FD674628431790001FD415 /* SearchOPServicesVC.swift in Sources */,
+				065CA7CF285464C70045CB07 /* ChangeLanguageVC.swift in Sources */,
 				61BD6822283B104C00821D51 /* addMedicationTableCell.swift in Sources */,
-				06D84F0A2849C20900DEF1D1 /* ChangeLanguagePresenter.swift in Sources */,
 				6160C7DD26E63D33006A12BE /* AppointmentNetwork.swift in Sources */,
-				06D84F092849C20900DEF1D1 /* ChangeLanguageModel.swift in Sources */,
 				C186EB802647C41500E92B8F /* AppointmentDetailsVC.swift in Sources */,
 				C19961BD26351BB100B3FB2A /* TopDoctorCell.swift in Sources */,
 				61BD6843283B820600821D51 /* DeleteMedicalReportVC.swift in Sources */,
@@ -5132,39 +4710,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C10E8E3E25B33B07004FFCBF /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C10E8E4725B33B07004FFCBF /* E4_PatientTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C10E8E4925B33B07004FFCBF /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C10E8E5225B33B07004FFCBF /* E4_PatientUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		C10E8E4425B33B07004FFCBF /* PBXTargetDependency */ = {
+		065CA7DF285465850045CB07 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C10E8E2B25B33B03004FFCBF /* E4 Patient */;
-			targetProxy = C10E8E4325B33B07004FFCBF /* PBXContainerItemProxy */;
+			target = C10E8E2B25B33B03004FFCBF /* RubikCarePatient */;
+			targetProxy = 065CA7DE285465850045CB07 /* PBXContainerItemProxy */;
 		};
-		C10E8E4F25B33B07004FFCBF /* PBXTargetDependency */ = {
+		065CA7EE285465A10045CB07 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C10E8E2B25B33B03004FFCBF /* E4 Patient */;
-			targetProxy = C10E8E4E25B33B07004FFCBF /* PBXContainerItemProxy */;
+			target = C10E8E2B25B33B03004FFCBF /* RubikCarePatient */;
+			targetProxy = 065CA7ED285465A10045CB07 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-<<<<<<< HEAD:E4 Patient.xcodeproj/project.pbxproj
 		061964D1284279A8006DBFB6 /* OPsDashboard.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -5193,6 +4754,96 @@
 				063023DF284609FC0085FD59 /* en */,
 			);
 			name = FilterAlert.xib;
+			sourceTree = "<group>";
+		};
+		065CA7D0285464D20045CB07 /* ChangeLanguageVC.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				065CA7D1285464D20045CB07 /* Base */,
+				065CA7D3285464FC0045CB07 /* ar */,
+				065CA7D5285465000045CB07 /* en */,
+			);
+			name = ChangeLanguageVC.xib;
+			sourceTree = "<group>";
+		};
+		06682436285466FC00525151 /* AllReportsCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				06682437285466FC00525151 /* Base */,
+				0668243B2854672100525151 /* ar */,
+			);
+			name = AllReportsCell.xib;
+			sourceTree = "<group>";
+		};
+		0668244228547EA100525151 /* BranchImagesCollectionVC.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0668244128547EA100525151 /* Base */,
+				0668244428547EA300525151 /* ar */,
+			);
+			name = BranchImagesCollectionVC.xib;
+			sourceTree = "<group>";
+		};
+		06682449285483F000525151 /* BranchInfoVCViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				06682448285483F000525151 /* Base */,
+				0668244A285483F700525151 /* ar */,
+			);
+			name = BranchInfoVCViewController.xib;
+			sourceTree = "<group>";
+		};
+		0668244B2854852000525151 /* HomeVC.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0668244C2854852000525151 /* Base */,
+			);
+			name = HomeVC.xib;
+			sourceTree = "<group>";
+		};
+		0668244E285485F900525151 /* AppointmentVC.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0668244F285485F900525151 /* Base */,
+				066824512854862300525151 /* ar */,
+			);
+			name = AppointmentVC.xib;
+			sourceTree = "<group>";
+		};
+		06682452285486C200525151 /* SignUpVC.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				06682453285486C200525151 /* Base */,
+				06682455285486D100525151 /* ar */,
+			);
+			name = SignUpVC.xib;
+			sourceTree = "<group>";
+		};
+		06682456285486FB00525151 /* ConfirmAccountVC.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				06682457285486FB00525151 /* Base */,
+				066824592854870D00525151 /* ar */,
+			);
+			name = ConfirmAccountVC.xib;
+			sourceTree = "<group>";
+		};
+		0668245A2854874F00525151 /* ForgetPasswordVC.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0668245B2854874F00525151 /* Base */,
+				0668245D2854876200525151 /* ar */,
+			);
+			name = ForgetPasswordVC.xib;
+			sourceTree = "<group>";
+		};
+		0668245E285487D100525151 /* AddAddressVC.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0668245F285487D100525151 /* Base */,
+				06682461285487DE00525151 /* ar */,
+			);
+			name = AddAddressVC.xib;
 			sourceTree = "<group>";
 		};
 		06893D542850713E00864584 /* BookedMS.xib */ = {
@@ -5249,207 +4900,10 @@
 			children = (
 				06D84EAC2849BBCA00DEF1D1 /* Base */,
 				06D84EB02849BC1600DEF1D1 /* ar */,
-=======
-		6145754F28481E41006225F6 /* SocialPhoneVC.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6145755028481E41006225F6 /* ar */,
-			);
-			name = SocialPhoneVC.strings;
-			sourceTree = "<group>";
-		};
-		6145755228481E41006225F6 /* SocialPhoneVC.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6145755328481E41006225F6 /* Base */,
->>>>>>> newNada:RubikCarePatient.xcodeproj/project.pbxproj
 			);
 			name = SocialPhoneVC.xib;
 			sourceTree = "<group>";
 		};
-<<<<<<< HEAD:E4 Patient.xcodeproj/project.pbxproj
-		06D84EB12849BC3900DEF1D1 /* SignUpVC.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				06D84EB22849BC3900DEF1D1 /* Base */,
-				06D84EB42849BC4500DEF1D1 /* ar */,
-			);
-			name = SignUpVC.xib;
-			sourceTree = "<group>";
-		};
-		06D84EB52849BC6C00DEF1D1 /* ForgetPassVC.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				06D84EB62849BC6C00DEF1D1 /* Base */,
-				06D84EB82849BC7800DEF1D1 /* ar */,
-			);
-			name = ForgetPassVC.xib;
-			sourceTree = "<group>";
-		};
-		06D84EB92849BC8600DEF1D1 /* ConfirmAccountVC.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				06D84EBA2849BC8600DEF1D1 /* Base */,
-				06D84EBC2849BC9100DEF1D1 /* ar */,
-			);
-			name = ConfirmAccountVC.xib;
-			sourceTree = "<group>";
-		};
-		06D84EBD2849BCB500DEF1D1 /* AppointmentCell.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				06D84EBE2849BCB500DEF1D1 /* Base */,
-				06D84EC02849BCC500DEF1D1 /* ar */,
-			);
-			name = AppointmentCell.xib;
-			sourceTree = "<group>";
-		};
-		06D84EC12849BCDD00DEF1D1 /* AppointmentVC.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				06D84EC22849BCDD00DEF1D1 /* Base */,
-				06D84EC42849BCEC00DEF1D1 /* ar */,
-			);
-			name = AppointmentVC.xib;
-			sourceTree = "<group>";
-		};
-		06D84EC52849BD1400DEF1D1 /* HomeVC.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				06D84EC62849BD1500DEF1D1 /* Base */,
-				06D84EC82849BD2400DEF1D1 /* ar */,
-			);
-			name = HomeVC.xib;
-			sourceTree = "<group>";
-		};
-		06D84EC92849BD5700DEF1D1 /* HelpSupportCell.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				06D84ECA2849BD5700DEF1D1 /* Base */,
-			);
-			name = HelpSupportCell.xib;
-			sourceTree = "<group>";
-		};
-		06D84ECC2849BEB800DEF1D1 /* ForgetPasswordVC.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				06D84ECD2849BEB800DEF1D1 /* Base */,
-				06D84ECF2849BECB00DEF1D1 /* ar */,
-			);
-			name = ForgetPasswordVC.xib;
-			sourceTree = "<group>";
-		};
-		06D84ED02849BEDD00DEF1D1 /* PermissionVC.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				06D84ED12849BEDD00DEF1D1 /* Base */,
-				06D84ED32849BF0800DEF1D1 /* ar */,
-			);
-			name = PermissionVC.xib;
-			sourceTree = "<group>";
-		};
-		06D84ED42849BF2000DEF1D1 /* FollowUpCell.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				06D84ED52849BF2100DEF1D1 /* Base */,
-				06D84ED72849BF3700DEF1D1 /* ar */,
-			);
-			name = FollowUpCell.xib;
-			sourceTree = "<group>";
-		};
-		06D84ED82849BF6A00DEF1D1 /* AttachementTBCell.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				06D84ED92849BF6A00DEF1D1 /* Base */,
-				06D84EDB2849BF7900DEF1D1 /* ar */,
-			);
-			name = AttachementTBCell.xib;
-			sourceTree = "<group>";
-		};
-		06D84EDC2849BF9000DEF1D1 /* EditProfileVC.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				06D84EDD2849BF9000DEF1D1 /* Base */,
-				06D84EDF2849BFA200DEF1D1 /* ar */,
-			);
-			name = EditProfileVC.xib;
-			sourceTree = "<group>";
-		};
-		06D84EE02849BFCE00DEF1D1 /* ProfileDataPopUpVC.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				06D84EE12849BFCE00DEF1D1 /* Base */,
-				06D84EE32849BFE100DEF1D1 /* ar */,
-			);
-			name = ProfileDataPopUpVC.xib;
-			sourceTree = "<group>";
-		};
-		06D84EE42849C00000DEF1D1 /* ProfileSummaryCell.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				06D84EE52849C00000DEF1D1 /* Base */,
-				06D84EE72849C01300DEF1D1 /* ar */,
-			);
-			name = ProfileSummaryCell.xib;
-			sourceTree = "<group>";
-		};
-		06D84EE82849C02400DEF1D1 /* ProfileCell.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				06D84EE92849C02400DEF1D1 /* Base */,
-				06D84EEB2849C03600DEF1D1 /* ar */,
-			);
-			name = ProfileCell.xib;
-			sourceTree = "<group>";
-		};
-		06D84EEC2849C04900DEF1D1 /* ProfileVC.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				06D84EED2849C04900DEF1D1 /* Base */,
-				06D84EEF2849C05700DEF1D1 /* ar */,
-			);
-			name = ProfileVC.xib;
-			sourceTree = "<group>";
-		};
-		06D84EF02849C0DA00DEF1D1 /* AddAddressVC.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				06D84EF12849C0DA00DEF1D1 /* Base */,
-				06D84EF32849C0F300DEF1D1 /* ar */,
-			);
-			name = AddAddressVC.xib;
-			sourceTree = "<group>";
-		};
-		06D84EF42849C10600DEF1D1 /* AllAddressCell.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				06D84EF52849C10600DEF1D1 /* Base */,
-				06D84EF72849C11B00DEF1D1 /* ar */,
-			);
-			name = AllAddressCell.xib;
-			sourceTree = "<group>";
-		};
-		06D84EFE2849C20600DEF1D1 /* ChangeLanguageVC.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				06D84EFF2849C20600DEF1D1 /* Base */,
-				06D84F0B2849C22C00DEF1D1 /* ar */,
-			);
-			name = ChangeLanguageVC.xib;
-			sourceTree = "<group>";
-		};
-		06F932CA284881A300DAFB3D /* AULocation.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				06F932C9284881A300DAFB3D /* Base */,
-				06F932CC284881A700DAFB3D /* ar */,
-				06F932CE284881A900DAFB3D /* en */,
-			);
-			name = AULocation.xib;
-			sourceTree = "<group>";
-		};
-=======
->>>>>>> newNada:RubikCarePatient.xcodeproj/project.pbxproj
 		61BD67F22838B16800821D51 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -5935,51 +5389,6 @@
 			name = HomeInfoTableVC.xib;
 			sourceTree = "<group>";
 		};
-		C466AC8428480F0900AC1871 /* BranchInfoVCViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C466AC8328480F0900AC1871 /* Base */,
-				C466AC8628480F0C00AC1871 /* ar */,
-			);
-			name = BranchInfoVCViewController.xib;
-			sourceTree = "<group>";
-		};
-		C466AC8928480F4C00AC1871 /* BranchImagesCollectionVC.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C466AC8828480F4C00AC1871 /* Base */,
-				C466AC8B28480F5100AC1871 /* ar */,
-			);
-			name = BranchImagesCollectionVC.xib;
-			sourceTree = "<group>";
-		};
-		C466AC8E28480F7E00AC1871 /* AllReportsCell.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C466AC8D28480F7E00AC1871 /* Base */,
-				C466AC9028480F8900AC1871 /* ar */,
-			);
-			name = AllReportsCell.xib;
-			sourceTree = "<group>";
-		};
-		C4BCC95B284557E300D04808 /* LoginVC.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C4BCC95A284557E300D04808 /* Base */,
-				C4BCC95D284557E700D04808 /* ar */,
-			);
-			name = LoginVC.xib;
-			sourceTree = "<group>";
-		};
-		C4BCC960284559F200D04808 /* SignUpVC.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C4BCC95F284559F200D04808 /* Base */,
-				C4BCC962284559F500D04808 /* ar */,
-			);
-			name = SignUpVC.xib;
-			sourceTree = "<group>";
-		};
 		C4BCC96528455B0100D04808 /* ForgetPassVC.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -5989,60 +5398,6 @@
 			name = ForgetPassVC.xib;
 			sourceTree = "<group>";
 		};
-		C4BCC96A28455B8E00D04808 /* ConfirmAccountVC.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C4BCC96928455B8E00D04808 /* Base */,
-				C4BCC96C28455B9100D04808 /* ar */,
-			);
-			name = ConfirmAccountVC.xib;
-			sourceTree = "<group>";
-		};
-		C4BCC96F28455C3100D04808 /* HomeVC.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C4BCC96E28455C3100D04808 /* Base */,
-				C4BCC97128455C3400D04808 /* ar */,
-			);
-			name = HomeVC.xib;
-			sourceTree = "<group>";
-		};
-		C4BCC97428455F4100D04808 /* AppointmentVC.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C4BCC97328455F4100D04808 /* Base */,
-				C4BCC97628455F4500D04808 /* ar */,
-			);
-			name = AppointmentVC.xib;
-			sourceTree = "<group>";
-		};
-		C4BCC97928455F8B00D04808 /* AppointmentCell.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C4BCC97828455F8B00D04808 /* Base */,
-				C4BCC97B28455F9400D04808 /* ar */,
-			);
-			name = AppointmentCell.xib;
-			sourceTree = "<group>";
-		};
-		C4BCC97E2845610D00D04808 /* ProfileVC.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C4BCC97F2845611200D04808 /* Base */,
-				C4BCC9812845612C00D04808 /* ar */,
-			);
-			name = ProfileVC.xib;
-			sourceTree = "<group>";
-		};
-		C4BCC9842845616E00D04808 /* ProfileCell.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C4BCC9832845616E00D04808 /* Base */,
-				C4BCC9862845617B00D04808 /* ar */,
-			);
-			name = ProfileCell.xib;
-			sourceTree = "<group>";
-		};
 		C4BCC9892845619100D04808 /* ProfileSummaryCell.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -6050,24 +5405,6 @@
 				C4BCC98B2845619500D04808 /* ar */,
 			);
 			name = ProfileSummaryCell.xib;
-			sourceTree = "<group>";
-		};
-		C4BCC98E284561CA00D04808 /* ProfileDataPopUpVC.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C4BCC98D284561CA00D04808 /* Base */,
-				C4BCC990284561D000D04808 /* ar */,
-			);
-			name = ProfileDataPopUpVC.xib;
-			sourceTree = "<group>";
-		};
-		C4BCC9932845628100D04808 /* EditProfileVC.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C4BCC9922845628100D04808 /* Base */,
-				C4BCC9952845628400D04808 /* ar */,
-			);
-			name = EditProfileVC.xib;
 			sourceTree = "<group>";
 		};
 		C4BCC9982845636000D04808 /* AttachementTBCell.xib */ = {
@@ -6088,24 +5425,6 @@
 			name = FollowUpCell.xib;
 			sourceTree = "<group>";
 		};
-		C4BCC9A22845642E00D04808 /* PermissionVC.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C4BCC9A12845642E00D04808 /* Base */,
-				C4BCC9A42845647E00D04808 /* ar */,
-			);
-			name = PermissionVC.xib;
-			sourceTree = "<group>";
-		};
-		C4BCC9A72845660F00D04808 /* ForgetPasswordVC.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C4BCC9A62845660F00D04808 /* Base */,
-				C4BCC9A92845661400D04808 /* ar */,
-			);
-			name = ForgetPasswordVC.xib;
-			sourceTree = "<group>";
-		};
 		C4BCC9AC284566A600D04808 /* HelpSupportCell.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -6115,36 +5434,87 @@
 			name = HelpSupportCell.xib;
 			sourceTree = "<group>";
 		};
-		C4BCC9B12845672F00D04808 /* ChangeLanguageVC.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C4BCC9B02845672F00D04808 /* Base */,
-				C4BCC9B32845673400D04808 /* ar */,
-			);
-			name = ChangeLanguageVC.xib;
-			sourceTree = "<group>";
-		};
-		C4BCC9B62845680C00D04808 /* AllAddressCell.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C4BCC9B52845680C00D04808 /* Base */,
-				C4BCC9B82845683100D04808 /* ar */,
-			);
-			name = AllAddressCell.xib;
-			sourceTree = "<group>";
-		};
-		C4BCC9BB284568BF00D04808 /* AddAddressVC.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C4BCC9BA284568BF00D04808 /* Base */,
-				C4BCC9BD284568C300D04808 /* ar */,
-			);
-			name = AddAddressVC.xib;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		065CA7E1285465850045CB07 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EDDFBEBDA71AD05447DF9145 /* Pods-RubikCarePatientTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.arabia-it.RubikCarePatientTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/E4clinic.app/E4clinic";
+			};
+			name = Debug;
+		};
+		065CA7E2285465850045CB07 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2F8C6077E019E4FDB7E636D /* Pods-RubikCarePatientTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.arabia-it.RubikCarePatientTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/E4clinic.app/E4clinic";
+			};
+			name = Release;
+		};
+		065CA7F0285465A10045CB07 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75BFD499B90E1B95BDAE5B59 /* Pods-RubikCarePatient-RubikCarePatientUITests.debug.xcconfig */;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.arabia-it.RubikCarePatientUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RubikCarePatient;
+			};
+			name = Debug;
+		};
+		065CA7F1285465A10045CB07 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84C9CD1BDC5DB198E679686D /* Pods-RubikCarePatient-RubikCarePatientUITests.release.xcconfig */;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.arabia-it.RubikCarePatientUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RubikCarePatient;
+			};
+			name = Release;
+		};
 		C10E8E5425B33B07004FFCBF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -6263,15 +5633,15 @@
 		};
 		C10E8E5725B33B07004FFCBF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DCDFA4502490909F8417FD18 /* Pods-E4 Patient.debug.xcconfig */;
+			baseConfigurationReference = AA90069BD72E2F67CBE5DEAE /* Pods-RubikCarePatient.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "E4 Patient/E4 Patient.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/$(PROJECT_NAME)/App/$(PROJECT_NAME).entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = B3B9UDWN3P;
-				INFOPLIST_FILE = "E4 Patient/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/$(PROJECT_NAME)/App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -6280,12 +5650,8 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Ekadsoft.E4Patient2;
 				PRODUCT_NAME = E4clinic;
-<<<<<<< HEAD:E4 Patient.xcodeproj/project.pbxproj
 				SWIFT_INSTALL_OBJC_HEADER = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/E4ClinicPatient-Bridging-Header.h";
-=======
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/nadamostafa/Downloads/E4ClinicPatientIos-master-4-2/ E4ClinicPatient-Bridging-Header.h";
->>>>>>> newNada:RubikCarePatient.xcodeproj/project.pbxproj
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/App/$(PROJECT_NAME)-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "armv7 armv7s arm64 arm64e x86_64";
@@ -6294,15 +5660,15 @@
 		};
 		C10E8E5825B33B07004FFCBF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E5D159A8405D17FCFFB8D125 /* Pods-E4 Patient.release.xcconfig */;
+			baseConfigurationReference = B13C5060F7360577A7DBC38A /* Pods-RubikCarePatient.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "E4 Patient/E4 Patient.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/$(PROJECT_NAME)/App/$(PROJECT_NAME).entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = B3B9UDWN3P;
-				INFOPLIST_FILE = "E4 Patient/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/$(PROJECT_NAME)/App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -6311,110 +5677,36 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Ekadsoft.E4Patient2;
 				PRODUCT_NAME = E4clinic;
-<<<<<<< HEAD:E4 Patient.xcodeproj/project.pbxproj
 				SWIFT_INSTALL_OBJC_HEADER = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/E4ClinicPatient-Bridging-Header.h";
-=======
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/nadamostafa/Downloads/E4ClinicPatientIos-master-4-2/ E4ClinicPatient-Bridging-Header.h";
->>>>>>> newNada:RubikCarePatient.xcodeproj/project.pbxproj
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/App/$(PROJECT_NAME)-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "armv7 armv7s arm64 arm64e x86_64";
 			};
 			name = Release;
 		};
-		C10E8E5A25B33B07004FFCBF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 35F5C954CCA434E2E885B531 /* Pods-E4 PatientTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DLMK69MXL3;
-				INFOPLIST_FILE = "E4 PatientTests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.-Ekadsoft.E4Patient.E4-PatientTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/E4 Patient.app/E4 Patient";
-			};
-			name = Debug;
-		};
-		C10E8E5B25B33B07004FFCBF /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 269CD9ECAEF2E4C802DD1670 /* Pods-E4 PatientTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DLMK69MXL3;
-				INFOPLIST_FILE = "E4 PatientTests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.-Ekadsoft.E4Patient.E4-PatientTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/E4 Patient.app/E4 Patient";
-			};
-			name = Release;
-		};
-		C10E8E5D25B33B07004FFCBF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 854E6FBF66518C5BE144AD2F /* Pods-E4 Patient-E4 PatientUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DLMK69MXL3;
-				INFOPLIST_FILE = "E4 PatientUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.-Ekadsoft.E4Patient.E4-PatientUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "E4 Patient";
-			};
-			name = Debug;
-		};
-		C10E8E5E25B33B07004FFCBF /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 16990E4281003110E60E16D3 /* Pods-E4 Patient-E4 PatientUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DLMK69MXL3;
-				INFOPLIST_FILE = "E4 PatientUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.-Ekadsoft.E4Patient.E4-PatientUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "E4 Patient";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C10E8E2725B33B03004FFCBF /* Build configuration list for PBXProject "E4 Patient" */ = {
+		065CA7E0285465850045CB07 /* Build configuration list for PBXNativeTarget "RubikCarePatientTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				065CA7E1285465850045CB07 /* Debug */,
+				065CA7E2285465850045CB07 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		065CA7EF285465A10045CB07 /* Build configuration list for PBXNativeTarget "RubikCarePatientUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				065CA7F0285465A10045CB07 /* Debug */,
+				065CA7F1285465A10045CB07 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C10E8E2725B33B03004FFCBF /* Build configuration list for PBXProject "RubikCarePatient" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C10E8E5425B33B07004FFCBF /* Debug */,
@@ -6423,29 +5715,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C10E8E5625B33B07004FFCBF /* Build configuration list for PBXNativeTarget "E4 Patient" */ = {
+		C10E8E5625B33B07004FFCBF /* Build configuration list for PBXNativeTarget "RubikCarePatient" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C10E8E5725B33B07004FFCBF /* Debug */,
 				C10E8E5825B33B07004FFCBF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C10E8E5925B33B07004FFCBF /* Build configuration list for PBXNativeTarget "E4 PatientTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C10E8E5A25B33B07004FFCBF /* Debug */,
-				C10E8E5B25B33B07004FFCBF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C10E8E5C25B33B07004FFCBF /* Build configuration list for PBXNativeTarget "E4 PatientUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C10E8E5D25B33B07004FFCBF /* Debug */,
-				C10E8E5E25B33B07004FFCBF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

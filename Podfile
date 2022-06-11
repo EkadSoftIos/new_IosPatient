@@ -1,7 +1,7 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
 
-target 'E4 Patient' do
+target 'RubikCarePatient' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
@@ -45,14 +45,12 @@ target 'E4 Patient' do
 
   pod 'MOLH'
 
-pod 'MOLH'
-
-  target 'E4 PatientTests' do
+  target 'RubikCarePatientTests' do
     inherit! :search_paths
     # Pods for testing
   end
 
-  target 'E4 PatientUITests' do
+  target 'RubikCarePatientUITests' do
     # Pods for testing
   end
 
