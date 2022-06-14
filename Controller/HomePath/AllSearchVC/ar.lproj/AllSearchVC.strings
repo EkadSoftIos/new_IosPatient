@@ -1,0 +1,18 @@
+
+/* Class = "UILabel"; text = "Sorting"; ObjectID = "8e9-jC-1fK"; */
+"8e9-jC-1fK.text" = "Sorting";
+
+/* Class = "UILabel"; text = "No data exist"; ObjectID = "Arj-Qf-Gq4"; */
+"Arj-Qf-Gq4.text" = "No data exist";
+
+/* Class = "UILabel"; text = "Filter"; ObjectID = "CHg-Uh-wr8"; */
+"CHg-Uh-wr8.text" = "Filter";
+
+/* Class = "UISearchBar"; placeholder = "Search by Doctor Name"; ObjectID = "W1M-3y-ZKL"; */
+"W1M-3y-ZKL.placeholder" = "Search by Doctor Name";
+
+/* Class = "UILabel"; text = "Map"; ObjectID = "e9O-Ql-6Sp"; */
+"e9O-Ql-6Sp.text" = "Map";
+
+/* Class = "UILabel"; text = "Choose City"; ObjectID = "uZk-QQ-AkS"; */
+"uZk-QQ-AkS.text" = "Choose City";

@@ -1,0 +1,15 @@
+
+/* Class = "UITextField"; placeholder = "Relation "; ObjectID = "42S-AT-j8q"; */
+"42S-AT-j8q.placeholder" = "Relation ";
+
+/* Class = "UILabel"; text = "Relation "; ObjectID = "K2e-O4-Ada"; */
+"K2e-O4-Ada.text" = "Relation ";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "TKd-DM-BdK"; */
+"TKd-DM-BdK.normalTitle" = "Save";
+
+/* Class = "UITextView"; text = "Notes"; ObjectID = "o8b-E0-hdh"; */
+"o8b-E0-hdh.text" = "Notes";
+
+/* Class = "UILabel"; text = "Notes"; ObjectID = "zPN-xk-vLN"; */
+"zPN-xk-vLN.text" = "Notes";

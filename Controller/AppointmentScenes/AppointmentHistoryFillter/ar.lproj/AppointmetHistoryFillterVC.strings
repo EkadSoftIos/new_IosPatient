@@ -1,0 +1,36 @@
+
+/* Class = "UIButton"; normalTitle = "Search"; ObjectID = "5Tl-Lt-dpK"; */
+"5Tl-Lt-dpK.normalTitle" = "Search";
+
+/* Class = "UILabel"; text = "Clinic Consultation"; ObjectID = "Ay8-Mc-gPQ"; */
+"Ay8-Mc-gPQ.text" = "Clinic Consultation";
+
+/* Class = "UILabel"; text = "Video Call Consultations"; ObjectID = "DqN-mc-qzy"; */
+"DqN-mc-qzy.text" = "Video Call Consultations";
+
+/* Class = "UIButton"; normalTitle = "Reset"; ObjectID = "JBd-MU-ASq"; */
+"JBd-MU-ASq.normalTitle" = "Reset";
+
+/* Class = "UILabel"; text = "Immediate Video Call"; ObjectID = "MyF-9d-gdk"; */
+"MyF-9d-gdk.text" = "Immediate Video Call";
+
+/* Class = "UILabel"; text = "Select Service Type"; ObjectID = "NBY-J0-9WL"; */
+"NBY-J0-9WL.text" = "Select Service Type";
+
+/* Class = "UILabel"; text = "Finished"; ObjectID = "Thl-xB-dgF"; */
+"Thl-xB-dgF.text" = "Finished";
+
+/* Class = "UILabel"; text = "Cancel"; ObjectID = "aV5-vR-oH2"; */
+"aV5-vR-oH2.text" = "Cancel";
+
+/* Class = "UILabel"; text = "No Show"; ObjectID = "blg-n0-7kW"; */
+"blg-n0-7kW.text" = "No Show";
+
+/* Class = "UILabel"; text = "All"; ObjectID = "cgu-fB-kMR"; */
+"cgu-fB-kMR.text" = "All";
+
+/* Class = "UILabel"; text = "Appointment Status"; ObjectID = "hUi-eD-6HW"; */
+"hUi-eD-6HW.text" = "Appointment Status";
+
+/* Class = "UILabel"; text = "Home Visit "; ObjectID = "miJ-yP-YDN"; */
+"miJ-yP-YDN.text" = "Home Visit ";
