@@ -1,0 +1,51 @@
+
+/* Class = "UILabel"; text = "Awaiting Response"; ObjectID = "333-fn-eMK"; */
+"333-fn-eMK.text" = "Awaiting Response";
+
+/* Class = "UILabel"; text = "View Appointment History"; ObjectID = "6p1-mT-MKf"; */
+"6p1-mT-MKf.text" = "View Appointment History";
+
+/* Class = "UILabel"; text = "Clinic Consultation"; ObjectID = "8YP-56-gK0"; */
+"8YP-56-gK0.text" = "Clinic Consultation";
+
+/* Class = "UILabel"; text = "Dr. Asser Ahmed booked on 08 August 2020, Saturday"; ObjectID = "AYQ-NL-sN0"; */
+"AYQ-NL-sN0.text" = "Dr. Asser Ahmed booked on 08 August 2020, Saturday";
+
+/* Class = "UILabel"; text = "43 Nakhla moteey st , triumph square , \ninfront of emam ali mosque Nasr City"; ObjectID = "Buz-RG-yyt"; */
+"Buz-RG-yyt.text" = "43 Nakhla moteey st , triumph square , \ninfront of emam ali mosque Nasr City";
+
+/* Class = "UILabel"; text = "El-Shouroq"; ObjectID = "DRO-6O-bRM"; */
+"DRO-6O-bRM.text" = "El-Shouroq";
+
+/* Class = "UILabel"; text = "El-Shouroq (Nasr City)"; ObjectID = "HPE-ZJ-vAS"; */
+"HPE-ZJ-vAS.text" = "El-Shouroq (Nasr City)";
+
+/* Class = "UILabel"; text = "With Doctor"; ObjectID = "KvN-sM-4xJ"; */
+"KvN-sM-4xJ.text" = "With Doctor";
+
+/* Class = "UILabel"; text = "09:30 PM - 10:00 PM"; ObjectID = "QgP-il-AYf"; */
+"QgP-il-AYf.text" = "09:30 PM - 10:00 PM";
+
+/* Class = "UILabel"; text = "Appointment Reason"; ObjectID = "ShL-Ix-xMa"; */
+"ShL-Ix-xMa.text" = "Appointment Reason";
+
+/* Class = "UIButton"; normalTitle = "View"; ObjectID = "V88-Ru-kWj"; */
+"V88-Ru-kWj.normalTitle" = "View";
+
+/* Class = "UILabel"; text = "Your Appointment "; ObjectID = "WD4-ke-zEo"; */
+"WD4-ke-zEo.text" = "Your Appointment ";
+
+/* Class = "UILabel"; text = "Dr. Ahmed Karim"; ObjectID = "WO7-Zm-O4Z"; */
+"WO7-Zm-O4Z.text" = "Dr. Ahmed Karim";
+
+/* Class = "UILabel"; text = "Total Fees 230 EGP"; ObjectID = "YII-Zy-7PK"; */
+"YII-Zy-7PK.text" = "Total Fees 230 EGP";
+
+/* Class = "UILabel"; text = "Unpaid 230 EGP"; ObjectID = "iQg-Hm-Mdm"; */
+"iQg-Hm-Mdm.text" = "Unpaid 230 EGP";
+
+/* Class = "UILabel"; text = "It look like readable English. Many desktop publishing packages \nand web page editors now use Lorem Ipsum as their default model\ntext, and a search for"; ObjectID = "jhF-09-cXi"; */
+"jhF-09-cXi.text" = "It look like readable English. Many desktop publishing packages \nand web page editors now use Lorem Ipsum as their default model\ntext, and a search for";
+
+/* Class = "UILabel"; text = "Monday  Sep 11,  2020"; ObjectID = "wqD-31-faO"; */
+"wqD-31-faO.text" = "Monday  Sep 11,  2020";
