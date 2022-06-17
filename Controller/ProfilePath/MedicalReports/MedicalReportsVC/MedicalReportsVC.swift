@@ -11,8 +11,11 @@ class MedicalReportsVC: UIViewController {
     @IBOutlet var medicalTable: UITableView!
     @IBOutlet var addView: UIView!
     var model: UserDataModel?
-    
+    var isadded = 0
+
     override func viewWillAppear(_ animated: Bool) {
+        
+        setupTableView()
         emptyTableView()
         UIView.animate(withDuration: 1.5) {
             self.addView.rotate(angle: 180)
@@ -21,13 +24,19 @@ class MedicalReportsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "Medical Reports".localized
-        setupTableView()
 
     }
     func emptyTableView(){
-        if model?.message?.tblPatientMedicalReport?.count == 0{
-            medicalTable.setEmptyView()
+        isadded = UserDefaults.standard.integer(forKey: "AddedMedicalReport")
+        if model?.message?.tblPatientMedicalReport?.count == 0 {
+            if isadded == 1 {
+                medicalTable.restore()
+            }else{
+                medicalTable.setEmptyView()
+            }
+           
         }else{
+            setupTableView()
             medicalTable.restore()
         }
     }

@@ -1,45 +1,45 @@
 
 /* Class = "UILabel"; text = "Login"; ObjectID = "4b8-WF-q5Z"; */
-"4b8-WF-q5Z.text" = "Login";
+"4b8-WF-q5Z.text" = "js[dg hgcomg";
 
 /* Class = "UILabel"; text = "EG"; ObjectID = "8ak-Rg-A30"; */
 "8ak-Rg-A30.text" = "EG";
 
 /* Class = "UIButton"; normalTitle = "Forget Password ?"; ObjectID = "BpZ-8q-mAy"; */
-"BpZ-8q-mAy.normalTitle" = "Forget Password ?";
+"BpZ-8q-mAy.normalTitle" = "نسيت كلمة المرور؟";
 
 /* Class = "UIButton"; normalTitle = "Terms , Condition"; ObjectID = "Dye-WC-aJu"; */
-"Dye-WC-aJu.normalTitle" = "Terms , Condition";
+"Dye-WC-aJu.normalTitle" = "الشروط والشرط";
 
 /* Class = "UILabel"; text = "By signing up you agree to E4 clinic"; ObjectID = "Eym-4a-vIy"; */
-"Eym-4a-vIy.text" = "By signing up you agree to E4 clinic";
+"Eym-4a-vIy.text" = "بالتسجيل فإنك توافق على عيادة E4";
 
 /* Class = "UILabel"; text = "OR\nLogin with"; ObjectID = "HvM-ga-OEu"; */
-"HvM-ga-OEu.text" = "OR\nLogin with";
+"HvM-ga-OEu.text" = "أو \ n تسجيل الدخول باستخدام";
 
 /* Class = "UITextField"; placeholder = "+20 000 00000 000"; ObjectID = "Ioc-gA-aNi"; */
 "Ioc-gA-aNi.placeholder" = "+20 000 00000 000";
 
 /* Class = "UILabel"; text = "Don't have an account ?"; ObjectID = "Ti9-cZ-viM"; */
-"Ti9-cZ-viM.text" = "Don't have an account ?";
+"Ti9-cZ-viM.text" = "ليس لديك حساب؟";
 
 /* Class = "UITextField"; placeholder = "Password"; ObjectID = "Y8a-qT-H1m"; */
-"Y8a-qT-H1m.placeholder" = "Password";
+"Y8a-qT-H1m.placeholder" = "كلمة المرو";
 
 /* Class = "UILabel"; text = "Mobile"; ObjectID = "cLp-9R-Aq3"; */
-"cLp-9R-Aq3.text" = "Mobile";
+"cLp-9R-Aq3.text" = "التليفون المحمول";
 
 /* Class = "UIButton"; normalTitle = "Sign Up"; ObjectID = "da7-Vh-44P"; */
-"da7-Vh-44P.normalTitle" = "Sign Up";
+"da7-Vh-44P.normalTitle" = "تسجيل الدخول";
 
 /* Class = "UILabel"; text = "Welcome Back"; ObjectID = "dxE-l3-sUW"; */
-"dxE-l3-sUW.text" = "Welcome Back";
+"dxE-l3-sUW.text" = "مرحبًا بعودتك";
 
 /* Class = "UILabel"; text = "Password"; ObjectID = "eH7-Lp-NTI"; */
-"eH7-Lp-NTI.text" = "Password";
+"eH7-Lp-NTI.text" = "كلمة المرو";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "yS9-1b-WKn"; */
-"yS9-1b-WKn.normalTitle" = "Button";
+"yS9-1b-WKn.normalTitle" = " ";
 
 /* Class = "UIButton"; normalTitle = "Login"; ObjectID = "zpn-jv-XK0"; */
-"zpn-jv-XK0.normalTitle" = "Login";
+"zpn-jv-XK0.normalTitle" = "تسجيل الدخول";

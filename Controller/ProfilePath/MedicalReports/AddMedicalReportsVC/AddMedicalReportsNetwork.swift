@@ -42,7 +42,7 @@ extension AddMedicalReportsVC{
                     }else{
                         self.showMessage(title: "", sub: "Medical report  has been edited successfully".localized, type: .success, layout: .messageView)
                     }
-                   
+                    UserDefaults.standard.set(1, forKey: "AddedMedicalReport")
                     self.successLogin()
                     Vibration.success.vibrate()
                     print("params: \(parameters)")

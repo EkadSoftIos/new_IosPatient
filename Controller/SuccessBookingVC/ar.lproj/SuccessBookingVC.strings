@@ -1,6 +1,6 @@
 
 /* Class = "UILabel"; text = "Wait to confirm doctor for Appointment\nto continue pay booking fees"; ObjectID = "TCt-lF-hLP"; */
-"TCt-lF-hLP.text" = "Wait to confirm doctor for Appointment\nto continue pay booking fees";
+"TCt-lF-hLP.text" = "انتظر لتأكيد موعد الطبيب \ n لمواصلة دفع رسوم الحجز";
 
 /* Class = "UILabel"; text = "Your Booking was Successfully"; ObjectID = "vWx-u3-g6c"; */
-"vWx-u3-g6c.text" = "Your Booking was Successfully";
+"vWx-u3-g6c.text" = "تم حجزك بنجاح";

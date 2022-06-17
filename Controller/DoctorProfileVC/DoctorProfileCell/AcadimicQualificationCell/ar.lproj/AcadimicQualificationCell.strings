@@ -3,13 +3,13 @@
 "FMC-M2-5ha.text" = "gfhfg";
 
 /* Class = "UIButton"; normalTitle = "more"; ObjectID = "T9A-3M-rmE"; */
-"T9A-3M-rmE.normalTitle" = "more";
+"T9A-3M-rmE.normalTitle" = "المزيد";
 
 /* Class = "UILabel"; text = "dfhf"; ObjectID = "Yqg-DC-KfI"; */
 "Yqg-DC-KfI.text" = "dfhf";
 
 /* Class = "UILabel"; text = "Academic Qualification"; ObjectID = "izg-Pa-R65"; */
-"izg-Pa-R65.text" = "Academic Qualification";
+"izg-Pa-R65.text" = "المؤهل العلمي";
 
 /* Class = "UILabel"; text = "ghgfh"; ObjectID = "mmk-oO-arp"; */
 "mmk-oO-arp.text" = "ghgfh";

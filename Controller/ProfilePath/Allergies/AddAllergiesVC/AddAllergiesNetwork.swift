@@ -59,7 +59,7 @@ extension AddAllergiesVC{
                     }else{
                         self.showMessage(title: "", sub: "Allergies have been edited successfully".localized, type: .success, layout: .messageView)
                     }
-                    
+                    UserDefaults.standard.set(true, forKey: "AddedAllergies")
                     self.successLogin()
                     Vibration.success.vibrate()
                 }else{

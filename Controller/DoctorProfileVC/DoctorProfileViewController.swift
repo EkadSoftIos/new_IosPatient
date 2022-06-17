@@ -408,6 +408,7 @@ extension DoctorProfileViewController: UITableViewDelegate, UITableViewDataSourc
                 print(model)
                 if model.successtate == 200{
                     print("success home")
+                    self.doctorProfileViewModel.getDoctordata(id: self.doctorId ?? 0)
                     self.doctorProfileTB.reloadData()
                 }else{
 

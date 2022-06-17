@@ -33,8 +33,9 @@ extension MoreVC: UITableViewDelegate, UITableViewDataSource {
             vc.userData = self.userData
             vc.hidesBottomBarWhenPushed = true
             show(vc, sender: nil)
-//        case 1:
-            //My wallet
+        case 1:
+            let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "WalletVC")
+            navigationController?.pushViewController(vc, animated: true)
         case 2:
             let vc = MyFavoriteVC()
             vc.hidesBottomBarWhenPushed = true

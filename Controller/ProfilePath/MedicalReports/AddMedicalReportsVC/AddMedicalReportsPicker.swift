@@ -70,4 +70,52 @@ extension AddMedicalReportsVC {
                                                   completion: self.ProfileImageNetwork)
         
     }
+//    func uploadFiles(_ urlPath: [URL]){
+//
+//    if let url = URL(string: "Common/FormDataUpload"){
+//    var request = URLRequest(url: url)
+//    let boundary:String = "Boundary-\(UUID().uuidString)"
+//
+//    request.httpMethod = "POST"
+//    request.timeoutInterval = 10
+//    request.allHTTPHeaderFields = ["Content-Type": "multipart/form-data; boundary=----\(boundary)"]
+//
+//        for path in urlPath{
+//            do{
+//                var data2: Data = Data()
+//                var dataa: Data = Data()
+//                data2 = try NSData.init(contentsOf: URL.init(fileURLWithPath: path.absoluteString, isDirectory: true)) as Data
+//                dataa.append("------\(boundary)\r\n")
+//                //Here you have to change the Content-Type
+//                dataa.append("Content-Disposition: form-data; name=\"file\"; filename=\"YourFileName\"\r\n")
+//                dataa.append("Content-Type: application/YourType\r\n\r\n")
+//                dataa.append(data2)
+//                dataa.append("\r\n")
+//                dataa.append("------\(boundary)--")
+//
+//                request.httpBody = dataa
+//            }catch let err{
+//                //Your errors
+//                showMessage(message: err.localizedDescription, messageKind: .error)
+//            }
+//            DispatchQueue.global(qos: DispatchQoS.QoSClass.userInitiated).sync {
+//                let session = URLSession.shared
+//                let task = session.dataTask(with: request, completionHandler: { (dataS, aResponse, error) in
+//                    if let erros = error{
+//                        //Your errors
+//                        print(erros)
+//                    }else{
+//                        do{
+//                            let responseObj = try JSONSerialization.jsonObject(with: dataS!, options: JSONSerialization.ReadingOptions(rawValue:0)) as! [String:Any]
+//                            print(responseObj)
+//
+//                        }catch let err{
+//                            print(err)
+//                        }
+//                    }
+//                }).resume()
+//            }
+//        }
+//    }
+//    }
 }

@@ -8,10 +8,40 @@
 import UIKit
 import SKCountryPicker
 import TransitionButton
-class LoginVC: UIViewController ,UITextFieldDelegate{
+import FacebookCore
+import FacebookLogin
+import GoogleSignIn
+
+
+class LoginVC: UIViewController ,UITextFieldDelegate,GIDSignInDelegate{
     
     var agree = false
-    
+    var socialName = ""
+    var socialUserName = ""
+    var socialEmail = ""
+    var socialPassword = ""
+    var social_id = ""
+    var socialImage = ""
+    var socialPhone = ""
+    var isSocial = false
+    var privacyData = ""
+    var supportData = ""
+    var faqData = ""
+    var webPagesData: [WebPagesData]? {
+        didSet {
+            if webPagesData?.count ?? 0 > 0 {
+                for data in webPagesData! {
+                    if data.id == 2 {
+                        privacyData = data.content ?? ""
+                    } else if data.id == 3 {
+                        supportData = data.content ?? ""
+                    } else if data.id == 5 {
+                        faqData = data.content ?? ""
+                    }
+                }
+            }
+        }
+    }
     @IBOutlet weak var agreeBtn: UIButton!
     @IBOutlet var mainView: UIView!
     @IBOutlet var countryImage: UIImageView!
@@ -31,7 +61,7 @@ class LoginVC: UIViewController ,UITextFieldDelegate{
     @IBOutlet weak var signupBTN: UIButton!
     @IBOutlet weak var bySigningLBL: UILabel!
     @IBOutlet weak var termsBTN: UIButton!
-    var digitalCountryCode = "+2"
+    var digitalCountryCode = "+20"
     override func viewDidLoad() {
         super.viewDidLoad()
         mainView.ShadowView(view: mainView, radius: 20, opacity: 0.4, shadowRadius: 4, color: UIColor.black.cgColor)
@@ -50,7 +80,7 @@ class LoginVC: UIViewController ,UITextFieldDelegate{
         loginBtn.setTitle("Login".localized, for: .normal)
         orLoginLBL.text = "Or Login With".localized
         dontHaveAccountLBL.text = "Don't have an account ?".localized
-        signupBTN.setTitle("SignUp", for: .normal)
+        signupBTN.setTitle("SignUp".localized, for: .normal)
         bySigningLBL.text = "By signing up you agree to E4 clinic".localized
         termsBTN.setTitle("Terms, Condition".localized, for: .normal)
     }
@@ -65,6 +95,9 @@ class LoginVC: UIViewController ,UITextFieldDelegate{
         
     }
     override func viewWillAppear(_ animated: Bool) {
+        GIDSignIn.sharedInstance()?.delegate = self
+        GIDSignIn.sharedInstance()?.presentingViewController = self
+        getPolicyData()
         setLocalization()
         setAlignement()
         self.phoneTxt.placeholder = "+2 000 00000 000"
@@ -114,4 +147,125 @@ class LoginVC: UIViewController ,UITextFieldDelegate{
         }
         
     }
+    @IBAction func google_Click(_ sender: Any) {
+        GIDSignIn.sharedInstance().signIn()
+    }
+
+    @IBAction func didTappedFaceBook(_ sender: Any) {
+        loginWithFacebook()
+    }
+    
+    @IBAction func didTappedGoogle(_ sender: Any) {
+        
+    }
+    @IBAction func didTappedPrivacyPolicy(_ sender: Any) {
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "PrivacyPolicyVC") as! PrivacyPolicyVC
+        vc.data = privacyData
+        self.present(vc, animated: true, completion: nil)
+//        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func loginWithFacebook() {
+      let manager = LoginManager()
+        manager.logIn(permissions: [.publicProfile, .email], viewController: self) { (result) in
+        print(result)
+          switch result {
+          case .cancelled:
+              print("User cancelled login process")
+              break
+          case .failed(let error) :
+              print("Login failed with error = \(error.localizedDescription)")
+              break
+          case .success(_, _, let accessToken):
+              
+              print("access token == \(accessToken)")
+              self.getUserProfile()
+          }
+      }
+    }
+    func getUserProfile() {
+        let connection = GraphRequestConnection()
+        connection.add(GraphRequest(graphPath: "/me", parameters: ["fields" : "id,name,about,birthday, email, picture.width(480).height(480)"], httpMethod: .get)) { (connection, response, error) in
+            if let error = error {
+                print("Error getting user info = \(error.localizedDescription)")
+            } else {
+                guard let userInfo = response as? Dictionary<String,Any> else {
+                    return
+                }
+                print(userInfo)
+                var userId: String?
+                var username: String?
+                var email: String?
+                var imgUrl: String?
+                var phone: String?
+                
+                if let userID = userInfo["id"] as? String {
+                    print("Logged in user facebook id == \(userID)")
+                    userId = userID
+                    self.social_id = userID
+                }
+
+                if let userName = userInfo["name"] as? String {
+                    print("Logged in user facebook name == \(userName)")
+                    self.socialUserName = userName
+                }
+                if let userEmail = userInfo["email"] as? String {
+                    print("Logged in user facebook name == \(userEmail)")
+                    self.socialEmail = userEmail
+                }
+                if let userPhone = userInfo["phone"] as? String {
+                    print("Logged in user facebook name == \(userPhone)")
+                    self.socialPhone = userPhone
+                }
+                if let imageURL = ((userInfo["picture"] as? [String: Any])?["data"] as? [String: Any])?["url"] as? String {
+                    self.socialImage = imageURL
+                }
+                self.socialName = "Facebook"
+                // signIn
+                self.checkEmailApi()
+//                self.loginViewModel.login(provider_id: userId ?? "0", provider_name: "facebook", name: username ?? "", email: email ?? "", profile_image: imgUrl ?? "")
+            }
+        }
+        connection.start()
+    }
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+      if let error = error {
+        print("We have error sign user", error.localizedDescription)
+      } else {
+        if let gmailUser = user {
+        socialEmail = gmailUser.profile.email ?? ""
+            socialUserName = gmailUser.profile.name ?? ""
+            social_id = gmailUser.userID!
+            
+          print("You are signed in with id", gmailUser.userID!)
+          print("You are signed in with idToken", gmailUser.authentication.idToken!)
+          print("You are signed in with email", gmailUser.profile.email!)
+          print("You are signed in with name", gmailUser.profile.name!)
+            let imageUrl = signIn.currentUser.profile.imageURL(withDimension: 150)
+            let image = (imageUrl?.absoluteString)!
+            
+            isSocial = true
+            socialName = "Google"
+            checkEmailApi()
+//            presenter.login(phone: gmailUser.profile.email ?? "" , password: passTXT.text! , socialId: gmailUser.userID ?? "", SocialName: "google")
+        }
+      }
+    }
+    func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!,
+              withError error: Error!) {
+      // Perform any operations when the user disconnects from app here.
+      // ...
+    }
+    func signIn(signIn: GIDSignIn!,
+        dismissViewController viewController: UIViewController!) {
+        self.dismiss(animated: true, completion: nil)
+    
+          print("Sign in dismissed")
+    }
+
+
+    
+
+
 }

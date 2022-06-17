@@ -6,9 +6,10 @@
 //
 
 import UIKit
+import iOSDropDown
 
 protocol FilterReportProtocol: AnyObject {
-    func returnFilterData(fromDate: String, toDate: String, appointementStatus: [Int], serviceFk: Int?, branchFK: Int?)
+    func returnFilterData(fromDate: String, toDate: String, appointementStatus: [Int], serviceFk: Int?, branchFK: Int?, paymentStatus: Int?)
 }
 
 class FilterReportsVC: UIViewController {
@@ -35,8 +36,8 @@ class FilterReportsVC: UIViewController {
     @IBOutlet weak var separatorServiceTypeView: UIView!
     @IBOutlet weak var serviceTypeImg: UIImageView!
     @IBOutlet weak var serviceTypeStack: UIStackView!
-    @IBOutlet weak var branchTF: UITextField!
-    @IBOutlet weak var serviceTypeTF: UITextField!
+    @IBOutlet weak var branchTF: DropDown!
+    @IBOutlet weak var serviceTypeTF: DropDown!
     @IBOutlet weak var seviceTypeViewConst: NSLayoutConstraint!
     @IBOutlet weak var paymentStatusViewConst: NSLayoutConstraint!
     @IBOutlet weak var dateViewConst: NSLayoutConstraint!
@@ -54,6 +55,7 @@ class FilterReportsVC: UIViewController {
     var fromDate: String?
     var toDate: String?
     var appointementStatus: [Int] = []
+    var paymentStatus: Int?
     var serviceFk: Int?
     var branchFK: Int?
     
@@ -64,12 +66,62 @@ class FilterReportsVC: UIViewController {
         formatter.dateFormat = "yyyy/MM/dd"
         return formatter
     }()
+    var serviceListNameArr: [String] = [] {
+        didSet {
+            serviceTypeTF.optionArray = serviceListNameArr
+        }
+    }
+    var serviceListIdArr: [Int] = []
+    
+    var branchListNameArr: [String] = [] {
+        didSet {
+            branchTF.optionArray = branchListNameArr
+        }
+    }
+    var branchListIdArr: [Int] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupUI()
+        getReportServiceList()
+        getBranchList()
         
+    }
+    
+    func getReportServiceList() {
+        NetworkClient.performRequest(_type: ReportServiceListModel.self, router: .reportServiceList) {[weak self] data in
+            guard let self = self else {return}
+            switch data {
+            case.success(let data):
+                if (data.message?.count ?? 0) > 0 {
+                    for service in data.message! {
+                        self.serviceListNameArr.append(service.nameLocalized ?? "")
+                        self.serviceListIdArr.append(service.id ?? 0)
+                    }
+                }
+            case.failure(let err):
+                print(err)
+            }
+        }
+    }
+    
+    func getBranchList() {
+        NetworkClient.performRequest(_type: ReportServiceListModel.self, router: .reportBranchList) {[weak self] data in
+            guard let self = self else {return}
+            switch data {
+            case.success(let data):
+                if (data.message?.count ?? 0) > 0 {
+                    for service in data.message! {
+                        self.branchListNameArr.append(service.nameLocalized ?? "")
+                        self.branchListIdArr.append(service.id ?? 0)
+                    }
+                }
+            case.failure(let err):
+                print(err)
+            }
+        }
+
     }
     
     @IBAction func didTappedServiceType() {
@@ -104,8 +156,20 @@ class FilterReportsVC: UIViewController {
     }
     
     @IBAction
-    func didTappedPaymentBtn(_ sender: Any) {
+    func didTappedPaymentBtn(_ sender: UIButton) {
+        let tags = [11, 12, 13, 14, 15]
+        let btnTag = sender.tag
+        paymentStatus = btnTag
         
+        for tag in tags {
+            if let btn = view.viewWithTag(tag) as? UIButton {
+                if paymentStatus == tag {
+                    btn.setImage(UIImage(named: "ic_radiobtn_active"), for: .normal)
+                } else {
+                    btn.setImage(UIImage(named: "ic_radiobtn_unactive"), for: .normal)
+                }
+            }
+        }
     }
     
     @IBAction
@@ -209,14 +273,21 @@ class FilterReportsVC: UIViewController {
         if appointementStatus.contains(7) {
             appointementStatus = [1, 2, 3, 4, 5, 6]
         }
-        delegate?.returnFilterData(fromDate: fromDate ?? "", toDate: toDate ?? "", appointementStatus: appointementStatus, serviceFk: serviceFk, branchFK: branchFK)
+        if paymentStatus != nil {
+            if paymentStatus == 15 {
+                paymentStatus = nil
+            } else {
+                paymentStatus = paymentStatus! - 10
+            }
+        }
+        delegate?.returnFilterData(fromDate: fromDate ?? "", toDate: toDate ?? "", appointementStatus: appointementStatus, serviceFk: serviceFk, branchFK: branchFK, paymentStatus: paymentStatus ?? 0)
         navigationController?.popViewController(animated: true)
     }
     
     @IBAction
     func didTappedReset(_ sender: Any) {
         resetData()
-        delegate?.returnFilterData(fromDate: fromDate ?? "", toDate: toDate ?? "", appointementStatus: appointementStatus, serviceFk: serviceFk, branchFK: branchFK)
+        delegate?.returnFilterData(fromDate: fromDate ?? "", toDate: toDate ?? "", appointementStatus: appointementStatus, serviceFk: serviceFk, branchFK: branchFK, paymentStatus: paymentStatus ?? 0)
         navigationController?.popViewController(animated: true)
     }
     
@@ -224,6 +295,7 @@ class FilterReportsVC: UIViewController {
         fromDate = ""
         toDate = ""
         appointementStatus = []
+        paymentStatus = nil
         serviceFk = nil
         branchFK = nil
     }
@@ -236,6 +308,15 @@ extension FilterReportsVC {
         
         fromTF.isEnabled = false
         toTF.isEnabled = false
+        
+        serviceTypeTF.didSelect{(selectedText , index ,id) in
+            self.serviceFk = self.serviceListIdArr[index]
+        }
+        
+        branchTF.didSelect{(selectedText , index ,id) in
+            self.branchFK = self.branchListIdArr[index]
+        }
+
         
         let datePickerView = UIDatePicker()
         datePickerView.datePickerMode = .date

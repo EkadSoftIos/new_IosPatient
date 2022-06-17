@@ -1,9 +1,9 @@
 
 /* Class = "UIButton"; normalTitle = "Change"; ObjectID = "GYZ-qY-74A"; */
-"GYZ-qY-74A.normalTitle" = "Change";
+"GYZ-qY-74A.normalTitle" = "تغيير";
 
 /* Class = "UILabel"; text = "Land mark ...."; ObjectID = "PuI-uF-IIq"; */
-"PuI-uF-IIq.text" = "Land mark ....";
+"PuI-uF-IIq.text" = "معلم معروف ....";
 
 /* Class = "UILabel"; text = "Exist Address"; ObjectID = "c8z-aK-MnT"; */
-"c8z-aK-MnT.text" = "Exist Address";
+"c8z-aK-MnT.text" = "عنوان موجود";

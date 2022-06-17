@@ -34,7 +34,7 @@ extension SurgeryVC: UITableViewDelegate, UITableViewDataSource {
         let mutableAttributedString = NSMutableAttributedString.init(string: cell.detailsTwoLbl.text ?? "")
         mutableAttributedString.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor (named: "Blue")! , range: range)
         cell.detailsTwoLbl.attributedText = mutableAttributedString
-        cell.detailsThreLbl.text = "\("TratedByDr.")\(": ")\(data?.doctorName ?? "")"
+        cell.detailsThreLbl.text = "\("TratedByDr.".localized)\(": ")\(data?.doctorName ?? "")"
         let range2 = (cell.detailsThreLbl.text! as NSString).range(of: "TratedByDr.".localized)
         let mutableAttributedString2 = NSMutableAttributedString.init(string: cell.detailsThreLbl.text ?? "")
         mutableAttributedString2.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor (named: "Blue")!, range: range2)

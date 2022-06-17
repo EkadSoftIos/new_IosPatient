@@ -1,39 +1,39 @@
 
 /* Class = "UIButton"; normalTitle = "Search"; ObjectID = "2ac-T0-79A"; */
-"2ac-T0-79A.normalTitle" = "Search";
+"2ac-T0-79A.normalTitle" = "بحث";
 
 /* Class = "UILabel"; text = "To"; ObjectID = "El2-Bc-YKA"; */
-"El2-Bc-YKA.text" = "To";
+"El2-Bc-YKA.text" = "الي";
 
 /* Class = "UILabel"; text = "select service type"; ObjectID = "MAG-bJ-ae1"; */
-"MAG-bJ-ae1.text" = "select service type";
+"MAG-bJ-ae1.text" = "حدد نوع الخدمة";
 
 /* Class = "UILabel"; text = "Date"; ObjectID = "SEP-e5-Vtv"; */
-"SEP-e5-Vtv.text" = "Date";
+"SEP-e5-Vtv.text" = "التاريخ";
 
 /* Class = "UIButton"; normalTitle = "From"; ObjectID = "Vs0-e2-sdM"; */
-"Vs0-e2-sdM.normalTitle" = "From";
+"Vs0-e2-sdM.normalTitle" = "من";
 
 /* Class = "UIButton"; normalTitle = "Last 30 days"; ObjectID = "aGP-0u-1T0"; */
 "aGP-0u-1T0.normalTitle" = "Last 30 days";
 
 /* Class = "UIButton"; normalTitle = "Video call consultations"; ObjectID = "bUi-J6-rdH"; */
-"bUi-J6-rdH.normalTitle" = "Video call consultations";
+"bUi-J6-rdH.normalTitle" = "استشارات مكالمات الفيديو";
 
 /* Class = "UIButton"; normalTitle = "Last 7 days"; ObjectID = "c5v-ut-t86"; */
-"c5v-ut-t86.normalTitle" = "Last 7 days";
+"c5v-ut-t86.normalTitle" = "اخر 7 ايام";
 
 /* Class = "UIButton"; normalTitle = "Home visit"; ObjectID = "cOT-jU-xpO"; */
-"cOT-jU-xpO.normalTitle" = "Home visit";
+"cOT-jU-xpO.normalTitle" = "زيارة منزلية";
 
 /* Class = "UIButton"; normalTitle = "Reset"; ObjectID = "cdw-hS-eMu"; */
-"cdw-hS-eMu.normalTitle" = "Reset";
+"cdw-hS-eMu.normalTitle" = "إعادة ضبط";
 
 /* Class = "UIButton"; normalTitle = "All"; ObjectID = "iVC-Wj-J96"; */
-"iVC-Wj-J96.normalTitle" = "All";
+"iVC-Wj-J96.normalTitle" = "الجميع";
 
 /* Class = "UIButton"; normalTitle = "Immediate video call"; ObjectID = "jUU-tk-0Uj"; */
-"jUU-tk-0Uj.normalTitle" = "Immediate video call";
+"jUU-tk-0Uj.normalTitle" = "مكالمة فيديو فورية";
 
 /* Class = "UIButton"; normalTitle = "Clinic Consultation"; ObjectID = "z9b-2a-DfN"; */
-"z9b-2a-DfN.normalTitle" = "Clinic Consultation";
+"z9b-2a-DfN.normalTitle" = "استشارة عيادة";

@@ -48,6 +48,7 @@ class DeleteMedicalReportVC: UIViewController {
             switch result{
             case .success(let model):
                 if model.successtate == 200{
+                    UserDefaults.standard.set(0, forKey: "AddedMedicalReport")
                     self.Delegete?.Data(isAdded: true)
                     self.dismiss(animated: true, completion: nil)
                     self.showMessage(sub: "Medical report has been removed from list".localized)

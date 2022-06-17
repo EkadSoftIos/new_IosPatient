@@ -20,6 +20,7 @@ class ReviewsCell: UITableViewCell {
     @IBOutlet weak var doctorNameLBL: UILabel!
     @IBOutlet weak var doctorReplyDateLBL: UILabel!
     @IBOutlet weak var doctorReplyLBL: UILabel!
+    @IBOutlet weak var subViewHeightConstrait: NSLayoutConstraint!
     override func awakeFromNib() {
         super.awakeFromNib()
         

@@ -164,7 +164,14 @@ extension String {
         }
     }
     
-    
+    func changeDateFormatString(dateFormatFrom: String,dateFormatTo: String) -> String{
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = dateFormatFrom
+        let date = dateFormatter.date(from: self)
+        dateFormatter.dateFormat = dateFormatTo
+        let dateString = dateFormatter.string(from: date ?? Date())
+        return dateString
+    }
 
     
     func removeHtmlTags() -> String{
@@ -388,4 +395,32 @@ extension Hashable {
         let activity = UIActivityViewController(activityItems: [self], applicationActivities: nil)
         UIApplication.topViewController?.present(activity, animated: true, completion: nil)
     }
+}
+
+import UIKit
+
+extension Date {
+    
+    func convertDateToString(dateFormat: String) -> String{
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = dateFormat
+        let date = dateFormatter.string(from: self)
+        return date
+    }
+    
+    
+    
+    func currentDateWithCustomFormatter(dateFormat: String) -> Date{
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = dateFormat
+        let stringDate = dateFormatter.string(from: self)
+        let date = dateFormatter.date(from: stringDate)
+        return date ?? self
+    }
+    
+    static func - (lhs: Date, rhs: Date) -> TimeInterval {
+            return lhs.timeIntervalSinceReferenceDate - rhs.timeIntervalSinceReferenceDate
+        }
+    
+   
 }

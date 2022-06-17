@@ -11,6 +11,7 @@ import Cosmos
 class ReviewsVC: UIViewController, BaseViewProtocol {
     
     var doctorId: Int?
+    var selectedArray = [Int]()
     var doctorReviewData: DoctorReviewsData? {
         didSet {
             let totalRate = doctorReviewData?.totalDoctorRate ?? 0.0
@@ -35,7 +36,6 @@ class ReviewsVC: UIViewController, BaseViewProtocol {
     @IBOutlet weak var assistantRatingView: CosmosView!
     @IBOutlet weak var doctorRatingView: CosmosView!
     @IBOutlet weak var totalRatingView: CosmosView!
-    
     @IBOutlet weak var clinicRating: UILabel!
     @IBOutlet weak var assistantRating: UILabel!
     @IBOutlet weak var doctorRating: UILabel!

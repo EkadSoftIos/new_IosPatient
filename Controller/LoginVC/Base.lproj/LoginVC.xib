@@ -18,7 +18,7 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginVC" customModule="E4clinic" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginVC" customModule="RubikCarePatient" customModuleProvider="target">
             <connections>
                 <outlet property="agreeBtn" destination="TsG-ig-w0n" id="Y8H-iC-cfg"/>
                 <outlet property="bySigningLBL" destination="Eym-4a-vIy" id="klU-b7-cXJ"/>
@@ -313,6 +313,9 @@ Login with</string>
                                             </constraints>
                                             <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="14"/>
                                             <state key="normal" title="Terms , Condition"/>
+                                            <connections>
+                                                <action selector="didTappedPrivacyPolicy:" destination="-1" eventType="touchUpInside" id="ncc-fu-0NK"/>
+                                            </connections>
                                         </button>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LJA-9K-tuw">
                                             <rect key="frame" x="4.5" y="34" width="151" height="1"/>

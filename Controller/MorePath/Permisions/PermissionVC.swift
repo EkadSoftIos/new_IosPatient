@@ -82,7 +82,9 @@ class PermissionVC: UIViewController, UITextFieldDelegate {
     var isHealthPicker: Bool = false
     override func viewDidLoad() {
         super.viewDidLoad()
-        Ids = Model?.message?.tblPatientProfilePermition?[0].doctorIDS ?? ""
+        if Model?.message?.tblPatientProfilePermition?.count != 0 {
+            Ids = Model?.message?.tblPatientProfilePermition?[0].doctorIDS ?? ""
+        }
         callApigetEntity()
         callApispeciality()
         self.navigationItem.title = "Profile Permission".localized
@@ -231,9 +233,9 @@ class PermissionVC: UIViewController, UITextFieldDelegate {
         
     }
     func setUpText(){
-        if healthCareTxt.text!.prefix(1) == "," || healthCareTxt.text == "" || healthCareTxt.text!.isEmpty{
-            healthCareTxt.text!.remove(at: healthCareTxt.text!.startIndex)
-        }
+//        if healthCareTxt.text!.prefix(1) == "," || healthCareTxt.text == "" || healthCareTxt.text!.isEmpty{
+//            healthCareTxt.text!.remove(at: healthCareTxt.text!.startIndex)
+//        }
       
     }
     func radioButton(selected: UIImageView, unselected: UIImageView){

@@ -80,30 +80,33 @@ class AddSocialHistoryVC: UIViewController {
         createDoneBtn(for: maritalStatusTxt)
     }
     func  setData(){
-        if  model?.message?.tblPatientSocialHistory?[0] != nil{
-            let data = model?.message?.tblPatientSocialHistory?[0]
-            jobTxt.text = data?.job
-            educationTxt.text = data?.education
-            maritalStatusTxt.text = "\(data?.maritalStatusFk ?? 0)"
-            maritalID = data?.maritalStatusFk
-            childrenTxt.text = "\(data?.childerenNum ?? 0)"
-            generalDietTxt.text = data?.generalDite
-            exercideTxt.text = data?.exercise
-            if  data?.isSmoke == true {
-                isSmoking = true
-                changeImage(selectedImage: yesSmokingImage, unSelectedImage: noSmokingImage)
-            }else{
-                isSmoking = false
-                changeImage(selectedImage: noSmokingImage, unSelectedImage: yesSmokingImage)
-            }
-            if data?.alcoholConsumption == true {
-                isAlcohol = true
-                changeImage(selectedImage: yesAlcoholImage, unSelectedImage: noAlcoholImage)
-            }else{
-                isAlcohol = false
-                changeImage(selectedImage: noAlcoholImage, unSelectedImage: yesAlcoholImage)
+        if model?.message?.tblPatientSocialHistory?.count != 0 {
+            if  model?.message?.tblPatientSocialHistory?[0] != nil{
+                let data = model?.message?.tblPatientSocialHistory?[0]
+                jobTxt.text = data?.job
+                educationTxt.text = data?.education
+                maritalStatusTxt.text = "\(data?.maritalStatusFk ?? 0)"
+                maritalID = data?.maritalStatusFk
+                childrenTxt.text = "\(data?.childerenNum ?? 0)"
+                generalDietTxt.text = data?.generalDite
+                exercideTxt.text = data?.exercise
+                if  data?.isSmoke == true {
+                    isSmoking = true
+                    changeImage(selectedImage: yesSmokingImage, unSelectedImage: noSmokingImage)
+                }else{
+                    isSmoking = false
+                    changeImage(selectedImage: noSmokingImage, unSelectedImage: yesSmokingImage)
+                }
+                if data?.alcoholConsumption == true {
+                    isAlcohol = true
+                    changeImage(selectedImage: yesAlcoholImage, unSelectedImage: noAlcoholImage)
+                }else{
+                    isAlcohol = false
+                    changeImage(selectedImage: noAlcoholImage, unSelectedImage: yesAlcoholImage)
+                }
             }
         }
+
     }
     
     @IBAction func yesSmoking_CLick(_ sender: Any) {

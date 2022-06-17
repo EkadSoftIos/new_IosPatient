@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+struct ChargeWalletModel: Codable {
+    let successtate: Int?
+    let errormessage, message: String?
+}

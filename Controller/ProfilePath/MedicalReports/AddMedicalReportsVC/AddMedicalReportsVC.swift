@@ -9,6 +9,9 @@ import UIKit
 import TransitionButton
 //import ImagePicker
 import MobileCoreServices
+import MobileCoreServices
+
+
 class AddMedicalReportsVC: UIViewController, UITextViewDelegate,UISearchBarDelegate {
     @IBOutlet var mainView: UIView!
     @IBOutlet var nameTxt: UITextField!
@@ -209,24 +212,81 @@ protocol AddMedicalReport {
     func Data(isAdded: Bool)
 }
 extension AddMedicalReportsVC : UIDocumentMenuDelegate,UIDocumentPickerDelegate,UIDocumentInteractionControllerDelegate {
-    public func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentAt url: URL) {
-        let myURL = url as URL
-        selectedPDF.removeAll()
-        let uploadPdf = UploadDataURL(data: myURL, name: "attach[]")
-        selectedPDF.append(uploadPdf)
+    
+    
+    public func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL]) {
+        guard let myURL = urls.first else {
+            return
+        }
         print("import result : \(myURL)")
     }
-    
-    
+          
+
     public func documentMenu(_ documentMenu:UIDocumentMenuViewController, didPickDocumentPicker documentPicker: UIDocumentPickerViewController) {
         documentPicker.delegate = self
         present(documentPicker, animated: true, completion: nil)
     }
-    
-    
+
+
     func documentPickerWasCancelled(_ controller: UIDocumentPickerViewController) {
+        print("view was cancelled")
         dismiss(animated: true, completion: nil)
     }
+    
+    
+    
+    
+    
+    
+    
+//    public func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentAt url: URL) {
+//        let myURL = url as URL
+//        selectedPDF.removeAll()
+//        let uploadPdf = UploadDataURL(data: myURL, name: "attach[]")
+//        selectedPDF.append(uploadPdf)
+//        print("import result : \(myURL)")
+//    }
+//
+////
+//    public func documentMenu(_ documentMenu:UIDocumentMenuViewController, didPickDocumentPicker documentPicker: UIDocumentPickerViewController) {
+//        documentPicker.delegate = self
+//        present(documentPicker, animated: true, completion: nil)
+//    }
+////
+////
+////    func documentPickerWasCancelled(_ controller: UIDocumentPickerViewController) {
+////        dismiss(animated: true, completion: nil)
+////    }
+//    func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL]) {
+//            guard controller.documentPickerMode == .import, let url = urls.first, url.startAccessingSecurityScopedResource() else { return }
+//            defer {
+//                DispatchQueue.main.async {
+//                    url.stopAccessingSecurityScopedResource()
+//                }
+//            }
+//
+//            //Need to make a new image with the jpeg data to be able to close the security resources!
+//            guard let image = UIImage(contentsOfFile: url.path), let imageCopy = UIImage(data: image.jpegData(compressionQuality: 1.0)!) else { return }
+//        self.resultImage.image = image
+//        uploadImage()
+    
+////            self.didSelect(image: imageCopy)
+////            handleTapGestures()
+//            controller.dismiss(animated: true)
+//
+//        }
+//
+//        func documentPickerWasCancelled(_ controller: UIDocumentPickerViewController) {
+//            controller.dismiss(animated: true)
+//        }
+        
+//        func didSelect(image: UIImage?) {
+//            if let image  = image {
+//                if let cell = self.tableView.cellForRow(at: indexPath ?? IndexPath()) as? AddEditLicenseCell {
+//                    cell.uploadImage.image = image
+//                }
+//            }
+//    }
 }
 extension AddMedicalReportsVC: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -296,6 +356,12 @@ extension AddMedicalReportsVC: UIImagePickerControllerDelegate, UINavigationCont
             
         })
         actionSheet.addAction(photoLibraryAction)
+         let pdfAction = UIAlertAction(title: "Open File".localized, style: .default, handler: { (action:UIAlertAction) in
+             self.chooseDocument()
+             
+         })
+         actionSheet.addAction(pdfAction)
+
         actionSheet.addAction(UIAlertAction(title: "Cancel".localized, style: .cancel, handler: nil))
         self.present(actionSheet, animated: true, completion: nil)
     }
@@ -304,5 +370,26 @@ extension AddMedicalReportsVC: UIImagePickerControllerDelegate, UINavigationCont
         picker.dismiss(animated: true, completion: nil)
     }
     
+    private func chooseDocument(){
+        
+        
+//        let types = UTType.types(tag: "json",
+//                                     tagClass: UTTagClass.filenameExtension,
+//                                     conformingTo: nil)
+//            let documentPickerController = UIDocumentPickerViewController(
+//                    forOpeningContentTypes: types)
+//            documentPickerController.delegate = self
+//            self.present(documentPickerController, animated: true, completion: nil)
+        
+        
+        
+        
+        let types = [kUTTypePDF,kUTTypeUTF8PlainText]
+        let documentPicker = UIDocumentPickerViewController(documentTypes: types as [String], in: .import)
+        //Call Delegate
+        documentPicker.allowsMultipleSelection = false
+        documentPicker.delegate = self
+        self.present(documentPicker, animated: true)
+    }
     
 }

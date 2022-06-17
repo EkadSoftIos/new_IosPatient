@@ -57,7 +57,7 @@ class ConfirmAccountVC: UIViewController {
                 "email": email ?? "",
                 "code":"\(code1Txt.text!)\(code2Txt.text!)\(code3Txt.text!)\(code4Txt.text!)"
             ]
-            NetworkClient.performRequest(_type: SuccessModel.self, router: .codeVerfication(params: parameters)) {[weak self] (result) in
+            NetworkClient.performRequest(_type: SuccessWithoutMsgModel.self, router: .codeVerfication(params: parameters)) {[weak self] (result) in
                 guard let self = self else {return}
                 self.confirmAccountButton.stopAnimation()
                 

@@ -42,3 +42,13 @@ enum ContentType: String {
     case acceptEncoding = "gzip;q=1.0, compress;q=0.5"
     case apiRapidKey = "324ca5747dmsha5c600be9060e86p15312fjsnfd3116fb3ff1"
 }
+
+
+struct ConstantsStrings {
+    static var dateFormatYMDTHMS = "yyyy-MM-dd'T'HH:mm:ss"
+    static var dateFormatHMS = "HH:mm:ss"
+    static let dateFormatDayNameDMY = "EEEE, d MMM, yyyy"
+    static let dateFormatStartEndTime = "H.hh:MM:ss"
+    static let dateFormatStartTime = "hh:mm a"
+    static let dateFormatYYY_MM_DD = "yyyy-MM-dd"
+}

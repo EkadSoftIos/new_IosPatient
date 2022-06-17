@@ -47,6 +47,7 @@ class DeleteAllergiesVC: UIViewController {
             switch result{
             case .success(let model):
                 if model.successtate == 200{
+                    UserDefaults.standard.set(false, forKey: "AddedAllergies")
                     self.Delegete?.Data(isAdded: true)
                     self.dismiss(animated: true, completion: nil)
                     self.showMessage(sub: "Allergy has been removed from list".localized)

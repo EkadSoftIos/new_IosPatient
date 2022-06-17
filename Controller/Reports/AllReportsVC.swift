@@ -26,6 +26,7 @@ class AllReportsVC: UIViewController, UITextFieldDelegate, FilterReportProtocol 
     var appointementStatus: [Int] = []
     var serviceFk: Int?
     var branchFK: Int?
+    var paymentStatus: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,6 +66,10 @@ class AllReportsVC: UIViewController, UITextFieldDelegate, FilterReportProtocol 
             para["BusinessProviderBranckFk"] = branchFK ?? 0
         }
         
+        if paymentStatus != nil {
+            para["PaymentStatus"] = paymentStatus ?? 0
+        }
+        
         showUniversalLoadingView(true)
         NetworkClient.performRequest(_type: AllReportsModel.self, router: .bookingReport(params: para)) {[weak self] result in
             showUniversalLoadingView(false)
@@ -86,12 +91,13 @@ class AllReportsVC: UIViewController, UITextFieldDelegate, FilterReportProtocol 
         }
     }
     
-    func returnFilterData(fromDate: String, toDate: String, appointementStatus: [Int], serviceFk: Int?, branchFK: Int?) {
+    func returnFilterData(fromDate: String, toDate: String, appointementStatus: [Int], serviceFk: Int?, branchFK: Int?, paymentStatus: Int?) {
         self.fromDate = fromDate
         self.toDate = toDate
         self.appointementStatus = appointementStatus
         self.serviceFk = serviceFk
         self.branchFK = branchFK
+        self.paymentStatus = paymentStatus
         
         getAllReports()
     }

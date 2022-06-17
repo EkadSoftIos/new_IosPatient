@@ -6,7 +6,7 @@
 "NPe-zW-c1H.text" = "43 Nakhla moteey st , Nasr City";
 
 /* Class = "UILabel"; text = "Booking"; ObjectID = "Q7C-Ud-s1G"; */
-"Q7C-Ud-s1G.text" = "Booking";
+"Q7C-Ud-s1G.text" = "حجز";
 
 /* Class = "UILabel"; text = "4.6"; ObjectID = "dFk-PM-dFa"; */
 "dFk-PM-dFa.text" = "4.6";
@@ -18,7 +18,7 @@
 "ije-rB-3SO.text" = "Dentist Specialized in Pediatric Dentistry...";
 
 /* Class = "UILabel"; text = "Doctor Can Do"; ObjectID = "qKZ-37-ZcR"; */
-"qKZ-37-ZcR.text" = "Doctor Can Do";
+"qKZ-37-ZcR.text" = "يمكن للطبيب القيام به";
 
 /* Class = "UILabel"; text = "Consultant in Pediatric Dentistry..."; ObjectID = "wLl-Qo-LFN"; */
 "wLl-Qo-LFN.text" = "Consultant in Pediatric Dentistry...";

@@ -3,7 +3,7 @@
 "Mup-j9-Fvh.text" = "09:30 PM - 10:00 PM";
 
 /* Class = "UILabel"; text = "Clinic consultations"; ObjectID = "ZCb-ST-OjD"; */
-"ZCb-ST-OjD.text" = "Clinic consultations";
+"ZCb-ST-OjD.text" = "استشارات العيادة";
 
 /* Class = "UILabel"; text = "Nasr City"; ObjectID = "cxg-ti-GjW"; */
 "cxg-ti-GjW.text" = "Nasr City";
@@ -15,7 +15,7 @@
 "jX3-5K-pKP.text" = "Dr - Ahmed";
 
 /* Class = "UILabel"; text = "Wallet"; ObjectID = "lzu-5N-QFf"; */
-"lzu-5N-QFf.text" = "Wallet";
+"lzu-5N-QFf.text" = "محفظة";
 
 /* Class = "UILabel"; text = "Finished"; ObjectID = "w6e-Nd-SjE"; */
-"w6e-Nd-SjE.text" = "Finished";
+"w6e-Nd-SjE.text" = "تم الانتهاء من";

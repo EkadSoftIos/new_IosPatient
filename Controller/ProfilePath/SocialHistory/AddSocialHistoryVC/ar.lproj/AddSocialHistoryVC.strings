@@ -1,57 +1,57 @@
 
 /* Class = "UITextField"; placeholder = "General Diet"; ObjectID = "0Jh-4d-yIW"; */
-"0Jh-4d-yIW.placeholder" = "General Diet";
+"0Jh-4d-yIW.placeholder" = "النظام الغذائي العام";
 
 /* Class = "UIButton"; normalTitle = "Save"; ObjectID = "Apf-El-2aw"; */
-"Apf-El-2aw.normalTitle" = "Save";
+"Apf-El-2aw.normalTitle" = "حفظ";
 
 /* Class = "UILabel"; text = "Yes"; ObjectID = "BVy-yT-uFc"; */
-"BVy-yT-uFc.text" = "Yes";
+"BVy-yT-uFc.text" = "موافق";
 
 /* Class = "UILabel"; text = "No"; ObjectID = "DLB-Rh-LvA"; */
-"DLB-Rh-LvA.text" = "No";
+"DLB-Rh-LvA.text" = "غير موافق";
 
 /* Class = "UITextField"; placeholder = "Children"; ObjectID = "HkZ-ep-vzk"; */
-"HkZ-ep-vzk.placeholder" = "Children";
+"HkZ-ep-vzk.placeholder" = "أطفال";
 
 /* Class = "UITextField"; placeholder = "Job"; ObjectID = "HpL-rV-VPc"; */
-"HpL-rV-VPc.placeholder" = "Job";
+"HpL-rV-VPc.placeholder" = "مهنة";
 
 /* Class = "UITextField"; placeholder = "Marital Status"; ObjectID = "I4U-q0-gif"; */
-"I4U-q0-gif.placeholder" = "Marital Status";
+"I4U-q0-gif.placeholder" = "الحالة الإجتماعية";
 
 /* Class = "UILabel"; text = "Yes"; ObjectID = "JaO-RN-Y4D"; */
-"JaO-RN-Y4D.text" = "Yes";
+"JaO-RN-Y4D.text" = "موافق";
 
 /* Class = "UILabel"; text = "No"; ObjectID = "W67-Rt-aIf"; */
-"W67-Rt-aIf.text" = "No";
+"W67-Rt-aIf.text" = "غير موافق";
 
 /* Class = "UILabel"; text = "Smoking"; ObjectID = "Xeq-O9-tke"; */
-"Xeq-O9-tke.text" = "Smoking";
+"Xeq-O9-tke.text" = "التدخين";
 
 /* Class = "UILabel"; text = "Marital Status"; ObjectID = "bGd-1H-DGQ"; */
-"bGd-1H-DGQ.text" = "Marital Status";
+"bGd-1H-DGQ.text" = "الحالة الإجتماعية";
 
 /* Class = "UILabel"; text = "Education"; ObjectID = "cc9-br-pgr"; */
-"cc9-br-pgr.text" = "Education";
+"cc9-br-pgr.text" = "التعليم";
 
 /* Class = "UITextField"; placeholder = "Education"; ObjectID = "k3N-Sw-Xji"; */
-"k3N-Sw-Xji.placeholder" = "Education";
+"k3N-Sw-Xji.placeholder" = "التعليم";
 
 /* Class = "UILabel"; text = "Job"; ObjectID = "qu9-eu-YrK"; */
-"qu9-eu-YrK.text" = "Job";
+"qu9-eu-YrK.text" = "مهنة";
 
 /* Class = "UILabel"; text = "Alcohol Consumption"; ObjectID = "uMj-Cb-teY"; */
-"uMj-Cb-teY.text" = "Alcohol Consumption";
+"uMj-Cb-teY.text" = "استهلاك الكحول";
 
 /* Class = "UILabel"; text = "Children"; ObjectID = "vOk-yw-Y2L"; */
-"vOk-yw-Y2L.text" = "Children";
+"vOk-yw-Y2L.text" = "اطفال";
 
 /* Class = "UILabel"; text = "Exercise"; ObjectID = "vwD-ew-2Xs"; */
-"vwD-ew-2Xs.text" = "Exercise";
+"vwD-ew-2Xs.text" = "تمارين";
 
 /* Class = "UILabel"; text = "General Diet"; ObjectID = "x6P-DX-gmM"; */
-"x6P-DX-gmM.text" = "General Diet";
+"x6P-DX-gmM.text" = "النظام الغذائي العام";
 
 /* Class = "UITextField"; placeholder = "Exercise"; ObjectID = "xAF-3a-vdd"; */
-"xAF-3a-vdd.placeholder" = "Exercise";
+"xAF-3a-vdd.placeholder" = "ممارسه الرياضه";

@@ -15,10 +15,10 @@
 "PXV-Sm-76S.text" = "Sponsored";
 
 /* Class = "UILabel"; text = "Doctor Can Do"; ObjectID = "SEx-Eo-F4A"; */
-"SEx-Eo-F4A.text" = "Doctor Can Do";
+"SEx-Eo-F4A.text" = "يمكن للطبيب القيام به";
 
 /* Class = "UILabel"; text = "Booking"; ObjectID = "cAn-fl-0fo"; */
-"cAn-fl-0fo.text" = "Booking";
+"cAn-fl-0fo.text" = "الحجز";
 
 /* Class = "UILabel"; text = "Doctor Ahmed Karim"; ObjectID = "jzH-XY-yPU"; */
 "jzH-XY-yPU.text" = "Doctor Ahmed Karim";

@@ -1,6 +1,6 @@
 
 /* Class = "UIButton"; normalTitle = "View"; ObjectID = "2pL-tB-yf5"; */
-"2pL-tB-yf5.normalTitle" = "View";
+"2pL-tB-yf5.normalTitle" = "اظهار";
 
 /* Class = "UILabel"; text = "Dr. Ahmed Karim"; ObjectID = "45q-4Q-hfy"; */
 "45q-4Q-hfy.text" = "Dr. Ahmed Karim";
@@ -9,40 +9,40 @@
 "6he-vV-Y1h.text" = "Dr. Ahmed Karim";
 
 /* Class = "UILabel"; text = "Clinic Consultation"; ObjectID = "6pw-Iq-RHT"; */
-"6pw-Iq-RHT.text" = "Clinic Consultation";
+"6pw-Iq-RHT.text" = "استشارة عيادة";
 
 /* Class = "UILabel"; text = "09:30 PM - 10:00 PM"; ObjectID = "Anu-hT-N9V"; */
 "Anu-hT-N9V.text" = "09:30 PM - 10:00 PM";
 
 /* Class = "UILabel"; text = "Name"; ObjectID = "CAt-Qk-Hxj"; */
-"CAt-Qk-Hxj.text" = "Name";
+"CAt-Qk-Hxj.text" = "الاسم";
 
 /* Class = "UILabel"; text = "Dr. Asser Ahmed booked on 08 August 2020, Saturday"; ObjectID = "EiN-lv-a2L"; */
 "EiN-lv-a2L.text" = "Dr. Asser Ahmed booked on 08 August 2020, Saturday";
 
 /* Class = "UILabel"; text = "With Doctor"; ObjectID = "Ke3-LI-XdW"; */
-"Ke3-LI-XdW.text" = "With Doctor";
+"Ke3-LI-XdW.text" = "مع دكتور";
 
 /* Class = "UILabel"; text = "Paid 230 EGP"; ObjectID = "LUo-ao-2lv"; */
 "LUo-ao-2lv.text" = "Paid 230 EGP";
 
 /* Class = "UILabel"; text = "You are Welcome "; ObjectID = "NxW-CW-5TI"; */
-"NxW-CW-5TI.text" = "You are Welcome ";
+"NxW-CW-5TI.text" = "مرحباً بك ";
 
 /* Class = "UILabel"; text = "Today, 06:00 PM"; ObjectID = "OsH-b2-45G"; */
 "OsH-b2-45G.text" = "Today, 06:00 PM";
 
 /* Class = "UILabel"; text = "View History Appointment"; ObjectID = "RFe-Bt-ebk"; */
-"RFe-Bt-ebk.text" = "View History Appointment";
+"RFe-Bt-ebk.text" = "عرض التاريخ الموعد";
 
 /* Class = "UILabel"; text = "Assistant Rating"; ObjectID = "TXL-GD-RX3"; */
-"TXL-GD-RX3.text" = "Assistant Rating";
+"TXL-GD-RX3.text" = "تقييم المساعد";
 
 /* Class = "UILabel"; text = "It look like readable English. Many desktop publishing packages \nand web page editors now use Lorem Ipsum as their default model\ntext, and a search for"; ObjectID = "Tog-n1-zaW"; */
 "Tog-n1-zaW.text" = "It look like readable English. Many desktop publishing packages \nand web page editors now use Lorem Ipsum as their default model\ntext, and a search for";
 
 /* Class = "UILabel"; text = "Finished"; ObjectID = "Uj3-vy-YaK"; */
-"Uj3-vy-YaK.text" = "Finished";
+"Uj3-vy-YaK.text" = "تم الانتهاء من";
 
 /* Class = "UILabel"; text = "3.1"; ObjectID = "WVq-JD-29J"; */
 "WVq-JD-29J.text" = "3.1";
@@ -51,7 +51,7 @@
 "XiG-yS-mlL.text" = "Today, 06:00 PM";
 
 /* Class = "UILabel"; text = "Appointment Reason"; ObjectID = "aZM-E9-bvs"; */
-"aZM-E9-bvs.text" = "Appointment Reason";
+"aZM-E9-bvs.text" = "سبب التعيين";
 
 /* Class = "UILabel"; text = "Monday  Sep 11,  2020"; ObjectID = "as7-da-psh"; */
 "as7-da-psh.text" = "Monday  Sep 11,  2020";
@@ -60,13 +60,13 @@
 "bql-9e-f2I.text" = "3.1";
 
 /* Class = "UILabel"; text = "Clinic Rating"; ObjectID = "cS0-kC-Wcf"; */
-"cS0-kC-Wcf.text" = "Clinic Rating";
+"cS0-kC-Wcf.text" = "تقييم العيادة";
 
 /* Class = "UILabel"; text = "Doctor Rating"; ObjectID = "dkK-5B-R7Q"; */
-"dkK-5B-R7Q.text" = "Doctor Rating";
+"dkK-5B-R7Q.text" = "تقييم الطبيب";
 
 /* Class = "UILabel"; text = "Thank you doctor\nHe is a good listener and he helped me to figure out \nhow to treat some diseases"; ObjectID = "eR7-yQ-SYe"; */
-"eR7-yQ-SYe.text" = "Thank you doctor\nHe is a good listener and he helped me to figure out \nhow to treat some diseases";
+"eR7-yQ-SYe.text" = "شكرا لك دكتور \ n إنه مستمع جيد وقد ساعدني في اكتشاف \ n كيفية علاج بعض الأمراض";
 
 /* Class = "UILabel"; text = "El-Shouroq (Nasr City)"; ObjectID = "jwV-GL-3lq"; */
 "jwV-GL-3lq.text" = "El-Shouroq (Nasr City)";
@@ -81,4 +81,4 @@
 "xvD-xC-eQB.text" = "Total Fees 230 EGP";
 
 /* Class = "UILabel"; text = "Your Appointment "; ObjectID = "y9Y-5p-uX5"; */
-"y9Y-5p-uX5.text" = "Your Appointment ";
+"y9Y-5p-uX5.text" = "موعدك ";

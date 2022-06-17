@@ -24,19 +24,19 @@
 "jP7-D1-RO5.text" = "El-Shouroq (Nasr City)";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "oY3-bJ-D1d"; */
-"oY3-bJ-D1d.normalTitle" = "Button";
+"oY3-bJ-D1d.normalTitle" = " ";
 
 /* Class = "UILabel"; text = "Choose Your Consultations"; ObjectID = "slB-Le-Qfe"; */
-"slB-Le-Qfe.text" = "Choose Your Consultations";
+"slB-Le-Qfe.text" = "اختر استشاراتك";
 
 /* Class = "UITextView"; text = "Appointment Reason"; ObjectID = "tqq-3W-vbO"; */
-"tqq-3W-vbO.text" = "Appointment Reason";
+"tqq-3W-vbO.text" = "سبب التعيين";
 
 /* Class = "UILabel"; text = "Appointment Reason"; ObjectID = "xoh-Kj-XB0"; */
-"xoh-Kj-XB0.text" = "Appointment Reason";
+"xoh-Kj-XB0.text" = "سبب التعيينn";
 
 /* Class = "UILabel"; text = "Consultations Fees"; ObjectID = "xqI-bU-78P"; */
-"xqI-bU-78P.text" = "Consultations Fees";
+"xqI-bU-78P.text" = "رسوم الاستشارات";
 
 /* Class = "UITextField"; placeholder = "servise"; ObjectID = "zQy-da-de8"; */
-"zQy-da-de8.placeholder" = "servise";
+"zQy-da-de8.placeholder" = "خدمة";

@@ -1,12 +1,12 @@
 
 /* Class = "UILabel"; text = "Awaiting Response"; ObjectID = "333-fn-eMK"; */
-"333-fn-eMK.text" = "Awaiting Response";
+"333-fn-eMK.text" = "في انتظار الرد";
 
 /* Class = "UILabel"; text = "View Appointment History"; ObjectID = "6p1-mT-MKf"; */
-"6p1-mT-MKf.text" = "View Appointment History";
+"6p1-mT-MKf.text" = "عرض محفوظات المواعيد";
 
 /* Class = "UILabel"; text = "Clinic Consultation"; ObjectID = "8YP-56-gK0"; */
-"8YP-56-gK0.text" = "Clinic Consultation";
+"8YP-56-gK0.text" = "استشارة عيادة";
 
 /* Class = "UILabel"; text = "Dr. Asser Ahmed booked on 08 August 2020, Saturday"; ObjectID = "AYQ-NL-sN0"; */
 "AYQ-NL-sN0.text" = "Dr. Asser Ahmed booked on 08 August 2020, Saturday";
@@ -21,19 +21,19 @@
 "HPE-ZJ-vAS.text" = "El-Shouroq (Nasr City)";
 
 /* Class = "UILabel"; text = "With Doctor"; ObjectID = "KvN-sM-4xJ"; */
-"KvN-sM-4xJ.text" = "With Doctor";
+"KvN-sM-4xJ.text" = "مع دكتور";
 
 /* Class = "UILabel"; text = "09:30 PM - 10:00 PM"; ObjectID = "QgP-il-AYf"; */
 "QgP-il-AYf.text" = "09:30 PM - 10:00 PM";
 
 /* Class = "UILabel"; text = "Appointment Reason"; ObjectID = "ShL-Ix-xMa"; */
-"ShL-Ix-xMa.text" = "Appointment Reason";
+"ShL-Ix-xMa.text" = "سبب التعيين";
 
 /* Class = "UIButton"; normalTitle = "View"; ObjectID = "V88-Ru-kWj"; */
 "V88-Ru-kWj.normalTitle" = "View";
 
 /* Class = "UILabel"; text = "Your Appointment "; ObjectID = "WD4-ke-zEo"; */
-"WD4-ke-zEo.text" = "Your Appointment ";
+"WD4-ke-zEo.text" = "موعدك ";
 
 /* Class = "UILabel"; text = "Dr. Ahmed Karim"; ObjectID = "WO7-Zm-O4Z"; */
 "WO7-Zm-O4Z.text" = "Dr. Ahmed Karim";

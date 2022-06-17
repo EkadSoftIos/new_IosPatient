@@ -6,16 +6,16 @@
 "5Gb-xB-HiG.text" = "Your Balance 2000,00 EGP in your wallet";
 
 /* Class = "UILabel"; text = "Wallet"; ObjectID = "CYa-ps-r23"; */
-"CYa-ps-r23.text" = "Wallet";
+"CYa-ps-r23.text" = "المحفظة";
 
 /* Class = "UILabel"; text = "Your Appointment "; ObjectID = "DkB-az-DMh"; */
-"DkB-az-DMh.text" = "Your Appointment ";
+"DkB-az-DMh.text" = "موعدك ";
 
 /* Class = "UIButton"; normalTitle = "Confirm Booking"; ObjectID = "WbG-dt-1xx"; */
-"WbG-dt-1xx.normalTitle" = "Confirm Booking";
+"WbG-dt-1xx.normalTitle" = "تاكيذ الحجز";
 
 /* Class = "UILabel"; text = "You will pay service fees on Clinic"; ObjectID = "Xsw-oz-fRW"; */
-"Xsw-oz-fRW.text" = "You will pay service fees on Clinic";
+"Xsw-oz-fRW.text" = "ستدفع رسوم الخدمة في العيادة";
 
 /* Class = "UILabel"; text = "Monday  Sep 11,  2020"; ObjectID = "XxD-a1-pfH"; */
 "XxD-a1-pfH.text" = "Monday  Sep 11,  2020";
@@ -27,19 +27,19 @@
 "dRm-5A-tuv.text" = "43 Nakhla moteey st , triumph square , \ninfront of emam ali mosque Nasr City";
 
 /* Class = "UILabel"; text = "With Doctor"; ObjectID = "eeh-hp-lYv"; */
-"eeh-hp-lYv.text" = "With Doctor";
+"eeh-hp-lYv.text" = "مع دكتور";
 
 /* Class = "UILabel"; text = "09:30 PM - 10:00 PM"; ObjectID = "hZN-DW-cXc"; */
 "hZN-DW-cXc.text" = "09:30 PM - 10:00 PM";
 
 /* Class = "UILabel"; text = "We will withdraw total fees from your wallet"; ObjectID = "mSx-c1-MVE"; */
-"mSx-c1-MVE.text" = "We will withdraw total fees from your wallet";
+"mSx-c1-MVE.text" = "سنقوم بسحب الرسوم الإجمالية من محفظتك";
 
 /* Class = "UILabel"; text = "Clinic Consultation"; ObjectID = "p10-Zd-nye"; */
-"p10-Zd-nye.text" = "Clinic Consultation";
+"p10-Zd-nye.text" = "استشارة عيادة";
 
 /* Class = "UILabel"; text = "Dr. Ahmed Karim"; ObjectID = "uEe-SJ-rR1"; */
 "uEe-SJ-rR1.text" = "Dr. Ahmed Karim";
 
 /* Class = "UILabel"; text = "Cash"; ObjectID = "x18-i3-d9H"; */
-"x18-i3-d9H.text" = "Cash";
+"x18-i3-d9H.text" = "فوري";

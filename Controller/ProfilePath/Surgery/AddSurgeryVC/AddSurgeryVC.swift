@@ -39,9 +39,9 @@ class AddSurgeryVC: UIViewController,UITextViewDelegate, UISearchBarDelegate {
         setLocalization()
     }
     func setLocalization(){
-        nameLBL.text = "Name".localized
+        nameLBL.text = "Name *".localized
         supportDeviceLBL.text = "Implants/SupportDevices".localized
-        dateLBL.text = "Date".localized
+        dateLBL.text = "Date *".localized
         byLBL.text = "By".localized
         searchBar.placeholder = "SearchForDoctor".localized
         notesLBL.text = "Notes".localized

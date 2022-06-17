@@ -11,6 +11,8 @@ import Alamofire
 
 enum APIRouter : URLRequestConvertible{
     case login(params: [String: Any])
+    case externallogin(params: [String: Any])
+    case checkEmail(email: String)
     case logout(params: [String: Any])
     case profile
     case GetAdress
@@ -85,11 +87,20 @@ enum APIRouter : URLRequestConvertible{
     case faq
     case saveContactUs(params: [String: Any])
     case getFullWebPages
+    case reportServiceList
+    case reportBranchList
+    case walletballence
+    case walletTransaction(params: [String: Any])
+    case chargeWallet(params: [String: Any])
     
     var method : HTTPMethod {
         switch self {
         case .login(_):
           return  .post
+        case .externallogin(_):
+          return  .post
+        case .checkEmail(_):
+          return  .get
         case .profile, .GetAdress, .deleAllergies(_), .deleteDieses(_), .DeleteMedication(_), .getAllMedicine,.deleteSurgery(_),.deleteMedical(_), .getDieseases, .getBlodGroub, .diesesStatus, .getEmergency, .getRelations, .MaritalStatus, .EntityType, .deleteFamilyHistory(_), .whenMedication, .employePermision(_), .speciality, .BusinessProvider, .home, .doctorById:
         return .get
         case .deleteAdress(_), .addFamily(_), .AddMedication(_), .getDoctors(_):
@@ -158,12 +169,26 @@ enum APIRouter : URLRequestConvertible{
             return .get
         case.bookingReport:
             return .post
+        case.reportServiceList:
+            return .get
+        case.reportBranchList:
+            return .get
+        case.walletballence:
+            return .get
+        case.walletTransaction:
+            return .post
+        case.chargeWallet:
+            return .post
         }
     }
     var path : String {
         switch self {
         case .login(_):
             return "\(Constants.baseURL)Common/Login"
+        case .externallogin(_):
+            return "\(Constants.baseURL)Common/ExternalLogin"
+        case .checkEmail(let email):
+            return "\(Constants.baseURL)Common/CheckUserByEmail?Email=\(email)"
         case .profile :
             return "\(Constants.baseURL)Patient/Patient_Get_data"
         case .register(_):
@@ -315,12 +340,26 @@ enum APIRouter : URLRequestConvertible{
             return "\(Constants.baseURL)Common/GetFullWebPages"
         case.bookingReport:
             return "\(Constants.baseURL)Patient/SearchBookingReport"
+        case.reportServiceList:
+            return "\(Constants.baseURL)Patient/GetServicesList"
+        case.reportBranchList:
+            return "\(Constants.baseURL)Patient/GetDoctorList"
+        case.walletballence:
+            return "\(Constants.baseURL)Patient/GetWaletSummery"
+        case.walletTransaction:
+            return "\(Constants.baseURL)Patient/GetWaletTransactionList"
+        case.chargeWallet:
+            return "\(Constants.baseURL)Patient/chargePatientWalet"
         }
     }
     var parameters : Parameters?{
         switch self {
         case .login(let params):
             return params
+        case .externallogin(let params):
+            return params
+        case .checkEmail(_):
+            return nil
         case .profile, .GetAdress, .DeleteMedication(_),.getAllMedicine, .deleteFamilyHistory(_), .getDieseases,.getEmergency,.EntityType, .employePermision(_):
             return nil
         case .home:
@@ -423,6 +462,16 @@ enum APIRouter : URLRequestConvertible{
         case.getFullWebPages:
             return nil
         case.bookingReport(params: let para):
+            return para
+        case.reportServiceList:
+            return nil
+        case.reportBranchList:
+            return nil
+        case.walletballence:
+            return nil
+        case.walletTransaction(params: let para):
+            return para
+        case.chargeWallet(params: let para):
             return para
         }
     }

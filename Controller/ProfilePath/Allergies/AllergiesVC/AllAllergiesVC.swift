@@ -11,9 +11,12 @@ class AllAllergiesVC: UIViewController {
     @IBOutlet var allergiesTableView: UITableView!
     @IBOutlet var addView: UIView!
     var model: UserDataModel?
-    
+    var addedOne = false
+
     override func viewWillAppear(_ animated: Bool) {
+        setupTableView()
         emptyData()
+        
         UIView.animate(withDuration: 1.5) {
             self.addView.rotate(angle: 180)
         }
@@ -21,12 +24,18 @@ class AllAllergiesVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "Allergies".localized
-        setupTableView()
+        
 
     }
     func emptyData(){
+        addedOne = UserDefaults.standard.bool(forKey: "AddedAllergies")
         if model?.message?.tblPatientAllergies?.count == 0{
-            allergiesTableView.setEmptyView()
+            if addedOne == true {
+                allergiesTableView.restore()
+            }else{
+                allergiesTableView.setEmptyView()
+            }
+            
         }else{
             allergiesTableView.restore()
         }

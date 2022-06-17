@@ -31,15 +31,11 @@ class LogOutVC: UIViewController, LogOutViewProtocol {
         UIView.animate(withDuration: 0.2) {
             self.view.backgroundColor = UIColor.black.withAlphaComponent(0.7)
         }
-//        if type == "LogOut" {
-            titleLBL.text = "LogOut"
-            detailsLBL.text = "Are you sure want to Logout ?"
-            cancelBTN.setTitle("Cancel", for: .normal)
-            okBTN.setTitle("Logout", for: .normal)
-            popUpImg.image = UIImage (named: "ic_logout")
-//        }else if type == ""{
-//
-//        }
+        titleLBL.text = "LogOut".localized
+        detailsLBL.text = "Are you sure want to Logout ?".localized
+        cancelBTN.setTitle("Cancel".localized, for: .normal)
+        okBTN.setTitle("LogOut".localized, for: .normal)
+        popUpImg.image = UIImage (named: "ic_logout")
     }
     
     func showLoadingIndicator() {

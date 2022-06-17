@@ -74,7 +74,7 @@
 "Are you want to Delete this address ?"="هل تريد حذف هذا العنوان؟";
 
 //Home
-"Home"="Home";
+"Home"="الرئيسية";
 "Welcome"="Welcome";
 "How do you feel today ?"="How do you feel today ?";
 "You can find with us all your medical help."="You can find with us all your medical help.";
@@ -206,3 +206,31 @@
 "Doctor has been removed from favorites list"="تمت إزالة الطبيب من قائمة المفضلة";
 "Doctor has been added to favorites list"="تمت إضافة الطبيب إلى قائمة المفضلة";
 "Your Location"="موقعك";
+
+"Appointment" = "ميعاد";
+"Pharmacy" = "صيدلية";
+"Club" = "النادي";
+"More" = "المزيد";
+"My Wallet" = "محفظتي";
+
+
+"My Profile"="ملفي";
+"My Wallet"="محفظتى";
+"My Favourite "="مفضلاتي ";
+"Medicine Reminder "="تذكير الدواء";
+"Blog"="مقالات";
+"Appointment History"="محفوظات المواعيد";
+"Consultations Log"="سجل الاستشارات";
+"Reports"="التقارير";
+"Orders "="الطلبات ";
+"Profile Permission"="إذن ملف التعريف";
+"Emergency Number"="رقم الطوارئ";
+"Change Password"="غير كلمة السر";
+"Help & Support"="ساعد لدعم";
+"Language"="لغة";
+"Log Out"="تسجيل خروج";
+"Photo Library"="مكتبة الصور";
+"Open File"="فتح ملف";
+
+"LogOut"="تسجيل خروج";
+"Are you sure want to Logout ?"="هل أنت متأكد من أنك تريد تسجيل الخروج؟";

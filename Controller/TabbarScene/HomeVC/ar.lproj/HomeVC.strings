@@ -1,45 +1,45 @@
 
 /* Class = "UILabel"; text = "Specializations"; ObjectID = "0EP-Qm-rIC"; */
-"0EP-Qm-rIC.text" = "Specializations";
+"0EP-Qm-rIC.text" = "التخصصات";
 
 /* Class = "UITextField"; placeholder = "Search by doctor name"; ObjectID = "1g3-bq-6zR"; */
-"1g3-bq-6zR.placeholder" = "Search by doctor name";
+"1g3-bq-6zR.placeholder" = "البحث باسم الطبيب";
 
 /* Class = "UILabel"; text = "You can find with us all your medical help."; ObjectID = "29g-qX-EjC"; */
-"29g-qX-EjC.text" = "You can find with us all your medical help.";
+"29g-qX-EjC.text" = "يمكنك أن تجد معنا جميع المساعدة الطبية الخاصة بك.";
 
 /* Class = "UILabel"; text = "Last visit"; ObjectID = "7AQ-0h-ecZ"; */
-"7AQ-0h-ecZ.text" = "Last visit";
+"7AQ-0h-ecZ.text" = "الزيارة الأخيرة";
 
 /* Class = "UILabel"; text = "Name"; ObjectID = "GOH-9c-m8V"; */
-"GOH-9c-m8V.text" = "Name";
+"GOH-9c-m8V.text" = "الاسم";
 
 /* Class = "UILabel"; text = "Top Offers"; ObjectID = "HiW-wc-GYK"; */
-"HiW-wc-GYK.text" = "Top Offers";
+"HiW-wc-GYK.text" = "أفضل العروض";
 
 /* Class = "UILabel"; text = "Aug 11,2020"; ObjectID = "J7V-7R-5PP"; */
 "J7V-7R-5PP.text" = "Aug 11,2020";
 
 /* Class = "UILabel"; text = "How do you feel today ?"; ObjectID = "K4k-bV-lhY"; */
-"K4k-bV-lhY.text" = "How do you feel today ?";
+"K4k-bV-lhY.text" = "كيف تشعر اليوم ؟";
 
 /* Class = "UIButton"; normalTitle = "See All"; ObjectID = "VPK-oo-cuC"; */
-"VPK-oo-cuC.normalTitle" = "See All";
+"VPK-oo-cuC.normalTitle" = "اظهار الكل";
 
 /* Class = "UIButton"; normalTitle = "See All"; ObjectID = "ZhC-KK-agn"; */
-"ZhC-KK-agn.normalTitle" = "See All";
+"ZhC-KK-agn.normalTitle" = "اظهار الكل";
 
 /* Class = "UILabel"; text = "Welcome,"; ObjectID = "glk-BJ-jFn"; */
-"glk-BJ-jFn.text" = "Welcome,";
+"glk-BJ-jFn.text" = "مرحبا,";
 
 /* Class = "UILabel"; text = "Top Doctor"; ObjectID = "nfg-XU-SGK"; */
-"nfg-XU-SGK.text" = "Top Doctor";
+"nfg-XU-SGK.text" = "اعلي الذكاترة";
 
 /* Class = "UILabel"; text = "Medical Services "; ObjectID = "phA-x8-LIi"; */
-"phA-x8-LIi.text" = "Medical Services ";
+"phA-x8-LIi.text" = "الخدمات الطبية ";
 
 /* Class = "UIButton"; normalTitle = "See All"; ObjectID = "vEy-St-vDb"; */
-"vEy-St-vDb.normalTitle" = "See All";
+"vEy-St-vDb.normalTitle" = "اظهار الكل";
 
 /* Class = "UILabel"; text = "Doctor Services "; ObjectID = "vtd-3j-mLw"; */
-"vtd-3j-mLw.text" = "Doctor Services ";
+"vtd-3j-mLw.text" = "خدمات الطبيب ";

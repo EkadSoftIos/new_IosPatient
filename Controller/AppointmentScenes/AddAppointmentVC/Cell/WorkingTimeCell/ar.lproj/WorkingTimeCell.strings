@@ -1,21 +1,21 @@
 
 /* Class = "UILabel"; text = "Working Time"; ObjectID = "1md-i5-vwY"; */
-"1md-i5-vwY.text" = "Working Time";
+"1md-i5-vwY.text" = "وقت العمل";
 
 /* Class = "UILabel"; text = "Reservation required, first-come, first-served"; ObjectID = "FTc-jz-KNH"; */
-"FTc-jz-KNH.text" = "Reservation required, first-come, first-served";
+"FTc-jz-KNH.text" = "الحجز مطلوب ، من يأتي أولاً يخدم أولاً";
 
 /* Class = "UILabel"; text = "00:00 PM"; ObjectID = "MmE-en-aQq"; */
 "MmE-en-aQq.text" = "00:00 PM";
 
 /* Class = "UILabel"; text = "To"; ObjectID = "bL4-z5-g4Z"; */
-"bL4-z5-g4Z.text" = "To";
+"bL4-z5-g4Z.text" = "الي";
 
 /* Class = "UILabel"; text = "00:00 AM"; ObjectID = "fAo-Ti-HLP"; */
 "fAo-Ti-HLP.text" = "00:00 AM";
 
 /* Class = "UILabel"; text = "From"; ObjectID = "mry-4k-0sN"; */
-"mry-4k-0sN.text" = "From";
+"mry-4k-0sN.text" = "من";
 
 /* Class = "UILabel"; text = "Only 3 reservations left"; ObjectID = "tP5-sC-bwp"; */
-"tP5-sC-bwp.text" = "Only 3 reservations left";
+"tP5-sC-bwp.text" = "بقي 3 تحفظات فقط";
